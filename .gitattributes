@@ -1,0 +1,2 @@
+/images/thumbnails/* filter=lfs diff=lfs merge=lfs -text
+/images/thumbnails*` filter=lfs diff=lfs merge=lfs -text
