@@ -13,6 +13,21 @@ let searchTimeout;
 
 const cardsDOM = document.querySelector('#cards')
 const searchDOM = document.querySelector('#search')
+
+const exampleList = [
+    'Pokémon',
+    'PETER vs TIMON',
+    'Speedrun',
+    'Minecraft',
+    'Tekenen',
+    'Lion King',
+    'Cuphead',
+    'PUBG',
+]
+
+searchDOM.setAttribute('placeholder', `Zoek een video - Bijvoorbeeld: ${exampleList[Math.floor(Math.random() * exampleList.length)]}`)
+
+
 searchDOM.addEventListener('input', (e) => {
     if (e.target.value.length < 3) {
         return
@@ -183,6 +198,7 @@ function clearDetails() {
     element.classList.add('empty');
     currentCard = null;
 }
+
 
 
 Init();
