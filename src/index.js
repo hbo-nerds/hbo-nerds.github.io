@@ -80,15 +80,12 @@ async function FetchData() {
     data.podcasts = podcasts
     data.videos = videos
     data.streams = streams
-
     for (const podcast of data.podcasts) {
         podcast.type = 'podcast';
     }
-
     for (const video of data.videos) {
         video.type = 'video';
     }
-
     for (const stream of data.streams) {
         stream.type = 'stream';
     }
@@ -99,13 +96,20 @@ function GetShareIdFromUrl() {
     return urlParameters.get('id');
 }
 
+
+function GetShareTypeFromUrl() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    return urlParameters.get('type');
+}
+
 function RenderSharedCard() {
     const shareId = GetShareIdFromUrl();
-    if (shareId == null) {
+    const shareType = GetShareTypeFromUrl();
+    if (shareId == null || shareType == null) {
         return;
     }
 
-    showCardDetails(shareId, 'stream');
+    showCardDetails(shareId, shareType);
 }
 
 // Normalize a string by removing diacritics and converting to lowercase
@@ -238,9 +242,9 @@ async function RenderCards(data) {
     cardsDOM.innerHTML = html
 }
 
-function setShareUrlClipBoard(cardId) {
+function setShareUrlClipBoard(cardId, cardType) {
     const host = window.location.host;
-    navigator.clipboard.writeText(`${host}?id=${cardId}`);
+    navigator.clipboard.writeText(`${host}?id=${cardId}&type=${cardType}`);
 }
 
 function ListenForShareButton(detailedElement) {
@@ -248,7 +252,9 @@ function ListenForShareButton(detailedElement) {
         const clickedElement = event.target.closest('#detailed-share');
         if (clickedElement) {
             const cardId = clickedElement.dataset.cardId;
-            setShareUrlClipBoard(cardId);
+
+            const cardType = clickedElement.dataset.cardType;
+            setShareUrlClipBoard(cardId, cardType);
             const copyFeedbackElement = document.getElementById('detailed-share-copy-feedback');
             copyFeedbackElement.innerText = 'Gekopieerd!';
             setTimeout(() => {
