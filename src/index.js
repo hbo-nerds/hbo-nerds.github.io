@@ -65,22 +65,21 @@ async function Init() {
     RenderSharedCard()
 }
 
+async function FetchJson(url) {
+    let res = await fetch(url)
+    return await res.json()
+}
+
 async function FetchData() {
-    const podcasts = await fetch('../data/podcasts.json')
-    data.podcasts = await podcasts.json()
-    for (const podcast of data.podcasts) {
-        podcast.type = 'podcast';
-    }
-    const videos = await fetch('../data/videos.json')
-    data.videos = await videos.json()
-    for (const video of data.videos) {
-        video.type = 'video';
-    }
-    const streams = await fetch('../data/streams.json')
-    data.streams = await streams.json()
-    for (const stream of data.streams) {
-        stream.type = 'stream';
-    }
+    let [podcasts, videos, streams] = await Promise.all([
+        FetchJson('../data/podcasts.json'),
+        FetchJson('../data/videos.json'),
+        FetchJson('../data/streams.json'),
+    ])
+
+    data.podcasts = podcasts
+    data.videos = videos
+    data.streams = streams
 }
 
 function GetShareIdFromUrl() {
