@@ -96,6 +96,7 @@ function GetShareIdFromUrl() {
     return urlParameters.get('id');
 }
 
+
 function GetShareTypeFromUrl() {
     const urlParameters = new URLSearchParams(window.location.search);
     return urlParameters.get('type');
@@ -251,6 +252,7 @@ function ListenForShareButton(detailedElement) {
         const clickedElement = event.target.closest('#detailed-share');
         if (clickedElement) {
             const cardId = clickedElement.dataset.cardId;
+
             const cardType = clickedElement.dataset.cardType;
             setShareUrlClipBoard(cardId, cardType);
             const copyFeedbackElement = document.getElementById('detailed-share-copy-feedback');
