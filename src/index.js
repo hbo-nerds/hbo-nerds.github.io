@@ -1,12 +1,14 @@
 import { GetCard } from './card.js';
 import { GetDetails } from './details.js';
 
+// The data object contains all the data from the JSON files
 let data = {
     podcasts: [],
     videos: [],
     streams: [],
 }
 
+// The current card that is being shown in the details section
 let currentCard = null;
 
 let searchTimeout;
@@ -14,6 +16,7 @@ let searchTimeout;
 const cardsDOM = document.querySelector('#cards')
 const searchDOM = document.querySelector('#search')
 
+// Example list for the search bar
 const exampleList = [
     'Pokémon',
     'PETER vs TIMON',
@@ -25,9 +28,10 @@ const exampleList = [
     'PUBG',
 ]
 
+// Set a random example from the example list as the placeholder
 searchDOM.setAttribute('placeholder', `Zoek een video - Bijvoorbeeld: ${exampleList[Math.floor(Math.random() * exampleList.length)]}`)
 
-
+// Add an event listener to the search bar
 searchDOM.addEventListener('input', (e) => {
     if (e.target.value.length < 3) {
         return
@@ -38,51 +42,75 @@ searchDOM.addEventListener('input', (e) => {
         clearTimeout(searchTimeout)
     }
 
-    // searchTimeout = setTimeout(() => {
-    Search(e)
-    // }, 250)
+    // We use a short delay to prevent the search from triggering on every keypress
+    searchTimeout = setTimeout(() => {
+        Search(e.target.value)
+    }, 250)
 })
+
+document.getElementById('cards').addEventListener('click', function (event) {
+    // Identify if the click event is from a card
+    const clickedElement = event.target.closest('.card');
+    if (clickedElement) {
+        // Handle the card click
+        showCardDetails(clickedElement.dataset.cardId, clickedElement.dataset.cardType);
+    } else {
+        clearDetails();
+    }
+});
+
 
 async function Init() {
     await FetchData()
 }
 
+async function FetchData() {
+    let podcasts = await fetch('../data/podcasts.json')
+    data.podcasts = await podcasts.json()
+    let videos = await fetch('../data/videos.json')
+    data.videos = await videos.json()
+    let streams = await fetch('../data/streams.json')
+    data.streams = await streams.json()
+}
+
+// Normalize a string by removing diacritics and converting to lowercase
 function NormalizeString(s) {
     return s == null ? '' : s.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
 }
 
-async function Search(e) {
-    // Get input value and filter
+async function Search(input) {
     const filtered = []
+
+    // Copy the data object
     const filteredData = {
         podcasts: data.podcasts.slice(),
         videos: data.videos.slice(),
         streams: data.streams.slice(),
     }
 
-    const target = NormalizeString(e.target.value)
+    const normalizedInput = NormalizeString(input)
 
     const words = [];
 
     // Collect all the words. Words between quotes are treated as one word.
     let word = '';
     let quote = false;
-    for (const c of target) {
-        if (c == ' ') {
+    for (const char of normalizedInput) {
+        if (char == ' ') {
             if (quote) {
-                word += c;
+                word += char;
             } else if (word.length > 0) {
                 words.push(word);
                 word = '';
             }
-        } else if (c == '"') {
+        } else if (char == '"') {
             quote = !quote;
             if (!quote) {
                 words.push(word);
                 word = '';
             }
         } else {
-            word += c;
+            word += char;
         }
     }
 
@@ -115,7 +143,7 @@ async function Search(e) {
     })
 
     // Render filtered data
-    RenderData(filtered)
+    RenderCards(filtered)
 }
 
 function ApplyFilter(data, target) {
@@ -149,7 +177,7 @@ function ApplyFilter(data, target) {
     });
 }
 
-async function RenderData(data) {
+async function RenderCards(data) {
     let html = ''
 
     data.forEach(stream => {
@@ -158,26 +186,6 @@ async function RenderData(data) {
 
     cardsDOM.innerHTML = html
 }
-
-async function FetchData() {
-    let podcasts = await fetch('../data/podcasts.json')
-    data.podcasts = await podcasts.json()
-    let videos = await fetch('../data/videos.json')
-    data.videos = await videos.json()
-    let streams = await fetch('../data/streams.json')
-    data.streams = await streams.json()
-}
-
-document.getElementById('cards').addEventListener('click', function (event) {
-    // Identify if the click event is from a card
-    const clickedElement = event.target.closest('.card');
-    if (clickedElement) {
-        // Handle the card click
-        showCardDetails(clickedElement.dataset.cardId, clickedElement.dataset.cardType);
-    } else {
-        clearDetails();
-    }
-});
 
 function showCardDetails(cardId, cardType) {
     if (currentCard == cardId) {
@@ -198,7 +206,5 @@ function clearDetails() {
     element.classList.add('empty');
     currentCard = null;
 }
-
-
 
 Init();

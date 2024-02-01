@@ -200,19 +200,3 @@ function ConvertMinutesToTime(minutes) {
 
     return `${hours}:${remainingMinutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
-
-/* <a href="https://youtube.com">Youtube</a> | <a href="https://twitch.tv">Twitch</a> */
-
-/* <span class="detailed-tag">Tier list</span>
-<span class="detailed-tag">Speedrun</span>
-<span class="detailed-tag">Anime donderdag</span> */
-
-
-/* <p>Cuphead - 21:32</p>
-<p>Grand Theft Auto: San Andreas - 21:32</p> */
-
-/* <p>Dit is een alternative title</p>
-<p>Dit is een alternative title</p>
-<p>Dit is een alternative title</p>
-<p>Dit is een alternative title</p>
-<p>Dit is een alternative title</p> */

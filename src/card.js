@@ -66,6 +66,7 @@ function GetDuration(data) {
         return data.duration;
     }
 }
+
 function ConvertMinutesToTime(minutes) {
     const hours = Math.floor(minutes / 60);
     const remainingMinutes = minutes % 60;
