@@ -30,7 +30,7 @@
     },
      {
         "id": "1",
-        "date": "24/6/2014",
+        "date": "16/12/2015",
         "time_start": null,
         "time_end": null,
         "title": "Miel Monteur bouwt Auto's Marathon",
@@ -45,7 +45,7 @@
         ],
         "total_duration": "2",
         "twitchtracker": null,
-        "twitch": null,
+        "twitch": "https://www.twitch.tv/videos/36467583",
         "youtube": "https://www.youtube.com/watch?v=YguIGvbM5-Q&ab_channel=Juul",
         "urls": null,
         "Double check needed": false,
@@ -1948,7 +1948,7 @@
         "date": "20/1/2016",
         "time_start": null,
         "time_end": null,
-        "title": "Miel Minkukel Marathon",
+        "title": "Filmavondje - GAMER (2009) (deel 1)",
         "all_titles": [
             "Filmavondje - GAMER (2009) (deel 1)"
         ],
@@ -1977,7 +1977,7 @@
         "date": "20/1/2016",
         "time_start": null,
         "time_end": null,
-        "title": "Line Rider - LEKKER SPELEN LIVE",
+        "title": "Filmavondje - GAMER (2009) (deel 2)",
         "all_titles": [
             "Filmavondje - GAMER (2009) (deel 2)"
         ],
@@ -2035,7 +2035,7 @@
         "date": "20/1/2016",
         "time_start": null,
         "time_end": null,
-        "title": "Filmavondje - GAMER (2009) (deel 2)",
+        "title": "Line Rider - LEKKER SPELEN LIVE",
         "all_titles": [
             "Line Rider - LEKKER SPELEN LIVE"
         ],
@@ -2064,9 +2064,9 @@
         "date": "20/1/2016",
         "time_start": null,
         "time_end": null,
-        "title": "Filmavondje - GAMER (2009) (deel 1)",
+        "title": "Miel Minkukel bouwt auto's",
         "all_titles": [
-            "Miel Minkukel Marathon"
+            "Miel Minkukel bouwt auto's"
         ],
         "games": [
             {
