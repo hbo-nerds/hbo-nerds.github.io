@@ -59,9 +59,10 @@ document.getElementById('cards').addEventListener('click', function (event) {
     }
 });
 
-
 async function Init() {
     await FetchData()
+
+    RenderSharedCard()
 }
 
 async function FetchJson(url) {
@@ -79,6 +80,20 @@ async function FetchData() {
     data.podcasts = podcasts
     data.videos = videos
     data.streams = streams
+}
+
+function GetShareIdFromUrl() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    return urlParameters.get('id');
+}
+
+function RenderSharedCard() {
+    const shareId = GetShareIdFromUrl();
+    if (shareId == null) {
+        return;
+    }
+
+    showCardDetails(shareId, 'stream');
 }
 
 // Normalize a string by removing diacritics and converting to lowercase
@@ -146,17 +161,14 @@ async function Search(input) {
     }
 
     for (const podcast of filteredData.podcasts) {
-        podcast.type = 'podcast';
         filtered.push(podcast)
     }
 
     for (const video of filteredData.videos) {
-        video.type = 'video';
         filtered.push(video)
     }
 
     for (const stream of filteredData.streams) {
-        stream.type = 'stream';
         filtered.push(stream)
     }
 
@@ -214,6 +226,30 @@ async function RenderCards(data) {
     cardsDOM.innerHTML = html
 }
 
+function setShareUrlClipBoard(cardId) {
+    const host = window.location.host;
+    navigator.clipboard.writeText(`${host}?id=${cardId}`);
+}
+
+function ListenForShareButton(detailedElement) {
+    detailedElement.addEventListener('click', function (event) {
+        const clickedElement = event.target.closest('#detailed-share');
+        if (clickedElement) {
+            const cardId = clickedElement.dataset.cardId;
+            setShareUrlClipBoard(cardId);
+            const copyFeedbackElement = document.getElementById('detailed-share-copy-feedback');
+            copyFeedbackElement.innerText = 'Gekopieerd!';
+            setTimeout(() => {
+                copyFeedbackElement.innerText = '';
+            }, 2000);
+        }
+    });
+}
+
+function ListenForDetailedInteraction(detailedElement) {
+    ListenForShareButton(detailedElement);
+}
+
 function showCardDetails(cardId, cardType) {
     if (currentCard == cardId) {
         clearDetails();
@@ -222,7 +258,10 @@ function showCardDetails(cardId, cardType) {
 
     const cardData = data[cardType + "s"].find(data => data.id == cardId);
     const details = GetDetails(cardData);
-    document.getElementById('detailed').outerHTML = details;
+    let detailedElement = document.getElementById('detailed');
+    detailedElement.outerHTML = details;
+    detailedElement = document.getElementById('detailed');
+    ListenForDetailedInteraction(detailedElement);
     currentCard = cardId;
 }
 
