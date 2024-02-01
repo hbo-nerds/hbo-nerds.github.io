@@ -92,21 +92,30 @@ async function Search(input) {
 
     const words = [];
 
-    // Collect all the words. Words between quotes are treated as one word.
+    // Collect all the words. Words between quotes are treated as one word. 
     let word = '';
     let quote = false;
+    let negativeWords = [];
     for (const char of normalizedInput) {
         if (char == ' ') {
             if (quote) {
                 word += char;
             } else if (word.length > 0) {
-                words.push(word);
+                if (word.startsWith('-')) {
+                    negativeWords.push(word.substring(1));
+                } else {
+                    words.push(word);
+                }
                 word = '';
             }
         } else if (char == '"') {
             quote = !quote;
             if (!quote) {
-                words.push(word);
+                if (word.startsWith('-')) {
+                    negativeWords.push(word.substring(1));
+                } else {
+                    words.push(word);
+                }
                 word = '';
             }
         } else {
@@ -114,7 +123,15 @@ async function Search(input) {
         }
     }
 
-    words.push(word);
+    if (word.startsWith('-')) {
+        negativeWords.push(word.substring(1));
+    } else {
+        words.push(word);
+    }
+
+    for (const negativeWord of negativeWords) {
+        ApplyFilter(filteredData, negativeWord, true)
+    }
 
     for (const word of words) {
         ApplyFilter(filteredData, word)
@@ -146,25 +163,27 @@ async function Search(input) {
     RenderCards(filtered)
 }
 
-function ApplyFilter(data, target) {
+function ApplyFilter(data, target, negative) {
     // Podcasts
+    negative = !!negative;
+
     data.podcasts = data.podcasts.filter(podcast => {
-        return NormalizeString(podcast.title).includes(target) ||
-            NormalizeString(podcast.description).includes(target)
+        return (NormalizeString(podcast.title).includes(target) ||
+            NormalizeString(podcast.description).includes(target)) != negative;
     });
 
     // Videos
     data.videos = data.videos.filter(video => {
-        return NormalizeString(video.title).includes(target) ||
+        return (NormalizeString(video.title).includes(target) ||
             NormalizeString(video.description).includes(target) ||
             (Array.isArray(video.game) ? video.game.some(game => {
                 return NormalizeString(game).includes(target)
-            }) : NormalizeString(video.game).includes(target))
+            }) : NormalizeString(video.game).includes(target))) != negative;
     });
 
     // Streams
     data.streams = data.streams.filter(stream => {
-        return NormalizeString(stream.description).includes(target) ||
+        return (NormalizeString(stream.description).includes(target) ||
             stream.all_titles.some(title => {
                 return NormalizeString(title).includes(target)
             }) ||
@@ -173,7 +192,7 @@ function ApplyFilter(data, target) {
             }) ||
             stream.tags.some(tag => {
                 return NormalizeString(tag).includes(target)
-            })
+            })) != negative;
     });
 }
 
