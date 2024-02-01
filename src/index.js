@@ -80,6 +80,18 @@ async function FetchData() {
     data.podcasts = podcasts
     data.videos = videos
     data.streams = streams
+
+    for (const podcast of data.podcasts) {
+        podcast.type = 'podcast';
+    }
+
+    for (const video of data.videos) {
+        video.type = 'video';
+    }
+
+    for (const stream of data.streams) {
+        stream.type = 'stream';
+    }
 }
 
 function GetShareIdFromUrl() {
