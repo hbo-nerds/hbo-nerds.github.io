@@ -1,0 +1,15 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #121212;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
