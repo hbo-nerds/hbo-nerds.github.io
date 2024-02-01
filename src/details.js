@@ -18,7 +18,7 @@ export const GetDetails = (data) => {
                 <p id="detailed-title">${data.title}</p>
 
                 <div>
-                    <button id="detailed-share" data-card-id="${data.id}">Delen</button>
+                    <button id="detailed-share" data-card-id="${data.id}" data-card-type="${data.type}">Delen</button>
                     <p id="detailed-share-copy-feedback"></p>
                 <div>
 
