@@ -64,13 +64,21 @@ async function Init() {
     await FetchData()
 }
 
+async function FetchJson(url) {
+    let res = await fetch(url)
+    return await res.json()
+}
+
 async function FetchData() {
-    let podcasts = await fetch('../data/podcasts.json')
-    data.podcasts = await podcasts.json()
-    let videos = await fetch('../data/videos.json')
-    data.videos = await videos.json()
-    let streams = await fetch('../data/streams.json')
-    data.streams = await streams.json()
+    let [podcasts, videos, streams] = await Promise.all([
+        FetchJson('../data/podcasts.json'),
+        FetchJson('../data/videos.json'),
+        FetchJson('../data/streams.json'),
+    ])
+
+    data.podcasts = podcasts
+    data.videos = videos
+    data.streams = streams
 }
 
 // Normalize a string by removing diacritics and converting to lowercase
