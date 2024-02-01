@@ -105,8 +105,30 @@ body {
     }
 }
 
+#sort-container {
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 20px;
+
+    > label {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    > select {
+        cursor: pointer;
+        padding: 8px 4px 8px 8px;
+        color: #888;
+        border: 2px solid #ccc;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: auto;
+    }
+}
+
 #containers {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     align-items: flex-start;
     padding-bottom: 10px;

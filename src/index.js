@@ -21,6 +21,9 @@ const podcastFilter = document.querySelector('#podcasts-filter')
 const videosFilter = document.querySelector('#videos-filter')
 const streamsFilter = document.querySelector('#streams-filter')
 
+// Sort
+const sortDOM = document.querySelector('#sort')
+
 // Example list for the search bar
 const exampleList = [
     'Pokémon',
@@ -58,18 +61,23 @@ searchDOM.addEventListener('input', (e) => {
     }, 250)
 })
 
-// Add and event listener to the podast filter
+// Add an event listener to the podast filter
 podcastFilter.addEventListener('input', () => {
     Search(search)
 })
 
-// Add and event listener to the videos filter
+// Add an event listener to the videos filter
 videosFilter.addEventListener('input', () => {
     Search(search)
 })
 
-// Add and event listener to the streams filter
+// Add an event listener to the streams filter
 streamsFilter.addEventListener('input', () => {
+    Search(search)
+})
+
+// Add an event listener to the sorting
+sortDOM.addEventListener('input', () => {
     Search(search)
 })
 
@@ -225,11 +233,14 @@ async function Search(input) {
         }
     }
 
-    // Sort filtered by date, newest first. .date is a string in the format "DD/MM/YYYY"
+    // Sort filtered by date based on sorting. .date is a string in the format "DD/MM/YYYY"
     filtered.sort((a, b) => {
         const aDate = a.date.split('/').reverse().join('');
         const bDate = b.date.split('/').reverse().join('');
-        return bDate.localeCompare(aDate);
+        if (sortDOM.value === 'newest') {
+            return bDate.localeCompare(aDate);
+        }
+        return aDate.localeCompare(bDate);
     })
 
     // Render filtered data
