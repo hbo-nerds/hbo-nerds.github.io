@@ -172,6 +172,7 @@ body {
     flex-wrap: wrap;
     padding-bottom: 60px;
     text-align: left;
+    cursor: pointer;
 }
 
 .card-thumbnail {
