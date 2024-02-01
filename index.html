@@ -14,6 +14,21 @@
 
     <input id="search" type="text" autofocus>
 
+    <form id="filters-container">
+        <div class="filter">
+            <input type="checkbox" id="podcasts-filter" name="podcasts-filter" checked hidden />
+            <label for="podcasts-filter">Podcasts</label>
+        </div>
+        <div class="filter">
+            <input type="checkbox" id="videos-filter" name="videos-filter" checked hidden />
+            <label for="videos-filter">Videos</label>
+        </div>
+        <div class="filter">
+            <input type="checkbox" id="streams-filter" name="streams-filter" checked hidden />
+            <label for="streams-filter">Streams</label>
+        </div>
+    </form>
+
     <div id="containers">
         <div id="cards">
         </div>
