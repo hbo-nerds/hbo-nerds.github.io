@@ -17,6 +17,11 @@ export const GetDetails = (data) => {
 
                 <p id="detailed-title">${data.title}</p>
 
+                <div>
+                    <button id="detailed-share" data-card-id="${data.id}">Delen</button>
+                    <p id="detailed-share-copy-feedback"></p>
+                <div>
+
                 ${unavailable ? `<b>Er bestaat geen VOD van deze stream :(</b><br><br><a target="_blank" href=${data.twitchtracker}>TwitchTracker</a>` : `
                 <div class="detailed-line">
                     <div class="detailed-line-text">

@@ -59,18 +59,42 @@ document.getElementById('cards').addEventListener('click', function (event) {
     }
 });
 
-
 async function Init() {
     await FetchData()
+
+    RenderSharedCard()
 }
 
 async function FetchData() {
-    let podcasts = await fetch('../data/podcasts.json')
+    const podcasts = await fetch('../data/podcasts.json')
     data.podcasts = await podcasts.json()
-    let videos = await fetch('../data/videos.json')
+    for (const podcast of data.podcasts) {
+        podcast.type = 'podcast';
+    }
+    const videos = await fetch('../data/videos.json')
     data.videos = await videos.json()
-    let streams = await fetch('../data/streams.json')
+    for (const video of data.videos) {
+        video.type = 'video';
+    }
+    const streams = await fetch('../data/streams.json')
     data.streams = await streams.json()
+    for (const stream of data.streams) {
+        stream.type = 'stream';
+    }
+}
+
+function GetShareIdFromUrl() {
+    const urlParameters = new URLSearchParams(window.location.search);
+    return urlParameters.get('id');
+}
+
+function RenderSharedCard() {
+    const shareId = GetShareIdFromUrl();
+    if (shareId == null) {
+        return;
+    }
+
+    showCardDetails(shareId, 'stream');
 }
 
 // Normalize a string by removing diacritics and converting to lowercase
@@ -138,17 +162,14 @@ async function Search(input) {
     }
 
     for (const podcast of filteredData.podcasts) {
-        podcast.type = 'podcast';
         filtered.push(podcast)
     }
 
     for (const video of filteredData.videos) {
-        video.type = 'video';
         filtered.push(video)
     }
 
     for (const stream of filteredData.streams) {
-        stream.type = 'stream';
         filtered.push(stream)
     }
 
@@ -206,6 +227,30 @@ async function RenderCards(data) {
     cardsDOM.innerHTML = html
 }
 
+function setShareUrlClipBoard(cardId) {
+    const host = window.location.host;
+    navigator.clipboard.writeText(`${host}?id=${cardId}`);
+}
+
+function ListenForShareButton(detailedElement) {
+    detailedElement.addEventListener('click', function (event) {
+        const clickedElement = event.target.closest('#detailed-share');
+        if (clickedElement) {
+            const cardId = clickedElement.dataset.cardId;
+            setShareUrlClipBoard(cardId);
+            const copyFeedbackElement = document.getElementById('detailed-share-copy-feedback');
+            copyFeedbackElement.innerText = 'Gekopieerd!';
+            setTimeout(() => {
+                copyFeedbackElement.innerText = '';
+            }, 2000);
+        }
+    });
+}
+
+function ListenForDetailedInteraction(detailedElement) {
+    ListenForShareButton(detailedElement);
+}
+
 function showCardDetails(cardId, cardType) {
     if (currentCard == cardId) {
         clearDetails();
@@ -214,7 +259,10 @@ function showCardDetails(cardId, cardType) {
 
     const cardData = data[cardType + "s"].find(data => data.id == cardId);
     const details = GetDetails(cardData);
-    document.getElementById('detailed').outerHTML = details;
+    let detailedElement = document.getElementById('detailed');
+    detailedElement.outerHTML = details;
+    detailedElement = document.getElementById('detailed');
+    ListenForDetailedInteraction(detailedElement);
     currentCard = cardId;
 }
 
