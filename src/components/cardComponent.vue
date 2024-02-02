@@ -1,5 +1,5 @@
 <template>
-    <div class="card h-100">
+    <div class="card h-100" @click="selectCard" :class="active ? 'border border-4 border-danger' : ''">
         <img :src="images[`${fileName}`] || images[`default`]" class="card-img-top" alt="thumbnail">
         <div class="card-body">
             <h6 class="card-title">{{ card.title }}</h6>
@@ -17,11 +17,13 @@
 
 <script setup>
 import {computed} from "vue";
+import {useGeneralStore} from "@/stores/general.js";
 
 const props = defineProps({
     card: {type: Object, required: true},
     images: {type: Object, required: true}
 })
+const generalStore = useGeneralStore()
 
 const fileName = computed(() => {
     if (props.card.type === 'stream') {
@@ -48,14 +50,16 @@ const duration = computed(() => {
     }
 })
 
+const active = computed(() => {
+    return props.card.id === generalStore.selectedCard.id && props.card.type === generalStore.selectedCard.type
+})
+
 function ConvertMinutesToTime(minutes) {
     const hours = Math.floor(minutes / 60);
     const remainingMinutes = minutes % 60;
     const seconds = 0
-
     return `${hours}:${remainingMinutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
 }
-
 
 function GetYoutubeIDFromURL(url) {
     let id = url.split('=')[1];
@@ -64,6 +68,13 @@ function GetYoutubeIDFromURL(url) {
     }
     return id;
 }
+
+function selectCard() {
+    active.value ? generalStore.selectCard('', '') : generalStore.selectCard(props.card.id, props.card.type)
+}
 </script>
 
-<style scoped lang="sass"></style>
+<style scoped lang="sass">
+.card:hover
+    cursor: pointer
+</style>
