@@ -1,10 +1,15 @@
 <template>
     <main>
         <div class="container py-5">
-            <div class="row mb-5">
+            <div class="row mb-3">
                 <div class="col-12 col-md-6 m-auto">
-                    <input class="form-control" type="text" placeholder="Zoek een video" v-model="searchTerm"
+                    <input class="form-control" type="search" placeholder="Zoek een video" v-model="searchTerm"
                            @input="searchListener">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="fs-4 text-white">{{filteredData.length}} resultaten gevonden</div>
                 </div>
             </div>
             <div class="row g-3">
@@ -30,7 +35,8 @@ const images = Object.fromEntries(
 )
 
 const searchTerm = ref()
-const data = ref({podcasts: [], videos: [], streams: []})
+const baseData = ref({podcasts: [], videos: [], streams: []})
+const data = ref({})
 const searchTimeout = ref();
 const filteredData = ref([])
 
@@ -39,15 +45,15 @@ fetchData()
 function fetchData() {
     for (const podcast of podcasts) {
         podcast.type = 'podcast';
-        data.value.podcasts.push(podcast)
+        baseData.value.podcasts.push(podcast)
     }
     for (const video of videos) {
         video.type = 'video';
-        data.value.videos.push(video)
+        baseData.value.videos.push(video)
     }
     for (const stream of streams) {
         stream.type = 'stream';
-        data.value.streams.push(stream)
+        baseData.value.streams.push(stream)
     }
 }
 
@@ -75,8 +81,14 @@ function searchListener() {
     }, 250)
 }
 
+
 function search() {
     filteredData.value = [];
+    data.value = {
+        podcasts: baseData.value.podcasts.slice(),
+        videos: baseData.value.videos.slice(),
+        streams: baseData.value.streams.slice(),
+    }
 
     negWords.value.forEach((pw) => {
         filterPodcasts(pw, true)
