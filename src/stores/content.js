@@ -2,6 +2,7 @@ import {defineStore} from "pinia";
 import podcasts from '../assets/podcasts.json'
 import streams from '../assets/streams.json'
 import videos from '../assets/videos.json'
+import {offset} from "@popperjs/core";
 
 export const useContentStore = defineStore('content', {
   state: () => ({
@@ -10,7 +11,18 @@ export const useContentStore = defineStore('content', {
     filteredData: [],
     randomData: [],
     search: '',
-    sortOption: ''
+    sortOption: '',
+    filters: {
+      type: [],
+      date: {
+        after: '',
+        before: ''
+      },
+      duration: {
+        min: '',
+        max: ''
+      }
+    }
   }),
   getters: {
     posWords() {
@@ -20,7 +32,20 @@ export const useContentStore = defineStore('content', {
       return this.search.split(' ').filter(w => w.startsWith('-') && w.length).map(w => w.slice(1).toLowerCase())
     },
     sortedData() {
-      //TODO wait till new json file is ready
+      return this.filteredData.sort((a, b) => {
+        let datePartsA = a.date.split("/");
+        let datePartsB = b.date.split("/");
+        let dateObjectA = new Date(+datePartsA[2], datePartsA[1] - 1, + datePartsA[0]);
+        let dateObjectB = new Date(+datePartsB[2], datePartsB[1] - 1, + datePartsB[0]);
+
+        if (!this.sortOption) return true
+        else if (this.sortOption === 'oldNew') {
+          return dateObjectA - dateObjectB
+        } else if (this.sortOption === 'newOld') {
+          return dateObjectB - dateObjectA
+        } else return true
+        //TODO add more sort options, wait till new json file is ready
+      })
     }
   },
   actions: {
@@ -37,12 +62,15 @@ export const useContentStore = defineStore('content', {
     filter() {
       //TODO update filter when new json file is ready
       this.filteredData = []
+
+      // start with all items
       let data = {
         videos: this.baseData.videos.slice(),
         podcasts: this.baseData.podcasts.slice(),
         streams: this.baseData.streams.slice(),
       }
 
+      // check neg words
       this.negWords.forEach((pw) => {
         data.videos = data.videos.filter((v) => {
           return this.filterVideo(v, pw, true)
@@ -55,6 +83,7 @@ export const useContentStore = defineStore('content', {
         })
       })
 
+      // check pos words
       this.posWords.forEach((pw) => {
         data.videos = data.videos.filter((v) => {
           return this.filterVideo(v, pw, false)
@@ -67,14 +96,25 @@ export const useContentStore = defineStore('content', {
         })
       })
 
-      for (const video of data.videos) {
-        this.filteredData.push(video)
+      // check type filter
+      if (!this.filters.type.length || this.filters.type.includes('video')) {
+        for (const video of data.videos) {
+          this.filteredData.push(video)
+        }
       }
-      for (const podcast of data.podcasts) {
-        this.filteredData.push(podcast)
+
+      // check type filter
+      if (!this.filters.type.length || this.filters.type.includes('podcast')) {
+        for (const podcast of data.podcasts) {
+          this.filteredData.push(podcast)
+        }
       }
-      for (const stream of data.streams) {
-        this.filteredData.push(stream)
+
+      // check type filter
+      if (!this.filters.type.length || this.filters.type.includes('stream')) {
+        for (const stream of data.streams) {
+          this.filteredData.push(stream)
+        }
       }
     },
     /**
@@ -126,12 +166,31 @@ export const useContentStore = defineStore('content', {
             return this.normalizeInput(tag).includes(w)
           })) !== negative;
     },
+    /**
+     * Select 9 random items
+     */
     pickRandomSet() {
       let nums = Array.from({length: 9}, () => Math.floor(Math.random() * this.combinedData.length));
       this.randomData = []
       nums.forEach(num => {
         this.randomData.push(this.combinedData[num])
       })
+    },
+    /**
+     * Reset all filters
+     */
+    resetFilters() {
+      this.filters = {
+        type: [],
+        date: {
+          after: '',
+          before: ''
+        },
+        duration: {
+          min: '',
+          max: ''
+        }
+      }
     }
 }
 })

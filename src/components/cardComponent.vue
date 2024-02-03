@@ -15,6 +15,8 @@
                 <a class="text-danger me-2" v-if="card.type === 'podcast'" :href="card.url" target="_blank"><i
                     class="bi bi-youtube"></i></a>
             </div>
+            <span class="badge rounded-pill text-bg-success" :class="card.type === 'podcast' ? 'text-bg-success' :
+            card.type === 'video' ? 'text-bg-danger' : 'text-bg-warning'">{{ card.type }}</span>
         </div>
     </div>
 </template>

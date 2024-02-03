@@ -1,5 +1,5 @@
 <template>
-    <div class="col-4" v-for="(card, idx) in filteredData" :key="idx">
+    <div class="col-4" v-for="(card, idx) in sortedData" :key="idx">
         <card-component :card="card" :images="images"/>
     </div>
     <div class="col-4" v-if="!filteredData.length" v-for="(card, idx) in randomData" :key="idx">
@@ -21,7 +21,7 @@ const images = Object.fromEntries(
 
 // store
 const content = useContentStore()
-const {filteredData, randomData} = storeToRefs(content)
+const {filteredData, sortedData, randomData} = storeToRefs(content)
 content.pickRandomSet()
 </script>
 
