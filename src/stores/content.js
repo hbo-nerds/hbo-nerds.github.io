@@ -6,7 +6,9 @@ import videos from '../assets/videos.json'
 export const useContentStore = defineStore('content', {
   state: () => ({
     baseData: [],
+    combinedData: [],
     filteredData: [],
+    randomData: [],
     search: '',
     sortOption: ''
   }),
@@ -27,6 +29,7 @@ export const useContentStore = defineStore('content', {
      */
     fetchData() {
       this.baseData = {podcasts, streams, videos}
+      this.combinedData = [].concat(podcasts, streams, videos)
     },
     /**
      * Main filter function
@@ -122,6 +125,13 @@ export const useContentStore = defineStore('content', {
           s['tags'].some(tag => {
             return this.normalizeInput(tag).includes(w)
           })) !== negative;
+    },
+    pickRandomSet() {
+      let nums = Array.from({length: 9}, () => Math.floor(Math.random() * this.combinedData.length));
+      this.randomData = []
+      nums.forEach(num => {
+        this.randomData.push(this.combinedData[num])
+      })
     }
 }
 })

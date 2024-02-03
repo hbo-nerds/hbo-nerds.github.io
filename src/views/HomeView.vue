@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="col-12" v-if="!filteredData.length">Start met zoeken door een zoekterm in te vullen.
+                    <div class="col-12" v-if="!filteredData.length">Dit zijn 9 <b>random</b> items speciaal voor jouw! Start met zoeken door een zoekterm in te vullen.
                     </div>
                     <cards-container v-if="view === 'thumbnails'"></cards-container>
                 </div>
