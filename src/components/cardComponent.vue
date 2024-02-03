@@ -6,10 +6,14 @@
             <div class="fst-italic">{{ card.date }}</div>
             <div class="fst-italic">{{ duration }}</div>
             <div class="d-flex">
-                <a class="text-danger me-2" v-if="card.type === 'stream' && card.youtube" :href="card.youtube" target="_blank"><i class="bi bi-youtube"></i></a>
-                <a class="text-black me-2" v-if="card.type === 'stream' && card.twitch" :href="card.twitch" target="_blank"><i class="bi bi-twitch"></i></a>
-                <a class="text-danger me-2" v-if="card.type === 'video'" :href="card.url" target="_blank"><i class="bi bi-youtube"></i></a>
-                <a class="text-danger me-2" v-if="card.type === 'podcast'" :href="card.url" target="_blank"><i class="bi bi-youtube"></i></a>
+                <a class="text-danger me-2" v-if="card.type === 'stream' && card.youtube" :href="card.youtube"
+                   target="_blank"><i class="bi bi-youtube"></i></a>
+                <a class="text-black me-2" v-if="card.type === 'stream' && card.twitch" :href="card.twitch"
+                   target="_blank"><i class="bi bi-twitch"></i></a>
+                <a class="text-danger me-2" v-if="card.type === 'video'" :href="card.url" target="_blank"><i
+                    class="bi bi-youtube"></i></a>
+                <a class="text-danger me-2" v-if="card.type === 'podcast'" :href="card.url" target="_blank"><i
+                    class="bi bi-youtube"></i></a>
             </div>
         </div>
     </div>
@@ -29,12 +33,13 @@ const fileName = computed(() => {
     if (props.card.type === 'stream') {
         if (props.card.twitch)
             return props.card.twitch.split('/')[4];
-        else if (props.card.youtube)
+        else if (props.card.youtube) {
             return GetYoutubeIDFromURL(props.card.youtube)
-        else
+        } else
             return 'no_video'
-    } else
+    } else {
         return GetYoutubeIDFromURL(props.card.url)
+    }
 })
 
 const duration = computed(() => {

@@ -1,162 +1,53 @@
 <template>
-    <main>
-        <div class="container py-5">
-            <div class="row mb-3">
-                <div class="col-12 col-md-6 m-auto">
-                    <input class="form-control" type="search" placeholder="Zoek een video" v-model="searchTerm"
-                           @input="searchListener">
-                </div>
+    <div class="container-fluid py-4">
+        <div class="row g-3">
+            <div class="col-3">
+                <filter-component></filter-component>
             </div>
-            <div class="row mb-3">
-                <div class="col">
-                    <div class="fs-4 text-white">{{filteredData.length}} resultaten gevonden</div>
+            <div class="col-9">
+                <div class="row g-2 align-items-center mb-3">
+                    <button type="button" class="col-auto btn btn-outline-primary me-1"
+                            :class="{active: view === 'list'}" @click="store.setView('list')"><i
+                        class="bi bi-list me-1"></i>Lijst
+                    </button>
+                    <button type="button" class="col-auto btn btn-outline-primary"
+                            :class="{active: view === 'thumbnails'}" @click="store.setView('thumbnails')"><i
+                        class="bi bi-card-image me-1"></i>Thumbnails
+                    </button>
+                    <span class="col-auto ms-auto">{{ filteredData.length }} resultaten</span>
+                    <span class="col-auto">|</span>
+                    <span class="col-auto">Sorteer op</span>
+                    <div class="col-auto">
+                        <select class="form-select" v-model="sortOption">
+                            <option selected value="">Standaard</option>
+                            <option value="newOld">Datum (nieuw-oud)</option>
+                            <option value="oldNew">Datum (oud-nieuw)</option>
+                            <option value="shortLong">Duur (kort-lang)</option>
+                            <option value="longShort">Duur (lang-kort)</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="row g-3">
-                <div class="col-6 col-lg-3" v-for="(card, idx) in filteredData" :key="idx">
-                    <card-component :card="card" :images="images"/>
+                <div class="row g-2">
+                    <div class="col-12" v-if="!filteredData.length">Start met zoeken door een zoekterm in te vullen.
+                    </div>
+                    <cards-container v-if="view === 'thumbnails'"></cards-container>
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 </template>
 
 <script setup>
-import {filename} from 'pathe/utils'
-import podcasts from '../assets/podcasts.json'
-import streams from '../assets/streams.json'
-import videos from '../assets/videos.json'
-import CardComponent from "@/components/cardComponent.vue";
-import {computed, ref} from "vue";
+import {useGeneralStore} from "@/stores/general.js";
+import {useContentStore} from "@/stores/content.js";
+import {storeToRefs} from "pinia";
+import FilterComponent from "@/components/filterComponent.vue";
+import CardsContainer from "@/assets/containers/CardsContainer.vue";
 
-const glob = import.meta.glob('@/assets/img/thumbnails/*/*.webp', {eager: true})
-const images = Object.fromEntries(
-    Object.entries(glob).map(([key, value]) => [filename(key), value.default])
-)
-
-const searchTerm = ref()
-const baseData = ref({podcasts: [], videos: [], streams: []})
-const data = ref({})
-const searchTimeout = ref();
-const filteredData = ref([])
-
-fetchData()
-
-function fetchData() {
-    for (const podcast of podcasts) {
-        podcast.type = 'podcast';
-        baseData.value.podcasts.push(podcast)
-    }
-    for (const video of videos) {
-        video.type = 'video';
-        baseData.value.videos.push(video)
-    }
-    for (const stream of streams) {
-        stream.type = 'stream';
-        baseData.value.streams.push(stream)
-    }
-}
-
-function normalizedInput(input) {
-    return input == null ? '' : input.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
-}
-
-const posWords = computed(() => {
-    return searchTerm.value ? searchTerm.value.split(' ').filter((w) => !w.startsWith('-') && w.length).map(w => w.toLowerCase()) : [];
-})
-
-const negWords = computed(() => {
-    return searchTerm.value ? searchTerm.value.split(' ').filter(w => w.startsWith('-') && length).map(w => w.slice(1).toLowerCase()) : [];
-})
-
-function searchListener() {
-    if (searchTerm.value.length < 3) return;
-
-    if (searchTimeout.value) {
-        clearTimeout(searchTimeout.value)
-    }
-
-    searchTimeout.value = setTimeout(() => {
-        search()
-    }, 250)
-}
-
-
-function search() {
-    filteredData.value = [];
-    data.value = {
-        podcasts: baseData.value.podcasts.slice(),
-        videos: baseData.value.videos.slice(),
-        streams: baseData.value.streams.slice(),
-    }
-
-    negWords.value.forEach((pw) => {
-        filterPodcasts(pw, true)
-        filterVideos(pw, true)
-        filterStreams(pw, true)
-    })
-    posWords.value.forEach((pw) => {
-        filterPodcasts(pw, false)
-        filterVideos(pw, false)
-        filterStreams(pw, false)
-    })
-
-    for (const podcast of data.value.podcasts) {
-        filteredData.value.push(podcast)
-    }
-    for (const video of data.value.videos) {
-        filteredData.value.push(video)
-    }
-    for (const stream of data.value.streams) {
-        filteredData.value.push(stream)
-    }
-}
-
-/**
- * Filter for podcasts
- * @param word
- * @param negative
- */
-function filterPodcasts(word, negative) {
-    negative = !!negative;
-    data.value.podcasts = data.value.podcasts.filter((podcast) => {
-        return (normalizedInput(podcast['title']).includes(word) || normalizedInput(podcast['description']).includes(word)) !== negative
-    })
-}
-
-/**
- * Filter for videos
- * @param word
- * @param negative
- */
-function filterVideos(word, negative) {
-    negative = !!negative;
-    data.value.videos = data.value.videos.filter((video) => {
-        return (normalizedInput(video['title']).includes(word) || normalizedInput(video['description']).includes(word) ||
-            (Array.isArray(video['game']) ? video['game'].some(game => {
-                return normalizedInput(game).includes(word)
-            }) : normalizedInput(video['game']).includes(word))) !== negative;
-    });
-}
-
-/**
- * Filter for streams
- * @param word
- * @param negative
- */
-function filterStreams(word, negative) {
-    negative = !!negative;
-    data.value.streams = data.value.streams.filter(stream => {
-        return (normalizedInput(stream['description']).includes(word) || stream['all_titles'].some(title => {
-                return normalizedInput(title).includes(word)
-            }) ||
-            stream['games'].some(game => {
-                return normalizedInput(game.title).includes(word)
-            }) ||
-            stream['tags'].some(tag => {
-                return normalizedInput(tag).includes(word)
-            })) !== negative;
-    });
-}
+// store
+const store = useGeneralStore()
+const content = useContentStore()
+const {view} = storeToRefs(store)
+const {filteredData, sortOption} = storeToRefs(content)
 
 </script>
