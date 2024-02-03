@@ -37,8 +37,98 @@ body {
     color: #888;
 }
 
+#filters-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #fff;
+
+    .filter {
+        display: flex;
+        margin-right: 24px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        > input:checked + label {
+            &:after {
+                display: block;
+            }
+        }
+
+        > input#podcasts-filter + label {
+            &:after {
+                background-color: var(--podcast);
+            }
+        }
+        > input#videos-filter + label {
+            &:after {
+                background-color: var(--video);
+            }
+        }
+        > input#streams-filter + label {
+            &:after {
+                background-color: var(--stream);
+            }
+        }
+
+        > label {
+            cursor: pointer;
+            position: relative;
+            padding-left: 18px;
+            user-select: none;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 14px;
+                height: 14px;
+                background-color: #fff;
+            }
+
+            &:after {
+                display: none;
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 2px;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
+}
+
+#sort-container {
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 20px;
+
+    > label {
+        font-size: 18px;
+        color: #fff;
+    }
+
+    > select {
+        cursor: pointer;
+        padding: 8px 4px 8px 8px;
+        color: #888;
+        border: 2px solid #ccc;
+        background-color: #fff;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: auto;
+    }
+}
+
 #containers {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     align-items: flex-start;
     padding-bottom: 10px;

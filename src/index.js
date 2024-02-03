@@ -16,6 +16,14 @@ let searchTimeout;
 const cardsDOM = document.querySelector('#cards')
 const searchDOM = document.querySelector('#search')
 
+// Filters
+const podcastFilter = document.querySelector('#podcasts-filter')
+const videosFilter = document.querySelector('#videos-filter')
+const streamsFilter = document.querySelector('#streams-filter')
+
+// Sort
+const sortDOM = document.querySelector('#sort')
+
 // Example list for the search bar
 const exampleList = [
     'Pokémon',
@@ -28,8 +36,12 @@ const exampleList = [
     'PUBG',
 ]
 
+const exampleSearch = exampleList[Math.floor(Math.random() * exampleList.length)]
+// Set a random example from the example list to default search query
+let search = exampleSearch
+
 // Set a random example from the example list as the placeholder
-searchDOM.setAttribute('placeholder', `Zoek een video - Bijvoorbeeld: ${exampleList[Math.floor(Math.random() * exampleList.length)]}`)
+searchDOM.setAttribute('placeholder', `Zoek een video - Bijvoorbeeld: ${exampleSearch}`)
 
 // Add an event listener to the search bar
 searchDOM.addEventListener('input', (e) => {
@@ -44,8 +56,29 @@ searchDOM.addEventListener('input', (e) => {
 
     // We use a short delay to prevent the search from triggering on every keypress
     searchTimeout = setTimeout(() => {
+        search = e.target.value
         Search(e.target.value)
     }, 250)
+})
+
+// Add an event listener to the podast filter
+podcastFilter.addEventListener('input', () => {
+    Search(search)
+})
+
+// Add an event listener to the videos filter
+videosFilter.addEventListener('input', () => {
+    Search(search)
+})
+
+// Add an event listener to the streams filter
+streamsFilter.addEventListener('input', () => {
+    Search(search)
+})
+
+// Add an event listener to the sorting
+sortDOM.addEventListener('input', () => {
+    Search(search)
 })
 
 document.getElementById('cards').addEventListener('click', function (event) {
@@ -61,6 +94,7 @@ document.getElementById('cards').addEventListener('click', function (event) {
 
 async function Init() {
     await FetchData()
+    Search(search)
 
     RenderSharedCard()
 }
@@ -118,6 +152,11 @@ function NormalizeString(s) {
 }
 
 async function Search(input) {
+    // Define active filters
+    const podcastsFilterActive = podcastFilter.checked;
+    const videosFilterActive = videosFilter.checked;
+    const streamsFilterActive = streamsFilter.checked;
+
     const filtered = []
 
     // Copy the data object
@@ -131,7 +170,7 @@ async function Search(input) {
 
     const words = [];
 
-    // Collect all the words. Words between quotes are treated as one word. 
+    // Collect all the words. Words between quotes are treated as one word.
     let word = '';
     let quote = false;
     let negativeWords = [];
@@ -176,23 +215,32 @@ async function Search(input) {
         ApplyFilter(filteredData, word)
     }
 
-    for (const podcast of filteredData.podcasts) {
-        filtered.push(podcast)
+    if (podcastsFilterActive) {
+        for (const podcast of filteredData.podcasts) {
+            filtered.push(podcast)
+        }
     }
 
-    for (const video of filteredData.videos) {
-        filtered.push(video)
+    if (videosFilterActive) {
+        for (const video of filteredData.videos) {
+            filtered.push(video)
+        }
     }
 
-    for (const stream of filteredData.streams) {
-        filtered.push(stream)
+    if (streamsFilterActive) {
+        for (const stream of filteredData.streams) {
+            filtered.push(stream)
+        }
     }
 
-    // Sort filtered by date, newest first. .date is a string in the format "DD/MM/YYYY"
+    // Sort filtered by date based on sorting. .date is a string in the format "DD/MM/YYYY"
     filtered.sort((a, b) => {
         const aDate = a.date.split('/').reverse().join('');
         const bDate = b.date.split('/').reverse().join('');
-        return bDate.localeCompare(aDate);
+        if (sortDOM.value === 'newest') {
+            return bDate.localeCompare(aDate);
+        }
+        return aDate.localeCompare(bDate);
     })
 
     // Render filtered data
