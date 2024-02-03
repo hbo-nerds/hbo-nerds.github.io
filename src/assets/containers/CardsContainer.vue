@@ -1,8 +1,8 @@
 <template>
-    <div class="col-4" v-for="(card, idx) in sortedData" :key="idx">
+    <div class="col-6 col-md-4 col-lg-3" v-for="(card, idx) in sortedData" :key="idx">
         <card-component :card="card" :images="images"/>
     </div>
-    <div class="col-4" v-if="!filteredData.length" v-for="(card, idx) in randomData" :key="idx">
+    <div class="col-6 col-md-4 col-lg-3" v-if="!filteredData.length" v-for="(card, idx) in randomData" :key="idx">
         <card-component :card="card" :images="images"/>
     </div>
 </template>

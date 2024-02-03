@@ -1,10 +1,10 @@
 <template>
     <div class="container-fluid py-4">
         <div class="row g-3">
-            <div class="col-3">
+            <div class="col-2 d-none d-md-block">
                 <filter-component></filter-component>
             </div>
-            <div class="col-9">
+            <div class="col-12 col-md-10">
                 <div class="row g-2 align-items-center mb-3">
                     <button type="button" class="col-auto btn btn-outline-primary me-1"
                             :class="{active: view === 'list'}" @click="store.setView('list')"><i
@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="col-12" v-if="!filteredData.length">Dit zijn 9 <b>random</b> items speciaal voor jouw! Start met zoeken door een zoekterm in te vullen.
+                    <div class="col-12" v-if="!filteredData.length">Dit zijn 12 <b>random</b> items speciaal voor jou! Start met zoeken door een zoekterm in te vullen.
                     </div>
                     <cards-container v-if="view === 'thumbnails'"></cards-container>
                 </div>

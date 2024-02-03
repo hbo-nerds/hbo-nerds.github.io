@@ -170,7 +170,7 @@ export const useContentStore = defineStore('content', {
      * Select 9 random items
      */
     pickRandomSet() {
-      let nums = Array.from({length: 9}, () => Math.floor(Math.random() * this.combinedData.length));
+      let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.combinedData.length));
       this.randomData = []
       nums.forEach(num => {
         this.randomData.push(this.combinedData[num])

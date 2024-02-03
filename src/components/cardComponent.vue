@@ -1,22 +1,22 @@
 <template>
-    <div class="card h-100" @click="selectCard" :class="active ? 'border border-4 border-danger' : ''">
-        <img :src="images[`${fileName}`] || images[`default`]" class="card-img-top" alt="thumbnail">
-        <div class="card-body">
-            <h6 class="card-title">{{ card.title }}</h6>
-            <div class="fst-italic">{{ card.date }}</div>
-            <div class="fst-italic">{{ duration }}</div>
-            <div class="d-flex">
-                <a class="text-danger me-2" v-if="card.type === 'stream' && card.youtube" :href="card.youtube"
-                   target="_blank"><i class="bi bi-youtube"></i></a>
-                <a class="text-black me-2" v-if="card.type === 'stream' && card.twitch" :href="card.twitch"
-                   target="_blank"><i class="bi bi-twitch"></i></a>
-                <a class="text-danger me-2" v-if="card.type === 'video'" :href="card.url" target="_blank"><i
-                    class="bi bi-youtube"></i></a>
-                <a class="text-danger me-2" v-if="card.type === 'podcast'" :href="card.url" target="_blank"><i
-                    class="bi bi-youtube"></i></a>
+    <div class="card h-100 border border-4" @click="selectCard" :class="card.type === 'podcast' ? 'border-success' :
+            card.type === 'video' ? 'border-danger' : 'border-warning'">
+        <div class="position-relative">
+            <img :src="images[`${fileName}`] || images[`default`]" class="card-img-top" alt="thumbnail">
+            <span class="badge rounded-0 bg-secondary position-absolute top-0 start-0"
+                  style="--bs-bg-opacity: .75;">{{ card.date }}</span>
+            <span class="badge rounded-0 bg-secondary position-absolute bottom-0 end-0"
+                  style="--bs-bg-opacity: .75;">{{ duration }}</span>
+            <span class="badge rounded-0 position-absolute top-0 end-0 text-uppercase" :class="card.type === 'podcast' ? 'bg-success' :
+            card.type === 'video' ? 'bg-danger' : 'bg-warning'">{{ card.type }}</span>
+            <div class="position-absolute bottom-0 start-0">
+                <a :href="card.youtube" class="btn btn-sm btn-light rounded-0" v-if="card.youtube"><i class="bi bi-youtube text-youtube"></i></a>
+                <a :href="card.twitch" class="btn btn-sm btn-light rounded-0" v-if="card.twitch"><i class="bi bi-twitch text-twitch"></i></a>
+                <a :href="card.url" class="btn btn-sm btn-light rounded-0" v-if="card.url"><i class="bi" :class="card.url.includes('apple') ? 'bi-apple' : 'bi-youtube text-youtube'"></i></a>
             </div>
-            <span class="badge rounded-pill text-bg-success" :class="card.type === 'podcast' ? 'text-bg-success' :
-            card.type === 'video' ? 'text-bg-danger' : 'text-bg-warning'">{{ card.type }}</span>
+        </div>
+        <div class="card-body">
+            <h6 class="card-title m-0">{{ card.title }}</h6>
         </div>
     </div>
 </template>

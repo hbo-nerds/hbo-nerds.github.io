@@ -41,11 +41,11 @@
 
         <!-- duration -->
         <div class="mb-3">
-            <label class="form-label small">Duur</label>
+            <label class="form-label small">Duur (in minuten)</label>
             <div class="input-group">
-                <input type="number" class="form-control" placeholder="0 min" v-model="filters.duration.min">
+                <input type="number" class="form-control" placeholder="min" v-model="filters.duration.min">
                 <span class="input-group-text"><i class="bi bi-arrows"></i></span>
-                <input type="number" class="form-control" placeholder="60 min" v-model="filters.duration.max">
+                <input type="number" class="form-control" placeholder="max" v-model="filters.duration.max">
             </div>
         </div>
         <hr>
