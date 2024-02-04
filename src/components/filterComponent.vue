@@ -1,4 +1,7 @@
 <template>
+    <div class="alert alert-warning" role="alert" v-if="search.length < 3">
+        <i class="bi bi-exclamation-triangle-fill me-1"></i>Vul eerst een zoekterm in.
+    </div>
     <h6 class="fw-bold mb-2">Verfijn resultaten</h6>
     <div class="mb-3">
         <!-- type -->
@@ -59,7 +62,7 @@ import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 
 const contentStore = useContentStore()
-const { filters } = storeToRefs(contentStore)
+const { filters, search } = storeToRefs(contentStore)
 </script>
 
 <style scoped>
