@@ -9,7 +9,7 @@ export const useContentStore = defineStore('content', {
     filteredData: [],
     randomData: [],
     search: '',
-    sortOption: '',
+    sortOption: 'newOld',
     filters: {
       type: [],
       date: {
@@ -31,18 +31,19 @@ export const useContentStore = defineStore('content', {
     },
     sortedData() {
       return this.filteredData.sort((a, b) => {
-        let datePartsA = a.date.split("/");
-        let datePartsB = b.date.split("/");
-        let dateObjectA = new Date(+datePartsA[2], datePartsA[1] - 1, + datePartsA[0]);
-        let dateObjectB = new Date(+datePartsB[2], datePartsB[1] - 1, + datePartsB[0]);
+        let dateA = new Date(a.date);
+        let dateB = new Date(b.date);
 
         if (!this.sortOption) return true
         else if (this.sortOption === 'oldNew') {
-          return dateObjectA - dateObjectB
+          return dateA - dateB
         } else if (this.sortOption === 'newOld') {
-          return dateObjectB - dateObjectA
+          return dateB - dateA
+        } else if(this.sortOption === 'shortLong') {
+          return a.duration - b.duration
+        } else if(this.sortOption === 'longShort') {
+          return b.duration - a.duration
         } else return true
-        //TODO add more sort options, wait till new json file is ready
       })
     }
   },

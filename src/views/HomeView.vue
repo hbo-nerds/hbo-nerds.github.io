@@ -34,7 +34,6 @@
                     </div>
                     <div class="col-auto ms-auto ms-md-0">
                         <select class="form-select form-select-sm" v-model="sortOption">
-                            <option selected value="">Standaard</option>
                             <option value="newOld">Datum (nieuw-oud)</option>
                             <option value="oldNew">Datum (oud-nieuw)</option>
                             <option value="shortLong">Duur (kort-lang)</option>
