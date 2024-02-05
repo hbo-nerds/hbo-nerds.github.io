@@ -1,6 +1,4 @@
 <template>
-    <div class="col-12" v-if="!sortedData.length && search">Lekker Appie! Geen resultaten gevonden.</div>
-    <div class="col-12" v-if="!search">Dit zijn 12 <b>random</b> items speciaal voor jou! <button type="button" class="btn btn-sm btn-link" @click="content.pickRandomSet()">Geef me wat anders.</button> </div>
     <div class="col-6 col-md-4 col-lg-3" v-if="search.length >= 3" v-for="(card, idx) in sortedData" :key="idx">
         <card-component :card="card" :images="images"/>
     </div>
@@ -23,7 +21,7 @@ const images = Object.fromEntries(
 
 // store
 const content = useContentStore()
-const {filteredData, sortedData, randomData, search} = storeToRefs(content)
+const {sortedData, randomData, search} = storeToRefs(content)
 content.pickRandomSet()
 </script>
 

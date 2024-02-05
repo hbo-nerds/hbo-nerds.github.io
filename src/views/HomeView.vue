@@ -2,7 +2,7 @@
     <div class="container-fluid py-4">
         <nav  class="mb-4" aria-label="breadcrumb">
             <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item" aria-current="page" v-if="search.length >= 3">{{ filteredData.length }} resultaten voor '{{search}}'</li>
+                <li class="breadcrumb-item" aria-current="page" v-if="search.length >= 3">{{ sortedData.length }} resultaten voor '{{search}}'</li>
                 <li class="breadcrumb-item" aria-current="page" v-if="search.length < 3">Start met zoeken door een zoekterm in te vullen.</li>
             </ol>
         </nav>
@@ -43,6 +43,8 @@
                     </div>
                 </div>
                 <div class="row g-2">
+                    <div class="col-12" v-if="!sortedData.length && search">Lekker Appie! Geen resultaten gevonden.</div>
+                    <div class="col-12" v-if="!search">Dit zijn 12 <b>random</b> items speciaal voor jou! <button type="button" class="btn btn-sm btn-link" @click="content.pickRandomSet()">Geef me wat anders.</button> </div>
                     <cards-container v-if="view === 'thumbnails'"></cards-container>
                 </div>
             </div>
@@ -62,6 +64,6 @@ import FilterModal from "@/components/filterModal.vue";
 const store = useGeneralStore()
 const content = useContentStore()
 const {view} = storeToRefs(store)
-const {filteredData, sortOption, search} = storeToRefs(content)
+const {sortedData, sortOption, search} = storeToRefs(content)
 
 </script>

@@ -1,13 +1,11 @@
 import {defineStore} from "pinia";
-import podcasts from '../assets/podcasts.json'
-import streams from '../assets/streams.json'
-import videos from '../assets/videos.json'
-import {offset} from "@popperjs/core";
+import og_data from '../assets/data/data.json'
 
 export const useContentStore = defineStore('content', {
   state: () => ({
-    baseData: [],
-    combinedData: [],
+    collections: [],
+    content: [],
+
     filteredData: [],
     randomData: [],
     search: '',
@@ -29,7 +27,7 @@ export const useContentStore = defineStore('content', {
       return this.search.split(' ').filter(w => !w.startsWith('-') && w.length).map(w => w.toLowerCase())
     },
     negWords() {
-      return this.search.split(' ').filter(w => w.startsWith('-') && w.length).map(w => w.slice(1).toLowerCase())
+      return this.search.split(' ').filter(w => w.startsWith('-') && w.length).map(w => w.slice(1).toLowerCase()).filter(w => w)
     },
     sortedData() {
       return this.filteredData.sort((a, b) => {
@@ -53,68 +51,51 @@ export const useContentStore = defineStore('content', {
      * Fetch json data
      */
     fetchData() {
-      this.baseData = {podcasts, streams, videos}
-      this.combinedData = [].concat(podcasts, streams, videos)
+      this.collections = og_data.collections
+      this.content = og_data.content
+
     },
     /**
      * Main filter function
      */
     filter() {
-      //TODO update filter when new json file is ready
       this.filteredData = []
 
       // start with all items
-      let data = {
-        videos: this.baseData.videos.slice(),
-        podcasts: this.baseData.podcasts.slice(),
-        streams: this.baseData.streams.slice(),
-      }
+      let data = this.content.slice()
 
       // check neg words
       this.negWords.forEach((pw) => {
-        data.videos = data.videos.filter((v) => {
-          return this.filterVideo(v, pw, true)
-        })
-        data.podcasts = data.podcasts.filter((p) => {
-          return this.filterPodcast(p, pw, true)
-        })
-        data.streams = data.streams.filter((s) => {
-          return this.filterStream(s, pw, true)
+        data = data.filter((item) => {
+          switch (item.type) {
+            case 'podcast':
+              return this.filterPodcast(item, pw, true)
+            case 'video':
+              return this.filterVideo(item, pw, true)
+            case 'stream':
+              return this.filterStream(item, pw, true)
+          }
         })
       })
 
       // check pos words
       this.posWords.forEach((pw) => {
-        data.videos = data.videos.filter((v) => {
-          return this.filterVideo(v, pw, false)
-        })
-        data.podcasts = data.podcasts.filter((p) => {
-          return this.filterPodcast(p, pw, false)
-        })
-        data.streams = data.streams.filter((s) => {
-          return this.filterStream(s, pw, false)
+        data = data.filter((item) => {
+          switch (item.type) {
+            case 'podcast':
+              return this.filterPodcast(item, pw)
+            case 'video':
+              return this.filterVideo(item, pw)
+            case 'stream':
+              return this.filterStream(item, pw)
+          }
         })
       })
 
-      // check type filter
-      if (!this.filters.type.length || this.filters.type.includes('video')) {
-        for (const video of data.videos) {
-          this.filteredData.push(video)
-        }
-      }
+      data = data.filter(item => !this.filters.type.length || this.filters.type.includes(item.type))
 
-      // check type filter
-      if (!this.filters.type.length || this.filters.type.includes('podcast')) {
-        for (const podcast of data.podcasts) {
-          this.filteredData.push(podcast)
-        }
-      }
-
-      // check type filter
-      if (!this.filters.type.length || this.filters.type.includes('stream')) {
-        for (const stream of data.streams) {
-          this.filteredData.push(stream)
-        }
+      for (const item of data) {
+        this.filteredData.push(item)
       }
     },
     /**
@@ -132,11 +113,11 @@ export const useContentStore = defineStore('content', {
      * @param negative
      * @returns {boolean}
      */
-    filterVideo(v, w, negative) {
+    filterVideo(v, w, negative = false) {
       return (this.normalizeInput(v['title']).includes(w) || this.normalizeInput(v['description']).includes(w) ||
-          (Array.isArray(v['game']) ? v['game'].some(game => {
-            return this.normalizeInput(game).includes(w)
-          }) : this.normalizeInput(v['game']).includes(w))) !== negative;
+          (Array.isArray(v['activity']) ? v['activity'].some(act => {
+            return this.normalizeInput(act).includes(w)
+          }) : this.normalizeInput(v['activity']).includes(w))) !== negative;
     },
     /**
      * Filter podcast
@@ -145,7 +126,7 @@ export const useContentStore = defineStore('content', {
      * @param negative
      * @returns {boolean}
      */
-    filterPodcast(p, w, negative) {
+    filterPodcast(p, w, negative = false) {
       return (this.normalizeInput(p['title']).includes(w) || this.normalizeInput(p['description']).includes(w)) !== negative
     },
     /**
@@ -155,11 +136,13 @@ export const useContentStore = defineStore('content', {
      * @param negative
      * @returns {boolean}
      */
-    filterStream(s, w, negative) {
-      return (this.normalizeInput(s['description']).includes(w) || s['all_titles'].some(title => {
+    filterStream(s, w, negative = false) {
+      return (this.normalizeInput(s['description']).includes(w) || s['titles'].some(title => {
             return this.normalizeInput(title).includes(w)
           }) ||
-          s['games'].some(game => {
+          (s['custom_title'] && this.normalizeInput(s['custom_title']).includes(w))
+          ||
+          s['activities'].some(game => {
             return this.normalizeInput(game.title).includes(w)
           }) ||
           s['tags'].some(tag => {
@@ -167,13 +150,13 @@ export const useContentStore = defineStore('content', {
           })) !== negative;
     },
     /**
-     * Select 9 random items
+     * Select some random items
      */
     pickRandomSet() {
-      let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.combinedData.length));
+      let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.content.length));
       this.randomData = []
       nums.forEach(num => {
-        this.randomData.push(this.combinedData[num])
+        this.randomData.push(this.content[num])
       })
     },
     /**

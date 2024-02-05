@@ -1,6 +1,6 @@
 <template>
-    <div class="alert alert-warning" role="alert" v-if="search.length < 3">
-        <i class="bi bi-exclamation-triangle-fill me-1"></i>Vul eerst een zoekterm in.
+    <div class="alert alert-warning p-2" role="alert" v-if="search.length < 3">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i>Zoekterm vereist.
     </div>
     <h6 class="fw-bold mb-2">Verfijn resultaten</h6>
     <div class="mb-3">
