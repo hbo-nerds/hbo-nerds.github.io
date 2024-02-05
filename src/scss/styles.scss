@@ -14,9 +14,21 @@ body {
   flex-direction: column;
 }
 
-.text-youtube {
+.text-yt {
   color: #FF0000 !important;
 }
-.text-twitch {
+.border-yt {
+  border-color: #FF0000 !important;
+}
+.bg-yt {
+  background-color: #FF0000 !important;
+}
+.text-tw {
   color: #6441A5 !important;
+}
+.border-tw {
+  border-color: #6441A5 !important;
+}
+.bg-tw {
+  background-color: #6441A5 !important;
 }
