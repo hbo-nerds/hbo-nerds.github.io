@@ -33,3 +33,20 @@ npm run build
 ```sh
 npm run lint
 ```
+## Deployment
+
+To deploy a new version of the website follow these steps:
+1. Merge the new code from 'development' branch to 'production'.
+2. On the 'production' branch run:
+```sh
+npm run build
+```
+3. Run the following git commands:
+```sh
+git add dist -f
+git commit -m 'adding dist subtree'
+git subtree push --prefix dist origin gh-pages
+```
+This will add the contents of the 'dist' folder to the 'gh-pages' branch. 
+
+In a few minutes, GitHub Pages should refresh with your newest repository changes, and you should be able to see your Vue project online. 
