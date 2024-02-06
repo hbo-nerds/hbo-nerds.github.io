@@ -3,9 +3,9 @@
         <div class="position-relative border border-3 rounded-1" :class="card.type === 'podcast' ? 'border-success' :
             card.type === 'video' ? 'border-yt' : 'border-tw'">
             <img :src="images[`${imgName}`] || images[`default`]" class="card-img-top" alt="thumbnail">
-            <span class="badge rounded-0 bg-secondary position-absolute top-0 start-0"
+            <span class="badge rounded-0 bg-black position-absolute top-0 start-0"
                   style="--bs-bg-opacity: .75;">{{ card.date }}</span>
-            <span class="badge rounded-0 bg-secondary position-absolute bottom-0 end-0"
+            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0"
                   style="--bs-bg-opacity: .75;">{{ duration }}</span>
             <span class="badge rounded-0 position-absolute top-0 end-0 text-uppercase fw-bold" :class="card.type === 'podcast' ? 'bg-success' :
             card.type === 'video' ? 'bg-yt' : 'bg-tw'">{{ card.type }}</span>

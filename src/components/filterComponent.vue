@@ -8,21 +8,24 @@
         <div class="mb-3">
             <label class="form-label small">Type</label>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="checkPodcast" value="podcast" name="type" @change="contentStore.filter()" v-model="filters.type">
+                <input class="form-check-input" type="checkbox" id="checkPodcast" value="podcast" name="type"
+                       @change="contentStore.filter()" v-model="filters.type">
                 <label class="form-check-label" for="checkPodcast">
-                    Podcast
+                    Podcast ({{ amountOfPodcast }})
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="checkVideo" value="video" name="type" @change="contentStore.filter()" v-model="filters.type">
+                <input class="form-check-input" type="checkbox" id="checkVideo" value="video" name="type"
+                       @change="contentStore.filter()" v-model="filters.type">
                 <label class="form-check-label" for="checkVideo">
-                    Video
+                    Video ({{ amountOfVideo }})
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="checkStream" value="stream" name="type" @change="contentStore.filter()" v-model="filters.type">
+                <input class="form-check-input" type="checkbox" id="checkStream" value="stream" name="type"
+                       @change="contentStore.filter()" v-model="filters.type">
                 <label class="form-check-label" for="checkStream">
-                    Stream
+                    Stream ({{ amountOfStream }})
                 </label>
             </div>
         </div>
@@ -31,14 +34,48 @@
         <!-- date -->
         <div class="mb-3">
             <label class="form-label">Datum</label>
-            <div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="all" value="all"
+                       @change="contentStore.filter()" v-model="filters.date.range">
+                <label class="form-check-label" for="all">
+                    Alle
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="check3mth" :value="3"
+                       @change="contentStore.filter()" v-model="filters.date.range">
+                <label class="form-check-label" for="check3mth">
+                    < 3 maanden
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="check6mth" :value="6"
+                       @change="contentStore.filter()" v-model="filters.date.range">
+                <label class="form-check-label" for="check6mth">
+                    < 6 maanden
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="check12mth" :value="12"
+                       @change="contentStore.filter()" v-model="filters.date.range">
+                <label class="form-check-label" for="check12mth">
+                    < 1 jaar
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="checkOther" value="other"
+                       v-model="filters.date.range">
+                <label class="form-check-label" for="checkOther">
+                    Anders...
+                </label>
+            </div>
+            <template v-if="filters.date.range === 'other'">
                 <label for="afterDate" class="form-label small">Na:</label>
-                <input type="date" class="form-control" id="afterDate" v-model="filters.date.after">
-            </div>
-            <div>
+                <input type="date" class="form-control" id="afterDate" @change="contentStore.filter()" v-model="filters.date.after">
+
                 <label for="beforeDate" class="form-label small">Voor:</label>
-                <input type="date" class="form-control" id="beforeDate" v-model="filters.date.before">
-            </div>
+                <input type="date" class="form-control" id="beforeDate" @change="contentStore.filter()" v-model="filters.date.before">
+            </template>
         </div>
         <hr>
 
@@ -46,9 +83,9 @@
         <div class="mb-3">
             <label class="form-label small">Duur (in minuten)</label>
             <div class="input-group">
-                <input type="number" class="form-control" placeholder="min" v-model="filters.duration.min">
+                <input type="number" class="form-control" placeholder="min" @change="contentStore.filter()" v-model="filters.duration.min">
                 <span class="input-group-text"><i class="bi bi-arrows"></i></span>
-                <input type="number" class="form-control" placeholder="max" v-model="filters.duration.max">
+                <input type="number" class="form-control" placeholder="max" @change="contentStore.filter()" v-model="filters.duration.max">
             </div>
         </div>
         <hr>
@@ -62,7 +99,7 @@ import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 
 const contentStore = useContentStore()
-const { filters, search } = storeToRefs(contentStore)
+const {filters, search, amountOfPodcast, amountOfStream, amountOfVideo} = storeToRefs(contentStore)
 </script>
 
 <style scoped>

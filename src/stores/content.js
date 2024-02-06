@@ -13,6 +13,7 @@ export const useContentStore = defineStore('content', {
     filters: {
       type: [],
       date: {
+        range: 'all',
         after: '',
         before: ''
       },
@@ -45,6 +46,15 @@ export const useContentStore = defineStore('content', {
           return b.duration - a.duration
         } else return true
       })
+    },
+    amountOfPodcast() {
+      return this.sortedData.reduce((acc, cur) => cur.type === 'podcast' ? ++acc : acc, 0);
+    },
+    amountOfVideo() {
+      return this.sortedData.reduce((acc, cur) => cur.type === 'video' ? ++acc : acc, 0);
+    },
+    amountOfStream() {
+      return this.sortedData.reduce((acc, cur) => cur.type === 'stream' ? ++acc : acc, 0);
     }
   },
   actions: {
@@ -60,6 +70,7 @@ export const useContentStore = defineStore('content', {
      * Main filter function
      */
     filter() {
+      if (this.search.length < 3) return
       this.filteredData = []
 
       // start with all items
@@ -93,11 +104,32 @@ export const useContentStore = defineStore('content', {
         })
       })
 
+      // filter for content type
       data = data.filter(item => !this.filters.type.length || this.filters.type.includes(item.type))
+
+      // filter for date
+      data = data.filter(item => this.filters.date.range === 'all' || this.checkDate(item))
+
+      // filter for duration
+      data = data.filter(item => (!this.filters.duration.min || (this.filters.duration.min * 60) < item.duration) &&
+          (!this.filters.duration.max || (this.filters.duration.max * 60) > item.duration))
 
       for (const item of data) {
         this.filteredData.push(item)
       }
+    },
+    checkDate(item) {
+      let toCheck = new Date(item.date);
+      if (this.filters.date.range === 'other') {
+        let start = this.filters.date.after ? new Date(this.filters.date.after) : new Date('2000-01-01');
+        let end = this.filters.date.before ? new Date(this.filters.date.before) : new Date('2099-01-01');
+        return toCheck < end && toCheck > start
+      } else {
+        let d = new Date()
+        d.setMonth(d.getMonth() - this.filters.date.range);
+        return toCheck > d
+      }
+
     },
     /**
      * Normalize the input
@@ -167,6 +199,7 @@ export const useContentStore = defineStore('content', {
       this.filters = {
         type: [],
         date: {
+          range: 'all',
           after: '',
           before: ''
         },
@@ -175,6 +208,7 @@ export const useContentStore = defineStore('content', {
           max: ''
         }
       }
+      this.filter()
     }
 }
 })
