@@ -1,10 +1,12 @@
 import {defineStore} from "pinia";
 import og_data from '../assets/data/data.json'
+import {filename} from "pathe/utils";
 
 export const useContentStore = defineStore('content', {
   state: () => ({
     collections: [],
     content: [],
+    images: [],
 
     filteredData: [],
     randomData: [],
@@ -65,6 +67,12 @@ export const useContentStore = defineStore('content', {
       this.collections = og_data.collections
       this.content = og_data.content
 
+    },
+    setImages() {
+      const glob = import.meta.glob('@/assets/img/thumbnails/*320px/*.webp', {eager: true})
+      this.images = Object.fromEntries(
+          Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+      )
     },
     /**
      * Main filter function
