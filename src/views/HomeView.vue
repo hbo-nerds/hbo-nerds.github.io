@@ -7,15 +7,15 @@
             </ol>
         </nav>
         <div class="row g-3">
-            <div class="col-md-3 col-lg-2 d-none d-md-block">
+            <div class="col-md-3 col-lg-2 d-none d-lg-block">
                 <filter-component></filter-component>
             </div>
-            <div class="col-12 d-md-none">
+            <div class="col-12 d-lg-none">
                 <filter-modal>
                     <filter-component></filter-component>
                 </filter-modal>
             </div>
-            <div class="col-12 col-md-9 col-lg-10">
+            <div class="col-12 col-lg-10">
                 <div class="row g-2 align-items-center mb-3">
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
@@ -44,7 +44,12 @@
                 <div class="row g-2">
                     <div class="col-12" v-if="!sortedData.length && search">Lekker Appie! Geen resultaten gevonden.</div>
                     <div class="col-12" v-if="!search">Dit zijn 12 <b>random</b> items speciaal voor jou! <button type="button" class="btn btn-sm btn-link" @click="content.pickRandomSet()">Geef me wat anders.</button> </div>
-                    <cards-container v-if="view === 'thumbnails'"></cards-container>
+
+                    <cards-container v-if="view === 'thumbnails' && !selectedCard"></cards-container>
+                    <div v-if="selectedCard" class="col-12 col-md-8 offset-md-2">
+                        <single-card-component></single-card-component>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -58,11 +63,12 @@ import {storeToRefs} from "pinia";
 import FilterComponent from "@/components/filterComponent.vue";
 import CardsContainer from "@/assets/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
+import SingleCardComponent from "@/components/singleCardComponent.vue";
 
 // store
 const store = useGeneralStore()
 const content = useContentStore()
-const {view} = storeToRefs(store)
+const {view, selectedCard} = storeToRefs(store)
 const {sortedData, sortOption, search} = storeToRefs(content)
 
 </script>

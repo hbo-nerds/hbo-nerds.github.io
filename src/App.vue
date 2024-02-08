@@ -18,6 +18,7 @@ import {useContentStore} from "@/stores/content.js";
 
 const contentStore = useContentStore()
 contentStore.fetchData();
+contentStore.setImages();
 
 </script>
 

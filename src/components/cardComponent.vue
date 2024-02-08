@@ -23,12 +23,15 @@
 <script setup>
 import {computed} from "vue";
 import {useGeneralStore} from "@/stores/general.js";
+import {useContentStore} from "@/stores/content.js";
+import {storeToRefs} from "pinia";
 
 const props = defineProps({
     card: {type: Object, required: true},
-    images: {type: Object, required: true}
 })
 const generalStore = useGeneralStore()
+const contentStore = useContentStore()
+const {images} = storeToRefs(contentStore)
 
 const imgName = computed(() => {
     if (props.card['type'] === 'stream') {
@@ -47,7 +50,7 @@ const duration = computed(() => { return secondsToHms() })
 const title = computed(() => { return setMainTitle() })
 
 const active = computed(() => {
-    return props.card.id === generalStore.selectedCard.id && props.card.type === generalStore.selectedCard.type
+    return props.card['id'] === generalStore.selectedCard
 })
 
 function secondsToHms() {
@@ -73,7 +76,7 @@ function setMainTitle() {
 }
 
 function selectCard() {
-    active.value ? generalStore.selectCard('', '') : generalStore.selectCard(props.card.id, props.card.type)
+    active.value ? generalStore.selectCard('') : generalStore.selectCard(props.card['id'])
 }
 </script>
 

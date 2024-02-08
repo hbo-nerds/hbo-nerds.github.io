@@ -4,16 +4,12 @@ export const useGeneralStore = defineStore('general', {
     state: () => ({
         theme: 'dark',
         view: 'thumbnails',
-        selectedCard: {
-            id: '',
-            type: ''
-        }
+        selectedCard: null
     }),
     getters: {},
     actions: {
-        selectCard(id, type) {
-            this.selectedCard.id = id
-            this.selectedCard.type = type
+        selectCard(id) {
+            this.selectedCard = id
         },
         setTheme(theme) {
             this.theme = theme;
