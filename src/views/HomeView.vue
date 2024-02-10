@@ -1,20 +1,17 @@
 <template>
     <div class="container-fluid py-4">
-        <nav  class="mb-4" aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item" aria-current="page" v-if="search.length >= 3">{{ sortedData.length }} resultaten voor '{{search}}'</li>
-                <li class="breadcrumb-item" aria-current="page" v-if="search.length < 3">Start met zoeken door een zoekterm in te vullen.</li>
-            </ol>
-        </nav>
         <div class="row g-3">
+            <!-- filter desktop -->
             <div class="col-md-3 col-lg-2 d-none d-lg-block">
                 <filter-component></filter-component>
             </div>
+            <!-- filter mobile -->
             <div class="col-12 d-lg-none">
                 <filter-modal>
                     <filter-component></filter-component>
                 </filter-modal>
             </div>
+            <!-- main -->
             <div class="col-12 col-lg-10">
                 <div class="row g-2 align-items-center mb-3">
                     <div class="col-auto">
@@ -44,12 +41,7 @@
                 <div class="row g-2">
                     <div class="col-12" v-if="!sortedData.length && search">Lekker Appie! Geen resultaten gevonden.</div>
                     <div class="col-12" v-if="!search">Dit zijn 12 <b>random</b> items speciaal voor jou! <button type="button" class="btn btn-sm btn-link" @click="content.pickRandomSet()">Geef me wat anders.</button> </div>
-
-                    <cards-container v-if="view === 'thumbnails' && !selectedCard"></cards-container>
-                    <div v-if="selectedCard" class="col-12 col-md-8 offset-md-2">
-                        <single-card-component></single-card-component>
-                    </div>
-
+                    <cards-container v-if="view === 'thumbnails'"></cards-container>
                 </div>
             </div>
         </div>
@@ -63,12 +55,10 @@ import {storeToRefs} from "pinia";
 import FilterComponent from "@/components/filterComponent.vue";
 import CardsContainer from "@/assets/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
-import SingleCardComponent from "@/components/singleCardComponent.vue";
 
 // store
-const store = useGeneralStore()
+const generalStore = useGeneralStore()
 const content = useContentStore()
-const {view, selectedCard} = storeToRefs(store)
+const {view} = storeToRefs(generalStore)
 const {sortedData, sortOption, search} = storeToRefs(content)
-
 </script>

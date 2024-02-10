@@ -1,12 +1,16 @@
 import {defineStore} from "pinia";
 import og_data from '../assets/data/data.json'
 import {filename} from "pathe/utils";
+import {useGeneralStore} from "./general.js";
 
 export const useContentStore = defineStore('content', {
   state: () => ({
     collections: [],
     content: [],
-    images: [],
+    images: {
+      '320': [],
+      '640': []
+    },
 
     filteredData: [],
     randomData: [],
@@ -60,6 +64,15 @@ export const useContentStore = defineStore('content', {
     }
   },
   actions: {
+    getSingleCard(id) {
+      return this.content.find(item => item.id === id)
+    },
+    getSingleCollection(card) {
+      return card.collection ? this.content.filter(item => item.collection === card.collection) : []
+    },
+    getCollectionName(collectionId) {
+      return this.collections.find(item => item.id === collectionId).title
+    },
     /**
      * Fetch json data
      */
@@ -68,9 +81,16 @@ export const useContentStore = defineStore('content', {
       this.content = og_data.content
 
     },
+    /**
+     * Set images file names
+     */
     setImages() {
-      const glob = import.meta.glob('@/assets/img/thumbnails/*320px/*.webp', {eager: true})
-      this.images = Object.fromEntries(
+      let glob = import.meta.glob('@/assets/img/thumbnails/*320px/*.webp', {eager: true})
+      this.images['320'] = Object.fromEntries(
+          Object.entries(glob).map(([key, value]) => [filename(key), value.default])
+      )
+      glob = import.meta.glob('@/assets/img/thumbnails/*640px/*.webp', {eager: true})
+      this.images['640'] = Object.fromEntries(
           Object.entries(glob).map(([key, value]) => [filename(key), value.default])
       )
     },
