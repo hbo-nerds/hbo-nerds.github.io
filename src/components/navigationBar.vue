@@ -1,18 +1,24 @@
 <template>
     <div class="bg-dark-subtle">
         <div class="container">
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Lekker Speuren</a>
+                    <router-link to="/" class="navbar-brand">
+                        <img src="../assets/img/lekkerSicko.0" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        Lekker Speuren
+                    </router-link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <router-link class="nav-link" to="/">Home</router-link>
                             </li>
                         </ul>
+                        <div class="nav-item me-3">
+                            <router-link class="nav-link position-relative" to="/"><i class="bi bi-heart"></i></router-link>
+                        </div>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-sun-fill"></i>

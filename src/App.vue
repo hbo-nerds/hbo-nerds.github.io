@@ -15,10 +15,13 @@ import NavigationBar from "@/components/navigationBar.vue";
 import FooterBar from "@/components/footerBar.vue";
 import SearchBar from "@/components/searchBar.vue";
 import {useContentStore} from "@/stores/content.js";
+import {useGeneralStore} from "@/stores/general.js";
 
 const contentStore = useContentStore()
+const generalStore = useGeneralStore()
 contentStore.fetchData();
 contentStore.setImages();
+generalStore.getLikedItems();
 
 </script>
 

@@ -22,15 +22,14 @@
 
 <script setup>
 import {computed} from "vue";
-import {useGeneralStore} from "@/stores/general.js";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
+import {useGeneralStore} from "@/stores/general.js";
 import router from "@/router/index.js";
 
 const props = defineProps({
     card: {type: Object, required: true},
 })
-const generalStore = useGeneralStore()
 const contentStore = useContentStore()
 const {images} = storeToRefs(contentStore)
 
