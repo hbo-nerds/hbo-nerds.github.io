@@ -4,23 +4,30 @@ export const useGeneralStore = defineStore('general', {
     state: () => ({
         theme: 'dark',
         view: 'thumbnails',
-        selectedCard: {
-            id: '',
-            type: ''
-        }
+        likedItems: []
     }),
     getters: {},
     actions: {
-        selectCard(id, type) {
-            this.selectedCard.id = id
-            this.selectedCard.type = type
-        },
         setTheme(theme) {
             this.theme = theme;
             document.documentElement.setAttribute('data-bs-theme', theme);
         },
         setView(view) {
             this.view = view
+        },
+        getLikedItems() {
+            const arr = JSON.parse(localStorage.getItem("likedItems"))
+            this.likedItems = arr ? arr : [];
+        },
+        setLikedItems() {
+            localStorage.setItem("likedItems", JSON.stringify(this.likedItems));
+        },
+        toggleLikedItem(id) {
+            if (!this.likedItems.includes(id))
+                this.likedItems.push(id);
+            else
+                this.likedItems.splice(this.likedItems.indexOf(id), 1);
+            this.setLikedItems()
         }
     }
 })

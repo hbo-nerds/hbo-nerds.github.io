@@ -1,21 +1,18 @@
 <template>
     <div class="container-fluid py-4">
-        <nav  class="mb-4" aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-                <li class="breadcrumb-item" aria-current="page" v-if="search.length >= 3">{{ sortedData.length }} resultaten voor '{{search}}'</li>
-                <li class="breadcrumb-item" aria-current="page" v-if="search.length < 3">Start met zoeken door een zoekterm in te vullen.</li>
-            </ol>
-        </nav>
         <div class="row g-3">
-            <div class="col-md-3 col-lg-2 d-none d-md-block">
+            <!-- filter desktop -->
+            <div class="col-md-3 col-lg-2 d-none d-lg-block">
                 <filter-component></filter-component>
             </div>
-            <div class="col-12 d-md-none">
+            <!-- filter mobile -->
+            <div class="col-12 d-lg-none">
                 <filter-modal>
                     <filter-component></filter-component>
                 </filter-modal>
             </div>
-            <div class="col-12 col-md-9 col-lg-10">
+            <!-- main -->
+            <div class="col-12 col-lg-10">
                 <div class="row g-2 align-items-center mb-3">
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
@@ -60,9 +57,8 @@ import CardsContainer from "@/assets/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
 
 // store
-const store = useGeneralStore()
+const generalStore = useGeneralStore()
 const content = useContentStore()
-const {view} = storeToRefs(store)
+const {view} = storeToRefs(generalStore)
 const {sortedData, sortOption, search} = storeToRefs(content)
-
 </script>
