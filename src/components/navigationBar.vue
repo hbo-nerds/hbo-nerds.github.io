@@ -4,7 +4,7 @@
             <nav class="navbar navbar-expand-md">
                 <div class="container-fluid">
                     <router-link to="/" class="navbar-brand">
-                        <img src="../assets/img/lekkerSicko.0" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                        <img src="../assets/img/lekkerSicko.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
                         Lekker Speuren
                     </router-link>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
