@@ -51,10 +51,10 @@
                     <div class="d-flex align-items-center">
                         <span class="fw-bold me-3">Deel via</span>
                         <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=' + shareUrl)"><i
-                            class="share" :style="{backgroundImage: `url(${shareWhatsapp})`}"></i></a>
+                            class="bg-whatsapp"></i></a>
                         <a class="me-2 share"
-                           :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i class="share"
-                                                                                                       :style="{backgroundImage: `url(${shareEmail})`}"></i></a>
+                           :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i
+                            class="bg-mail"></i></a>
                         <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareMessenger})`}"></i></a>-->
                         <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareFacebook})`}"></i></a>-->
                         <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareX})`}"></i></a>-->
@@ -245,8 +245,11 @@ function deselectCard() {
         display: inline-block
         width: 32px
         height: 32px
-        background-image: url("~@/assets/svg/social-share-whatsapp.svg")
         background-size: auto 100%
+        &.bg-whatsapp
+            background-image: url("../../public/social-share-whatsapp.svg")
+        &.bg-mail
+            background-image: url("../../public/social-share-email.svg")
 
 .series-wrapper
     max-height: 600px
