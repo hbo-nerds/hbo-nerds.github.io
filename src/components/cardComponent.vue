@@ -73,7 +73,9 @@ function setMainTitle() {
 }
 
 function goToCard() {
-    router.push({ path: `/item/${props.card['id']}` })
+    // router.push({ path: `/item/${props.card['id']}` })
+    const routeData = router.resolve({ path: `/item/${props.card['id']}` });
+    window.open(routeData.href, '_blank');
 }
 </script>
 
