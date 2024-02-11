@@ -1,6 +1,6 @@
 <template>
-    <button class="btn btn-sm btn-outline-primary mb-3" @click="deselectCard"><i class="bi bi-arrow-left"></i>Terug
-    </button>
+<!--    <button class="btn btn-sm btn-outline-primary mb-3" @click="deselectCard"><i class="bi bi-arrow-left"></i>Terug-->
+<!--    </button>-->
     <div class="row gy-3">
         <div class="col-12 col-md-8 mb-md-0">
             <div class="card">
@@ -70,30 +70,30 @@
                             <div class="col-12 col-md-10 col-lg-8">
                                 <div class="d-flex align-items-center py-1">
                                     <strong class="w-50">Duur</strong>
-                                    <span>{{ duration }}</span>
+                                    <span class="w-50">{{ duration }}</span>
                                 </div>
                                 <div class="d-flex align-items-center py-1">
                                     <strong class="w-50">Datum</strong>
-                                    <span>{{ card.date }}</span>
+                                    <span class="w-50">{{ card.date }}</span>
                                 </div>
                                 <div class="d-flex align-items-center py-1">
                                     <strong class="w-50">Type</strong>
-                                    <span class="text-capitalize">{{ card.type }}</span>
+                                    <span class="w-50 text-capitalize">{{ card.type }}</span>
                                 </div>
                                 <div class="d-flex align-items-center py-1">
                                     <strong class="w-50">Tags</strong>
-                                    <div class="text-capitalize">
+                                    <div class="w-50 text-capitalize">
                                         <span v-if="!card.tags?.length">-</span>
-                                        <span class="badge rounded-pill text-bg-primary" v-for="tag in card.tags">{{
+                                        <span class="badge rounded-pill text-bg-primary me-1" v-for="tag in card.tags">{{
                                                 tag
                                             }}</span>
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center py-1">
                                     <strong class="w-50">Activiteiten</strong>
-                                    <div class="text-capitalize">
+                                    <div class="w-50 text-capitalize">
                                         <span v-if="!card.activities?.length">-</span>
-                                        <span class="badge rounded-pill text-bg-primary"
+                                        <span class="badge rounded-pill text-bg-primary me-1"
                                               v-for="activty in card.activities">{{ activty.title }}</span>
                                     </div>
                                 </div>
@@ -198,6 +198,8 @@ const collectionName = computed(() => {
 const isLiked = computed(() => {
     return likedItems.value.includes(card.value.id)
 })
+
+document.title = "Lekker Speuren - " + title.value;
 
 function openShare(url) {
     window.open(url, '_blank', 'width=1000,height=750')
