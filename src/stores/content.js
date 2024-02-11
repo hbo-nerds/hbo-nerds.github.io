@@ -105,29 +105,31 @@ export const useContentStore = defineStore('content', {
       let data = this.content.slice()
 
       // check neg words
-      this.negWords.forEach((pw) => {
+      this.negWords.forEach((nw) => {
+        const nw_normalized = this.normalizeInput(nw)
         data = data.filter((item) => {
           switch (item.type) {
             case 'podcast':
-              return this.filterPodcast(item, pw, true)
+              return this.filterPodcast(item, nw_normalized, true)
             case 'video':
-              return this.filterVideo(item, pw, true)
+              return this.filterVideo(item, nw_normalized, true)
             case 'stream':
-              return this.filterStream(item, pw, true)
+              return this.filterStream(item, nw_normalized, true)
           }
         })
       })
 
       // check pos words
       this.posWords.forEach((pw) => {
+        const pw_normalized = this.normalizeInput(pw)
         data = data.filter((item) => {
           switch (item.type) {
             case 'podcast':
-              return this.filterPodcast(item, pw)
+              return this.filterPodcast(item, pw_normalized)
             case 'video':
-              return this.filterVideo(item, pw)
+              return this.filterVideo(item, pw_normalized)
             case 'stream':
-              return this.filterStream(item, pw)
+              return this.filterStream(item, pw_normalized)
           }
         })
       })
