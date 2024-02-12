@@ -50,7 +50,7 @@
                     <!-- share -->
                     <div class="d-flex align-items-center">
                         <span class="fw-bold me-3">Deel via</span>
-                        <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=' + shareUrl)"><i
+                        <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
                             class="bg-whatsapp"></i></a>
                         <a class="me-2 share"
                            :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i
@@ -184,10 +184,8 @@ const title = computed(() => {
     return setMainTitle()
 })
 const shareUrl = computed(() => {
-    if (card.value['twitch_id'])
-        return 'https://www.twitch.tv/videos/' + card['twitch_id']
-    if (card.value['youtube_id'])
-        return 'https://youtube.com/watch?v=' + card['youtube_id']
+    const host = window.location.host;
+    return `${host}/#/item/${card.value['id']}`
 })
 const collectionItems = computed(() => {
     return contentStore.getSingleCollection(card.value)
@@ -228,8 +226,7 @@ function setMainTitle() {
 }
 
 function copyLink() {
-    const host = window.location.host;
-    navigator.clipboard.writeText(`${host}/item/${card.value['id']}`);
+    navigator.clipboard.writeText(shareUrl.value);
 }
 
 function deselectCard() {
