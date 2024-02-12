@@ -105,7 +105,7 @@
                     <div class="mb-4">
                         <h2 class="fs-5 fw-bold">Beschrijving</h2>
                         <p v-if="card.description">{{ card.description }}</p>
-                        <p v-else><a
+                        <p><a
                             href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform"
                             target="_blank">Stuur een beschrijving op!</a></p>
                     </div>
