@@ -23,9 +23,6 @@ const generalStore = useGeneralStore()
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLikedItems();
-
-console.log(route.name)
-
 </script>
 
 <style scoped lang="sass"></style>

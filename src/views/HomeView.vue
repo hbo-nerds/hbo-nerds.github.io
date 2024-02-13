@@ -16,14 +16,20 @@
                 <div class="row g-2 align-items-center mb-3">
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
-                                :class="{active: view === 'list'}" @click="store.setView('list')"><i
-                            class="bi bi-list me-1"></i>Lijst
+                                :class="{active: view === 'thumbnails'}" @click="generalStore.setView('thumbnails')"><i
+                            class="bi bi-card-image me-1"></i>Thumbnails
                         </button>
                     </div>
+<!--                    <div class="col-auto">-->
+<!--                        <button type="button" class="btn btn-sm btn-outline-primary"-->
+<!--                                :class="{active: view === 'list'}" @click="generalStore.setView('list')"><i-->
+<!--                            class="bi bi-list me-1"></i>Lijst-->
+<!--                        </button>-->
+<!--                    </div>-->
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
-                                :class="{active: view === 'thumbnails'}" @click="store.setView('thumbnails')"><i
-                            class="bi bi-card-image me-1"></i>Foto's
+                                :class="{active: view === 'random'}" @click="generalStore.setView('random')"><i
+                            class="bi bi-dice-6 me-1"></i>Random
                         </button>
                     </div>
                     <div class="col-auto ms-auto d-none d-md-block">
@@ -39,9 +45,7 @@
                     </div>
                 </div>
                 <div class="row g-2">
-                    <div class="col-12" v-if="!sortedData.length && search">Lekker Appie! Geen resultaten gevonden.</div>
-                    <div class="col-12" v-if="!search">Dit zijn 12 <b>random</b> items speciaal voor jou! <button type="button" class="btn btn-sm btn-link" @click="content.pickRandomSet()">Geef me wat anders.</button> </div>
-                    <cards-container v-if="view === 'thumbnails'"></cards-container>
+                    <cards-container></cards-container>
                 </div>
             </div>
         </div>
@@ -55,10 +59,15 @@ import {storeToRefs} from "pinia";
 import FilterComponent from "@/components/filterComponent.vue";
 import CardsContainer from "@/assets/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
+import {onMounted} from "vue";
 
 // store
 const generalStore = useGeneralStore()
 const content = useContentStore()
 const {view} = storeToRefs(generalStore)
 const {sortedData, sortOption, search} = storeToRefs(content)
+
+onMounted(() => {
+    content.filter()
+})
 </script>

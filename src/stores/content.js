@@ -27,7 +27,8 @@ export const useContentStore = defineStore('content', {
         min: '',
         max: ''
       }
-    }
+    },
+    filterCounts: {}
   }),
   getters: {
     posWords() {
@@ -52,15 +53,6 @@ export const useContentStore = defineStore('content', {
           return b.duration - a.duration
         } else return true
       })
-    },
-    amountOfPodcast() {
-      return this.sortedData.reduce((acc, cur) => cur.type === 'podcast' ? ++acc : acc, 0);
-    },
-    amountOfVideo() {
-      return this.sortedData.reduce((acc, cur) => cur.type === 'video' ? ++acc : acc, 0);
-    },
-    amountOfStream() {
-      return this.sortedData.reduce((acc, cur) => cur.type === 'stream' ? ++acc : acc, 0);
     }
   },
   actions: {
@@ -98,7 +90,6 @@ export const useContentStore = defineStore('content', {
      * Main filter function
      */
     filter() {
-      if (this.search.length < 3) return
       this.filteredData = []
 
       // start with all items
@@ -147,6 +138,9 @@ export const useContentStore = defineStore('content', {
       for (const item of data) {
         this.filteredData.push(item)
       }
+
+      this.calcFilterCount()
+
     },
     checkDate(item) {
       let toCheck = new Date(item.date);
@@ -159,7 +153,12 @@ export const useContentStore = defineStore('content', {
         d.setMonth(d.getMonth() - this.filters.date.range);
         return toCheck > d
       }
-
+    },
+    checkSingleDate(item, mth) {
+      let toCheck = new Date(item.date);
+      let d = new Date()
+      d.setMonth(d.getMonth() - mth);
+      return toCheck > d
     },
     /**
      * Normalize the input
@@ -221,6 +220,23 @@ export const useContentStore = defineStore('content', {
       nums.forEach(num => {
         this.randomData.push(this.content[num])
       })
+    },
+    /**
+     * Calculate amount of result per filter item
+     */
+    calcFilterCount() {
+      this.filterCounts = {};
+      if (!this.filters.type.length) {
+        this.filterCounts['podcasts'] = this.sortedData.reduce((acc, cur) => cur.type === 'podcast' ? ++acc : acc, 0);
+        this.filterCounts['video'] = this.sortedData.reduce((acc, cur) => cur.type === 'video' ? ++acc : acc, 0);
+        this.filterCounts['stream'] = this.sortedData.reduce((acc, cur) => cur.type === 'stream' ? ++acc : acc, 0);
+      }
+      if (this.filters.date.range === 'all') {
+        this.filterCounts['all'] = this.sortedData.length
+        this.filterCounts['3mth'] = this.sortedData.reduce((acc, cur) => this.checkSingleDate(cur, 3) ? ++acc : acc, 0);
+        this.filterCounts['6mth'] = this.sortedData.reduce((acc, cur) => this.checkSingleDate(cur, 6) ? ++acc : acc, 0);
+        this.filterCounts['12mth'] = this.sortedData.reduce((acc, cur) => this.checkSingleDate(cur, 12) ? ++acc : acc, 0);
+      }
     },
     /**
      * Reset all filters
