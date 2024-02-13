@@ -17,7 +17,7 @@
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
                                 :class="{active: view === 'thumbnails'}" @click="generalStore.setView('thumbnails')"><i
-                            class="bi bi-card-image me-1"></i>Foto's
+                            class="bi bi-card-image me-1"></i>Thumbnails
                         </button>
                     </div>
 <!--                    <div class="col-auto">-->
