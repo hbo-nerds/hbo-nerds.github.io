@@ -22,8 +22,6 @@ const store = useContentStore()
 const searchTimeout = ref();
 
 function input() {
-    if (store.search.length < 3) return;
-
     if (searchTimeout.value) {
         clearTimeout(searchTimeout.value)
     }

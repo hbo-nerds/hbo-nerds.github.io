@@ -1,7 +1,4 @@
 <template>
-    <div class="alert alert-warning p-2" role="alert" v-if="search.length < 3">
-        <i class="bi bi-exclamation-triangle-fill me-2"></i>Zoekterm vereist.
-    </div>
     <h6 class="fw-bold mb-2">Verfijn resultaten</h6>
     <div class="mb-3">
         <!-- type -->
@@ -11,21 +8,21 @@
                 <input class="form-check-input" type="checkbox" id="checkPodcast" value="podcast" name="type"
                        @change="contentStore.filter()" v-model="filters.type">
                 <label class="form-check-label" for="checkPodcast">
-                    Podcast ({{ amountOfPodcast }})
+                    Podcast {{ !isNaN(filterCounts['podcasts']) ? '(' + filterCounts['podcasts'] + ')' : ''}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="checkVideo" value="video" name="type"
                        @change="contentStore.filter()" v-model="filters.type">
                 <label class="form-check-label" for="checkVideo">
-                    Video ({{ amountOfVideo }})
+                    Video {{ !isNaN(filterCounts['video']) ? '(' + filterCounts['video'] + ')' : ''}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="checkStream" value="stream" name="type"
                        @change="contentStore.filter()" v-model="filters.type">
                 <label class="form-check-label" for="checkStream">
-                    Stream ({{ amountOfStream }})
+                    Stream {{ !isNaN(filterCounts['stream']) ? '(' + filterCounts['stream'] + ')' : ''}}
                 </label>
             </div>
         </div>
@@ -38,28 +35,28 @@
                 <input class="form-check-input" type="radio" id="all" value="all"
                        @change="contentStore.filter()" v-model="filters.date.range">
                 <label class="form-check-label" for="all">
-                    Alle
+                    Alle {{ !isNaN(filterCounts['all']) ? '(' + filterCounts['all'] + ')' : ''}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="check3mth" :value="3"
                        @change="contentStore.filter()" v-model="filters.date.range">
                 <label class="form-check-label" for="check3mth">
-                    < 3 maanden
+                    < 3 maanden {{ !isNaN(filterCounts['3mth']) ? '(' + filterCounts['3mth'] + ')' : ''}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="check6mth" :value="6"
                        @change="contentStore.filter()" v-model="filters.date.range">
                 <label class="form-check-label" for="check6mth">
-                    < 6 maanden
+                    < 6 maanden {{ !isNaN(filterCounts['6mth']) ? '(' + filterCounts['6mth'] + ')' : ''}}
                 </label>
             </div>
             <div class="form-check">
                 <input class="form-check-input" type="radio" id="check12mth" :value="12"
                        @change="contentStore.filter()" v-model="filters.date.range">
                 <label class="form-check-label" for="check12mth">
-                    < 1 jaar
+                    < 1 jaar {{ !isNaN(filterCounts['12mth']) ? '(' + filterCounts['12mth'] + ')' : ''}}
                 </label>
             </div>
             <div class="form-check">
@@ -99,7 +96,7 @@ import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 
 const contentStore = useContentStore()
-const {filters, search, amountOfPodcast, amountOfStream, amountOfVideo} = storeToRefs(contentStore)
+const {filters, search, filterCounts} = storeToRefs(contentStore)
 </script>
 
 <style scoped>
