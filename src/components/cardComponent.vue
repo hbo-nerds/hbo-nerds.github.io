@@ -1,5 +1,5 @@
 <template>
-    <div class="card h-100 border-0 bg-transparent" @click="goToCard">
+    <div class="card h-100 border-0 bg-transparent" @click="goToCard" @click.middle="goToCard('middle')">
         <div class="position-relative border border-3 rounded-1" :class="card.type === 'podcast' ? 'border-success' :
             card.type === 'video' ? 'border-yt' : 'border-tw'">
             <img :src="images['320'][`${imgName}`] || images['320'][`default`]" class="card-img-top" alt="thumbnail">
@@ -72,10 +72,12 @@ function setMainTitle() {
     }
 }
 
-function goToCard() {
-    // router.push({ path: `/item/${props.card['id']}` })
-    const routeData = router.resolve({ path: `/item/${props.card['id']}` });
-    window.open(routeData.href, '_blank');
+function goToCard(type = 'left') {
+    if (type === 'middle') {
+        const routeData = router.resolve({ path: `/item/${props.card['id']}` });
+        window.open(routeData.href, '_blank');
+    } else
+        router.push({ path: `/item/${props.card['id']}` })
 }
 </script>
 
