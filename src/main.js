@@ -1,3 +1,4 @@
+import vueDebounce from 'vue-debounce'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
@@ -11,6 +12,7 @@ import "./scss/styles.scss"
 
 const app = createApp(App)
 
+app.directive('debounce', vueDebounce({ lock: true, listenTo: "input", fireonempty: true }))
 app.use(createPinia())
 app.use(router)
 
