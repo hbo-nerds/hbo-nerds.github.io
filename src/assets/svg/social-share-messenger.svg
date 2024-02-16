@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<svg width="96" height="96" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="social-share-messenger" clip-path="url(#clip0_713_491)">
+    <g id="social-share-messenger_2">
+      <path id="Vector" d="M16 0C7.164 0 0 7.164 0 16C0 24.838 7.164 32 16 32C24.837 32 32 24.838 32 16C32 7.164 24.837 0 16 0Z" fill="#0084FF"/>
+      <path id="Vector_2" d="M16.2545 7.77148C11.5695 7.77148 7.77148 11.31 7.77148 15.6745C7.77148 18.162 9.00499 20.3805 10.933 21.8295V24.8425L13.8215 23.2475C14.592 23.4625 15.4085 23.578 16.2545 23.578C20.9395 23.578 24.7375 20.0395 24.7375 15.6745C24.7375 11.3095 20.9395 7.77198 16.2545 7.77198V7.77148ZM17.0975 18.4145L14.9375 16.096L10.7225 18.4145L15.359 13.462L17.5715 15.78L21.734 13.462L17.0975 18.4145Z" fill="white"/>
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0_713_491">
+      <rect width="32" height="32" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

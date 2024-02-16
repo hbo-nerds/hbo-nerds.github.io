@@ -1,0 +1,254 @@
+<template>
+<!--    <button class="btn btn-sm btn-outline-primary mb-3" @click="deselectCard"><i class="bi bi-arrow-left"></i>Terug-->
+<!--    </button>-->
+    <div class="row gy-3">
+        <div class="col-12 col-md-8 mb-md-0">
+            <div class="card">
+                <div class="card-body">
+                    <!-- header -->
+                    <header class="position-relative">
+                        <h4 class="card-title fw-bold w-75">{{ title }}</h4>
+                        <button type="button" class="position-absolute top-0 end-0 btn btn-sm btn-outline-primary"
+                                :class="{active : isLiked}" @click="generalStore.toggleLikedItem(card.id)"><i
+                            class="bi bi-heart me-2"></i>Bewaar
+                        </button>
+                    </header>
+                    <!-- key items -->
+                    <div class="d-flex mb-3">
+                        <span class="me-4">
+                            <i class="bi bi-clock me-2"></i>
+                            <span>{{ duration }}</span>
+                        </span>
+                                <span class="me-4">
+                            <i class="bi bi-calendar4-range me-2"></i>
+                            <span>{{ card.date }}</span>
+                        </span>
+                    </div>
+                    <!-- image -->
+                    <div class="row gy-3">
+                        <div class="col-12 col-md-8">
+                            <img class="w-100" :src="images['640'][`${imgName}`] || images['640'][`default`]"
+                                 alt="thumbnail">
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <h2 class="fs-5 fw-bold">Bekijk</h2>
+                            <a v-if="card['twitch_id']"
+                               :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+                               class="me-2 mb-2 d-block" target="_blank"><img class="me-2"
+                                style="width: 32px;height: 32px" src="../assets/img/twitch.png" alt="logo">Twitch</a>
+                            <a v-if="card['youtube_id']"
+                               :href="'https://youtube.com/watch?v=' + card['youtube_id']"
+                               class="me-2 mb-2 d-block" target="_blank"><img class="me-2"
+                                style="width: 32px;height: 32px" src="../assets/img/youtube.png" alt="logo">Youtube</a>
+                            <a v-if="card['twitchtracker_id']"
+                               :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
+                               class="d-block"
+                               target="_blank">TwitchTracker</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- share -->
+                    <div class="d-flex align-items-center">
+                        <span class="fw-bold me-3">Deel via</span>
+                        <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
+                            class="bg-whatsapp"></i></a>
+                        <a class="me-2 share"
+                           :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i
+                            class="bg-mail"></i></a>
+                        <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareMessenger})`}"></i></a>-->
+                        <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareFacebook})`}"></i></a>-->
+                        <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareX})`}"></i></a>-->
+                        <span class="fw-bold">of</span>
+                        <button class="btn btn-link" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
+                        </button>
+                    </div>
+                    <hr>
+                    <!-- properties -->
+                    <div class="mb-4">
+                        <h2 class="fs-5 fw-bold mb-3">Kenmerken</h2>
+                        <div class="row">
+                            <div class="col-12 col-md-10 col-lg-8">
+                                <div class="d-flex align-items-center py-1">
+                                    <strong class="w-50">Duur</strong>
+                                    <span class="w-50">{{ duration }}</span>
+                                </div>
+                                <div class="d-flex align-items-center py-1">
+                                    <strong class="w-50">Datum</strong>
+                                    <span class="w-50">{{ card.date }}</span>
+                                </div>
+                                <div class="d-flex align-items-center py-1">
+                                    <strong class="w-50">Type</strong>
+                                    <span class="w-50 text-capitalize">{{ card.type }}</span>
+                                </div>
+                                <div class="d-flex align-items-center py-1">
+                                    <strong class="w-50">Tags</strong>
+                                    <div class="w-50 text-capitalize">
+                                        <span v-if="!card.tags?.length">-</span>
+                                        <span class="badge rounded-pill text-bg-primary me-1" v-for="tag in card.tags">{{
+                                                tag
+                                            }}</span>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center py-1">
+                                    <strong class="w-50">Activiteiten</strong>
+                                    <div class="w-50 text-capitalize">
+                                        <span v-if="!card.activities?.length">-</span>
+                                        <span class="badge rounded-pill text-bg-primary me-1"
+                                              v-for="activty in card.activities">{{ activty.title }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- description -->
+                    <div class="mb-4">
+                        <h2 class="fs-5 fw-bold">Beschrijving</h2>
+                        <p v-if="card.description">{{ card.description }}</p>
+                        <p><a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform"
+                            target="_blank">Stuur een beschrijving op!</a></p>
+                    </div>
+                    <hr>
+                    <span class="small">Item-nummer: {{ card.id }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <!-- header -->
+                    <header>
+                        <h4 class="card-title fw-bold">Serie</h4>
+                    </header>
+                    <p v-if="collectionName">Bekijk meer uit de '{{collectionName}}' serie.</p>
+                    <p v-else>Maakt deze video deel uit van een serie? <a
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform"
+                        target="_blank">Stuur een beschrijving op!</a></p>
+                    <!-- collection -->
+                    <template v-if="card.collection">
+                        <div class="row series-wrapper">
+                            <div class="col-6 col-md-12" v-for="card in collectionItems">
+                                <mini-card-component :card="card"></mini-card-component>
+                            </div>
+                        </div>
+                        <hr>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script setup>
+import shareWhatsapp from '@/assets/svg/social-share-whatsapp.svg'
+import shareEmail from '@/assets/svg/social-share-email.svg'
+import shareFacebook from '@/assets/svg/social-share-facebook.svg'
+import shareMessenger from '@/assets/svg/social-share-messenger.svg'
+import shareX from '@/assets/svg/social-share-x.svg'
+
+import {computed} from "vue";
+import {useContentStore} from "@/stores/content.js";
+import {storeToRefs} from "pinia";
+import MiniCardComponent from "@/components/miniCardComponent.vue";
+import router from "@/router/index.js";
+import {useGeneralStore} from "@/stores/general.js";
+
+const contentStore = useContentStore()
+const generalStore = useGeneralStore()
+const {images} = storeToRefs(contentStore)
+const {likedItems} = storeToRefs(generalStore)
+
+const props = defineProps({
+    card: {type: Object, required: true}
+})
+
+const card = computed(() => {
+    return props.card
+})
+const imgName = computed(() => {
+    if (card.value['type'] === 'stream') {
+        if (card.value['twitch_id'])
+            return card.value['twitch_id'];
+        else if (card.value['youtube_id']) {
+            return card.value['youtube_id']
+        } else
+            return 'no_video'
+    } else {
+        return card.value['youtube_id']
+    }
+})
+const duration = computed(() => {
+    return secondsToHms()
+})
+const title = computed(() => {
+    return setMainTitle()
+})
+const shareUrl = computed(() => {
+    const host = window.location.host;
+    return `${host}/#/item/${card.value['id']}`
+})
+const collectionItems = computed(() => {
+    return contentStore.getSingleCollection(card.value)
+})
+const collectionName = computed(() => {
+    return card.value.collection ? contentStore.getCollectionName(card.value.collection) : null
+})
+const isLiked = computed(() => {
+    return likedItems.value.includes(card.value.id)
+})
+
+document.title = "Lekker Speuren - " + title.value;
+
+function openShare(url) {
+    window.open(url, '_blank', 'width=1000,height=750')
+}
+
+function secondsToHms() {
+    let d = Number(card.value.duration);
+    let h = Math.floor(d / 3600);
+    let m = Math.floor(d % 3600 / 60);
+    let s = Math.floor(d % 3600 % 60);
+
+    return ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
+}
+
+function setMainTitle() {
+    if (['podcast', 'video'].includes(card.value['type']))
+        return card.value['title']
+    else {
+        if (card.value['custom_title'])
+            return card.value['custom_title']
+        else if (card.value['title_main'])
+            return card.value['titles'][card.value['title_main']]
+        else
+            return card.value['titles'][0]
+    }
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(shareUrl.value);
+}
+
+function deselectCard() {
+    router.push({path: '/'})
+}
+</script>
+
+<style lang="sass" scoped>
+.share
+    height: 32px
+
+    i
+        display: inline-block
+        width: 32px
+        height: 32px
+        background-size: auto 100%
+        &.bg-whatsapp
+            background-image: url("../../public/social-share-whatsapp.svg")
+        &.bg-mail
+            background-image: url("../../public/social-share-email.svg")
+
+.series-wrapper
+    max-height: 600px
+    overflow-y: auto
+</style>

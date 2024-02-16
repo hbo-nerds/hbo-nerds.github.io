@@ -1,0 +1,34 @@
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #fff;
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-yt {
+  color: #FF0000 !important;
+}
+.border-yt {
+  border-color: #FF0000 !important;
+}
+.bg-yt {
+  background-color: #FF0000 !important;
+}
+.text-tw {
+  color: #6441A5 !important;
+}
+.border-tw {
+  border-color: #6441A5 !important;
+}
+.bg-tw {
+  background-color: #6441A5 !important;
+}
