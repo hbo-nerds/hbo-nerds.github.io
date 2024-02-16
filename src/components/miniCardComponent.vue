@@ -2,7 +2,7 @@
     <div class="card h-100 border-0 bg-transparent" @click="goToCard">
         <div class="position-relative border border-3 rounded-1" :class="card.type === 'podcast' ? 'border-success' :
             card.type === 'video' ? 'border-yt' : 'border-tw'">
-            <img :src="images['320'][`${imgName}`] || images['320'][`default`]" class="card-img-top" alt="thumbnail">
+            <img :src="images['320'][`${imgName}`] || images['320'][`default`]" class="w-100" alt="thumbnail">
             <span class="badge rounded-0 bg-black position-absolute top-0 start-0"
                   style="--bs-bg-opacity: .75;">{{ card.date }}</span>
             <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0"
