@@ -3,7 +3,9 @@ import {defineStore} from "pinia";
 export const useGeneralStore = defineStore('general', {
     state: () => ({
         theme: 'dark',
-        view: 'thumbnails',
+        view: 'search',
+        pageSize: 24,
+        pageNumber: 0,
         likedItems: []
     }),
     getters: {},

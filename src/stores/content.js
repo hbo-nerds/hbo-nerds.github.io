@@ -90,6 +90,9 @@ export const useContentStore = defineStore('content', {
      * Main filter function
      */
     filter() {
+      console.log('filtering data...')
+      const s = useGeneralStore()
+      s.pageNumber = 0
       this.filteredData = []
 
       // start with all items
@@ -218,6 +221,9 @@ export const useContentStore = defineStore('content', {
       let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.content.length));
       this.randomData = []
       nums.forEach(num => {
+        while(!this.content[num]['twitch_id'] && !this.content[num]['youtube_id']) {
+          this.content.length === num + 1 ? num = 0 : num++
+        }
         this.randomData.push(this.content[num])
       })
     },

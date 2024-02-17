@@ -22,6 +22,7 @@ const contentStore = useContentStore()
 const generalStore = useGeneralStore()
 contentStore.fetchData();
 contentStore.setImages();
+contentStore.filter()
 generalStore.getLikedItems();
 </script>
 

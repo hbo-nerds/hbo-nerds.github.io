@@ -8,10 +8,10 @@
                     <!-- header -->
                     <header class="position-relative">
                         <h4 class="card-title fw-bold w-75">{{ title }}</h4>
-                        <button type="button" class="position-absolute top-0 end-0 btn btn-sm btn-outline-primary"
-                                :class="{active : isLiked}" @click="generalStore.toggleLikedItem(card.id)"><i
-                            class="bi bi-heart me-2"></i>Bewaar
-                        </button>
+<!--                        <button type="button" class="position-absolute top-0 end-0 btn btn-sm btn-outline-primary"-->
+<!--                                :class="{active : isLiked}" @click="generalStore.toggleLikedItem(card.id)"><i-->
+<!--                            class="bi bi-heart me-2"></i>Bewaar-->
+<!--                        </button>-->
                     </header>
                     <!-- key items -->
                     <div class="d-flex mb-3">
@@ -52,12 +52,9 @@
                         <span class="fw-bold me-3">Deel via</span>
                         <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
                             class="bg-whatsapp"></i></a>
-                        <a class="me-2 share"
-                           :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i
-                            class="bg-mail"></i></a>
-                        <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareMessenger})`}"></i></a>-->
-                        <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareFacebook})`}"></i></a>-->
-                        <!--                <a class="me-3 share" onclick="window.open('https://web.whatsapp.com:/send?text=https://www.google.nl', '_blank', 'width=1000,height=750')"><i class="share" :style="{backgroundImage: `url(${shareX})`}"></i></a>-->
+<!--                        <a class="me-2 share"-->
+<!--                           :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i-->
+<!--                            class="bg-mail"></i></a>-->
                         <span class="fw-bold">of</span>
                         <button class="btn btn-link" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
                         </button>
@@ -110,7 +107,10 @@
                             target="_blank">Stuur een beschrijving op!</a></p>
                     </div>
                     <hr>
-                    <span class="small">Item-nummer: {{ card.id }}</span>
+                    <div class="d-flex justify-content-between">
+                        <span class="small">Item-nummer: {{ card.id }}</span>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform" target="_blank">Feedback</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -140,12 +140,6 @@
     </div>
 </template>
 <script setup>
-import shareWhatsapp from '@/assets/svg/social-share-whatsapp.svg'
-import shareEmail from '@/assets/svg/social-share-email.svg'
-import shareFacebook from '@/assets/svg/social-share-facebook.svg'
-import shareMessenger from '@/assets/svg/social-share-messenger.svg'
-import shareX from '@/assets/svg/social-share-x.svg'
-
 import {computed} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";

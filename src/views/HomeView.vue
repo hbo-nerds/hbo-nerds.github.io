@@ -16,8 +16,8 @@
                 <div class="row g-2 align-items-center mb-3">
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
-                                :class="{active: view === 'thumbnails'}" @click="generalStore.setView('thumbnails')"><i
-                            class="bi bi-card-image me-1"></i>Thumbnails
+                                :class="{active: view === 'search'}" @click="generalStore.setView('search')"><i
+                            class="bi bi-search me-1"></i>Zoekresultaten
                         </button>
                     </div>
 <!--                    <div class="col-auto">-->
@@ -59,15 +59,10 @@ import {storeToRefs} from "pinia";
 import FilterComponent from "@/components/filterComponent.vue";
 import CardsContainer from "@/assets/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
-import {onMounted} from "vue";
 
 // store
 const generalStore = useGeneralStore()
 const content = useContentStore()
 const {view} = storeToRefs(generalStore)
 const {sortedData, sortOption, search} = storeToRefs(content)
-
-onMounted(() => {
-    content.filter()
-})
 </script>

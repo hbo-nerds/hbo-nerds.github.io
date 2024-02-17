@@ -17,7 +17,7 @@
                             </li>
                         </ul>
                         <div class="nav-item me-3">
-                            <router-link class="nav-link position-relative" to="/"><i class="bi bi-heart"></i></router-link>
+                            <a class="nav-link position-relative" href="https://github.com/lekkersicko/lekker-speuren" target="_blank" title="Bekijk project op GitHub"><i class="bi bi-github"></i></a>
                         </div>
                         <div class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
