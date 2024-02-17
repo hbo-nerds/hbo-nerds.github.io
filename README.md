@@ -35,18 +35,8 @@ npm run lint
 ```
 ## Deployment
 
-To deploy a new version of the website follow these steps:
-1. Merge the new code from 'development' branch to 'production'.
-2. On the 'production' branch run:
-```sh
-npm run build
-```
-3. Run the following git commands:
-```sh
-git add dist -f
-git commit -m 'adding dist subtree'
-git subtree push --prefix dist origin gh-pages
-```
-This will add the contents of the 'dist' folder to the 'gh-pages' branch. 
+Deployment is orchestrated through a Continuous Integration/Continuous Deployment (CI/CD) pipeline, located in the .github/workflows directory within the repository. The GitHub workflow initiates upon a push to the repository's 'master' branch. It undertakes the task of building the Vue application and subsequently pushes the resulting 'dist' folder to the 'gh-pages' branch.
 
-In a few minutes, GitHub Pages should refresh with your newest repository changes, and you should be able to see your Vue project online. 
+For comprehensive documentation on the workflow utilized, refer to https://github.com/marketplace/actions/vue-to-github-pages.
+
+Upon pushing changes to the 'master' branch, GitHub typically completes the deployment of the updated Vue application within approximately 3 minutes.

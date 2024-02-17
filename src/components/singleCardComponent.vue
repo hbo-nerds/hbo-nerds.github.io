@@ -103,13 +103,13 @@
                         <h2 class="fs-5 fw-bold">Beschrijving</h2>
                         <p v-if="card.description">{{ card.description }}</p>
                         <p><a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform"
+                            :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
                             target="_blank">Stuur een beschrijving op!</a></p>
                     </div>
                     <hr>
                     <div class="d-flex justify-content-between">
                         <span class="small">Item-nummer: {{ card.id }}</span>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform" target="_blank">Feedback</a>
+                        <a :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`" target="_blank">Feedback</a>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@
                     </header>
                     <p v-if="collectionName">Bekijk meer uit de '{{collectionName}}' serie.</p>
                     <p v-else>Maakt deze video deel uit van een serie? <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform"
+                        :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
                         target="_blank">Stuur een beschrijving op!</a></p>
                     <!-- collection -->
                     <template v-if="card.collection">

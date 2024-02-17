@@ -20,7 +20,7 @@
                                 <div class="mt-auto d-flex">
                                     <div class="me-3"><i class="bi bi-calendar4-range me-3"></i>{{ card.date }}</div>
                                     <div class="me-3"><i class="bi bi-clock me-3"></i>{{ duration }}</div>
-                                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform" target="_blank">Stuur een beschrijving op!</a>
+                                    <a :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`" target="_blank">Stuur een beschrijving op!</a>
                                 </div>
                             </div>
                         </div>
