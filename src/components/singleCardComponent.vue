@@ -180,13 +180,13 @@ const collectionName = computed(() => {
 })
 
 document.title = "Lekker Speuren - " + title.value;
-// document.querySelector('meta[name="title"]').setAttribute("content", "Lekker Speuren - " + title.value);
-// document.querySelector('meta[name="og:title"]').setAttribute("content", "Lekker Speuren - " + title.value);
-// document.querySelector('meta[name="twitter:title"]').setAttribute("content", "Lekker Speuren - " + title.value);
-// document.querySelector('meta[name="og:url"]').setAttribute("content", shareUrl.value);
-// document.querySelector('meta[name="twitter:url"]').setAttribute("content", shareUrl.value);
-// document.querySelector('meta[name="og:image"]').setAttribute("content", images.value['640'][`${imgName.value}`] || images.value['640'][`default`]);
-// document.querySelector('meta[name="twitter:image"]').setAttribute("content", images.value['640'][`${imgName.value}`] || images.value['640'][`default`]);
+document.querySelector('meta[name="title"]').setAttribute("content", "Lekker Speuren - " + title.value);
+document.querySelector('meta[property="og:title"]').setAttribute("content", "Lekker Speuren - " + title.value);
+document.querySelector('meta[property="twitter:title"]').setAttribute("content", "Lekker Speuren - " + title.value);
+document.querySelector('meta[property="og:url"]').setAttribute("content", shareUrl.value);
+document.querySelector('meta[property="twitter:url"]').setAttribute("content", shareUrl.value);
+document.querySelector('meta[property="og:image"]').setAttribute("content", images.value['640'][`${imgName.value}`] || images.value['640'][`default`]);
+document.querySelector('meta[property="twitter:image"]').setAttribute("content", images.value['640'][`${imgName.value}`] || images.value['640'][`default`]);
 
 function openShare(url) {
     window.open(url, '_blank', 'width=1000,height=750')
