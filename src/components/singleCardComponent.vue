@@ -1,6 +1,4 @@
 <template>
-<!--    <button class="btn btn-sm btn-outline-primary mb-3" @click="deselectCard"><i class="bi bi-arrow-left"></i>Terug-->
-<!--    </button>-->
     <div class="row gy-3">
         <div class="col-12 col-md-8 mb-md-0">
             <div class="card">
@@ -8,10 +6,6 @@
                     <!-- header -->
                     <header class="position-relative">
                         <h4 class="card-title fw-bold w-75">{{ title }}</h4>
-<!--                        <button type="button" class="position-absolute top-0 end-0 btn btn-sm btn-outline-primary"-->
-<!--                                :class="{active : isLiked}" @click="generalStore.toggleLikedItem(card.id)"><i-->
-<!--                            class="bi bi-heart me-2"></i>Bewaar-->
-<!--                        </button>-->
                     </header>
                     <!-- key items -->
                     <div class="d-flex mb-3">
@@ -52,9 +46,6 @@
                         <span class="fw-bold me-3">Deel via</span>
                         <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
                             class="bg-whatsapp"></i></a>
-<!--                        <a class="me-2 share"-->
-<!--                           :href="'mailto:?subject=Check dit Lekker Spelen item!&body=' + shareUrl"><i-->
-<!--                            class="bg-mail"></i></a>-->
                         <span class="fw-bold">of</span>
                         <button class="btn btn-link" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
                         </button>
@@ -187,9 +178,6 @@ const collectionItems = computed(() => {
 const collectionName = computed(() => {
     return card.value.collection ? contentStore.getCollectionName(card.value.collection) : null
 })
-const isLiked = computed(() => {
-    return likedItems.value.includes(card.value.id)
-})
 
 document.title = "Lekker Speuren - " + title.value;
 
@@ -221,10 +209,6 @@ function setMainTitle() {
 
 function copyLink() {
     navigator.clipboard.writeText(shareUrl.value);
-}
-
-function deselectCard() {
-    router.push({path: '/'})
 }
 </script>
 
