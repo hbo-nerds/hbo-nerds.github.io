@@ -45741,6 +45741,9 @@
                     "duration": 5155
                 }
             ],
+            "tags": [
+                "main"
+            ],
             "duration": 6106,
             "twitch_id": "2067811013",
             "youtube_id": "r",
@@ -45796,6 +45799,9 @@
                     "duration": 1704
                 }
             ],
+            "tags": [
+                "main"
+            ],
             "duration": 6864,
             "twitch_id": "2069733432",
             "youtube_id": "e",
@@ -45814,6 +45820,9 @@
                     "title": "Project 13",
                     "duration": 8346
                 }
+            ],
+            "tags": [
+                "main"
             ],
             "duration": 8346,
             "twitch_id": "2074636910",
@@ -45834,6 +45843,9 @@
                     "duration": 14660
                 }
             ],
+            "tags": [
+                "main"
+            ],
             "duration": 14660,
             "twitch_id": "2076579081",
             "youtube_id": "G",
@@ -45852,6 +45864,9 @@
                     "title": "FINAL FANTASY VII REBIRTH",
                     "duration": 8462
                 }
+            ],
+            "tags": [
+                "casual"
             ],
             "duration": 8462,
             "youtube_id": "5",
