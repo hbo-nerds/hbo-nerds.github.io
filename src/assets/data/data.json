@@ -45745,6 +45745,7 @@
                 "main"
             ],
             "duration": 6106,
+            "description": "Na de videos van de fortguy yeetman sluiten ze fortnite af door een stream wie is het te spelen en een potje battle royale op het einde waar wat rare W's worden gepakt.",
             "twitch_id": "2067811013",
             "youtube_id": "PvaDrGubEZA",
             "id": "0182",
@@ -45803,6 +45804,7 @@
                 "main"
             ],
             "duration": 6864,
+            "description": "Peter vs timon met een enorm spannend einde waarin de classic gartfield kartfield weer te pas moet komen. Er wordt weer mario gespeeld waar het op vechten aankomt.",
             "twitch_id": "2069733432",
             "youtube_id": "3XPePB7REAI",
             "id": "46cc",
@@ -45825,6 +45827,7 @@
                 "main"
             ],
             "duration": 8346,
+            "description": "Een spel zoals im on observation duty, de mannen moeten 13 rondjes halen waarin ze verschillen zoeken in de gang. Timon flipt door wat is de kans. De chat is extreem scherp zoals gewoonlijk.",
             "twitch_id": "2074636910",
             "youtube_id": "rCzybHbwUVY",
             "id": "a7de",
@@ -45847,6 +45850,7 @@
                 "main"
             ],
             "duration": 14660,
+            "description": "De mannen agan all night in een dino horror shooter waarbij het de hele tijd lijkt dat ze bij de laatste eindbaas zijn. Ze vechten met een robo t-rex en een megalodon. Peter en timon willen elkaar in het echt vermoorden navy seal style",
             "twitch_id": "2076579081",
             "youtube_id": "5G2Y7UkASAE",
             "id": "2f90",
@@ -45869,9 +45873,11 @@
                 "casual"
             ],
             "duration": 8462,
+            "description": "Timon is sephiroth fan, ze vergelijken cloud met zijn moeder, voicecracks zijn aanwezig en er is een discussie over hoe je een spin vermoord of vrij laat",
             "youtube_id": "5Hqi7WyTDtc",
             "id": "5026",
             "type": "stream"
+            
         }
     ]
 }
