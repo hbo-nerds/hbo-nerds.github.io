@@ -2,7 +2,7 @@
     <div class="card h-100 border-0 bg-transparent" @click="goToCard" @click.middle="goToCard('middle')">
         <div class="position-relative border border-3 rounded-1" :class="card.type === 'podcast' ? 'border-success' :
             card.type === 'video' ? 'border-yt' : 'border-tw'">
-            <img v-lazy="{ src: images['320'][`${imgName}`] || images['320'][`default`], loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
+            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
             <span class="badge rounded-0 bg-black position-absolute top-0 start-0"
                   style="--bs-bg-opacity: .75;">{{ card.date }}</span>
             <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0"
@@ -22,7 +22,6 @@
 
 <script setup>
 import {computed} from "vue";
-import {useGeneralStore} from "@/stores/general.js";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import router from "@/router/index.js";
@@ -30,21 +29,13 @@ import router from "@/router/index.js";
 const props = defineProps({
     card: {type: Object, required: true},
 })
-const generalStore = useGeneralStore()
 const contentStore = useContentStore()
 const {images} = storeToRefs(contentStore)
 
-const imgName = computed(() => {
-    if (props.card['type'] === 'stream') {
-        if (props.card['twitch_id'])
-            return props.card['twitch_id'];
-        else if (props.card['youtube_id']) {
-            return props.card['youtube_id']
-        } else
-            return 'no_video'
-    } else {
-        return props.card['youtube_id']
-    }
+const imgScr = computed(() => {
+    return images.value['320'][`${props.card['twitch_id']}`] ||
+        images.value['320'][`${props.card['youtube_id']}`] ||
+        images.value['320'][`default`]
 })
 
 const duration = computed(() => { return secondsToHms() })

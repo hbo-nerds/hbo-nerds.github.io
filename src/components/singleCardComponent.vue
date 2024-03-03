@@ -21,7 +21,7 @@
                     <!-- image -->
                     <div class="row gy-3">
                         <div class="col-12 col-md-8">
-                            <img class="w-100" :src="images['640'][`${imgName}`] || images['640'][`default`]"
+                            <img class="w-100" :src="imgScr"
                                  alt="thumbnail">
                         </div>
                         <div class="col-12 col-md-4">
@@ -150,18 +150,13 @@ const props = defineProps({
 const card = computed(() => {
     return props.card
 })
-const imgName = computed(() => {
-    if (card.value['type'] === 'stream') {
-        if (card.value['twitch_id'])
-            return card.value['twitch_id'];
-        else if (card.value['youtube_id']) {
-            return card.value['youtube_id']
-        } else
-            return 'no_video'
-    } else {
-        return card.value['youtube_id']
-    }
+
+const imgScr = computed(() => {
+    return images.value['640'][`${props.card['twitch_id']}`] ||
+        images.value['640'][`${props.card['youtube_id']}`] ||
+        images.value['640'][`default`]
 })
+
 const duration = computed(() => {
     return secondsToHms()
 })
@@ -185,8 +180,8 @@ document.querySelector('meta[property="og:title"]').setAttribute("content", "Lek
 document.querySelector('meta[property="twitter:title"]').setAttribute("content", "Lekker Speuren - " + title.value);
 document.querySelector('meta[property="og:url"]').setAttribute("content", shareUrl.value);
 document.querySelector('meta[property="twitter:url"]').setAttribute("content", shareUrl.value);
-document.querySelector('meta[property="og:image"]').setAttribute("content", images.value['640'][`${imgName.value}`] || images.value['640'][`default`]);
-document.querySelector('meta[property="twitter:image"]').setAttribute("content", images.value['640'][`${imgName.value}`] || images.value['640'][`default`]);
+document.querySelector('meta[property="og:image"]').setAttribute("content", imgScr.value);
+document.querySelector('meta[property="twitter:image"]').setAttribute("content", imgScr.value);
 
 function openShare(url) {
     window.open(url, '_blank', 'width=1000,height=750')
