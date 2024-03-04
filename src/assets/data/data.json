@@ -45672,6 +45672,28 @@
             "duration": 4622,
             "youtube_id": "gP0f6XAGj68"
         },
+         {
+            "date": "2024-02-12",
+            "time_start": "20:34:58",
+            "time_end": "22:16:44",
+            "titles": [
+                "Schoonmaken in een spookhuis..."
+            ],
+            "activities": [
+                {
+                    "title": "Paranormal cleanup",
+                    "duration": 6100
+                }
+            ],
+            "tags": [
+                "main"
+            ],
+            "duration": 6100,
+            "twitch_id": "2061040598",
+            "youtube_id": "U-RZO-PwG7k",
+            "id": "1235",
+            "type": "stream"
+        },
         {
             "id": "fa6c",
             "type": "video",
@@ -45729,6 +45751,29 @@
             "youtube_id": "R6Ds1hgPClc"
         },
         {
+            "date": "2024-02-14",
+            "time_start": "20:34:58",
+            "time_end": "22:16:44",
+            "titles": [
+                "Doen alsof we piraten zijn"
+            ],
+            "activities": [
+                {
+                    "title": "Skull and Bones",
+                    "duration": 6100
+                }
+            ],
+            "tags": [
+                "main"
+            ],
+            "duration": 6100,
+            "description": "De mannen gaan de zouten zeeen op, timon wordt overprikkeld en knalt een zooitje schepen kapot, ze geven geld uit aan een kat met 3 poten",
+            "twitch_id": "2062790789",
+            "youtube_id": "vl5fiBmqB3A",
+            "id": "1234",
+            "type": "stream"
+        },
+         {
             "date": "2024-02-19",
             "time_start": "20:34:58",
             "time_end": "22:16:44",
