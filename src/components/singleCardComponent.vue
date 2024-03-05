@@ -154,7 +154,7 @@ const card = computed(() => {
 const imgScr = computed(() => {
     return images.value['640'][`${props.card['twitch_id']}`] ||
         images.value['640'][`${props.card['youtube_id']}`] ||
-        images.value['640'][`default`]
+        (!props.card['twitch_id'] && !props.card['youtube_id'] ? images.value['640'][`no_video`] : images.value['640'][`default`] )
 })
 
 const duration = computed(() => {

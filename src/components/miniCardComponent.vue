@@ -36,7 +36,7 @@ const {images} = storeToRefs(contentStore)
 const imgScr = computed(() => {
     return images.value['320'][`${props.card['twitch_id']}`] ||
         images.value['320'][`${props.card['youtube_id']}`] ||
-        images.value['320'][`default`]
+        (!props.card['twitch_id'] && !props.card['youtube_id'] ? images.value['320'][`no_video`] : images.value['320'][`default`] )
 })
 
 const duration = computed(() => { return secondsToHms() })
