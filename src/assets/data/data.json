@@ -22824,6 +22824,7 @@
                 "main"
             ],
             "time_start": "20:24:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -27426,6 +27427,7 @@
                 "casual"
             ],
             "time_start": "20:16:00",
+            "free": true,
             "time_end": "00:45:00"
         },
         {
@@ -27516,6 +27518,7 @@
                 "casual"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "23:25:00"
         },
         {
@@ -27781,6 +27784,7 @@
                 "casual"
             ],
             "time_start": "17:09:00",
+            "free": true,
             "time_end": "20:55:00"
         },
         {
@@ -28017,6 +28021,7 @@
                 "casual"
             ],
             "time_start": "20:18:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -28084,6 +28089,7 @@
                 "casual"
             ],
             "time_start": "20:26:00",
+            "free": true,
             "time_end": "00:25:00"
         },
         {
@@ -28129,6 +28135,7 @@
                 "casual"
             ],
             "time_start": "20:33:00",
+            "free": true,
             "time_end": "20:45:00"
         },
         {
@@ -28204,6 +28211,7 @@
                 "casual"
             ],
             "time_start": "15:09:00",
+            "free": true,
             "time_end": "17:55:00"
         },
         {
@@ -28279,6 +28287,7 @@
                 "main"
             ],
             "time_start": "20:37:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -28332,6 +28341,7 @@
                 "main"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "22:05:00"
         },
         {
@@ -28386,6 +28396,7 @@
                 "peter vs timon"
             ],
             "time_start": "20:25:00",
+            "free": true,
             "time_end": "22:25:00"
         },
         {
@@ -28767,6 +28778,7 @@
                 "casual"
             ],
             "time_start": "20:38:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -28817,6 +28829,7 @@
                 "casual"
             ],
             "time_start": "16:28:00",
+            "free": true,
             "time_end": "17:45:00"
         },
         {
@@ -29103,6 +29116,7 @@
                 "casual"
             ],
             "time_start": "21:24:00",
+            "free": true,
             "time_end": "23:35:00"
         },
         {
@@ -29149,6 +29163,7 @@
                 "casual"
             ],
             "time_start": "20:17:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -29250,6 +29265,7 @@
                 "casual"
             ],
             "time_start": "20:35:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -29318,6 +29334,7 @@
                 "casual"
             ],
             "time_start": "20:30:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -29455,6 +29472,7 @@
                 "casual"
             ],
             "time_start": "18:36:00",
+            "free": true,
             "time_end": "21:35:00"
         },
         {
@@ -29505,6 +29523,7 @@
                 "casual"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "00:15:00"
         },
         {
@@ -29528,6 +29547,7 @@
                 "main"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -29857,6 +29877,7 @@
                 "casual"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -29880,6 +29901,7 @@
                 "main"
             ],
             "time_start": "16:43:00",
+            "free": true,
             "time_end": "21:15:00"
         },
         {
@@ -29904,6 +29926,7 @@
                 "casual"
             ],
             "time_start": "16:38:00",
+            "free": true,
             "time_end": "21:05:00"
         },
         {
@@ -30022,6 +30045,7 @@
                 "casual"
             ],
             "time_start": "15:21:00",
+            "free": true,
             "time_end": "17:55:00"
         },
         {
@@ -30097,6 +30121,7 @@
                 "main"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -30143,6 +30168,7 @@
                 "casual"
             ],
             "time_start": "15:32:00",
+            "free": true,
             "time_end": "18:15:00"
         },
         {
@@ -30214,6 +30240,7 @@
                 "casual"
             ],
             "time_start": "20:22:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -30335,6 +30362,7 @@
                 "casual"
             ],
             "time_start": "15:45:00",
+            "free": true,
             "time_end": "19:15:00"
         },
         {
@@ -30406,6 +30434,7 @@
                 "casual"
             ],
             "time_start": "20:39:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -30663,6 +30692,7 @@
                 "casual"
             ],
             "time_start": "16:32:00",
+            "free": true,
             "time_end": "19:05:00"
         },
         {
@@ -31413,6 +31443,7 @@
                 "sponsor"
             ],
             "time_start": "20:25:00",
+            "free": true,
             "time_end": "23:45:00"
         },
         {
@@ -31606,6 +31637,7 @@
                 "casual"
             ],
             "time_start": "19:05:00",
+            "free": true,
             "time_end": "23:25:00"
         },
         {
@@ -31935,6 +31967,7 @@
                 "casual"
             ],
             "time_start": "20:18:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -32290,6 +32323,7 @@
                 "casual"
             ],
             "time_start": "20:15:00",
+            "free": true,
             "time_end": "23:35:00"
         },
         {
@@ -32368,6 +32402,7 @@
                 "casual"
             ],
             "time_start": "14:23:00",
+            "free": true,
             "time_end": "18:55:00"
         },
         {
@@ -32490,6 +32525,7 @@
                 "casual"
             ],
             "time_start": "13:56:00",
+            "free": true,
             "time_end": "18:25:00"
         },
         {
@@ -32597,6 +32633,7 @@
                 "casual"
             ],
             "time_start": "18:28:00",
+            "free": true,
             "time_end": "21:25:00"
         },
         {
@@ -32694,6 +32731,7 @@
                 "casual"
             ],
             "time_start": "17:48:00",
+            "free": true,
             "time_end": "20:05:00"
         },
         {
@@ -32885,6 +32923,7 @@
                 "casual"
             ],
             "time_start": "20:19:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -32931,6 +32970,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -32978,6 +33018,7 @@
                 "sponsor"
             ],
             "time_start": "20:42:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -33029,6 +33070,7 @@
                 "main"
             ],
             "time_start": "20:29:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -33052,6 +33094,7 @@
                 "casual"
             ],
             "time_start": "20:33:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -33098,6 +33141,7 @@
                 "casual"
             ],
             "time_start": "20:52:00",
+            "free": true,
             "time_end": "00:45:00"
         },
         {
@@ -33120,6 +33164,7 @@
                 "casual"
             ],
             "time_start": "17:02:00",
+            "free": true,
             "time_end": "19:15:00"
         },
         {
@@ -33411,6 +33456,7 @@
                 "main"
             ],
             "time_start": "21:25:00",
+            "free": true,
             "time_end": "23:45:00"
         },
         {
@@ -33434,6 +33480,7 @@
                 "casual"
             ],
             "time_start": "20:16:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -33490,6 +33537,7 @@
                 "casual"
             ],
             "time_start": "15:00:00",
+            "free": true,
             "time_end": "21:35:00"
         },
         {
@@ -33535,6 +33583,7 @@
                 "casual"
             ],
             "time_start": "20:38:00",
+            "free": true,
             "time_end": "22:25:00"
         },
         {
@@ -33657,6 +33706,7 @@
                 "casual"
             ],
             "time_start": "20:18:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -34126,6 +34176,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -34536,6 +34587,7 @@
                 "sponsor"
             ],
             "time_start": "20:26:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -34559,6 +34611,7 @@
                 "sponsor"
             ],
             "time_start": "11:59:00",
+            "free": true,
             "time_end": "14:25:00"
         },
         {
@@ -34627,6 +34680,7 @@
                 "main"
             ],
             "time_start": "20:22:00",
+            "free": true,
             "time_end": "22:05:00"
         },
         {
@@ -34649,6 +34703,7 @@
                 "casual"
             ],
             "time_start": "20:17:00",
+            "free": true,
             "time_end": "22:25:00"
         },
         {
@@ -34783,6 +34838,7 @@
                 "sponsor"
             ],
             "time_start": "19:30:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -35034,6 +35090,7 @@
                 "casual"
             ],
             "time_start": "16:41:00",
+            "free": true,
             "time_end": "19:05:00"
         },
         {
@@ -35664,6 +35721,7 @@
                 "casual"
             ],
             "time_start": "13:02:00",
+            "free": true,
             "time_end": "17:05:00"
         },
         {
@@ -35907,6 +35965,7 @@
                 "casual"
             ],
             "time_start": "14:46:00",
+            "free": true,
             "time_end": "19:05:00"
         },
         {
@@ -36322,6 +36381,7 @@
                 "casual"
             ],
             "time_start": "20:28:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -37115,6 +37175,7 @@
                 "casual"
             ],
             "time_start": "20:22:00",
+            "free": true,
             "time_end": "23:45:00"
         },
         {
@@ -37349,6 +37410,7 @@
                 "main"
             ],
             "time_start": "20:17:00",
+            "free": true,
             "time_end": "22:25:00"
         },
         {
@@ -37536,6 +37598,7 @@
                 "casual"
             ],
             "time_start": "16:45:00",
+            "free": true,
             "time_end": "19:05:00"
         },
         {
@@ -37602,6 +37665,7 @@
                 "casual"
             ],
             "time_start": "20:18:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -37657,6 +37721,7 @@
                 "casual"
             ],
             "time_start": "17:50:00",
+            "free": true,
             "time_end": "20:15:00"
         },
         {
@@ -37864,6 +37929,7 @@
                 "sponsor"
             ],
             "time_start": "18:55:00",
+            "free": true,
             "time_end": "22:15:00"
         },
         {
@@ -38245,6 +38311,7 @@
                 "casual"
             ],
             "time_start": "20:30:00",
+            "free": true,
             "time_end": "00:35:00"
         },
         {
@@ -38399,6 +38466,7 @@
                 "casual"
             ],
             "time_start": "20:18:00",
+            "free": true,
             "time_end": "22:25:00"
         },
         {
@@ -38445,6 +38513,7 @@
                 "casual"
             ],
             "time_start": "20:24:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -38475,6 +38544,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -38521,6 +38591,7 @@
                 "casual"
             ],
             "time_start": "20:27:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -38680,6 +38751,7 @@
                 "main"
             ],
             "time_start": "20:40:00",
+            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -38703,6 +38775,7 @@
                 "casual"
             ],
             "time_start": "21:01:00",
+            "free": true,
             "time_end": "23:45:00"
         },
         {
@@ -38882,6 +38955,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -38953,6 +39027,7 @@
                 "casual"
             ],
             "time_start": "20:52:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -39055,6 +39130,7 @@
                 "casual"
             ],
             "time_start": "20:04:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -39100,6 +39176,7 @@
                 "casual"
             ],
             "time_start": "20:21:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -39122,6 +39199,7 @@
                 "casual"
             ],
             "time_start": "20:32:00",
+            "free": true,
             "time_end": "23:25:00"
         },
         {
@@ -39214,6 +39292,7 @@
                 "casual"
             ],
             "time_start": "20:41:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -39236,6 +39315,7 @@
                 "casual"
             ],
             "time_start": "18:27:00",
+            "free": true,
             "time_end": "20:35:00"
         },
         {
@@ -39363,6 +39443,7 @@
                 "main"
             ],
             "time_start": "20:48:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -39838,6 +39919,7 @@
                 "casual"
             ],
             "time_start": "20:41:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -40101,6 +40183,7 @@
                 "main"
             ],
             "time_start": "20:41:00",
+            "free": true,
             "time_end": "23:35:00"
         },
         {
@@ -40125,6 +40208,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "00:15:00"
         },
         {
@@ -40149,6 +40233,7 @@
                 "main"
             ],
             "time_start": "20:48:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -40274,6 +40359,7 @@
                 "casual"
             ],
             "time_start": "17:51:00",
+            "free": true,
             "time_end": "23:35:00"
         },
         {
@@ -40343,6 +40429,7 @@
                 "casual"
             ],
             "time_start": "20:36:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -40508,6 +40595,7 @@
                 "casual"
             ],
             "time_start": "20:46:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -40555,6 +40643,7 @@
                 "casual"
             ],
             "time_start": "20:38:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -40645,6 +40734,7 @@
                 "main"
             ],
             "time_start": "20:33:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -40859,6 +40949,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -41034,6 +41125,7 @@
                 "casual"
             ],
             "time_start": "20:47:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -41056,6 +41148,7 @@
                 "casual"
             ],
             "time_start": "20:32:00",
+            "free": true,
             "time_end": "22:25:00"
         },
         {
@@ -41283,6 +41376,7 @@
                 "casual"
             ],
             "time_start": "14:50:00",
+            "free": true,
             "time_end": "17:05:00"
         },
         {
@@ -41329,6 +41423,7 @@
                 "casual"
             ],
             "time_start": "21:11:00",
+            "free": true,
             "time_end": "23:25:00"
         },
         {
@@ -41376,6 +41471,7 @@
                 "casual"
             ],
             "time_start": "20:59:00",
+            "free": true,
             "time_end": "23:05:00"
         },
         {
@@ -41444,6 +41540,7 @@
                 "casual"
             ],
             "time_start": "20:32:00",
+            "free": true,
             "time_end": "22:15:00"
         },
         {
@@ -41711,6 +41808,7 @@
                 "casual"
             ],
             "time_start": "20:35:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -41762,6 +41860,7 @@
                 "casual"
             ],
             "time_start": "20:38:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -41809,7 +41908,9 @@
                 "Anime donderdag"
             ],
             "time_start": "20:38:00",
+            "free": true,
             "time_end": "22:35:00",
+            "free": true,
             "description": "De mannen vieren anime donderdag met flinke knikkers en een anime intro met karaoke. De gebruikelijke quote van de week en cosplay contest komen langs."
         },
         {
@@ -41880,7 +41981,8 @@
                 "casual"
             ],
             "time_start": "20:42:00",
-            "time_end": "22:35:00"
+            "time_end": "22:35:00",
+            "free": true
         },
         {
             "id": "4543",
@@ -41974,6 +42076,7 @@
                 "casual"
             ],
             "time_start": "20:41:00",
+            "free": true,
             "time_end": "23:15:00"
         },
         {
@@ -42141,6 +42244,7 @@
                 "casual"
             ],
             "time_start": "20:33:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -42186,6 +42290,7 @@
                 "casual"
             ],
             "time_start": "14:17:00",
+            "free": true,
             "time_end": "16:15:00"
         },
         {
@@ -42232,6 +42337,7 @@
                 "casual"
             ],
             "time_start": "20:43:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -42301,6 +42407,7 @@
                 "main"
             ],
             "time_start": "20:31:00",
+            "free": true,
             "time_end": "22:45:00"
         },
         {
@@ -42331,6 +42438,7 @@
                 "casual"
             ],
             "time_start": "14:07:00",
+            "free": true,
             "time_end": "17:05:00"
         },
         {
@@ -42354,6 +42462,7 @@
                 "peter vs timon"
             ],
             "time_start": "20:31:00",
+            "free": true,
             "time_end": "23:35:00"
         },
         {
@@ -42535,6 +42644,7 @@
                 "casual"
             ],
             "time_start": "20:34:00",
+            "free": true,
             "time_end": "22:55:00"
         },
         {
@@ -42837,7 +42947,8 @@
                 "casual"
             ],
             "time_start": "15:33:00",
-            "time_end": "17:55:00"
+            "time_end": "17:55:00",
+            "free": true
         },
         {
             "id": "7004",
@@ -43394,7 +43505,8 @@
                 "main"
             ],
             "time_start": "20:31:00",
-            "time_end": "22:35:00"
+            "time_end": "22:35:00",
+            "free": true
         },
         {
             "id": "79a3",
@@ -43478,7 +43590,8 @@
                 "casual"
             ],
             "time_start": "15:15:00",
-            "time_end": "17:25:00"
+            "time_end": "17:25:00",
+            "free": true,
         },
         {
             "id": "387b",
@@ -43767,7 +43880,8 @@
                 "main"
             ],
             "time_start": "20:29:00",
-            "time_end": "22:15:00"
+            "time_end": "22:15:00",
+            "free": true
         },
         {
             "id": "a293",
@@ -43929,7 +44043,8 @@
                 "casual"
             ],
             "time_start": "20:31:00",
-            "time_end": "22:45:00"
+            "time_end": "22:45:00",
+            "free": true
         },
         {
             "id": "5789",
@@ -44049,7 +44164,8 @@
                 "casual"
             ],
             "time_start": "14:02:00",
-            "time_end": "16:25:00"
+            "time_end": "16:25:00",
+            "free": true
         },
         {
             "id": "f18d",
@@ -44845,7 +44961,8 @@
                 "main"
             ],
             "time_start": "20:58:00",
-            "time_end": "22:55:00"
+            "time_end": "22:55:00",
+            "free": true
         },
         {
             "id": "a9fb",
@@ -44921,7 +45038,8 @@
                 "casual"
             ],
             "time_start": "20:29:00",
-            "time_end": "22:35:00"
+            "time_end": "22:35:00",
+            "free": true
         },
         {
             "id": "83ad",
@@ -45295,7 +45413,8 @@
                 "casual"
             ],
             "time_start": "20:30:00",
-            "time_end": "22:35:00"
+            "time_end": "22:35:00",
+            "free": true
         },
         {
             "id": "7ba2",
@@ -45411,7 +45530,8 @@
                 "speedrun"
             ],
             "time_start": "17:50:00",
-            "time_end": "21:05:00"
+            "time_end": "21:05:00",
+            "free": true
         },
         {
             "id": "5ee1",
@@ -45771,7 +45891,8 @@
             "twitch_id": "2062790789",
             "youtube_id": "vl5fiBmqB3A",
             "id": "1234",
-            "type": "stream"
+            "type": "stream",
+            "free": true
         },
          {
             "date": "2024-02-19",
@@ -45921,7 +46042,8 @@
             "description": "Timon is sephiroth fan, ze vergelijken cloud met zijn moeder, voicecracks zijn aanwezig en er is een discussie over hoe je een spin vermoord of vrij laat",
             "youtube_id": "5Hqi7WyTDtc",
             "id": "5026",
-            "type": "stream"
+            "type": "stream",
+            "free": true
             
         }
     ]
