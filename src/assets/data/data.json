@@ -41910,7 +41910,6 @@
             "time_start": "20:38:00",
             "free": true,
             "time_end": "22:35:00",
-            "free": true,
             "description": "De mannen vieren anime donderdag met flinke knikkers en een anime intro met karaoke. De gebruikelijke quote van de week en cosplay contest komen langs."
         },
         {
@@ -43591,7 +43590,7 @@
             ],
             "time_start": "15:15:00",
             "time_end": "17:25:00",
-            "free": true,
+            "free": true
         },
         {
             "id": "387b",
@@ -45792,7 +45791,7 @@
             "duration": 4622,
             "youtube_id": "gP0f6XAGj68"
         },
-         {
+        {
             "date": "2024-02-12",
             "time_start": "20:34:58",
             "time_end": "22:16:44",
@@ -45829,6 +45828,30 @@
             "title": "Iemand heeft Pokémon in Fortnite nagemaakt...",
             "duration": 785,
             "youtube_id": "VuIDlBU5E0E"
+        },
+        {
+            "date": "2024-02-14",
+            "time_start": "20:34:58",
+            "time_end": "22:16:44",
+            "titles": [
+                "Doen alsof we piraten zijn"
+            ],
+            "activities": [
+                {
+                    "title": "Skull and Bones",
+                    "duration": 6100
+                }
+            ],
+            "tags": [
+                "main"
+            ],
+            "duration": 6100,
+            "description": "De mannen gaan de zouten zeeen op, timon wordt overprikkeld en knalt een zooitje schepen kapot, ze geven geld uit aan een kat met 3 poten",
+            "twitch_id": "2062790789",
+            "youtube_id": "vl5fiBmqB3A",
+            "id": "1234",
+            "type": "stream",
+            "free": true
         },
         {
             "id": "7631",
@@ -45871,30 +45894,6 @@
             "youtube_id": "R6Ds1hgPClc"
         },
         {
-            "date": "2024-02-14",
-            "time_start": "20:34:58",
-            "time_end": "22:16:44",
-            "titles": [
-                "Doen alsof we piraten zijn"
-            ],
-            "activities": [
-                {
-                    "title": "Skull and Bones",
-                    "duration": 6100
-                }
-            ],
-            "tags": [
-                "main"
-            ],
-            "duration": 6100,
-            "description": "De mannen gaan de zouten zeeen op, timon wordt overprikkeld en knalt een zooitje schepen kapot, ze geven geld uit aan een kat met 3 poten",
-            "twitch_id": "2062790789",
-            "youtube_id": "vl5fiBmqB3A",
-            "id": "1234",
-            "type": "stream",
-            "free": true
-        },
-         {
             "date": "2024-02-19",
             "time_start": "20:34:58",
             "time_end": "22:16:44",
@@ -46044,7 +46043,63 @@
             "id": "5026",
             "type": "stream",
             "free": true
-            
+        },
+        {
+            "date": "2024-03-04",
+            "time_start": "20:31:18",
+            "time_end": "22:29:42",
+            "titles": [
+                "Dit is het mogelijk het meest frustrerende spel ooit..."
+            ],
+            "activities": [
+                {
+                    "title": "main",
+                    "duration": 6060
+                }
+            ],
+            "duration": 7104,
+            "twitch_id": "2081345026",
+            "youtube_id": "NXU6QVU4SnQ",
+            "id": "b6d0",
+            "type": "stream"
+        },
+        {
+            "date": "2024-03-06",
+            "time_start": "20:31:36",
+            "time_end": "22:35:22",
+            "titles": [
+                "We gaan in agressie therapie..."
+            ],
+            "activities": [
+                {
+                    "title": "main",
+                    "duration": 6420
+                }
+            ],
+            "duration": 7426,
+            "twitch_id": "2083201142",
+            "youtube_id": "Ycd7xGv5IEE",
+            "id": "1b2c",
+            "type": "stream"
+        },
+        {
+            "date": "2024-03-11",
+            "time_start": "20:34:48",
+            "time_end": "22:28:34",
+            "titles": [
+                "Zoek de verschillen...(in het donker)"
+            ],
+            "activities": [
+                {
+                    "title": "main",
+                    "duration": 5880
+                }
+            ],
+            "duration": 6826,
+            "twitch_id": "2088063284",
+            "youtube_id": "WcAMZQcJsJw",
+            "id": "73b0",
+            "type": "stream"
         }
     ]
 }
