@@ -255,17 +255,20 @@ export const useContentStore = defineStore('content', {
          * @returns {boolean}
          */
         filterStream(s, w, negative = false) {
-            return (this.normalizeInput(s['description']).includes(w) || s['titles'].some(title => {
+            return (this.normalizeInput(s['description']).includes(w) ||
+                ((s['titles'] ? s['titles'].some(title => {
                     return this.normalizeInput(title).includes(w)
-                }) ||
+                }) : false))
+                ||
                 (s['custom_title'] && this.normalizeInput(s['custom_title']).includes(w))
                 ||
-                s['activities'].some(game => {
+                (s['activities'] ? s['activities'].some(game => {
                     return this.normalizeInput(game.title).includes(w)
-                }) ||
-                s['tags'].some(tag => {
+                }) : false)
+                ||
+                (s['tags'] ? s['tags'].some(tag => {
                     return this.normalizeInput(tag).includes(w)
-                })) !== negative;
+                }) : false)) !== negative;
         },
         /**
          * Select some random items
