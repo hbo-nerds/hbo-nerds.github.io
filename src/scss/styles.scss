@@ -3,13 +3,14 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   font-family: 'Inter', sans-serif;
   background-color: #fff;
+  overflow: hidden;
 }
 
 #app {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
 }
