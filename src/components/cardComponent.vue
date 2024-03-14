@@ -16,7 +16,7 @@
         </div>
         <div class="card-body py-2 px-0">
             <div class="card-title m-0">{{ title }}</div>
-            <div class="badge text-bg-secondary" v-if="card.collection"><i class="bi bi-folder-fill me-1"></i>{{ collectionName }}</div>
+            <div class="badge text-bg-secondary text-truncate" style="max-width: 100%" v-if="card.collection"><i class="bi bi-folder-fill me-1"></i>{{ collectionName }}</div>
         </div>
     </div>
 </template>
