@@ -3,7 +3,9 @@
         <div class="row g-3">
             <!-- filter desktop -->
             <div class="col-md-3 col-lg-2 d-none d-lg-block">
-                <filter-component></filter-component>
+                <div class="sticky-top" style="top: 1.5rem">
+                    <filter-component></filter-component>
+                </div>
             </div>
             <!-- filter mobile -->
             <div class="col-12 d-lg-none">
@@ -57,7 +59,7 @@ import {useGeneralStore} from "@/stores/general.js";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import FilterComponent from "@/components/filterComponent.vue";
-import CardsContainer from "@/assets/containers/CardsContainer.vue";
+import CardsContainer from "@/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
 
 // store

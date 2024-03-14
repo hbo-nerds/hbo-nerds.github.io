@@ -97,15 +97,35 @@ export const useContentStore = defineStore('content', {
                     return p;
                 }
             }, {});
+        },
+        seriesFirstItems() {
+            return this.collections.map(col => {
+                return this.content.find(item => item.collection === col.id)
+            }).filter(item => item)
         }
     },
     actions: {
+        /**
+         * Return a single item by id
+         * @param id
+         * @returns {*}
+         */
         getSingleCard(id) {
             return this.content.find(item => item.id === id)
         },
+        /**
+         * Return a list of items within collection
+         * @param card
+         * @returns {*|*[]}
+         */
         getSingleCollection(card) {
             return card.collection ? this.content.filter(item => item.collection === card.collection) : []
         },
+        /**
+         * Return the name of the collection
+         * @param collectionId
+         * @returns {*}
+         */
         getCollectionName(collectionId) {
             return this.collections.find(item => item.id === collectionId).title
         },
@@ -178,9 +198,19 @@ export const useContentStore = defineStore('content', {
                 this.filteredData.push(item)
             }
         },
+        /**
+         * Filter items by type
+         * @param item
+         * @returns {boolean|*}
+         */
         f_type(item) {
             return !this.filters.type.length || this.filters.type.includes(item.type)
         },
+        /**
+         * Filter items by date
+         * @param item
+         * @returns {boolean}
+         */
         f_date(item) {
             if (this.filters.date.range === 'alle') return true
             let toCheck = new Date(item.date);
@@ -195,10 +225,20 @@ export const useContentStore = defineStore('content', {
                 return toCheck > d
             }
         },
+        /**
+         * Filter items by duration
+         * @param item
+         * @returns {boolean}
+         */
         f_duration(item) {
             return (!this.filters.duration.min || (this.filters.duration.min * 60) < item.duration) &&
             (!this.filters.duration.max || (this.filters.duration.max * 60) > item.duration)
         },
+        /**
+         * Filter items by activity
+         * @param item
+         * @returns {*|boolean}
+         */
         f_activity(item) {
             if (!this.filters.activity.length) return true
             const act = item['activity'] || item['activities'];
@@ -210,6 +250,12 @@ export const useContentStore = defineStore('content', {
             } else
                 return this.filters.activity.includes(act)
         },
+        /**
+         * Check if item's date is in range
+         * @param item
+         * @param mth
+         * @returns {boolean}
+         */
         checkSingleDate(item, mth) {
             let toCheck = new Date(item.date);
             let d = new Date()

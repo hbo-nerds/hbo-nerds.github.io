@@ -1,12 +1,15 @@
 <template>
-    <header class="sticky-top border-bottom">
-        <navigation-bar></navigation-bar>
-        <search-bar v-if="route.name === 'home'"></search-bar>
-    </header>
-    <main class="flex-grow-1 bg-light-subtle">
-        <router-view/>
-    </main>
-    <footer-bar></footer-bar>
+    <div class="h-100 d-flex flex-column">
+        <header class="border-bottom">
+            <navigation-bar></navigation-bar>
+            <search-bar v-if="['home'].includes(route.name)"></search-bar>
+        </header>
+        <main class="flex-grow-1 bg-light-subtle overflow-y-auto">
+            <router-view/>
+            <footer-bar class="d-sm-none"></footer-bar>
+        </main>
+        <footer-bar class="d-none d-sm-block"></footer-bar>
+    </div>
 </template>
 
 <script setup>

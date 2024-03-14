@@ -15,7 +15,8 @@
             </div>
         </div>
         <div class="card-body py-2 px-0">
-            <span class="card-title m-0">{{ title }}</span>
+            <div class="card-title m-0">{{ title }}</div>
+            <div class="badge text-bg-secondary" v-if="card.collection"><i class="bi bi-folder-fill me-1"></i>{{ collectionName }}</div>
         </div>
     </div>
 </template>
@@ -40,6 +41,10 @@ const imgScr = computed(() => {
 
 const duration = computed(() => { return secondsToHms() })
 const title = computed(() => { return setMainTitle() })
+
+const collectionName = computed(() => {
+    return props.card['collection'] ? contentStore.getCollectionName(props.card['collection']) : null
+})
 
 function secondsToHms() {
     let d = Number(props.card.duration);
