@@ -262,7 +262,7 @@
             "duration": 20,
             "youtube_id": "C7NUZ1qnT5g",
             "description": "Peter legt uit wat hij gaat doen op het Lekker Spelen kanaal, en waarom hij fluistert.",
-            "activity": "Just chatting"
+            "activity": "Just Chatting"
         },
         {
             "id": "ba24",
@@ -1269,7 +1269,7 @@
             "title": "Harry Potter: Flipendo! -  Lekker spelen",
             "duration": 358,
             "youtube_id": "cv8IHoTQ0wo",
-            "activity": "Harry Potter and the Philopsher's Stone"
+            "activity": "Harry Potter and the Philosopher's Stone"
         },
         {
             "id": "9419",
@@ -1505,7 +1505,7 @@
             "title": "PETER vs TIMON - Call of Duty (One in the Chamber)",
             "duration": 271,
             "youtube_id": "KSkMsh8M5gQ",
-            "activity": "Call of Duty"
+            "activity": "call of duty"
         },
         {
             "id": "5984",
@@ -1961,7 +1961,7 @@
             "title": "PETER vs TIMON - NES Remix",
             "duration": 409,
             "youtube_id": "KXN8xqcVMHk",
-            "activity": "Nes Remix 2"
+            "activity": "NES Remix 2"
         },
         {
             "id": "c7ea",
@@ -2321,10 +2321,10 @@
                 "PUTT-PUTT SAVES THE ZOO: Seksbewegingen!?"
             ],
             "activities": [
-                {
-                    "title": "Putt-Putt Saves the Zoo",
-                    "duration": 4260
-                }
+              {
+                "title": "Putt Putt: Redt de dierentuin",
+                "duration": 4260
+              }
             ],
             "twitch_id": "45310402",
             "tags": [
@@ -2546,7 +2546,7 @@
             "title": "ZEER INTENS - Super Smash Bros. for Wii U",
             "duration": 417,
             "youtube_id": "dsdpC9o_Rog",
-            "activity": "Super Smash Bros. for Wii U"
+            "activity": "Super Smash Bros. 4"
         },
         {
             "id": "a608",
@@ -2564,7 +2564,7 @@
             "title": "SLECHTHEID DE KAT - EarthWorm Jim #2",
             "duration": 774,
             "youtube_id": "quURh9851KY",
-            "activity": "EarthWorm Jim"
+            "activity": "Earthworm Jim"
         },
         {
             "id": "6fce",
@@ -2698,7 +2698,7 @@
             "duration": 493,
             "youtube_id": "lM6ukzKAMDM",
             "collection": 3,
-            "activity": "rust"
+            "activity": "Rust"
         },
         {
             "id": "e1cb",
@@ -2708,7 +2708,7 @@
             "duration": 922,
             "youtube_id": "N1ZdSza4XD4",
             "collection": 3,
-            "activity": "rust"
+            "activity": "Rust"
         },
         {
             "id": "a3ed",
@@ -3363,7 +3363,7 @@
             ],
             "activities": [
                 {
-                    "title": "Z1: Battle Royale",
+                    "title": "H1Z1",
                     "duration": 2880
                 }
             ],
@@ -3449,7 +3449,7 @@
             "duration": 1659,
             "youtube_id": "-zQDb_2_Nnk",
             "collection": 65,
-            "activity": "H1Z1: Battle Royale"
+            "activity": "H1Z1"
         },
         {
             "id": "5730",
@@ -3486,7 +3486,7 @@
             "title": "ONZE EERSTE KEER :$ - MINECRAFT (exclusief)",
             "duration": 3387,
             "youtube_id": "h3KXhPIvd4w",
-            "activity": "MINECRAFT"
+            "activity": "Minecraft"
         },
         {
             "id": "a6b4",
@@ -3730,7 +3730,7 @@
             "duration": 561,
             "youtube_id": "KXkxOUHlIms",
             "collection": 43,
-            "activity": "Wolfenstein The Old Blood"
+            "activity": "Wolfenstein: The Old Blood"
         },
         {
             "id": "310e",
@@ -3787,7 +3787,7 @@
             "duration": 828,
             "youtube_id": "Lloh5j9-7s8",
             "collection": 65,
-            "activity": "H1Z1 met kijkers!"
+            "activity": "H1Z1"
         },
         {
             "id": "5be6",
@@ -3814,7 +3814,7 @@
             "title": "SPORE - Lekker spelen",
             "duration": 322,
             "youtube_id": "dTG4_nQvGfU",
-            "activity": "SPORE"
+            "activity": "Spore"
         },
         {
             "id": "e24f",
@@ -4156,16 +4156,16 @@
             "collection": 50,
             "activity": "GTA V"
         },
-        {
-            "id": "cfb1",
-            "type": "video",
-            "date": "2015-07-27",
-            "title": "DIE SMERIGE NERD - Pokemon #13",
-            "duration": 539,
-            "youtube_id": "yGlFxJIwPFg",
-            "collection": 21,
-            "activity": "Pokemon"
-        },
+      {
+        "id": "cfb1",
+        "type": "video",
+        "date": "2015-07-27",
+        "title": "DIE SMERIGE NERD - Pokemon #13",
+        "duration": 539,
+        "youtube_id": "yGlFxJIwPFg",
+        "collection": 21,
+        "activity": "Pokémon"
+      },
         {
             "id": "6c76",
             "type": "stream",
@@ -4260,7 +4260,7 @@
             "duration": 611,
             "youtube_id": "-6LZ4l0naiU",
             "collection": 22,
-            "activity": "Troll Face Quest: Unlucky"
+            "activity": "Troll face Quest: Unlucky"
         },
         {
             "id": "1326",
@@ -4338,7 +4338,7 @@
             "duration": 740,
             "youtube_id": "rv1JOgBT5WU",
             "collection": 65,
-            "activity": "H1Z1: Team Battle Royale"
+            "activity": "H1Z1"
         },
         {
             "id": "cd47",
@@ -4387,7 +4387,7 @@
             "duration": 615,
             "youtube_id": "BkGnomSB8U4",
             "collection": 65,
-            "activity": "H1Z1: Team Battle Royale"
+            "activity": "H1Z1"
         },
         {
             "id": "cf6e",
@@ -4752,10 +4752,10 @@
                 "Buurman & Buurman - LEKKER SPELEN LIVE"
             ],
             "activities": [
-                {
-                    "title": "Pat & Mat",
-                    "duration": 3600
-                }
+              {
+                "title": "Buurman & Buurman",
+                "duration": 3600
+              }
             ],
             "twitch_id": "18414380",
             "tags": [
@@ -5272,7 +5272,7 @@
             "duration": 614,
             "youtube_id": "0c_gNA6erjk",
             "collection": 34,
-            "activity": "Starlit: Adventures"
+            "activity": "Starlit Adventures"
         },
         {
             "id": "f46e",
@@ -5310,7 +5310,7 @@
             "duration": 568,
             "youtube_id": "e6WHYxEMKSc",
             "collection": 34,
-            "activity": "Starlit: Adventures"
+            "activity": "Starlit Adventures"
         },
         {
             "id": "c2e8",
@@ -5357,7 +5357,7 @@
             "duration": 650,
             "youtube_id": "Tj8S_BjLCIM",
             "collection": 34,
-            "activity": "Starlit: Adventures"
+            "activity": "Starlit Adventures"
         },
         {
             "id": "2f41",
@@ -5451,7 +5451,7 @@
             "title": "Ons eerste potje Hearthstone (Pro niveau)",
             "duration": 1119,
             "youtube_id": "n1omiyzK3xU",
-            "activity": "Heartstone"
+            "activity": "Hearthstone"
         },
         {
             "id": "322c",
@@ -6393,15 +6393,15 @@
             "collection": 9,
             "activity": "Heavy Rain"
         },
-        {
-            "id": "b3b4",
-            "type": "video",
-            "date": "2016-04-11",
-            "title": "Dark Souls III - Lekker spelen",
-            "duration": 327,
-            "youtube_id": "9eqC7rgx1JU",
-            "activity": "Dark Souls III"
-        },
+      {
+        "id": "b3b4",
+        "type": "video",
+        "date": "2016-04-11",
+        "title": "Dark Souls III - Lekker spelen",
+        "duration": 327,
+        "youtube_id": "9eqC7rgx1JU",
+        "activity": "DARK SOULS III"
+      },
         {
             "id": "db97",
             "type": "video",
@@ -6677,7 +6677,7 @@
             ],
             "activities": [
                 {
-                    "title": "Emily Wants to Play",
+                    "title": "Emily wants to play",
                     "duration": 3240
                 }
             ],
@@ -7233,7 +7233,7 @@
             "title": "PETER vs TIMON:  Fifa 17 (verliezer gooit Gyarados weg)",
             "duration": 437,
             "youtube_id": "2-4YILweUJE",
-            "activity": "Fifa 17"
+            "activity": "FIFA 17"
         },
         {
             "id": "14bc",
@@ -7447,7 +7447,7 @@
             ],
             "activities": [
                 {
-                    "title": "Talkshows en podcasts",
+                    "title": "Talkshows & podcasts",
                     "duration": 2520
                 }
             ],
@@ -7618,7 +7618,7 @@
             ],
             "activities": [
                 {
-                    "title": "Pokémon Sun/Moon",
+                    "title": "Pokémon Sun & Moon",
                     "duration": 7440
                 }
             ],
@@ -7640,7 +7640,7 @@
             ],
             "activities": [
                 {
-                    "title": "Pokémon Sun/Moon",
+                    "title": "Pokémon Sun & Moon",
                     "duration": 9180
                 }
             ],
@@ -7663,7 +7663,7 @@
             ],
             "activities": [
                 {
-                    "title": "Talkshows en podcasts",
+                    "title": "Talkshows & podcasts",
                     "duration": 2280
                 }
             ],
@@ -7683,7 +7683,7 @@
             ],
             "activities": [
                 {
-                    "title": "Talkshows en podcasts",
+                    "title": "Talkshows & podcasts",
                     "duration": 2340
                 }
             ],
@@ -7856,7 +7856,7 @@
             ],
             "activities": [
                 {
-                    "title": "Talkshows en podcasts",
+                    "title": "Talkshows & podcasts",
                     "duration": 1920
                 }
             ],
@@ -7875,7 +7875,7 @@
             ],
             "activities": [
                 {
-                    "title": "Pokémon Sun/Moon",
+                    "title": "Pokémon Sun & Moon",
                     "duration": 11460
                 }
             ],
@@ -8276,7 +8276,7 @@
             "duration": 109,
             "youtube_id": "eszg-GBMk3U",
             "collection": 18,
-            "activity": "Resident Evil 1"
+            "activity": "Resident Evil Remastered"
         },
         {
             "id": "893f",
@@ -8559,7 +8559,7 @@
             "title": "Snipperclips - Lekker Spelen (op de Switch!)",
             "duration": 602,
             "youtube_id": "YwgmtEDo6Xc",
-            "activity": "Snipperclips (op de Switch!)"
+            "activity": "Snipperclips"
         },
         {
             "id": "85cf",
@@ -8802,7 +8802,7 @@
             "title": "Horizon: Zero Dawn - Lekker Spelen",
             "duration": 251,
             "youtube_id": "NNXnzLBwlfQ",
-            "activity": "Horizon: Zero Dawn"
+            "activity": "Horizon Zero Dawn"
         },
         {
             "id": "ebd7",
@@ -9143,7 +9143,7 @@
             ],
             "activities": [
                 {
-                    "title": "Hearthstone",
+                    "title": "Heartstone",
                     "duration": 13560
                 }
             ],
@@ -10449,7 +10449,7 @@
             "date": "2017-06-11",
             "duration": 10500,
             "titles": [
-                "[AUTO] Lekker Spelen speelt Playerunknown's Battleground: BATTLEGROUNDS!"
+                "[AUTO] Lekker Spelen speelt Playerunknown's Battleground!"
             ],
             "activities": [
                 {
@@ -10539,7 +10539,7 @@
             "date": "2017-06-14",
             "duration": 10500,
             "titles": [
-                "[AUTO] Lekker Spelen speelt Playerunknown's Battleground: BATTLEGROUNDS!"
+                "[AUTO] Lekker Spelen speelt Playerunknown's Battleground!"
             ],
             "activities": [
                 {
@@ -11281,7 +11281,7 @@
             ],
             "activities": [
                 {
-                    "title": "Resident Evil 7: Biohazard",
+                    "title": "Resident Evil 7",
                     "duration": 27660
                 }
             ],
@@ -12283,7 +12283,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 10980
                 }
             ],
@@ -12346,7 +12346,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5100
                 }
             ],
@@ -12392,7 +12392,7 @@
                     "duration": 600
                 },
                 {
-                    "title": "Super Smash Bros.",
+                    "title": "Super Smash Bros. 4",
                     "duration": 1500
                 }
             ],
@@ -12415,7 +12415,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3420
                 }
             ],
@@ -12461,7 +12461,7 @@
                     "duration": 1200
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 900
                 }
             ],
@@ -12503,7 +12503,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 9120
                 }
             ],
@@ -12556,7 +12556,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 4680
                 }
             ],
@@ -12577,7 +12577,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5220
                 }
             ],
@@ -12599,7 +12599,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 1260
                 }
             ],
@@ -12620,7 +12620,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 9720
                 }
             ],
@@ -12641,7 +12641,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 4500
                 }
             ],
@@ -12679,7 +12679,7 @@
                     "duration": 5100
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 10800
                 },
                 {
@@ -12735,7 +12735,7 @@
                     "duration": 4200
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 11700
                 },
                 {
@@ -12829,7 +12829,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5040
                 },
                 {
@@ -12904,7 +12904,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3540
                 },
                 {
@@ -12977,7 +12977,7 @@
                     "duration": 1500
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3900
                 }
             ],
@@ -13002,7 +13002,7 @@
                     "duration": 7620
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5100
                 }
             ],
@@ -13049,7 +13049,7 @@
                     "duration": 2640
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 8700
                 }
             ],
@@ -13070,7 +13070,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 10140
                 }
             ],
@@ -13095,7 +13095,7 @@
                     "duration": 6180
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 4500
                 }
             ],
@@ -13145,7 +13145,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3360
                 }
             ],
@@ -13276,7 +13276,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 18060
                 }
             ],
@@ -13316,15 +13316,15 @@
             "title": "LEKKER SPELEN vs DE KIJKERS",
             "duration": 1026,
             "youtube_id": "Nk_HxZ6Ny-Q",
-            "activity": [
-                "Fifa 17",
-                "Call of Duty Infinite Warfare",
-                "Rocket League",
-                "Playerunknown's Battleground",
-                "Dota 2",
-                "Super Smash Bros. voor 3DS en Wii U",
-                "Mario Kart 8"
-            ]
+          "activity": [
+            "FIFA 17",
+            "Call of Duty Infinite Warfare",
+            "Rocket League",
+            "Playerunknown's Battleground",
+            "Dota 2",
+            "Super Smash Bros. 4",
+            "Mario Kart 8"
+          ]
         },
         {
             "id": "7f81",
@@ -13336,7 +13336,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 9960
                 }
             ],
@@ -13386,7 +13386,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5100
                 },
                 {
@@ -13484,7 +13484,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 7560
                 },
                 {
@@ -13532,7 +13532,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 6600
                 }
             ],
@@ -13601,7 +13601,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3960
                 },
                 {
@@ -13678,7 +13678,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 2580
                 }
             ],
@@ -13712,15 +13712,15 @@
             "time_start": "20:39:00",
             "time_end": "00:15:00"
         },
-        {
-            "id": "83a2",
-            "type": "video",
-            "date": "2017-09-29",
-            "title": "PETER vs TIMON: Fifa 18  (verliezer speelt Freddi Fish)",
-            "duration": 367,
-            "youtube_id": "o_yJo36_kMQ",
-            "activity": "Fifa 18"
-        },
+      {
+        "id": "83a2",
+        "type": "video",
+        "date": "2017-09-29",
+        "title": "PETER vs TIMON: Fifa 18  (verliezer speelt Freddi Fish)",
+        "duration": 367,
+        "youtube_id": "o_yJo36_kMQ",
+        "activity": "FIFA 18"
+      },
         {
             "id": "8aab",
             "type": "stream",
@@ -13858,7 +13858,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 2880
                 },
                 {
@@ -14371,7 +14371,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 11040
                 }
             ],
@@ -14491,7 +14491,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 6540
                 }
             ],
@@ -14578,7 +14578,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3360
                 }
             ],
@@ -14728,7 +14728,7 @@
             "title": "MINION vs KAPITEIN KOEK -  Lekker spelen",
             "duration": 187,
             "youtube_id": "S40L3hcCclo",
-            "activity": "W2k 18"
+            "activity": "W2K 18"
         },
         {
             "id": "9b05",
@@ -14919,7 +14919,7 @@
             ],
             "activities": [
                 {
-                    "title": "RuneScape",
+                    "title": "Runescape",
                     "duration": 6120
                 }
             ],
@@ -15432,7 +15432,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 9060
                 },
                 {
@@ -15567,7 +15567,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 8940
                 }
             ],
@@ -15645,7 +15645,7 @@
                     "duration": 2400
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 1500
                 }
             ],
@@ -15898,7 +15898,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 4800
                 }
             ],
@@ -15919,7 +15919,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 6300
                 }
             ],
@@ -15978,7 +15978,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5220
                 }
             ],
@@ -16187,19 +16187,19 @@
             "duration": 1921,
             "youtube_id": "rFsQV0fPvPY",
             "collection": 8,
-            "activity": [
-                "Tricky Towers",
-                "Fifa 18",
-                "frogger",
-                "nidhogg",
-                "W2K 18",
-                "UFC 2",
-                "Rocket League",
-                "Worms Battlegrounds",
-                "Mario Kart 8",
-                "Super Mario Odyssey",
-                "Lethal League"
-            ]
+          "activity": [
+            "Tricky Towers",
+            "FIFA 18",
+            "Frogger",
+            "Nidhogg",
+            "W2K 18",
+            "UFC 2",
+            "Rocket League",
+            "Worms Battlegrounds",
+            "Mario Kart 8",
+            "Super Mario Odyssey",
+            "Lethal League"
+          ]
         },
         {
             "id": "2beb",
@@ -16351,7 +16351,7 @@
                     "duration": 3600
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3300
                 }
             ],
@@ -16770,7 +16770,7 @@
             "title": "Lekker spelen - Verstoppertje",
             "duration": 323,
             "youtube_id": "dzJo3FEtoGU",
-            "activity": "Call of duty WW2"
+            "activity": "Call of Duty WW2"
         },
         {
             "id": "f7d8",
@@ -17001,7 +17001,7 @@
                 "UFC 3",
                 "Call of Duty WW2",
                 "Kung Fu Panda",
-                "lethal League",
+                "Lethal League",
                 "Mario Kart 8"
             ]
         },
@@ -18102,7 +18102,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 4620
                 },
                 {
@@ -18343,11 +18343,11 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 5040
                 },
                 {
-                    "title": "Who's Your Daddy",
+                    "title": "Who's Your Daddy?",
                     "duration": 300
                 }
             ],
@@ -18637,7 +18637,7 @@
                 "Planet Minigolf",
                 "Injustice 2",
                 "Tetris",
-                "Burnout paradise",
+                "Burnout Paradise",
                 "Mario Party 10"
             ]
         },
@@ -18840,15 +18840,15 @@
             "time_start": "20:24:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "5146",
-            "type": "video",
-            "date": "2018-05-10",
-            "title": "Lekker spelen \"helpt\" bij een gijzeling",
-            "duration": 1042,
-            "youtube_id": "L802lKQr278",
-            "activity": "detroit become human"
-        },
+      {
+        "id": "5146",
+        "type": "video",
+        "date": "2018-05-10",
+        "title": "Lekker spelen \"helpt\" bij een gijzeling",
+        "duration": 1042,
+        "youtube_id": "L802lKQr278",
+        "activity": "Detroit: Become Human"
+      },
         {
             "id": "7f15",
             "type": "stream",
@@ -19597,7 +19597,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 3480
                 },
                 {
@@ -19714,7 +19714,7 @@
                     "duration": 1500
                 },
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 1800
                 },
                 {
@@ -20447,15 +20447,15 @@
             "time_start": "19:00:00",
             "time_end": "01:05:00"
         },
-        {
-            "id": "8357",
-            "type": "video",
-            "date": "2018-08-03",
-            "title": "Lekker spelen - Rayman 2",
-            "duration": 191,
-            "youtube_id": "vTxcEmsHOuQ",
-            "activity": "Rayman 2"
-        },
+      {
+        "id": "8357",
+        "type": "video",
+        "date": "2018-08-03",
+        "title": "Lekker spelen - Rayman 2",
+        "duration": 191,
+        "youtube_id": "vTxcEmsHOuQ",
+        "activity": "Rayman 2: The Great Escape"
+      },
         {
             "id": "e58f",
             "type": "video",
@@ -20592,7 +20592,7 @@
             "id": "e80e",
             "type": "podcast",
             "date": "2018-08-08",
-            "title": "Super Smash  Ultimate:  Direct (live reacties)",
+            "title": "Super Smash Ultimate: Direct (live reacties)",
             "duration": 2709,
             "youtube_id": "8TRLQ_7FXRs"
         },
@@ -22315,7 +22315,7 @@
             "title": "Richard feliciteert Lekker spelen met 5-jarig bestaan!",
             "duration": 74,
             "youtube_id": "AR0DKbXMuA8",
-            "activity": "Richard feliciteert Lekker spelen met 5-jarig bestaan!"
+            "activity": "Aankonding"
         },
         {
             "id": "379a",
@@ -22435,7 +22435,7 @@
             ],
             "activities": [
                 {
-                    "title": "Farming Simulator 19",
+                    "title": "Farming Simulator 2019",
                     "duration": 8700
                 }
             ],
@@ -22684,7 +22684,7 @@
             ],
             "activities": [
                 {
-                    "title": "Super Smash Bros. Ultimate",
+                    "title": "Super Smash Bros Ultimate",
                     "duration": 8700
                 }
             ],
@@ -23634,7 +23634,7 @@
             "title": "Lekker spelen TWEETS tijdens Xbox UITZENDING",
             "duration": 258,
             "youtube_id": "dd9r_vqXvTI",
-            "activity": "Lekker spelen TWEETS tijdens Xbox UITZENDING"
+            "activity": "Aankondiging"
         },
         {
             "id": "9c72",
@@ -23895,11 +23895,7 @@
                 {
                     "title": "Tom Clancy's The Division 2",
                     "duration": 8160
-                },
-                {
-                    "title": "Resident Evil",
-                    "duration": 600
-                },
+                },              
                 {
                     "title": "Resident Evil 2",
                     "duration": 8100
@@ -24135,7 +24131,7 @@
             ],
             "activities": [
                 {
-                    "title": "Banjo-Tooie",
+                    "title": "Banjo-Kazooie",
                     "duration": 5100
                 }
             ],
@@ -24202,7 +24198,7 @@
             "activity": [
                 "Super Mario Bros NES",
                 "Galgje",
-                "Fifa 19"
+                "FIFA 19"
             ]
         },
         {
@@ -24479,14 +24475,15 @@
             "time_start": "20:31:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "b1b8",
-            "type": "podcast",
-            "date": "2019-04-04",
-            "title": "Game of Thrones VOORSPELLINGEN en SAMENVATTING (seizoen 8)",
-            "duration": 1636,
-            "youtube_id": "QZ7xUnRDcXM"
-        },
+      {
+        "id": "b1b8",
+        "type": "podcast",
+        "date": "2019-04-04",
+        "title": "Game of Thrones VOORSPELLINGEN en SAMENVATTING (seizoen 8)",
+        "duration": 1636,
+        "youtube_id": "QZ7xUnRDcXM",
+        "collection": 64
+      },
         {
             "id": "455b",
             "type": "stream",
@@ -25109,7 +25106,7 @@
             ],
             "activities": [
                 {
-                    "title": "RAGE 2",
+                  "title": "Rage 2",
                     "duration": 7020
                 }
             ],
@@ -25231,14 +25228,15 @@
             "time_start": "20:26:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "d0c0",
-            "type": "podcast",
-            "date": "2019-05-21",
-            "title": "Wat vonden we van Game of Thrones S08E6?  (Lekker spoilen)",
-            "duration": 1111,
-            "youtube_id": "ZqSjF931_C4"
-        },
+      {
+        "id": "d0c0",
+        "type": "podcast",
+        "date": "2019-05-21",
+        "title": "Wat vonden we van Game of Thrones S08E6?  (Lekker spoilen)",
+        "duration": 1111,
+        "youtube_id": "ZqSjF931_C4",
+        "collection": 64
+      },
         {
             "id": "1587",
             "type": "stream",
@@ -27102,7 +27100,7 @@
             "title": "Wii Sports -  Lekker spelen",
             "duration": 202,
             "youtube_id": "S8OTVCqqhoM",
-            "activity": "Wii Sports -  Lekker spelen"
+            "activity": "Wii Sports"
         },
         {
             "id": "7f6f",
@@ -28006,7 +28004,7 @@
             ],
             "activities": [
                 {
-                    "title": "Sniper Ghost Warrior Contracts",
+                    "title": "Sniper: Ghost Warrior Contracts",
                     "duration": 8460
                 },
                 {
@@ -29279,7 +29277,7 @@
             ],
             "activities": [
                 {
-                    "title": "Playerunknown's Battleground: BATTLEGROUNDS",
+                    "title": "Playerunknown's Battleground",
                     "duration": 6660
                 }
             ],
@@ -30294,7 +30292,7 @@
             "title": "Lekker spelen -  Final Fantasy 7 Remake",
             "duration": 229,
             "youtube_id": "ZjXxIUki36w",
-            "activity": "Final Fantasy 7 Remake"
+            "activity": "final fantasy VII REMAKE"
         },
         {
             "id": "5da0",
@@ -30639,7 +30637,7 @@
                 "Super Smash Bros Ultimate",
                 "Super Mario Party",
                 "Garfield Kartfield",
-                "Golf with Friends",
+                "Golf With Your Friends",
                 "UNO"
             ]
         },
@@ -30785,10 +30783,10 @@
                 "platinum peter - garfield kartvield"
             ],
             "activities": [
-                {
-                    "title": "Variety",
-                    "duration": 3960
-                }
+              {
+                "title": "Garfield Kartfield",
+                "duration": 3960
+              }
             ],
             "twitchtracker_id": "38245111136",
             "twitch_id": "648262926",
@@ -31190,7 +31188,7 @@
             ],
             "activities": [
                 {
-                    "title": "The Last of Us Part II",
+                    "title": "The Last of Us 2",
                     "duration": 8220
                 }
             ],
@@ -32014,7 +32012,7 @@
                     "duration": 3000
                 },
                 {
-                    "title": "Call of Duty: Warzone (2)",
+                    "title": "Call of Duty: Warzone",
                     "duration": 2700
                 }
             ],
@@ -33831,10 +33829,10 @@
                     "title": "Dreams",
                     "duration": 1200
                 },
-                {
-                    "title": "Garfield Kart",
-                    "duration": 600
-                },
+              {
+                "title": "Garfield Kartfield",
+                "duration": 600
+              },
                 {
                     "title": "FIFA 21",
                     "duration": 1500
@@ -34910,10 +34908,10 @@
                 "potje met peetje (erg saai)"
             ],
             "activities": [
-                {
-                    "title": "WARZONE",
-                    "duration": 3480
-                }
+              {
+                "title": "Call Of Duty: Warzone",
+                "duration": 3480
+              }
             ],
             "twitchtracker_id": "41692671996",
             "tags": [
@@ -35102,10 +35100,10 @@
                 "potje met peetje"
             ],
             "activities": [
-                {
-                    "title": "WARZONE",
-                    "duration": 5280
-                }
+              {
+                "title": "Call Of Duty: Warzone",
+                "duration": 5280
+              }
             ],
             "twitchtracker_id": "41861107724",
             "tags": [
@@ -37860,7 +37858,7 @@
             "title": "Fietsen - Lekker spelen",
             "duration": 255,
             "youtube_id": "Zqmx5P7xDh4",
-            "activity": "Riders republic"
+            "activity": "Riders Republic"
         },
         {
             "id": "9f61",
@@ -37977,10 +37975,10 @@
                 "Mario Party met de mannen!"
             ],
             "activities": [
-                {
-                    "title": "ELDEN RING",
-                    "duration": 3840
-                },
+              {
+                "title": "ELDEN RING",
+                "duration": 3840
+              },
                 {
                     "title": "Battlefield 2042",
                     "duration": 8400
@@ -38180,7 +38178,7 @@
             ],
             "activities": [
                 {
-                    "title": "Farming Simulator 22",
+                  "title": "Farming Simulator 2022",
                     "duration": 6420
                 }
             ],
@@ -38741,7 +38739,7 @@
             ],
             "activities": [
                 {
-                    "title": "Dying Light 2: Stay Human",
+                    "title": "Dying Light 2",
                     "duration": 6840
                 }
             ],
@@ -38994,10 +38992,10 @@
                 "ELDEN RING!!!!!"
             ],
             "activities": [
-                {
-                    "title": "ELDEN RING",
-                    "duration": 7440
-                }
+              {
+                "title": "ELDEN RING",
+                "duration": 7440
+              }
             ],
             "twitchtracker_id": "44856322188",
             "twitch_id": "1413441738",
@@ -39078,15 +39076,15 @@
             "time_start": "20:50:00",
             "time_end": "23:25:00"
         },
-        {
-            "id": "c4f0",
-            "type": "video",
-            "date": "2022-03-10",
-            "title": "Elden Ring -  Lekker spelen",
-            "duration": 436,
-            "youtube_id": "vLdQQG2doMQ",
-            "activity": "Elden Ring"
-        },
+      {
+        "id": "c4f0",
+        "type": "video",
+        "date": "2022-03-10",
+        "title": "Elden Ring -  Lekker spelen",
+        "duration": 436,
+        "youtube_id": "vLdQQG2doMQ",
+        "activity": "ELDEN RING"
+      },
         {
             "id": "fb24",
             "type": "stream",
@@ -42702,15 +42700,15 @@
             "time_start": "20:40:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "d8fd",
-            "type": "video",
-            "date": "2023-01-31",
-            "title": "Politie Simulator - Lekker spelen",
-            "duration": 353,
-            "youtube_id": "_L8KlBKXEcE",
-            "activity": "Politie Simulator"
-        },
+      {
+        "id": "d8fd",
+        "type": "video",
+        "date": "2023-01-31",
+        "title": "Politie Simulator - Lekker spelen",
+        "duration": 353,
+        "youtube_id": "_L8KlBKXEcE",
+        "activity": "Police Simulator: Patrol Officers"
+      },
         {
             "id": "af83",
             "type": "stream",
@@ -45024,7 +45022,7 @@
                     "duration": 1800
                 },
                 {
-                    "title": "PAYDAY 3",
+                  "title": "Payday 3",
                     "duration": 4800
                 },
                 {
@@ -45933,7 +45931,7 @@
                     "duration": 480
                 },
                 {
-                    "title": "FIFA 2023",
+                    "title": "FIFA 23",
                     "duration": 720
                 },
                 {
@@ -45956,10 +45954,10 @@
                     "title": "Super Monkey Ball: Banana Mania",
                     "duration": 300
                 },
-                {
-                    "title": "Garfield Kart: Furious Racing",
-                    "duration": 900
-                },
+              {
+                "title": "Garfield Kartfield",
+                "duration": 900
+              },
                 {
                     "title": "Special Events",
                     "duration": 1704
@@ -46060,10 +46058,10 @@
                 "Dit is het mogelijk het meest frustrerende spel ooit..."
             ],
             "activities": [
-                {
-                    "title": "main",
-                    "duration": 6060
-                }
+              {
+                "title": "Heavenly Bodies",
+                "duration": 6060
+              }
             ],
             "duration": 7104,
             "twitch_id": "2081345026",
@@ -46079,10 +46077,10 @@
                 "We gaan in agressie therapie..."
             ],
             "activities": [
-                {
-                    "title": "main",
-                    "duration": 6420
-                }
+              {
+                "title": "A Difficult Game About Climbing",
+                "duration": 6420
+              }
             ],
             "duration": 7426,
             "twitch_id": "2083201142",
@@ -46099,7 +46097,7 @@
             ],
             "activities": [
                 {
-                    "title": "main",
+                    "title": "Project 13: Taxidermy Trails",
                     "duration": 5880
                 }
             ],
