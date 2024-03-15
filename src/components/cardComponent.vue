@@ -9,14 +9,15 @@
                   style="--bs-bg-opacity: .75;">{{ duration }}</span>
             <span class="badge rounded-0 position-absolute top-0 end-0 text-uppercase fw-bold" :class="card.type === 'podcast' ? 'bg-success' :
             card.type === 'video' ? 'bg-yt' : 'bg-tw'">{{ card.type }}</span>
-            <div class="position-absolute bottom-0 start-0">
-                <a :href="'https://www.twitch.tv/videos/' + card['twitch_id']" class="platform-link" v-if="card['twitch_id']"><img src="../assets/img/twitch.png" alt="logo"></a>
-                <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" class="platform-link" v-if="card['youtube_id']"><img src="../assets/img/youtube.png" alt="logo"></a>
+            <div class="position-absolute bottom-0 start-0" @click.stop>
+                <a :href="'https://www.twitch.tv/videos/' + card['twitch_id']" class="platform-link" v-if="card['twitch_id']" target="_blank"><img src="../assets/img/twitch.png" alt="logo"></a>
+                <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" class="platform-link" v-if="card['youtube_id']" target="_blank"><img src="../assets/img/youtube.png" alt="logo"></a>
             </div>
         </div>
         <div class="card-body py-2 px-0">
             <div class="card-title m-0">{{ title }}</div>
-            <div class="badge text-bg-secondary text-truncate" style="max-width: 100%" v-if="card.collection"><i class="bi bi-folder-fill me-1"></i>{{ collectionName }}</div>
+            <span class="badge text-bg-secondary text-truncate me-1" style="max-width: 100%" v-if="card.collection"><i class="bi bi-folder-fill me-1"></i>{{ collectionName }}</span>
+            <span class="badge text-bg-warning text-truncate me-1" style="max-width: 100%" v-if="card.type === 'stream' && card.free"><i class="bi bi-star me-1"></i>Gratis stream</span>
         </div>
     </div>
 </template>

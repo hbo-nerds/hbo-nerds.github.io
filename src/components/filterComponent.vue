@@ -13,10 +13,22 @@
             </div>
         </div>
         <hr>
+        <!-- paywall -->
+        <div class="mb-3">
+            <label class="form-label small">Paywall</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="free" name="free"
+                       @change="contentStore.filter()" v-model="filters.free">
+                <label class="form-check-label text-capitalize" for="free">
+                    Gratis
+                </label>
+            </div>
+        </div>
+        <hr>
 
         <!-- date -->
         <div class="mb-3">
-            <label class="form-label">Datum</label>
+            <label class="form-label small">Datum</label>
             <div class="form-check" v-for="(count, date, idx) in groupedDates" :key="idx">
                 <input class="form-check-input" type="radio" :id="'date-' + date" :value="date"
                        @change="contentStore.filter()" v-model="filters.date.range">
