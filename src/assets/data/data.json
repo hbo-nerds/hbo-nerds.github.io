@@ -29758,102 +29758,107 @@
             "youtube_id": "K5vR4LrxvcQ",
             "activity": "call of duty"
         },
-        {
-            "id": "a0df",
-            "type": "stream",
-            "date": "2020-03-20",
-            "duration": 7440,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peet"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 7440
-                }
-            ],
-            "twitchtracker_id": "901099409",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "20:50:00",
-            "time_end": "22:55:00"
-        },
-        {
-            "id": "0099",
-            "type": "stream",
-            "date": "2020-03-21",
-            "duration": 11820,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 11820
-                }
-            ],
-            "twitchtracker_id": "912905009",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "20:18:00",
-            "time_end": "23:35:00"
-        },
-        {
-            "id": "0bf7",
-            "type": "stream",
-            "date": "2020-03-22",
-            "duration": 11640,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 11640
-                }
-            ],
-            "twitchtracker_id": "923693729",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "18:20:00",
-            "time_end": "21:35:00"
-        },
-        {
-            "id": "718c",
-            "type": "stream",
-            "date": "2020-03-23",
-            "duration": 8700,
-            "youtube_id": "yaDbJpu8oMY",
-            "collection": 51,
-            "titles": [
-                "Timon komt op bezoek!"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 8700
-                }
-            ],
-            "twitchtracker_id": "936525761",
-            "twitch_id": "584531986",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "a0df",
+        "type": "stream",
+        "date": "2020-03-20",
+        "duration": 7440,
+        "youtube_id": "9iWHIIwO34o",
+        "collection": 51,
+        "titles": [
+          "potje met peet"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 7440
+          }
+        ],
+        "twitchtracker_id": "901099409",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "20:50:00",
+        "time_end": "22:55:00",
+        "free":  true
+
+      },
+      {
+        "id": "0099",
+        "type": "stream",
+        "date": "2020-03-21",
+        "duration": 11820,
+        "youtube_id": "9iWHIIwO34o",
+        "collection": 51,
+        "titles": [
+          "potje met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 11820
+          }
+        ],
+        "twitchtracker_id": "912905009",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "20:18:00",
+        "time_end": "23:35:00",
+        "free": true
+      },
+      {
+        "id": "0bf7",
+        "type": "stream",
+        "date": "2020-03-22",
+        "duration": 11640,
+        "youtube_id": "9iWHIIwO34o",
+        "collection": 51,
+        "titles": [
+          "potje met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 11640
+          }
+        ],
+        "twitchtracker_id": "923693729",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "18:20:00",
+        "time_end": "21:35:00",
+        "free": true
+      },
+      {
+        "id": "718c",
+        "type": "stream",
+        "date": "2020-03-23",
+        "duration": 8700,
+        "youtube_id": "9iWHIIwO34o",
+        "collection": 51,
+        "titles": [
+          "Timon komt op bezoek!"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 8700
+          }
+        ],
+        "twitchtracker_id": "936525761",
+        "twitch_id": "584531986",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:19:00",
+        "time_end": "22:45:00",
+        "free": true
+      },
         {
             "id": "4138",
             "type": "stream",
@@ -29936,30 +29941,31 @@
             "youtube_id": "NanIy2bp9oI",
             "activity": "DOOM Eternal"
         },
-        {
-            "id": "61f4",
-            "type": "stream",
-            "date": "2020-03-29",
-            "duration": 8520,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 8520
-                }
-            ],
-            "twitchtracker_id": "1008003537",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "19:22:00",
-            "time_end": "21:45:00"
-        },
+      {
+        "id": "61f4",
+        "type": "stream",
+        "date": "2020-03-29",
+        "duration": 8520,
+        "youtube_id": "Mv1r1Ghqz24",
+        "collection": 51,
+        "titles": [
+          "potje met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 8520
+          }
+        ],
+        "twitchtracker_id": "1008003537",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "19:22:00",
+        "time_end": "21:45:00",
+        "free": true
+      },
         {
             "id": "e9aa",
             "type": "stream",
@@ -30046,57 +30052,59 @@
             "free": true,
             "time_end": "17:55:00"
         },
-        {
-            "id": "d306",
-            "type": "stream",
-            "date": "2020-04-02",
-            "duration": 6120,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "suikerdippie met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 6120
-                }
-            ],
-            "twitchtracker_id": "1058483345",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "23:32:00",
-            "time_end": "01:15:00"
-        },
-        {
-            "id": "2af1",
-            "type": "stream",
-            "date": "2020-04-05",
-            "duration": 6600,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 5700
-                },
-                {
-                    "title": "Variety",
-                    "duration": 900
-                }
-            ],
-            "twitchtracker_id": "1096208753",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "22:04:00",
-            "time_end": "23:55:00"
-        },
+      {
+        "id": "d306",
+        "type": "stream",
+        "date": "2020-04-02",
+        "duration": 6120,
+        "youtube_id": "Mv1r1Ghqz24",
+        "collection": 51,
+        "titles": [
+          "suikerdippie met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 6120
+          }
+        ],
+        "twitchtracker_id": "1058483345",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "23:32:00",
+        "time_end": "01:15:00",
+        "free": true
+      },
+      {
+        "id": "2af1",
+        "type": "stream",
+        "date": "2020-04-05",
+        "duration": 6600,
+        "youtube_id": "Mv1r1Ghqz24",
+        "collection": 51,
+        "titles": [
+          "potje met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 5700
+          },
+          {
+            "title": "Variety",
+            "duration": 900
+          }
+        ],
+        "twitchtracker_id": "1096208753",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "22:04:00",
+        "time_end": "23:55:00",
+        "free": true
+      },
         {
             "id": "204f",
             "type": "stream",
@@ -30169,30 +30177,31 @@
             "free": true,
             "time_end": "18:15:00"
         },
-        {
-            "id": "ae67",
-            "type": "stream",
-            "date": "2020-04-12",
-            "duration": 9060,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 9060
-                }
-            ],
-            "twitchtracker_id": "1172877457",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "21:33:00",
-            "time_end": "00:05:00"
-        },
+      {
+        "id": "ae67",
+        "type": "stream",
+        "date": "2020-04-12",
+        "duration": 9060,
+        "youtube_id": "kqOkxdAiTE",
+        "collection": 51,
+        "titles": [
+          "potje met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 9060
+          }
+        ],
+        "twitchtracker_id": "1172877457",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "21:33:00",
+        "time_end": "00:05:00",
+        "free": true
+      },
         {
             "id": "74b5",
             "type": "stream",
@@ -30387,30 +30396,31 @@
             "time_start": "20:21:00",
             "time_end": "21:55:00"
         },
-        {
-            "id": "731e",
-            "type": "stream",
-            "date": "2020-04-23",
-            "duration": 5580,
-            "youtube_id": "https://www.youtube.com/playlist?list=PL9fsn9rCTiMWTPJxermQ1OdMwWVU2bm5U",
-            "collection": 51,
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 5580
-                }
-            ],
-            "twitchtracker_id": "1284868177",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "01:31:00",
-            "time_end": "03:05:00"
-        },
+      {
+        "id": "731e",
+        "type": "stream",
+        "date": "2020-04-23",
+        "duration": 5580,
+        "youtube_id": "kqOkxdAiTE",
+        "collection": 51,
+        "titles": [
+          "potje met peetje"
+        ],
+        "activities": [
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 5580
+          }
+        ],
+        "twitchtracker_id": "1284868177",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "01:31:00",
+        "time_end": "03:05:00",
+        "free": true
+      },
         {
             "id": "b566",
             "type": "stream",
