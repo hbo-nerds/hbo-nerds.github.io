@@ -22,12 +22,6 @@
                             class="bi bi-search me-1"></i>Zoekresultaten
                         </button>
                     </div>
-<!--                    <div class="col-auto">-->
-<!--                        <button type="button" class="btn btn-sm btn-outline-primary"-->
-<!--                                :class="{active: view === 'list'}" @click="generalStore.setView('list')"><i-->
-<!--                            class="bi bi-list me-1"></i>Lijst-->
-<!--                        </button>-->
-<!--                    </div>-->
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
                                 :class="{active: view === 'random'}" @click="generalStore.setView('random')"><i

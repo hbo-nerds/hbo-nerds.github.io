@@ -9,6 +9,17 @@
                     hilarische singleplayer escapades. Klik op een serie en laat je meevoeren door een wereld vol
                     plezier, verrassingen en onvergetelijke momenten. Het beste excuus voor een ontspannen bingesessie
                     op een luie zondagmiddag!</p>
+                <div class="row g-2 align-items-center mb-3">
+                    <div class="col-auto ms-auto d-none d-md-block">
+                        <span>Sorteer op</span>
+                    </div>
+                    <div class="col-auto ms-auto ms-md-0">
+                        <select class="form-select form-select-sm" v-model="sortOptionSeries">
+                            <option value="newOld">Datum (nieuw-oud)</option>
+                            <option value="oldNew">Datum (oud-nieuw)</option>
+                        </select>
+                    </div>
+                </div>
                 <div class="row g-2">
                     <series-container></series-container>
                 </div>
@@ -19,4 +30,8 @@
 
 <script setup>
 import SeriesContainer from "@/containers/SeriesContainer.vue";
+import {storeToRefs} from "pinia";
+import {useContentStore} from "@/stores/content.js";
+const contentStore = useContentStore()
+const {sortOptionSeries} = storeToRefs(contentStore)
 </script>

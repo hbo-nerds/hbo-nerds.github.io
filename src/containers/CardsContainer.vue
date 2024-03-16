@@ -15,13 +15,6 @@
                 <card-component :card="card"/>
             </div>
         </template>
-<!--        <template v-if="view === 'list'">-->
-<!--            <div class="col-12">{{ sortedData.length}} resultaten</div>-->
-<!--            <div class="col-12" v-if="!sortedData.length && !search.length < 3">Lekker Appie! Geen resultaten gevonden.</div>-->
-<!--            <div class="col-12" v-for="(card, idx) in sortedData" :key="idx">-->
-<!--                <card-component-list :card="card"/>-->
-<!--            </div>-->
-<!--        </template>-->
     </div>
     <div v-if="view === 'search'" class="row align-items-center g-2">
         <div class="col-12 col-md">
@@ -34,7 +27,7 @@
                     </li>
                     <li :class="{active: pageNumber === 0}" class="page-item" @click="goPage(0)"><a class="page-link" role="button">1</a></li>
 
-                    <li v-if="pageCount > 2" class="page-item"><a class="page-link">...</a></li>
+                    <li v-if="pageCount > 2 && pageNumber > 2" class="page-item"><a class="page-link">...</a></li>
 
                     <li v-if="pageNumber < 3 && pageCount > 1" :class="{active: pageNumber === 1}" class="page-item" @click="goPage(1)"><a class="page-link" role="button">2</a></li>
                     <li v-if="pageNumber >= 3" :class="{active: pageNumber === 1}" class="page-item" @click="goPage(pageNumber - 1)"><a class="page-link" role="button">{{ pageNumber }}</a></li>

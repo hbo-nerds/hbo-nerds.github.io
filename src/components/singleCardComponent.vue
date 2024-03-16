@@ -168,10 +168,10 @@ const shareUrl = computed(() => {
     return `${host}/#/item/${card.value['id']}`
 })
 const collectionItems = computed(() => {
-    return contentStore.getSingleCollection(card.value)
+    return contentStore.getSingleCollection(card.value['collection'])
 })
 const collectionName = computed(() => {
-    return card.value.collection ? contentStore.getCollectionName(card.value.collection) : null
+    return card.value.collection ? contentStore.getCollection(card.value.collection).title : null
 })
 
 document.title = "Lekker Speuren - " + title.value;
