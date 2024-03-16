@@ -42479,28 +42479,29 @@
                 "Super Mario Bros. U Delux"
             ]
         },
-        {
-            "id": "61f5",
-            "type": "stream",
-            "date": "2022-12-25",
-            "duration": 9300,
-            "titles": [
-                "zo'n eenzame kerst"
-            ],
-            "activities": [
-                {
-                    "title": "Dungeon Keeper 2",
-                    "duration": 9300
-                }
-            ],
-            "twitchtracker_id": "40234163624",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "22:09:00",
-            "time_end": "00:45:00",
-            "youtube_id": "p2pmQ1c9E7Q"
-        },
+      {
+        "id": "61f5",
+        "type": "stream",
+        "date": "2022-12-25",
+        "duration": 9300,
+        "titles": [
+          "zo'n eenzame kerst"
+        ],
+        "activities": [
+          {
+            "title": "Dungeon Keeper 2",
+            "duration": 9300
+          }
+        ],
+        "twitchtracker_id": "40234163624",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "22:09:00",
+        "time_end": "00:45:00",
+        "youtube_id": "p2pmQ1c9E7Q",
+        "free": true
+      },
         {
             "id": "f86d",
             "type": "video",
@@ -43718,28 +43719,29 @@
             "time_start": "20:45:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "da0b",
-            "type": "stream",
-            "date": "2023-05-19",
-            "duration": 4020,
-            "titles": [
-                "1 potje"
-            ],
-            "activities": [
-                {
-                    "title": "Just Chatting",
-                    "duration": 4020
-                }
-            ],
-            "twitchtracker_id": "46874182700",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:07:00",
-            "time_end": "16:15:00",
-            "youtube_id": "bpF_Zwa0EdI"
-        },
+      {
+        "id": "da0b",
+        "type": "stream",
+        "date": "2023-05-19",
+        "duration": 4020,
+        "titles": [
+          "1 potje"
+        ],
+        "activities": [
+          {
+            "title": "Just Chatting",
+            "duration": 4020
+          }
+        ],
+        "twitchtracker_id": "46874182700",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "15:07:00",
+        "time_end": "16:15:00",
+        "youtube_id": "bpF_Zwa0EdI",
+        "free": true
+      },
         {
             "id": "e663",
             "type": "stream",
@@ -43926,28 +43928,29 @@
             "time_start": "20:30:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "3531",
-            "type": "stream",
-            "date": "2023-06-10",
-            "duration": 6180,
-            "titles": [
-                "A TIER PIETEKE"
-            ],
-            "activities": [
-                {
-                    "title": "Super Mario Maker 2",
-                    "duration": 6180
-                }
-            ],
-            "twitchtracker_id": "40792493608",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "22:01:00",
-            "time_end": "23:45:00",
-            "youtube_id": "VyBGcQV_VWc"
-        },
+      {
+        "id": "3531",
+        "type": "stream",
+        "date": "2023-06-10",
+        "duration": 6180,
+        "titles": [
+          "A TIER PIETEKE"
+        ],
+        "activities": [
+          {
+            "title": "Super Mario Maker 2",
+            "duration": 6180
+          }
+        ],
+        "twitchtracker_id": "40792493608",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "22:01:00",
+        "time_end": "23:45:00",
+        "youtube_id": "VyBGcQV_VWc",
+        "free": true
+      },
         {
             "id": "f517",
             "type": "stream",
@@ -44339,28 +44342,29 @@
             "time_start": "20:32:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "67db",
-            "type": "stream",
-            "date": "2023-07-12",
-            "duration": 3600,
-            "titles": [
-                "zo'n piet pot"
-            ],
-            "activities": [
-                {
-                    "title": "Super Mario Advance 4: Super Mario Bros. 3",
-                    "duration": 3600
-                }
-            ],
-            "twitchtracker_id": "40894147464",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "23:24:00",
-            "time_end": "00:25:00",
-            "youtube_id": "Iih4KKZ7dns"
-        },
+      {
+        "id": "67db",
+        "type": "stream",
+        "date": "2023-07-12",
+        "duration": 3600,
+        "titles": [
+          "zo'n piet pot"
+        ],
+        "activities": [
+          {
+            "title": "Super Mario Advance 4: Super Mario Bros. 3",
+            "duration": 3600
+          }
+        ],
+        "twitchtracker_id": "40894147464",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "23:24:00",
+        "time_end": "00:25:00",
+        "youtube_id": "Iih4KKZ7dns",
+        "free": true
+      },
         {
             "id": "b14c",
             "type": "stream",
