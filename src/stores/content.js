@@ -16,6 +16,7 @@ export const useContentStore = defineStore('content', {
         randomData: [],
         search: '',
         sortOption: 'newOld',
+        sortOptionSeries: 'newOld',
         filters: {
             type: [],
             free: false,
@@ -51,6 +52,23 @@ export const useContentStore = defineStore('content', {
                 } else if (this.sortOption === 'shortLong') {
                     return a.duration - b.duration
                 } else if (this.sortOption === 'longShort') {
+                    return b.duration - a.duration
+                } else return true
+            })
+        },
+        sortedDataSeries() {
+            return this.seriesFirstItems().sort((a, b) => {
+                let dateA = new Date(a.date);
+                let dateB = new Date(b.date);
+
+                if (!this.sortOptionSeries) return true
+                else if (this.sortOptionSeries === 'oldNew') {
+                    return dateA - dateB
+                } else if (this.sortOptionSeries === 'newOld') {
+                    return dateB - dateA
+                } else if (this.sortOptionSeries === 'shortLong') {
+                    return a.duration - b.duration
+                } else if (this.sortOptionSeries === 'longShort') {
                     return b.duration - a.duration
                 } else return true
             })
@@ -99,11 +117,6 @@ export const useContentStore = defineStore('content', {
                 }
             }, {});
         },
-        seriesFirstItems() {
-            return this.collections.map(col => {
-                return this.content.find(item => item.collection === col.id)
-            }).filter(item => item)
-        }
     },
     actions: {
         /**
@@ -116,19 +129,19 @@ export const useContentStore = defineStore('content', {
         },
         /**
          * Return a list of items within collection
-         * @param card
+         * @param collectionId id of the collection
          * @returns {*|*[]}
          */
-        getSingleCollection(card) {
-            return card.collection ? this.content.filter(item => item.collection === card.collection) : []
+        getSingleCollection(collectionId) {
+            return collectionId ? this.content.filter(item => item.collection === parseInt(collectionId)) : []
         },
         /**
-         * Return the name of the collection
+         * Return the collection by id
          * @param collectionId
          * @returns {*}
          */
-        getCollectionName(collectionId) {
-            return this.collections.find(item => item.id === collectionId).title
+        getCollection(collectionId) {
+            return this.collections.find(item => item.id === parseInt(collectionId))
         },
         /**
          * Fetch json data
@@ -352,6 +365,23 @@ export const useContentStore = defineStore('content', {
                 activity: []
             }
             this.filter()
+        },
+        /**
+         * Return amount of items in collection
+         * @param collectionId
+         * @returns {*}
+         */
+        countSeriesItems(collectionId) {
+            return this.content.filter(i => i.collection === collectionId).length
+        },
+        /**
+         * Return array with collection first items
+         * @returns {*[]}
+         */
+        seriesFirstItems() {
+            return this.collections.map(col => {
+                return this.content.find(item => item.collection === col.id)
+            }).filter(item => item)
         }
     }
 })
