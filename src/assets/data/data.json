@@ -2312,25 +2312,30 @@
             "collection": 44,
             "activity": "The Evil Within"
         },
-        {
-            "id": "067b",
-            "type": "stream",
-            "date": "2014-10-20",
-            "duration": 4260,
-            "titles": [
-                "PUTT-PUTT SAVES THE ZOO: Seksbewegingen!?"
-            ],
-            "activities": [
-              {
-                "title": "Putt Putt: Redt de dierentuin",
-                "duration": 4260
-              }
-            ],
-            "twitch_id": "45310402",
-            "tags": [
-                "main"
-            ]
-        },
+      {
+        "id": "067b",
+        "type": "stream",
+        "description": "Ze spelen Putt-Putt in plaats van Miel Monteur. Timon speelt het spelletje voor het eerst. Bovendien werd er een video van deze stream voor het Youtube-kanaal gemaakt.",
+        "date": "2014-10-20",
+        "duration": 4260,
+        "titles": [
+          "PUTT-PUTT SAVES THE ZOO: Seksbewegingen!?"
+        ],
+        "activities": [
+          {
+            "title": "Putt Putt: Redt de dierentuin",
+            "duration": 4260
+          }
+        ],
+        "twitch_id": "45310402",
+        "tags": [
+          "main",
+          "Putt-Putt",
+          "originele streams",
+          "whatever",
+          "2014"
+        ]
+      },
         {
             "id": "e955",
             "type": "video",
@@ -13401,33 +13406,35 @@
             "time_start": "21:14:00",
             "time_end": "01:25:00"
         },
-        {
-            "id": "3737",
-            "type": "stream",
-            "date": "2017-09-18",
-            "duration": 8220,
-            "youtube_id": "yrPkHX19WnU",
-            "titles": [
-                "Overcooked! - Lekker spelen"
-            ],
-            "activities": [
-                {
-                    "title": "Overcooked!",
-                    "duration": 6120
-                },
-                {
-                    "title": "Variety",
-                    "duration": 2100
-                }
-            ],
-            "twitchtracker_id": "26287523104",
-            "twitch_id": "177546487",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:27:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "3737",
+        "type": "stream",
+        "date": "2017-09-18",
+        "duration": 8220,
+        "youtube_id": "yrPkHX19WnU",
+        "titles": [
+          "Overcooked! - Lekker spelen"
+        ],
+        "activities": [
+          {
+            "title": "Overcooked!",
+            "duration": 6120
+          },
+          {
+            "title": "Variety",
+            "duration": 2100
+          }
+        ],
+        "twitchtracker_id": "26287523104",
+        "twitch_id": "177546487",
+        "tags": [
+          "main",
+          "koken"
+        ],
+        "time_start": "20:27:00",
+        "description": "Peter en Timon spelen Overcooked en runnen hun eigen restaurant. Zonder natuurlijk enige ruzie worden perfecte, en soms aangebrande, gerechten bereid. Ook nemen ze het tegen elkaar op in een epische 1v1.",
+        "time_end": "22:45:00"
+      },
         {
             "id": "2f16",
             "type": "stream",
@@ -31330,30 +31337,32 @@
             "time_start": "21:19:00",
             "time_end": "23:35:00"
         },
-        {
-            "id": "d0fd",
-            "type": "stream",
-            "date": "2020-07-08",
-            "duration": 23100,
-            "youtube_id": "VMLqF7RAhHw",
-            "titles": [
-                "livestream"
-            ],
-            "activities": [
-                {
-                    "title": "Clubhouse Games: 51 Worldwide Classics",
-                    "duration": 23100
-                }
-            ],
-            "twitchtracker_id": "39189793488",
-            "twitch_id": "692571544",
-            "extra_urls": "https://www.twitch.tv/videos/692572310",
-            "tags": [
-                "main"
-            ],
-            "time_start": "21:29:00",
-            "time_end": "03:55:00"
-        },
+      {
+        "id": "d0fd",
+        "type": "stream",
+        "date": "2020-07-08",
+        "duration": 23100,
+        "youtube_id": "VMLqF7RAhHw",
+        "titles": [
+          "livestream"
+        ],
+        "activities": [
+          {
+            "title": "Clubhouse Games: 51 Worldwide Classics",
+            "duration": 23100
+          }
+        ],
+        "twitchtracker_id": "39189793488",
+        "twitch_id": "692571544",
+        "extra_urls": "https://www.twitch.tv/videos/692572310",
+        "tags": [
+          "main",
+          "mankala"
+        ],
+        "time_start": "21:29:00",
+        "description": "De mannen doen nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala",
+        "time_end": "03:55:00"
+      },
         {
             "id": "9c9e",
             "type": "stream",
@@ -45107,33 +45116,35 @@
             "youtube_id": "tHTIDvBmX14",
             "activity": "Payday 3"
         },
-        {
-            "id": "e339",
-            "type": "stream",
-            "date": "2023-10-02",
-            "duration": 7740,
-            "youtube_id": "obPyWQVefNc",
-            "titles": [
-                "HORROR MAAND 2023 IS BEGONNEN!"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 2040
-                },
-                {
-                    "title": "I'm on Observation Duty 6",
-                    "duration": 5700
-                }
-            ],
-            "twitchtracker_id": "41189677432",
-            "twitch_id": "1941071931",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:55:00",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "e339",
+        "type": "stream",
+        "date": "2023-10-02",
+        "duration": 7740,
+        "youtube_id": "obPyWQVefNc",
+        "titles": [
+          "HORROR MAAND 2023 IS BEGONNEN!"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 2040
+          },
+          {
+            "title": "I'm on Observation Duty 6",
+            "duration": 5700
+          }
+        ],
+        "twitchtracker_id": "41189677432",
+        "twitch_id": "1941071931",
+        "tags": [
+          "main",
+          "horrormaand"
+        ],
+        "time_start": "20:55:00",
+        "description": "Timon en Peter spelen I'm on Observation Duty. Het is het begin van de horror maand en ze kondigen de nieuwe emotes aan: lekkereng en lekkeraanval. Ze spelen het level 'Hotel', 'Pool' en 'Hospital'.",
+        "time_end": "23:05:00"
+      },
         {
             "id": "0bca",
             "type": "stream",
