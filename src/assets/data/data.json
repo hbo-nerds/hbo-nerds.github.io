@@ -9405,30 +9405,30 @@
             "time_start": "16:52:00",
             "time_end": "17:55:00"
         },
-        {
-            "id": "3945",
-            "type": "stream",
-            "date": "2017-04-30",
-            "duration": 19260,
-            "youtube_id": "oAjrFXU-vmo",
-            "titles": [
-                "Streampie met Tiempie - Hearthstone Arena (crapmic)"
-            ],
-            "activities": [
-                {
-                    "title": "Hearthstone",
-                    "duration": 19260
-                }
-            ],
-            "twitchtracker_id": "25174545104",
-            "extra_urls": "https://www.youtube.com/watch?v=kqRq5ZThBjI",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "18:43:00",
-            "time_end": "00:05:00"
-        },
+      {
+        "id": "3945",
+        "type": "stream",
+        "date": "2017-04-30",
+        "duration": 19260,
+        "youtube_id": "kqRq5ZThBjI",
+        "titles": [
+          "Streampie met Tiempie - Hearthstone Arena (crapmic)"
+        ],
+        "activities": [
+          {
+            "title": "Hearthstone",
+            "duration": 19260
+          }
+        ],
+        "twitchtracker_id": "25174545104",
+        "extra_urls": "https://www.youtube.com/watch?v=kqRq5ZThBjI",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "18:43:00",
+        "time_end": "00:05:00"
+      },
         {
             "id": "ff03",
             "type": "stream",
@@ -39104,29 +39104,30 @@
         "youtube_id": "vLdQQG2doMQ",
         "activity": "ELDEN RING"
       },
-        {
-            "id": "fb24",
-            "type": "stream",
-            "date": "2022-03-14",
-            "duration": 6120,
-            "youtube_id": "XBK2N75RNN0",
-            "titles": [
-                "We onderzoeken het ECHTE Loch Ness Monster! (bestaat hij verdomme echt?)"
-            ],
-            "activities": [
-                {
-                    "title": "Loch Ness",
-                    "duration": 6120
-                }
-            ],
-            "twitchtracker_id": "44963475308",
-            "twitch_id": "1425781956",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:22:00",
-            "time_end": "22:05:00"
-        },
+      {
+        "id": "fb24",
+        "type": "stream",
+        "date": "2022-03-14",
+        "duration": 6120,
+        "youtube_id": "XBK2N75RNN0",
+        "titles": [
+          "We onderzoeken het ECHTE Loch Ness Monster! (bestaat hij verdomme echt?)"
+        ],
+        "activities": [
+          {
+            "title": "Loch Ness",
+            "duration": 6120
+          }
+        ],
+        "twitchtracker_id": "44963475308",
+        "twitch_id": "1425781956",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:22:00",
+        "description": "Ze speuren het Loch Ness Monster op, maar het spelletje wil niet mee. Timon heeft een geinig koppie, en iemand komt klieren met een soundboard. Uiteindelijk geven ze op en gaan ze maar schaken.",
+        "time_end": "22:05:00"
+      },
         {
             "id": "ddb6",
             "type": "stream",
@@ -42860,34 +42861,35 @@
             "time_start": "20:39:00",
             "time_end": "22:55:00"
         },
-        {
-            "id": "6964",
-            "type": "stream",
-            "date": "2023-02-20",
-            "duration": 6960,
-            "youtube_id": "K1BbLpEK0y8",
-            "collection": 56,
-            "titles": [
-                "Gluren 👀"
-            ],
-            "activities": [
-                {
-                    "title": "I'm on Observation Duty",
-                    "duration": 6660
-                },
-                {
-                    "title": "Drawing From Memory",
-                    "duration": 300
-                }
-            ],
-            "twitchtracker_id": "40493840680",
-            "twitch_id": "1744784119",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:58:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "6964",
+        "type": "stream",
+        "date": "2023-02-20",
+        "duration": 6960,
+        "youtube_id": "K1BbLpEK0y8",
+        "collection": 56,
+        "titles": [
+          "Gluren 👀"
+        ],
+        "activities": [
+          {
+            "title": "I'm on Observation Duty",
+            "duration": 6660
+          },
+          {
+            "title": "Drawing From Memory",
+            "duration": 300
+          }
+        ],
+        "twitchtracker_id": "40493840680",
+        "twitch_id": "1744784119",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:58:00",
+        "description": "Ze spelen eerst I'm on Observation Duty 1, dan I'm on Observation Duty 4, en ze sluiten af met een potje Drawing from Memory.",
+        "time_end": "22:55:00"
+      },
         {
             "id": "0659",
             "type": "stream",
