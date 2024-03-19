@@ -2312,30 +2312,30 @@
             "collection": 44,
             "activity": "The Evil Within"
         },
-      {
-        "id": "067b",
-        "type": "stream",
-        "description": "Ze spelen Putt-Putt in plaats van Miel Monteur. Timon speelt het spelletje voor het eerst. Bovendien werd er een video van deze stream voor het Youtube-kanaal gemaakt.",
-        "date": "2014-10-20",
-        "duration": 4260,
-        "titles": [
-          "PUTT-PUTT SAVES THE ZOO: Seksbewegingen!?"
-        ],
-        "activities": [
-          {
-            "title": "Putt Putt: Redt de dierentuin",
-            "duration": 4260
-          }
-        ],
-        "twitch_id": "45310402",
-        "tags": [
-          "main",
-          "Putt-Putt",
-          "originele streams",
-          "whatever",
-          "2014"
-        ]
-      },
+        {
+            "id": "067b",
+            "type": "stream",
+            "description": "Ze spelen Putt-Putt in plaats van Miel Monteur. Timon speelt het spelletje voor het eerst. Bovendien werd er een video van deze stream voor het Youtube-kanaal gemaakt.",
+            "date": "2014-10-20",
+            "duration": 4260,
+            "titles": [
+                "PUTT-PUTT SAVES THE ZOO: Seksbewegingen!?"
+            ],
+            "activities": [
+                {
+                    "title": "Putt Putt: Redt de dierentuin",
+                    "duration": 4260
+                }
+            ],
+            "twitch_id": "45310402",
+            "tags": [
+                "main",
+                "Putt-Putt",
+                "originele streams",
+                "whatever",
+                "2014"
+            ]
+        },
         {
             "id": "e955",
             "type": "video",
@@ -4161,16 +4161,16 @@
             "collection": 50,
             "activity": "GTA V"
         },
-      {
-        "id": "cfb1",
-        "type": "video",
-        "date": "2015-07-27",
-        "title": "DIE SMERIGE NERD - Pokemon #13",
-        "duration": 539,
-        "youtube_id": "yGlFxJIwPFg",
-        "collection": 21,
-        "activity": "Pokémon"
-      },
+        {
+            "id": "cfb1",
+            "type": "video",
+            "date": "2015-07-27",
+            "title": "DIE SMERIGE NERD - Pokemon #13",
+            "duration": 539,
+            "youtube_id": "yGlFxJIwPFg",
+            "collection": 21,
+            "activity": "Pokémon"
+        },
         {
             "id": "6c76",
             "type": "stream",
@@ -4757,10 +4757,10 @@
                 "Buurman & Buurman - LEKKER SPELEN LIVE"
             ],
             "activities": [
-              {
-                "title": "Buurman & Buurman",
-                "duration": 3600
-              }
+                {
+                    "title": "Buurman & Buurman",
+                    "duration": 3600
+                }
             ],
             "twitch_id": "18414380",
             "tags": [
@@ -6398,15 +6398,15 @@
             "collection": 9,
             "activity": "Heavy Rain"
         },
-      {
-        "id": "b3b4",
-        "type": "video",
-        "date": "2016-04-11",
-        "title": "Dark Souls III - Lekker spelen",
-        "duration": 327,
-        "youtube_id": "9eqC7rgx1JU",
-        "activity": "DARK SOULS III"
-      },
+        {
+            "id": "b3b4",
+            "type": "video",
+            "date": "2016-04-11",
+            "title": "Dark Souls III - Lekker spelen",
+            "duration": 327,
+            "youtube_id": "9eqC7rgx1JU",
+            "activity": "DARK SOULS III"
+        },
         {
             "id": "db97",
             "type": "video",
@@ -9405,30 +9405,30 @@
             "time_start": "16:52:00",
             "time_end": "17:55:00"
         },
-      {
-        "id": "3945",
-        "type": "stream",
-        "date": "2017-04-30",
-        "duration": 19260,
-        "youtube_id": "kqRq5ZThBjI",
-        "titles": [
-          "Streampie met Tiempie - Hearthstone Arena (crapmic)"
-        ],
-        "activities": [
-          {
-            "title": "Hearthstone",
-            "duration": 19260
-          }
-        ],
-        "twitchtracker_id": "25174545104",
-        "extra_urls": "https://www.youtube.com/watch?v=kqRq5ZThBjI",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "18:43:00",
-        "time_end": "00:05:00"
-      },
+        {
+            "id": "3945",
+            "type": "stream",
+            "date": "2017-04-30",
+            "duration": 19260,
+            "youtube_id": "kqRq5ZThBjI",
+            "titles": [
+                "Streampie met Tiempie - Hearthstone Arena (crapmic)"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone",
+                    "duration": 19260
+                }
+            ],
+            "twitchtracker_id": "25174545104",
+            "extra_urls": "https://www.youtube.com/watch?v=kqRq5ZThBjI",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "18:43:00",
+            "time_end": "00:05:00"
+        },
         {
             "id": "ff03",
             "type": "stream",
@@ -13321,15 +13321,15 @@
             "title": "LEKKER SPELEN vs DE KIJKERS",
             "duration": 1026,
             "youtube_id": "Nk_HxZ6Ny-Q",
-          "activity": [
-            "FIFA 17",
-            "Call of Duty Infinite Warfare",
-            "Rocket League",
-            "Playerunknown's Battleground",
-            "Dota 2",
-            "Super Smash Bros. 4",
-            "Mario Kart 8"
-          ]
+            "activity": [
+                "FIFA 17",
+                "Call of Duty Infinite Warfare",
+                "Rocket League",
+                "Playerunknown's Battleground",
+                "Dota 2",
+                "Super Smash Bros. 4",
+                "Mario Kart 8"
+            ]
         },
         {
             "id": "7f81",
@@ -13406,35 +13406,35 @@
             "time_start": "21:14:00",
             "time_end": "01:25:00"
         },
-      {
-        "id": "3737",
-        "type": "stream",
-        "date": "2017-09-18",
-        "duration": 8220,
-        "youtube_id": "yrPkHX19WnU",
-        "titles": [
-          "Overcooked! - Lekker spelen"
-        ],
-        "activities": [
-          {
-            "title": "Overcooked!",
-            "duration": 6120
-          },
-          {
-            "title": "Variety",
-            "duration": 2100
-          }
-        ],
-        "twitchtracker_id": "26287523104",
-        "twitch_id": "177546487",
-        "tags": [
-          "main",
-          "koken"
-        ],
-        "time_start": "20:27:00",
-        "description": "Peter en Timon spelen Overcooked en runnen hun eigen restaurant. Zonder natuurlijk enige ruzie worden perfecte, en soms aangebrande, gerechten bereid. Ook nemen ze het tegen elkaar op in een epische 1v1.",
-        "time_end": "22:45:00"
-      },
+        {
+            "id": "3737",
+            "type": "stream",
+            "date": "2017-09-18",
+            "duration": 8220,
+            "youtube_id": "yrPkHX19WnU",
+            "titles": [
+                "Overcooked! - Lekker spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Overcooked!",
+                    "duration": 6120
+                },
+                {
+                    "title": "Variety",
+                    "duration": 2100
+                }
+            ],
+            "twitchtracker_id": "26287523104",
+            "twitch_id": "177546487",
+            "tags": [
+                "main",
+                "koken"
+            ],
+            "time_start": "20:27:00",
+            "description": "Peter en Timon spelen Overcooked en runnen hun eigen restaurant. Zonder natuurlijk enige ruzie worden perfecte, en soms aangebrande, gerechten bereid. Ook nemen ze het tegen elkaar op in een epische 1v1.",
+            "time_end": "22:45:00"
+        },
         {
             "id": "2f16",
             "type": "stream",
@@ -13719,15 +13719,15 @@
             "time_start": "20:39:00",
             "time_end": "00:15:00"
         },
-      {
-        "id": "83a2",
-        "type": "video",
-        "date": "2017-09-29",
-        "title": "PETER vs TIMON: Fifa 18  (verliezer speelt Freddi Fish)",
-        "duration": 367,
-        "youtube_id": "o_yJo36_kMQ",
-        "activity": "FIFA 18"
-      },
+        {
+            "id": "83a2",
+            "type": "video",
+            "date": "2017-09-29",
+            "title": "PETER vs TIMON: Fifa 18  (verliezer speelt Freddi Fish)",
+            "duration": 367,
+            "youtube_id": "o_yJo36_kMQ",
+            "activity": "FIFA 18"
+        },
         {
             "id": "8aab",
             "type": "stream",
@@ -16194,19 +16194,19 @@
             "duration": 1921,
             "youtube_id": "rFsQV0fPvPY",
             "collection": 8,
-          "activity": [
-            "Tricky Towers",
-            "FIFA 18",
-            "Frogger",
-            "Nidhogg",
-            "W2K 18",
-            "UFC 2",
-            "Rocket League",
-            "Worms Battlegrounds",
-            "Mario Kart 8",
-            "Super Mario Odyssey",
-            "Lethal League"
-          ]
+            "activity": [
+                "Tricky Towers",
+                "FIFA 18",
+                "Frogger",
+                "Nidhogg",
+                "W2K 18",
+                "UFC 2",
+                "Rocket League",
+                "Worms Battlegrounds",
+                "Mario Kart 8",
+                "Super Mario Odyssey",
+                "Lethal League"
+            ]
         },
         {
             "id": "2beb",
@@ -18847,15 +18847,15 @@
             "time_start": "20:24:00",
             "time_end": "22:25:00"
         },
-      {
-        "id": "5146",
-        "type": "video",
-        "date": "2018-05-10",
-        "title": "Lekker spelen \"helpt\" bij een gijzeling",
-        "duration": 1042,
-        "youtube_id": "L802lKQr278",
-        "activity": "Detroit: Become Human"
-      },
+        {
+            "id": "5146",
+            "type": "video",
+            "date": "2018-05-10",
+            "title": "Lekker spelen \"helpt\" bij een gijzeling",
+            "duration": 1042,
+            "youtube_id": "L802lKQr278",
+            "activity": "Detroit: Become Human"
+        },
         {
             "id": "7f15",
             "type": "stream",
@@ -20454,15 +20454,15 @@
             "time_start": "19:00:00",
             "time_end": "01:05:00"
         },
-      {
-        "id": "8357",
-        "type": "video",
-        "date": "2018-08-03",
-        "title": "Lekker spelen - Rayman 2",
-        "duration": 191,
-        "youtube_id": "vTxcEmsHOuQ",
-        "activity": "Rayman 2: The Great Escape"
-      },
+        {
+            "id": "8357",
+            "type": "video",
+            "date": "2018-08-03",
+            "title": "Lekker spelen - Rayman 2",
+            "duration": 191,
+            "youtube_id": "vTxcEmsHOuQ",
+            "activity": "Rayman 2: The Great Escape"
+        },
         {
             "id": "e58f",
             "type": "video",
@@ -23902,7 +23902,7 @@
                 {
                     "title": "Tom Clancy's The Division 2",
                     "duration": 8160
-                },              
+                },
                 {
                     "title": "Resident Evil 2",
                     "duration": 8100
@@ -24482,15 +24482,15 @@
             "time_start": "20:31:00",
             "time_end": "22:25:00"
         },
-      {
-        "id": "b1b8",
-        "type": "podcast",
-        "date": "2019-04-04",
-        "title": "Game of Thrones VOORSPELLINGEN en SAMENVATTING (seizoen 8)",
-        "duration": 1636,
-        "youtube_id": "QZ7xUnRDcXM",
-        "collection": 64
-      },
+        {
+            "id": "b1b8",
+            "type": "podcast",
+            "date": "2019-04-04",
+            "title": "Game of Thrones VOORSPELLINGEN en SAMENVATTING (seizoen 8)",
+            "duration": 1636,
+            "youtube_id": "QZ7xUnRDcXM",
+            "collection": 64
+        },
         {
             "id": "455b",
             "type": "stream",
@@ -25113,7 +25113,7 @@
             ],
             "activities": [
                 {
-                  "title": "Rage 2",
+                    "title": "Rage 2",
                     "duration": 7020
                 }
             ],
@@ -25235,15 +25235,15 @@
             "time_start": "20:26:00",
             "time_end": "22:35:00"
         },
-      {
-        "id": "d0c0",
-        "type": "podcast",
-        "date": "2019-05-21",
-        "title": "Wat vonden we van Game of Thrones S08E6?  (Lekker spoilen)",
-        "duration": 1111,
-        "youtube_id": "ZqSjF931_C4",
-        "collection": 64
-      },
+        {
+            "id": "d0c0",
+            "type": "podcast",
+            "date": "2019-05-21",
+            "title": "Wat vonden we van Game of Thrones S08E6?  (Lekker spoilen)",
+            "duration": 1111,
+            "youtube_id": "ZqSjF931_C4",
+            "collection": 64
+        },
         {
             "id": "1587",
             "type": "stream",
@@ -29765,107 +29765,106 @@
             "youtube_id": "K5vR4LrxvcQ",
             "activity": "call of duty"
         },
-      {
-        "id": "a0df",
-        "type": "stream",
-        "date": "2020-03-20",
-        "duration": 7440,
-        "youtube_id": "9iWHIIwO34o",
-        "collection": 51,
-        "titles": [
-          "potje met peet"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 7440
-          }
-        ],
-        "twitchtracker_id": "901099409",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "20:50:00",
-        "time_end": "22:55:00",
-        "free":  true
-
-      },
-      {
-        "id": "0099",
-        "type": "stream",
-        "date": "2020-03-21",
-        "duration": 11820,
-        "youtube_id": "9iWHIIwO34o",
-        "collection": 51,
-        "titles": [
-          "potje met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 11820
-          }
-        ],
-        "twitchtracker_id": "912905009",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "20:18:00",
-        "time_end": "23:35:00",
-        "free": true
-      },
-      {
-        "id": "0bf7",
-        "type": "stream",
-        "date": "2020-03-22",
-        "duration": 11640,
-        "youtube_id": "9iWHIIwO34o",
-        "collection": 51,
-        "titles": [
-          "potje met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 11640
-          }
-        ],
-        "twitchtracker_id": "923693729",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "18:20:00",
-        "time_end": "21:35:00",
-        "free": true
-      },
-      {
-        "id": "718c",
-        "type": "stream",
-        "date": "2020-03-23",
-        "duration": 8700,
-        "youtube_id": "9iWHIIwO34o",
-        "collection": 51,
-        "titles": [
-          "Timon komt op bezoek!"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 8700
-          }
-        ],
-        "twitchtracker_id": "936525761",
-        "twitch_id": "584531986",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:19:00",
-        "time_end": "22:45:00",
-        "free": true
-      },
+        {
+            "id": "a0df",
+            "type": "stream",
+            "date": "2020-03-20",
+            "duration": 7440,
+            "youtube_id": "9iWHIIwO34o",
+            "collection": 51,
+            "titles": [
+                "potje met peet"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 7440
+                }
+            ],
+            "twitchtracker_id": "901099409",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "20:50:00",
+            "time_end": "22:55:00",
+            "free": true
+        },
+        {
+            "id": "0099",
+            "type": "stream",
+            "date": "2020-03-21",
+            "duration": 11820,
+            "youtube_id": "9iWHIIwO34o",
+            "collection": 51,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 11820
+                }
+            ],
+            "twitchtracker_id": "912905009",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "20:18:00",
+            "time_end": "23:35:00",
+            "free": true
+        },
+        {
+            "id": "0bf7",
+            "type": "stream",
+            "date": "2020-03-22",
+            "duration": 11640,
+            "youtube_id": "9iWHIIwO34o",
+            "collection": 51,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 11640
+                }
+            ],
+            "twitchtracker_id": "923693729",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "18:20:00",
+            "time_end": "21:35:00",
+            "free": true
+        },
+        {
+            "id": "718c",
+            "type": "stream",
+            "date": "2020-03-23",
+            "duration": 8700,
+            "youtube_id": "9iWHIIwO34o",
+            "collection": 51,
+            "titles": [
+                "Timon komt op bezoek!"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 8700
+                }
+            ],
+            "twitchtracker_id": "936525761",
+            "twitch_id": "584531986",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:19:00",
+            "time_end": "22:45:00",
+            "free": true
+        },
         {
             "id": "4138",
             "type": "stream",
@@ -29948,31 +29947,31 @@
             "youtube_id": "NanIy2bp9oI",
             "activity": "DOOM Eternal"
         },
-      {
-        "id": "61f4",
-        "type": "stream",
-        "date": "2020-03-29",
-        "duration": 8520,
-        "youtube_id": "Mv1r1Ghqz24",
-        "collection": 51,
-        "titles": [
-          "potje met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 8520
-          }
-        ],
-        "twitchtracker_id": "1008003537",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "19:22:00",
-        "time_end": "21:45:00",
-        "free": true
-      },
+        {
+            "id": "61f4",
+            "type": "stream",
+            "date": "2020-03-29",
+            "duration": 8520,
+            "youtube_id": "Mv1r1Ghqz24",
+            "collection": 51,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 8520
+                }
+            ],
+            "twitchtracker_id": "1008003537",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "19:22:00",
+            "time_end": "21:45:00",
+            "free": true
+        },
         {
             "id": "e9aa",
             "type": "stream",
@@ -30059,59 +30058,59 @@
             "free": true,
             "time_end": "17:55:00"
         },
-      {
-        "id": "d306",
-        "type": "stream",
-        "date": "2020-04-02",
-        "duration": 6120,
-        "youtube_id": "Mv1r1Ghqz24",
-        "collection": 51,
-        "titles": [
-          "suikerdippie met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 6120
-          }
-        ],
-        "twitchtracker_id": "1058483345",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "23:32:00",
-        "time_end": "01:15:00",
-        "free": true
-      },
-      {
-        "id": "2af1",
-        "type": "stream",
-        "date": "2020-04-05",
-        "duration": 6600,
-        "youtube_id": "Mv1r1Ghqz24",
-        "collection": 51,
-        "titles": [
-          "potje met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 5700
-          },
-          {
-            "title": "Variety",
-            "duration": 900
-          }
-        ],
-        "twitchtracker_id": "1096208753",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "22:04:00",
-        "time_end": "23:55:00",
-        "free": true
-      },
+        {
+            "id": "d306",
+            "type": "stream",
+            "date": "2020-04-02",
+            "duration": 6120,
+            "youtube_id": "Mv1r1Ghqz24",
+            "collection": 51,
+            "titles": [
+                "suikerdippie met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 6120
+                }
+            ],
+            "twitchtracker_id": "1058483345",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "23:32:00",
+            "time_end": "01:15:00",
+            "free": true
+        },
+        {
+            "id": "2af1",
+            "type": "stream",
+            "date": "2020-04-05",
+            "duration": 6600,
+            "youtube_id": "Mv1r1Ghqz24",
+            "collection": 51,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 5700
+                },
+                {
+                    "title": "Variety",
+                    "duration": 900
+                }
+            ],
+            "twitchtracker_id": "1096208753",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "22:04:00",
+            "time_end": "23:55:00",
+            "free": true
+        },
         {
             "id": "204f",
             "type": "stream",
@@ -30184,31 +30183,31 @@
             "free": true,
             "time_end": "18:15:00"
         },
-      {
-        "id": "ae67",
-        "type": "stream",
-        "date": "2020-04-12",
-        "duration": 9060,
-        "youtube_id": "kqOkxdAiTE",
-        "collection": 51,
-        "titles": [
-          "potje met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 9060
-          }
-        ],
-        "twitchtracker_id": "1172877457",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "21:33:00",
-        "time_end": "00:05:00",
-        "free": true
-      },
+        {
+            "id": "ae67",
+            "type": "stream",
+            "date": "2020-04-12",
+            "duration": 9060,
+            "youtube_id": "kqOkxdAiTE",
+            "collection": 51,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 9060
+                }
+            ],
+            "twitchtracker_id": "1172877457",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "21:33:00",
+            "time_end": "00:05:00",
+            "free": true
+        },
         {
             "id": "74b5",
             "type": "stream",
@@ -30403,31 +30402,31 @@
             "time_start": "20:21:00",
             "time_end": "21:55:00"
         },
-      {
-        "id": "731e",
-        "type": "stream",
-        "date": "2020-04-23",
-        "duration": 5580,
-        "youtube_id": "kqOkxdAiTE",
-        "collection": 51,
-        "titles": [
-          "potje met peetje"
-        ],
-        "activities": [
-          {
-            "title": "Animal Crossing: New Horizons",
-            "duration": 5580
-          }
-        ],
-        "twitchtracker_id": "1284868177",
-        "tags": [
-          "casual",
-          "solo"
-        ],
-        "time_start": "01:31:00",
-        "time_end": "03:05:00",
-        "free": true
-      },
+        {
+            "id": "731e",
+            "type": "stream",
+            "date": "2020-04-23",
+            "duration": 5580,
+            "youtube_id": "kqOkxdAiTE",
+            "collection": 51,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Animal Crossing: New Horizons",
+                    "duration": 5580
+                }
+            ],
+            "twitchtracker_id": "1284868177",
+            "tags": [
+                "casual",
+                "solo"
+            ],
+            "time_start": "01:31:00",
+            "time_end": "03:05:00",
+            "free": true
+        },
         {
             "id": "b566",
             "type": "stream",
@@ -30800,10 +30799,10 @@
                 "platinum peter - garfield kartvield"
             ],
             "activities": [
-              {
-                "title": "Garfield Kartfield",
-                "duration": 3960
-              }
+                {
+                    "title": "Garfield Kartfield",
+                    "duration": 3960
+                }
             ],
             "twitchtracker_id": "38245111136",
             "twitch_id": "648262926",
@@ -31337,32 +31336,32 @@
             "time_start": "21:19:00",
             "time_end": "23:35:00"
         },
-      {
-        "id": "d0fd",
-        "type": "stream",
-        "date": "2020-07-08",
-        "duration": 23100,
-        "youtube_id": "VMLqF7RAhHw",
-        "titles": [
-          "livestream"
-        ],
-        "activities": [
-          {
-            "title": "Clubhouse Games: 51 Worldwide Classics",
-            "duration": 23100
-          }
-        ],
-        "twitchtracker_id": "39189793488",
-        "twitch_id": "692571544",
-        "extra_urls": "https://www.twitch.tv/videos/692572310",
-        "tags": [
-          "main",
-          "mankala"
-        ],
-        "time_start": "21:29:00",
-        "description": "De mannen doen nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala",
-        "time_end": "03:55:00"
-      },
+        {
+            "id": "d0fd",
+            "type": "stream",
+            "date": "2020-07-08",
+            "duration": 23100,
+            "youtube_id": "VMLqF7RAhHw",
+            "titles": [
+                "livestream"
+            ],
+            "activities": [
+                {
+                    "title": "Clubhouse Games: 51 Worldwide Classics",
+                    "duration": 23100
+                }
+            ],
+            "twitchtracker_id": "39189793488",
+            "twitch_id": "692571544",
+            "extra_urls": "https://www.twitch.tv/videos/692572310",
+            "tags": [
+                "main",
+                "mankala"
+            ],
+            "time_start": "21:29:00",
+            "description": "De mannen doen nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala, en nog 1 potje mankala",
+            "time_end": "03:55:00"
+        },
         {
             "id": "9c9e",
             "type": "stream",
@@ -33848,10 +33847,10 @@
                     "title": "Dreams",
                     "duration": 1200
                 },
-              {
-                "title": "Garfield Kartfield",
-                "duration": 600
-              },
+                {
+                    "title": "Garfield Kartfield",
+                    "duration": 600
+                },
                 {
                     "title": "FIFA 21",
                     "duration": 1500
@@ -34927,10 +34926,10 @@
                 "potje met peetje (erg saai)"
             ],
             "activities": [
-              {
-                "title": "Call Of Duty: Warzone",
-                "duration": 3480
-              }
+                {
+                    "title": "Call Of Duty: Warzone",
+                    "duration": 3480
+                }
             ],
             "twitchtracker_id": "41692671996",
             "tags": [
@@ -35119,10 +35118,10 @@
                 "potje met peetje"
             ],
             "activities": [
-              {
-                "title": "Call Of Duty: Warzone",
-                "duration": 5280
-              }
+                {
+                    "title": "Call Of Duty: Warzone",
+                    "duration": 5280
+                }
             ],
             "twitchtracker_id": "41861107724",
             "tags": [
@@ -37994,10 +37993,10 @@
                 "Mario Party met de mannen!"
             ],
             "activities": [
-              {
-                "title": "ELDEN RING",
-                "duration": 3840
-              },
+                {
+                    "title": "ELDEN RING",
+                    "duration": 3840
+                },
                 {
                     "title": "Battlefield 2042",
                     "duration": 8400
@@ -38197,7 +38196,7 @@
             ],
             "activities": [
                 {
-                  "title": "Farming Simulator 2022",
+                    "title": "Farming Simulator 2022",
                     "duration": 6420
                 }
             ],
@@ -39011,10 +39010,10 @@
                 "ELDEN RING!!!!!"
             ],
             "activities": [
-              {
-                "title": "ELDEN RING",
-                "duration": 7440
-              }
+                {
+                    "title": "ELDEN RING",
+                    "duration": 7440
+                }
             ],
             "twitchtracker_id": "44856322188",
             "twitch_id": "1413441738",
@@ -39095,39 +39094,39 @@
             "time_start": "20:50:00",
             "time_end": "23:25:00"
         },
-      {
-        "id": "c4f0",
-        "type": "video",
-        "date": "2022-03-10",
-        "title": "Elden Ring -  Lekker spelen",
-        "duration": 436,
-        "youtube_id": "vLdQQG2doMQ",
-        "activity": "ELDEN RING"
-      },
-      {
-        "id": "fb24",
-        "type": "stream",
-        "date": "2022-03-14",
-        "duration": 6120,
-        "youtube_id": "XBK2N75RNN0",
-        "titles": [
-          "We onderzoeken het ECHTE Loch Ness Monster! (bestaat hij verdomme echt?)"
-        ],
-        "activities": [
-          {
-            "title": "Loch Ness",
-            "duration": 6120
-          }
-        ],
-        "twitchtracker_id": "44963475308",
-        "twitch_id": "1425781956",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:22:00",
-        "description": "Ze speuren het Loch Ness Monster op, maar het spelletje wil niet mee. Timon heeft een geinig koppie, en iemand komt klieren met een soundboard. Uiteindelijk geven ze op en gaan ze maar schaken.",
-        "time_end": "22:05:00"
-      },
+        {
+            "id": "c4f0",
+            "type": "video",
+            "date": "2022-03-10",
+            "title": "Elden Ring -  Lekker spelen",
+            "duration": 436,
+            "youtube_id": "vLdQQG2doMQ",
+            "activity": "ELDEN RING"
+        },
+        {
+            "id": "fb24",
+            "type": "stream",
+            "date": "2022-03-14",
+            "duration": 6120,
+            "youtube_id": "XBK2N75RNN0",
+            "titles": [
+                "We onderzoeken het ECHTE Loch Ness Monster! (bestaat hij verdomme echt?)"
+            ],
+            "activities": [
+                {
+                    "title": "Loch Ness",
+                    "duration": 6120
+                }
+            ],
+            "twitchtracker_id": "44963475308",
+            "twitch_id": "1425781956",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:22:00",
+            "description": "Ze speuren het Loch Ness Monster op, maar het spelletje wil niet mee. Timon heeft een geinig koppie, en iemand komt klieren met een soundboard. Uiteindelijk geven ze op en gaan ze maar schaken.",
+            "time_end": "22:05:00"
+        },
         {
             "id": "ddb6",
             "type": "stream",
@@ -42499,29 +42498,29 @@
                 "Super Mario Bros. U Delux"
             ]
         },
-      {
-        "id": "61f5",
-        "type": "stream",
-        "date": "2022-12-25",
-        "duration": 9300,
-        "titles": [
-          "zo'n eenzame kerst"
-        ],
-        "activities": [
-          {
-            "title": "Dungeon Keeper 2",
-            "duration": 9300
-          }
-        ],
-        "twitchtracker_id": "40234163624",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "22:09:00",
-        "time_end": "00:45:00",
-        "youtube_id": "p2pmQ1c9E7Q",
-        "free": true
-      },
+        {
+            "id": "61f5",
+            "type": "stream",
+            "date": "2022-12-25",
+            "duration": 9300,
+            "titles": [
+                "zo'n eenzame kerst"
+            ],
+            "activities": [
+                {
+                    "title": "Dungeon Keeper 2",
+                    "duration": 9300
+                }
+            ],
+            "twitchtracker_id": "40234163624",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "22:09:00",
+            "time_end": "00:45:00",
+            "youtube_id": "p2pmQ1c9E7Q",
+            "free": true
+        },
         {
             "id": "f86d",
             "type": "video",
@@ -42721,15 +42720,15 @@
             "time_start": "20:40:00",
             "time_end": "22:25:00"
         },
-      {
-        "id": "d8fd",
-        "type": "video",
-        "date": "2023-01-31",
-        "title": "Politie Simulator - Lekker spelen",
-        "duration": 353,
-        "youtube_id": "_L8KlBKXEcE",
-        "activity": "Police Simulator: Patrol Officers"
-      },
+        {
+            "id": "d8fd",
+            "type": "video",
+            "date": "2023-01-31",
+            "title": "Politie Simulator - Lekker spelen",
+            "duration": 353,
+            "youtube_id": "_L8KlBKXEcE",
+            "activity": "Police Simulator: Patrol Officers"
+        },
         {
             "id": "af83",
             "type": "stream",
@@ -42861,35 +42860,35 @@
             "time_start": "20:39:00",
             "time_end": "22:55:00"
         },
-      {
-        "id": "6964",
-        "type": "stream",
-        "date": "2023-02-20",
-        "duration": 6960,
-        "youtube_id": "K1BbLpEK0y8",
-        "collection": 56,
-        "titles": [
-          "Gluren 👀"
-        ],
-        "activities": [
-          {
-            "title": "I'm on Observation Duty",
-            "duration": 6660
-          },
-          {
-            "title": "Drawing From Memory",
-            "duration": 300
-          }
-        ],
-        "twitchtracker_id": "40493840680",
-        "twitch_id": "1744784119",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:58:00",
-        "description": "Ze spelen eerst I'm on Observation Duty 1, dan I'm on Observation Duty 4, en ze sluiten af met een potje Drawing from Memory.",
-        "time_end": "22:55:00"
-      },
+        {
+            "id": "6964",
+            "type": "stream",
+            "date": "2023-02-20",
+            "duration": 6960,
+            "youtube_id": "K1BbLpEK0y8",
+            "collection": 56,
+            "titles": [
+                "Gluren 👀"
+            ],
+            "activities": [
+                {
+                    "title": "I'm on Observation Duty",
+                    "duration": 6660
+                },
+                {
+                    "title": "Drawing From Memory",
+                    "duration": 300
+                }
+            ],
+            "twitchtracker_id": "40493840680",
+            "twitch_id": "1744784119",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:58:00",
+            "description": "Ze spelen eerst I'm on Observation Duty 1, dan I'm on Observation Duty 4, en ze sluiten af met een potje Drawing from Memory.",
+            "time_end": "22:55:00"
+        },
         {
             "id": "0659",
             "type": "stream",
@@ -43740,29 +43739,29 @@
             "time_start": "20:45:00",
             "time_end": "22:45:00"
         },
-      {
-        "id": "da0b",
-        "type": "stream",
-        "date": "2023-05-19",
-        "duration": 4020,
-        "titles": [
-          "1 potje"
-        ],
-        "activities": [
-          {
-            "title": "Just Chatting",
-            "duration": 4020
-          }
-        ],
-        "twitchtracker_id": "46874182700",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "15:07:00",
-        "time_end": "16:15:00",
-        "youtube_id": "bpF_Zwa0EdI",
-        "free": true
-      },
+        {
+            "id": "da0b",
+            "type": "stream",
+            "date": "2023-05-19",
+            "duration": 4020,
+            "titles": [
+                "1 potje"
+            ],
+            "activities": [
+                {
+                    "title": "Just Chatting",
+                    "duration": 4020
+                }
+            ],
+            "twitchtracker_id": "46874182700",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "15:07:00",
+            "time_end": "16:15:00",
+            "youtube_id": "bpF_Zwa0EdI",
+            "free": true
+        },
         {
             "id": "e663",
             "type": "stream",
@@ -43949,29 +43948,29 @@
             "time_start": "20:30:00",
             "time_end": "22:45:00"
         },
-      {
-        "id": "3531",
-        "type": "stream",
-        "date": "2023-06-10",
-        "duration": 6180,
-        "titles": [
-          "A TIER PIETEKE"
-        ],
-        "activities": [
-          {
-            "title": "Super Mario Maker 2",
-            "duration": 6180
-          }
-        ],
-        "twitchtracker_id": "40792493608",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "22:01:00",
-        "time_end": "23:45:00",
-        "youtube_id": "VyBGcQV_VWc",
-        "free": true
-      },
+        {
+            "id": "3531",
+            "type": "stream",
+            "date": "2023-06-10",
+            "duration": 6180,
+            "titles": [
+                "A TIER PIETEKE"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker 2",
+                    "duration": 6180
+                }
+            ],
+            "twitchtracker_id": "40792493608",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "22:01:00",
+            "time_end": "23:45:00",
+            "youtube_id": "VyBGcQV_VWc",
+            "free": true
+        },
         {
             "id": "f517",
             "type": "stream",
@@ -44363,29 +44362,29 @@
             "time_start": "20:32:00",
             "time_end": "22:25:00"
         },
-      {
-        "id": "67db",
-        "type": "stream",
-        "date": "2023-07-12",
-        "duration": 3600,
-        "titles": [
-          "zo'n piet pot"
-        ],
-        "activities": [
-          {
-            "title": "Super Mario Advance 4: Super Mario Bros. 3",
-            "duration": 3600
-          }
-        ],
-        "twitchtracker_id": "40894147464",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "23:24:00",
-        "time_end": "00:25:00",
-        "youtube_id": "Iih4KKZ7dns",
-        "free": true
-      },
+        {
+            "id": "67db",
+            "type": "stream",
+            "date": "2023-07-12",
+            "duration": 3600,
+            "titles": [
+                "zo'n piet pot"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Advance 4: Super Mario Bros. 3",
+                    "duration": 3600
+                }
+            ],
+            "twitchtracker_id": "40894147464",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "23:24:00",
+            "time_end": "00:25:00",
+            "youtube_id": "Iih4KKZ7dns",
+            "free": true
+        },
         {
             "id": "b14c",
             "type": "stream",
@@ -45047,7 +45046,7 @@
                     "duration": 1800
                 },
                 {
-                  "title": "Payday 3",
+                    "title": "Payday 3",
                     "duration": 4800
                 },
                 {
@@ -45118,35 +45117,35 @@
             "youtube_id": "tHTIDvBmX14",
             "activity": "Payday 3"
         },
-      {
-        "id": "e339",
-        "type": "stream",
-        "date": "2023-10-02",
-        "duration": 7740,
-        "youtube_id": "obPyWQVefNc",
-        "titles": [
-          "HORROR MAAND 2023 IS BEGONNEN!"
-        ],
-        "activities": [
-          {
-            "title": "Special Events",
-            "duration": 2040
-          },
-          {
-            "title": "I'm on Observation Duty 6",
-            "duration": 5700
-          }
-        ],
-        "twitchtracker_id": "41189677432",
-        "twitch_id": "1941071931",
-        "tags": [
-          "main",
-          "horrormaand"
-        ],
-        "time_start": "20:55:00",
-        "description": "Timon en Peter spelen I'm on Observation Duty. Het is het begin van de horror maand en ze kondigen de nieuwe emotes aan: lekkereng en lekkeraanval. Ze spelen het level 'Hotel', 'Pool' en 'Hospital'.",
-        "time_end": "23:05:00"
-      },
+        {
+            "id": "e339",
+            "type": "stream",
+            "date": "2023-10-02",
+            "duration": 7740,
+            "youtube_id": "obPyWQVefNc",
+            "titles": [
+                "HORROR MAAND 2023 IS BEGONNEN!"
+            ],
+            "activities": [
+                {
+                    "title": "Special Events",
+                    "duration": 2040
+                },
+                {
+                    "title": "I'm on Observation Duty 6",
+                    "duration": 5700
+                }
+            ],
+            "twitchtracker_id": "41189677432",
+            "twitch_id": "1941071931",
+            "tags": [
+                "main",
+                "horrormaand"
+            ],
+            "time_start": "20:55:00",
+            "description": "Timon en Peter spelen I'm on Observation Duty. Het is het begin van de horror maand en ze kondigen de nieuwe emotes aan: lekkereng en lekkeraanval. Ze spelen het level 'Hotel', 'Pool' en 'Hospital'.",
+            "time_end": "23:05:00"
+        },
         {
             "id": "0bca",
             "type": "stream",
@@ -45981,10 +45980,10 @@
                     "title": "Super Monkey Ball: Banana Mania",
                     "duration": 300
                 },
-              {
-                "title": "Garfield Kartfield",
-                "duration": 900
-              },
+                {
+                    "title": "Garfield Kartfield",
+                    "duration": 900
+                },
                 {
                     "title": "Special Events",
                     "duration": 1704
@@ -46085,10 +46084,10 @@
                 "Dit is het mogelijk het meest frustrerende spel ooit..."
             ],
             "activities": [
-              {
-                "title": "Heavenly Bodies",
-                "duration": 6060
-              }
+                {
+                    "title": "Heavenly Bodies",
+                    "duration": 6060
+                }
             ],
             "duration": 7104,
             "twitch_id": "2081345026",
@@ -46104,10 +46103,10 @@
                 "We gaan in agressie therapie..."
             ],
             "activities": [
-              {
-                "title": "A Difficult Game About Climbing",
-                "duration": 6420
-              }
+                {
+                    "title": "A Difficult Game About Climbing",
+                    "duration": 6420
+                }
             ],
             "duration": 7426,
             "twitch_id": "2083201142",
@@ -46142,29 +46141,35 @@
             "duration": 962,
             "youtube_id": "y06DPUgD_qI"
         },
-      {
-        "date": "2024-03-13",
-        "time_start": "20:33:27",
-        "time_end": "22:59:27",
-        "titles": [
-          "Timons LAATSTE kans..."
-        ],
-        "activities": [
-          {
-            "title": "Super Mario Wonder",
-            "duration": 7835
-          }
-
-        ],
-
-        "tags": [
-          "main"
-        ],
-        "duration": 8760,
-        "twitch_id": "2089976033",
-        "youtube_id": "vdGukYQfHXc",
-        "id": "d6d7",
-        "type": "stream"
-      }
+        {
+            "date": "2024-03-13",
+            "time_start": "20:33:27",
+            "time_end": "22:59:27",
+            "titles": [
+                "Timons LAATSTE kans..."
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Wonder",
+                    "duration": 7835
+                }
+            ],
+            "tags": [
+                "main"
+            ],
+            "duration": 8760,
+            "twitch_id": "2089976033",
+            "youtube_id": "vdGukYQfHXc",
+            "id": "d6d7",
+            "type": "stream"
+        },
+        {
+            "id": "4db9",
+            "type": "podcast",
+            "date": "2024-03-19",
+            "title": "Dit jaar gaat het eindelijk gebeuren... - Lekker spreken",
+            "duration": 4623,
+            "youtube_id": "NauUdT7Epog"
+        }
     ]
 }
