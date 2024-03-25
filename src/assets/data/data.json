@@ -11440,7 +11440,7 @@
           "duration": 6300
         }
       ],
-      "twitchtracker_id": "25735488144",   
+      "twitchtracker_id": "25735488144",
       "tags": [
         "main"
       ],
@@ -46216,6 +46216,28 @@
       "twitch_id": "2096564529",
       "youtube_id": "hsvWFuupnZ4",
       "id": "3e2b",
+      "type": "stream"
+    },
+    {
+      "date": "2024-03-18",
+      "time_start": "20:33:27",
+      "time_end": "22:15:27",
+      "titles": [
+        "Chicken legs"
+      ],
+      "activities": [
+        {
+          "title": "Chicken legs",
+          "duration": 6220
+        }
+      ],
+      "tags": [
+        "main"
+      ],
+      "duration": 6220,
+      "twitch_id": "2094742733",
+      "youtube_id": "8Dzi8hX0xzg",
+      "id": "d6d8",
       "type": "stream"
     }
   ]
