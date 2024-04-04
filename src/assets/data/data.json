@@ -5064,28 +5064,28 @@
                 "main"
             ]
         },
-      {
-        "id": "e4a8",
-        "type": "stream",
-        "description": "Amiibo segment, lang in het hoofdmenu van garys mod. Esther is saai. Prophunt met kijkers.",
-        "date": "2015-11-16",
-        "duration": 5400,
-        "titles": [
-          "Garry's Mod"
-        ],
-        "activities": [
-          {
-            "title": "Garry's Mod",
-            "duration": 5400
-          }
-        ],
-        "twitch_id": "26141018",
-        "tags": [
-          "main",
-          "prophunt",
-          "amiibo"
-        ]
-      },
+        {
+            "id": "e4a8",
+            "type": "stream",
+            "description": "Amiibo segment, lang in het hoofdmenu van garys mod. Esther is saai. Prophunt met kijkers.",
+            "date": "2015-11-16",
+            "duration": 5400,
+            "titles": [
+                "Garry's Mod"
+            ],
+            "activities": [
+                {
+                    "title": "Garry's Mod",
+                    "duration": 5400
+                }
+            ],
+            "twitch_id": "26141018",
+            "tags": [
+                "main",
+                "prophunt",
+                "amiibo"
+            ]
+        },
         {
             "id": "16a3",
             "type": "stream",
@@ -11675,8 +11675,8 @@
         {
             "id": "3778",
             "type": "stream",
-          "date": "2017-07-18",
-          "description": "twitch is in 3 delen geknipt, youtube is wel volledig. binnenkort updaten we dat alle links op de pagina komen bij meerdere delen",
+            "date": "2017-07-18",
+            "description": "twitch is in 3 delen geknipt, youtube is wel volledig. binnenkort updaten we dat alle links op de pagina komen bij meerdere delen",
             "duration": 9360,
             "youtube_id": "T7KQQPyoVt4",
             "titles": [
@@ -12742,74 +12742,74 @@
             "time_start": "13:33:00",
             "time_end": "01:45:00"
         },
-      {
-        "id": "26e5",
-        "type": "stream",
-        "date": "2017-08-19",
-        "duration": 47340,
-        "youtube_id": "VN13sZW_bTM",
-        "titles": [
-          "24 UUR STREAM + GRATIS SPULLEN"
-        ],
-        "activities": [
-          {
-            "title": "IRL",
-            "duration": 3240
-          },
-          {
-            "title": "Fallout 4",
-            "duration": 8400
-          },
-          {
-            "title": "Disney Art Academy",
-            "duration": 4200
-          },
-          {
-            "title": "Playerunknown's Battleground",
-            "duration": 11700
-          },
-          {
-            "title": "Social Eating",
-            "duration": 1800
-          },
-          {
-            "title": "The Legend of Zelda: Breath of the Wild",
-            "duration": 6000
-          },
-          {
-            "title": "Variety",
-            "duration": 600
-          },
-          {
-            "title": "Mario Kart 8",
-            "duration": 4800
-          },
-          {
-            "title": "MotorStorm: Apocalypse",
-            "duration": 600
-          },
-          {
-            "title": "Silent Hill 2",
-            "duration": 3000
-          },
-          {
-            "title": "Planet Minigolf",
-            "duration": 2400
-          },
-          {
-            "title": "Darkstalkers Resurrection",
-            "duration": 600
-          }
-        ],
-        "twitchtracker_id": "26051750800",
-        "twitch_id": "177544920",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "13:05:00",
-        "description": "Tijdens het Lekker tekeken uur wordt een poging gedaan tot nieuwe emoticons tekenen. Hierbij wordt de lekkerSpugen en lekkerRochel als 1 emote getekend, Peter geeft in de stream aan deze later op te knippen in 2 losse emoticons. (Je mag deze emoticons niet gebruiken om op lekkerLogo/lekkerSpelen of lekkerAppie te spugen!",
-        "time_end": "02:15:00"
-      },
+        {
+            "id": "26e5",
+            "type": "stream",
+            "date": "2017-08-19",
+            "duration": 47340,
+            "youtube_id": "VN13sZW_bTM",
+            "titles": [
+                "24 UUR STREAM + GRATIS SPULLEN"
+            ],
+            "activities": [
+                {
+                    "title": "IRL",
+                    "duration": 3240
+                },
+                {
+                    "title": "Fallout 4",
+                    "duration": 8400
+                },
+                {
+                    "title": "Disney Art Academy",
+                    "duration": 4200
+                },
+                {
+                    "title": "Playerunknown's Battleground",
+                    "duration": 11700
+                },
+                {
+                    "title": "Social Eating",
+                    "duration": 1800
+                },
+                {
+                    "title": "The Legend of Zelda: Breath of the Wild",
+                    "duration": 6000
+                },
+                {
+                    "title": "Variety",
+                    "duration": 600
+                },
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 4800
+                },
+                {
+                    "title": "MotorStorm: Apocalypse",
+                    "duration": 600
+                },
+                {
+                    "title": "Silent Hill 2",
+                    "duration": 3000
+                },
+                {
+                    "title": "Planet Minigolf",
+                    "duration": 2400
+                },
+                {
+                    "title": "Darkstalkers Resurrection",
+                    "duration": 600
+                }
+            ],
+            "twitchtracker_id": "26051750800",
+            "twitch_id": "177544920",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "13:05:00",
+            "description": "Tijdens het Lekker tekeken uur wordt een poging gedaan tot nieuwe emoticons tekenen. Hierbij wordt de lekkerSpugen en lekkerRochel als 1 emote getekend, Peter geeft in de stream aan deze later op te knippen in 2 losse emoticons. (Je mag deze emoticons niet gebruiken om op lekkerLogo/lekkerSpelen of lekkerAppie te spugen!",
+            "time_end": "02:15:00"
+        },
         {
             "id": "4267",
             "type": "stream",
@@ -24652,29 +24652,29 @@
             "time_start": "01:42:00",
             "time_end": "02:55:00"
         },
-      {
-        "id": "4ee3",
-        "type": "stream",
-        "date": "2019-04-15",
-        "duration": 9720,
-        "youtube_id": "cPjCxzIw9_k",
-        "titles": [
-          "leuk"
-        ],
-        "activities": [
-          {
-            "title": "Dark Souls",
-            "duration": 9720
-          }
-        ],
-        "twitchtracker_id": "33706680912",
-        "tags": [
-          "main"
-        ],
-        "time_start": "21:12:00",
-        "description": "Peter begint met een uitgebreide en enthousiaste intro waarbij hij als een soort game show host Timon en zichzelf aankondigt. Peter speelt Dark Souls, maar vindt het niet leuk dat de chat een death counter bijhoudt. De chat gebruikt de eerste letter van de death counter om iets negatiefs te zeggen. Negen De n staat voor niet zo goed. De stream was op de dag dat de Notre Dame in brand stond, dus daar gaan veel van de donaties over.",
-        "time_end": "23:55:00"
-      },
+        {
+            "id": "4ee3",
+            "type": "stream",
+            "date": "2019-04-15",
+            "duration": 9720,
+            "youtube_id": "cPjCxzIw9_k",
+            "titles": [
+                "leuk"
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls",
+                    "duration": 9720
+                }
+            ],
+            "twitchtracker_id": "33706680912",
+            "tags": [
+                "main"
+            ],
+            "time_start": "21:12:00",
+            "description": "Peter begint met een uitgebreide en enthousiaste intro waarbij hij als een soort game show host Timon en zichzelf aankondigt. Peter speelt Dark Souls, maar vindt het niet leuk dat de chat een death counter bijhoudt. De chat gebruikt de eerste letter van de death counter om iets negatiefs te zeggen. Negen De n staat voor niet zo goed. De stream was op de dag dat de Notre Dame in brand stond, dus daar gaan veel van de donaties over.",
+            "time_end": "23:55:00"
+        },
         {
             "id": "7f93",
             "type": "podcast",
@@ -46266,6 +46266,14 @@
             "type": "stream"
         },
         {
+            "id": "09d3",
+            "type": "video",
+            "date": "2024-03-26",
+            "title": "Dieren verzorgen - Lekker spelen",
+            "duration": 300,
+            "youtube_id": "KcrNV3yjixw"
+        },
+        {
             "date": "2024-03-27",
             "time_start": "20:36:44",
             "time_end": "22:49:26",
@@ -46285,12 +46293,46 @@
             "type": "stream"
         },
         {
-            "id": "09d3",
-            "type": "video",
-            "date": "2024-03-26",
-            "title": "Dieren verzorgen - Lekker spelen",
-            "duration": 300,
-            "youtube_id": "KcrNV3yjixw"
+            "date": "2024-04-01",
+            "time_start": "20:50:54",
+            "time_end": "22:34:27",
+            "titles": [
+                "Die Peach game 🍑"
+            ],
+            "activities": [
+                {
+                    "title": "Princess Peach: Showtime!",
+                    "duration": 4820
+                },
+                {
+                    "title": "Mario Party Superstars",
+                    "duration": 3200
+                }
+            ],
+            "duration": 6213,
+            "twitch_id": "2108051273",
+            "youtube_id": "TX3cMBOHztI",
+            "id": "aa0a",
+            "type": "stream"
+        },
+        {
+            "date": "2024-04-03",
+            "time_start": "20:41:30",
+            "time_end": "22:37:58",
+            "titles": [
+                "We gaan de beste Youtubers worden!"
+            ],
+            "activities": [
+                {
+                    "title": "Content warning",
+                    "duration": 5540
+                }
+            ],
+            "duration": 6988,
+            "twitch_id": "2109910517",
+            "youtube_id": "BoUCVH-hIu4",
+            "id": "d167",
+            "type": "stream"
         }
     ]
 }
