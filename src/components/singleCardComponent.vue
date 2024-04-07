@@ -13,13 +13,13 @@
                             <i class="bi bi-clock me-2"></i>
                             <span>{{ duration }}</span>
                         </span>
-                                <span class="me-4">
+                        <span class="me-4">
                             <i class="bi bi-calendar4-range me-2"></i>
                             <span>{{ card.date }}</span>
                         </span>
                     </div>
                     <!-- image -->
-                    <div class="row gy-3">
+                    <div class="row gy-3 mb-3">
                         <div class="col-12 col-md-8">
                             <img class="w-100" :src="imgScr"
                                  alt="thumbnail">
@@ -29,22 +29,39 @@
                             <a v-if="card['twitch_id']"
                                :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
                                class="me-2 mb-2 d-block" target="_blank"><img class="me-2"
-                                style="width: 32px;height: 32px" src="../assets/img/twitch.png" alt="logo">Twitch</a>
+                                                                              style="width: 32px;height: 32px"
+                                                                              src="../assets/img/twitch.png" alt="logo">Twitch</a>
                             <a v-if="card['youtube_id']"
                                :href="'https://youtube.com/watch?v=' + card['youtube_id']"
                                class="me-2 mb-2 d-block" target="_blank"><img class="me-2"
-                                style="width: 32px;height: 32px" src="../assets/img/youtube.png" alt="logo">Youtube</a>
+                                                                              style="width: 32px;height: 32px"
+                                                                              src="../assets/img/youtube.png"
+                                                                              alt="logo">Youtube</a>
                             <a v-if="card['twitchtracker_id']"
                                :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
                                class="d-block"
                                target="_blank">TwitchTracker</a>
                         </div>
                     </div>
+                    <button @click="generalStore.toggleLikedItem(card.id)" type="button"
+                            class="btn btn-sm btn-outline-success rounded-pill me-2" :class="{active: isLiked}"><i
+                        class="bi me-1" :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'"></i>Like
+                    </button>
+                    <button @click="generalStore.toggleSeenItem(card.id)" type="button"
+                            class="btn btn-sm btn-outline-secondary rounded-pill me-2" :class="{active: isSeen}"><i
+                        class="bi me-1" :class="isSeen ? 'bi-eye-fill' : 'bi-eye'"></i>Gezien
+                    </button>
+                    <button type="button"
+                            class="btn btn-sm btn-outline-secondary rounded-pill"
+                            data-bs-toggle="modal" data-bs-target="#playlistModal"><i
+                        class="bi bi-collection-play me-1"></i>Bewaar
+                    </button>
                     <hr>
                     <!-- share -->
                     <div class="d-flex align-items-center">
                         <span class="fw-bold me-3">Deel via</span>
-                        <a class="me-2 share" @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
+                        <a class="me-2 share"
+                           @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
                             class="bg-whatsapp"></i></a>
                         <span class="fw-bold">of</span>
                         <button class="btn btn-link" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
@@ -100,7 +117,8 @@
                     <hr>
                     <div class="d-flex justify-content-between">
                         <span class="small">Item-nummer: {{ card.id }}</span>
-                        <a :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`" target="_blank">Feedback</a>
+                        <a :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
+                           target="_blank">Feedback</a>
                     </div>
                 </div>
             </div>
@@ -112,7 +130,7 @@
                     <header>
                         <h4 class="card-title fw-bold">Serie</h4>
                     </header>
-                    <p v-if="collectionName">Bekijk meer uit de '{{collectionName}}' serie.</p>
+                    <p v-if="collectionName">Bekijk meer uit de '{{ collectionName }}' serie.</p>
                     <p v-else>Maakt deze video deel uit van een serie? <a
                         :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
                         target="_blank">Stuur een beschrijving op!</a></p>
@@ -129,19 +147,26 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <teleport to="body">
+        <playlist-modal :id="card.id"/>
+    </teleport>
+
 </template>
 <script setup>
-import {computed} from "vue";
+import {computed, onMounted} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import MiniCardComponent from "@/components/miniCardComponent.vue";
 import router from "@/router/index.js";
 import {useGeneralStore} from "@/stores/general.js";
+import PlaylistModal from "@/components/PlaylistModal.vue";
 
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
 const {images} = storeToRefs(contentStore)
-const {likedItems} = storeToRefs(generalStore)
+const {likedItems, seenItems} = storeToRefs(generalStore)
 
 const props = defineProps({
     card: {type: Object, required: true}
@@ -154,7 +179,7 @@ const card = computed(() => {
 const imgScr = computed(() => {
     return images.value['640'][`${props.card['twitch_id']}`] ||
         images.value['640'][`${props.card['youtube_id']}`] ||
-        (!props.card['twitch_id'] && !props.card['youtube_id'] ? images.value['640'][`no_video`] : images.value['640'][`default`] )
+        (!props.card['twitch_id'] && !props.card['youtube_id'] ? images.value['640'][`no_video`] : images.value['640'][`default`])
 })
 
 const duration = computed(() => {
@@ -172,6 +197,16 @@ const collectionItems = computed(() => {
 })
 const collectionName = computed(() => {
     return card.value.collection ? contentStore.getCollection(card.value.collection).title : null
+})
+const isLiked = computed(() => {
+    return likedItems.value.includes(props.card['id'])
+})
+const isSeen = computed(() => {
+    return seenItems.value.includes(props.card['id'])
+})
+
+onMounted(() => {
+    generalStore.updateHistory(card.value.id)
 })
 
 document.title = "Lekker Speuren - " + title.value;
@@ -223,8 +258,10 @@ function copyLink() {
         width: 32px
         height: 32px
         background-size: auto 100%
+
         &.bg-whatsapp
             background-image: url("../../public/social-share-whatsapp.svg")
+
         &.bg-mail
             background-image: url("../../public/social-share-email.svg")
 
