@@ -117,6 +117,24 @@ export const useContentStore = defineStore('content', {
                 }
             }, {});
         },
+        likedContent() {
+            const s = useGeneralStore()
+            let res = []
+            s.likedItems.slice().reverse().forEach(id => {
+                if (this.content.find(c => c.id === id))
+                    res.push(this.content.find(c => c.id === id))
+            })
+            return res
+        },
+        historyContent() {
+            const s = useGeneralStore()
+            let res = []
+            s.history.forEach(id => {
+                if (this.content.find(c => c.id === id))
+                    res.push(this.content.find(c => c.id === id))
+            })
+            return res
+        }
     },
     actions: {
         /**

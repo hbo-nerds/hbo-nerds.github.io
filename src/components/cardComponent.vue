@@ -15,16 +15,36 @@
                 <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" class="platform-link"
                    v-if="card['youtube_id']" target="_blank"><img src="../assets/img/youtube.png" alt="logo"></a>
             </div>
+            <div v-if="isSeen" class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
+                <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
+            </div>
         </div>
         <div class="card-body py-2 px-0">
-            <div @click="goToCard" @click.middle="goToCard('middle')" class="card-title m-0">{{ title }}</div>
-            <router-link v-if="card['collection']" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie"><span class="badge text-bg-secondary text-truncate me-1"
-                                     style="max-width: 100%"><i
-                class="bi bi-folder-fill me-1"></i>{{ `${collectionName} (${collectionCount})` }}</span></router-link>
-            <span class="badge text-bg-warning text-truncate me-1" style="max-width: 100%"
-                  v-if="card.type === 'stream' && card.free"><i class="bi bi-star me-1"></i>Gratis stream</span>
+            <div class="d-flex justify-content-between align-items-baseline">
+                <div class="meta">
+                    <div @click="goToCard" @click.middle="goToCard('middle')" class="card-title m-1">{{ title }}</div>
+                    <router-link v-if="card['collection']" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie"><span class="badge text-bg-secondary text-truncate me-1"
+                                                                                                                                                       style="max-width: 100%"><i
+                        class="bi bi-folder-fill me-1"></i>{{ `${collectionName} (${collectionCount})` }}</span></router-link>
+                    <span class="badge text-bg-warning text-truncate me-1" style="max-width: 100%"
+                          v-if="card.type === 'stream' && card.free"><i class="bi bi-star me-1"></i>Gratis stream</span>
+                </div>
+                <button class="action-btn btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><button class="dropdown-item" type="button" @click="generalStore.toggleSeenItem(card['id'])"><i class="bi bi-eye me-2"></i>{{ isSeen ? 'Niet gezien' : 'Gezien'}}</button></li>
+                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#playlistModal"><i class="bi bi-collection-play me-2"></i>Bewaar</button></li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-share me-2"></i>Deel</button></li>
+                </ul>
+            </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <teleport to="body">
+        <playlist-modal :id="card['id']"/>
+    </teleport>
 </template>
 
 <script setup>
@@ -32,13 +52,17 @@ import {computed} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import router from "@/router/index.js";
+import {useGeneralStore} from "@/stores/general.js";
+import PlaylistModal from "@/components/PlaylistModal.vue";
 
 const props = defineProps({
     card: {type: Object, required: true},
     isSeries: {type: Boolean, default: false}
 })
 const contentStore = useContentStore()
+const generalStore = useGeneralStore()
 const {images} = storeToRefs(contentStore)
+const {seenItems} = storeToRefs(generalStore)
 
 const imgScr = computed(() => {
     return images.value['320'][`${props.card['twitch_id']}`] ||
@@ -58,6 +82,9 @@ const collectionName = computed(() => {
 })
 const collectionCount = computed(() => {
     return props.card['collection'] ? contentStore.countSeriesItems(props.card['collection']) : 0
+})
+const isSeen = computed(() => {
+    return seenItems.value.includes(props.card['id'])
 })
 
 function secondsToHms() {
@@ -97,9 +124,21 @@ function goToCard(type = 'left') {
 </script>
 
 <style scoped lang="sass">
+.card
+    &:hover .action-btn
+        visibility: unset
+    .action-btn
+        visibility: hidden
+
 .thumbnail-wrapper:hover,
 .card-title:hover
     cursor: pointer
+.card-title
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
 
 .platform-link img
     height: 24px
