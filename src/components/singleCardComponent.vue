@@ -53,7 +53,7 @@
                     </button>
                     <button type="button"
                             class="btn btn-sm btn-outline-secondary rounded-pill"
-                            data-bs-toggle="modal" data-bs-target="#playlistModal"><i
+                            data-bs-toggle="modal" :data-bs-target="'#playlistModal-' + card.id"><i
                         class="bi bi-collection-play me-1"></i>Bewaar
                     </button>
                     <hr>
@@ -150,7 +150,7 @@
 
     <!-- Modal -->
     <teleport to="body">
-        <playlist-modal :id="card.id"/>
+        <playlist-modal :id="card.id" :key="card['id']"/>
     </teleport>
 
 </template>

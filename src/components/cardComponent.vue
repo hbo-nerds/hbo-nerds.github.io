@@ -34,7 +34,7 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li><button class="dropdown-item" type="button" @click="generalStore.toggleSeenItem(card['id'])"><i class="bi bi-eye me-2"></i>{{ isSeen ? 'Niet gezien' : 'Gezien'}}</button></li>
-                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" data-bs-target="#playlistModal"><i class="bi bi-collection-play me-2"></i>Bewaar</button></li>
+                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" :data-bs-target="'#playlistModal-' + card['id']"><i class="bi bi-collection-play me-2"></i>Bewaar</button></li>
                     <li><button class="dropdown-item" type="button"><i class="bi bi-share me-2"></i>Deel</button></li>
                 </ul>
             </div>
@@ -43,7 +43,7 @@
 
     <!-- Modal -->
     <teleport to="body">
-        <playlist-modal :id="card['id']"/>
+        <playlist-modal :id="card['id']" :key="card['id']"/>
     </teleport>
 </template>
 

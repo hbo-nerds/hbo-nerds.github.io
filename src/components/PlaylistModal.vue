@@ -1,5 +1,5 @@
 <template>
-    <div class="modal fade" id="playlistModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" :id="'playlistModal-' + id" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered mx-auto">
             <div class="modal-content">
                 <div class="modal-header">
@@ -9,8 +9,8 @@
                 <div class="modal-body">
                     <div v-for="(i, idx) in playlists" class="py-2" :key="idx">
                         <div class="form-check">
-                            <input @change="toggle($event, i.title)" class="form-check-input" type="checkbox"
-                                   :id="'box-' + idx" :checked="getValue(i.items)">
+                            <input @change="toggle($event, i.title)" name="playlist" class="form-check-input" type="checkbox"
+                                   :id="'box-' + idx" :checked="getValue(i.items)" :value="'list'+idx">
                             <label class="form-check-label" :for="'box-' + idx">
                                 {{i.title}}
                             </label>
