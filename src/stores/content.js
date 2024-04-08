@@ -356,13 +356,13 @@ export const useContentStore = defineStore('content', {
          * Select some random items
          */
         pickRandomSet() {
-            let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.content.length));
+            let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.filteredData.length));
             this.randomData = []
             nums.forEach(num => {
-                while (!this.content[num]['twitch_id'] && !this.content[num]['youtube_id']) {
-                    this.content.length === num + 1 ? num = 0 : num++
+                while (!this.filteredData[num]['twitch_id'] && !this.filteredData[num]['youtube_id']) {
+                    this.filteredData.length === num + 1 ? num = 0 : num++
                 }
-                this.randomData.push(this.content[num])
+                this.randomData.push(this.filteredData[num])
             })
         },
         /**

@@ -1,7 +1,11 @@
 <template>
     <div class="row g-2 mb-3">
         <template v-if="view === 'random'">
-            <div class="col-12">Dit zijn 12 <b>random</b> items speciaal voor jou!
+            <div class="col-12">
+                <div class="alert alert-info" role="alert">
+                    <i class="bi bi-exclamation-circle me-2"></i>De random generator maakt gebruikt van de huidige filters.
+                </div>
+                Dit zijn 12 <b>random</b> items speciaal voor jou!
                 <button type="button" class="btn btn-sm btn-link" @click="contentStore.pickRandomSet()">Geef me wat anders.</button>
             </div>
             <div class="col-6 col-md-4 col-lg-3" v-for="(card, idx) in randomData" :key="idx">
