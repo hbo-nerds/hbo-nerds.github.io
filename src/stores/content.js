@@ -20,6 +20,7 @@ export const useContentStore = defineStore('content', {
         filters: {
             type: [],
             free: false,
+            vodOnly: false,
             date: {
                 range: 'alle',
                 after: '',
@@ -74,7 +75,7 @@ export const useContentStore = defineStore('content', {
             })
         },
         groupedTypes() {
-            return this.content.filter(item => this.f_paywall(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 const type = c.type;
                 if (!p.hasOwnProperty(type)) {
                     p[type] = 0;
@@ -84,7 +85,7 @@ export const useContentStore = defineStore('content', {
             }, {});
         },
         groupedDates() {
-            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 p['alle']++
                 if (this.checkSingleDate(c, 3)) p['< 3 maanden']++
                 if (this.checkSingleDate(c, 6)) p['< 6 maanden']++
@@ -93,7 +94,7 @@ export const useContentStore = defineStore('content', {
             }, { 'alle': 0,'< 3 maanden': 0, '< 6 maanden': 0, '< 12 maanden': 0});
         },
         groupedActivities() {
-            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
                 const act = c['activity'] || c['activities'];
                 if (act === undefined) return p
                 if (Array.isArray(act)) {
@@ -224,7 +225,7 @@ export const useContentStore = defineStore('content', {
             })
 
             // filter content
-            data = data.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
+            data = data.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
 
             for (const item of data) {
                 this.filteredData.push(item)
@@ -238,9 +239,21 @@ export const useContentStore = defineStore('content', {
         f_type(item) {
             return !this.filters.type.length || this.filters.type.includes(item.type)
         },
+        /**
+         * Filter item by paywall
+         * @param item
+         * @returns {boolean}
+         */
         f_paywall(item) {
             if (!this.filters.free) return true
             return item.type !== 'stream' || item.free
+        },
+        /**
+         * Filter item by VOD availability
+         */
+        f_vod(item) {
+            if (!this.filters.vodOnly) return true
+            return item['twitch_id'] || item['youtube_id']
         },
         /**
          * Filter items by date
