@@ -46333,6 +46333,52 @@
             "youtube_id": "BoUCVH-hIu4",
             "id": "d167",
             "type": "stream"
+        },
+        {
+            "date": "2024-04-08",
+            "time_start": "20:30:34",
+            "time_end": "22:00:08",
+            "titles": [
+                "Ik ben bang voor herten..."
+            ],
+            "activities": [
+                {
+                    "title": "Hoofobia",
+                    "duration": 4440
+                }
+            ],
+            "duration": 5374,
+            "twitch_id": "2114569314",
+            "youtube_id": "CDj5Z-REqLI",
+            "id": "4048",
+            "type": "stream"
+        },
+        {
+            "date": "2024-04-10",
+            "time_start": "20:40:02",
+            "time_end": "22:27:01",
+            "titles": [
+                "Wie kan het mooiste tekenen?"
+            ],
+            "activities": [
+                {
+                    "title": "Drawing from memory",
+                    "duration": 8760
+                }
+            ],
+            "duration": 6419,
+            "twitch_id": "2116322468",
+            "youtube_id": "JXKmsTyloAM",
+            "id": "6066",
+            "type": "stream"
+        },
+        {
+            "id": "765d",
+            "type": "video",
+            "date": "2024-04-11",
+            "title": "Vakkenvuller simulator - Lekker spelen",
+            "duration": 480,
+            "youtube_id": "uu9QSmIxa9Q"
         }
     ]
 }
