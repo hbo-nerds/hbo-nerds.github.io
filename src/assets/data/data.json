@@ -46276,94 +46276,99 @@
             "id": "bf31",
             "type": "stream"
         },
-        {
-            "id": "09d3",
-            "type": "video",
-            "date": "2024-03-26",
-            "title": "Dieren verzorgen - Lekker spelen",
-            "duration": 300,
-            "youtube_id": "KcrNV3yjixw"
-        },
-        {
-            "date": "2024-03-27",
-            "time_start": "20:36:44",
-            "time_end": "22:49:26",
-            "titles": [
-                "Maak je eigen kat  😻"
-            ],
-            "activities": [
-                {
-                    "title": "Dragons Dogma 2",
-                    "duration": 7200
-                }
-            ],
-            "duration": 7962,
-            "twitch_id": "2103309044",
-            "youtube_id": "Uy-Uz7kvBcg",
-            "id": "00f0",
-            "type": "stream"
-        },
-        {
-            "date": "2024-04-01",
-            "time_start": "20:50:54",
-            "time_end": "22:34:27",
-            "titles": [
-                "Die Peach game 🍑"
-            ],
-            "activities": [
-                {
-                    "title": "Princess Peach: Showtime!",
-                    "duration": 4820
-                },
-                {
-                    "title": "Mario Party Superstars",
-                    "duration": 3200
-                }
-            ],
-            "duration": 6213,
-            "twitch_id": "2108051273",
-            "youtube_id": "TX3cMBOHztI",
-            "id": "aa0a",
-            "type": "stream"
-        },
-        {
-            "date": "2024-04-03",
-            "time_start": "20:41:30",
-            "time_end": "22:37:58",
-            "titles": [
-                "We gaan de beste Youtubers worden!"
-            ],
-            "activities": [
-                {
-                    "title": "Content warning",
-                    "duration": 5540
-                }
-            ],
-            "duration": 6988,
-            "twitch_id": "2109910517",
-            "youtube_id": "BoUCVH-hIu4",
-            "id": "d167",
-            "type": "stream"
-        },
-        {
-            "date": "2024-04-08",
-            "time_start": "20:30:34",
-            "time_end": "22:00:08",
-            "titles": [
-                "Ik ben bang voor herten..."
-            ],
-            "activities": [
-                {
-                    "title": "Hoofobia",
-                    "duration": 4440
-                }
-            ],
-            "duration": 5374,
-            "twitch_id": "2114569314",
-            "youtube_id": "CDj5Z-REqLI",
-            "id": "4048",
-            "type": "stream"
-        },
+      {
+        "id": "09d3",
+        "type": "video",
+        "date": "2024-03-26",
+        "description": "de royal rumble van het jaar met buff amongus, big mac menu en meer"
+        "title": "Dieren verzorgen - Lekker spelen",
+        "duration": 300,
+        "youtube_id": "KcrNV3yjixw"
+      },
+      {
+        "date": "2024-03-27",
+        "time_start": "20:36:44",
+        "time_end": "22:49:26",
+        "titles": [
+          "Maak je eigen kat  😻"
+        ],
+        "activities": [
+          {
+            "title": "Dragons Dogma 2",
+            "duration": 7200
+          }
+        ],
+        "duration": 7962,
+        "twitch_id": "2103309044",
+        "description": "Er wordt veel te veel tijd besteed aan het maken van een personage, een dikke katman die roempie toempie loopt",
+        "youtube_id": "Uy-Uz7kvBcg",
+        "id": "00f0",
+        "type": "stream"
+      },
+      {
+        "date": "2024-04-01",
+        "time_start": "20:50:54",
+        "time_end": "22:34:27",
+        "titles": [
+          "Die Peach game 🍑"
+        ],
+        "activities": [
+          {
+            "title": "Princess Peach: Showtime!",
+            "duration": 4820
+          },
+          {
+            "title": "Mario Party Superstars",
+            "duration": 3200
+          }
+        ],
+        "duration": 6213,
+        "twitch_id": "2108051273",
+        "description": "Eerst een potje mario want peach is nog niet klaar met downloaden, daarna peach maar het is een kutspel volgens de mannen",
+        "youtube_id": "TX3cMBOHztI",
+        "id": "aa0a",
+        "type": "stream"
+      },
+      {
+        "date": "2024-04-03",
+        "time_start": "20:41:30",
+        "time_end": "22:37:58",
+        "titles": [
+          "We gaan de beste Youtubers worden!"
+        ],
+        "activities": [
+          {
+            "title": "Content warning",
+            "duration": 5540
+          }
+        ],
+        "duration": 6988,
+        "twitch_id": "2109910517",
+        "youtube_id": "BoUCVH-hIu4",
+        "description": "De mannen spelen een spel waar je beelden opneemt in een horror wereld maar alles wat je opneemt wordt een video erna, een van de beste streams in tijden",
+        "id": "d167",
+        "type": "stream"
+      },
+      {
+        "date": "2024-04-08",
+        "time_start": "20:30:34",
+        "time_end": "22:00:08",
+        "titles": [
+          "Ik ben bang voor herten..."
+        ],
+        "activities": [
+          {
+            "title": "Hoofobia",
+            "duration": 4440
+          }
+        ],
+        "duration": 5374,
+        "twitch_id": "2114569314",
+        "description": "Peter en timon spelen om de beurt als hert of jager en jagen op elkaar.",
+        "youtube_id": "CDj5Z-REqLI",
+        "id": "4048",
+        "type": "stream"
+      },
         {
             "date": "2024-04-10",
             "time_start": "20:40:02",
@@ -46379,7 +46384,8 @@
             ],
             "duration": 6419,
             "twitch_id": "2116322468",
-            "youtube_id": "JXKmsTyloAM",
+          "youtube_id": "JXKmsTyloAM",
+          "description": "De mannen spelen een ouderwets potje drawing from memory, timon is vrij zuur de hele stream want peter wint vaker, op het einde een potje tegen kijkers",
             "id": "6066",
             "type": "stream"
         },
