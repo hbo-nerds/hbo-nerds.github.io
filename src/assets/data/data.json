@@ -31535,33 +31535,38 @@
             "time_start": "18:49:00",
             "time_end": "20:35:00"
         },
-        {
-            "id": "9e2c",
-            "type": "stream",
-            "date": "2020-07-20",
-            "duration": 8160,
-            "youtube_id": "PtJXx2xn3rY",
-            "titles": [
-                "itsaa meee : videogamesss"
-            ],
-            "activities": [
-                {
-                    "title": "Super Mario Maker 2",
-                    "duration": 2160
-                },
-                {
-                    "title": "Paper Mario: The Origami King",
-                    "duration": 6000
-                }
-            ],
-            "twitchtracker_id": "99931554",
-            "twitch_id": "692579028",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:48:00",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "9e2c",
+        "type": "stream",
+        "date": "2020-07-20",
+        "duration": 8160,
+        "youtube_id": "PtJXx2xn3rY",
+        "titles": [
+          "itsaa meee : videogamesss"
+        ],
+        "activities": [
+          {
+            "title": "Super Mario Maker 2",
+            "duration": 2160
+          },
+          {
+            "title": "Paper Mario: The Origami King",
+            "duration": 6000
+          }
+        ],
+        "twitchtracker_id": "99931554",
+        "twitch_id": "692579028",
+        "tags": [
+          "main",
+          "Mario Maker 2",
+          "Roleplay",
+          "geinige stemmetjes",
+          "nintendo direct react"
+        ],
+        "time_start": "20:48:00",
+        "description": "Stream: Mario roleplay voorlezen met geinige stemmetjes.Ze kijken ook eerst de Nintendo Direct Mini van eerder die dag (viel tegen), Peter en Timon verdelen eerlijk hoeveel stemmen ieder moet doen, maar Timon eerst. Ze gaan voordat ze beginnen eerst heel lang bediscussiëren wie Mario en Luigi hun stemmen krijgen. Ze gaan het spel streamen, maar zodra het cringe wordt zijn ze van plan over te schakelen naar Mario Maker. Ze vragen in de loop van de stream meerdere polls aan om te controleren of mensen al cringen. Peter geeft Timon voortdurend tips over hoe hij zijn talent als stemacteur het best kan benutten. Nadat ze eindelijk wat verder komen in het spel mist Peter één stukkie tekst, waarop ze besluiten het spel opnieuw te starten zonder op te slaan. Peter geeft Timon een demonen stem. Bij de tutorial-battle raken ze het zat en schakelen ze over naar Mario Maker, waarin ze proberen rank A te halen in online multiplayer.",
+        "time_end": "23:05:00"
+      },
         {
             "id": "f983",
             "type": "video",
@@ -42410,29 +42415,31 @@
             "time_start": "20:30:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "3ad1",
-            "type": "stream",
-            "date": "2022-12-15",
-            "duration": 58320,
-            "youtube_id": "rplEYVHHCGE",
-            "titles": [
-                "💀 SIDEKICK TIMONS 16 UUR STRAFSTREAM 💀"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 58320
-                }
-            ],
-            "twitchtracker_id": "40180413800",
-            "twitch_id": "1681133900",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:22:00",
-            "time_end": "07:35:00"
-        },
+      {
+        "id": "3ad1",
+        "type": "stream",
+        "date": "2022-12-15",
+        "duration": 58320,
+        "youtube_id": "rplEYVHHCGE",
+        "titles": [
+          "💀 SIDEKICK TIMONS 16 UUR STRAFSTREAM 💀"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 58320
+          }
+        ],
+        "twitchtracker_id": "40180413800",
+        "twitch_id": "1681133900",
+        "tags": [
+          "casual",
+          "Strafstream"
+        ],
+        "time_start": "15:22:00",
+        "description": "In deze Stream vindt Timon uit waarom slapen een goed idee is; Heeft Peter een lekker nummertje (lekkerUSA) en gaat timon huilen",
+        "time_end": "07:35:00"
+      },
         {
             "id": "a860",
             "type": "stream",
@@ -46152,10 +46159,14 @@
                 "Zoek de verschillen...(in het donker)"
             ],
             "activities": [
-                {
-                    "title": "Project 13: Taxidermy Trails",
-                    "duration": 5880
-                }
+              {
+                "title": "Project 13: Taxidermy Trails",
+                "duration": 2900
+              },
+              {
+                "title": "A Difficult Game About Climbing",
+                "duration": 2900
+              }
             ],
             "duration": 6826,
             "twitch_id": "2088063284",
