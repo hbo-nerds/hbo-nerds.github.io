@@ -1281,6 +1281,25 @@
             "activity": "Aankondiging"
         },
         {
+            "id": "r1",
+            "type": "stream",
+            "date": "2014-04-11",
+            "duration": 5144,
+            "description": "De allereerste stream ooit, op YouTube zelfs. Ze spelen Super Mario World 3D B B B booonus wereld.",
+            "titles": [
+                "Super Mario World 3D"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario World 3D",
+                    "duration": 5144
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
             "id": "b389",
             "type": "video",
             "date": "2014-04-15",
@@ -1320,6 +1339,25 @@
             "activity": "Fifa: World Cup 2014 Brazil"
         },
         {
+            "id": "r2",
+            "type": "stream",
+            "date": "2014-05-04",
+            "duration": 4590,
+            "titles": [
+                "Peter faalt"
+            ],
+            "activities": [
+                {
+                    "title": "Dead Nation™ Apocalypse Edition",
+                    "duration": 4590
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "f331",
             "type": "video",
             "date": "2014-05-05",
@@ -1328,6 +1366,25 @@
             "youtube_id": "gKwjy2jaQoY",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "r3",
+            "type": "stream",
+            "date": "2014-05-05",
+            "duration": 0,
+            "titles": [
+                "Peter faalt"
+            ],
+            "activities": [
+                {
+                    "title": "Dead Nation™ Apocalypse Edition",
+                    "duration": 0
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "e74d",
@@ -1348,6 +1405,24 @@
             "youtube_id": "NzfHEcExYS0",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "r4",
+            "type": "stream",
+            "date": "2014-05-09",
+            "duration": 3526,
+            "titles": [
+                "Lekker Dead Nation uitspelen"
+            ],
+            "activities": [
+                {
+                    "title": "Dead Nation™ Apocalypse Edition",
+                    "duration": 3526
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "28cd",
@@ -1380,6 +1455,42 @@
             "activity": "Rust"
         },
         {
+            "id": "r5",
+            "type": "stream",
+            "date": "2014-05-16",
+            "duration": 7575,
+            "titles": [
+                "Peter speelt Battlefield 4"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 4",
+                    "duration": 7575
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "r6",
+            "type": "stream",
+            "date": "2014-05-18",
+            "duration": 5427,
+            "titles": [
+                "Peter speelt weer Battlefield 4"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 4",
+                    "duration": 5427
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "b0c7",
             "type": "video",
             "date": "2014-05-19",
@@ -1388,6 +1499,43 @@
             "youtube_id": "-ymJX3Zh1Co",
             "collection": 23,
             "activity": "Outlast DLC"
+        },
+        {
+            "id": "r7",
+            "type": "stream",
+            "date": "2014-05-19",
+            "duration": 5725,
+            "titles": [
+                "Lekker Battlefield 4 spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 4",
+                    "duration": 5725
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "r8",
+            "type": "stream",
+            "date": "2014-05-20",
+            "duration": 4199,
+            "titles": [
+                "Peter speelt NEW Super Luigi Brothers!"
+            ],
+            "activities": [
+                {
+                    "title": "NEW Super Luigi Brothers",
+                    "duration": 4199
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "235b",
@@ -1410,6 +1558,24 @@
             "activity": "Outlast DLC"
         },
         {
+            "id": "r9",
+            "type": "stream",
+            "date": "2014-05-23",
+            "duration": 6178,
+            "titles": [
+                "Peter speelt Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 6178
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "bae1",
             "type": "video",
             "date": "2014-05-26",
@@ -1420,6 +1586,24 @@
             "activity": "Outlast DLC"
         },
         {
+            "id": "r10",
+            "type": "stream",
+            "date": "2014-05-26",
+            "duration": 7880,
+            "titles": [
+                "Rust Op zoek naar Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 7880
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "f996",
             "type": "video",
             "date": "2014-05-28",
@@ -1428,6 +1612,46 @@
             "youtube_id": "VbcIA15c9A8",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra533412194",
+            "type": "stream",
+            "date": "2014-05-29",
+            "duration": 6230,
+            "titles": [
+                "Rust: Op zoek naar Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 3",
+                    "duration": 965
+                },
+                {
+                    "title": "Rust",
+                    "duration": 5265
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "r11",
+            "type": "stream",
+            "date": "2014-05-29",
+            "duration": 7880,
+            "titles": [
+                "Lekker spelen live Battlefield 3"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 3",
+                    "duration": 10016
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "f419",
@@ -1450,6 +1674,24 @@
             "activity": "The Stanley Parable"
         },
         {
+            "id": "ra534749817",
+            "type": "stream",
+            "date": "2014-06-02",
+            "duration": 5848,
+            "titles": [
+                "Mario Kart 8 Toernooi!"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 5848
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "1162",
             "type": "video",
             "date": "2014-06-04",
@@ -1458,6 +1700,42 @@
             "youtube_id": "yunUtZKmhFE",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "r12",
+            "type": "stream",
+            "date": "2014-06-04",
+            "duration": 5781,
+            "titles": [
+                "Mario Kart 8 Toernooi!"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 5781
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "r13",
+            "type": "stream",
+            "date": "2014-06-04",
+            "duration": 3089,
+            "titles": [
+                "New Super Mario Bros. U Deluxe"
+            ],
+            "activities": [
+                {
+                    "title": "New Super Mario Bros. U Deluxe",
+                    "duration": 3089
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "0c82",
@@ -1470,6 +1748,43 @@
             "activity": "The Stanley Parable"
         },
         {
+            "id": "ra536330573",
+            "type": "stream",
+            "date": "2014-06-07",
+            "duration": 4241,
+            "titles": [
+                "Mario Kart 8 Toernooi!"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 4241
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra536694971",
+            "type": "stream",
+            "date": "2014-06-08",
+            "duration": 14309,
+            "titles": [
+                "Peter speelt: Mario 64"
+            ],
+            "activities": [
+                {
+                    "title": "Mario  64",
+                    "duration": 14309
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "e13e",
             "type": "video",
             "date": "2014-06-09",
@@ -1480,6 +1795,25 @@
             "activity": "The Stanley Parable"
         },
         {
+            "id": "ra537032296",
+            "type": "stream",
+            "date": "2014-06-09",
+            "duration": 4214,
+            "titles": [
+                "Peter speelt: Battlefield Hardline BETA"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield™ Hardline Beta",
+                    "duration": 4214
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "e444",
             "type": "video",
             "date": "2014-06-09",
@@ -1487,6 +1821,44 @@
             "duration": 28,
             "youtube_id": "Nq4st3ypowE",
             "activity": "Aankondiging"
+        },
+        {
+            "id": "ra537260178",
+            "type": "stream",
+            "date": "2014-06-10",
+            "duration": 11421,
+            "titles": [
+                "Peter speelt weer: Mario 64"
+            ],
+            "activities": [
+                {
+                    "title": "Mario  64",
+                    "duration": 11421
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
+            "id": "ra537046229",
+            "type": "stream",
+            "date": "2014-06-10",
+            "duration": 1041,
+            "titles": [
+                "Peter speelt: Pixeljunk Shooter"
+            ],
+            "activities": [
+                {
+                    "title": "PixelJunk™ Shooter Ultimate",
+                    "duration": 1041
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "779f",
@@ -1506,6 +1878,25 @@
             "duration": 271,
             "youtube_id": "KSkMsh8M5gQ",
             "activity": "call of duty"
+        },
+        {
+            "id": "ra538810625",
+            "type": "stream",
+            "date": "2014-06-10",
+            "duration": 14265,
+            "titles": [
+                "Peter speelt: Mario 64 uit"
+            ],
+            "activities": [
+                {
+                    "title": "Mario  64",
+                    "duration": 14265
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "5984",
@@ -1528,6 +1919,66 @@
             "activity": "Rust"
         },
         {
+            "id": "ra540294747",
+            "type": "stream",
+            "date": "2014-06-20",
+            "duration": 7778,
+            "titles": [
+                "Lekker live: Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 1717
+                },
+                {
+                    "title": "Rust",
+                    "duration": 3556
+                },
+                {
+                    "title": "Rust",
+                    "duration": 2505
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra540325844",
+            "type": "stream",
+            "date": "2014-06-20",
+            "duration": 7778,
+            "titles": [
+                "Lekker live: Peggle (after party)"
+            ],
+            "activities": [
+                {
+                    "title": "Peggle",
+                    "duration": 472
+                },
+                {
+                    "title": "Peggle",
+                    "duration": 3555
+                },
+                {
+                    "title": "Peggle",
+                    "duration": 319
+                },
+                {
+                    "title": "Kud games",
+                    "duration": 2903
+                },
+                {
+                    "title": "Kud games",
+                    "duration": 292
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "15b4",
             "type": "video",
             "date": "2014-06-20",
@@ -1545,6 +1996,25 @@
             "youtube_id": "mxFf_A9S6ZU",
             "collection": 23,
             "activity": "Outlast DLC"
+        },
+        {
+            "id": "rqa541212674",
+            "type": "stream",
+            "date": "2014-06-23",
+            "duration": 3392,
+            "titles": [
+                "Peter speelt: Mario Kart 8 (Single Player)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 3392
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "6932",
@@ -1604,6 +2074,40 @@
             "activity": "World of Tanks"
         },
         {
+            "id": "rqa542361550",
+            "type": "stream",
+            "date": "2014-06-27",
+            "duration": 3863,
+            "titles": [
+                "Lekker spelen: Rust streampie"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 81
+                },
+                {
+                    "title": "Rust",
+                    "duration": 66
+                },
+                {
+                    "title": "Rust",
+                    "duration": 72
+                },
+                {
+                    "title": "Rust",
+                    "duration": 344
+                },
+                {
+                    "title": "Rust",
+                    "duration": 3300
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "4e8a",
             "type": "stream",
             "date": "2014-06-27",
@@ -1618,6 +2122,42 @@
                 }
             ],
             "twitch_id": "48630405",
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra542388366",
+            "type": "stream",
+            "date": "2014-06-27",
+            "duration": 3409,
+            "titles": [
+                "Lekker spelen: Potje Fifa"
+            ],
+            "activities": [
+                {
+                    "title": "Fifa 14",
+                    "duration": 3409
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra542405527",
+            "type": "stream",
+            "date": "2014-06-27",
+            "duration": 3409,
+            "titles": [
+                "Lekker spelen: World of Tanks"
+            ],
+            "activities": [
+                {
+                    "title": "World of Tanks",
+                    "duration": 3036
+                }
+            ],
             "tags": [
                 "casual"
             ]
@@ -1652,6 +2192,24 @@
             ]
         },
         {
+            "id": "rqa543267319",
+            "type": "stream",
+            "date": "2014-06-30",
+            "duration": 3655,
+            "titles": [
+                "Lekker spelen: Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 3655
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
             "id": "9d0e",
             "type": "video",
             "date": "2014-07-02",
@@ -1660,6 +2218,28 @@
             "youtube_id": "ssAVnle7g_g",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra544145971",
+            "type": "stream",
+            "date": "2014-07-03",
+            "duration": 3841,
+            "titles": [
+                "Lekker spelen: Potje Fifa"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 14",
+                    "duration": 22
+                },
+                {
+                    "title": "FIFA 14",
+                    "duration": 3819
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "f881",
@@ -1672,6 +2252,28 @@
             "activity": "Outlast DLC"
         },
         {
+            "id": "ra544483242",
+            "type": "stream",
+            "date": "2014-07-04",
+            "duration": 3841,
+            "titles": [
+                "Lekker live: Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 92
+                },
+                {
+                    "title": "Rust",
+                    "duration": 2476
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "145c",
             "type": "video",
             "date": "2014-07-07",
@@ -1682,6 +2284,46 @@
             "activity": "Outlast DLC"
         },
         {
+            "id": "ra545374069",
+            "type": "stream",
+            "date": "2014-07-07",
+            "duration": 2196,
+            "titles": [
+                "Lekker live: Rust (Volg de leider)"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 2196
+                },
+                {
+                    "title": "Rust",
+                    "duration": 2476
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra545395367",
+            "type": "stream",
+            "date": "2014-07-07",
+            "duration": 4275,
+            "titles": [
+                "Mario Karty Party 8"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 4275
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "ff34",
             "type": "video",
             "date": "2014-07-09",
@@ -1690,6 +2332,29 @@
             "youtube_id": "PwQIAzE1kP0",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra545993533",
+            "type": "stream",
+            "date": "2014-07-09",
+            "duration": 3396,
+            "titles": [
+                "We komen in de stemming!",
+                "Een beetje griezelen"
+            ],
+            "activities": [
+                {
+                    "title": "Fifa 14",
+                    "duration": 2404
+                },
+                {
+                    "title": "Left 4 Dead 2",
+                    "duration": 992
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "2daf",
@@ -1711,6 +2376,46 @@
             "activity": "Outlast DLC"
         },
         {
+            "id": "ra547517305",
+            "type": "stream",
+            "date": "2014-07-14",
+            "duration": 3543,
+            "titles": [
+                "Mario Karty Party 8"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 416
+                },
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 3127
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra547548243",
+            "type": "stream",
+            "date": "2014-07-14",
+            "duration": 4811,
+            "titles": [
+                "Onbekende spellen live"
+            ],
+            "activities": [
+                {
+                    "title": "Call of Duty: Black Ops II",
+                    "duration": 4811
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "c7bf",
             "type": "video",
             "date": "2014-07-16",
@@ -1719,6 +2424,47 @@
             "youtube_id": "ZXcThW9e5w0",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra548415121",
+            "type": "stream",
+            "date": "2014-07-17",
+            "duration": 3195,
+            "titles": [
+                "Super Smash: Brawl (Co-op)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 200
+                },
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 2995
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra548499975",
+            "type": "stream",
+            "date": "2014-07-17",
+            "duration": 3984,
+            "titles": [
+                "Peter speelt: Wario Land Shake It!"
+            ],
+            "activities": [
+                {
+                    "title": "Wario Land: Shake It!",
+                    "duration": 3984
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "035a",
@@ -1751,6 +2497,52 @@
             "activity": "Outlast DLC"
         },
         {
+            "id": "ra549820281",
+            "type": "stream",
+            "date": "2014-07-21",
+            "duration": 5515,
+            "titles": [
+                "Mario Party 8 - Peter vs Timon",
+                "Super Smash Brawl - Peter vs Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Party 8",
+                    "duration": 4257
+                },
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 1258
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra550158986",
+            "type": "stream",
+            "date": "2014-07-21",
+            "duration": 3211,
+            "titles": [
+                "Peter speelt: Wario Land Shake It!"
+            ],
+            "activities": [
+                {
+                    "title": "Wario Land: Shake It!",
+                    "duration": 171
+                },
+                {
+                    "title": "Wario Land: Shake It!",
+                    "duration": 3240
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "aad8",
             "type": "video",
             "date": "2014-07-23",
@@ -1769,6 +2561,65 @@
             "youtube_id": "Mows0zOymtQ",
             "collection": 29,
             "activity": "The Walking Dead 2"
+        },
+        {
+            "id": "ra551204960",
+            "type": "stream",
+            "date": "2014-07-25",
+            "duration": 8423,
+            "titles": [
+                "Peter speelt: Donkey Kong Country"
+            ],
+            "activities": [
+                {
+                    "title": "Donkey Kong Country",
+                    "duration": 259
+                },
+                {
+                    "title": "Donkey Kong Country",
+                    "duration": 8164
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
+            "id": "ra551849480",
+            "type": "stream",
+            "date": "2014-07-27",
+            "duration": 2674,
+            "titles": [
+                "Lekker live: Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 2674
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra551868240",
+            "type": "stream",
+            "date": "2014-07-27",
+            "duration": 2674,
+            "titles": [
+                "Super Smash Brawl - Peter vs Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 2674
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "d85d",
@@ -1799,6 +2650,66 @@
             "youtube_id": "YjdjsAWiEsI",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "rqa551868240",
+            "type": "stream",
+            "date": "2014-08-02",
+            "duration": 10086,
+            "titles": [
+                "Super Smash Brawl - Peter vs Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Mighty Morphin Power Rangers",
+                    "duration": 216
+                },
+                {
+                    "title": "Mighty Morphin Power Rangers",
+                    "duration": 2197
+                },
+                {
+                    "title": "Mighty Morphin Power Rangers",
+                    "duration": 1021
+                },
+                {
+                    "title": "Mighty Morphin Power Rangers",
+                    "duration": 2514
+                },
+                {
+                    "title": "Mighty Morphin Power Rangers",
+                    "duration": 3565
+                },
+                {
+                    "title": "Mighty Morphin Power Rangers",
+                    "duration": 573
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "rqa553933849",
+            "type": "stream",
+            "date": "2014-08-02",
+            "duration": 2674,
+            "titles": [
+                "Lekker Live:  Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 2014
+                },
+                {
+                    "title": "Rust",
+                    "duration": 2209
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "11c8",
@@ -1867,6 +2778,24 @@
             "activity": "Destiny"
         },
         {
+            "id": "ra554305710",
+            "type": "stream",
+            "date": "2014-08-04",
+            "duration": 60,
+            "titles": [
+                "NEGEER DIT BERICHT. DIT IS EEN TEST"
+            ],
+            "activities": [
+                {
+                    "title": "Niets",
+                    "duration": 60
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "9603",
             "type": "video",
             "date": "2014-08-06",
@@ -1885,6 +2814,42 @@
             "youtube_id": "DePYuk0LlGw",
             "collection": 29,
             "activity": "The Walking Dead 2"
+        },
+        {
+            "id": "ra556193535",
+            "type": "stream",
+            "date": "2014-08-09",
+            "duration": 3469,
+            "titles": [
+                "Lekker Live: Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 3469
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra556210928",
+            "type": "stream",
+            "date": "2014-08-09",
+            "duration": 1258,
+            "titles": [
+                "Super Smash Brawl - Peter vs Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 1258
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "ca82",
@@ -1923,6 +2888,30 @@
             "youtube_id": "O6O785wC-6k",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra556210928",
+            "type": "stream",
+            "date": "2014-08-15",
+            "duration": 10129,
+            "titles": [
+                "Peter speelt: Super Mario Galaxy",
+                "Peter speelt: Super Mario World"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Galaxy",
+                    "duration": 7775
+                },
+                {
+                    "title": "Super Mario World",
+                    "duration": 2354
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "81e0",
@@ -1964,6 +2953,24 @@
             "activity": "NES Remix 2"
         },
         {
+            "id": "ra561865876",
+            "type": "stream",
+            "date": "2014-08-25",
+            "duration": 4189,
+            "titles": [
+                "Lekker spelen live: Rust"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 4189
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "c7ea",
             "type": "video",
             "date": "2014-08-27",
@@ -1972,6 +2979,66 @@
             "youtube_id": "3CqVsdA4hEg",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra562413363",
+            "type": "stream",
+            "date": "2014-08-27",
+            "duration": 5207,
+            "titles": [
+                "Peter speelt: Dungeon Keeper"
+            ],
+            "activities": [
+                {
+                    "title": "Dungeon Keeper",
+                    "duration": 4292
+                },
+                {
+                    "title": "Kud games",
+                    "duration": 915
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra562845987",
+            "type": "stream",
+            "date": "2014-08-28",
+            "duration": 3827,
+            "description": "Deze test stream wordt TNotifier getest, hierdoor komt onderin het scherm te staan als iemand volgt/subscribed.",
+            "titles": [
+                "Gewoon even aan het testen"
+            ],
+            "activities": [
+                {
+                    "title": "Niks",
+                    "duration": 3827
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra562865195",
+            "type": "stream",
+            "date": "2014-08-28",
+            "duration": 10226,
+            "titles": [
+                "Peter speelt: Battlefield 3"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 3",
+                    "duration": 10226
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "7116",
@@ -1984,6 +3051,25 @@
             "activity": "The Walking Dead 2"
         },
         {
+            "id": "ra563784801",
+            "type": "stream",
+            "date": "2014-08-31",
+            "duration": 7528,
+            "titles": [
+                "Peter speelt: Battlefield 3 (ontspanningssessie)"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 3",
+                    "duration": 7528
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "0732",
             "type": "video",
             "date": "2014-09-01",
@@ -1992,6 +3078,29 @@
             "youtube_id": "eJn0xtB4xrg",
             "collection": 29,
             "activity": "The Walking Dead 2"
+        },
+        {
+            "id": "ra564196682",
+            "type": "stream",
+            "date": "2014-09-01",
+            "duration": 5456,
+            "titles": [
+                "Lekker spelen live: RUST",
+                "Rust: De Mierenhoop"
+            ],
+            "activities": [
+                {
+                    "title": "Niks",
+                    "duration": 887
+                },
+                {
+                    "title": "Rust",
+                    "duration": 4569
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "2590",
@@ -2004,6 +3113,24 @@
             "activity": "Rust"
         },
         {
+            "id": "ra565177384",
+            "type": "stream",
+            "date": "2014-09-04",
+            "duration": 8709,
+            "titles": [
+                "Timon speelt: TITANFALL"
+            ],
+            "activities": [
+                {
+                    "title": "Titanfall",
+                    "duration": 8709
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "5b83",
             "type": "video",
             "date": "2014-09-05",
@@ -2012,6 +3139,84 @@
             "youtube_id": "hLkcRVddPmA",
             "collection": 29,
             "activity": "The Walking Dead 2"
+        },
+        {
+            "id": "ra565439253",
+            "type": "stream",
+            "date": "2014-09-05",
+            "duration": 427,
+            "titles": [
+                "Peter speelt: TITANFALL (Xbox one)"
+            ],
+            "activities": [
+                {
+                    "title": "Titanfall",
+                    "duration": 427
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra565804023",
+            "type": "stream",
+            "date": "2014-09-06",
+            "duration": 3195,
+            "titles": [
+                "Peter speelt: TITANFALL (Xbox one)"
+            ],
+            "activities": [
+                {
+                    "title": "Titanfall",
+                    "duration": 3195
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra565846583",
+            "type": "stream",
+            "date": "2014-09-06",
+            "duration": 1906,
+            "titles": [
+                "Lekker spelen VS kijkers: Mario Kart 8"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 1906
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra565856290",
+            "type": "stream",
+            "date": "2014-09-06",
+            "duration": 1507,
+            "description": "Nèt nadat ze offline gingen gooide Patd geld naar z'n scherm en werd hij subscriber. Peter en Timon vonden dit niet kunnen en gingen toch nog even live.",
+            "titles": [
+                "Lekker spelen VS kijkers: Mario Kart 8",
+                "Peter vs Timon: SUPER SMASH BRAWL"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 1507
+                },
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 1369
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "89fa",
@@ -2024,6 +3229,29 @@
             "activity": "The Walking Dead 2"
         },
         {
+            "id": "ra566502827",
+            "type": "stream",
+            "date": "2014-09-08",
+            "duration": 5138,
+            "titles": [
+                "LEKKER SPELEN LIVE",
+                "LEKKER SPELEN LIVE: SUPER MARIO WORLD"
+            ],
+            "activities": [
+                {
+                    "title": "Pre-party",
+                    "duration": 1435
+                },
+                {
+                    "title": "Super Mario World",
+                    "duration": 3703
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "dc75",
             "type": "video",
             "date": "2014-09-10",
@@ -2032,6 +3260,24 @@
             "youtube_id": "3TaMo8-yqLQ",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra567240132",
+            "type": "stream",
+            "date": "2014-09-10",
+            "duration": 7968,
+            "titles": [
+                "FIFA 15 (demo): Peter vs Timon"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15 DEMO",
+                    "duration": 8416
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "7ecd",
@@ -2050,6 +3296,44 @@
             "twitch_id": "43309971",
             "tags": [
                 "casual"
+            ]
+        },
+        {
+            "id": "ra567524717",
+            "type": "stream",
+            "date": "2014-09-11",
+            "duration": 7968,
+            "titles": [
+                "Peter speelt: DESTINY (PS4)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 11697
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
+            "id": "ra567611392",
+            "type": "stream",
+            "date": "2014-09-11",
+            "duration": 6316,
+            "titles": [
+                "Peter speelt: DESTINY (PS4). Never gonna stoppa"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 6316
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
             ]
         },
         {
@@ -2079,6 +3363,25 @@
             "duration": 675,
             "youtube_id": "6FvYPnsEPFA",
             "activity": "The Sims 4"
+        },
+        {
+            "id": "ra568642789",
+            "type": "stream",
+            "date": "2014-09-14",
+            "duration": 13767,
+            "titles": [
+                "Peter speelt: DESTINY (PS4). Never gonna stoppa"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 13767
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "b6b3",
@@ -2120,6 +3423,44 @@
             "activity": "Rust"
         },
         {
+            "id": "ra569629917",
+            "type": "stream",
+            "date": "2014-09-17",
+            "duration": 4783,
+            "titles": [
+                "Peter speelt: Destiny (PS4)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 4783
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
+            "id": "ra569886822",
+            "type": "stream",
+            "date": "2014-09-18",
+            "duration": 10513,
+            "titles": [
+                "Peter speelt: Destiny (PS4)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 10513
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "85c3",
             "type": "video",
             "date": "2014-09-19",
@@ -2128,6 +3469,29 @@
             "youtube_id": "J45yXBb9R_E",
             "collection": 13,
             "activity": "The Forest"
+        },
+        {
+            "id": "ra570440167",
+            "type": "stream",
+            "date": "2014-09-20",
+            "duration": 6099,
+            "titles": [
+                "Peter speelt: Destiny (PS4)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 1782
+                },
+                {
+                    "title": "Destiny",
+                    "duration": 4317
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "ce77",
@@ -2159,6 +3523,25 @@
             ]
         },
         {
+            "id": "ra571498658",
+            "type": "stream",
+            "date": "2014-09-23",
+            "duration": 5495,
+            "titles": [
+                "Peter speelt: DESTINY (saai streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 5495
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "6380",
             "type": "video",
             "date": "2014-09-24",
@@ -2169,6 +3552,32 @@
             "activity": "Rust"
         },
         {
+            "id": "ra571983097",
+            "type": "stream",
+            "date": "2014-09-25",
+            "duration": 32644,
+            "titles": [
+                "FIFA 15 (Marathon) - Op naar de eerste divisie!"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15",
+                    "duration": 3577
+                },
+                {
+                    "title": "FIFA 15",
+                    "duration": 24267
+                },
+                {
+                    "title": "FIFA 15",
+                    "duration": 4800
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "a864",
             "type": "video",
             "date": "2014-09-26",
@@ -2177,6 +3586,44 @@
             "youtube_id": "1P78T5UY1UE",
             "collection": 13,
             "activity": "The Forest"
+        },
+        {
+            "id": "ra572346811",
+            "type": "stream",
+            "date": "2014-09-26",
+            "duration": 11007,
+            "titles": [
+                "Peter speelt: DESTINY (saai streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 11007
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
+            "id": "ra573050271",
+            "type": "stream",
+            "date": "2014-09-28",
+            "duration": 8791,
+            "titles": [
+                "Peter speelt: DESTINY (saai streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 8791
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "377b",
@@ -2207,6 +3654,24 @@
             ]
         },
         {
+            "id": "ra573326122",
+            "type": "stream",
+            "date": "2014-09-29",
+            "duration": 3934,
+            "titles": [
+                "AFTERPARTY: Fifa 15"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15",
+                    "duration": 3934
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "d793",
             "type": "video",
             "date": "2014-10-01",
@@ -2217,6 +3682,25 @@
             "activity": "Rust"
         },
         {
+            "id": "ra574156077",
+            "type": "stream",
+            "date": "2014-10-02",
+            "duration": 4745,
+            "titles": [
+                "Peter speelt: DESTINY (saai streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 4745
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "d01c",
             "type": "video",
             "date": "2014-10-03",
@@ -2224,6 +3708,73 @@
             "duration": 365,
             "youtube_id": "1bAMSKcJrdA",
             "activity": "Rollercoaster Tycoon"
+        },
+        {
+            "id": "ra574514126",
+            "type": "stream",
+            "date": "2014-10-03",
+            "duration": 66,
+            "titles": [
+                "BLOODBORNE (alpha testing) - LEKKER SPELEN LIVE",
+                "SUPER SMASH BROS.- LEKKER SPELEN LIVE",
+                "SUPER SMASH BROS.- PETER vs. TIMON"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 3287
+                },
+                {
+                    "title": "Hotline Miami",
+                    "duration": 3964
+                },
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 1505
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra574861511",
+            "type": "stream",
+            "date": "2014-10-04",
+            "duration": 12666,
+            "titles": [
+                "Peter speelt: DESTINY (saai streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 3491
+                },
+                {
+                    "title": "Destiny",
+                    "duration": 1524
+                },
+                {
+                    "title": "Destiny",
+                    "duration": 152
+                },
+                {
+                    "title": "Destiny",
+                    "duration": 2469
+                },
+                {
+                    "title": "Destiny",
+                    "duration": 4809
+                },
+                {
+                    "title": "Destiny",
+                    "duration": 221
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "a756",
@@ -2264,6 +3815,25 @@
             "activity": "The Forest"
         },
         {
+            "id": "ra576127326",
+            "type": "stream",
+            "date": "2014-10-08",
+            "duration": 2611,
+            "titles": [
+                "Peter speelt: FIFA 15 (seasons)"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15",
+                    "duration": 2611
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "d25d",
             "type": "video",
             "date": "2014-10-10",
@@ -2284,6 +3854,42 @@
             "activity": "The Forest"
         },
         {
+            "id": "ra577803807",
+            "type": "stream",
+            "date": "2014-10-13",
+            "duration": 2392,
+            "titles": [
+                "LEKKER SPELEN LIVE: ZOO TYCOON 2"
+            ],
+            "activities": [
+                {
+                    "title": "Zoo Tycoon 2",
+                    "duration": 2392
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra577817498",
+            "type": "stream",
+            "date": "2014-10-13",
+            "duration": 2934,
+            "titles": [
+                "LEKKER SPELEN LIVE: RUST"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 2934
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
             "id": "cb85",
             "type": "video",
             "date": "2014-10-15",
@@ -2291,6 +3897,24 @@
             "duration": 369,
             "youtube_id": "ZTj3zPhMPLA",
             "activity": "FIFA 15"
+        },
+        {
+            "id": "ra578429686",
+            "type": "stream",
+            "date": "2014-10-15",
+            "duration": 4761,
+            "titles": [
+                "Peter speelt: FIFA 15 - Op naar de 1e divisie! "
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15",
+                    "duration": 4761
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "3eb3",
@@ -2301,6 +3925,24 @@
             "youtube_id": "m3h4PLrFI6w",
             "collection": 13,
             "activity": "The Forest"
+        },
+        {
+            "id": "ra579095264",
+            "type": "stream",
+            "date": "2014-10-17",
+            "duration": 3938,
+            "titles": [
+                "LEKKER SPELEN: CHARIOT  [Subscriber streampie]"
+            ],
+            "activities": [
+                {
+                    "title": "Chariot",
+                    "duration": 3938
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "f519",
@@ -2357,6 +3999,24 @@
             "activity": "The Evil Within"
         },
         {
+            "id": "ra581366538",
+            "type": "stream",
+            "date": "2014-10-24",
+            "duration": 8949,
+            "titles": [
+                "Donkey Kong Country [SPEEDRUN SESSIE]"
+            ],
+            "activities": [
+                {
+                    "title": "Donkey Kong Country",
+                    "duration": 8949
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "f228",
             "type": "video",
             "date": "2014-10-27",
@@ -2365,6 +4025,24 @@
             "youtube_id": "L0-4ioq6mrQ",
             "collection": 44,
             "activity": "The Evil Within"
+        },
+        {
+            "id": "ra582554852",
+            "type": "stream",
+            "date": "2014-10-27",
+            "duration": 3146,
+            "titles": [
+                "LEKKER SPELEN LIVE: JAZZ JACKRABBIT 2"
+            ],
+            "activities": [
+                {
+                    "title": "Jazz Jackrabbit 2",
+                    "duration": 3146
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "ec17",
@@ -2384,6 +4062,25 @@
             "duration": 453,
             "youtube_id": "eg6FmfzMSEw",
             "activity": "Putt Putt: Redt de dierentuin"
+        },
+        {
+            "id": "ra584692699",
+            "type": "stream",
+            "date": "2014-11-02",
+            "duration": 3146,
+            "titles": [
+                "Peter speelt: Evolve (alpha)"
+            ],
+            "activities": [
+                {
+                    "title": "Evolve",
+                    "duration": 6001
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "0020",
@@ -2436,6 +4133,24 @@
             "activity": "The Evil Within"
         },
         {
+            "id": "ra586234119",
+            "type": "stream",
+            "date": "2014-11-07",
+            "duration": 1692,
+            "titles": [
+                "The Crew (BETA)"
+            ],
+            "activities": [
+                {
+                    "title": "The Crew™ Beta",
+                    "duration": 1692
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "c997",
             "type": "video",
             "date": "2014-11-10",
@@ -2444,6 +4159,43 @@
             "youtube_id": "uMRUZD7nw_0",
             "collection": 44,
             "activity": "The Evil Within"
+        },
+        {
+            "id": "ra587378606",
+            "type": "stream",
+            "date": "2014-11-10",
+            "duration": 2630,
+            "titles": [
+                "LEKKER SPELEN LIVE - Super Smash Bros. Brawl! "
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. Brawl",
+                    "duration": 2630
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra587391026",
+            "type": "stream",
+            "date": "2014-11-10",
+            "duration": 1734,
+            "titles": [
+                "Peter speelt: The Evil Within"
+            ],
+            "activities": [
+                {
+                    "title": "The Evil Within",
+                    "duration": 1734
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "509a",
@@ -2475,6 +4227,26 @@
             "activity": "Daylight"
         },
         {
+            "id": "ra589904088",
+            "type": "stream",
+            "date": "2014-11-17",
+            "duration": 7601,
+            "titles": [
+                "LEKKER SPELEN LIVE: MARIO KART 8 (DLC PACK 1)",
+                "Mario Kart 8: Cheap Cheap Challenge"
+            ],
+            "twitch_id": "44771268",
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 7601
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "c81a",
             "type": "video",
             "date": "2014-11-19",
@@ -2482,6 +4254,49 @@
             "duration": 309,
             "youtube_id": "1hTmf7jrZwY",
             "activity": "Just Dance 2015"
+        },
+        {
+            "id": "ra590594885",
+            "type": "stream",
+            "date": "2014-11-19",
+            "duration": 9880,
+            "titles": [
+                "Peter speelt: The Binding of Isaac - Rebirth",
+                "Peter speelt: The Evil Within (perma-death)"
+            ],
+            "activities": [
+                {
+                    "title": "The Binding of Isaac: Rebirth",
+                    "duration": 6975
+                },
+                {
+                    "title": "The Evil Within",
+                    "duration": 2905
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
+            "id": "ra590948075",
+            "type": "stream",
+            "date": "2014-11-20",
+            "duration": 1770,
+            "titles": [
+                "Peter speelt_ The Evil Within (PERMA-DEATH sessie)"
+            ],
+            "activities": [
+                {
+                    "title": "The Evil Within",
+                    "duration": 1770
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "6707",
@@ -2502,6 +4317,62 @@
             "youtube_id": "6iCpY6b6y34",
             "collection": 47,
             "activity": "Daylight"
+        },
+        {
+            "id": "ra592359026",
+            "type": "stream",
+            "date": "2014-11-24",
+            "duration": 3613,
+            "titles": [
+                "LEKKER SPELEN LIVE: TARZAN",
+                "TARZAN: Een Walt Disney Classic!"
+            ],
+            "twitch_id": "44771340",
+            "activities": [
+                {
+                    "title": "Disney's Tarzan",
+                    "duration": 3613
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "r592380799",
+            "type": "stream",
+            "date": "2014-11-24",
+            "duration": 1233,
+            "titles": [
+                "LEKKER SPELEN LIVE (afterparté) - The Evil Within (PERMADEATH SESSIE)"
+            ],
+            "activities": [
+                {
+                    "title": "The Evil Within",
+                    "duration": 1233
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra592416392",
+            "type": "stream",
+            "date": "2014-11-24",
+            "duration": 5150,
+            "titles": [
+                "Peter speelt: The Binding of Isaac Rebirth"
+            ],
+            "activities": [
+                {
+                    "title": "The Binding of Isaac: Rebirth",
+                    "duration": 5150
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "942c",
@@ -2536,6 +4407,24 @@
             "activity": "Mario Kart 8"
         },
         {
+            "id": "ra593621760",
+            "type": "stream",
+            "date": "2014-11-28",
+            "duration": 21513,
+            "titles": [
+                "LEKKER SPELEN: SUPER SMASH BROS. for Wii U (MARATHON!)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 21513
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "0ea2",
             "type": "video",
             "date": "2014-12-01",
@@ -2545,13 +4434,59 @@
             "activity": "The Stomping Lands"
         },
         {
+            "id": "ra594682382",
+            "type": "stream",
+            "date": "2014-12-01",
+            "duration": 3450,
+            "titles": [
+                "LEKKER SPELEN vs KIJKERS: SUPER SMASH BROS. for Wii U"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 3450
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
             "id": "df2f",
             "type": "video",
             "date": "2014-12-03",
             "title": "ZEER INTENS - Super Smash Bros. for Wii U",
             "duration": 417,
             "youtube_id": "dsdpC9o_Rog",
-            "activity": "Super Smash Bros. 4"
+            "activity": "Super Smash Bros. for Wii U"
+        },
+        {
+            "id": "ra595316543",
+            "type": "stream",
+            "date": "2014-12-03",
+            "duration": 11750,
+            "titles": [
+                "Lekker spelen: WWE 2K15 (casual streampie)",
+                "Lekker spelen: The Crew (casual streampie)",
+                "Lekker spelen: The Crew (ROAD TO VEGAS BABY)"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K15",
+                    "duration": 1710
+                },
+                {
+                    "title": "The Crew™",
+                    "duration": 401
+                },
+                {
+                    "title": "The Crew™",
+                    "duration": 9639
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "a608",
@@ -2561,6 +4496,24 @@
             "duration": 481,
             "youtube_id": "mKInMIpYaEc",
             "activity": "Earthworm Jim"
+        },
+        {
+            "id": "ra595316543",
+            "type": "stream",
+            "date": "2014-12-05",
+            "duration": 5066,
+            "titles": [
+                "Lekker spelen: SUPER SMASH 4ever (vs kijkers baby) (20+ streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 5066
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "90be",
@@ -2574,7 +4527,7 @@
         {
             "id": "6fce",
             "type": "stream",
-            "date": "2014-12-09",
+            "date": "2014-12-08",
             "duration": 5580,
             "collection": 45,
             "titles": [
@@ -2588,45 +4541,7 @@
             ],
             "twitch_id": "44771656",
             "tags": [
-                "casual"
-            ]
-        },
-        {
-            "id": "a7d4",
-            "type": "stream",
-            "date": "2014-12-09",
-            "duration": 3960,
-            "titles": [
-                "Mario Kart 8: Cheap Cheap Challenge"
-            ],
-            "activities": [
-                {
-                    "title": "Mario Kart 8",
-                    "duration": 3960
-                }
-            ],
-            "twitch_id": "44771268",
-            "tags": [
-                "casual"
-            ]
-        },
-        {
-            "id": "49ec",
-            "type": "stream",
-            "date": "2014-12-09",
-            "duration": 3600,
-            "titles": [
-                "TARZAN: Een Walt Disney Classic!"
-            ],
-            "activities": [
-                {
-                    "title": "Disney's Tarzan",
-                    "duration": 3600
-                }
-            ],
-            "twitch_id": "44771340",
-            "tags": [
-                "casual"
+                "main"
             ]
         },
         {
@@ -2649,6 +4564,29 @@
             "activity": "CO-The Forest"
         },
         {
+            "id": "ra598492255",
+            "type": "stream",
+            "date": "2014-12-12",
+            "duration": 9673,
+            "titles": [
+                "Peter speelt: WWE 2K15 (mompelsessie)",
+                "Peter speelt: Diddy's Kong Quest!"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K15",
+                    "duration": 1119
+                },
+                {
+                    "title": "Donkey Kong Country 2: Diddy's Kong Quest",
+                    "duration": 8554
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "421c",
             "type": "video",
             "date": "2014-12-15",
@@ -2657,6 +4595,24 @@
             "youtube_id": "xjBpRtg3enc",
             "collection": 13,
             "activity": "The Forest"
+        },
+        {
+            "id": "ra599608430",
+            "type": "stream",
+            "date": "2014-12-15",
+            "duration": 5795,
+            "titles": [
+                "LEKKER SPELEN LIVE: Diddy's Kong Quest"
+            ],
+            "activities": [
+                {
+                    "title": "Donkey Kong Country 2: Diddy's Kong Quest",
+                    "duration": 5795
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "36cf",
@@ -2678,6 +4634,43 @@
             "activity": "Aankondiging"
         },
         {
+            "id": "ra601385321",
+            "type": "stream",
+            "date": "2014-12-20",
+            "duration": 8890,
+            "titles": [
+                "LEKKER SPELEN LIVE: Diddy's Kong Quest"
+            ],
+            "activities": [
+                {
+                    "title": "Donkey Kong Country 2: Diddy's Kong Quest",
+                    "duration": 8890
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra601719540",
+            "type": "stream",
+            "date": "2014-12-21",
+            "duration": 2296,
+            "titles": [
+                "Peter speelt: TITANFALL (saai streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Titanfall",
+                    "duration": 2296
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "2201",
             "type": "video",
             "date": "2014-12-22",
@@ -2687,6 +4680,42 @@
             "activity": "Outlast: Whistleblower"
         },
         {
+            "id": "ra602128702",
+            "type": "stream",
+            "date": "2014-12-22",
+            "duration": 3731,
+            "titles": [
+                "LEKKER SPELEN LIVE - Rust "
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 3731
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra602420965",
+            "type": "stream",
+            "date": "2014-12-23",
+            "duration": 5004,
+            "titles": [
+                "LEKKER SPELEN:  Hearthstone "
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 5004
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "2241",
             "type": "video",
             "date": "2014-12-24",
@@ -2694,6 +4723,24 @@
             "duration": 1056,
             "youtube_id": "_jPcXH6Toiw",
             "activity": "Super Mario: The Lost levels"
+        },
+        {
+            "id": "ra603156875",
+            "type": "stream",
+            "date": "2014-12-25",
+            "duration": 3462,
+            "titles": [
+                "HEARTHSTONE  (lekker Kerstuurtje)"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 3462
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "f067",
@@ -2706,6 +4753,24 @@
             "activity": "Rust"
         },
         {
+            "id": "ra603349819",
+            "type": "stream",
+            "date": "2014-12-26",
+            "duration": 2905,
+            "titles": [
+                "HEARTHSTONE: Verslaafd tijdens Kerstmis"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 2905
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "e1cb",
             "type": "video",
             "date": "2014-12-28",
@@ -2716,6 +4781,25 @@
             "activity": "Rust"
         },
         {
+            "id": "ra604130282",
+            "type": "stream",
+            "date": "2014-12-28",
+            "duration": 3420,
+            "titles": [
+                "Peter speelt: HEARTHSTONE"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 3420
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
+        },
+        {
             "id": "a3ed",
             "type": "video",
             "date": "2014-12-29",
@@ -2724,6 +4808,24 @@
             "youtube_id": "mbR-egMmFm0",
             "collection": 13,
             "activity": "The Forest"
+        },
+        {
+            "id": "ra604618045",
+            "type": "stream",
+            "date": "2014-12-29",
+            "duration": 3422,
+            "titles": [
+                "LEKKER SPELEN LIVE: DayZ"
+            ],
+            "activities": [
+                {
+                    "title": "DayZ",
+                    "duration": 3422
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "8387",
@@ -2741,6 +4843,24 @@
             "duration": 1056,
             "youtube_id": "NoJv88uTxK0",
             "activity": "Amnesia: a Machine for Pigs"
+        },
+        {
+            "id": "ra606151061",
+            "type": "stream",
+            "date": "2015-01-02",
+            "duration": 5133,
+            "titles": [
+                "Peter speelt: HEARTHSTONE"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 5133
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "b068",
@@ -2790,6 +4910,29 @@
             "activity": "Far Cry 4"
         },
         {
+            "id": "ra608654741",
+            "type": "stream",
+            "date": "2015-01-08",
+            "duration": 6842,
+            "titles": [
+                "LEKKER SPELEN LIVE: Hearthstone",
+                "LEKKER SPELEN LIVE: Diddy's Kong Quest"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 3214
+                },
+                {
+                    "title": "Donkey Kong Country 2: Diddy's Kong Quest",
+                    "duration": 3628
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "8c07",
             "type": "video",
             "date": "2015-01-09",
@@ -2829,6 +4972,24 @@
             ]
         },
         {
+            "id": "ra610659721",
+            "type": "stream",
+            "date": "2015-01-13",
+            "duration": 4391,
+            "titles": [
+                "Dwazen domineren op HEARTHSTONE"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 4391
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "16be",
             "type": "video",
             "date": "2015-01-14",
@@ -2849,6 +5010,24 @@
             "activity": "DayZ"
         },
         {
+            "id": "ra612859656",
+            "type": "stream",
+            "date": "2015-01-18",
+            "duration": 5132,
+            "titles": [
+                "HEARTHSTONE ongeslagen sessie"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 5132
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "aab6",
             "type": "video",
             "date": "2015-01-19",
@@ -2865,7 +5044,8 @@
             "duration": 4800,
             "collection": 45,
             "titles": [
-                "Amnesia - Nieuwe co-host (Deel 3)"
+                "Amnesia - Nieuwe co-host (Deel 3)",
+                "LEKKER SPELEN LIVE: Amnesia (spartel sessie)"
             ],
             "activities": [
                 {
@@ -2879,6 +5059,24 @@
             ]
         },
         {
+            "id": "ra613777360",
+            "type": "stream",
+            "date": "2015-01-20",
+            "duration": 3420,
+            "titles": [
+                "LittleBigPlanet 3!!  DANSSHOW!!"
+            ],
+            "activities": [
+                {
+                    "title": "LittleBigPlanet 3",
+                    "duration": 3420
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "6336",
             "type": "video",
             "date": "2015-01-21",
@@ -2887,6 +5085,24 @@
             "youtube_id": "ZK-YT5DmA10",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra614117834",
+            "type": "stream",
+            "date": "2015-01-21",
+            "duration": 1252,
+            "titles": [
+                "Assassin's Creed: Unity (Co-op vrijspelen)"
+            ],
+            "activities": [
+                {
+                    "title": "Assassin's Creed: Unity",
+                    "duration": 1252
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "5c04",
@@ -2921,7 +5137,8 @@
             "date": "2015-01-26",
             "duration": 3180,
             "titles": [
-                "Captain Toad: Treasure Tracker"
+                "Captain Toad: Treasure Tracker",
+                "LEKKER SPELEN LIVE - Captain Toad: Treasure Tracker"
             ],
             "activities": [
                 {
@@ -2935,6 +5152,24 @@
             ]
         },
         {
+            "id": "ra616752299",
+            "type": "stream",
+            "date": "2015-01-27",
+            "duration": 3420,
+            "titles": [
+                "Assassin's Creed: Unity - Ik moet co-op vrijspelen voor een Lekker spelen video."
+            ],
+            "activities": [
+                {
+                    "title": "Assassin's Creed: Unity",
+                    "duration": 3420
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "32e4",
             "type": "video",
             "date": "2015-01-28",
@@ -2942,6 +5177,42 @@
             "duration": 594,
             "youtube_id": "YJ-dUPm-t0g",
             "activity": "Rust"
+        },
+        {
+            "id": "ra617223885",
+            "type": "stream",
+            "date": "2015-01-28",
+            "duration": 2315,
+            "titles": [
+                "HEARTHSTONE pro's aan het werk (clean sweep sessie)"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 2315
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra617652087",
+            "type": "stream",
+            "date": "2015-01-29",
+            "duration": 1890,
+            "titles": [
+                "[RUST] Streamen met Timen"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 1890
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "b136",
@@ -2962,6 +5233,28 @@
             "youtube_id": "PxdlpaUa7ts",
             "collection": 31,
             "activity": "Stranded Deep"
+        },
+        {
+            "id": "ra619554929",
+            "type": "stream",
+            "date": "2015-02-02",
+            "duration": 5726,
+            "titles": [
+                "LEKKER SPELEN LIVE: Redcat Spookkasteel"
+            ],
+            "activities": [
+                {
+                    "title": "Redcat: Spookkasteel",
+                    "duration": 1828
+                },
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 3898
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "ab31",
@@ -2995,7 +5288,7 @@
         {
             "id": "e542",
             "type": "stream",
-            "date": "2015-02-10",
+            "date": "2015-02-09",
             "duration": 3360,
             "titles": [
                 "MINECRAFT - 100.000 abonnees!"
@@ -3008,7 +5301,7 @@
             ],
             "twitch_id": "41562830",
             "tags": [
-                "casual"
+                "main"
             ]
         },
         {
@@ -3020,6 +5313,24 @@
             "youtube_id": "NzIiviY1Rz0",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra623779931",
+            "type": "stream",
+            "date": "2015-02-12",
+            "duration": 3608,
+            "titles": [
+                "Peter je bent een stinkjoch - GROW HOME!"
+            ],
+            "activities": [
+                {
+                    "title": "Grow Home",
+                    "duration": 3608
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "5df1",
@@ -3087,6 +5398,24 @@
             "activity": "Assassin's Creed Unity"
         },
         {
+            "id": "ra628401520",
+            "type": "stream",
+            "date": "2015-02-22",
+            "duration": 6579,
+            "titles": [
+                "Super leuk streampie - The Crew"
+            ],
+            "activities": [
+                {
+                    "title": "The Crew",
+                    "duration": 6579
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "79d8",
             "type": "video",
             "date": "2015-02-23",
@@ -3095,6 +5424,24 @@
             "youtube_id": "toJgZo3mbeg",
             "collection": 21,
             "activity": "Pokémon"
+        },
+        {
+            "id": "ra628815120",
+            "type": "stream",
+            "date": "2015-02-23",
+            "duration": 5015,
+            "titles": [
+                "LEKKER SPELEN LIVE: Age of Empires II HD"
+            ],
+            "activities": [
+                {
+                    "title": "Age of Empires II: HD Edition",
+                    "duration": 5015
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "ed9b",
@@ -3123,6 +5470,24 @@
             "youtube_id": "z1gTE_KcRMU",
             "collection": 21,
             "activity": "Pokémon"
+        },
+        {
+            "id": "ra631828632",
+            "type": "stream",
+            "date": "2015-02-23",
+            "duration": 3002,
+            "titles": [
+                "LEKKER SPELEN LIVE: Spy Fox 2"
+            ],
+            "activities": [
+                {
+                    "title": "Spy Fox 2: Some Assembly Required",
+                    "duration": 3002
+                }
+            ],
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "1821",
@@ -3203,6 +5568,29 @@
             "activity": "Pokémon"
         },
         {
+            "id": "ra637704305",
+            "type": "stream",
+            "date": "2015-03-16",
+            "duration": 3634,
+            "titles": [
+                "LEKKER SPELEN LIVE: Gevogelte versieren! (18+ streampie)",
+                "LEKKER SPELEN LIVE: Pokémon (red)"
+            ],
+            "activities": [
+                {
+                    "title": "Hatoful Boyfriend",
+                    "duration": 1627
+                },
+                {
+                    "title": "Pokémon Red/Blue",
+                    "duration": 2007
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
             "id": "220d",
             "type": "video",
             "date": "2015-03-18",
@@ -3223,6 +5611,24 @@
             "activity": "Far Cry 4 DLC"
         },
         {
+            "id": "ra639342300",
+            "type": "stream",
+            "date": "2015-03-20",
+            "duration": 5130,
+            "titles": [
+                "Peter speelt: Battlefield Hardline (casual streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield™ Hardline",
+                    "duration": 5130
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "c913",
             "type": "video",
             "date": "2015-03-23",
@@ -3231,6 +5637,26 @@
             "youtube_id": "v3-kMcvWzg8",
             "collection": 21,
             "activity": "Pokémon"
+        },
+        {
+            "id": "8c42",
+            "type": "stream",
+            "date": "2015-03-24",
+            "duration": 4140,
+            "titles": [
+                "LUCIUS: chill",
+                "LEKKER SPELEN LIVE:  Lucius (18+ streampie) "
+            ],
+            "activities": [
+                {
+                    "title": "Lucius",
+                    "duration": 4140
+                }
+            ],
+            "twitch_id": "44505422",
+            "tags": [
+                "main"
+            ]
         },
         {
             "id": "7bd9",
@@ -3263,28 +5689,9 @@
             "activity": "Pokémon"
         },
         {
-            "id": "8c42",
-            "type": "stream",
-            "date": "2015-03-31",
-            "duration": 4140,
-            "titles": [
-                "LUCIUS: chill"
-            ],
-            "activities": [
-                {
-                    "title": "Lucius",
-                    "duration": 4140
-                }
-            ],
-            "twitch_id": "44505422",
-            "tags": [
-                "casual"
-            ]
-        },
-        {
             "id": "5632",
             "type": "stream",
-            "date": "2015-03-31",
+            "date": "2015-03-30",
             "duration": 1320,
             "titles": [
                 "MARIO PARTY 10: Deel 1"
@@ -3303,7 +5710,7 @@
         {
             "id": "7b75",
             "type": "stream",
-            "date": "2015-03-31",
+            "date": "2015-03-30",
             "duration": 780,
             "titles": [
                 "MARIO PARTY 10: Deel 2"
@@ -3316,7 +5723,44 @@
             ],
             "twitch_id": "44506142",
             "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra643657223",
+            "type": "stream",
+            "date": "2015-03-30",
+            "duration": 5630,
+            "titles": [
+                "Afterparty:  Battlefield Hardline"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield™ Hardline",
+                    "duration": 5630
+                }
+            ],
+            "tags": [
                 "casual"
+            ]
+        },
+        {
+            "id": "ra644126767",
+            "type": "stream",
+            "date": "2015-03-31",
+            "duration": 5459,
+            "titles": [
+                "Peter speelt: BLOODBORNE (sterfsessie) #TOADTIME"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne™",
+                    "duration": 5459
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
             ]
         },
         {
@@ -3327,6 +5771,43 @@
             "duration": 93,
             "youtube_id": "EgjrKl1fGig",
             "activity": "Just Chatting"
+        },
+        {
+            "id": "ra644439025",
+            "type": "stream",
+            "date": "2015-04-01",
+            "duration": 5131,
+            "titles": [
+                "Lekker live: MARIO PARTY 10 (geestig streampie 27+)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Party 10",
+                    "duration": 5131
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra644531716",
+            "type": "stream",
+            "date": "2015-04-01",
+            "duration": 5130,
+            "titles": [
+                "Peter speelt: BLOODBORNE (casual sterfsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne™",
+                    "duration": 5130
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "ba69",
@@ -3368,13 +5849,31 @@
             ],
             "activities": [
                 {
-                    "title": "H1Z1",
+                    "title": "Z1: Battle Royale",
                     "duration": 2880
                 }
             ],
             "twitch_id": "40739492",
             "tags": [
                 "main"
+            ]
+        },
+        {
+            "id": "ra647103989",
+            "type": "stream",
+            "date": "2015-04-07",
+            "duration": 3694,
+            "titles": [
+                "Peter speelt:  H1Z1 (casual streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 3694
+                }
+            ],
+            "tags": [
+                "casual"
             ]
         },
         {
@@ -3386,6 +5885,60 @@
             "youtube_id": "WhWG22qoXIA",
             "collection": 3,
             "activity": "Rust"
+        },
+        {
+            "id": "ra647482388",
+            "type": "stream",
+            "date": "2015-04-08",
+            "duration": 3552,
+            "titles": [
+                "Peter & Timon, live en lauw:  H1Z1 (casual streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 3552
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra647892903",
+            "type": "stream",
+            "date": "2015-04-09",
+            "duration": 4783,
+            "titles": [
+                "Peter & Timon, live en los: Pokémon (Red)"
+            ],
+            "activities": [
+                {
+                    "title": "Pokémon Red/Blue",
+                    "duration": 4783
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra647926369",
+            "type": "stream",
+            "date": "2015-04-09",
+            "duration": 4479,
+            "titles": [
+                "Peter & Timon, live en los: H1Z1 (Teamen met Timen)"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 4479
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "e1b7",
@@ -3408,6 +5961,60 @@
             "activity": "Pokémon"
         },
         {
+            "id": "ra649584224",
+            "type": "stream",
+            "date": "2015-04-13",
+            "duration": 4137,
+            "titles": [
+                "LEKKER SPELEN LIVE: Captain Toad - Treasure Tracker"
+            ],
+            "activities": [
+                {
+                    "title": "Captain Toad: Treasure Tracker",
+                    "duration": 4137
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra649612463",
+            "type": "stream",
+            "date": "2015-04-13",
+            "duration": 7461,
+            "titles": [
+                "H1ZI - Teamen met Timen (Afterparty)"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 7461
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra649915031",
+            "type": "stream",
+            "date": "2015-04-14",
+            "duration": 7461,
+            "titles": [
+                "Peter & Timon, live en laf:  We gaan voor die TOP 10 plek!"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 7461
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "50cc",
             "type": "video",
             "date": "2015-04-15",
@@ -3418,6 +6025,78 @@
             "activity": "Far Cry 4 DLC"
         },
         {
+            "id": "ra650316361",
+            "type": "stream",
+            "date": "2015-04-15",
+            "duration": 7461,
+            "titles": [
+                "Lekker live: MORTAL KOMBAT X"
+            ],
+            "activities": [
+                {
+                    "title": "Mortal Kombat X",
+                    "duration": 2584
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra650316361",
+            "type": "stream",
+            "date": "2015-04-15",
+            "duration": 8208,
+            "titles": [
+                "Peter & Timon, live en listig: We gaan voor die TOP 10 plek!"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 8208
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra650635025",
+            "type": "stream",
+            "date": "2015-04-16",
+            "duration": 2390,
+            "titles": [
+                "Live om half 5 - TEST YOUR MIGHT (Mortal Kombat X)"
+            ],
+            "activities": [
+                {
+                    "title": "Mortal Kombat X",
+                    "duration": 2390
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra650694156",
+            "type": "stream",
+            "date": "2015-04-16",
+            "duration": 4927,
+            "titles": [
+                "Peter & Timon, live en lomp: RUST (struin sexy 18+)"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 4927
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "0c0a",
             "type": "video",
             "date": "2015-04-17",
@@ -3425,6 +6104,24 @@
             "duration": 418,
             "youtube_id": "NyBzLROMw5k",
             "activity": "Battlefield Hardline"
+        },
+        {
+            "id": "ra650922270",
+            "type": "stream",
+            "date": "2015-04-17",
+            "duration": 1588,
+            "titles": [
+                "Live om Half 5 - Pieter voor de TOP 10!"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 1588
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "3893",
@@ -3437,6 +6134,60 @@
             "activity": "Pokémon"
         },
         {
+            "id": "ra651911859",
+            "type": "stream",
+            "date": "2015-04-20",
+            "duration": 3919,
+            "titles": [
+                "Lekker spelen live - We gaan voor die TOP 10"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 3919
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
+            "id": "ra651930079",
+            "type": "stream",
+            "date": "2015-04-20",
+            "duration": 2614,
+            "titles": [
+                "Lekker spelen live - RUST (afterparty)"
+            ],
+            "activities": [
+                {
+                    "title": "Rust",
+                    "duration": 2614
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra652147169",
+            "type": "stream",
+            "date": "2015-04-21",
+            "duration": 2614,
+            "titles": [
+                "Live om half vijf - We gaan voor die TOP 10 "
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 2730
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "5126",
             "type": "video",
             "date": "2015-04-22",
@@ -3447,6 +6198,60 @@
             "activity": "Far Cry 4 DLC"
         },
         {
+            "id": "ra652475416",
+            "type": "stream",
+            "date": "2015-04-22",
+            "duration": 11468,
+            "titles": [
+                "Peter & Timen, live 4 life - We gaan voor die TOP 10 "
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 11468
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra652712086",
+            "type": "stream",
+            "date": "2015-04-23",
+            "duration": 3343,
+            "titles": [
+                "Nieuwe MARIO KART 8 DLC - Lekker spelen tegen kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 3343
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra652806951",
+            "type": "stream",
+            "date": "2015-04-23",
+            "duration": 3102,
+            "titles": [
+                "H1Z1, chille sessie voor chille boyz en girlz"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 3102
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
             "id": "f8a4",
             "type": "video",
             "date": "2015-04-24",
@@ -3454,7 +6259,49 @@
             "duration": 1659,
             "youtube_id": "-zQDb_2_Nnk",
             "collection": 65,
-            "activity": "H1Z1"
+            "activity": "Z1: Battle Royale"
+        },
+        {
+            "id": "ra652997408",
+            "type": "stream",
+            "date": "2015-04-24",
+            "duration": 5132,
+            "titles": [
+                "Potje voor de yolo"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 5132
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra653742077",
+            "type": "stream",
+            "date": "2015-04-26",
+            "duration": 9302,
+            "titles": [
+                "BLOODBORNE - Helemaal opnieuw. Hel op aarde.",
+                "H1Z1 - Eenzaam tijdens Koningsnacht "
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne™",
+                    "duration": 5301
+                },
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 4001
+                }
+            ],
+            "tags": [
+                "casual",
+                "solo"
+            ]
         },
         {
             "id": "5730",
@@ -3467,6 +6314,24 @@
             "activity": "Pokémon"
         },
         {
+            "id": "ra654301154",
+            "type": "stream",
+            "date": "2015-04-28",
+            "duration": 5018,
+            "titles": [
+                "LEKKER SPELEN LIVE:  H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 5018
+                }
+            ],
+            "tags": [
+                "main"
+            ]
+        },
+        {
             "id": "657c",
             "type": "video",
             "date": "2015-04-29",
@@ -3474,6 +6339,42 @@
             "duration": 267,
             "youtube_id": "fA5KU_oImAk",
             "activity": "Lethal League"
+        },
+        {
+            "id": "ra654546935",
+            "type": "stream",
+            "date": "2015-04-29",
+            "duration": 3655,
+            "titles": [
+                "Live om half 5:  H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 3655
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "ra654823799",
+            "type": "stream",
+            "date": "2015-04-30",
+            "duration": 4572,
+            "titles": [
+                "Live om half 5:  H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Z1: Battle Royale",
+                    "duration": 4572
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
         },
         {
             "id": "44f3",
