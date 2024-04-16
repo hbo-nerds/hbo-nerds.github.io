@@ -1,5 +1,5 @@
 <template>
-    <div class="card h-100 border-0 bg-transparent">
+    <div class="card h-100 border-0 bg-transparent overflow-hidden">
         <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative border border-3 rounded-1" :class="card.type === 'podcast' ? 'border-success' :
             card.type === 'video' ? 'border-yt' : 'border-tw'">
             <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
@@ -21,11 +21,11 @@
         </div>
         <div class="card-body py-2 px-0">
             <div class="d-flex justify-content-between align-items-baseline">
-                <div class="meta">
+                <div class="meta w-100">
                     <div @click="goToCard" @click.middle="goToCard('middle')" class="card-title m-1">{{ title }}</div>
-                    <router-link v-if="card['collection']" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie"><span class="badge text-bg-secondary text-truncate me-1"
-                                                                                                                                                       style="max-width: 100%"><i
-                        class="bi bi-folder-fill me-1"></i>{{ `${collectionName} (${collectionCount})` }}</span></router-link>
+                    <router-link v-if="card['collection']" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie">
+                        <span class="badge text-bg-secondary text-truncate me-1" style="max-width: 100%">
+                            <i class="bi bi-folder-fill me-1"></i>{{ `${collectionName} (${collectionCount})` }}</span></router-link>
                     <span class="badge text-bg-warning text-truncate me-1" style="max-width: 100%"
                           v-if="card.type === 'stream' && card.free"><i class="bi bi-star me-1"></i>Gratis stream</span>
                 </div>

@@ -2,6 +2,7 @@ import {defineStore} from "pinia";
 import og_data from '../assets/data/data.json'
 import {filename} from "pathe/utils";
 import {useGeneralStore} from "./general.js";
+import router from "@/router/index.js";
 
 export const useContentStore = defineStore('content', {
     state: () => ({
@@ -20,6 +21,7 @@ export const useContentStore = defineStore('content', {
         filters: {
             type: [],
             free: false,
+            vodOnly: false,
             date: {
                 range: 'alle',
                 after: '',
@@ -74,7 +76,7 @@ export const useContentStore = defineStore('content', {
             })
         },
         groupedTypes() {
-            return this.content.filter(item => this.f_paywall(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 const type = c.type;
                 if (!p.hasOwnProperty(type)) {
                     p[type] = 0;
@@ -84,7 +86,7 @@ export const useContentStore = defineStore('content', {
             }, {});
         },
         groupedDates() {
-            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 p['alle']++
                 if (this.checkSingleDate(c, 3)) p['< 3 maanden']++
                 if (this.checkSingleDate(c, 6)) p['< 6 maanden']++
@@ -93,7 +95,7 @@ export const useContentStore = defineStore('content', {
             }, { 'alle': 0,'< 3 maanden': 0, '< 6 maanden': 0, '< 12 maanden': 0});
         },
         groupedActivities() {
-            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
                 const act = c['activity'] || c['activities'];
                 if (act === undefined) return p
                 if (Array.isArray(act)) {
@@ -185,6 +187,8 @@ export const useContentStore = defineStore('content', {
          * Main filter function
          */
         filter() {
+            this.updateUrl()
+
             const s = useGeneralStore()
             s.pageNumber = 0
 
@@ -224,7 +228,7 @@ export const useContentStore = defineStore('content', {
             })
 
             // filter content
-            data = data.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
+            data = data.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
 
             for (const item of data) {
                 this.filteredData.push(item)
@@ -238,9 +242,21 @@ export const useContentStore = defineStore('content', {
         f_type(item) {
             return !this.filters.type.length || this.filters.type.includes(item.type)
         },
+        /**
+         * Filter item by paywall
+         * @param item
+         * @returns {boolean}
+         */
         f_paywall(item) {
             if (!this.filters.free) return true
             return item.type !== 'stream' || item.free
+        },
+        /**
+         * Filter item by VOD availability
+         */
+        f_vod(item) {
+            if (!this.filters.vodOnly) return true
+            return item['twitch_id'] || item['youtube_id']
         },
         /**
          * Filter items by date
@@ -356,13 +372,13 @@ export const useContentStore = defineStore('content', {
          * Select some random items
          */
         pickRandomSet() {
-            let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.content.length));
+            let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.filteredData.length));
             this.randomData = []
             nums.forEach(num => {
-                while (!this.content[num]['twitch_id'] && !this.content[num]['youtube_id']) {
-                    this.content.length === num + 1 ? num = 0 : num++
+                while (!this.filteredData[num]['twitch_id'] && !this.filteredData[num]['youtube_id']) {
+                    this.filteredData.length === num + 1 ? num = 0 : num++
                 }
-                this.randomData.push(this.content[num])
+                this.randomData.push(this.filteredData[num])
             })
         },
         /**
@@ -400,6 +416,37 @@ export const useContentStore = defineStore('content', {
             return this.collections.map(col => {
                 return this.content.find(item => item.collection === col.id)
             }).filter(item => item)
+        },
+        setFilterFromQuery(urlParams) {
+            if(urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
+            if(urlParams.get('free')) this.filters.free = urlParams.get('free')
+            if(urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
+            if(urlParams.get('date_range')) this.filters.date.range = urlParams.get('date_range')
+            if(urlParams.get('date_after')) this.filters.date.after = urlParams.get('date_after')
+            if(urlParams.get('date_before')) this.filters.date.before = urlParams.get('date_before')
+            if(urlParams.get('duration_min')) this.filters.duration.min = urlParams.get('duration_min')
+            if(urlParams.get('duration_max')) this.filters.duration.max = urlParams.get('duration_max')
+            if(urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
+        },
+        updateUrl() {
+            const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
+            const acts = this.filters.activity.length ? this.filters.activity.map(t => ['activity', t]) : []
+            let search = new URLSearchParams(types.concat(acts))
+            if (this.filters.free)
+                search.append('free', this.filters.free)
+            if (this.filters.vodOnly)
+                search.append('vodOnly', this.filters.vodOnly)
+            if (this.filters.date.range !== 'alle')
+                search.append('date_range', this.filters.date.range)
+            if (this.filters.date.after)
+                search.append('date_after', this.filters.date.after)
+            if (this.filters.date.before)
+                search.append('date_before', this.filters.date.before)
+            if (this.filters.duration.min)
+                search.append('duration_min', this.filters.duration.min)
+            if (this.filters.duration.max)
+                search.append('duration_max', this.filters.duration.max)
+            router.replace({query: { filter: search.toString() }}).then(r => {})
         }
     }
 })

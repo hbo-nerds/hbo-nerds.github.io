@@ -1,6 +1,19 @@
 // Import all of Bootstrap's CSS
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+$new-font-sizes: (
+        7: 0.75rem,
+);
+$new-grid-breakpoints: (
+        3xl: 1750px,
+        4xl: 2075px
+);
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+$grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
+
+@import "bootstrap/scss/bootstrap";
 
 body {
   height: 100vh;

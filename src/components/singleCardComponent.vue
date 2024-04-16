@@ -98,7 +98,9 @@
                                     <strong class="w-50">Activiteiten</strong>
                                     <div class="w-50 text-capitalize">
                                         <span v-if="!card.activities?.length">-</span>
-                                        <span class="badge rounded-pill text-bg-primary me-1"
+                                        <span class="badge rounded-pill text-bg-primary me-1" type="button"
+                                              @click="searchActivity(activty.title)"
+                                              :title="`Zoek op '${activty.title}'`"
                                               v-for="activty in card.activities">{{ activty.title }}</span>
                                     </div>
                                 </div>
@@ -165,7 +167,7 @@ import PlaylistModal from "@/components/PlaylistModal.vue";
 
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
-const {images} = storeToRefs(contentStore)
+const {images, filters} = storeToRefs(contentStore)
 const {likedItems, seenItems} = storeToRefs(generalStore)
 
 const props = defineProps({
@@ -246,6 +248,13 @@ function setMainTitle() {
 
 function copyLink() {
     navigator.clipboard.writeText(shareUrl.value);
+}
+
+function searchActivity(activity) {
+    contentStore.resetFilters() //reset
+    filters.value.activity = [activity] //set
+    contentStore.filter() //call
+    router.push({name: 'home'})
 }
 </script>
 

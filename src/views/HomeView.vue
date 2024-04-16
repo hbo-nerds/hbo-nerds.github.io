@@ -7,15 +7,16 @@
                     <filter-component></filter-component>
                 </div>
             </div>
-            <!-- filter mobile -->
-            <div class="col-12 d-lg-none">
-                <filter-modal>
-                    <filter-component></filter-component>
-                </filter-modal>
-            </div>
+
             <!-- main -->
             <div class="col-12 col-lg-10">
                 <div class="row g-2 align-items-center mb-3">
+                    <!-- filter mobile -->
+                    <div class="col-auto me-auto d-lg-none d-inline-block">
+                        <filter-modal>
+                            <filter-component></filter-component>
+                        </filter-modal>
+                    </div>
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
                                 :class="{active: view === 'search'}" @click="generalStore.setView('search')"><i
@@ -24,7 +25,7 @@
                     </div>
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
-                                :class="{active: view === 'random'}" @click="generalStore.setView('random')"><i
+                                :class="{active: view === 'random'}" @click="content.pickRandomSet();generalStore.setView('random')"><i
                             class="bi bi-dice-6 me-1"></i>Random
                         </button>
                     </div>
