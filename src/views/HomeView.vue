@@ -25,7 +25,7 @@
                     </div>
                     <div class="col-auto">
                         <button type="button" class="btn btn-sm btn-outline-primary"
-                                :class="{active: view === 'random'}" @click="generalStore.setView('random')"><i
+                                :class="{active: view === 'random'}" @click="content.pickRandomSet();generalStore.setView('random')"><i
                             class="bi bi-dice-6 me-1"></i>Random
                         </button>
                     </div>

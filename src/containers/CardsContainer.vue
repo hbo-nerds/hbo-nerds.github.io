@@ -77,18 +77,12 @@ import {useGeneralStore} from "@/stores/general.js";
 const CardComponent = defineAsyncComponent(() =>
     import("@/components/cardComponent.vue")
 )
-const CardComponentList = defineAsyncComponent(() =>
-    import("@/components/cardComponentList.vue")
-)
 
 // store
 const generalStore = useGeneralStore()
 const contentStore = useContentStore()
 const {view, pageSize, pageNumber} = storeToRefs(generalStore)
-const {sortedData, randomData, search} = storeToRefs(contentStore)
-
-if (!randomData.value.length)
-    contentStore.pickRandomSet()
+const {sortedData, randomData} = storeToRefs(contentStore)
 
 const paginatedData = computed(() => {
     if (pageSize.value === 'all') return sortedData.value

@@ -23,20 +23,20 @@
 </template>
 
 <script setup>
-import {RouterView, useRoute} from 'vue-router'
+import {RouterView, useRoute, useRouter} from 'vue-router'
 import NavigationBar from "@/components/navigationBar.vue";
 import FooterBar from "@/components/footerBar.vue";
 import SearchBar from "@/components/searchBar.vue";
 import {useContentStore} from "@/stores/content.js";
 import {useGeneralStore} from "@/stores/general.js";
-import {onBeforeMount, ref} from "vue";
+import {onBeforeMount, onMounted, ref} from "vue";
 
+const router = useRouter()
 const route = useRoute();
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
 contentStore.fetchData();
 contentStore.setImages();
-contentStore.filter()
 generalStore.getLocaleStorage();
 
 const showCookie = ref(false)
@@ -53,6 +53,19 @@ onBeforeMount(() => {
         showCookie.value = true;
     }
 })
+
+onMounted(() => {
+    getUrlQueryParams()
+})
+
+async function getUrlQueryParams() {
+    //router is async so we wait for it to be ready
+    await router.isReady()
+    //once its ready we can access the query params
+    if (route.query.filter)
+        contentStore.setFilterFromQuery(new URLSearchParams(route.query.filter))
+    contentStore.filter();
+}
 </script>
 
 <style scoped lang="sass"></style>

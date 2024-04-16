@@ -2,6 +2,7 @@ import {defineStore} from "pinia";
 import og_data from '../assets/data/data.json'
 import {filename} from "pathe/utils";
 import {useGeneralStore} from "./general.js";
+import router from "@/router/index.js";
 
 export const useContentStore = defineStore('content', {
     state: () => ({
@@ -186,6 +187,8 @@ export const useContentStore = defineStore('content', {
          * Main filter function
          */
         filter() {
+            this.updateUrl()
+
             const s = useGeneralStore()
             s.pageNumber = 0
 
@@ -413,6 +416,37 @@ export const useContentStore = defineStore('content', {
             return this.collections.map(col => {
                 return this.content.find(item => item.collection === col.id)
             }).filter(item => item)
+        },
+        setFilterFromQuery(urlParams) {
+            if(urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
+            if(urlParams.get('free')) this.filters.free = urlParams.get('free')
+            if(urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
+            if(urlParams.get('date_range')) this.filters.date.range = urlParams.get('date_range')
+            if(urlParams.get('date_after')) this.filters.date.after = urlParams.get('date_after')
+            if(urlParams.get('date_before')) this.filters.date.before = urlParams.get('date_before')
+            if(urlParams.get('duration_min')) this.filters.duration.min = urlParams.get('duration_min')
+            if(urlParams.get('duration_max')) this.filters.duration.max = urlParams.get('duration_max')
+            if(urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
+        },
+        updateUrl() {
+            const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
+            const acts = this.filters.activity.length ? this.filters.activity.map(t => ['activity', t]) : []
+            let search = new URLSearchParams(types.concat(acts))
+            if (this.filters.free)
+                search.append('free', this.filters.free)
+            if (this.filters.vodOnly)
+                search.append('vodOnly', this.filters.vodOnly)
+            if (this.filters.date.range !== 'alle')
+                search.append('date_range', this.filters.date.range)
+            if (this.filters.date.after)
+                search.append('date_after', this.filters.date.after)
+            if (this.filters.date.before)
+                search.append('date_before', this.filters.date.before)
+            if (this.filters.duration.min)
+                search.append('duration_min', this.filters.duration.min)
+            if (this.filters.duration.max)
+                search.append('duration_max', this.filters.duration.max)
+            router.replace({query: { filter: search.toString() }}).then(r => {})
         }
     }
 })
