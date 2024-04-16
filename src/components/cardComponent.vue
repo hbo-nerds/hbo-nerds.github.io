@@ -1,44 +1,70 @@
 <template>
-    <div class="card h-100 border-0 bg-transparent overflow-hidden">
-        <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative border border-3 rounded-1" :class="card.type === 'podcast' ? 'border-success' :
-            card.type === 'video' ? 'border-yt' : 'border-tw'">
-            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
-            <span class="badge rounded-0 bg-black position-absolute top-0 start-0"
-                  style="--bs-bg-opacity: .75;">{{ card.date }}</span>
-            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0"
+    <div class="card h-100 border-0 bg-transparent position-relative">
+        <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative rounded-3 z-1">
+            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100 rounded-3 border border-3" alt="thumbnail"
+                 :class="card.type === 'stream' && card.free ? 'border-warning' : ''">
+            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
                   style="--bs-bg-opacity: .75;">{{ duration }}</span>
-            <span class="badge rounded-0 position-absolute top-0 end-0 text-uppercase fw-bold" :class="card.type === 'podcast' ? 'bg-success' :
-            card.type === 'video' ? 'bg-yt' : 'bg-tw'">{{ card.type }}</span>
-            <div class="position-absolute bottom-0 start-0" @click.stop>
-                <a :href="'https://www.twitch.tv/videos/' + card['twitch_id']" class="platform-link"
-                   v-if="card['twitch_id']" target="_blank"><img src="../assets/img/twitch.png" alt="logo"></a>
-                <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" class="platform-link"
-                   v-if="card['youtube_id']" target="_blank"><img src="../assets/img/youtube.png" alt="logo"></a>
-            </div>
+            <span v-if="card.type === 'stream' && card.free"
+                  class="badge rounded-0 bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
+                Gratis
+            </span>
+
             <div v-if="isSeen" class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
                 <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
             </div>
         </div>
-        <div class="card-body py-2 px-0">
-            <div class="d-flex justify-content-between align-items-baseline">
-                <div class="meta w-100">
-                    <div @click="goToCard" @click.middle="goToCard('middle')" class="card-title m-1">{{ title }}</div>
-                    <router-link v-if="card['collection']" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie">
-                        <span class="badge text-bg-secondary text-truncate me-1" style="max-width: 100%">
-                            <i class="bi bi-folder-fill me-1"></i>{{ `${collectionName} (${collectionCount})` }}</span></router-link>
-                    <span class="badge text-bg-warning text-truncate me-1" style="max-width: 100%"
-                          v-if="card.type === 'stream' && card.free"><i class="bi bi-star me-1"></i>Gratis stream</span>
+        <div class="card-body pt-3 pb-0 px-0">
+            <div class="d-flex justify-content-between gap-2">
+                <a v-if="card['twitch_id']" :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
+                    <img class="rounded-circle" src="../assets/img/twitch.png" width="36" height="36" alt="logo">
+                </a>
+                <a v-else-if="card['type'] === 'podcast'" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
+                    <img class="rounded-circle" src="../assets/img/podcast.png" width="36" height="36" alt="logo">
+                </a>
+                <a v-else-if="card['youtube_id']" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
+                    <img class="rounded-circle" src="../assets/img/youtube.png" width="36" height="36" alt="logo">
+                </a>
+
+
+                <div class="meta flex-grow-1">
+                    <h3 @click="goToCard" @click.middle="goToCard('middle')" type="button" class="fs-6 fw-bold mb-1">{{ isSeries ? `${collectionName} - (${collectionCount})` : title }}</h3>
+
+                    <div class="inline-meta text-body-secondary">
+                        <span v-if="daysAgo < 14" class="small">{{ daysAgo }} {{ daysAgo > 1 ? 'dagen' : 'dag' }} geleden</span>
+                        <span v-else-if="weeksAgo < 4" class="small">{{ weeksAgo }} {{ weeksAgo > 1 ? 'weken' : 'week' }} geleden</span>
+                        <span v-else-if="monthsAgo < 12" class="small">{{ monthsAgo }} {{ monthsAgo > 1 ? 'maanden' : 'maand' }} geleden</span>
+                        <span v-else class="small">{{ yearAgo }} jaar geleden</span>
+                        <span v-if="card['collection']" class="small"><i class="bi bi-collection-play"></i></span>
+                    </div>
+                    <div class="inline-meta text-body-secondary">
+                        <span v-for="act in card['activities']?.slice(0, 1)" class="small">{{ act.title }} {{card['activities']?.length > 1 ? 'en meer' : ''}}</span>
+                    </div>
+                    <div class="inline-meta text-body-secondary" v-if="Array.isArray(card['activity'])">
+                        <span v-for="act in card['activity']?.slice(0, 1)" class="small">{{ act }} {{ card['activity']?.length > 1 ? 'en meer' : '' }}</span>
+                    </div>
+                    <div class="inline-meta text-body-secondary" v-else-if="card['activity']">
+                        <span class="small">{{ card['activity'] }}</span>
+                    </div>
                 </div>
-                <button class="action-btn btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-three-dots-vertical"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button class="dropdown-item" type="button" @click="generalStore.toggleSeenItem(card['id'])"><i class="bi bi-eye me-2"></i>{{ isSeen ? 'Niet gezien' : 'Gezien'}}</button></li>
-                    <li><button class="dropdown-item" type="button" data-bs-toggle="modal" :data-bs-target="'#playlistModal-' + card['id']"><i class="bi bi-collection-play me-2"></i>Bewaar</button></li>
-                    <li><button class="dropdown-item" type="button"><i class="bi bi-share me-2"></i>Deel</button></li>
-                </ul>
+                <div>
+                    <button class="action-btn btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li v-if="card['collection']">
+                            <router-link class="dropdown-item" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie">
+                                <i class="bi bi-collection-play me-2"></i>Naar collectie
+                            </router-link>
+                        </li>
+                        <li><button class="dropdown-item" type="button" @click="generalStore.toggleSeenItem(card['id'])"><i class="bi bi-eye me-2"></i>{{ isSeen ? 'Niet gezien' : 'Gezien'}}</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal" :data-bs-target="'#playlistModal-' + card['id']"><i class="bi bi-collection-play me-2"></i>Bewaar</button></li>
+                        <li><button class="dropdown-item" type="button" @click="generalStore.toggleLikedItem(card['id'])"><i class="bi bi-hand-thumbs-up me-2"></i>{{ isLiked ? 'Niet leuk' : 'Leuk!'}}</button></li>
+                    </ul>
+                </div>
             </div>
         </div>
+        <div v-if="isSeries" class="stack rounded-3 border border-3 z-0"></div>
     </div>
 
     <!-- Modal -->
@@ -62,7 +88,7 @@ const props = defineProps({
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
 const {images} = storeToRefs(contentStore)
-const {seenItems} = storeToRefs(generalStore)
+const {seenItems, likedItems} = storeToRefs(generalStore)
 
 const imgScr = computed(() => {
     return images.value['320'][`${props.card['twitch_id']}`] ||
@@ -74,7 +100,16 @@ const duration = computed(() => {
     return secondsToHms()
 })
 const title = computed(() => {
-    return setMainTitle()
+    if (['podcast', 'video'].includes(props.card['type']))
+        return props.card['title']
+    else {
+        if (props.card['custom_title'])
+            return props.card['custom_title']
+        else if (props.card['title_main'])
+            return props.card['titles'][props.card['title_main']]
+        else
+            return props.card['titles'][0]
+    }
 })
 
 const collectionName = computed(() => {
@@ -86,6 +121,9 @@ const collectionCount = computed(() => {
 const isSeen = computed(() => {
     return seenItems.value.includes(props.card['id'])
 })
+const isLiked = computed(() => {
+    return likedItems.value.includes(props.card['id'])
+})
 
 function secondsToHms() {
     let d = Number(props.card.duration);
@@ -94,19 +132,6 @@ function secondsToHms() {
     let s = Math.floor(d % 3600 % 60);
 
     return ('0' + h).slice(-2) + ":" + ('0' + m).slice(-2) + ":" + ('0' + s).slice(-2);
-}
-
-function setMainTitle() {
-    if (['podcast', 'video'].includes(props.card['type']))
-        return props.card['title']
-    else {
-        if (props.card['custom_title'])
-            return props.card['custom_title']
-        else if (props.card['title_main'])
-            return props.card['titles'][props.card['title_main']]
-        else
-            return props.card['titles'][0]
-    }
 }
 
 /**
@@ -121,6 +146,22 @@ function goToCard(type = 'left') {
     } else
         router.push({path: path})
 }
+
+
+const daysAgo = computed(() => {
+    return Math.round((new Date() - new Date(props.card['date'])) / (24 * 60 * 60 * 1000));
+})
+const weeksAgo =  computed(() => {
+    return Math.round((new Date() - new Date(props.card['date'])) / (7 * 24 * 60 * 60 * 1000));
+})
+const monthsAgo =  computed(() => {
+    const now = new Date();
+    return  now.getMonth() - new Date(props.card['date']).getMonth() +
+        (12 * ( now.getFullYear() - new Date(props.card['date']).getFullYear()))
+})
+const yearAgo =  computed(() => {
+    return new Date().getFullYear() - new Date(props.card['date']).getFullYear();
+})
 </script>
 
 <style scoped lang="sass">
@@ -130,10 +171,7 @@ function goToCard(type = 'left') {
     .action-btn
         visibility: hidden
 
-.thumbnail-wrapper:hover,
-.card-title:hover
-    cursor: pointer
-.card-title
+.meta h3
     overflow: hidden
     text-overflow: ellipsis
     display: -webkit-box
@@ -143,4 +181,16 @@ function goToCard(type = 'left') {
 .platform-link img
     height: 24px
     width: 24px
+.inline-meta
+    line-height: 16px
+    span:not(:first-of-type):before
+        margin: 0 4px
+        content: "•"
+.stack
+    position: absolute
+    top: -4px
+    height: 16px
+    left: 8px
+    right: 8px
+    margin-top: -1px
 </style>

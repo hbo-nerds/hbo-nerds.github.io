@@ -1,13 +1,16 @@
 <template>
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        <i class="bi bi-sliders me-1"></i>Filters
+    <button type="button" class="btn btn-sm btn-dark rounded-pill"
+            data-bs-toggle="modal" data-bs-target="#filterModal">Filters<i class="ms-2 bi bi-sliders2"></i>
     </button>
+
+<!--    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">-->
+<!--        <i class="bi bi-sliders me-1"></i>Filters-->
+<!--    </button>-->
 
     <!-- Modal -->
     <teleport to="body">
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-fullscreen">
+        <div class="modal fade" id="filterModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">Verfijn resultaten</h1>

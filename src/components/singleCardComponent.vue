@@ -1,12 +1,12 @@
 <template>
     <div class="row gy-3">
+
         <div class="col-12 col-md-8 mb-md-0">
+            <img class="w-100 rounded-3 mb-3" :src="imgScr" alt="thumbnail">
+            <h5 class="fw-bold">{{ title }}</h5>
             <div class="card">
                 <div class="card-body">
-                    <!-- header -->
-                    <header class="position-relative">
-                        <h4 class="card-title fw-bold w-75">{{ title }}</h4>
-                    </header>
+
                     <!-- key items -->
                     <div class="d-flex mb-3">
                         <span class="me-4">
@@ -20,10 +20,6 @@
                     </div>
                     <!-- image -->
                     <div class="row gy-3 mb-3">
-                        <div class="col-12 col-md-8">
-                            <img class="w-100" :src="imgScr"
-                                 alt="thumbnail">
-                        </div>
                         <div class="col-12 col-md-4">
                             <h2 class="fs-5 fw-bold">Bekijk</h2>
                             <a v-if="card['twitch_id']"
@@ -71,38 +67,43 @@
                     <!-- properties -->
                     <div class="mb-4">
                         <h2 class="fs-5 fw-bold mb-3">Kenmerken</h2>
+                        <div class="row mb-2">
+                            <div class="col-4"><strong>Duur</strong></div>
+                            <div class="col"><span>{{ duration }}</span></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4"><strong>Datum</strong></div>
+                            <div class="col"><span>{{ card.date }}</span></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4"><strong>Type</strong></div>
+                            <div class="col"><span>{{ card.type }}</span></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4"><strong>Tags</strong></div>
+                            <div class="col">
+                                <div class="text-capitalize">
+                                    <span v-if="!card.tags?.length">-</span>
+                                    <span class="badge rounded-pill text-bg-primary me-1" v-for="tag in card.tags">{{
+                                            tag
+                                        }}</span>
+                                </div>
+                            </div>
+                        </div>
                         <div class="row">
-                            <div class="col-12 col-md-10 col-lg-8">
-                                <div class="d-flex align-items-center py-1">
-                                    <strong class="w-50">Duur</strong>
-                                    <span class="w-50">{{ duration }}</span>
-                                </div>
-                                <div class="d-flex align-items-center py-1">
-                                    <strong class="w-50">Datum</strong>
-                                    <span class="w-50">{{ card.date }}</span>
-                                </div>
-                                <div class="d-flex align-items-center py-1">
-                                    <strong class="w-50">Type</strong>
-                                    <span class="w-50 text-capitalize">{{ card.type }}</span>
-                                </div>
-                                <div class="d-flex align-items-center py-1">
-                                    <strong class="w-50">Tags</strong>
-                                    <div class="w-50 text-capitalize">
-                                        <span v-if="!card.tags?.length">-</span>
-                                        <span class="badge rounded-pill text-bg-primary me-1" v-for="tag in card.tags">{{
-                                                tag
-                                            }}</span>
-                                    </div>
-                                </div>
-                                <div class="d-flex align-items-center py-1">
-                                    <strong class="w-50">Activiteiten</strong>
-                                    <div class="w-50 text-capitalize">
-                                        <span v-if="!card.activities?.length">-</span>
-                                        <span class="badge rounded-pill text-bg-primary me-1" type="button"
-                                              @click="searchActivity(activty.title)"
-                                              :title="`Zoek op '${activty.title}'`"
-                                              v-for="activty in card.activities">{{ activty.title }}</span>
-                                    </div>
+                            <div class="col-4">
+                                <strong>Activiteiten</strong>
+                            </div>
+                            <div class="col">
+                                <div class="text-capitalize">
+                                    <span v-if="!card.activities?.length && !card.activity?.length">-</span>
+                                    <span v-for="act in card.activities" class="badge rounded-pill text-bg-primary me-1 mb-1"
+                                          type="button" @click="searchActivity(act.title)" :title="`Zoek op '${act.title}'`">{{ act.title }}</span>
+                                    <span v-if="Array.isArray(card.activity)" class="badge rounded-pill text-bg-primary me-1 mb-1"
+                                          type="button" @click="searchActivity(act.title)" :title="`Zoek op '${act.title}'`"
+                                          v-for="act in card.activity">{{ act }}</span>
+                                    <span v-if="card.activity" class="badge rounded-pill text-bg-primary me-1 mb-1"
+                                          type="button" @click="searchActivity(card.activity)" :title="`Zoek op '${card.activity}'`">{{ card.activity }}</span>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +255,6 @@ function searchActivity(activity) {
     contentStore.resetFilters() //reset
     filters.value.activity = [activity] //set
     contentStore.filter() //call
-    router.push({name: 'home'})
 }
 </script>
 

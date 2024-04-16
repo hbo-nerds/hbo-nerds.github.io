@@ -1,10 +1,10 @@
 <template>
-    <div class="row g-2 mb-3">
-        <div class="col-6 col-md-4 col-lg-3" v-for="(card, idx) in paginatedData" :key="idx">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-3 mb-3">
+        <div class="col" v-for="(card, idx) in paginatedData" :key="idx">
             <card-component :card="card" :is-series="true"/>
         </div>
     </div>
-    <div class="row align-items-center g-2">
+    <div class="row align-items-center g-2 mb-5">
         <div class="col-12 col-md">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">

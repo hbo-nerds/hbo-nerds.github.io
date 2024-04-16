@@ -4,15 +4,15 @@
 
         <div class="accordion accordion-flush">
             <!-- type -->
-            <div class="accordion-item">
+            <div class="accordion-item bg-transparent">
                 <h2 class="accordion-header">
-                    <button class="accordion-button px-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-transparent px-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseType" aria-expanded="true" aria-controls="collapseType">
                         <small>Type</small>
                     </button>
                 </h2>
                 <div id="collapseType" class="accordion-collapse collapse show px-0">
-                    <div class="accordion-body px-0">
+                    <div class="accordion-body px-0 pt-0">
                         <div class="form-check" v-for="(count, type, idx) in groupedTypes" :key="idx">
                             <input class="form-check-input" type="checkbox" :id="'type-' + type" :value="type" name="type"
                                    @change="contentStore.filter()" v-model="filters.type">
@@ -24,15 +24,15 @@
                 </div>
             </div>
             <!-- date -->
-            <div class="accordion-item">
+            <div class="accordion-item bg-transparent">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-transparent collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseDate" aria-expanded="false" aria-controls="collapseDate">
                         <small>Datum</small>
                     </button>
                 </h2>
                 <div id="collapseDate" class="accordion-collapse collapse px-0">
-                    <div class="accordion-body px-0">
+                    <div class="accordion-body px-0 pt-0">
                         <div class="form-check" v-for="(count, date, idx) in groupedDates" :key="idx">
                             <input class="form-check-input" type="radio" :id="'date-' + date" :value="date"
                                    @change="contentStore.filter()" v-model="filters.date.range">
@@ -59,15 +59,15 @@
                 </div>
             </div>
             <!-- duration -->
-            <div class="accordion-item">
+            <div class="accordion-item bg-transparent">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-transparent collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseDuration" aria-expanded="false" aria-controls="collapseDuration">
                         <small>Duur</small>
                     </button>
                 </h2>
                 <div id="collapseDuration" class="accordion-collapse collapse px-0">
-                    <div class="accordion-body px-0">
+                    <div class="accordion-body px-0 pt-0">
                         <div class="form-label small">In minuten</div>
                         <div class="input-group input-group-sm">
                             <input type="number" class="form-control" placeholder="min" @change="contentStore.filter()" v-model="filters.duration.min">
@@ -78,9 +78,9 @@
                 </div>
             </div>
             <!-- activity -->
-            <div class="accordion-item">
+            <div class="accordion-item bg-transparent">
                 <h2 class="accordion-header">
-                    <button class="accordion-button collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-transparent collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                         <small>Activiteit</small>
                     </button>
@@ -110,9 +110,9 @@
                 </div>
             </div>
             <!-- algemeen -->
-            <div class="accordion-item">
+            <div class="accordion-item bg-transparent">
                 <h2 class="accordion-header">
-                    <button class="accordion-button px-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    <button class="accordion-button bg-transparent px-0 shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseGeneral" aria-expanded="true" aria-controls="collapseGeneral">
                         <small>Algemeen</small>
                     </button>

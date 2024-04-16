@@ -1,21 +1,26 @@
 <template>
     <div class="card h-100 border-0 bg-transparent position-relative">
-        <div @click="goToCard" @click.middle="goToCard('middle')" class="z-1 thumbnail-wrapper position-relative border border-3 rounded-1 border-yt">
-            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
-            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0"
-                  style="--bs-bg-opacity: .75;"><i class="bi bi-collection-play me-1"></i>{{ playlist['items'].length }} items</span>
+        <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative rounded-3 z-1">
+            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100 rounded-3 border border-3" alt="thumbnail">
+            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
+                  style="--bs-bg-opacity: .75;"><i class="bi bi-collection-play me-1"></i>{{ playlist['items'].length }} {{ playlist['items'].length > 1 ? 'items' : 'item' }}</span>
         </div>
-        <div class="card-body py-2 px-0">
-            <div class="d-flex justify-content-between align-items-baseline">
-                <div class="meta">
-                    <div @click="goToCard" @click.middle="goToCard('middle')" class="card-title mb-1">{{ playlist['title'] }}</div>
+        <div class="card-body py-3 px-0">
+            <div class="d-flex justify-content-between gap-2">
+
+
+
+                <div class="meta flex-grow-1">
+                    <h3 @click="goToCard" @click.middle="goToCard('middle')" type="button" class="fs-6 fw-bold mb-1">{{ playlist['title'] }}</h3>
                 </div>
-                <button class="action-btn btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-three-dots-vertical"></i>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><button @click="generalStore.deletePlaylist(playlist['title'])" class="dropdown-item" type="button"><i class="bi bi-trash me-2"></i>Verwijder</button></li>
-                </ul>
+                <div>
+                    <button class="action-btn btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><button @click="generalStore.deletePlaylist(playlist['title'])" class="dropdown-item" type="button"><i class="bi bi-trash me-2"></i>Verwijder</button></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="stack rounded-1 z-0"></div>

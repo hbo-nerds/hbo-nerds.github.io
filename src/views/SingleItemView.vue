@@ -1,10 +1,6 @@
 <template>
     <div class="container-fluid py-4">
-        <div class="row g-3">
-            <div class="col-12 col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
-                <single-card-component :card="card"></single-card-component>
-            </div>
-        </div>
+        <single-card-component :card="card"></single-card-component>
     </div>
 </template>
 

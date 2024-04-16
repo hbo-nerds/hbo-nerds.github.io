@@ -1,6 +1,23 @@
 // Import all of Bootstrap's CSS
-@import "bootstrap/scss/bootstrap";
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 @import "bootstrap-icons/font/bootstrap-icons.css";
+
+$new-font-sizes: (
+        7: 0.75rem,
+);
+$new-grid-breakpoints: (
+        3xl: 1750px,
+        4xl: 2075px
+);
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+$grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
+
+@import "bootstrap/scss/bootstrap";
+
+html :not(.hide-scrollbar) {
+  scrollbar-color: #aaa transparent;
+}
 
 body {
   height: 100vh;
@@ -32,4 +49,8 @@ body {
 }
 .bg-tw {
   background-color: #6441A5 !important;
+}
+
+[data-bs-theme=dark] {
+  --bs-body-bg-rgb: 15, 15, 15;
 }
