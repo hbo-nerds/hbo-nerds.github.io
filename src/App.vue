@@ -40,6 +40,7 @@ import {useGeneralStore} from "@/stores/general.js";
 import {onBeforeMount, onMounted, ref} from "vue";
 import NavigationSide from "@/components/navigationSide.vue";
 
+
 const router = useRouter()
 const route = useRoute();
 const contentStore = useContentStore()

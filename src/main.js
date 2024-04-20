@@ -14,7 +14,7 @@ const app = createApp(App)
 
 app.use(VueLazyLoad)
 app.use(VueGtag, {
-    config: { id: 'G-T274C66T0E'}
+    config: {id: import.meta.env.VITE_GA_MEASUREMENT_ID}
 }, router)
 app.directive('debounce', vueDebounce({ lock: true, listenTo: "input", fireonempty: true }))
 app.use(createPinia())
