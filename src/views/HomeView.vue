@@ -61,5 +61,5 @@ import FilterModal from "@/components/filterModal.vue";
 const generalStore = useGeneralStore()
 const content = useContentStore()
 const {view} = storeToRefs(generalStore)
-const {sortedData, sortOption, search} = storeToRefs(content)
+const {sortOption} = storeToRefs(content)
 </script>

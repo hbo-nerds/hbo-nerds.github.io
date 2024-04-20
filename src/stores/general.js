@@ -1,5 +1,6 @@
 import {defineStore} from "pinia";
 import {useContentStore} from "@/stores/content.js";
+import { event } from 'vue-gtag'
 
 export const useGeneralStore = defineStore('general', {
     state: () => ({
@@ -7,6 +8,7 @@ export const useGeneralStore = defineStore('general', {
         view: 'search',
         pageSize: 24,
         pageNumber: 0,
+        pageNumberSeries: 0,
         likedItems: [],
         seenItems: [],
         history: [],
@@ -45,9 +47,12 @@ export const useGeneralStore = defineStore('general', {
          * @param id
          */
         toggleLikedItem(id) {
-            if (!this.likedItems.includes(id))
+            if (!this.likedItems.includes(id)) {
                 this.likedItems.push(id);
-            else
+                event('like_item', {
+                    'item': id
+                })
+            } else
                 this.likedItems.splice(this.likedItems.indexOf(id), 1);
             localStorage.setItem("likedItems", JSON.stringify(this.likedItems));
         },
@@ -78,6 +83,9 @@ export const useGeneralStore = defineStore('general', {
             const found = this.playlists.some(pl => pl.title === title);
             if (!found) this.playlists.push({ title: title, items: [] });
             localStorage.setItem("playlists", JSON.stringify(this.playlists));
+            event('create_playlist', {
+                'playlist_name': title
+            })
         },
         /**
          * Delete playlist by name
