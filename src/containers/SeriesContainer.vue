@@ -13,21 +13,21 @@
                             <span aria-hidden="true">&laquo;</span>
                         </a>
                     </li>
-                    <li :class="{active: pageNumber === 0}" class="page-item" @click="goPage(0)"><a class="page-link" role="button">1</a></li>
+                    <li :class="{active: pageNumberSeries === 0}" class="page-item" @click="goPage(0)"><a class="page-link" role="button">1</a></li>
 
-                    <li v-if="pageCount > 2 && pageNumber > 2" class="page-item"><a class="page-link">...</a></li>
+                    <li v-if="pageCount > 2 && pageNumberSeries > 2" class="page-item"><a class="page-link">...</a></li>
 
-                    <li v-if="pageNumber < 3 && pageCount > 1" :class="{active: pageNumber === 1}" class="page-item" @click="goPage(1)"><a class="page-link" role="button">2</a></li>
-                    <li v-if="pageNumber >= 3" :class="{active: pageNumber === 1}" class="page-item" @click="goPage(pageNumber - 1)"><a class="page-link" role="button">{{ pageNumber }}</a></li>
+                    <li v-if="pageNumberSeries < 3 && pageCount > 1" :class="{active: pageNumberSeries === 1}" class="page-item" @click="goPage(1)"><a class="page-link" role="button">2</a></li>
+                    <li v-if="pageNumberSeries >= 3" :class="{active: pageNumberSeries === 1}" class="page-item" @click="goPage(pageNumberSeries - 1)"><a class="page-link" role="button">{{ pageNumberSeries }}</a></li>
 
-                    <li v-if="pageNumber < 3 && pageCount > 2" :class="{active: pageNumber === 2}" class="page-item" @click="goPage(2)"><a class="page-link" role="button">3</a></li>
-                    <li v-if="pageNumber >= 3" class="page-item active" @click="goPage(pageNumber)"><a class="page-link" role="button">{{ pageNumber + 1 }}</a></li>
+                    <li v-if="pageNumberSeries < 3 && pageCount > 2" :class="{active: pageNumberSeries === 2}" class="page-item" @click="goPage(2)"><a class="page-link" role="button">3</a></li>
+                    <li v-if="pageNumberSeries >= 3" class="page-item active" @click="goPage(pageNumberSeries)"><a class="page-link" role="button">{{ pageNumberSeries + 1 }}</a></li>
 
-                    <li v-if="pageNumber < 3 && pageCount > 3" class="page-item" @click="goPage(3)"><a class="page-link" role="button">4</a></li>
-                    <li v-if="pageNumber >= 3 && pageCount - 1 > pageNumber" class="page-item" @click="goPage(pageNumber + 1)"><a class="page-link" role="button">{{ pageNumber + 2 }}</a></li>
+                    <li v-if="pageNumberSeries < 3 && pageCount > 3" class="page-item" @click="goPage(3)"><a class="page-link" role="button">4</a></li>
+                    <li v-if="pageNumberSeries >= 3 && pageCount - 1 > pageNumberSeries" class="page-item" @click="goPage(pageNumberSeries + 1)"><a class="page-link" role="button">{{ pageNumberSeries + 2 }}</a></li>
 
-                    <li v-if="pageCount > 4 && pageCount - 3 > pageNumber" class="page-item"><a class="page-link">...</a></li>
-                    <li v-if="pageCount > 4 && pageCount - 2 > pageNumber" class="page-item" @click="goPage(pageCount - 1)"><a class="page-link" role="button">{{ pageCount }}</a></li>
+                    <li v-if="pageCount > 4 && pageCount - 3 > pageNumberSeries" class="page-item"><a class="page-link">...</a></li>
+                    <li v-if="pageCount > 4 && pageCount - 2 > pageNumberSeries" class="page-item" @click="goPage(pageCount - 1)"><a class="page-link" role="button">{{ pageCount }}</a></li>
 
                     <li class="page-item" @click="nextPage">
                         <a class="page-link" aria-label="Next" role="button">
@@ -66,12 +66,12 @@ const CardComponent = defineAsyncComponent(() =>
 // store
 const generalStore = useGeneralStore()
 const contentStore = useContentStore()
-const {pageSize, pageNumber} = storeToRefs(generalStore)
+const {pageSize, pageNumberSeries} = storeToRefs(generalStore)
 const {sortedDataSeries} = storeToRefs(contentStore)
 
 const paginatedData = computed(() => {
     if (pageSize.value === 'all') return sortedDataSeries.value
-    const start = pageNumber.value * pageSize.value,
+    const start = pageNumberSeries.value * pageSize.value,
         end = start + pageSize.value
     return sortedDataSeries.value.slice(start, end)
 })
@@ -83,15 +83,15 @@ const pageCount = computed(() =>  {
 })
 
 function prevPage() {
-    if (pageNumber.value > 0)
-        pageNumber.value--
+    if (pageNumberSeries.value > 0)
+        pageNumberSeries.value--
 }
 function nextPage() {
-    if (pageNumber.value < pageCount.value)
-        pageNumber.value++
+    if (pageNumberSeries.value < pageCount.value)
+        pageNumberSeries.value++
 }
 function goPage(i) {
-    pageNumber.value = i;
+    pageNumberSeries.value = i;
 }
 
 </script>
