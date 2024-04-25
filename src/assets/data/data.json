@@ -49347,6 +49347,44 @@
             "title": "Fifa 99 - Lekker spelen",
             "duration": 315,
             "youtube_id": "ztCE2_hepD8"
-        }
+        },
+      {
+        "date": "2024-04-24",
+        "time_start": "20:38:57",
+        "time_end": "22:30:19",
+        "titles": [
+          "We gaan VIRAL 🔥"
+        ],
+        "activities": [
+          {
+            "title": "Content Warning",
+            "duration": 5762
+          }
+        ],
+        "duration": 6682,
+        "twitch_id": "2128608016",
+        "youtube_id": "NK86YqerPuw",
+        "id": "3647",
+        "type": "stream"
+      },
+      {
+        "date": "2024-04-21",
+        "time_start": "20:38:57",
+        "time_end": "22:30:19",
+        "titles": [
+          "ZOEK DIE VERSCHILLEN (extreme)"
+        ],
+        "activities": [
+          {
+            "title": "Shinkansen 0",
+            "duration": 5462
+          }
+        ],
+        "duration": 5462,
+        "twitch_id": "2126900234",
+        "youtube_id": "YapargPDHro",
+        "id": "3648",
+        "type": "stream"
+      }
     ]
 }
