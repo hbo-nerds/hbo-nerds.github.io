@@ -21,13 +21,6 @@
                 <span class="fs-7">You</span>
             </div>
         </router-link>
-        <router-link to="/about" class="item text-decoration-none py-3 rounded-3">
-            <div class="d-flex flex-column align-items-center text-body">
-                <i class="bi bi-info-square fs-5"></i>
-                <i class="active bi bi-info-square-fill fs-5"></i>
-                <span class="fs-7">Over</span>
-            </div>
-        </router-link>
     </div>
 </template>
 

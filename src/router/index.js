@@ -5,6 +5,7 @@ import SingleItemView from "@/views/SingleItemView.vue";
 import SingleSeriesView from "@/views/SingleSeriesView.vue";
 import YouView from "@/views/YouView.vue";
 import SinglePlaylistView from "@/views/SinglePlaylistView.vue";
+import YouPlaylists from "@/views/YouPlaylists.vue";
 
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
@@ -25,7 +26,9 @@ const router = createRouter({
       path: '/you',
       children: [
         { path: '', name: 'you', component: YouView},
-        { path: 'playlist/:title', name: 'single-playlist', component: SinglePlaylistView},
+        { path: 'playlists', name: 'playlists', component: YouPlaylists},
+        { path: 'playlists/:title', name: 'single-playlist', component: SinglePlaylistView},
+        { path: 'liked-items', name: 'liked-items', component: SinglePlaylistView},
       ]
     },
     {
