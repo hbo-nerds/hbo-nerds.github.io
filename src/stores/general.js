@@ -1,6 +1,6 @@
 import {defineStore} from "pinia";
 import {useContentStore} from "@/stores/content.js";
-import { event } from 'vue-gtag'
+import {event} from 'vue-gtag'
 
 export const useGeneralStore = defineStore('general', {
     state: () => ({
@@ -68,7 +68,7 @@ export const useGeneralStore = defineStore('general', {
             localStorage.setItem("seenItems", JSON.stringify(this.seenItems));
         },
         updateHistory(id) {
-            if(this.history.includes(id))
+            if (this.history.includes(id))
                 this.history.splice(this.history.indexOf(id), 1);
             this.history.unshift(id)
             if (this.history.length > 10)
@@ -81,7 +81,7 @@ export const useGeneralStore = defineStore('general', {
          */
         createPlaylist(title) {
             const found = this.playlists.some(pl => pl.title === title);
-            if (!found) this.playlists.push({ title: title, items: [] });
+            if (!found) this.playlists.push({title: title, items: []});
             localStorage.setItem("playlists", JSON.stringify(this.playlists));
             event('create_playlist', {
                 'playlist_name': title
@@ -126,6 +126,13 @@ export const useGeneralStore = defineStore('general', {
                     res.push(store.content.find(c => c.id === id))
             })
             return res
+        },
+        setLocaleStorageFromFile(userData) {
+            localStorage.setItem("likedItems", JSON.stringify(userData.likedItems));
+            localStorage.setItem("seenItems", JSON.stringify(userData.seenItems));
+            localStorage.setItem("history", JSON.stringify(userData.history));
+            localStorage.setItem("playlists", JSON.stringify(userData.playlists));
+            this.getLocaleStorage()
         }
     }
 })
