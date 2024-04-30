@@ -148,13 +148,17 @@ const {filters, groupedActivities, groupedTypes, groupedDates} = storeToRefs(con
 
 const f_term = ref('')
 const f_activities = computed(() => {
-    return Object.keys(groupedActivities.value).filter(i => i.toLowerCase().includes(f_term.value.toLowerCase())).sort((a, b) => {
+    return Object.keys(groupedActivities.value).filter(i => normalizeInput(i).includes(normalizeInput(f_term.value))).sort((a, b) => {
         return a.toLowerCase().localeCompare(b.toLowerCase())
     })
 })
 const a_activities = computed(() => {
     return Object.keys(groupedActivities.value).filter(i => filters.value.activity.includes(i))
 })
+
+function normalizeInput(input) {
+    return !input ? '' : input.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
+}
 
 </script>
 

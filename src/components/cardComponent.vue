@@ -1,8 +1,8 @@
 <template>
     <div class="card h-100 border-0 bg-transparent position-relative">
-        <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative rounded-3 z-1">
-            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100 rounded-3 border border-3" alt="thumbnail"
-                 :class="card.type === 'stream' && card.free ? 'border-warning' : ''">
+        <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative rounded-3 z-1"
+             :class="card.type === 'stream' && card.free ? 'p-1 bg-warning' : ''">
+            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100 rounded-3" alt="thumbnail">
             <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
                   style="--bs-bg-opacity: .75;">{{ duration }}</span>
             <span v-if="card.type === 'stream' && card.free"

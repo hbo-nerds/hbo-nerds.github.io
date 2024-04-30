@@ -197,35 +197,54 @@ export const useContentStore = defineStore('content', {
             // start with all items
             let data = this.content.slice()
 
-            // check neg words
-            this.excludedWords.forEach((nw) => {
-                const nw_normalized = this.normalizeInput(nw)
-                data = data.filter((item) => {
-                    switch (item.type) {
-                        case 'podcast':
-                            return this.filterPodcast(item, nw_normalized, true)
-                        case 'video':
-                            return this.filterVideo(item, nw_normalized, true)
-                        case 'stream':
-                            return this.filterStream(item, nw_normalized, true)
-                    }
-                })
+            const allowedTags = ['type', 'title', 'desc', 'game', 'tag', 'year']
+            const something = this.search.match(/([\w\d]+:[\w\d\s]+?)(?= [\w\d]+:|$)/g) || []
+            const advancedSearch = {}
+            something.forEach(item => {
+                const arr = item.split(':');
+                let first = arr.shift();
+                if (allowedTags.includes(first))
+                    advancedSearch[first] = arr.pop()
             })
+            console.log(advancedSearch)
+
+            data = data.filter(item => this.f_type(item, advancedSearch['type']) &&
+                this.f_title(item, advancedSearch['title']) &&
+                this.f_desc(item, advancedSearch['desc']) &&
+                this.f_activity(item, advancedSearch['game']) &&
+                this.f_tag(item, advancedSearch['tag']) &&
+                this.f_year(item, advancedSearch['year']))
+
+
+            // check neg words
+            // this.excludedWords.forEach((nw) => {
+            //     const nw_normalized = this.normalizeInput(nw)
+            //     data = data.filter((item) => {
+            //         switch (item.type) {
+            //             case 'podcast':
+            //                 return this.filterPodcast(item, nw_normalized, true)
+            //             case 'video':
+            //                 return this.filterVideo(item, nw_normalized, true)
+            //             case 'stream':
+            //                 return this.filterStream(item, nw_normalized, true)
+            //         }
+            //     })
+            // })
 
             // check pos words
-            this.includedWords.forEach((pw) => {
-                const pw_normalized = this.normalizeInput(pw)
-                data = data.filter((item) => {
-                    switch (item.type) {
-                        case 'podcast':
-                            return this.filterPodcast(item, pw_normalized)
-                        case 'video':
-                            return this.filterVideo(item, pw_normalized)
-                        case 'stream':
-                            return this.filterStream(item, pw_normalized)
-                    }
-                })
-            })
+            // this.includedWords.forEach((pw) => {
+            //     const pw_normalized = this.normalizeInput(pw)
+            //     data = data.filter((item) => {
+            //         switch (item.type) {
+            //             case 'podcast':
+            //                 return this.filterPodcast(item, pw_normalized)
+            //             case 'video':
+            //                 return this.filterVideo(item, pw_normalized)
+            //             case 'stream':
+            //                 return this.filterStream(item, pw_normalized)
+            //         }
+            //     })
+            // })
 
             // filter content
             data = data.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
@@ -237,10 +256,30 @@ export const useContentStore = defineStore('content', {
         /**
          * Filter items by type
          * @param item
+         * @param advancedSearchType
          * @returns {boolean|*}
          */
-        f_type(item) {
-            return !this.filters.type.length || this.filters.type.includes(item.type)
+        f_type(item, advancedSearchType = '') {
+            if (!this.filters.type.length && !advancedSearchType ) return true
+            return advancedSearchType ? item.type.toLowerCase().includes(advancedSearchType.toLowerCase()) : this.filters.type.includes(item.type)
+        },
+        /**
+         * Filter item by title
+         * @param item
+         * @param advancedSearchTitle
+         * @returns {boolean|*|boolean}
+         */
+        f_title(item, advancedSearchTitle = '') {
+            if (!advancedSearchTitle) return true
+            const s = this.normalizeInput(advancedSearchTitle)
+            return (this.normalizeInput(item['title']).includes(this.normalizeInput(s)) ||
+                (item['titles'] ? item['titles'].some(t=> this.normalizeInput(t).includes(s)) : false) ||
+                this.normalizeInput(item['custom_title']).includes(s))
+        },
+        f_desc(item, advancedSearchDesc = '') {
+            if (!advancedSearchDesc) return true
+            const s = this.normalizeInput(advancedSearchDesc)
+            return this.normalizeInput(item['description']).includes(s)
         },
         /**
          * Filter item by paywall
@@ -278,6 +317,17 @@ export const useContentStore = defineStore('content', {
             }
         },
         /**
+         * Filter item by upload year
+         * @param item
+         * @param year
+         * @returns {boolean}
+         */
+        f_year(item, year) {
+            if (!year) return true
+            const yearToCheck = new Date(item.date).getFullYear()
+            return yearToCheck === Number(year)
+        },
+        /**
          * Filter items by duration
          * @param item
          * @returns {boolean}
@@ -289,18 +339,28 @@ export const useContentStore = defineStore('content', {
         /**
          * Filter items by activity
          * @param item
+         * @param advancedSearch
          * @returns {*|boolean}
          */
-        f_activity(item) {
-            if (!this.filters.activity.length) return true
+        f_activity(item, advancedSearch = '') {
+            if (!this.filters.activity.length && !advancedSearch) return true
+            const s = this.normalizeInput(advancedSearch)
             const act = item['activity'] || item['activities'];
+            if (!act) return false
             if (Array.isArray(act)) {
                 if (typeof act[0] === 'string')
-                    return this.filters.activity.some(r=> act.includes(r))
+                    return advancedSearch ? act.some(a => this.normalizeInput(a).includes(s)) :
+                        this.filters.activity.some(r => act.includes(r))
                 else
-                    return this.filters.activity.some(r=> act.map(x => x.title).includes(r))
+                    return advancedSearch ? act.map(x => x.title).some(a => this.normalizeInput(a).includes(s)) :
+                        this.filters.activity.some(r => act.map(x => x.title).includes(r))
             } else
-                return this.filters.activity.includes(act)
+                return advancedSearch ? this.normalizeInput(act).includes(s) : this.filters.activity.includes(act)
+        },
+        f_tag(item, advancedSearchTag = '') {
+            if (!advancedSearchTag) return true
+            const s = this.normalizeInput(advancedSearchTag)
+            return item['tags'] ? item['tags'].some(tag => this.normalizeInput(tag).includes(s)) : false
         },
         /**
          * Check if item's date is in range

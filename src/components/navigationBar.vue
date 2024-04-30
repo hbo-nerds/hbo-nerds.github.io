@@ -24,12 +24,12 @@
                                   style="border-color: #1c62b9"><i class="bi bi-search"></i></span>
                             <input @focus="focus = true" @focusout="focus = false" type="search" class="form-control shadow-none"
                                    :class="[ focus ? 'border-start-0 focus-border' : 'rounded-start-pill' ]" placeholder="Zoek"
-                                   style="background-color: #121212" v-model="search"/>
+                                   style="background-color: #121212" v-model="search" @keydown.enter="doSearch"/>
                             <button @click="doSearch" type="button" class="input-group-text rounded-end-pill px-4"><i class="bi bi-search"></i></button>
                         </div>
                         <button type="button" class="ms-3 btn btn-dark rounded-pill"><i class="bi bi-dice-5"></i></button>
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex d-sm-none justify-content-end">
                         <div class="input-group flex-nowrap" v-if="mobileSearch">
                             <span class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
                                   style="border-color: #1c62b9"><i class="bi bi-search"></i></span>
