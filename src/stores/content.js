@@ -412,6 +412,9 @@ export const useContentStore = defineStore('content', {
         resetFilters() {
             this.filters = {
                 type: [],
+                platform: [],
+                free: false,
+                vodOnly: false,
                 date: {
                     range: 'alle',
                     after: '',
@@ -455,6 +458,7 @@ export const useContentStore = defineStore('content', {
             if(urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
         },
         updateUrl() {
+            console.log(this.filters)
             const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
             const platforms = this.filters.platform.length ? this.filters.platform.map(t => ['platform', t]) : []
             const acts = this.filters.activity.length ? this.filters.activity.map(t => ['activity', t]) : []
