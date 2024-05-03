@@ -192,7 +192,7 @@ const title = computed(() => {
 })
 const shareUrl = computed(() => {
     const host = window.location.host;
-    return `${host}/#/item/${card.value['id']}`
+    return `${host}/item/${card.value['id']}`
 })
 const collectionItems = computed(() => {
     return contentStore.getSingleCollection(card.value['collection'])

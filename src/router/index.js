@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SeriesView from "@/views/SeriesView.vue";
 import SingleItemView from "@/views/SingleItemView.vue";
@@ -8,7 +8,7 @@ import SinglePlaylistView from "@/views/SinglePlaylistView.vue";
 import ToolView from "@/views/ToolView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
