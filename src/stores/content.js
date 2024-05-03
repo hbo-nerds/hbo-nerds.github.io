@@ -20,6 +20,7 @@ export const useContentStore = defineStore('content', {
         sortOptionSeries: 'newOld',
         filters: {
             type: [],
+            platform: [],
             free: false,
             vodOnly: false,
             date: {
@@ -76,7 +77,7 @@ export const useContentStore = defineStore('content', {
             })
         },
         groupedTypes() {
-            return this.content.filter(item => this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 const type = c.type;
                 if (!p.hasOwnProperty(type)) {
                     p[type] = 0;
@@ -85,8 +86,24 @@ export const useContentStore = defineStore('content', {
                 return p;
             }, {});
         },
+        groupedPlatforms() {
+            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+                // Making this dynamic would require a change in the JSON to give the platform property a unique prefix/suffix.
+                // Currently _id is also used by twitchtracker_id.
+                // Alternatively it could be put inside a platforms array.
+                // E.g. platforms: [{ name: 'twitch', id: '1234' }, { name: 'youtube', id: '5678' }]
+                for (const platform of ['twitch', 'youtube']) {
+                    if (!c.hasOwnProperty(platform + '_id')) continue
+                    if (!p.hasOwnProperty(platform)) {
+                        p[platform] = 0;
+                    }
+                    p[platform]++;
+                }
+                return p;
+            }, {});
+        },
         groupedDates() {
-            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 p['alle']++
                 if (this.checkSingleDate(c, 3)) p['< 3 maanden']++
                 if (this.checkSingleDate(c, 6)) p['< 6 maanden']++
@@ -95,7 +112,7 @@ export const useContentStore = defineStore('content', {
             }, { 'alle': 0,'< 3 maanden': 0, '< 6 maanden': 0, '< 12 maanden': 0});
         },
         groupedActivities() {
-            return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
+            return this.content.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
                 const act = c['activity'] || c['activities'];
                 if (act === undefined) return p
                 if (Array.isArray(act)) {
@@ -247,7 +264,7 @@ export const useContentStore = defineStore('content', {
             // })
 
             // filter content
-            data = data.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
+            data = data.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
 
             for (const item of data) {
                 this.filteredData.push(item)
@@ -280,6 +297,14 @@ export const useContentStore = defineStore('content', {
             if (!advancedSearchDesc) return true
             const s = this.normalizeInput(advancedSearchDesc)
             return this.normalizeInput(item['description']).includes(s)
+        },
+        /**
+         * Filter items by platform
+         * @param item
+         * @returns {boolean|*}
+         */
+        f_platform(item) {
+            return !this.filters.platform.length || this.filters.platform.some(platform => item[platform + "_id"]);
         },
         /**
          * Filter item by paywall
@@ -447,6 +472,9 @@ export const useContentStore = defineStore('content', {
         resetFilters() {
             this.filters = {
                 type: [],
+                platform: [],
+                free: false,
+                vodOnly: false,
                 date: {
                     range: 'alle',
                     after: '',
@@ -479,6 +507,7 @@ export const useContentStore = defineStore('content', {
         },
         setFilterFromQuery(urlParams) {
             if(urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
+            if(urlParams.getAll('platform')) this.filters.platform = urlParams.getAll('platform')
             if(urlParams.get('free')) this.filters.free = urlParams.get('free')
             if(urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
             if(urlParams.get('date_range')) this.filters.date.range = urlParams.get('date_range')
@@ -490,8 +519,9 @@ export const useContentStore = defineStore('content', {
         },
         updateUrl() {
             const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
+            const platforms = this.filters.platform.length ? this.filters.platform.map(t => ['platform', t]) : []
             const acts = this.filters.activity.length ? this.filters.activity.map(t => ['activity', t]) : []
-            let search = new URLSearchParams(types.concat(acts))
+            let search = new URLSearchParams(types.concat(acts).concat(platforms))
             if (this.filters.free)
                 search.append('free', this.filters.free)
             if (this.filters.vodOnly)
@@ -506,7 +536,11 @@ export const useContentStore = defineStore('content', {
                 search.append('duration_min', this.filters.duration.min)
             if (this.filters.duration.max)
                 search.append('duration_max', this.filters.duration.max)
-            router.replace({query: { filter: search.toString() }}).then(r => {})
+            if (search.toString().length)
+                router.replace({query: { filter: search.toString() }}).then(r => {})
+            else
+                router.replace({query: null}).then(r => {})
+
         }
     }
 })

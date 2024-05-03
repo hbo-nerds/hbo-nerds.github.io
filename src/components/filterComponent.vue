@@ -23,6 +23,25 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapsePlatform" aria-expanded="false" aria-controls="collapsePlatform">
+                        <small>Platform</small>
+                    </button>
+                </h2>
+                <div id="collapsePlatform" class="accordion-collapse collapse px-0">
+                    <div class="accordion-body px-0">
+                        <div class="form-check" v-for="(count, platform, idx) in groupedPlatforms" :key="idx">
+                            <input class="form-check-input" type="checkbox" :id="'platform-' + platform" :value="platform" name="platform"
+                                   @change="contentStore.filter()" v-model="filters.platform">
+                            <label class="form-check-label text-capitalize" :for="'platform-' + platform">
+                                {{platform}} ({{ count }})
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <!-- date -->
             <div class="accordion-item bg-transparent">
                 <h2 class="accordion-header">
@@ -144,7 +163,7 @@ import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
 
 const contentStore = useContentStore()
-const {filters, groupedActivities, groupedTypes, groupedDates} = storeToRefs(contentStore)
+const {filters, groupedActivities, groupedTypes, groupedPlatforms, groupedDates} = storeToRefs(contentStore)
 
 const f_term = ref('')
 const f_activities = computed(() => {

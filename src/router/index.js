@@ -1,4 +1,4 @@
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SeriesView from "@/views/SeriesView.vue";
 import SingleItemView from "@/views/SingleItemView.vue";
@@ -6,9 +6,10 @@ import SingleSeriesView from "@/views/SingleSeriesView.vue";
 import YouView from "@/views/YouView.vue";
 import SinglePlaylistView from "@/views/SinglePlaylistView.vue";
 import YouPlaylists from "@/views/YouPlaylists.vue";
+import ToolView from "@/views/ToolView.vue";
 
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: '/',
@@ -35,7 +36,13 @@ const router = createRouter({
       path: '/item/:id',
       name: 'single-item',
       component: SingleItemView
-    }
+    },
+    {
+      path: '/upload-tool',
+      name: 'upload-tool',
+      component: ToolView
+    },
+    { path: "/:pathMatch(.*)*", redirect: '/' }
   ]
 })
 
