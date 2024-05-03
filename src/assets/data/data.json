@@ -11955,9 +11955,9 @@
             "date": "2017-04-13",
             "duration": 4080,
             "youtube_id": "zP6DjczTqKc",
-            "titles": [
-                "[AUTO] Lekker Spelen speelt Super Mario Maker!"
-            ],
+          "titles": [
+            "Mario Maker - Leveltje van Linkhijger"
+          ],
             "activities": [
                 {
                     "title": "Super Mario Maker",
@@ -12051,9 +12051,9 @@
             "date": "2017-04-19",
             "duration": 13560,
             "youtube_id": "P5ZJj4ylJ0I",
-            "titles": [
-                "[AUTO] Lekker Spelen speelt Hearthstone!"
-            ],
+          "titles": [
+            "Streampie met Tiempie - Hearthstone leren"
+          ],
             "activities": [
                 {
                     "title": "Heartstone",
@@ -12128,9 +12128,9 @@
             "duration": 6840,
             "youtube_id": "tjmDQtwOepE",
             "collection": 40,
-            "titles": [
-                "[AUTO] Lekker Spelen speelt Little Nightmares!"
-            ],
+          "titles": [
+            "Little Nightmares Deel 1"
+          ],
             "activities": [
                 {
                     "title": "Little Nightmares",
@@ -12197,9 +12197,9 @@
             "date": "2017-04-26",
             "duration": 1680,
             "youtube_id": "Yz0p5segYrM",
-            "titles": [
-                "[AUTO] Lekker Spelen speelt Donkey Kong Country!"
-            ],
+          "titles": [
+            "De eerste wereld binnen 5 minuten?"
+          ],
             "activities": [
                 {
                     "title": "Donkey Kong Country",
@@ -34397,9 +34397,9 @@
             "date": "2020-07-15",
             "duration": 7800,
             "youtube_id": "nvmBRUtmpzw",
-            "titles": [
-                "[AUTO] Lekker Spelen speelt Super Mario Bros. (1)!"
-            ],
+          "titles": [
+            "PETER vs TIMON: Retro Nintendo games"
+          ],
             "activities": [
                 {
                     "title": "Super Mario Bros. (1)",
@@ -49340,6 +49340,25 @@
             "type": "stream"
         },
         {
+            "date": "2024-04-21",
+            "time_start": "20:38:57",
+            "time_end": "22:30:19",
+            "titles": [
+                "ZOEK DIE VERSCHILLEN (extreme)"
+            ],
+            "activities": [
+                {
+                    "title": "Shinkansen 0",
+                    "duration": 5462
+                }
+            ],
+            "duration": 5462,
+            "twitch_id": "2126900234",
+            "youtube_id": "YapargPDHro",
+            "id": "3648",
+            "type": "stream"
+        },
+        {
             "id": "4da4",
             "type": "video",
             "date": "2024-04-23",
@@ -49347,43 +49366,63 @@
             "duration": 315,
             "youtube_id": "ztCE2_hepD8"
         },
-      {
-        "date": "2024-04-24",
-        "time_start": "20:38:57",
-        "time_end": "22:30:19",
-        "titles": [
-          "We gaan VIRAL 🔥"
-        ],
-        "activities": [
-          {
-            "title": "Content Warning",
-            "duration": 5762
-          }
-        ],
-        "duration": 6682,
-        "twitch_id": "2128608016",
-        "youtube_id": "NK86YqerPuw",
-        "id": "3647",
-        "type": "stream"
-      },
-      {
-        "date": "2024-04-21",
-        "time_start": "20:38:57",
-        "time_end": "22:30:19",
-        "titles": [
-          "ZOEK DIE VERSCHILLEN (extreme)"
-        ],
-        "activities": [
-          {
-            "title": "Shinkansen 0",
-            "duration": 5462
-          }
-        ],
-        "duration": 5462,
-        "twitch_id": "2126900234",
-        "youtube_id": "YapargPDHro",
-        "id": "3648",
-        "type": "stream"
-      }
+        {
+            "date": "2024-04-24",
+            "time_start": "20:38:57",
+            "time_end": "22:30:19",
+            "titles": [
+                "We gaan VIRAL 🔥"
+            ],
+            "activities": [
+                {
+                    "title": "Content Warning",
+                    "duration": 5762
+                }
+            ],
+            "duration": 6682,
+            "twitch_id": "2128608016",
+            "youtube_id": "NK86YqerPuw",
+            "id": "3647",
+            "type": "stream"
+        },
+        {
+            "date": "2024-04-29",
+            "time_start": "20:47:16",
+            "time_end": "22:49:44",
+            "titles": [
+                "IK WANNEER DIE JONGENS WEER LIVE ZIJN"              
+            ],
+            "activities": [
+                {
+                    "title": "Internet cafe Simulator 2",
+                    "duration": 6680
+                }
+            ],
+            "duration": 7348,
+            "twitch_id": "2133052022",
+            "youtube_id": "lDxJW_FfcrU",
+            "id": "5653",
+            "type": "stream"
+        },
+        {
+            "date": "2024-05-01",
+            "time_start": "20:42:24",
+            "time_end": "22:41:03",
+            "titles": [
+                "😉",
+                "Stanley Parable Ultra Deluxe"
+            ],
+            "activities": [
+                {
+                    "title": "The Stanley Parable: Ultra Deluxe",
+                    "duration": 6196
+                }
+            ],
+            "duration": 7119,
+            "twitch_id": "2134787503",
+            "youtube_id": "9VcACBp95Qk",
+            "id": "1199",
+            "type": "stream"
+        }
     ]
 }
