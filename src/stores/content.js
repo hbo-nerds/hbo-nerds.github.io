@@ -458,7 +458,6 @@ export const useContentStore = defineStore('content', {
             if(urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
         },
         updateUrl() {
-            console.log(this.filters)
             const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
             const platforms = this.filters.platform.length ? this.filters.platform.map(t => ['platform', t]) : []
             const acts = this.filters.activity.length ? this.filters.activity.map(t => ['activity', t]) : []
@@ -477,7 +476,11 @@ export const useContentStore = defineStore('content', {
                 search.append('duration_min', this.filters.duration.min)
             if (this.filters.duration.max)
                 search.append('duration_max', this.filters.duration.max)
-            router.replace({query: { filter: search.toString() }}).then(r => {})
+            if (search.toString().length)
+                router.replace({query: { filter: search.toString() }}).then(r => {})
+            else
+                router.replace({query: null}).then(r => {})
+
         }
     }
 })
