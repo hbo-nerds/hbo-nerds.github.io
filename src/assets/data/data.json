@@ -248,10 +248,50 @@
             "id": 65,
             "title": "H1Z1"
         },
-        {
-            "id": 66,
-            "title": "Pokemon Let's Go (shiny's)"
-        }
+      {
+        "id": 66,
+        "title": "Pokemon Let's Go (shiny's)"
+      },
+      {
+        "id": 67,
+        "title": "Royal Rumble"
+      },
+      {
+        "id": 68,
+        "title": "Zoek de verschillen"
+      },
+      {
+        "id": 69,
+        "title": "Fiver"
+      },
+      {
+        "id": 70,
+        "title": "Simulator Spellen"
+      },
+      {
+        "id": 71,
+        "title": "Coop Streams"
+      },
+      {
+        "id": 72,
+        "title": "E3"
+      },
+      {
+        "id": 73,
+        "title": "Veed Awards"
+      },
+      {
+        "id": 74,
+        "title": "Peter VS Timon"
+      },
+      {
+        "id": 75,
+        "title": "Lekker Spelen VS Kijkers"
+      },
+      {
+        "id": 76,
+        "title": "Pokemon Pack Openings"
+      }
     ],
     "content": [
         {
@@ -1251,7 +1291,8 @@
             "title": "Goat Simulator - Lekker spelen",
             "duration": 304,
             "youtube_id": "SnEFnNkNddE",
-            "activity": "Goat Simulator"
+          "activity": "Goat Simulator",
+            "collection":  70
         },
         {
             "id": "f6c1",
@@ -1813,15 +1854,16 @@
                 "solo"
             ]
         },
-        {
-            "id": "e444",
-            "type": "video",
-            "date": "2014-06-09",
-            "title": "Live E3 tweet sessie",
-            "duration": 28,
-            "youtube_id": "Nq4st3ypowE",
-            "activity": "Aankondiging"
-        },
+      {
+        "id": "e444",
+        "type": "video",
+        "date": "2014-06-09",
+        "title": "Live E3 tweet sessie",
+        "duration": 28,
+        "youtube_id": "Nq4st3ypowE",
+        "collection": 72,
+        "activity": "Aankondiging"
+      },
         {
             "id": "ra537260178",
             "type": "stream",
@@ -2016,25 +2058,26 @@
                 "solo"
             ]
         },
-        {
-            "id": "6932",
-            "type": "stream",
-            "date": "2014-06-23",
-            "duration": 120,
-            "titles": [
-                "Peter vs kijkers: Mario Kart 8"
-            ],
-            "activities": [
-                {
-                    "title": "Mario Kart 8",
-                    "duration": 1200
-                }
-            ],
-            "twitch_id": "48713242",
-            "tags": [
-                "main"
-            ]
-        },
+      {
+        "id": "6932",
+        "collection": 75,
+        "type": "stream",
+        "date": "2014-06-23",
+        "duration": 120,
+        "titles": [
+          "Peter vs kijkers: Mario Kart 8"
+        ],
+        "activities": [
+          {
+            "title": "Mario Kart 8",
+            "duration": 1200
+          }
+        ],
+        "twitch_id": "48713242",
+        "tags": [
+          "main"
+        ]
+      },
         {
             "id": "63a1",
             "type": "stream",
@@ -6667,15 +6710,16 @@
             "youtube_id": "0AK-u2mSyJ0",
             "activity": "Aankondiging"
         },
-        {
-            "id": "fb36",
-            "type": "video",
-            "date": "2015-06-15",
-            "title": "Live E3 commentaar sessie!",
-            "duration": 28,
-            "youtube_id": "flek9IVuzvY",
-            "activity": "Aankondiging"
-        },
+      {
+        "id": "fb36",
+        "type": "video",
+        "date": "2015-06-15",
+        "title": "Live E3 commentaar sessie!",
+        "duration": 28,
+        "youtube_id": "flek9IVuzvY",
+        "activity": "Aankondiging",
+        "collection": 72
+      },
         {
             "id": "ad50",
             "type": "video",
@@ -8026,25 +8070,26 @@
                 "main"
             ]
         },
-        {
-            "id": "e341",
-            "type": "stream",
-            "date": "2015-11-16",
-            "duration": 2880,
-            "titles": [
-                "Street Cleaning Simulator"
-            ],
-            "activities": [
-                {
-                    "title": "Street Cleaning Simulator",
-                    "duration": 2880
-                }
-            ],
-            "twitch_id": "26141703",
-            "tags": [
-                "main"
-            ]
-        },
+      {
+        "id": "e341",
+        "type": "stream",
+        "date": "2015-11-16",
+        "duration": 2880,
+        "collection": 70,
+        "titles": [
+          "Street Cleaning Simulator"
+        ],
+        "activities": [
+          {
+            "title": "Street Cleaning Simulator",
+            "duration": 2880
+          }
+        ],
+        "twitch_id": "26141703",
+        "tags": [
+          "main"
+        ]
+      },
         {
             "id": "0596",
             "type": "stream",
@@ -8137,15 +8182,16 @@
             "collection": 34,
             "activity": "Starlit Adventures"
         },
-        {
-            "id": "01da",
-            "type": "video",
-            "date": "2015-11-27",
-            "title": "Street Cleaning Simulator -  Lekker spelen",
-            "duration": 312,
-            "youtube_id": "OR9yqqEz6UI",
-            "activity": "Street Cleaning Simulator"
-        },
+      {
+        "id": "01da",
+        "type": "video",
+        "date": "2015-11-27",
+        "title": "Street Cleaning Simulator -  Lekker spelen",
+        "duration": 312,
+        "youtube_id": "OR9yqqEz6UI",
+        "activity": "Street Cleaning Simulator",
+        "collection": 70
+      },
         {
             "id": "567b",
             "type": "podcast",
@@ -8406,15 +8452,16 @@
             "youtube_id": "gm_HEarXOME",
             "activity": "Aankondiging"
         },
-        {
-            "id": "7f9e",
-            "type": "video",
-            "date": "2016-01-13",
-            "title": "Tea Party Simulator - Lekker spelen",
-            "duration": 347,
-            "youtube_id": "bMQBP8cQpzc",
-            "activity": "Tea Party Simulator"
-        },
+      {
+        "id": "7f9e",
+        "type": "video",
+        "date": "2016-01-13",
+        "title": "Tea Party Simulator - Lekker spelen",
+        "duration": 347,
+        "youtube_id": "bMQBP8cQpzc",
+        "activity": "Tea Party Simulator",
+        "collection": 70
+      },
         {
             "id": "f2ee",
             "type": "video",
@@ -8549,25 +8596,26 @@
                 "emote origin"
             ]
         },
-        {
-            "id": "3722",
-            "type": "stream",
-            "date": "2016-01-20",
-            "duration": 3780,
-            "titles": [
-                "Tea Party Simulator 2015 - LEKKER SPELEN LIVE"
-            ],
-            "activities": [
-                {
-                    "title": "Tea Party Simulator 2015",
-                    "duration": 3780
-                }
-            ],
-            "twitch_id": "36466739",
-            "tags": [
-                "main"
-            ]
-        },
+      {
+        "id": "3722",
+        "type": "stream",
+        "date": "2016-01-20",
+        "duration": 3780,
+        "collection": 70,
+        "titles": [
+          "Tea Party Simulator 2015 - LEKKER SPELEN LIVE"
+        ],
+        "activities": [
+          {
+            "title": "Tea Party Simulator 2015",
+            "duration": 3780
+          }
+        ],
+        "twitch_id": "36466739",
+        "tags": [
+          "main"
+        ]
+      },
         {
             "id": "e10c",
             "type": "video",
@@ -8831,15 +8879,16 @@
             "collection": 7,
             "activity": "Beyond: Two Souls"
         },
-        {
-            "id": "079a",
-            "type": "video",
-            "date": "2016-02-22",
-            "title": "Twee linkerhanden - Surgeon Simulator",
-            "duration": 290,
-            "youtube_id": "myOLJKiRgjM",
-            "activity": "Surgeon Simulator"
-        },
+      {
+        "id": "079a",
+        "type": "video",
+        "date": "2016-02-22",
+        "title": "Twee linkerhanden - Surgeon Simulator",
+        "duration": 290,
+        "youtube_id": "myOLJKiRgjM",
+        "activity": "Surgeon Simulator",
+        "collection": 70
+      },
         {
             "id": "e5e7",
             "type": "video",
@@ -9128,25 +9177,26 @@
                 "casual"
             ]
         },
-        {
-            "id": "da01",
-            "type": "stream",
-            "date": "2016-03-15",
-            "duration": 4200,
-            "titles": [
-                "Surgeon Simulator Co-op"
-            ],
-            "activities": [
-                {
-                    "title": "Surgeon Simulator",
-                    "duration": 4200
-                }
-            ],
-            "twitch_id": "54583658",
-            "tags": [
-                "casual"
-            ]
-        },
+      {
+        "id": "da01",
+        "type": "stream",
+        "date": "2016-03-15",
+        "duration": 4200,
+        "collection": 70,
+        "titles": [
+          "Surgeon Simulator Co-op"
+        ],
+        "activities": [
+          {
+            "title": "Surgeon Simulator",
+            "duration": 4200
+          }
+        ],
+        "twitch_id": "54583658",
+        "tags": [
+          "casual"
+        ]
+      },
         {
             "id": "2033",
             "type": "stream",
@@ -9727,15 +9777,16 @@
             "youtube_id": "w68wd1F901Y",
             "activity": "Dora Redt de Sneeuwprinses"
         },
-        {
-            "id": "5b09",
-            "type": "video",
-            "date": "2016-06-13",
-            "title": "KIJKEN JULLIE MEE!? - E3 2016 Live MARATHON!",
-            "duration": 46,
-            "youtube_id": "DOZYq3ThjpY",
-            "activity": "Aankondiging"
-        },
+      {
+        "id": "5b09",
+        "type": "video",
+        "date": "2016-06-13",
+        "title": "KIJKEN JULLIE MEE!? - E3 2016 Live MARATHON!",
+        "duration": 46,
+        "youtube_id": "DOZYq3ThjpY",
+        "activity": "Aankondiging",
+        "collection": 72
+      },
         {
             "id": "1fe7",
             "type": "podcast",
@@ -9755,14 +9806,15 @@
             "collection": 9,
             "activity": "Heavy Rain"
         },
-        {
-            "id": "c8b6",
-            "type": "podcast",
-            "date": "2016-06-17",
-            "title": "De Top 10 Meest Sappige Games van E3 2016 -  Lekker spreken",
-            "duration": 1635,
-            "youtube_id": "WKQYeq34Bdo"
-        },
+      {
+        "id": "c8b6",
+        "type": "podcast",
+        "date": "2016-06-17",
+        "title": "De Top 10 Meest Sappige Games van E3 2016 -  Lekker spreken",
+        "duration": 1635,
+        "youtube_id": "WKQYeq34Bdo",
+        "collection": 72
+      },
         {
             "id": "f00e",
             "type": "stream",
@@ -13377,75 +13429,78 @@
             "time_start": "00:29:00",
             "time_end": "03:25:00"
         },
-        {
-            "id": "0ad2",
-            "type": "stream",
-            "date": "2017-06-11",
-            "duration": 10080,
-            "youtube_id": "S_iLbJPuHPU",
-            "titles": [
-                "E3 2017 - Microsoft persconferentie (Durf te dromen)"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2017",
-                    "duration": 10080
-                }
-            ],
-            "twitchtracker_id": "25487566880",
-            "twitch_id": "165222004",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "22:16:00",
-            "time_end": "01:05:00"
-        },
-        {
-            "id": "c953",
-            "type": "stream",
-            "date": "2017-06-12",
-            "duration": 24240,
-            "youtube_id": "Vr0pogGcZ6s",
-            "titles": [
-                "E3 2017 - Ubisoft & Sony persconferentie (Durf te dromen)"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2017",
-                    "duration": 24240
-                }
-            ],
-            "twitchtracker_id": "25494518528",
-            "twitch_id": "165222900",
-            "tags": [
-                "main"
-            ],
-            "time_start": "21:30:00",
-            "time_end": "04:15:00"
-        },
-        {
-            "id": "974e",
-            "type": "stream",
-            "date": "2017-06-13",
-            "duration": 4200,
-            "youtube_id": "wTGOnTFEtfI",
-            "titles": [
-                "Potje met Peetje"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2017",
-                    "duration": 4200
-                }
-            ],
-            "twitchtracker_id": "25500160592",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "17:24:00",
-            "time_end": "18:35:00"
-        },
+      {
+        "id": "0ad2",
+        "type": "stream",
+        "date": "2017-06-11",
+        "duration": 10080,
+        "youtube_id": "S_iLbJPuHPU",
+        "titles": [
+          "E3 2017 - Microsoft persconferentie (Durf te dromen)"
+        ],
+        "activities": [
+          {
+            "title": "E3 2017",
+            "duration": 10080
+          }
+        ],
+        "twitchtracker_id": "25487566880",
+        "twitch_id": "165222004",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "22:16:00",
+        "time_end": "01:05:00",
+        "collection": 72
+      },
+      {
+        "id": "c953",
+        "type": "stream",
+        "date": "2017-06-12",
+        "duration": 24240,
+        "youtube_id": "Vr0pogGcZ6s",
+        "titles": [
+          "E3 2017 - Ubisoft & Sony persconferentie (Durf te dromen)"
+        ],
+        "activities": [
+          {
+            "title": "E3 2017",
+            "duration": 24240
+          }
+        ],
+        "twitchtracker_id": "25494518528",
+        "twitch_id": "165222900",
+        "tags": [
+          "main"
+        ],
+        "time_start": "21:30:00",
+        "time_end": "04:15:00",
+        "collection": 72
+      },
+      {
+        "id": "974e",
+        "type": "stream",
+        "date": "2017-06-13",
+        "duration": 4200,
+        "youtube_id": "wTGOnTFEtfI",
+        "titles": [
+          "Potje met Peetje"
+        ],
+        "activities": [
+          {
+            "title": "E3 2017",
+            "duration": 4200
+          }
+        ],
+        "twitchtracker_id": "25500160592",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "17:24:00",
+        "time_end": "18:35:00",
+        "collection": 72
+      },
         {
             "id": "5f27",
             "type": "stream",
@@ -19843,33 +19898,34 @@
             "time_start": "16:49:00",
             "time_end": "17:45:00"
         },
-        {
-            "id": "202d",
-            "type": "stream",
-            "date": "2018-02-14",
-            "duration": 10800,
-            "youtube_id": "mdboAPkTEaw",
-            "titles": [
-                "Wat gaan we doen ALS we winnen?! (Veed Awards bespreking)"
-            ],
-            "activities": [
-                {
-                    "title": "IRL",
-                    "duration": 8100
-                },
-                {
-                    "title": "Yakuza 6: The Song of Life",
-                    "duration": 2700
-                }
-            ],
-            "twitchtracker_id": "27606829424",
-            "twitch_id": "230509864",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:24:00",
-            "time_end": "23:25:00"
-        },
+      {
+        "id": "202d",
+        "type": "stream",
+        "date": "2018-02-14",
+        "duration": 10800,
+        "youtube_id": "mdboAPkTEaw",
+        "titles": [
+          "Wat gaan we doen ALS we winnen?! (Veed Awards bespreking)"
+        ],
+        "activities": [
+          {
+            "title": "IRL",
+            "duration": 8100
+          },
+          {
+            "title": "Yakuza 6: The Song of Life",
+            "duration": 2700
+          }
+        ],
+        "twitchtracker_id": "27606829424",
+        "twitch_id": "230509864",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:24:00",
+        "time_end": "23:25:00",
+        "collection": 73
+      },
         {
             "id": "c2b1",
             "type": "stream",
@@ -20805,27 +20861,28 @@
             "youtube_id": "M2j6UM4Zyx4",
             "activity": "Just Chatting"
         },
-        {
-            "id": "ed67",
-            "type": "stream",
-            "date": "2018-03-24",
-            "duration": 8340,
-            "titles": [
-                "VEED AWARDS UITREIKING (dream stream supreme)"
-            ],
-            "activities": [
-                {
-                    "title": "IRL",
-                    "duration": 8340
-                }
-            ],
-            "twitchtracker_id": "28053244608",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:36:00",
-            "time_end": "17:55:00"
-        },
+      {
+        "id": "ed67",
+        "type": "stream",
+        "date": "2018-03-24",
+        "duration": 8340,
+        "titles": [
+          "VEED AWARDS UITREIKING (dream stream supreme)"
+        ],
+        "activities": [
+          {
+            "title": "IRL",
+            "duration": 8340
+          }
+        ],
+        "twitchtracker_id": "28053244608",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "15:36:00",
+        "time_end": "17:55:00",
+        "collection": 73
+      },
         {
             "id": "85a7",
             "type": "video",
@@ -21415,33 +21472,34 @@
             "time_start": "15:34:00",
             "time_end": "17:45:00"
         },
-        {
-            "id": "526d",
-            "type": "stream",
-            "date": "2018-04-23",
-            "duration": 7260,
-            "youtube_id": "eEJUavBIE8Q",
-            "titles": [
-                "Dinodag vieren met Lekker spelen (die jolige jongens)"
-            ],
-            "activities": [
-                {
-                    "title": "Beast Battle Simulator",
-                    "duration": 6360
-                },
-                {
-                    "title": "Variety",
-                    "duration": 900
-                }
-            ],
-            "twitchtracker_id": "28442985056",
-            "twitch_id": "266897382",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:23:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "526d",
+        "type": "stream",
+        "date": "2018-04-23",
+        "duration": 7260,
+        "youtube_id": "eEJUavBIE8Q",
+        "titles": [
+          "Dinodag vieren met Lekker spelen (die jolige jongens)"
+        ],
+        "activities": [
+          {
+            "title": "Beast Battle Simulator",
+            "duration": 6360
+          },
+          {
+            "title": "Variety",
+            "duration": 900
+          }
+        ],
+        "twitchtracker_id": "28442985056",
+        "twitch_id": "266897382",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:23:00",
+        "time_end": "22:25:00",
+        "collection": 70
+      },
         {
             "id": "08d1",
             "type": "video",
@@ -21926,29 +21984,30 @@
             "time_start": "00:30:00",
             "time_end": "02:05:00"
         },
-        {
-            "id": "d247",
-            "type": "stream",
-            "date": "2018-05-21",
-            "duration": 2520,
-            "youtube_id": "eqd8dB8ziLM",
-            "titles": [
-                "LEKKER SPREKEN (podcast opname) - E3 LEAKS"
-            ],
-            "activities": [
-                {
-                    "title": "Talk Shows & Podcasts",
-                    "duration": 2520
-                }
-            ],
-            "twitchtracker_id": "28780078816",
-            "tags": [
-                "main",
-                "e3"
-            ],
-            "time_start": "16:22:00",
-            "time_end": "17:05:00"
-        },
+      {
+        "id": "d247",
+        "type": "stream",
+        "date": "2018-05-21",
+        "duration": 2520,
+        "youtube_id": "eqd8dB8ziLM",
+        "titles": [
+          "LEKKER SPREKEN (podcast opname) - E3 LEAKS"
+        ],
+        "activities": [
+          {
+            "title": "Talk Shows & Podcasts",
+            "duration": 2520
+          }
+        ],
+        "twitchtracker_id": "28780078816",
+        "tags": [
+          "main",
+          "e3"
+        ],
+        "time_start": "16:22:00",
+        "time_end": "17:05:00",
+        "collection": 72
+      },
         {
             "id": "abb7",
             "type": "stream",
@@ -22205,14 +22264,15 @@
             "time_start": "20:04:00",
             "time_end": "23:35:00"
         },
-        {
-            "id": "d404",
-            "type": "podcast",
-            "date": "2018-06-06",
-            "title": "Onze wildste dromen voor E3 2018!",
-            "duration": 1734,
-            "youtube_id": "eqd8dB8ziLM"
-        },
+      {
+        "id": "d404",
+        "type": "podcast",
+        "date": "2018-06-06",
+        "title": "Onze wildste dromen voor E3 2018!",
+        "duration": 1734,
+        "youtube_id": "eqd8dB8ziLM",
+        "collection": 72
+      },
         {
             "id": "99a6",
             "type": "stream",
@@ -22264,161 +22324,172 @@
             "time_start": "16:29:00",
             "time_end": "17:35:00"
         },
-        {
-            "id": "0f83",
-            "type": "video",
-            "date": "2018-06-08",
-            "title": "Kan ik zo'n E3 HYPE krijgennn?!",
-            "duration": 57,
-            "youtube_id": "v4khoMRHIbc",
-            "activity": "Aankondiging"
-        },
-        {
-            "id": "57b4",
-            "type": "podcast",
-            "date": "2018-06-09",
-            "title": "EA presentatie -  E3 2018 (live reacties)",
-            "duration": 1392,
-            "youtube_id": "BNoJ71UdjLE"
-        },
-        {
-            "id": "795a",
-            "type": "stream",
-            "date": "2018-06-09",
-            "duration": 6180,
-            "youtube_id": "VpuigXULK5I",
-            "titles": [
-                "EA Presentatie - E3 2018 (live commentaar)"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2018",
-                    "duration": 6180
-                }
-            ],
-            "twitchtracker_id": "29024935808",
-            "twitch_id": "271391230",
-            "tags": [
-                "casual",
-                "e3"
-            ],
-            "time_start": "19:11:00",
-            "time_end": "20:55:00"
-        },
-        {
-            "id": "a95b",
-            "type": "stream",
-            "date": "2018-06-10",
-            "duration": 27720,
-            "youtube_id": "h219BmqgdY0",
-            "titles": [
-                "Microsoft Xbox Presentatie - E3 2018 (live commentaar)"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2018",
-                    "duration": 27720
-                }
-            ],
-            "twitchtracker_id": "29040464432",
-            "twitch_id": "271986520",
-            "extra_urls": "https://www.twitch.tv/videos/271985297",
-            "tags": [
-                "casual",
-                "e3"
-            ],
-            "time_start": "21:12:00",
-            "time_end": "04:55:00"
-        },
-        {
-            "id": "010e",
-            "type": "podcast",
-            "date": "2018-06-11",
-            "title": "Xbox Presentatie -  E3 2018 (live reacties)",
-            "duration": 2623,
-            "youtube_id": "xGnurG8nm8Y"
-        },
-        {
-            "id": "9f4c",
-            "type": "podcast",
-            "date": "2018-06-11",
-            "title": "Bethesda Presentatie - E3 2018 (live reacties)",
-            "duration": 1633,
-            "youtube_id": "o4HA82qcLKs"
-        },
-        {
-            "id": "90d3",
-            "type": "stream",
-            "date": "2018-06-11",
-            "duration": 26880,
-            "youtube_id": "Bw3h4udfS6k",
-            "titles": [
-                "Ubisoft + Playstation Presentatie - E3 2018 (live commentaar)"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2018",
-                    "duration": 26880
-                }
-            ],
-            "twitchtracker_id": "29052708640",
-            "twitch_id": "272383040",
-            "extra_urls": "https://www.twitch.tv/videos/272375871",
-            "tags": [
-                "main",
-                "e3"
-            ],
-            "time_start": "21:06:00",
-            "time_end": "04:35:00"
-        },
-        {
-            "id": "42a6",
-            "type": "podcast",
-            "date": "2018-06-12",
-            "title": "Ubisoft Presentatie -  E3 2018 (live reacties)",
-            "duration": 1960,
-            "youtube_id": "SwSYw_MiS2o"
-        },
-        {
-            "id": "b04c",
-            "type": "podcast",
-            "date": "2018-06-12",
-            "title": "Playstation Presentatie - E3 2018 (live reacties)",
-            "duration": 670,
-            "youtube_id": "9oc9-clPnxI"
-        },
-        {
-            "id": "dc54",
-            "type": "podcast",
-            "date": "2018-06-12",
-            "title": "Nintendo Presentatie -  E3 2018 (live reacties)",
-            "duration": 2580,
-            "youtube_id": "nQl07QMrLuY"
-        },
-        {
-            "id": "d645",
-            "type": "stream",
-            "date": "2018-06-12",
-            "duration": 5940,
-            "youtube_id": "SmdJv1-7C5c",
-            "titles": [
-                "Nintendo Presentatie - E3 2018 (live commentaar)"
-            ],
-            "activities": [
-                {
-                    "title": "E3 2018",
-                    "duration": 5940
-                }
-            ],
-            "twitchtracker_id": "29062454096",
-            "twitch_id": "272450536",
-            "tags": [
-                "casual",
-                "e3"
-            ],
-            "time_start": "17:06:00",
-            "time_end": "18:45:00"
-        },
+      {
+        "id": "0f83",
+        "type": "video",
+        "date": "2018-06-08",
+        "title": "Kan ik zo'n E3 HYPE krijgennn?!",
+        "duration": 57,
+        "youtube_id": "v4khoMRHIbc",
+        "activity": "Aankondiging",
+        "collection": 72
+      },
+      {
+        "id": "57b4",
+        "type": "podcast",
+        "date": "2018-06-09",
+        "title": "EA presentatie -  E3 2018 (live reacties)",
+        "duration": 1392,
+        "youtube_id": "BNoJ71UdjLE",
+        "collection": 72
+      },
+      {
+        "id": "795a",
+        "type": "stream",
+        "date": "2018-06-09",
+        "duration": 6180,
+        "youtube_id": "VpuigXULK5I",
+        "titles": [
+          "EA Presentatie - E3 2018 (live commentaar)"
+        ],
+        "activities": [
+          {
+            "title": "E3 2018",
+            "duration": 6180
+          }
+        ],
+        "twitchtracker_id": "29024935808",
+        "twitch_id": "271391230",
+        "tags": [
+          "casual",
+          "e3"
+        ],
+        "time_start": "19:11:00",
+        "time_end": "20:55:00",
+        "collection": 72
+      },
+      {
+        "id": "a95b",
+        "type": "stream",
+        "date": "2018-06-10",
+        "duration": 27720,
+        "youtube_id": "h219BmqgdY0",
+        "titles": [
+          "Microsoft Xbox Presentatie - E3 2018 (live commentaar)"
+        ],
+        "activities": [
+          {
+            "title": "E3 2018",
+            "duration": 27720
+          }
+        ],
+        "twitchtracker_id": "29040464432",
+        "twitch_id": "271986520",
+        "extra_urls": "https://www.twitch.tv/videos/271985297",
+        "tags": [
+          "casual",
+          "e3"
+        ],
+        "time_start": "21:12:00",
+        "time_end": "04:55:00",
+        "collection": 72
+      },
+      {
+        "id": "010e",
+        "type": "podcast",
+        "date": "2018-06-11",
+        "title": "Xbox Presentatie -  E3 2018 (live reacties)",
+        "duration": 2623,
+        "youtube_id": "xGnurG8nm8Y",
+        "collection": 72
+      },
+      {
+        "id": "9f4c",
+        "type": "podcast",
+        "date": "2018-06-11",
+        "title": "Bethesda Presentatie - E3 2018 (live reacties)",
+        "duration": 1633,
+        "youtube_id": "o4HA82qcLKs",
+        "collection": 72
+      },
+      {
+        "id": "90d3",
+        "type": "stream",
+        "date": "2018-06-11",
+        "duration": 26880,
+        "youtube_id": "Bw3h4udfS6k",
+        "titles": [
+          "Ubisoft + Playstation Presentatie - E3 2018 (live commentaar)"
+        ],
+        "activities": [
+          {
+            "title": "E3 2018",
+            "duration": 26880
+          }
+        ],
+        "twitchtracker_id": "29052708640",
+        "twitch_id": "272383040",
+        "extra_urls": "https://www.twitch.tv/videos/272375871",
+        "tags": [
+          "main",
+          "e3"
+        ],
+        "time_start": "21:06:00",
+        "time_end": "04:35:00",
+        "collection": 72
+      },
+      {
+        "id": "42a6",
+        "type": "podcast",
+        "date": "2018-06-12",
+        "title": "Ubisoft Presentatie -  E3 2018 (live reacties)",
+        "duration": 1960,
+        "youtube_id": "SwSYw_MiS2o",
+        "collection": 72
+      },
+      {
+        "id": "b04c",
+        "type": "podcast",
+        "date": "2018-06-12",
+        "title": "Playstation Presentatie - E3 2018 (live reacties)",
+        "duration": 670,
+        "youtube_id": "9oc9-clPnxI",
+        "collection": 72
+      },
+      {
+        "id": "dc54",
+        "type": "podcast",
+        "date": "2018-06-12",
+        "title": "Nintendo Presentatie -  E3 2018 (live reacties)",
+        "duration": 2580,
+        "youtube_id": "nQl07QMrLuY",
+        "collection": 72
+      },
+      {
+        "id": "d645",
+        "type": "stream",
+        "date": "2018-06-12",
+        "duration": 5940,
+        "youtube_id": "SmdJv1-7C5c",
+        "titles": [
+          "Nintendo Presentatie - E3 2018 (live commentaar)"
+        ],
+        "activities": [
+          {
+            "title": "E3 2018",
+            "duration": 5940
+          }
+        ],
+        "twitchtracker_id": "29062454096",
+        "twitch_id": "272450536",
+        "tags": [
+          "casual",
+          "e3"
+        ],
+        "time_start": "17:06:00",
+        "time_end": "18:45:00",
+        "collection": 72
+      },
         {
             "id": "903c",
             "type": "stream",
@@ -22443,14 +22514,15 @@
             "time_start": "20:23:00",
             "time_end": "23:45:00"
         },
-        {
-            "id": "43e5",
-            "type": "podcast",
-            "date": "2018-06-14",
-            "title": "TOP 5 Games & Momenten van E3 2018",
-            "duration": 1384,
-            "youtube_id": "aLVaO8d5Yeo"
-        },
+      {
+        "id": "43e5",
+        "type": "podcast",
+        "date": "2018-06-14",
+        "title": "TOP 5 Games & Momenten van E3 2018",
+        "duration": 1384,
+        "youtube_id": "aLVaO8d5Yeo",
+        "collection": 72
+      },
         {
             "id": "b503",
             "type": "stream",
@@ -22551,14 +22623,15 @@
             "time_start": "22:21:00",
             "time_end": "00:05:00"
         },
-        {
-            "id": "ca03",
-            "type": "podcast",
-            "date": "2018-06-22",
-            "title": "TOP 5 Dompers van E3 2018",
-            "duration": 1276,
-            "youtube_id": "cRk0Yt4vyv0"
-        },
+      {
+        "id": "ca03",
+        "type": "podcast",
+        "date": "2018-06-22",
+        "title": "TOP 5 Dompers van E3 2018",
+        "duration": 1276,
+        "youtube_id": "cRk0Yt4vyv0",
+        "collection": 72
+      },
         {
             "id": "28e9",
             "type": "video",
@@ -25156,31 +25229,32 @@
             "time_start": "20:39:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "3bd8",
-            "type": "stream",
-            "date": "2018-11-06",
-            "duration": 9900,
-            "titles": [
-                "5 JAAR LEKKER SPELEN FEEST!"
-            ],
-            "activities": [
-                {
-                    "title": "Just Chatting",
-                    "duration": 1800
-                },
-                {
-                    "title": "Goat Simulator",
-                    "duration": 8100
-                }
-            ],
-            "twitchtracker_id": "31130726880",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:39:00",
-            "time_end": "23:25:00"
-        },
+      {
+        "id": "3bd8",
+        "type": "stream",
+        "date": "2018-11-06",
+        "duration": 9900,
+        "titles": [
+          "5 JAAR LEKKER SPELEN FEEST!"
+        ],
+        "activities": [
+          {
+            "title": "Just Chatting",
+            "duration": 1800
+          },
+          {
+            "title": "Goat Simulator",
+            "duration": 8100
+          }
+        ],
+        "twitchtracker_id": "31130726880",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:39:00",
+        "time_end": "23:25:00",
+        "collection": 70
+      },
         {
             "id": "661d",
             "type": "stream",
@@ -25359,29 +25433,30 @@
             "time_start": "19:20:00",
             "time_end": "21:25:00"
         },
-        {
-            "id": "85d2",
-            "type": "stream",
-            "date": "2018-11-19",
-            "duration": 8700,
-            "youtube_id": "VU0dBhRu4ns",
-            "titles": [
-                "Farming Simulator 19!"
-            ],
-            "activities": [
-                {
-                    "title": "Farming Simulator 2019",
-                    "duration": 8700
-                }
-            ],
-            "twitchtracker_id": "31312771312",
-            "twitch_id": "361935865",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:29:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "85d2",
+        "type": "stream",
+        "date": "2018-11-19",
+        "duration": 8700,
+        "youtube_id": "VU0dBhRu4ns",
+        "titles": [
+          "Farming Simulator 19!"
+        ],
+        "activities": [
+          {
+            "title": "Farming Simulator 2019",
+            "duration": 8700
+          }
+        ],
+        "twitchtracker_id": "31312771312",
+        "twitch_id": "361935865",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:29:00",
+        "time_end": "22:55:00",
+        "collection": 70
+      },
         {
             "id": "44ca",
             "type": "stream",
@@ -26081,15 +26156,16 @@
             "duration": 2367,
             "youtube_id": "nxCnRJe7GwE"
         },
-        {
-            "id": "b819",
-            "type": "video",
-            "date": "2019-01-18",
-            "title": "Jenga met Paarden in Farming Simulator 2019!",
-            "duration": 322,
-            "youtube_id": "GRaFgoLo07U",
-            "activity": "Farming Simulator 2019"
-        },
+      {
+        "id": "b819",
+        "type": "video",
+        "date": "2019-01-18",
+        "title": "Jenga met Paarden in Farming Simulator 2019!",
+        "duration": 322,
+        "youtube_id": "GRaFgoLo07U",
+        "activity": "Farming Simulator 2019",
+        "collection": 70
+      },
         {
             "id": "2558",
             "type": "stream",
@@ -26817,33 +26893,33 @@
             "youtube_id": "dHK5e19pyps",
             "activity": "Metro Exodus"
         },
-        {
-            "id": "55dc",
-            "type": "stream",
-            "date": "2019-03-01",
-            "duration": 16860,
-            "collection": 37,
-            "titles": [
-                "Veed praatjes, The Division 2 en Resident Evil 2"
-            ],
-            "activities": [
-                {
-                    "title": "Tom Clancy's The Division 2",
-                    "duration": 8160
-                },
-                {
-                    "title": "Resident Evil 2",
-                    "duration": 8100
-                }
-            ],
-            "twitchtracker_id": "32981730224",
-            "twitch_id": "417620532",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:03:00",
-            "time_end": "00:45:00"
-        },
+      {
+        "id": "55dc",
+        "type": "stream",
+        "date": "2019-03-01",
+        "duration": 16860,
+        "collection": 37,
+        "titles": [
+          "Veed praatjes, The Division 2 en Resident Evil 2"
+        ],
+        "activities": [
+          {
+            "title": "Tom Clancy's The Division 2",
+            "duration": 8160
+          },
+          {
+            "title": "Resident Evil 2",
+            "duration": 8100
+          }
+        ],
+        "twitchtracker_id": "32981730224",
+        "twitch_id": "417620532",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:03:00",
+        "time_end": "00:45:00"
+      },
         {
             "id": "843a",
             "type": "stream",
@@ -26991,15 +27067,16 @@
             "time_start": "20:29:00",
             "time_end": "00:05:00"
         },
-        {
-            "id": "cbea",
-            "type": "video",
-            "date": "2019-03-12",
-            "title": "WAT GAAN WE DOEN als we winnen? (VEED awards)",
-            "duration": 185,
-            "youtube_id": "Hcp5UfUOf_k",
-            "activity": "Aankondiging"
-        },
+      {
+        "id": "cbea",
+        "type": "video",
+        "date": "2019-03-12",
+        "title": "WAT GAAN WE DOEN als we winnen? (VEED awards)",
+        "duration": 185,
+        "youtube_id": "Hcp5UfUOf_k",
+        "activity": "Aankondiging",
+        "collection": 73
+      },
         {
             "id": "b159",
             "type": "stream",
@@ -27170,29 +27247,30 @@
             "youtube_id": "WhE4fh6nNi0",
             "activity": "Just Chatting"
         },
-        {
-            "id": "bf29",
-            "type": "stream",
-            "date": "2019-03-23",
-            "duration": 11040,
-            "youtube_id": "UZKytEovJao",
-            "titles": [
-                "VEED AWARDS!"
-            ],
-            "activities": [
-                {
-                    "title": "Talk Shows & Podcasts",
-                    "duration": 11040
-                }
-            ],
-            "twitchtracker_id": "33338704672",
-            "extra_urls": "https://www.youtube.com/watch?v=q5aie2_gGoI",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:30:00",
-            "time_end": "18:35:00"
-        },
+      {
+        "id": "bf29",
+        "type": "stream",
+        "date": "2019-03-23",
+        "duration": 11040,
+        "youtube_id": "UZKytEovJao",
+        "titles": [
+          "VEED AWARDS!"
+        ],
+        "activities": [
+          {
+            "title": "Talk Shows & Podcasts",
+            "duration": 11040
+          }
+        ],
+        "twitchtracker_id": "33338704672",
+        "extra_urls": "https://www.youtube.com/watch?v=q5aie2_gGoI",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "15:30:00",
+        "time_end": "18:35:00",
+        "collection": 73
+      },
         {
             "id": "3df7",
             "type": "video",
@@ -28265,14 +28343,15 @@
             "time_start": "20:20:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "e8f0",
-            "type": "podcast",
-            "date": "2019-05-28",
-            "title": "Wat we willen zien tijdens E3 2019!",
-            "duration": 1931,
-            "youtube_id": "6wo5Ckq8NMc"
-        },
+      {
+        "id": "e8f0",
+        "type": "podcast",
+        "date": "2019-05-28",
+        "title": "Wat we willen zien tijdens E3 2019!",
+        "duration": 1931,
+        "youtube_id": "6wo5Ckq8NMc",
+        "collection": 72
+      },
         {
             "id": "81bd",
             "type": "video",
@@ -28582,91 +28661,98 @@
             "time_start": "21:16:00",
             "time_end": "03:55:00"
         },
-        {
-            "id": "ce80",
-            "type": "podcast",
-            "date": "2019-06-10",
-            "title": "E3 2019 - Microsoft (live reacties)",
-            "duration": 2183,
-            "youtube_id": "YvkLv5TVc-o"
-        },
-        {
-            "id": "e21c",
-            "type": "podcast",
-            "date": "2019-06-10",
-            "title": "E3 2019 -  Bethesda (live reacties)",
-            "duration": 1189,
-            "youtube_id": "B9qvZ6iI6gk"
-        },
-        {
-            "id": "9f89",
-            "type": "stream",
-            "date": "2019-06-10",
-            "duration": 25320,
-            "titles": [
-                "E3 2019 - Ubisoft & Square Enix (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Just Chatting",
-                    "duration": 25320
-                }
-            ],
-            "twitchtracker_id": "34480644336",
-            "twitch_id": "437385830",
-            "extra_urls": "https://www.twitch.tv/videos/437387078",
-            "tags": [
-                "main"
-            ],
-            "time_start": "21:22:00",
-            "time_end": "04:25:00"
-        },
-        {
-            "id": "a3c1",
-            "type": "podcast",
-            "date": "2019-06-11",
-            "title": "E3 2019 -  Square Enix (live reacties)",
-            "duration": 1071,
-            "youtube_id": "8bLyRDftIhs"
-        },
-        {
-            "id": "6fb6",
-            "type": "podcast",
-            "date": "2019-06-11",
-            "title": "E3 2019 -  Ubisoft (live reacties)",
-            "duration": 859,
-            "youtube_id": "QxlpaK1osEU"
-        },
-        {
-            "id": "0828",
-            "type": "podcast",
-            "date": "2019-06-11",
-            "title": "E3 2019 - Nintendo (live reacties)",
-            "duration": 2567,
-            "youtube_id": "d4MW-8z0-_Y"
-        },
-        {
-            "id": "3780",
-            "type": "stream",
-            "date": "2019-06-11",
-            "duration": 8340,
-            "titles": [
-                "E3 2019 - Nintendo (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Just Chatting",
-                    "duration": 8340
-                }
-            ],
-            "twitchtracker_id": "34489847584",
-            "twitch_id": "437612356",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "17:05:00",
-            "time_end": "19:25:00"
-        },
+      {
+        "id": "ce80",
+        "type": "podcast",
+        "date": "2019-06-10",
+        "title": "E3 2019 - Microsoft (live reacties)",
+        "duration": 2183,
+        "youtube_id": "YvkLv5TVc-o",
+        "collection": 72
+      },
+      {
+        "id": "e21c",
+        "type": "podcast",
+        "date": "2019-06-10",
+        "title": "E3 2019 -  Bethesda (live reacties)",
+        "duration": 1189,
+        "youtube_id": "B9qvZ6iI6gk",
+        "collection": 72
+      },
+      {
+        "id": "9f89",
+        "type": "stream",
+        "date": "2019-06-10",
+        "duration": 25320,
+        "titles": [
+          "E3 2019 - Ubisoft & Square Enix (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Just Chatting",
+            "duration": 25320
+          }
+        ],
+        "twitchtracker_id": "34480644336",
+        "twitch_id": "437385830",
+        "extra_urls": "https://www.twitch.tv/videos/437387078",
+        "tags": [
+          "main"
+        ],
+        "time_start": "21:22:00",
+        "time_end": "04:25:00",
+        "collection": 72
+      },
+      {
+        "id": "a3c1",
+        "type": "podcast",
+        "date": "2019-06-11",
+        "title": "E3 2019 -  Square Enix (live reacties)",
+        "duration": 1071,
+        "youtube_id": "8bLyRDftIhs",
+        "collection": 72
+      },
+      {
+        "id": "6fb6",
+        "type": "podcast",
+        "date": "2019-06-11",
+        "title": "E3 2019 -  Ubisoft (live reacties)",
+        "duration": 859,
+        "youtube_id": "QxlpaK1osEU",
+        "collection": 72
+      },
+      {
+        "id": "0828",
+        "type": "podcast",
+        "date": "2019-06-11",
+        "title": "E3 2019 - Nintendo (live reacties)",
+        "duration": 2567,
+        "youtube_id": "d4MW-8z0-_Y",
+        "collection": 72
+      },
+      {
+        "id": "3780",
+        "type": "stream",
+        "date": "2019-06-11",
+        "duration": 8340,
+        "titles": [
+          "E3 2019 - Nintendo (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Just Chatting",
+            "duration": 8340
+          }
+        ],
+        "twitchtracker_id": "34489847584",
+        "twitch_id": "437612356",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "17:05:00",
+        "time_end": "19:25:00",
+        "collection": 72
+      },
         {
             "id": "f178",
             "type": "stream",
@@ -28718,22 +28804,24 @@
             "time_start": "23:23:00",
             "time_end": "00:15:00"
         },
-        {
-            "id": "565a",
-            "type": "podcast",
-            "date": "2019-06-13",
-            "title": "Top 10 Hoogtepunten van E3 2019!",
-            "duration": 1306,
-            "youtube_id": "qjSObfyO6jg"
-        },
-        {
-            "id": "4640",
-            "type": "podcast",
-            "date": "2019-06-14",
-            "title": "Top 10 Dompers van E3 2019 :(",
-            "duration": 1116,
-            "youtube_id": "iaOIIrsbhAM"
-        },
+      {
+        "id": "565a",
+        "type": "podcast",
+        "date": "2019-06-13",
+        "title": "Top 10 Hoogtepunten van E3 2019!",
+        "duration": 1306,
+        "youtube_id": "qjSObfyO6jg",
+        "collection": 72
+      },
+      {
+        "id": "4640",
+        "type": "podcast",
+        "date": "2019-06-14",
+        "title": "Top 10 Dompers van E3 2019 :(",
+        "duration": 1116,
+        "youtube_id": "iaOIIrsbhAM",
+        "collection": 72
+      },
         {
             "id": "605c",
             "type": "stream",
@@ -29709,29 +29797,30 @@
             "time_start": "20:18:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "2bf4",
-            "type": "stream",
-            "date": "2019-08-28",
-            "duration": 7740,
-            "youtube_id": "FXvHjw_yFMc",
-            "titles": [
-                "Aap simulator"
-            ],
-            "activities": [
-                {
-                    "title": "Ancestors: The Humankind Odyssey",
-                    "duration": 7740
-                }
-            ],
-            "twitchtracker_id": "35462748272",
-            "twitch_id": "473673176",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:15:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "2bf4",
+        "type": "stream",
+        "date": "2019-08-28",
+        "duration": 7740,
+        "youtube_id": "FXvHjw_yFMc",
+        "titles": [
+          "Aap simulator"
+        ],
+        "activities": [
+          {
+            "title": "Ancestors: The Humankind Odyssey",
+            "duration": 7740
+          }
+        ],
+        "twitchtracker_id": "35462748272",
+        "twitch_id": "473673176",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:15:00",
+        "time_end": "22:25:00",
+        "collection": 70
+      },
         {
             "id": "6998",
             "type": "video",
@@ -30106,29 +30195,30 @@
             "time_start": "22:56:00",
             "time_end": "00:35:00"
         },
-        {
-            "id": "a884",
-            "type": "stream",
-            "date": "2019-09-23",
-            "duration": 8160,
-            "youtube_id": "d8LV8VwFy6M",
-            "titles": [
-                "Gans simulator"
-            ],
-            "activities": [
-                {
-                    "title": "Untitled Goose Game",
-                    "duration": 8160
-                }
-            ],
-            "twitchtracker_id": "35757756592",
-            "twitch_id": "485526575",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:18:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "a884",
+        "type": "stream",
+        "date": "2019-09-23",
+        "duration": 8160,
+        "youtube_id": "d8LV8VwFy6M",
+        "titles": [
+          "Gans simulator"
+        ],
+        "activities": [
+          {
+            "title": "Untitled Goose Game",
+            "duration": 8160
+          }
+        ],
+        "twitchtracker_id": "35757756592",
+        "twitch_id": "485526575",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:18:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "f775",
             "type": "podcast",
@@ -31545,30 +31635,31 @@
             "time_start": "14:51:00",
             "time_end": "15:55:00"
         },
-        {
-            "id": "de22",
-            "type": "stream",
-            "date": "2020-01-13",
-            "duration": 9540,
-            "youtube_id": "vxX9b-Fuzdc",
-            "titles": [
-                "Designers op het internet inhuren om onze stream te verbeteren"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 9540
-                }
-            ],
-            "twitchtracker_id": "466924993",
-            "twitch_id": "535609592",
-            "tags": [
-                "main",
-                "fiverr"
-            ],
-            "time_start": "20:15:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "de22",
+        "type": "stream",
+        "date": "2020-01-13",
+        "duration": 9540,
+        "youtube_id": "vxX9b-Fuzdc",
+        "titles": [
+          "Designers op het internet inhuren om onze stream te verbeteren"
+        ],
+        "activities": [
+          {
+            "title": "Art",
+            "duration": 9540
+          }
+        ],
+        "twitchtracker_id": "466924993",
+        "twitch_id": "535609592",
+        "tags": [
+          "main",
+          "fiverr"
+        ],
+        "time_start": "20:15:00",
+        "time_end": "22:55:00",
+        "collection": 69
+      },
         {
             "id": "6760",
             "type": "stream",
@@ -31766,29 +31857,30 @@
             "free": true,
             "time_end": "17:45:00"
         },
-        {
-            "id": "7fa6",
-            "type": "stream",
-            "date": "2020-01-27",
-            "duration": 7800,
-            "youtube_id": "q724j3KiT70",
-            "titles": [
-                "Zwanger worden simulator"
-            ],
-            "activities": [
-                {
-                    "title": "The Sims 4",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "547761745",
-            "twitch_id": "542821128",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:34:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "7fa6",
+        "type": "stream",
+        "date": "2020-01-27",
+        "duration": 7800,
+        "youtube_id": "q724j3KiT70",
+        "titles": [
+          "Zwanger worden simulator"
+        ],
+        "activities": [
+          {
+            "title": "The Sims 4",
+            "duration": 7800
+          }
+        ],
+        "twitchtracker_id": "547761745",
+        "twitch_id": "542821128",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:34:00",
+        "time_end": "22:45:00",
+        "collection": 70
+      },
         {
             "id": "e1d3",
             "type": "stream",
@@ -31919,28 +32011,29 @@
             "time_start": "20:13:00",
             "time_end": "22:15:00"
         },
-        {
-            "id": "3e57",
-            "type": "stream",
-            "date": "2020-02-05",
-            "duration": 7680,
-            "youtube_id": "HHyF3ueeNtw",
-            "titles": [
-                "ROYALLL RUMMMMBLE (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "WWE 2K20",
-                    "duration": 7680
-                }
-            ],
-            "twitchtracker_id": "597485937",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:16:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "collection": 67,
+        "id": "3e57",
+        "type": "stream",
+        "date": "2020-02-05",
+        "duration": 7680,
+        "youtube_id": "HHyF3ueeNtw",
+        "titles": [
+          "ROYALLL RUMMMMBLE (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "WWE 2K20",
+            "duration": 7680
+          }
+        ],
+        "twitchtracker_id": "597485937",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:16:00",
+        "time_end": "22:25:00"
+      },
         {
             "id": "c624",
             "type": "stream",
@@ -32108,30 +32201,31 @@
             "duration": 2924,
             "youtube_id": "hNmdzpI5hAw"
         },
-        {
-            "id": "c9e2",
-            "type": "stream",
-            "date": "2020-02-17",
-            "duration": 6540,
-            "youtube_id": "4HoZlTSQgAE",
-            "titles": [
-                "Gekochte designs (Fiverr) resultaten bekijken"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 6540
-                }
-            ],
-            "twitchtracker_id": "665876081",
-            "twitch_id": "553635061",
-            "tags": [
-                "main",
-                "fiverr"
-            ],
-            "time_start": "20:25:00",
-            "time_end": "22:15:00"
-        },
+      {
+        "id": "c9e2",
+        "type": "stream",
+        "date": "2020-02-17",
+        "duration": 6540,
+        "youtube_id": "4HoZlTSQgAE",
+        "titles": [
+          "Gekochte designs (Fiverr) resultaten bekijken"
+        ],
+        "activities": [
+          {
+            "title": "Art",
+            "duration": 6540
+          }
+        ],
+        "twitchtracker_id": "665876081",
+        "twitch_id": "553635061",
+        "tags": [
+          "main",
+          "fiverr"
+        ],
+        "time_start": "20:25:00",
+        "time_end": "22:15:00",
+        "collection": 69
+      },
         {
             "id": "efb1",
             "type": "stream",
@@ -33207,28 +33301,29 @@
             "time_start": "00:26:00",
             "time_end": "02:15:00"
         },
-        {
-            "id": "2285",
-            "type": "stream",
-            "date": "2020-04-15",
-            "duration": 7800,
-            "youtube_id": "qHb5No1b9qQ",
-            "titles": [
-                "Tiger King simulator"
-            ],
-            "activities": [
-                {
-                    "title": "Planet Zoo",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "1199697297",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:24:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "2285",
+        "type": "stream",
+        "date": "2020-04-15",
+        "duration": 7800,
+        "youtube_id": "qHb5No1b9qQ",
+        "titles": [
+          "Tiger King simulator"
+        ],
+        "activities": [
+          {
+            "title": "Planet Zoo",
+            "duration": 7800
+          }
+        ],
+        "twitchtracker_id": "1199697297",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:24:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "131e",
             "type": "video",
@@ -33415,45 +33510,46 @@
             "youtube_id": "KssPgotQt64",
             "activity": "Fallout 76"
         },
-        {
-            "id": "5588",
-            "type": "stream",
-            "date": "2020-04-29",
-            "duration": 10620,
-            "youtube_id": "3G8MPxy9QBc",
-            "titles": [
-                "LEKKER SPELEN vs KIJKERS 2020"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 2520
-                },
-                {
-                    "title": "Super Mario Maker 2",
-                    "duration": 1200
-                },
-                {
-                    "title": "Animal Crossing: New Horizons",
-                    "duration": 2400
-                },
-                {
-                    "title": "Super Smash Bros. Ultimate",
-                    "duration": 3600
-                },
-                {
-                    "title": "Variety",
-                    "duration": 900
-                }
-            ],
-            "twitchtracker_id": "37779716240",
-            "twitch_id": "606430669",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:18:00",
-            "time_end": "23:15:00"
-        },
+      {
+        "id": "5588",
+        "type": "stream",
+        "date": "2020-04-29",
+        "duration": 10620,
+        "youtube_id": "3G8MPxy9QBc",
+        "titles": [
+          "LEKKER SPELEN vs KIJKERS 2020"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 2520
+          },
+          {
+            "title": "Super Mario Maker 2",
+            "duration": 1200
+          },
+          {
+            "title": "Animal Crossing: New Horizons",
+            "duration": 2400
+          },
+          {
+            "title": "Super Smash Bros. Ultimate",
+            "duration": 3600
+          },
+          {
+            "title": "Variety",
+            "duration": 900
+          }
+        ],
+        "twitchtracker_id": "37779716240",
+        "twitch_id": "606430669",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:18:00",
+        "time_end": "23:15:00",
+        "collection": 75
+      },
         {
             "id": "2f2f",
             "type": "stream",
@@ -33569,23 +33665,24 @@
             "time_start": "20:18:00",
             "time_end": "22:15:00"
         },
-        {
-            "id": "8c8d",
-            "type": "video",
-            "date": "2020-05-12",
-            "title": "LEKKER SPELEN vs KIJKERS (2020)",
-            "duration": 1502,
-            "youtube_id": "uTo6XvNcbko",
-            "activity": [
-                "Super Mario Maker 2",
-                "Animal Crossing: New Horizons",
-                "Super Smash Bros Ultimate",
-                "Super Mario Party",
-                "Garfield Kartfield",
-                "Golf With Your Friends",
-                "UNO"
-            ]
-        },
+      {
+        "id": "8c8d",
+        "collection": 75,
+        "type": "video",
+        "date": "2020-05-12",
+        "title": "LEKKER SPELEN vs KIJKERS (2020)",
+        "duration": 1502,
+        "youtube_id": "uTo6XvNcbko",
+        "activity": [
+          "Super Mario Maker 2",
+          "Animal Crossing: New Horizons",
+          "Super Smash Bros Ultimate",
+          "Super Mario Party",
+          "Garfield Kartfield",
+          "Golf With Your Friends",
+          "UNO"
+        ]
+      },
         {
             "id": "ee1f",
             "type": "stream",
@@ -33834,15 +33931,16 @@
             "time_start": "16:05:00",
             "time_end": "18:35:00"
         },
-        {
-            "id": "9ea9",
-            "type": "video",
-            "date": "2020-05-30",
-            "title": "Haai Simulator - Lekker spelen",
-            "duration": 217,
-            "youtube_id": "-042RVFWztU",
-            "activity": "Haai Simulator"
-        },
+      {
+        "id": "9ea9",
+        "type": "video",
+        "date": "2020-05-30",
+        "title": "Haai Simulator - Lekker spelen",
+        "duration": 217,
+        "youtube_id": "-042RVFWztU",
+        "activity": "Haai Simulator",
+        "collection": 70
+      },
         {
             "id": "ac16",
             "type": "stream",
@@ -33892,28 +33990,29 @@
             "time_start": "20:17:00",
             "time_end": "22:55:00"
         },
-        {
-            "id": "44f6",
-            "type": "stream",
-            "date": "2020-06-05",
-            "duration": 3540,
-            "youtube_id": "49hyJjmGl44",
-            "titles": [
-                "E3 2020 Hype en hoop Podcast"
-            ],
-            "activities": [
-                {
-                    "title": "Talk Shows & Podcasts",
-                    "duration": 3540
-                }
-            ],
-            "twitchtracker_id": "38497185520",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:25:00",
-            "time_end": "21:25:00"
-        },
+      {
+        "id": "44f6",
+        "type": "stream",
+        "date": "2020-06-05",
+        "duration": 3540,
+        "youtube_id": "49hyJjmGl44",
+        "titles": [
+          "E3 2020 Hype en hoop Podcast"
+        ],
+        "activities": [
+          {
+            "title": "Talk Shows & Podcasts",
+            "duration": 3540
+          }
+        ],
+        "twitchtracker_id": "38497185520",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:25:00",
+        "time_end": "21:25:00",
+        "collection": 72
+      },
         {
             "id": "2385",
             "type": "stream",
@@ -33937,14 +34036,15 @@
             "time_start": "20:20:00",
             "time_end": "22:55:00"
         },
-        {
-            "id": "c35e",
-            "type": "podcast",
-            "date": "2020-06-09",
-            "title": "Hoop en Hype voor 'E3 2020'!",
-            "duration": 2502,
-            "youtube_id": "hkpMYa-GWoU"
-        },
+      {
+        "id": "c35e",
+        "type": "podcast",
+        "date": "2020-06-09",
+        "title": "Hoop en Hype voor 'E3 2020'!",
+        "duration": 2502,
+        "youtube_id": "hkpMYa-GWoU",
+        "collection": 72
+      },
         {
             "id": "670d",
             "type": "stream",
@@ -33975,28 +34075,29 @@
             "time_start": "20:22:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "d421",
-            "type": "stream",
-            "date": "2020-06-11",
-            "duration": 7140,
-            "youtube_id": "MbivZ85LUTs",
-            "titles": [
-                "E3 2020 - Playstation (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 7140
-                }
-            ],
-            "twitchtracker_id": "38616914896",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "21:15:00",
-            "time_end": "23:15:00"
-        },
+      {
+        "id": "d421",
+        "type": "stream",
+        "date": "2020-06-11",
+        "duration": 7140,
+        "youtube_id": "MbivZ85LUTs",
+        "titles": [
+          "E3 2020 - Playstation (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 7140
+          }
+        ],
+        "twitchtracker_id": "38616914896",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "21:15:00",
+        "time_end": "23:15:00",
+        "collection": 72
+      },
         {
             "id": "ceb8",
             "type": "stream",
@@ -34019,28 +34120,29 @@
             "time_start": "17:07:00",
             "time_end": "18:35:00"
         },
-        {
-            "id": "b31b",
-            "type": "stream",
-            "date": "2020-06-13",
-            "duration": 11040,
-            "youtube_id": "ygjF4U8JVlQ",
-            "titles": [
-                "E3 2020 - PC Gaming Show (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 11040
-                }
-            ],
-            "twitchtracker_id": "38653925648",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "19:20:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "b31b",
+        "type": "stream",
+        "date": "2020-06-13",
+        "duration": 11040,
+        "youtube_id": "ygjF4U8JVlQ",
+        "titles": [
+          "E3 2020 - PC Gaming Show (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 11040
+          }
+        ],
+        "twitchtracker_id": "38653925648",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "19:20:00",
+        "time_end": "22:25:00",
+        "collection": 72
+      },
         {
             "id": "b7cc",
             "type": "stream",
@@ -34091,28 +34193,29 @@
             "time_start": "20:39:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "8737",
-            "type": "stream",
-            "date": "2020-06-18",
-            "duration": 6900,
-            "youtube_id": "uY7nV-iFBXI",
-            "titles": [
-                "E3 2020 - EA Play Live (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 6900
-                }
-            ],
-            "twitchtracker_id": "38752971872",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "23:59:00",
-            "time_end": "01:55:00"
-        },
+      {
+        "id": "8737",
+        "type": "stream",
+        "date": "2020-06-18",
+        "duration": 6900,
+        "youtube_id": "uY7nV-iFBXI",
+        "titles": [
+          "E3 2020 - EA Play Live (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 6900
+          }
+        ],
+        "twitchtracker_id": "38752971872",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "23:59:00",
+        "time_end": "01:55:00",
+        "collection": 72
+      },
         {
             "id": "ffe8",
             "type": "video",
@@ -34793,29 +34896,30 @@
             "time_start": "15:01:00",
             "time_end": "17:45:00"
         },
-        {
-            "id": "9b82",
-            "type": "stream",
-            "date": "2020-08-17",
-            "duration": 6360,
-            "youtube_id": "A6D_DmibF8Y",
-            "titles": [
-                "Flight Simulator 2020 - Proberen een vliegtuig te landen"
-            ],
-            "activities": [
-                {
-                    "title": "Microsoft Flight Simulator",
-                    "duration": 6360
-                }
-            ],
-            "twitchtracker_id": "357743650",
-            "twitch_id": "713311255",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:18:00",
-            "time_end": "22:05:00"
-        },
+      {
+        "id": "9b82",
+        "type": "stream",
+        "date": "2020-08-17",
+        "duration": 6360,
+        "youtube_id": "A6D_DmibF8Y",
+        "titles": [
+          "Flight Simulator 2020 - Proberen een vliegtuig te landen"
+        ],
+        "activities": [
+          {
+            "title": "Microsoft Flight Simulator",
+            "duration": 6360
+          }
+        ],
+        "twitchtracker_id": "357743650",
+        "twitch_id": "713311255",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:18:00",
+        "time_end": "22:05:00",
+        "collection": 70
+      },
         {
             "id": "955c",
             "type": "stream",
@@ -36338,29 +36442,30 @@
             "time_start": "15:16:00",
             "time_end": "20:45:00"
         },
-        {
-            "id": "4deb",
-            "type": "stream",
-            "date": "2020-11-30",
-            "duration": 8100,
-            "youtube_id": "5k8wU2iZU14",
-            "titles": [
-                "Brandweerman Simulator (CO-OP)"
-            ],
-            "activities": [
-                {
-                    "title": "Firefighting Simulator",
-                    "duration": 8100
-                }
-            ],
-            "twitchtracker_id": "40188273660",
-            "twitch_id": "821280993",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "4deb",
+        "type": "stream",
+        "date": "2020-11-30",
+        "duration": 8100,
+        "youtube_id": "5k8wU2iZU14",
+        "titles": [
+          "Brandweerman Simulator (CO-OP)"
+        ],
+        "activities": [
+          {
+            "title": "Firefighting Simulator",
+            "duration": 8100
+          }
+        ],
+        "twitchtracker_id": "40188273660",
+        "twitch_id": "821280993",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:19:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "753b",
             "type": "stream",
@@ -36490,29 +36595,30 @@
             "free": true,
             "time_end": "21:35:00"
         },
-        {
-            "id": "f52c",
-            "type": "stream",
-            "date": "2020-12-09",
-            "duration": 7500,
-            "youtube_id": "0bKsSD4gW2U",
-            "titles": [
-                "Hand Simulator: Survival"
-            ],
-            "activities": [
-                {
-                    "title": "Hand Simulator: Survival",
-                    "duration": 7500
-                }
-            ],
-            "twitchtracker_id": "40292688412",
-            "twitch_id": "831550153",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "f52c",
+        "type": "stream",
+        "date": "2020-12-09",
+        "duration": 7500,
+        "youtube_id": "0bKsSD4gW2U",
+        "titles": [
+          "Hand Simulator: Survival"
+        ],
+        "activities": [
+          {
+            "title": "Hand Simulator: Survival",
+            "duration": 7500
+          }
+        ],
+        "twitchtracker_id": "40292688412",
+        "twitch_id": "831550153",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:19:00",
+        "time_end": "22:25:00",
+        "collection": 70
+      },
         {
             "id": "d0a7",
             "type": "stream",
@@ -36923,30 +37029,31 @@
             "time_start": "14:47:00",
             "time_end": "17:15:00"
         },
-        {
-            "id": "5e04",
-            "type": "stream",
-            "date": "2021-01-13",
-            "duration": 7800,
-            "youtube_id": "eNr5s2gwWm0",
-            "titles": [
-                "Designers op het internet inhuren om onze stream te verbeteren"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "40730117356",
-            "twitch_id": "872822070",
-            "tags": [
-                "main",
-                "fiverr"
-            ],
-            "time_start": "20:24:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "5e04",
+        "type": "stream",
+        "date": "2021-01-13",
+        "duration": 7800,
+        "youtube_id": "eNr5s2gwWm0",
+        "titles": [
+          "Designers op het internet inhuren om onze stream te verbeteren"
+        ],
+        "activities": [
+          {
+            "title": "Art",
+            "duration": 7800
+          }
+        ],
+        "twitchtracker_id": "40730117356",
+        "twitch_id": "872822070",
+        "tags": [
+          "main",
+          "fiverr"
+        ],
+        "time_start": "20:24:00",
+        "time_end": "22:35:00",
+        "collection": 69
+      },
         {
             "id": "0874",
             "type": "podcast",
@@ -37492,30 +37599,31 @@
             "time_start": "20:23:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "446e",
-            "type": "stream",
-            "date": "2021-03-10",
-            "duration": 4500,
-            "youtube_id": "DqBlGyKpe48",
-            "titles": [
-                "FIVERR RESULTATEN + SHIRT REVEAL!"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 4500
-                }
-            ],
-            "twitchtracker_id": "41378566908",
-            "twitch_id": "944512364",
-            "tags": [
-                "main",
-                "fiverr"
-            ],
-            "time_start": "20:29:00",
-            "time_end": "21:45:00"
-        },
+      {
+        "id": "446e",
+        "type": "stream",
+        "date": "2021-03-10",
+        "duration": 4500,
+        "youtube_id": "DqBlGyKpe48",
+        "titles": [
+          "FIVERR RESULTATEN + SHIRT REVEAL!"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 4500
+          }
+        ],
+        "twitchtracker_id": "41378566908",
+        "twitch_id": "944512364",
+        "tags": [
+          "main",
+          "fiverr"
+        ],
+        "time_start": "20:29:00",
+        "time_end": "21:45:00",
+        "collection": 69
+      },
         {
             "id": "52fe",
             "type": "stream",
@@ -37588,28 +37696,29 @@
             "time_start": "20:18:00",
             "time_end": "23:45:00"
         },
-        {
-            "id": "f6b7",
-            "type": "stream",
-            "date": "2021-03-17",
-            "duration": 5760,
-            "youtube_id": "9TVqFT-fCZg",
-            "titles": [
-                "Royal Rumble (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "WWE 2K20",
-                    "duration": 5760
-                }
-            ],
-            "twitchtracker_id": "41455920220",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:28:00",
-            "time_end": "22:05:00"
-        },
+      {
+        "collection": 67,
+        "id": "f6b7",
+        "type": "stream",
+        "date": "2021-03-17",
+        "duration": 5760,
+        "youtube_id": "9TVqFT-fCZg",
+        "titles": [
+          "Royal Rumble (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "WWE 2K20",
+            "duration": 5760
+          }
+        ],
+        "twitchtracker_id": "41455920220",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:28:00",
+        "time_end": "22:05:00"
+      },
         {
             "id": "5839",
             "type": "stream",
@@ -37680,15 +37789,16 @@
             "time_start": "20:19:00",
             "time_end": "22:05:00"
         },
-        {
-            "id": "2905",
-            "type": "video",
-            "date": "2021-03-25",
-            "title": "Hand Simulator - Lekker spelen",
-            "duration": 307,
-            "youtube_id": "cs94Ct2yXfM",
-            "activity": "Hand Simulator"
-        },
+      {
+        "id": "2905",
+        "type": "video",
+        "date": "2021-03-25",
+        "title": "Hand Simulator - Lekker spelen",
+        "duration": 307,
+        "youtube_id": "cs94Ct2yXfM",
+        "activity": "Hand Simulator",
+        "collection": 70
+      },
         {
             "id": "3621",
             "type": "stream",
@@ -38115,28 +38225,29 @@
             "time_start": "00:07:00",
             "time_end": "03:05:00"
         },
-        {
-            "id": "e22e",
-            "type": "stream",
-            "date": "2021-04-27",
-            "duration": 9420,
-            "youtube_id": "bzeA0xcHihM",
-            "titles": [
-                "Donkey Kong naar E-lite / oefenen voor Lekker spelen VS kijkers"
-            ],
-            "activities": [
-                {
-                    "title": "Super Smash Bros. Ultimate",
-                    "duration": 9420
-                }
-            ],
-            "twitchtracker_id": "41894299244",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "13:07:00",
-            "time_end": "15:45:00"
-        },
+      {
+        "id": "e22e",
+        "type": "stream",
+        "date": "2021-04-27",
+        "duration": 9420,
+        "youtube_id": "bzeA0xcHihM",
+        "titles": [
+          "Donkey Kong naar E-lite / oefenen voor Lekker spelen VS kijkers"
+        ],
+        "activities": [
+          {
+            "title": "Super Smash Bros. Ultimate",
+            "duration": 9420
+          }
+        ],
+        "twitchtracker_id": "41894299244",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "13:07:00",
+        "time_end": "15:45:00",
+        "collection": 75
+      },
         {
             "id": "68af",
             "type": "stream",
@@ -38159,29 +38270,30 @@
             "time_start": "23:00:00",
             "time_end": "02:55:00"
         },
-        {
-            "id": "cb56",
-            "type": "stream",
-            "date": "2021-04-28",
-            "duration": 9240,
-            "youtube_id": "6E6heBzAafo",
-            "titles": [
-                "LEKKER SPELEN vs KIJKERS 2021"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 9240
-                }
-            ],
-            "twitchtracker_id": "41906824636",
-            "twitch_id": "1004234072",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:40:00",
-            "time_end": "23:15:00"
-        },
+      {
+        "id": "cb56",
+        "type": "stream",
+        "date": "2021-04-28",
+        "duration": 9240,
+        "youtube_id": "6E6heBzAafo",
+        "titles": [
+          "LEKKER SPELEN vs KIJKERS 2021"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 9240
+          }
+        ],
+        "twitchtracker_id": "41906824636",
+        "twitch_id": "1004234072",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:40:00",
+        "time_end": "23:15:00",
+        "collection": 75
+      },
         {
             "id": "5f50",
             "type": "stream",
@@ -38597,60 +38709,63 @@
             "time_start": "20:25:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "fd5e",
-            "type": "stream",
-            "date": "2021-06-02",
-            "duration": 7260,
-            "youtube_id": "omDh5RhHafg",
-            "titles": [
-                "LEKKER SPELEN vs KIJKERS: Minio Games"
-            ],
-            "activities": [
-                {
-                    "title": "Super Mario Party",
-                    "duration": 7260
-                }
-            ],
-            "twitchtracker_id": "42245760028",
-            "twitch_id": "1043783862",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:43:00",
-            "time_end": "22:45:00"
-        },
-        {
-            "id": "b624",
-            "type": "stream",
-            "date": "2021-06-07",
-            "duration": 4800,
-            "youtube_id": "_MLlVI1iwiw",
-            "titles": [
-                "E3 HYPE & HOOP PRE SHOW 2021"
-            ],
-            "activities": [
-                {
-                    "title": "Talk Shows & Podcasts",
-                    "duration": 4800
-                }
-            ],
-            "twitchtracker_id": "42290703452",
-            "twitch_id": "1049078556",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:54:00",
-            "time_end": "22:15:00"
-        },
-        {
-            "id": "dc60",
-            "type": "podcast",
-            "date": "2021-06-08",
-            "title": "HYPE & HOOP VOOR E3 2021!",
-            "duration": 3288,
-            "youtube_id": "fn_tCTDToG8"
-        },
+      {
+        "id": "fd5e",
+        "type": "stream",
+        "date": "2021-06-02",
+        "duration": 7260,
+        "youtube_id": "omDh5RhHafg",
+        "titles": [
+          "LEKKER SPELEN vs KIJKERS: Minio Games"
+        ],
+        "activities": [
+          {
+            "title": "Super Mario Party",
+            "duration": 7260
+          }
+        ],
+        "twitchtracker_id": "42245760028",
+        "twitch_id": "1043783862",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:43:00",
+        "time_end": "22:45:00",
+        "collection": 75
+      },
+      {
+        "id": "b624",
+        "type": "stream",
+        "date": "2021-06-07",
+        "duration": 4800,
+        "youtube_id": "_MLlVI1iwiw",
+        "titles": [
+          "E3 HYPE & HOOP PRE SHOW 2021"
+        ],
+        "activities": [
+          {
+            "title": "Talk Shows & Podcasts",
+            "duration": 4800
+          }
+        ],
+        "twitchtracker_id": "42290703452",
+        "twitch_id": "1049078556",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:54:00",
+        "time_end": "22:15:00",
+        "collection": 72
+      },
+      {
+        "id": "dc60",
+        "type": "podcast",
+        "date": "2021-06-08",
+        "title": "HYPE & HOOP VOOR E3 2021!",
+        "duration": 3288,
+        "youtube_id": "fn_tCTDToG8",
+        "collection": 72
+      },
         {
             "id": "5dbc",
             "type": "stream",
@@ -38696,75 +38811,78 @@
             "time_start": "20:26:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "e312",
-            "type": "stream",
-            "date": "2021-06-10",
-            "duration": 4440,
-            "youtube_id": "BbmFKfGcF9U",
-            "titles": [
-                "Summer Game Fest 2021 (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 4440
-                }
-            ],
-            "twitchtracker_id": "42318150316",
-            "twitch_id": "1054302656",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:30:00",
-            "time_end": "21:45:00"
-        },
-        {
-            "id": "b776",
-            "type": "stream",
-            "date": "2021-06-12",
-            "duration": 6540,
-            "youtube_id": "9BF2H_GE32Q",
-            "titles": [
-                "E3 Ubisoft Forward (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 6540
-                }
-            ],
-            "twitchtracker_id": "42336123532",
-            "twitch_id": "1054303526",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:15:00",
-            "time_end": "22:05:00"
-        },
-        {
-            "id": "82c5",
-            "type": "stream",
-            "date": "2021-06-13",
-            "duration": 7140,
-            "youtube_id": "yg6lZpmlnLI",
-            "titles": [
-                "E3 XBOX & Bethesda (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 7140
-                }
-            ],
-            "twitchtracker_id": "42344151532",
-            "twitch_id": "1055225417",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "18:25:00",
-            "time_end": "20:25:00"
-        },
+      {
+        "id": "e312",
+        "type": "stream",
+        "date": "2021-06-10",
+        "duration": 4440,
+        "youtube_id": "BbmFKfGcF9U",
+        "titles": [
+          "Summer Game Fest 2021 (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 4440
+          }
+        ],
+        "twitchtracker_id": "42318150316",
+        "twitch_id": "1054302656",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:30:00",
+        "time_end": "21:45:00",
+        "collection": 72
+      },
+      {
+        "id": "b776",
+        "type": "stream",
+        "date": "2021-06-12",
+        "duration": 6540,
+        "youtube_id": "9BF2H_GE32Q",
+        "titles": [
+          "E3 Ubisoft Forward (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 6540
+          }
+        ],
+        "twitchtracker_id": "42336123532",
+        "twitch_id": "1054303526",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:15:00",
+        "time_end": "22:05:00",
+        "collection": 72
+      },
+      {
+        "id": "82c5",
+        "type": "stream",
+        "date": "2021-06-13",
+        "duration": 7140,
+        "youtube_id": "yg6lZpmlnLI",
+        "titles": [
+          "E3 XBOX & Bethesda (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 7140
+          }
+        ],
+        "twitchtracker_id": "42344151532",
+        "twitch_id": "1055225417",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "18:25:00",
+        "time_end": "20:25:00",
+        "collection": 72
+      },
         {
             "id": "a93b",
             "type": "stream",
@@ -38788,61 +38906,64 @@
             "time_start": "20:19:00",
             "time_end": "23:05:00"
         },
-        {
-            "id": "09d4",
-            "type": "stream",
-            "date": "2021-06-15",
-            "duration": 4620,
-            "youtube_id": "GBI8tClcbfY",
-            "titles": [
-                "E3 Nintendo Direct (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 4620
-                }
-            ],
-            "twitchtracker_id": "42360103756",
-            "twitch_id": "1057097278",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "17:27:00",
-            "time_end": "18:45:00"
-        },
-        {
-            "id": "cf6d",
-            "type": "stream",
-            "date": "2021-06-16",
-            "duration": 5220,
-            "youtube_id": "ogLpLCN9Akk",
-            "titles": [
-                "De hoogte en dieptepunten van E3 2021"
-            ],
-            "activities": [
-                {
-                    "title": "Talk Shows & Podcasts",
-                    "duration": 5220
-                }
-            ],
-            "twitchtracker_id": "42369940588",
-            "twitch_id": "1058266313",
-            "tags": [
-                "main",
-                "e3"
-            ],
-            "time_start": "20:17:00",
-            "time_end": "21:45:00"
-        },
-        {
-            "id": "e59e",
-            "type": "podcast",
-            "date": "2021-06-17",
-            "title": "De hoogte en dieptepunten van E3 2021",
-            "duration": 193,
-            "youtube_id": "DHtEkblsgGc"
-        },
+      {
+        "id": "09d4",
+        "type": "stream",
+        "date": "2021-06-15",
+        "duration": 4620,
+        "youtube_id": "GBI8tClcbfY",
+        "titles": [
+          "E3 Nintendo Direct (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 4620
+          }
+        ],
+        "twitchtracker_id": "42360103756",
+        "twitch_id": "1057097278",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "17:27:00",
+        "time_end": "18:45:00",
+        "collection": 72
+      },
+      {
+        "id": "cf6d",
+        "type": "stream",
+        "date": "2021-06-16",
+        "duration": 5220,
+        "youtube_id": "ogLpLCN9Akk",
+        "titles": [
+          "De hoogte en dieptepunten van E3 2021"
+        ],
+        "activities": [
+          {
+            "title": "Talk Shows & Podcasts",
+            "duration": 5220
+          }
+        ],
+        "twitchtracker_id": "42369940588",
+        "twitch_id": "1058266313",
+        "tags": [
+          "main",
+          "e3"
+        ],
+        "time_start": "20:17:00",
+        "time_end": "21:45:00",
+        "collection": 72
+      },
+      {
+        "id": "e59e",
+        "type": "podcast",
+        "date": "2021-06-17",
+        "title": "De hoogte en dieptepunten van E3 2021",
+        "duration": 193,
+        "youtube_id": "DHtEkblsgGc",
+        "collection": 72
+      },
         {
             "id": "b5f6",
             "type": "stream",
@@ -39215,33 +39336,34 @@
             "time_start": "20:17:00",
             "time_end": "22:15:00"
         },
-        {
-            "id": "8aed",
-            "type": "stream",
-            "date": "2021-07-20",
-            "duration": 9720,
-            "youtube_id": "iymofVHHQ_U",
-            "titles": [
-                "smash/party met kijkers - Streampie met Tiempie"
-            ],
-            "activities": [
-                {
-                    "title": "Super Smash Bros. Ultimate",
-                    "duration": 5820
-                },
-                {
-                    "title": "Super Mario Party",
-                    "duration": 3900
-                }
-            ],
-            "twitchtracker_id": "42695423708",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "12:52:00",
-            "time_end": "15:35:00"
-        },
+      {
+        "id": "8aed",
+        "type": "stream",
+        "date": "2021-07-20",
+        "duration": 9720,
+        "youtube_id": "iymofVHHQ_U",
+        "titles": [
+          "smash/party met kijkers - Streampie met Tiempie"
+        ],
+        "activities": [
+          {
+            "title": "Super Smash Bros. Ultimate",
+            "duration": 5820
+          },
+          {
+            "title": "Super Mario Party",
+            "duration": 3900
+          }
+        ],
+        "twitchtracker_id": "42695423708",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "12:52:00",
+        "time_end": "15:35:00",
+        "collection": 75
+      },
         {
             "id": "8668",
             "type": "stream",
@@ -40218,30 +40340,31 @@
             "time_start": "20:32:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "c7b2",
-            "type": "stream",
-            "date": "2021-09-22",
-            "duration": 6720,
-            "youtube_id": "nzmS3kFkm1k",
-            "titles": [
-                "vis simulator (PETER vs TIMON verplaatst naar maandag)"
-            ],
-            "activities": [
-                {
-                    "title": "I Am Fish",
-                    "duration": 6720
-                }
-            ],
-            "twitchtracker_id": "43333975868",
-            "twitch_id": "1156294438",
-            "tags": [
-                "main",
-                "peter vs timon"
-            ],
-            "time_start": "20:42:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "c7b2",
+        "type": "stream",
+        "date": "2021-09-22",
+        "duration": 6720,
+        "youtube_id": "nzmS3kFkm1k",
+        "titles": [
+          "vis simulator (PETER vs TIMON verplaatst naar maandag)"
+        ],
+        "activities": [
+          {
+            "title": "I Am Fish",
+            "duration": 6720
+          }
+        ],
+        "twitchtracker_id": "43333975868",
+        "twitch_id": "1156294438",
+        "tags": [
+          "main",
+          "peter vs timon"
+        ],
+        "time_start": "20:42:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "51f9",
             "type": "stream",
@@ -40948,29 +41071,30 @@
             "time_start": "18:45:00",
             "time_end": "22:15:00"
         },
-        {
-            "id": "8717",
-            "type": "stream",
-            "date": "2021-11-15",
-            "duration": 6660,
-            "youtube_id": "-VClTYrvo-Q",
-            "titles": [
-                "We doen mee aan Squid Game met kijkers!"
-            ],
-            "activities": [
-                {
-                    "title": "Crab Game",
-                    "duration": 6660
-                }
-            ],
-            "twitchtracker_id": "43822495916",
-            "twitch_id": "1206564457",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:23:00",
-            "time_end": "22:15:00"
-        },
+      {
+        "id": "8717",
+        "type": "stream",
+        "date": "2021-11-15",
+        "duration": 6660,
+        "youtube_id": "-VClTYrvo-Q",
+        "titles": [
+          "We doen mee aan Squid Game met kijkers!"
+        ],
+        "activities": [
+          {
+            "title": "Crab Game",
+            "duration": 6660
+          }
+        ],
+        "twitchtracker_id": "43822495916",
+        "twitch_id": "1206564457",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:23:00",
+        "time_end": "22:15:00",
+        "collection": 75
+      },
         {
             "id": "00a1",
             "type": "stream",
@@ -41119,29 +41243,30 @@
             "time_start": "21:09:00",
             "time_end": "23:35:00"
         },
-        {
-            "id": "8baa",
-            "type": "stream",
-            "date": "2021-12-01",
-            "duration": 6420,
-            "youtube_id": "fz3srgeu9_I",
-            "titles": [
-                "Farming Simulator 2022"
-            ],
-            "activities": [
-                {
-                    "title": "Farming Simulator 2022",
-                    "duration": 6420
-                }
-            ],
-            "twitchtracker_id": "43956104812",
-            "twitch_id": "1221304779",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:28:00",
-            "time_end": "22:15:00"
-        },
+      {
+        "id": "8baa",
+        "type": "stream",
+        "date": "2021-12-01",
+        "duration": 6420,
+        "youtube_id": "fz3srgeu9_I",
+        "titles": [
+          "Farming Simulator 2022"
+        ],
+        "activities": [
+          {
+            "title": "Farming Simulator 2022",
+            "duration": 6420
+          }
+        ],
+        "twitchtracker_id": "43956104812",
+        "twitch_id": "1221304779",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:28:00",
+        "time_end": "22:15:00",
+        "collection": 70
+      },
         {
             "id": "295e",
             "type": "stream",
@@ -41241,29 +41366,30 @@
             "time_start": "01:14:00",
             "time_end": "05:05:00"
         },
-        {
-            "id": "1ccc",
-            "type": "stream",
-            "date": "2021-12-11",
-            "duration": 14640,
-            "youtube_id": "kdk9F3Cs6Q4",
-            "titles": [
-                "LEKKER SPELEN vs KIJKERS: Halo Infinite Toernooi"
-            ],
-            "activities": [
-                {
-                    "title": "Halo Infinite",
-                    "duration": 14640
-                }
-            ],
-            "twitchtracker_id": "44045019644",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:30:00",
-            "free": true,
-            "time_end": "00:35:00"
-        },
+      {
+        "id": "1ccc",
+        "type": "stream",
+        "date": "2021-12-11",
+        "duration": 14640,
+        "youtube_id": "kdk9F3Cs6Q4",
+        "titles": [
+          "LEKKER SPELEN vs KIJKERS: Halo Infinite Toernooi"
+        ],
+        "activities": [
+          {
+            "title": "Halo Infinite",
+            "duration": 14640
+          }
+        ],
+        "twitchtracker_id": "44045019644",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:30:00",
+        "free": true,
+        "time_end": "00:35:00",
+        "collection": 75
+      },
         {
             "id": "f437",
             "type": "stream",
@@ -41419,30 +41545,31 @@
             "free": true,
             "time_end": "22:25:00"
         },
-        {
-            "id": "fa9b",
-            "type": "stream",
-            "date": "2022-01-19",
-            "duration": 8520,
-            "youtube_id": "y-eYy4seKYw",
-            "titles": [
-                "Designers inhuren op Fiverr om onze stream te verbeteren"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 8520
-                }
-            ],
-            "twitchtracker_id": "44435996380",
-            "twitch_id": "1269237086",
-            "tags": [
-                "main",
-                "fiverr"
-            ],
-            "time_start": "20:32:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "fa9b",
+        "type": "stream",
+        "date": "2022-01-19",
+        "duration": 8520,
+        "youtube_id": "y-eYy4seKYw",
+        "titles": [
+          "Designers inhuren op Fiverr om onze stream te verbeteren"
+        ],
+        "activities": [
+          {
+            "title": "Art",
+            "duration": 8520
+          }
+        ],
+        "twitchtracker_id": "44435996380",
+        "twitch_id": "1269237086",
+        "tags": [
+          "main",
+          "fiverr"
+        ],
+        "time_start": "20:32:00",
+        "time_end": "22:55:00",
+        "collection": 69
+      },
         {
             "id": "7f67",
             "type": "stream",
@@ -42373,30 +42500,31 @@
             "time_start": "20:34:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "4af8",
-            "type": "stream",
-            "date": "2022-04-04",
-            "duration": 6960,
-            "youtube_id": "e6ymBot_QO0",
-            "titles": [
-                "ROYAL RUMBLE! (30 man tegen elkaar)"
-            ],
-            "activities": [
-                {
-                    "title": "WWE 2K22",
-                    "duration": 6960
-                }
-            ],
-            "twitchtracker_id": "45144805548",
-            "twitch_id": "1449806987",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:48:00",
-            "free": true,
-            "time_end": "22:45:00"
-        },
+      {
+        "collection": 67,
+        "id": "4af8",
+        "type": "stream",
+        "date": "2022-04-04",
+        "duration": 6960,
+        "youtube_id": "e6ymBot_QO0",
+        "titles": [
+          "ROYAL RUMBLE! (30 man tegen elkaar)"
+        ],
+        "activities": [
+          {
+            "title": "WWE 2K22",
+            "duration": 6960
+          }
+        ],
+        "twitchtracker_id": "45144805548",
+        "twitch_id": "1449806987",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:48:00",
+        "free": true,
+        "time_end": "22:45:00"
+      },
         {
             "id": "0e49",
             "type": "stream",
@@ -42553,29 +42681,30 @@
             "time_start": "01:57:00",
             "time_end": "03:25:00"
         },
-        {
-            "id": "2d7f",
-            "type": "stream",
-            "date": "2022-04-18",
-            "duration": 5700,
-            "youtube_id": "43KlivcsZlI",
-            "titles": [
-                "Dokter simulator"
-            ],
-            "activities": [
-                {
-                    "title": "Surgeon Simulator 2",
-                    "duration": 5700
-                }
-            ],
-            "twitchtracker_id": "39299798344",
-            "twitch_id": "1460240583",
-            "tags": [
-                "main"
-            ],
-            "time_start": "21:09:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "2d7f",
+        "type": "stream",
+        "date": "2022-04-18",
+        "duration": 5700,
+        "youtube_id": "43KlivcsZlI",
+        "titles": [
+          "Dokter simulator"
+        ],
+        "activities": [
+          {
+            "title": "Surgeon Simulator 2",
+            "duration": 5700
+          }
+        ],
+        "twitchtracker_id": "39299798344",
+        "twitch_id": "1460240583",
+        "tags": [
+          "main"
+        ],
+        "time_start": "21:09:00",
+        "time_end": "22:45:00",
+        "collection": 70
+      },
         {
             "id": "1d2b",
             "type": "stream",
@@ -42691,29 +42820,30 @@
             "time_start": "20:30:00",
             "time_end": "22:05:00"
         },
-        {
-            "id": "b1e2",
-            "type": "stream",
-            "date": "2022-05-04",
-            "duration": 7860,
-            "youtube_id": "QwNODBQlV_g",
-            "titles": [
-                "LEKKER SPELEN vs KIJKERS 2022"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 7860
-                }
-            ],
-            "twitchtracker_id": "39365511272",
-            "twitch_id": "1475194277",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:43:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "b1e2",
+        "type": "stream",
+        "date": "2022-05-04",
+        "duration": 7860,
+        "youtube_id": "QwNODBQlV_g",
+        "titles": [
+          "LEKKER SPELEN vs KIJKERS 2022"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 7860
+          }
+        ],
+        "twitchtracker_id": "39365511272",
+        "twitch_id": "1475194277",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:43:00",
+        "time_end": "22:55:00",
+        "collection": 75
+      },
         {
             "id": "cd09",
             "type": "stream",
@@ -43710,29 +43840,30 @@
             "time_start": "17:46:00",
             "time_end": "21:25:00"
         },
-        {
-            "id": "fa27",
-            "type": "stream",
-            "date": "2022-08-03",
-            "duration": 6240,
-            "youtube_id": "h2zRRshLJOM",
-            "titles": [
-                "kat simulator XD"
-            ],
-            "activities": [
-                {
-                    "title": "Stray",
-                    "duration": 6240
-                }
-            ],
-            "twitchtracker_id": "39689040648",
-            "twitch_id": "1556249889",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:40:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "fa27",
+        "type": "stream",
+        "date": "2022-08-03",
+        "duration": 6240,
+        "youtube_id": "h2zRRshLJOM",
+        "titles": [
+          "kat simulator XD"
+        ],
+        "activities": [
+          {
+            "title": "Stray",
+            "duration": 6240
+          }
+        ],
+        "twitchtracker_id": "39689040648",
+        "twitch_id": "1556249889",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:40:00",
+        "time_end": "22:25:00",
+        "collection": 70
+      },
         {
             "id": "6d9d",
             "type": "stream",
@@ -43960,29 +44091,30 @@
             "youtube_id": "7R4zhCWy5I8",
             "activity": "Saints Row"
         },
-        {
-            "id": "3cd4",
-            "type": "stream",
-            "date": "2022-08-31",
-            "duration": 6720,
-            "youtube_id": "Y4Xkot2Z_NI",
-            "titles": [
-                "HAND SIMULATOR: HORROR"
-            ],
-            "activities": [
-                {
-                    "title": "Hand Simulator: Horror",
-                    "duration": 6720
-                }
-            ],
-            "twitchtracker_id": "39773312104",
-            "twitch_id": "1578181039",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:42:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "3cd4",
+        "type": "stream",
+        "date": "2022-08-31",
+        "duration": 6720,
+        "youtube_id": "Y4Xkot2Z_NI",
+        "titles": [
+          "HAND SIMULATOR: HORROR"
+        ],
+        "activities": [
+          {
+            "title": "Hand Simulator: Horror",
+            "duration": 6720
+          }
+        ],
+        "twitchtracker_id": "39773312104",
+        "twitch_id": "1578181039",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:42:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "5f91",
             "type": "stream",
@@ -44331,29 +44463,30 @@
             "free": true,
             "time_end": "17:05:00"
         },
-        {
-            "id": "a2bc",
-            "type": "stream",
-            "date": "2022-09-26",
-            "duration": 5760,
-            "youtube_id": "QoO3MAlamW0",
-            "titles": [
-                "Een dagje werken bij DE POLITIE 👮"
-            ],
-            "activities": [
-                {
-                    "title": "Police Simulator: Patrol Officers",
-                    "duration": 5760
-                }
-            ],
-            "twitchtracker_id": "39877204856",
-            "twitch_id": "1603900956",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:38:00",
-            "time_end": "22:15:00"
-        },
+      {
+        "id": "a2bc",
+        "type": "stream",
+        "date": "2022-09-26",
+        "duration": 5760,
+        "youtube_id": "QoO3MAlamW0",
+        "titles": [
+          "Een dagje werken bij DE POLITIE 👮"
+        ],
+        "activities": [
+          {
+            "title": "Police Simulator: Patrol Officers",
+            "duration": 5760
+          }
+        ],
+        "twitchtracker_id": "39877204856",
+        "twitch_id": "1603900956",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:38:00",
+        "time_end": "22:15:00",
+        "collection": 70
+      },
         {
             "id": "ad9b",
             "type": "stream",
@@ -45475,29 +45608,30 @@
             "duration": 2001,
             "youtube_id": "HXC62YstQkY"
         },
-        {
-            "id": "05ef",
-            "type": "stream",
-            "date": "2023-01-11",
-            "duration": 7440,
-            "youtube_id": "fcOGB8PZc2Q",
-            "titles": [
-                "ZE ZIJN TERUG: GOAT SIMULATOR 3!"
-            ],
-            "activities": [
-                {
-                    "title": "Goat Simulator 3",
-                    "duration": 7440
-                }
-            ],
-            "twitchtracker_id": "40319440856",
-            "twitch_id": "1704556617",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:30:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "05ef",
+        "type": "stream",
+        "date": "2023-01-11",
+        "duration": 7440,
+        "youtube_id": "fcOGB8PZc2Q",
+        "titles": [
+          "ZE ZIJN TERUG: GOAT SIMULATOR 3!"
+        ],
+        "activities": [
+          {
+            "title": "Goat Simulator 3",
+            "duration": 7440
+          }
+        ],
+        "twitchtracker_id": "40319440856",
+        "twitch_id": "1704556617",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:30:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "6cd4",
             "type": "stream",
@@ -45657,38 +45791,40 @@
             "time_start": "20:40:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "d8fd",
-            "type": "video",
-            "date": "2023-01-31",
-            "title": "Politie Simulator - Lekker spelen",
-            "duration": 353,
-            "youtube_id": "_L8KlBKXEcE",
-            "activity": "Police Simulator: Patrol Officers"
-        },
-        {
-            "id": "af83",
-            "type": "stream",
-            "date": "2023-02-01",
-            "duration": 6420,
-            "youtube_id": "VU2wGTlZmAQ",
-            "titles": [
-                "Orde en gezag: de mannen zijn terug op straat 👮"
-            ],
-            "activities": [
-                {
-                    "title": "Police Simulator: Patrol Officers",
-                    "duration": 6420
-                }
-            ],
-            "twitchtracker_id": "46573841404",
-            "twitch_id": "1725364092",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:37:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "d8fd",
+        "type": "video",
+        "date": "2023-01-31",
+        "title": "Politie Simulator - Lekker spelen",
+        "duration": 353,
+        "youtube_id": "_L8KlBKXEcE",
+        "activity": "Police Simulator: Patrol Officers",
+        "collection": 70
+      },
+      {
+        "id": "af83",
+        "type": "stream",
+        "date": "2023-02-01",
+        "duration": 6420,
+        "youtube_id": "VU2wGTlZmAQ",
+        "titles": [
+          "Orde en gezag: de mannen zijn terug op straat 👮"
+        ],
+        "activities": [
+          {
+            "title": "Police Simulator: Patrol Officers",
+            "duration": 6420
+          }
+        ],
+        "twitchtracker_id": "46573841404",
+        "twitch_id": "1725364092",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:37:00",
+        "time_end": "22:25:00",
+        "collection": 70
+      },
         {
             "id": "db57",
             "type": "stream",
@@ -45803,7 +45939,8 @@
             "date": "2023-02-20",
             "duration": 6960,
             "youtube_id": "K1BbLpEK0y8",
-            "collection": 56,
+          "collection": 56,
+
             "titles": [
                 "Gluren 👀"
             ],
@@ -45824,7 +45961,7 @@
             ],
             "time_start": "20:58:00",
             "description": "Ze spelen eerst I'm on Observation Duty 1, dan I'm on Observation Duty 4, en ze sluiten af met een potje Drawing from Memory.",
-            "time_end": "22:55:00"
+          "time_end": "22:55:00"
         },
         {
             "id": "0659",
@@ -46169,15 +46306,16 @@
             "time_start": "20:43:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "13a0",
-            "type": "video",
-            "date": "2023-03-23",
-            "title": "Handen zonder controle - Lekker spelen",
-            "duration": 263,
-            "youtube_id": "KQipeTl3BrA",
-            "activity": "Hand Simulator: Horror"
-        },
+      {
+        "id": "13a0",
+        "type": "video",
+        "date": "2023-03-23",
+        "title": "Handen zonder controle - Lekker spelen",
+        "duration": 263,
+        "youtube_id": "KQipeTl3BrA",
+        "activity": "Hand Simulator: Horror",
+        "collection": 70
+      },
         {
             "id": "551c",
             "type": "stream",
@@ -46324,29 +46462,30 @@
             "time_start": "20:30:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "e1d8",
-            "type": "stream",
-            "date": "2023-04-10",
-            "duration": 6780,
-            "youtube_id": "EsTZqen_5hE",
-            "titles": [
-                "WORSTELEN ROYAL RUMBLE 2023 (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "WWE 2K23",
-                    "duration": 6780
-                }
-            ],
-            "twitchtracker_id": "40641831304",
-            "twitch_id": "1790202307",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:31:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "collection": 67,
+        "id": "e1d8",
+        "type": "stream",
+        "date": "2023-04-10",
+        "duration": 6780,
+        "youtube_id": "EsTZqen_5hE",
+        "titles": [
+          "WORSTELEN ROYAL RUMBLE 2023 (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "WWE 2K23",
+            "duration": 6780
+          }
+        ],
+        "twitchtracker_id": "40641831304",
+        "twitch_id": "1790202307",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:31:00",
+        "time_end": "22:25:00"
+      },
         {
             "id": "b9d2",
             "type": "stream",
@@ -46584,29 +46723,30 @@
             "time_start": "20:34:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "6466",
-            "type": "stream",
-            "date": "2023-05-08",
-            "duration": 6720,
-            "youtube_id": "-YawBPXz6zk",
-            "titles": [
-                "Dief simulator"
-            ],
-            "activities": [
-                {
-                    "title": "Thief Simulator",
-                    "duration": 6720
-                }
-            ],
-            "twitchtracker_id": "40718634520",
-            "twitch_id": "1814977133",
-            "tags": [
-                "main"
-            ],
-            "time_start": "21:02:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "6466",
+        "type": "stream",
+        "date": "2023-05-08",
+        "duration": 6720,
+        "youtube_id": "-YawBPXz6zk",
+        "titles": [
+          "Dief simulator"
+        ],
+        "activities": [
+          {
+            "title": "Thief Simulator",
+            "duration": 6720
+          }
+        ],
+        "twitchtracker_id": "40718634520",
+        "twitch_id": "1814977133",
+        "tags": [
+          "main"
+        ],
+        "time_start": "21:02:00",
+        "time_end": "22:55:00",
+        "collection": 70
+      },
         {
             "id": "bab3",
             "type": "stream",
@@ -47156,29 +47296,30 @@
             "youtube_id": "Kibl9EDvKio",
             "activity": "Final Fantasy 16"
         },
-        {
-            "id": "35c4",
-            "type": "stream",
-            "date": "2023-06-28",
-            "duration": 8640,
-            "youtube_id": "OrFZwcxUHpM",
-            "titles": [
-                "LEKKER SPELEN vs KIJKERS 2023 🏆"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 8640
-                }
-            ],
-            "twitchtracker_id": "40853917272",
-            "twitch_id": "1858287951",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:30:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "35c4",
+        "type": "stream",
+        "date": "2023-06-28",
+        "duration": 8640,
+        "youtube_id": "OrFZwcxUHpM",
+        "titles": [
+          "LEKKER SPELEN vs KIJKERS 2023 🏆"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 8640
+          }
+        ],
+        "twitchtracker_id": "40853917272",
+        "twitch_id": "1858287951",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:30:00",
+        "time_end": "22:55:00",
+        "collection": 75
+      },
         {
             "id": "61a0",
             "type": "stream",
@@ -47202,24 +47343,25 @@
             "time_start": "20:40:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "a60a",
-            "type": "video",
-            "date": "2023-07-04",
-            "title": "LEKKER SPELEN vs KIJKERS 2023",
-            "duration": 1723,
-            "youtube_id": "F58JJGxyGlk",
-            "activity": [
-                "Super Mario Maker 2",
-                "Mario & Sonic at the olympic games",
-                "Fall Guys",
-                "Mario Party Superstars",
-                "Drawing From Memory",
-                "Clubhouse Games: 51 Worldwide Classics",
-                "Pokémon Stadium",
-                "Donkey Kong Country"
-            ]
-        },
+      {
+        "id": "a60a",
+        "collection": 75,
+        "type": "video",
+        "date": "2023-07-04",
+        "title": "LEKKER SPELEN vs KIJKERS 2023",
+        "duration": 1723,
+        "youtube_id": "F58JJGxyGlk",
+        "activity": [
+          "Super Mario Maker 2",
+          "Mario & Sonic at the olympic games",
+          "Fall Guys",
+          "Mario Party Superstars",
+          "Drawing From Memory",
+          "Clubhouse Games: 51 Worldwide Classics",
+          "Pokémon Stadium",
+          "Donkey Kong Country"
+        ]
+      },
         {
             "id": "bfc6",
             "type": "stream",
@@ -47267,15 +47409,16 @@
             "time_start": "20:35:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "0119",
-            "type": "video",
-            "date": "2023-07-11",
-            "title": "Een dag bij de POLITIE - Lekker spelen",
-            "duration": 196,
-            "youtube_id": "ZEfGXemCB5E",
-            "activity": "Police Simulator: Patrol Officers"
-        },
+      {
+        "id": "0119",
+        "type": "video",
+        "date": "2023-07-11",
+        "title": "Een dag bij de POLITIE - Lekker spelen",
+        "duration": 196,
+        "youtube_id": "ZEfGXemCB5E",
+        "activity": "Police Simulator: Patrol Officers",
+        "collection": 70
+      },
         {
             "id": "892e",
             "type": "stream",
@@ -47465,29 +47608,30 @@
             "time_start": "20:34:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "74a2",
-            "type": "stream",
-            "date": "2023-08-07",
-            "duration": 7620,
-            "youtube_id": "ZAoymgU_F9M",
-            "titles": [
-                "⚔️ 100.000 MIEREN vs 1 MENS ⚔️"
-            ],
-            "activities": [
-                {
-                    "title": "Epic Battle Simulator 2",
-                    "duration": 7620
-                }
-            ],
-            "twitchtracker_id": "40968993816",
-            "twitch_id": "1892801172",
-            "tags": [
-                "main"
-            ],
-            "time_start": "21:17:00",
-            "time_end": "23:25:00"
-        },
+      {
+        "id": "74a2",
+        "type": "stream",
+        "date": "2023-08-07",
+        "duration": 7620,
+        "youtube_id": "ZAoymgU_F9M",
+        "titles": [
+          "⚔️ 100.000 MIEREN vs 1 MENS ⚔️"
+        ],
+        "activities": [
+          {
+            "title": "Epic Battle Simulator 2",
+            "duration": 7620
+          }
+        ],
+        "twitchtracker_id": "40968993816",
+        "twitch_id": "1892801172",
+        "tags": [
+          "main"
+        ],
+        "time_start": "21:17:00",
+        "time_end": "23:25:00",
+        "collection": 70
+      },
         {
             "id": "5c58",
             "type": "stream",
@@ -48054,35 +48198,36 @@
             "youtube_id": "tHTIDvBmX14",
             "activity": "Payday 3"
         },
-        {
-            "id": "e339",
-            "type": "stream",
-            "date": "2023-10-02",
-            "duration": 7740,
-            "youtube_id": "obPyWQVefNc",
-            "titles": [
-                "HORROR MAAND 2023 IS BEGONNEN!"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 2040
-                },
-                {
-                    "title": "I'm on Observation Duty 6",
-                    "duration": 5700
-                }
-            ],
-            "twitchtracker_id": "41189677432",
-            "twitch_id": "1941071931",
-            "tags": [
-                "main",
-                "horrormaand"
-            ],
-            "time_start": "20:55:00",
-            "description": "Timon en Peter spelen I'm on Observation Duty. Het is het begin van de horror maand en ze kondigen de nieuwe emotes aan: lekkereng en lekkeraanval. Ze spelen het level 'Hotel', 'Pool' en 'Hospital'.",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "e339",
+        "type": "stream",
+        "date": "2023-10-02",
+        "duration": 7740,
+        "youtube_id": "obPyWQVefNc",
+        "titles": [
+          "HORROR MAAND 2023 IS BEGONNEN!"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 2040
+          },
+          {
+            "title": "I'm on Observation Duty 6",
+            "duration": 5700
+          }
+        ],
+        "twitchtracker_id": "41189677432",
+        "twitch_id": "1941071931",
+        "tags": [
+          "main",
+          "horrormaand"
+        ],
+        "time_start": "20:55:00",
+        "description": "Timon en Peter spelen I'm on Observation Duty. Het is het begin van de horror maand en ze kondigen de nieuwe emotes aan: lekkereng en lekkeraanval. Ze spelen het level 'Hotel', 'Pool' en 'Hospital'.",
+        "time_end": "23:05:00",
+        "collection": 68
+      },
         {
             "id": "0bca",
             "type": "stream",
@@ -48493,29 +48638,30 @@
             "time_end": "21:05:00",
             "free": true
         },
-        {
-            "id": "5ee1",
-            "type": "stream",
-            "date": "2023-11-20",
-            "duration": 7080,
-            "youtube_id": "PNTSUDXI2Ns",
-            "titles": [
-                "We gaan je TV dus stelen... - 10 JAAR LEKKER SPELEN"
-            ],
-            "activities": [
-                {
-                    "title": "Thief Simulator 2",
-                    "duration": 7080
-                }
-            ],
-            "twitchtracker_id": "40185814501",
-            "twitch_id": "1982872712",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:36:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "5ee1",
+        "type": "stream",
+        "date": "2023-11-20",
+        "duration": 7080,
+        "youtube_id": "PNTSUDXI2Ns",
+        "titles": [
+          "We gaan je TV dus stelen... - 10 JAAR LEKKER SPELEN"
+        ],
+        "activities": [
+          {
+            "title": "Thief Simulator 2",
+            "duration": 7080
+          }
+        ],
+        "twitchtracker_id": "40185814501",
+        "twitch_id": "1982872712",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:36:00",
+        "time_end": "22:35:00",
+        "collection": 70
+      },
         {
             "id": "51aa",
             "type": "stream",
@@ -48936,29 +49082,30 @@
             "id": "46cc",
             "type": "stream"
         },
-        {
-            "date": "2024-02-26",
-            "time_start": "20:38:53",
-            "time_end": "22:57:59",
-            "titles": [
-                "Zoek de verschillen (3D)"
-            ],
-            "activities": [
-                {
-                    "title": "Project 13",
-                    "duration": 8346
-                }
-            ],
-            "tags": [
-                "main"
-            ],
-            "duration": 8346,
-            "description": "Een spel zoals im on observation duty, de mannen moeten 13 rondjes halen waarin ze verschillen zoeken in de gang. Timon flipt door wat is de kans. De chat is extreem scherp zoals gewoonlijk.",
-            "twitch_id": "2074636910",
-            "youtube_id": "rCzybHbwUVY",
-            "id": "a7de",
-            "type": "stream"
-        },
+      {
+        "date": "2024-02-26",
+        "time_start": "20:38:53",
+        "time_end": "22:57:59",
+        "titles": [
+          "Zoek de verschillen (3D)"
+        ],
+        "activities": [
+          {
+            "title": "Project 13",
+            "duration": 8346
+          }
+        ],
+        "tags": [
+          "main"
+        ],
+        "duration": 8346,
+        "description": "Een spel zoals im on observation duty, de mannen moeten 13 rondjes halen waarin ze verschillen zoeken in de gang. Timon flipt door wat is de kans. De chat is extreem scherp zoals gewoonlijk.",
+        "twitch_id": "2074636910",
+        "youtube_id": "rCzybHbwUVY",
+        "id": "a7de",
+        "type": "stream",
+        "collection": 68
+      },
         {
             "id": "8223",
             "type": "video",
@@ -49051,29 +49198,30 @@
             "id": "1b2c",
             "type": "stream"
         },
-        {
-            "date": "2024-03-11",
-            "time_start": "20:34:48",
-            "time_end": "22:28:34",
-            "titles": [
-                "Zoek de verschillen...(in het donker)"
-            ],
-            "activities": [
-                {
-                    "title": "Project 13: Taxidermy Trails",
-                    "duration": 2900
-                },
-                {
-                    "title": "A Difficult Game About Climbing",
-                    "duration": 2900
-                }
-            ],
-            "duration": 6826,
-            "twitch_id": "2088063284",
-            "youtube_id": "WcAMZQcJsJw",
-            "id": "73b0",
-            "type": "stream"
-        },
+      {
+        "date": "2024-03-11",
+        "time_start": "20:34:48",
+        "time_end": "22:28:34",
+        "titles": [
+          "Zoek de verschillen...(in het donker)"
+        ],
+        "activities": [
+          {
+            "title": "Project 13: Taxidermy Trails",
+            "duration": 2900
+          },
+          {
+            "title": "A Difficult Game About Climbing",
+            "duration": 2900
+          }
+        ],
+        "duration": 6826,
+        "twitch_id": "2088063284",
+        "youtube_id": "WcAMZQcJsJw",
+        "id": "73b0",
+        "type": "stream",
+        "collection": 68
+      },
         {
             "id": "9225",
             "type": "video",
@@ -49157,26 +49305,27 @@
             "id": "3e2b",
             "type": "stream"
         },
-        {
-            "date": "2024-03-25",
-            "time_start": "20:39:35",
-            "time_end": "22:17:07",
-            "titles": [
-                "ROYAL RUMBLE 2024 (live reacties)"
-            ],
-            "activities": [
-                {
-                    "title": "WWE 2K24",
-                    "duration": 4800
-                }
-            ],
-            "duration": 5852,
-            "twitch_id": "2101400669",
-            "youtube_id": "xn84JLmm50o",
-            "description": "de royal rumble van het jaar met buff amongus, big mac menu en meer",
-            "id": "bf31",
-            "type": "stream"
-        },
+      {
+        "date": "2024-03-25",
+        "time_start": "20:39:35",
+        "time_end": "22:17:07",
+        "titles": [
+          "ROYAL RUMBLE 2024 (live reacties)"
+        ],
+        "activities": [
+          {
+            "title": "WWE 2K24",
+            "duration": 4800
+          }
+        ],
+        "duration": 5852,
+        "twitch_id": "2101400669",
+        "youtube_id": "xn84JLmm50o",
+        "description": "de royal rumble van het jaar met buff amongus, big mac menu en meer",
+        "id": "bf31",
+        "type": "stream",
+        "collection": 67
+      },
         {
             "id": "09d3",
             "type": "video",
@@ -49289,37 +49438,39 @@
             "id": "6066",
             "type": "stream"
         },
-        {
-            "id": "765d",
-            "type": "video",
-            "date": "2024-04-11",
-            "title": "Vakkenvuller simulator - Lekker spelen",
-            "duration": 480,
-            "youtube_id": "uu9QSmIxa9Q"
-        },
-        {
-            "date": "2024-04-15",
-            "time_start": "20:46:57",
-            "time_end": "22:33:20",
-            "titles": [
-                "Zoek de verschillen (EXTREME)"
-            ],
-            "activities": [
-                {
-                    "title": "Supermartket Simulator",
-                    "duration": 3000
-                },
-                {
-                    "title": "Project 13: taxidermy Trails",
-                    "duration": 1500
-                }
-            ],
-            "duration": 6383,
-            "twitch_id": "2120778139",
-            "youtube_id": "SJp8HUl0PLM",
-            "id": "394e",
-            "type": "stream"
-        },
+      {
+        "id": "765d",
+        "type": "video",
+        "date": "2024-04-11",
+        "title": "Vakkenvuller simulator - Lekker spelen",
+        "duration": 480,
+        "youtube_id": "uu9QSmIxa9Q",
+        "collection": 70
+      },
+      {
+        "date": "2024-04-15",
+        "time_start": "20:46:57",
+        "time_end": "22:33:20",
+        "titles": [
+          "Zoek de verschillen (EXTREME)"
+        ],
+        "activities": [
+          {
+            "title": "Supermartket Simulator",
+            "duration": 3000
+          },
+          {
+            "title": "Project 13: taxidermy Trails",
+            "duration": 1500
+          }
+        ],
+        "duration": 6383,
+        "twitch_id": "2120778139",
+        "youtube_id": "SJp8HUl0PLM",
+        "id": "394e",
+        "type": "stream",
+        "collection": 70
+      },
         {
             "date": "2024-04-17",
             "time_start": "20:42:08",
@@ -49339,25 +49490,26 @@
             "id": "456d",
             "type": "stream"
         },
-        {
-            "date": "2024-04-21",
-            "time_start": "20:38:57",
-            "time_end": "22:30:19",
-            "titles": [
-                "ZOEK DIE VERSCHILLEN (extreme)"
-            ],
-            "activities": [
-                {
-                    "title": "Shinkansen 0",
-                    "duration": 5462
-                }
-            ],
-            "duration": 5462,
-            "twitch_id": "2126900234",
-            "youtube_id": "YapargPDHro",
-            "id": "3648",
-            "type": "stream"
-        },
+      {
+        "date": "2024-04-21",
+        "time_start": "20:38:57",
+        "time_end": "22:30:19",
+        "titles": [
+          "ZOEK DIE VERSCHILLEN (extreme)"
+        ],
+        "activities": [
+          {
+            "title": "Shinkansen 0",
+            "duration": 5462
+          }
+        ],
+        "duration": 5462,
+        "twitch_id": "2126900234",
+        "youtube_id": "YapargPDHro",
+        "id": "3648",
+        "type": "stream",
+        "collection": 68
+      },
         {
             "id": "4da4",
             "type": "video",
@@ -49385,44 +49537,46 @@
             "id": "3647",
             "type": "stream"
         },
-        {
-            "date": "2024-04-29",
-            "time_start": "20:47:16",
-            "time_end": "22:49:44",
-            "titles": [
-                "IK WANNEER DIE JONGENS WEER LIVE ZIJN"              
-            ],
-            "activities": [
-                {
-                    "title": "Internet cafe Simulator 2",
-                    "duration": 6680
-                }
-            ],
-            "duration": 7348,
-            "twitch_id": "2133052022",
-            "youtube_id": "lDxJW_FfcrU",
-            "id": "5653",
-            "type": "stream"
-        },
-        {
-            "date": "2024-05-01",
-            "time_start": "20:42:24",
-            "time_end": "22:41:03",
-            "titles": [
-                "😉",
-                "Stanley Parable Ultra Deluxe"
-            ],
-            "activities": [
-                {
-                    "title": "The Stanley Parable: Ultra Deluxe",
-                    "duration": 6196
-                }
-            ],
-            "duration": 7119,
-            "twitch_id": "2134787503",
-            "youtube_id": "9VcACBp95Qk",
-            "id": "1199",
-            "type": "stream"
-        }
+      {
+        "date": "2024-04-29",
+        "time_start": "20:47:16",
+        "time_end": "22:49:44",
+        "titles": [
+          "IK WANNEER DIE JONGENS WEER LIVE ZIJN"
+        ],
+        "activities": [
+          {
+            "title": "Internet cafe Simulator 2",
+            "duration": 6680
+          }
+        ],
+        "duration": 7348,
+        "twitch_id": "2133052022",
+        "youtube_id": "lDxJW_FfcrU",
+        "id": "5653",
+        "type": "stream",
+        "collection": 70
+      },
+      {
+        "date": "2024-05-01",
+        "time_start": "20:42:24",
+        "time_end": "22:41:03",
+        "titles": [
+          "😉",
+          "Stanley Parable Ultra Deluxe"
+        ],
+        "activities": [
+          {
+            "title": "The Stanley Parable: Ultra Deluxe",
+            "duration": 6196
+          }
+        ],
+        "duration": 7119,
+        "twitch_id": "2134787503",
+        "youtube_id": "9VcACBp95Qk",
+        "id": "1199",
+        "collection": 20,
+        "type": "stream"
+      }
     ]
 }
