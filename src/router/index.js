@@ -7,6 +7,8 @@ import YouView from "@/views/YouView.vue";
 import SinglePlaylistView from "@/views/SinglePlaylistView.vue";
 import YouPlaylists from "@/views/YouPlaylists.vue";
 import ToolView from "@/views/ToolView.vue";
+import YouHistory from "@/views/YouHistory.vue";
+import YouLiked from "@/views/YouLiked.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,9 +29,10 @@ const router = createRouter({
       path: '/you',
       children: [
         { path: '', name: 'you', component: YouView},
+        { path: 'history', name: 'history', component: YouHistory},
         { path: 'playlists', name: 'playlists', component: YouPlaylists},
         { path: 'playlists/:title', name: 'single-playlist', component: SinglePlaylistView},
-        { path: 'liked-items', name: 'liked-items', component: SinglePlaylistView},
+        { path: 'liked-items', name: 'liked-items', component: YouLiked},
       ]
     },
     {

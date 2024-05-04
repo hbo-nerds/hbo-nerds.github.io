@@ -6,7 +6,9 @@
                 <div class="you-block mb-5">
                     <div class="you-block-title d-flex align-items-center mb-3">
                         <h2 class="fs-5 fw-bold m-0">Geschiedenis</h2>
-                        <button type="button" class="ms-auto btn btn-sm btn-dark rounded-pill">Toon alles</button>
+                        <router-link :to="{name: 'history'}" class="ms-auto">
+                            <button type="button" class="btn btn-sm btn-dark rounded-pill">Toon alles</button>
+                        </router-link>
                     </div>
                     <div class="you-block-content row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-3xl-5 row-cols-4xl-6 gx-1 gy-3 mb-3">
                         <div class="col" v-for="item in historyContent.slice(0, itemsToShow)">
@@ -30,7 +32,9 @@
                 <div class="you-block mb-5">
                     <div class="you-block-title d-flex align-items-center mb-3">
                         <h2 class="fs-5 fw-bold m-0">Liked</h2>
-                        <button type="button" class="ms-auto btn btn-sm btn-dark rounded-pill">Toon alles</button>
+                        <router-link :to="{name: 'liked-items'}" class="ms-auto">
+                            <button type="button" class="btn btn-sm btn-dark rounded-pill">Toon alles</button>
+                        </router-link>
                     </div>
                     <div class="you-block-content row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-3xl-5 row-cols-4xl-6 gx-1 gy-3 mb-3">
                         <div class="col" v-for="item in likedContent.slice(0, itemsToShow)">

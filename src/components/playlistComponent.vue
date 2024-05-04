@@ -63,8 +63,9 @@ function goToCard(type = 'left') {
     if (type === 'middle') {
         const routeData = router.resolve({path: path});
         window.open(routeData.href, '_blank');
-    } else
-        router.push({path: path})
+    } else {
+        router.push({name: 'single-playlist', params: {title: props.playlist['title']}})
+    }
 }
 </script>
 
