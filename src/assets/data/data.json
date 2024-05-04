@@ -7031,25 +7031,26 @@
             "collection": 50,
             "activity": "GTA V"
         },
-        {
-            "id": "a3ca",
-            "type": "stream",
-            "date": "2015-07-16",
-            "duration": 3720,
-            "titles": [
-                "The Stanley Parable - SUBSCRIBER STREAM"
-            ],
-            "activities": [
-                {
-                    "title": "The Stanley Parable",
-                    "duration": 3720
-                }
-            ],
-            "twitch_id": "13801948",
-            "tags": [
-                "casual"
-            ]
-        },
+      {
+        "id": "a3ca",
+        "type": "stream",
+        "date": "2015-07-16",
+        "collection": 20,
+        "duration": 3720,
+        "titles": [
+          "The Stanley Parable - SUBSCRIBER STREAM"
+        ],
+        "activities": [
+          {
+            "title": "The Stanley Parable",
+            "duration": 3720
+          }
+        ],
+        "twitch_id": "13801948",
+        "tags": [
+          "casual"
+        ]
+      },
         {
             "id": "fc3b",
             "type": "video",
@@ -27519,29 +27520,35 @@
             "time_start": "16:47:00",
             "time_end": "17:45:00"
         },
-        {
-            "id": "6c38",
-            "type": "stream",
-            "date": "2019-04-08",
-            "duration": 7020,
-            "youtube_id": "qpmQl7jb7hQ",
-            "titles": [
-                "We spelen helaas FREDDI FISH"
-            ],
-            "activities": [
-                {
-                    "title": "Freddi Fish and Luther's Water Worries",
-                    "duration": 7020
-                }
-            ],
-            "twitchtracker_id": "33598646208",
-            "twitch_id": "433198061",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:27:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "6c38",
+        "type": "stream",
+        "date": "2019-04-08",
+        "description": "De malse mannen spelen Freddie fish over de gouden trompet, Peter geeft aan te huilen bij Planet Earth. Timon wordt misselijk in de Droomvlucht. Deze stream is de geboorte van de 'ik ben vandaag op een klote manier aangereden en ontslagen, ik kan wel wat afleiding gebruiken' donaties.",
+        "duration": 7020,
+        "youtube_id": "qpmQl7jb7hQ",
+        "titles": [
+          "We spelen helaas FREDDI FISH"
+        ],
+        "activities": [
+          {
+            "title": "Freddi Fish and Luther's Water Worries",
+            "duration": 7020
+          }
+        ],
+        "twitchtracker_id": "33598646208",
+        "twitch_id": "433198061",
+        "tags": [
+          "main",
+          "Droomvlucht",
+          "misselijk",
+          "ontslagen",
+          "aangereden",
+          "afleiding"
+        ],
+        "time_start": "20:27:00",
+        "time_end": "22:25:00"
+      },
         {
             "id": "629d",
             "type": "stream",
@@ -49387,7 +49394,7 @@
             ],
             "activities": [
                 {
-                    "title": "Content warning",
+                    "title": "Content Warning",
                     "duration": 5540
                 }
             ],
