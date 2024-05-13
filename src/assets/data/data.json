@@ -14802,9 +14802,11 @@
       ],
       "twitchtracker_id": "25810231456",
       "tags": [
-        "casual"
+        "casual",
+        "kijkers"
       ],
       "time_start": "16:46:00",
+      "description": "Ze zijn net klaar met een video editen, en besluiten een uurtje live te gaan om PlayerUnknown's Battlegrounds te spelen. Nadat de video klaar is met renderen begint Timon met spelen, aan de hand van een stemming in de chat. Daarna speelt Peter een pot. Mmeester komt langs om Peter te helpen, maar het is van korte duur. Ze bespreken Holland's Next Top Mod, en de straffen voor de PETER vs TIMON.",
       "time_end": "17:55:00"
     },
     {
@@ -30524,9 +30526,11 @@
       ],
       "twitchtracker_id": "35918467616",
       "tags": [
-        "main"
+        "main",
+        "discord"
       ],
       "time_start": "20:15:00",
+      "description": "Ze spelen LEGO Jurassic Park, maar worden constant boos over hoe dit spel de film verpest. Ze gebruiken de originele voicelines, maar de audio kwaliteit is heel slecht. Toch kijken ze dan weer steeds uit om een bepaald moment in de game te zien. Er is een personage met een aparte kreun, waarvan Peter herkent van welk moment ze dat geluid hebben gepakt. Nog voordat ze het spelen, en aan het einde, vragen ze mensen in de Discord om de Jurassic Park theme te spelen.",
       "time_end": "22:35:00"
     },
     {
@@ -31039,6 +31043,7 @@
         "main"
       ],
       "time_start": "20:15:00",
+      "description": "Ze spelen Monkey Ball, maar vinden het echt een crap spel. Ze bespreken de aankomende Game Awards, en of ze die live gaan kijken. Uiteindelijk starten ze Star Wars op, maar door slecht internet valt hun stream steeds uit, wat leidt tot een korte stream.",
       "time_end": "22:45:00"
     },
     {
@@ -32343,9 +32348,11 @@
       ],
       "twitchtracker_id": "711356401",
       "tags": [
-        "main"
+        "main",
+        "kijkers"
       ],
       "time_start": "20:23:00",
+      "description": "Na vele jaren spelen ze weer eens PlayerUnknown's Battlegrounds. Ze worden nog steeds boos om hoe het allemaal niet goed werkt. Ze hebben het over het carnavalsnummer van Rick, maar komen erachter dat deze gebaseerd is op een ander nummer. Of heeft dat andere nummer het van Rick gestolen? Ze sturen er een tweetje over. In PUBG krijgen ze hulp van Mika. Bij een andere pot verzamelen ze zich met een grote groep. Ze maken een cirkel waarbij iedereen zich moet voorstellen. Katman mag als enige de andere aanvallen als ze niet luisteren, en die maakt daarbij ook kattengeluiden.",
       "time_end": "22:15:00"
     },
     {
@@ -33084,6 +33091,7 @@
         "main"
       ],
       "time_start": "20:17:00",
+      "description": "Timon wil een 1-aprilgrap uithalen door iemand te raiden om vervolgens '1 april' te typen en weg te gaan. Heel de stream is de chat heel vervelend, door bijvoorbeeld te zeggen dat het beeld of geluid niet goed is. Om ze terug te pakken spelen de mannen een pot Super Smash Bros. Ultimate expres zonder beeld. Wanneer Peter even weg is zegt Timon tegen de chat dat ze zich moeten verstoppen. Ze willen samen Mario Kart 8 spelen, maar komen niet bij elkaar in de room. Ze willen Rainbow Six Siege spelen, maar die krijgen ze niet werkend.",
       "time_end": "22:15:00"
     },
     {
@@ -34221,6 +34229,7 @@
         "main"
       ],
       "time_start": "20:39:00",
+      "description": "Ze kijken een Pokémon Direct terug. Daarna gaan ze proberen Pokémon uit te spelen, om vervolgens op zoek te gaan naar een legendarische pokémon om te vangen met hun master ball, zoals een Wailord.",
       "time_end": "22:35:00"
     },
     {
@@ -36793,6 +36802,7 @@
       ],
       "time_start": "20:18:00",
       "free": true,
+      "description": "Ze bespreken Breath of the Wild, waar deze game op gebaseerd is. Timon vertelt over zijn Getting Over It wedstrijd met Morrog. Benji vraagt welke Switch games ze aanraden, en hij moet Peter of Timon aanwijzen als game expert om advies te geven. Ze hebben heel veel moeite met een eindbaas, en ze gaan op zoek naar Pegasus en andere legendarische dieren.",
       "time_end": "22:45:00"
     },
     {
@@ -39686,9 +39696,11 @@
       "twitchtracker_id": "42920059292",
       "twitch_id": "1115347810",
       "tags": [
-        "main"
+        "main",
+        "challenge"
       ],
       "time_start": "20:25:00",
+      "description": "Ze spelen Demon Souls met de uitdaging dat ze niet te luid mogen praten. Elke keer dat ze dat wel doen speelt er een nummer af van een gevoelige man op loop (Won't You Save Me - Loving Caliber). Doen ze het nog een keer, dan stapelt het zich op, wat dus kan leiden tot meerdere gevoelige mannen door elkaar heen. Ook het nummer Daytona USA - Let's Go Away komt aan bod.",
       "time_end": "22:15:00"
     },
     {
@@ -41291,10 +41303,12 @@
       "twitchtracker_id": "43956104812",
       "twitch_id": "1221304779",
       "tags": [
-        "main"
+        "main",
+        "kijkers"
       ],
       "time_start": "20:28:00",
       "time_end": "22:15:00",
+      "description": "Ze beginnen de stream met geinige boerenstemmetjes. Ze hebben geen auto, en weten niet zo goed wat ze moeten doen, dus gaan ze maar lopen. Wanneer kijkers de server joinen gaan ze stapelen, racen, en voertuigen op het treinspoor zetten.",
       "collection": 70
     },
     {
@@ -42729,10 +42743,12 @@
       "twitchtracker_id": "39299798344",
       "twitch_id": "1460240583",
       "tags": [
-        "main"
+        "main",
+          "coop"
       ],
       "time_start": "21:09:00",
       "time_end": "22:45:00",
+      "description": "Ze spelen Surgeon Simulator 2, maar het spel doet heel erg lollig met willekeurige objecten en gekke outfits. Peter kan het niet waarderen, want klieren is niet leuk als het spel zelf al grappig probeert te doen. Daarom maakt hij het spel constant belachelijk, en gaat hij heel vervelend doen.",
       "collection": 70
     },
     {
@@ -49377,6 +49393,7 @@
         }
       ],
       "duration": 7962,
+      "tags": "character creator",
       "twitch_id": "2103309044",
       "description": "Er wordt veel te veel tijd besteed aan het maken van een personage, een dikke katman die roempie toempie loopt",
       "youtube_id": "Uy-Uz7kvBcg",
