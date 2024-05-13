@@ -49393,7 +49393,10 @@
         }
       ],
       "duration": 7962,
-      "tags": "character creator",
+      "tags": [
+        "character creator" 
+
+      ],
       "twitch_id": "2103309044",
       "description": "Er wordt veel te veel tijd besteed aan het maken van een personage, een dikke katman die roempie toempie loopt",
       "youtube_id": "Uy-Uz7kvBcg",
