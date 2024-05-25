@@ -1,298 +1,298 @@
 {
-    "collections": [
-        {
-            "id": 1,
-            "title": "GTA V Roleplay"
-        },
-        {
-            "id": 2,
-            "title": "Detroit: Become Human"
-        },
-        {
-            "id": 3,
-            "title": "Rust"
-        },
-        {
-            "id": 4,
-            "title": "Pokémon unpackings"
-        },
-        {
-            "id": 5,
-            "title": "Grand Theft Auto V (GTA V)"
-        },
-        {
-            "id": 6,
-            "title": "Snipperclips streams"
-        },
-        {
-            "id": 7,
-            "title": "Beyond: Two Souls"
-        },
-        {
-            "id": 8,
-            "title": "Until Dawn"
-        },
-        {
-            "id": 9,
-            "title": "Heavy Rain"
-        },
-        {
-            "id": 10,
-            "title": "Outlast"
-        },
-        {
-            "id": 11,
-            "title": "Cuphead streams"
-        },
-        {
-            "id": 12,
-            "title": "Fallout 76"
-        },
-        {
-            "id": 13,
-            "title": "The Forest"
-        },
-        {
-            "id": 14,
-            "title": "Lion King"
-        },
-        {
-            "id": 15,
-            "title": "Lekker Spelen: De nieuwe host"
-        },
-        {
-            "id": 16,
-            "title": "Super Mario Bros.: The Lost Levels"
-        },
-        {
-            "id": 17,
-            "title": "Mario Kart 64"
-        },
-        {
-            "id": 18,
-            "title": "Resident Evil 7"
-        },
-        {
-            "id": 19,
-            "title": "Streampie met Tiempie: Getting Over It"
-        },
-        {
-            "id": 20,
-            "title": "The Stanley Parable"
-        },
-        {
-            "id": 21,
-            "title": "Pokémon Red"
-        },
-        {
-            "id": 22,
-            "title": "Trollface Quest & Trollface Quest: Video Memes"
-        },
-        {
-            "id": 23,
-            "title": "Outlast: Whistleblower DLC"
-        },
-        {
-            "id": 24,
-            "title": "Streampie met Tiempie: Dark Souls 3"
-        },
-        {
-            "id": 26,
-            "title": "Far Cry 4: Valley of the Yeti DLC"
-        },
-        {
-            "id": 27,
-            "title": "FIFA World Cup 2014Brazil"
-        },
-        {
-            "id": 28,
-            "title": "Slender: The Arrival"
-        },
-        {
-            "id": 29,
-            "title": "The Walking Dead: Season 2"
-        },
-        {
-            "id": 30,
-            "title": "Super Mario Land"
-        },
-        {
-            "id": 31,
-            "title": "Stranded Deep"
-        },
-        {
-            "id": 32,
-            "title": "Half-Life 2"
-        },
-        {
-            "id": 33,
-            "title": "Resident Evil 3 streams"
-        },
-        {
-            "id": 34,
-            "title": "Starlit Adventures"
-        },
-        {
-            "id": 35,
-            "title": "Amnesia: A Machine ForPigs"
-        },
-        {
-            "id": 36,
-            "title": "DayZ"
-        },
-        {
-            "id": 37,
-            "title": "Resident Evil 2 streams"
-        },
-        {
-            "id": 38,
-            "title": "Resident Evil Remastered streams"
-        },
-        {
-            "id": 39,
-            "title": "Tomb Raider"
-        },
-        {
-            "id": 40,
-            "title": "Little Nightmares streams"
-        },
-        {
-            "id": 41,
-            "title": "The Walking Dead: Michonne"
-        },
-        {
-            "id": 43,
-            "title": "Wolfenstein: The Old Blood"
-        },
-        {
-            "id": 44,
-            "title": "The Evil Within"
-        },
-        {
-            "id": 45,
-            "title": "Amnesia: The Dark Descent streams"
-        },
-        {
-            "id": 46,
-            "title": "Resident Evil Revelations 2 (co-op)"
-        },
-        {
-            "id": 47,
-            "title": "Daylight"
-        },
-        {
-            "id": 48,
-            "title": "jungle book"
-        },
-        {
-            "id": 50,
-            "title": "gta v (videos)"
-        },
-        {
-            "id": 51,
-            "title": "Animal Crossing: New Horizons"
-        },
-        {
-            "id": 52,
-            "title": "It Takes Two"
-        },
-        {
-            "id": 53,
-            "title": "Sons of the Forest"
-        },
-        {
-            "id": 54,
-            "title": "Elden Ring"
-        },
-        {
-            "id": 55,
-            "title": "Resident Evil Village"
-        },
-        {
-            "id": 56,
-            "title": "Drawing From Memory"
-        },
-        {
-            "id": 57,
-            "title": "The Quarry"
-        },
-        {
-            "id": 58,
-            "title": "Mortuary Assistant"
-        },
-        {
-            "id": 59,
-            "title": "Sea of Thieves"
-        },
-        {
-            "id": 60,
-            "title": "Phasmophobia"
-        },
-        {
-            "id": 61,
-            "title": "Backrooms"
-        },
-        {
-            "id": 62,
-            "title": "Lekker Spoilen Game of Thrones S6"
-        },
-        {
-            "id": 63,
-            "title": "Lekker Spoilen Game of Thrones S7"
-        },
-        {
-            "id": 64,
-            "title": "Lekker Spoilen Game of Thrones S8"
-        },
-        {
-            "id": 65,
-            "title": "H1Z1"
-        },
-        {
-            "id": 66,
-            "title": "Pokemon Let's Go (shiny's)"
-        },
-        {
-            "id": 67,
-            "title": "Royal Rumble"
-        },
-        {
-            "id": 68,
-            "title": "Zoek de verschillen"
-        },
-        {
-            "id": 69,
-            "title": "Fiver"
-        },
-        {
-            "id": 70,
-            "title": "Simulator Spellen"
-        },
-        {
-            "id": 71,
-            "title": "Coop Streams"
-        },
-        {
-            "id": 72,
-            "title": "E3"
-        },
-        {
-            "id": 73,
-            "title": "Veed Awards"
-        },
-        {
-            "id": 74,
-            "title": "Peter VS Timon"
-        },
-        {
-            "id": 75,
-            "title": "Lekker Spelen VS Kijkers"
-        },
-        {
-            "id": 76,
-            "title": "Pokemon Pack Openings"
-        }
-    ],
+  "collections": [
+    {
+      "id": 1,
+      "title": "GTA V Roleplay"
+    },
+    {
+      "id": 2,
+      "title": "Detroit: Become Human"
+    },
+    {
+      "id": 3,
+      "title": "Rust"
+    },
+    {
+      "id": 4,
+      "title": "Pokémon unpackings"
+    },
+    {
+      "id": 5,
+      "title": "Grand Theft Auto V (GTA V)"
+    },
+    {
+      "id": 6,
+      "title": "Snipperclips streams"
+    },
+    {
+      "id": 7,
+      "title": "Beyond: Two Souls"
+    },
+    {
+      "id": 8,
+      "title": "Until Dawn"
+    },
+    {
+      "id": 9,
+      "title": "Heavy Rain"
+    },
+    {
+      "id": 10,
+      "title": "Outlast"
+    },
+    {
+      "id": 11,
+      "title": "Cuphead streams"
+    },
+    {
+      "id": 12,
+      "title": "Fallout 76"
+    },
+    {
+      "id": 13,
+      "title": "The Forest"
+    },
+    {
+      "id": 14,
+      "title": "Lion King"
+    },
+    {
+      "id": 15,
+      "title": "Lekker Spelen: De nieuwe host"
+    },
+    {
+      "id": 16,
+      "title": "Super Mario Bros.: The Lost Levels"
+    },
+    {
+      "id": 17,
+      "title": "Mario Kart 64"
+    },
+    {
+      "id": 18,
+      "title": "Resident Evil 7"
+    },
+    {
+      "id": 19,
+      "title": "Streampie met Tiempie: Getting Over It"
+    },
+    {
+      "id": 20,
+      "title": "The Stanley Parable"
+    },
+    {
+      "id": 21,
+      "title": "Pokémon Red"
+    },
+    {
+      "id": 22,
+      "title": "Trollface Quest & Trollface Quest: Video Memes"
+    },
+    {
+      "id": 23,
+      "title": "Outlast: Whistleblower DLC"
+    },
+    {
+      "id": 24,
+      "title": "Streampie met Tiempie: Dark Souls 3"
+    },
+    {
+      "id": 26,
+      "title": "Far Cry 4: Valley of the Yeti DLC"
+    },
+    {
+      "id": 27,
+      "title": "FIFA World Cup 2014Brazil"
+    },
+    {
+      "id": 28,
+      "title": "Slender: The Arrival"
+    },
+    {
+      "id": 29,
+      "title": "The Walking Dead: Season 2"
+    },
+    {
+      "id": 30,
+      "title": "Super Mario Land"
+    },
+    {
+      "id": 31,
+      "title": "Stranded Deep"
+    },
+    {
+      "id": 32,
+      "title": "Half-Life 2"
+    },
+    {
+      "id": 33,
+      "title": "Resident Evil 3 streams"
+    },
+    {
+      "id": 34,
+      "title": "Starlit Adventures"
+    },
+    {
+      "id": 35,
+      "title": "Amnesia: A Machine ForPigs"
+    },
+    {
+      "id": 36,
+      "title": "DayZ"
+    },
+    {
+      "id": 37,
+      "title": "Resident Evil 2 streams"
+    },
+    {
+      "id": 38,
+      "title": "Resident Evil Remastered streams"
+    },
+    {
+      "id": 39,
+      "title": "Tomb Raider"
+    },
+    {
+      "id": 40,
+      "title": "Little Nightmares streams"
+    },
+    {
+      "id": 41,
+      "title": "The Walking Dead: Michonne"
+    },
+    {
+      "id": 43,
+      "title": "Wolfenstein: The Old Blood"
+    },
+    {
+      "id": 44,
+      "title": "The Evil Within"
+    },
+    {
+      "id": 45,
+      "title": "Amnesia: The Dark Descent streams"
+    },
+    {
+      "id": 46,
+      "title": "Resident Evil Revelations 2 (co-op)"
+    },
+    {
+      "id": 47,
+      "title": "Daylight"
+    },
+    {
+      "id": 48,
+      "title": "jungle book"
+    },
+    {
+      "id": 50,
+      "title": "gta v (videos)"
+    },
+    {
+      "id": 51,
+      "title": "Animal Crossing: New Horizons"
+    },
+    {
+      "id": 52,
+      "title": "It Takes Two"
+    },
+    {
+      "id": 53,
+      "title": "Sons of the Forest"
+    },
+    {
+      "id": 54,
+      "title": "Elden Ring"
+    },
+    {
+      "id": 55,
+      "title": "Resident Evil Village"
+    },
+    {
+      "id": 56,
+      "title": "Drawing From Memory"
+    },
+    {
+      "id": 57,
+      "title": "The Quarry"
+    },
+    {
+      "id": 58,
+      "title": "Mortuary Assistant"
+    },
+    {
+      "id": 59,
+      "title": "Sea of Thieves"
+    },
+    {
+      "id": 60,
+      "title": "Phasmophobia"
+    },
+    {
+      "id": 61,
+      "title": "Backrooms"
+    },
+    {
+      "id": 62,
+      "title": "Lekker Spoilen Game of Thrones S6"
+    },
+    {
+      "id": 63,
+      "title": "Lekker Spoilen Game of Thrones S7"
+    },
+    {
+      "id": 64,
+      "title": "Lekker Spoilen Game of Thrones S8"
+    },
+    {
+      "id": 65,
+      "title": "H1Z1"
+    },
+    {
+      "id": 66,
+      "title": "Pokemon Let's Go (shiny's)"
+    },
+    {
+      "id": 67,
+      "title": "Royal Rumble"
+    },
+    {
+      "id": 68,
+      "title": "Zoek de verschillen"
+    },
+    {
+      "id": 69,
+      "title": "Fiver"
+    },
+    {
+      "id": 70,
+      "title": "Simulator Spellen"
+    },
+    {
+      "id": 71,
+      "title": "Coop Streams"
+    },
+    {
+      "id": 72,
+      "title": "E3"
+    },
+    {
+      "id": 73,
+      "title": "Veed Awards"
+    },
+    {
+      "id": 74,
+      "title": "Peter VS Timon"
+    },
+    {
+      "id": 75,
+      "title": "Lekker Spelen VS Kijkers"
+    },
+    {
+      "id": 76,
+      "title": "Pokemon Pack Openings"
+    }
+  ],
   "content": [
     {
       "id": "0a16",
@@ -10283,7 +10283,9 @@
         }
       ],
       "twitch_id": "95809561",
-      "extra_urls": "https://www.youtube.com/watch?v=4MNFsHtol5U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "main"
       ]
@@ -10387,7 +10389,9 @@
         }
       ],
       "twitch_id": "99703195",
-      "extra_urls": "https://www.youtube.com/watch?v=4MNFsHtol5U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "main"
       ]
@@ -10724,6 +10728,7 @@
       "id": "ab2a",
       "type": "stream",
       "date": "2016-12-28",
+      "youtube_id": "0gLXpDQxrdY",
       "duration": 6120,
       "titles": [
         "Zeg maar dag 2016. Doehoei. (met pietje)"
@@ -10953,7 +10958,10 @@
       ],
       "twitchtracker_id": "24257325040",
       "twitch_id": "118555042",
-      "extra_urls": "https://www.twitch.tv/videos/119226671; https://www.youtube.com/watch?v=4MNFsHtol5U;",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/119226671",
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "main"
       ],
@@ -11144,7 +11152,9 @@
       ],
       "twitchtracker_id": "24413175536",
       "twitch_id": "119226671",
-      "extra_urls": "https://www.youtube.com/watch?v=4MNFsHtol5U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "casual"
       ],
@@ -11227,7 +11237,10 @@
       ],
       "twitchtracker_id": "24478300720",
       "twitch_id": "123374337",
-      "extra_urls": "https://www.twitch.tv/videos/125959350; https://www.youtube.com/watch?v=4MNFsHtol5U;",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/125959350",
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "casual"
       ],
@@ -11511,7 +11524,9 @@
       ],
       "twitchtracker_id": "24674837776",
       "twitch_id": "125958796",
-      "extra_urls": "https://www.youtube.com/watch?v=4MNFsHtol5U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "casual"
       ],
@@ -11548,7 +11563,9 @@
         }
       ],
       "twitchtracker_id": "24694620160",
-      "extra_urls": "https://www.youtube.com/watch?v=4MNFsHtol5U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "casual",
         "solo"
@@ -11657,7 +11674,9 @@
       ],
       "twitchtracker_id": "24778324672",
       "twitch_id": "128530785",
-      "extra_urls": "https://www.youtube.com/watch?v=4MNFsHtol5U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=4MNFsHtol5U"
+      ],
       "tags": [
         "main"
       ],
@@ -12309,7 +12328,9 @@
       ],
       "twitchtracker_id": "25143273552",
       "twitch_id": "148515888",
-      "extra_urls": "https://youtube.com/watch?v=jO9P8vberNE",
+      "extra_urls": [
+        "https://youtube.com/watch?v=jO9P8vberNE"
+      ],
       "tags": [
         "main"
       ],
@@ -12382,7 +12403,9 @@
         }
       ],
       "twitchtracker_id": "25174545104",
-      "extra_urls": "https://www.youtube.com/watch?v=kqRq5ZThBjI",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=kqRq5ZThBjI"
+      ],
       "tags": [
         "casual",
         "solo"
@@ -14674,7 +14697,10 @@
       ],
       "twitchtracker_id": "25786074176",
       "twitch_id": "165231534",
-      "extra_urls": "https://www.twitch.tv/videos/165231851 https://www.twitch.tv/videos/165232313",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/165231851",
+        "https://www.twitch.tv/videos/165232313"
+      ],
       "tags": [
         "casual"
       ],
@@ -14842,7 +14868,7 @@
       "duration": 16560,
       "youtube_id": "vd4BbgNQl-o",
       "titles": [
-        "Game of Thrones - Lekker Spoilen (LIVE OPNAME)"
+        "HOLLANDS NEXT TOP MOD 2017"
       ],
       "activities": [
         {
@@ -14852,11 +14878,14 @@
       ],
       "twitchtracker_id": "25836766960",
       "twitch_id": "165233276",
-      "extra_urls": "https://www.twitch.tv/videos/165233495",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/165233495"
+      ],
       "tags": [
         "main"
       ],
       "time_start": "20:38:00",
+      "description": "deel2: https://www.twitch.tv/videos/165233495",
       "time_end": "01:15:00"
     },
     {
@@ -14957,7 +14986,10 @@
       ],
       "twitchtracker_id": "25853299200",
       "twitch_id": "165234579",
-      "extra_urls": "https://www.twitch.tv/videos/165234837 https://youtube.com/watch?v=Kfgi63cZz58",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/165234837",
+        "https://youtube.com/watch?v=Kfgi63cZz58"
+      ],
       "tags": [
         "main",
         "peter vs timon"
@@ -15410,7 +15442,11 @@
       ],
       "twitchtracker_id": "25968437856",
       "twitch_id": "165751036",
-      "extra_urls": "https://www.twitch.tv/videos/165751449 https://www.twitch.tv/videos/165752394 https://www.twitch.tv/videos/165752505",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/165751449",
+        "https://www.twitch.tv/videos/165752394",
+        "https://www.twitch.tv/videos/165752505"
+      ],
       "tags": [
         "main"
       ],
@@ -15717,7 +15753,9 @@
       ],
       "twitchtracker_id": "26043734768",
       "twitch_id": "177544470",
-      "extra_urls": "https://www.twitch.tv/videos/170948769",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/170948769"
+      ],
       "tags": [
         "casual"
       ],
@@ -15960,7 +15998,9 @@
         }
       ],
       "twitchtracker_id": "26133869568",
-      "extra_urls": "https://www.youtube.com/watch?v=Rm9LvA-45_Q",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=Rm9LvA-45_Q"
+      ],
       "tags": [
         "casual"
       ],
@@ -16802,7 +16842,9 @@
       ],
       "twitchtracker_id": "26407062384",
       "twitch_id": "202990908",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "main"
       ],
@@ -16856,7 +16898,9 @@
         }
       ],
       "twitchtracker_id": "26420271776",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "casual"
       ],
@@ -16984,7 +17028,9 @@
         }
       ],
       "twitchtracker_id": "26452900608",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "casual"
       ],
@@ -17031,7 +17077,9 @@
         }
       ],
       "twitchtracker_id": "26461434912",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "main"
       ],
@@ -17055,7 +17103,9 @@
         }
       ],
       "twitchtracker_id": "26467223152",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "casual"
       ],
@@ -17088,7 +17138,9 @@
         }
       ],
       "twitchtracker_id": "26476242768",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "casual"
       ],
@@ -17313,7 +17365,9 @@
         }
       ],
       "twitchtracker_id": "26555136208",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "main"
       ],
@@ -17344,7 +17398,9 @@
         }
       ],
       "twitchtracker_id": "26560710848",
-      "extra_urls": "https://www.youtube.com/watch?v=cOGQMym86T4",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cOGQMym86T4"
+      ],
       "tags": [
         "casual"
       ],
@@ -17368,7 +17424,9 @@
       ],
       "twitchtracker_id": "26570871472",
       "twitch_id": "210583678",
-      "extra_urls": "https://www.youtube.com/watch?v=cuT4G75K2wM",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=cuT4G75K2wM"
+      ],
       "tags": [
         "main"
       ],
@@ -21271,7 +21329,7 @@
       "date": "2018-04-11",
       "duration": 6960,
       "titles": [
-        "PETER vs TIMON"
+        "PETER vs GESPONSORDE TIMON"
       ],
       "activities": [
         {
@@ -21749,7 +21807,9 @@
         }
       ],
       "twitchtracker_id": "28601216368",
-      "extra_urls": "https://www.youtube.com/watch?v=vT2PrNXaHV8",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=vT2PrNXaHV8"
+      ],
       "tags": [
         "casual"
       ],
@@ -21854,9 +21914,12 @@
       ],
       "twitchtracker_id": "28634226208",
       "tags": [
-        "main"
+        "main",
+        "character creator",
+        "kijkers"
       ],
       "time_start": "20:24:00",
+      "description": "Ze spelen Conan Exiles, waarbij je de mogelijkheid hebt om de grootte van je penis aan te passen. Ze komen een groep tegen, en Timon probeert vrienden te worden met iemand genaamd Elsa. Zelfs meer dan alleen vrienden, maar daar zal hij voor moeten strijden.",
       "time_end": "22:25:00"
     },
     {
@@ -22411,7 +22474,9 @@
       ],
       "twitchtracker_id": "29040464432",
       "twitch_id": "271986520",
-      "extra_urls": "https://www.twitch.tv/videos/271985297",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/271985297"
+      ],
       "tags": [
         "casual",
         "e3"
@@ -22455,7 +22520,9 @@
       ],
       "twitchtracker_id": "29052708640",
       "twitch_id": "272383040",
-      "extra_urls": "https://www.twitch.tv/videos/272375871",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/272375871"
+      ],
       "tags": [
         "main",
         "e3"
@@ -22533,7 +22600,10 @@
       ],
       "twitchtracker_id": "29077267152",
       "twitch_id": "273490346",
-      "extra_urls": "https://www.twitch.tv/videos/275605968 https://www.twitch.tv/videos/275606662",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/275605968",
+        "https://www.twitch.tv/videos/275606662"
+      ],
       "tags": [
         "main"
       ],
@@ -22613,7 +22683,9 @@
       ],
       "twitchtracker_id": "29165807312",
       "twitch_id": "278348963",
-      "extra_urls": "https://www.youtube.com/watch?v=qJtp5HhkwSU",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=qJtp5HhkwSU"
+      ],
       "tags": [
         "main"
       ],
@@ -22801,7 +22873,9 @@
         }
       ],
       "twitchtracker_id": "29283792080",
-      "extra_urls": "https://www.youtube.com/watch?v=0eqxw9021HM",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=0eqxw9021HM"
+      ],
       "tags": [
         "casual"
       ],
@@ -23204,7 +23278,9 @@
       ],
       "twitchtracker_id": "29606760368",
       "twitch_id": "307099449",
-      "extra_urls": "https://www.youtube.com/watch?v=XBtAKhL3-GI",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=XBtAKhL3-GI"
+      ],
       "tags": [
         "main",
         "peter vs timon",
@@ -23379,7 +23455,10 @@
         }
       ],
       "twitchtracker_id": "29685054880",
-      "extra_urls": "https://www.youtube.com/watch?v=YaXnSNrdmgw; https://www.youtube.com/watch?v=XvndNb_aWAc",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=YaXnSNrdmgw",
+        "https://www.youtube.com/watch?v=XvndNb_aWAc"
+      ],
       "tags": [
         "casual"
       ],
@@ -23615,7 +23694,9 @@
         }
       ],
       "twitchtracker_id": "29803314816",
-      "extra_urls": "https://www.youtube.com/watch?v=1pj4m2zJNaU",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=1pj4m2zJNaU"
+      ],
       "tags": [
         "main"
       ],
@@ -23656,7 +23737,9 @@
       ],
       "twitchtracker_id": "29829576512",
       "twitch_id": "307103311",
-      "extra_urls": "https://www.twitch.tv/videos/294652645",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/294652645"
+      ],
       "tags": [
         "main"
       ],
@@ -26416,7 +26499,9 @@
       ],
       "twitchtracker_id": "32431709968",
       "twitch_id": "399301900",
-      "extra_urls": "https://www.twitch.tv/videos/409882395",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/409882395"
+      ],
       "tags": [
         "main"
       ],
@@ -26694,7 +26779,10 @@
       ],
       "twitchtracker_id": "32717631136",
       "twitch_id": "409879863",
-      "extra_urls": "https://www.youtube.com/watch?v=sgeufrI5ltw; https://www.twitch.tv/videos/409879710;",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=sgeufrI5ltw",
+        "https://www.twitch.tv/videos/409879710"
+      ],
       "tags": [
         "main"
       ],
@@ -26879,7 +26967,9 @@
         }
       ],
       "twitchtracker_id": "32947796464",
-      "extra_urls": "https://www.youtube.com/watch?v=9x9YQPCd24c",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=9x9YQPCd24c"
+      ],
       "tags": [
         "main"
       ],
@@ -26903,7 +26993,10 @@
       ],
       "twitchtracker_id": "32951682016",
       "twitch_id": "417618494",
-      "extra_urls": "https://www.twitch.tv/videos/417618598; https://www.twitch.tv/videos/417618783;",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/417618598",
+        "https://www.twitch.tv/videos/417618783"
+      ],
       "tags": [
         "main"
       ],
@@ -27289,7 +27382,9 @@
         }
       ],
       "twitchtracker_id": "33338704672",
-      "extra_urls": "https://www.youtube.com/watch?v=q5aie2_gGoI",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=q5aie2_gGoI"
+      ],
       "tags": [
         "casual"
       ],
@@ -27734,7 +27829,11 @@
       ],
       "twitchtracker_id": "33736209168",
       "twitch_id": "422908457",
-      "extra_urls": "https://www.twitch.tv/videos/422908553; https://www.twitch.tv/videos/422908746;https://www.twitch.tv/videos/422908865;",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/422908553",
+        "https://www.twitch.tv/videos/422908746",
+        "https://www.twitch.tv/videos/422908865"
+      ],
       "tags": [
         "main"
       ],
@@ -27970,7 +28069,10 @@
       ],
       "twitchtracker_id": "33943208512",
       "twitch_id": "419004438",
-      "extra_urls": "https://www.youtube.com/watch?v=kTpTIeUUJWg; https://www.twitch.tv/videos/419048617;",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=kTpTIeUUJWg",
+        "https://www.twitch.tv/videos/419048617"
+      ],
       "tags": [
         "main"
       ],
@@ -28321,7 +28423,9 @@
       ],
       "twitchtracker_id": "34223079920",
       "twitch_id": "428414447",
-      "extra_urls": "https://www.twitch.tv/videos/428438935",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/428438935"
+      ],
       "tags": [
         "main",
         "speedrun"
@@ -28686,7 +28790,9 @@
       ],
       "twitchtracker_id": "34468514128",
       "twitch_id": "436935707",
-      "extra_urls": "https://www.twitch.tv/videos/436937811",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/436937811"
+      ],
       "tags": [
         "casual"
       ],
@@ -28727,7 +28833,9 @@
       ],
       "twitchtracker_id": "34480644336",
       "twitch_id": "437385830",
-      "extra_urls": "https://www.twitch.tv/videos/437387078",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/437387078"
+      ],
       "tags": [
         "main"
       ],
@@ -29435,7 +29543,11 @@
       ],
       "twitchtracker_id": "35139413104",
       "twitch_id": "480808984",
-      "extra_urls": "https://www.twitch.tv/videos/480809279 https://www.twitch.tv/videos/480809377 https://www.twitch.tv/videos/480809465",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/480809279",
+        "https://www.twitch.tv/videos/480809377",
+        "https://www.twitch.tv/videos/480809465"
+      ],
       "tags": [
         "casual"
       ],
@@ -29463,7 +29575,11 @@
       ],
       "twitchtracker_id": "35173530032",
       "twitch_id": "480809523",
-      "extra_urls": "https://www.twitch.tv/videos/463119405 https://www.twitch.tv/videos/480809597     https://www.twitch.tv/videos/463108189",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/463119405",
+        "https://www.twitch.tv/videos/480809597",
+        "https://www.twitch.tv/videos/463108189"
+      ],
       "tags": [
         "main"
       ],
@@ -30766,7 +30882,7 @@
       ],
       "activities": [
         {
-          "title": "Horror Legends",
+          "title": "Visage",
           "duration": 10140
         }
       ],
@@ -30864,7 +30980,10 @@
       ],
       "twitchtracker_id": "36144426464",
       "twitch_id": "510236051",
-      "extra_urls": "https://www.twitch.tv/videos/510236156; https://www.twitch.tv/videos/510236278;",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/510236156",
+        "https://www.twitch.tv/videos/510236278"
+      ],
       "tags": [
         "main"
       ],
@@ -31039,7 +31158,9 @@
         }
       ],
       "twitchtracker_id": "198478193",
-      "extra_urls": "https://www.youtube.com/watch?v=CRIBoApBsXk",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=CRIBoApBsXk"
+      ],
       "tags": [
         "main"
       ],
@@ -31076,7 +31197,9 @@
       ],
       "twitchtracker_id": "207273105",
       "twitch_id": "535149634",
-      "extra_urls": "https://www.twitch.tv/videos/535149488",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/535149488"
+      ],
       "tags": [
         "casual"
       ],
@@ -31169,7 +31292,9 @@
       ],
       "twitchtracker_id": "253617969",
       "twitch_id": "535153534",
-      "extra_urls": "https://www.twitch.tv/videos/535153813",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/535153813"
+      ],
       "tags": [
         "main"
       ],
@@ -31539,7 +31664,9 @@
         }
       ],
       "twitchtracker_id": "349306049",
-      "extra_urls": "https://www.youtube.com/watch?v=RNjwfwjSMRU",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=RNjwfwjSMRU"
+      ],
       "tags": [
         "main"
       ],
@@ -31973,7 +32100,9 @@
       ],
       "twitchtracker_id": "566638785",
       "twitch_id": "544678042",
-      "extra_urls": "https://www.youtube.com/watch?v=hNmdzpI5hAw",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=hNmdzpI5hAw"
+      ],
       "tags": [
         "casual"
       ],
@@ -32991,7 +33120,9 @@
       ],
       "twitchtracker_id": "969257713",
       "twitch_id": "584535989",
-      "extra_urls": "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
+      ],
       "tags": [
         "casual"
       ],
@@ -33433,7 +33564,9 @@
       ],
       "twitchtracker_id": "37658222384",
       "twitch_id": "598513495",
-      "extra_urls": "https://www.youtube.com/watch?v=AbJ6aCSfrKE",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=AbJ6aCSfrKE"
+      ],
       "tags": [
         "casual"
       ],
@@ -34401,7 +34534,9 @@
         }
       ],
       "twitchtracker_id": "39144282800",
-      "extra_urls": "https://www.youtube.com/watch?v=HKbly8Z7lWw",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=HKbly8Z7lWw"
+      ],
       "tags": [
         "main"
       ],
@@ -34425,7 +34560,9 @@
       ],
       "twitchtracker_id": "39189793488",
       "twitch_id": "692571544",
-      "extra_urls": "https://www.twitch.tv/videos/692572310",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/692572310"
+      ],
       "tags": [
         "main",
         "mankala"
@@ -34877,7 +35014,9 @@
       ],
       "twitchtracker_id": "298296450",
       "twitch_id": "707182389",
-      "extra_urls": "https://www.youtube.com/watch?v=0R7Q1UTN6V0",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=0R7Q1UTN6V0"
+      ],
       "tags": [
         "casual"
       ],
@@ -35006,7 +35145,10 @@
       ],
       "twitchtracker_id": "376243378",
       "twitch_id": "715315376",
-      "extra_urls": "https://www.twitch.tv/videos/715316148; https://www.youtube.com/watch?v=cEbDf2hu_lA",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/715316148",
+        "https://www.youtube.com/watch?v=cEbDf2hu_lA"
+      ],
       "tags": [
         "main"
       ],
@@ -35277,7 +35419,9 @@
       ],
       "twitchtracker_id": "556752642",
       "twitch_id": "736289954",
-      "extra_urls": "https://www.youtube.com/watch?v=R1nbMV2Do9U",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=R1nbMV2Do9U"
+      ],
       "tags": [
         "casual"
       ],
@@ -35561,7 +35705,9 @@
         }
       ],
       "twitchtracker_id": "39598703676",
-      "extra_urls": "https://www.youtube.com/watch?v=FSsB7ZU1dtM",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=FSsB7ZU1dtM"
+      ],
       "tags": [
         "casual",
         "solo"
@@ -35900,7 +36046,9 @@
       ],
       "twitchtracker_id": "39792053372",
       "twitch_id": "791113075",
-      "extra_urls": "https://www.twitch.tv/videos/791114035",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/791114035"
+      ],
       "tags": [
         "casual",
         "solo"
@@ -35926,7 +36074,9 @@
       ],
       "twitchtracker_id": "39805666460",
       "twitch_id": "784877677",
-      "extra_urls": "https://www.twitch.tv/videos/784878802",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/784878802"
+      ],
       "tags": [
         "main"
       ],
@@ -36136,7 +36286,9 @@
       ],
       "twitchtracker_id": "39917647788",
       "twitch_id": "797447769",
-      "extra_urls": "https://www.twitch.tv/videos/797448161",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/797448161"
+      ],
       "tags": [
         "casual"
       ],
@@ -36283,7 +36435,9 @@
       ],
       "twitchtracker_id": "40012702524",
       "twitch_id": "805455187",
-      "extra_urls": "https://www.twitch.tv/videos/805455821",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/805455821"
+      ],
       "tags": [
         "main"
       ],
@@ -36372,7 +36526,9 @@
       ],
       "twitchtracker_id": "40046470492",
       "twitch_id": "813513639",
-      "extra_urls": "https://www.twitch.tv/videos/813514833",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/813514833"
+      ],
       "tags": [
         "casual",
         "solo"
@@ -36627,7 +36783,9 @@
         }
       ],
       "twitchtracker_id": "40277512796",
-      "extra_urls": "https://www.youtube.com/watch?v=oQKgjDxy4Zs",
+      "extra_urls": [
+        "https://www.youtube.com/watch?v=oQKgjDxy4Zs"
+      ],
       "tags": [
         "casual"
       ],
@@ -36850,7 +37008,9 @@
       ],
       "twitchtracker_id": "40435381548",
       "twitch_id": "847969572",
-      "extra_urls": "https://www.twitch.tv/videos/847971418",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/847971418"
+      ],
       "tags": [
         "main"
       ],
@@ -37036,7 +37196,9 @@
       ],
       "twitchtracker_id": "40708520284",
       "twitch_id": "870074911",
-      "extra_urls": "https://www.twitch.tv/videos/870067476",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/870067476"
+      ],
       "tags": [
         "main"
       ],
@@ -41330,7 +41492,9 @@
       ],
       "twitchtracker_id": "43997907660",
       "twitch_id": "1226260282",
-      "extra_urls": "https://www.twitch.tv/videos/1226261854",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/1226261854"
+      ],
       "tags": [
         "main"
       ],
@@ -42746,7 +42910,7 @@
       "twitch_id": "1460240583",
       "tags": [
         "main",
-          "coop"
+        "coop"
       ],
       "time_start": "21:09:00",
       "time_end": "22:45:00",
@@ -45134,7 +45298,9 @@
       ],
       "twitchtracker_id": "40047363960",
       "twitch_id": "1641933784",
-      "extra_urls": "https://www.twitch.tv/videos/1646591451",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/1646591451"
+      ],
       "tags": [
         "main"
       ],
@@ -45442,7 +45608,9 @@
       ],
       "twitchtracker_id": "40172755928",
       "twitch_id": "1677958615",
-      "extra_urls": "https://www.twitch.tv/videos/1677959346",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/1677959346"
+      ],
       "tags": [
         "main"
       ],
@@ -45697,7 +45865,9 @@
       ],
       "twitchtracker_id": "40344257128",
       "twitch_id": "1709492944",
-      "extra_urls": "https://www.twitch.tv/videos/1709495880",
+      "extra_urls": [
+        "https://www.twitch.tv/videos/1709495880"
+      ],
       "tags": [
         "main"
       ],
@@ -49396,8 +49566,7 @@
       ],
       "duration": 7962,
       "tags": [
-        "character creator" 
-
+        "character creator"
       ],
       "twitch_id": "2103309044",
       "description": "Er wordt veel te veel tijd besteed aan het maken van een personage, een dikke katman die roempie toempie loopt",
@@ -49673,6 +49842,48 @@
       "twitch_id": "2140766834",
       "youtube_id": "dc5mLuDt1NY",
       "id": "2335",
+      "type": "stream"
+    },
+    {
+      "date": "2024-05-13",
+      "time_start": "20:31:40",
+      "time_end": "22:26:31",
+      "titles": [
+        "Samen staan we sterker dan alleen."
+      ],
+      "activities": [
+        {
+          "title": "Super Bunny Man",
+          "duration": 6000
+        }
+      ],
+      "duration": 6891,
+      "twitch_id": "2144963207",
+      "youtube_id": "W-r1TwzIng8",
+      "id": "f267",
+      "type": "stream"
+    },
+    {
+      "date": "2024-05-15",
+      "time_start": "20:32:52",
+      "time_end": "22:21:14",
+      "titles": [
+        "Ik had niet verwacht dat pizza's bezorgen zo lastig zou zijn..."
+      ],
+      "activities": [
+        {
+          "title": "Run Pizza Run",
+          "duration": 2400
+        },
+        {
+          "title": "Buckshot Roulette",
+          "duration": 3600
+        }
+      ],
+      "duration": 6502,
+      "twitch_id": "2146611664",
+      "youtube_id": "2QMwOGv-k-M",
+      "id": "c35c",
       "type": "stream"
     }
   ]
