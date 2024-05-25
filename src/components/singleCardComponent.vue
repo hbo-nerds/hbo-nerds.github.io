@@ -1,151 +1,137 @@
 <template>
-    <div class="row gy-3">
+    <div>
+        <img :src="imgScr" alt="thumbnail" class="w-100 rounded-3 mb-3">
+        <h5 class="fw-bold">{{ title }}</h5>
+        <!-- description -->
+        <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
+            <div class="card-body">
+                <div class="d-flex gap-3 mb-3 small">
+                    <span>
+                        <i class="bi bi-clock me-2"></i>
+                        <span>{{ duration }}</span>
+                    </span>
+                    <span>
+                        <i class="bi bi-calendar4-range me-2"></i>
+                        <span>{{ card.date }}</span>
+                    </span>
+                </div>
+                <p v-if="card.description">{{ card.description }}</p>
+                <a
+                    :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
+                    target="_blank">Stuur een beschrijving op!</a>
+            </div>
+        </div>
+        <!-- links -->
+        <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
+            <div class="card-body">
+                <div class="d-flex gap-3">
+                    <div><i class="bi bi-link-45deg fs-5"></i></div>
+                    <div class="d-flex gap-2 flex-wrap text-capitalize">
+                        <a v-if="card['twitch_id']" :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
+                            <span class="badge rounded-pill text-wrap">Twitch</span>
+                        </a>
+                        <a v-if="card['youtube_id']" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
+                            <span class="badge rounded-pill text-wrap">YouTube</span>
+                        </a>
+                        <a v-if="card['twitchtracker_id']" :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']" target="_blank">
+                            <span class="badge rounded-pill text-wrap">TwitchTracker</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <div class="col-12 col-md-8 mb-md-0">
-            <img class="w-100 rounded-3 mb-3" :src="imgScr" alt="thumbnail">
-            <h5 class="fw-bold">{{ title }}</h5>
-            <div class="card">
-                <div class="card-body">
-
-                    <!-- key items -->
-                    <div class="d-flex mb-3">
-                        <span class="me-4">
-                            <i class="bi bi-clock me-2"></i>
-                            <span>{{ duration }}</span>
-                        </span>
-                        <span class="me-4">
-                            <i class="bi bi-calendar4-range me-2"></i>
-                            <span>{{ card.date }}</span>
-                        </span>
+        <!-- games/activities -->
+        <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
+            <div class="card-body">
+                <div class="d-flex gap-3">
+                    <div><i class="bi bi-controller fs-5"></i></div>
+                    <div class="d-flex gap-2 flex-wrap text-capitalize">
+                        <span v-if="!card.activities?.length && !card.activity?.length"
+                              class="badge rounded-pill text-wrap">-</span>
+                        <span v-for="act in card.activities"
+                              :title="`Zoek op '${act.title}'`"
+                              class="badge rounded-pill text-wrap" type="button"
+                              @click="searchActivity(act.title)">{{ act.title }}</span>
+                        <template v-if="Array.isArray(card.activity)">
+                            <span v-for="act in card.activity"
+                                  :title="`Zoek op '${act}'`" class="badge rounded-pill text-wrap"
+                                  type="button"
+                                  @click="searchActivity(act)">{{ act }}</span>
+                        </template>
+                        <span v-if="card.activity" :title="`Zoek op '${card.activity}'`"
+                              class="badge rounded-pill text-wrap" type="button"
+                              @click="searchActivity(card.activity)">{{ card.activity }}</span>
                     </div>
-                    <!-- image -->
-                    <div class="row gy-3 mb-3">
-                        <div class="col-12 col-md-4">
-                            <h2 class="fs-5 fw-bold">Bekijk</h2>
-                            <a v-if="card['twitch_id']"
-                               :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
-                               class="me-2 mb-2 d-block" target="_blank"><img class="me-2"
-                                                                              style="width: 32px;height: 32px"
-                                                                              src="../assets/img/twitch.png" alt="logo">Twitch</a>
-                            <a v-if="card['youtube_id']"
-                               :href="'https://youtube.com/watch?v=' + card['youtube_id']"
-                               class="me-2 mb-2 d-block" target="_blank"><img class="me-2"
-                                                                              style="width: 32px;height: 32px"
-                                                                              src="../assets/img/youtube.png"
-                                                                              alt="logo">Youtube</a>
-                            <a v-if="card['twitchtracker_id']"
-                               :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
-                               class="d-block"
-                               target="_blank">TwitchTracker</a>
-                        </div>
+                </div>
+            </div>
+        </div>
+        <!-- tags -->
+        <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
+            <div class="card-body">
+                <div class="d-flex gap-3">
+                    <div><i class="bi bi-tag fs-5"></i></div>
+                    <div class="d-flex gap-2 flex-wrap text-capitalize">
+                        <span v-if="!card.tags?.length" class="badge rounded-pill">-</span>
+                        <span v-for="tag in card.tags" class="badge rounded-pill">{{
+                                tag
+                            }}</span>
                     </div>
-                    <button @click="generalStore.toggleLikedItem(card.id)" type="button"
-                            class="btn btn-sm btn-outline-success rounded-pill me-2" :class="{active: isLiked}"><i
-                        class="bi me-1" :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'"></i>Like
-                    </button>
-                    <button @click="generalStore.toggleSeenItem(card.id)" type="button"
-                            class="btn btn-sm btn-outline-secondary rounded-pill me-2" :class="{active: isSeen}"><i
-                        class="bi me-1" :class="isSeen ? 'bi-eye-fill' : 'bi-eye'"></i>Gezien
-                    </button>
-                    <button type="button"
-                            class="btn btn-sm btn-outline-secondary rounded-pill"
-                            data-bs-toggle="modal" :data-bs-target="'#playlistModal-' + card.id"><i
-                        class="bi bi-collection-play me-1"></i>Bewaar
-                    </button>
-                    <hr>
-                    <!-- share -->
-                    <div class="d-flex align-items-center">
-                        <span class="fw-bold me-3">Deel via</span>
-                        <a class="me-2 share"
-                           @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
-                            class="bg-whatsapp"></i></a>
-                        <span class="fw-bold">of</span>
-                        <button class="btn btn-link" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
-                        </button>
-                    </div>
-                    <hr>
-                    <!-- properties -->
-                    <div class="mb-4">
-                        <h2 class="fs-5 fw-bold mb-3">Kenmerken</h2>
-                        <div class="row mb-2">
-                            <div class="col-4"><strong>Duur</strong></div>
-                            <div class="col"><span>{{ duration }}</span></div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-4"><strong>Datum</strong></div>
-                            <div class="col"><span>{{ card.date }}</span></div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-4"><strong>Type</strong></div>
-                            <div class="col"><span>{{ card.type }}</span></div>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="col-4"><strong>Tags</strong></div>
-                            <div class="col">
-                                <div class="text-capitalize">
-                                    <span v-if="!card.tags?.length">-</span>
-                                    <span class="badge rounded-pill text-bg-primary me-1" v-for="tag in card.tags">{{
-                                            tag
-                                        }}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <strong>Activiteiten</strong>
-                            </div>
-                            <div class="col">
-                                <div class="text-capitalize">
-                                    <span v-if="!card.activities?.length && !card.activity?.length">-</span>
-                                    <span v-for="act in card.activities" class="badge rounded-pill text-bg-primary me-1 mb-1"
-                                          type="button" @click="searchActivity(act.title)" :title="`Zoek op '${act.title}'`">{{ act.title }}</span>
-                                    <span v-if="Array.isArray(card.activity)" class="badge rounded-pill text-bg-primary me-1 mb-1"
-                                          type="button" @click="searchActivity(act.title)" :title="`Zoek op '${act.title}'`"
-                                          v-for="act in card.activity">{{ act }}</span>
-                                    <span v-if="card.activity" class="badge rounded-pill text-bg-primary me-1 mb-1"
-                                          type="button" @click="searchActivity(card.activity)" :title="`Zoek op '${card.activity}'`">{{ card.activity }}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <!-- description -->
-                    <div class="mb-4">
-                        <h2 class="fs-5 fw-bold">Beschrijving</h2>
-                        <p v-if="card.description">{{ card.description }}</p>
-                        <p><a
-                            :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
-                            target="_blank">Stuur een beschrijving op!</a></p>
-                    </div>
-                    <hr>
-                    <div class="d-flex justify-content-between">
-                        <span class="small">Item-nummer: {{ card.id }}</span>
+                </div>
+            </div>
+        </div>
+        <!-- info -->
+        <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
+            <div class="card-body">
+                <div class="d-flex gap-3">
+                    <div><span class="small fst-italic">Item-nummer: {{ card.id }}</span></div>
+                    <div class="ms-auto">
                         <a :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
                            target="_blank">Feedback</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <!-- header -->
-                    <header>
-                        <h4 class="card-title fw-bold">Serie</h4>
-                    </header>
-                    <p v-if="collectionName">Bekijk meer uit de '{{ collectionName }}' serie.</p>
-                    <p v-else>Maakt deze video deel uit van een serie? <a
-                        :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
-                        target="_blank">Stuur een beschrijving op!</a></p>
-                    <!-- collection -->
-                    <template v-if="card.collection">
-                        <div class="row series-wrapper">
-                            <div class="col-6 col-md-12" v-for="card in collectionItems">
-                                <mini-card-component :card="card"></mini-card-component>
-                            </div>
+
+        <div class="card border-0" style="background-color: rgba(255,255,255,0.1)">
+            <div class="card-body">
+                <!-- watch -->
+                <div class="row gy-3 mb-3">
+                    <div class="col-12 col-md-4">
+                        <div class="d-flex">
+                            <a v-if="card['twitchtracker_id']"
+                               :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
+                               class="d-block"
+                               target="_blank">TwitchTracker</a>
                         </div>
-                        <hr>
-                    </template>
+                    </div>
+                </div>
+                <!-- actions -->
+                <div>
+                    <button :class="{active: isLiked}" class="btn btn-sm btn-outline-success rounded-pill me-2"
+                            type="button" @click="generalStore.toggleLikedItem(card.id)"><i
+                        :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'" class="bi me-1"></i>Like
+                    </button>
+                    <button :class="{active: isSeen}" class="btn btn-sm btn-outline-secondary rounded-pill me-2"
+                            type="button" @click="generalStore.toggleSeenItem(card.id)"><i
+                        :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-1"></i>Gezien
+                    </button>
+                    <button :data-bs-target="'#playlistModal-' + card.id"
+                            class="btn btn-sm btn-outline-secondary rounded-pill"
+                            data-bs-toggle="modal" type="button"><i
+                        class="bi bi-collection-play me-1"></i>Bewaar
+                    </button>
+                </div>
+                <hr>
+                <!-- share -->
+                <div class="d-flex align-items-center">
+                    <span class="fw-bold me-3">Deel via</span>
+                    <a class="me-2 share"
+                       @click="openShare('https://web.whatsapp.com:/send?text=Check dit Lekker Spelen item! ' + shareUrl)"><i
+                        class="bg-whatsapp"></i></a>
+                    <span class="fw-bold">of</span>
+                    <button class="btn btn-link" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
+                    </button>
                 </div>
             </div>
         </div>
@@ -161,8 +147,6 @@
 import {computed, onMounted} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
-import MiniCardComponent from "@/components/miniCardComponent.vue";
-import router from "@/router/index.js";
 import {useGeneralStore} from "@/stores/general.js";
 import PlaylistModal from "@/components/PlaylistModal.vue";
 
@@ -194,12 +178,6 @@ const title = computed(() => {
 const shareUrl = computed(() => {
     const host = window.location.host;
     return `${host}/item/${card.value['id']}`
-})
-const collectionItems = computed(() => {
-    return contentStore.getSingleCollection(card.value['collection'])
-})
-const collectionName = computed(() => {
-    return card.value.collection ? contentStore.getCollection(card.value.collection).title : null
 })
 const isLiked = computed(() => {
     return likedItems.value.includes(props.card['id'])

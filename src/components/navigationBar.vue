@@ -27,7 +27,7 @@
                                    style="background-color: #121212" v-model="search" @keydown.enter="doSearch"/>
                             <button @click="doSearch" type="button" class="input-group-text rounded-end-pill px-4"><i class="bi bi-search"></i></button>
                         </div>
-                        <button type="button" class="ms-3 btn btn-dark rounded-pill"><i class="bi bi-dice-5"></i></button>
+                        <button @click="generalStore.setView('random');contentStore.pickRandomSet()" type="button" class="ms-3 btn btn-dark rounded-pill"><i class="bi bi-dice-5"></i></button>
                     </div>
                     <div class="d-flex d-sm-none justify-content-end">
                         <div class="input-group flex-nowrap" v-if="mobileSearch">
@@ -38,7 +38,7 @@
                             <button @click="doSearch" type="button" class="input-group-text rounded-end-pill px-4"><i class="bi bi-search"></i></button>
                         </div>
                         <button v-if="!mobileSearch" @click="mobileSearch = true" type="button" class="btn rounded-pill"><i class="bi bi-search"></i></button>
-                        <button type="button" class="btn rounded-pill"><i class="bi bi-dice-5"></i></button>
+                        <button @click="generalStore.setView('random');contentStore.pickRandomSet()" type="button" class="btn rounded-pill"><i class="bi bi-dice-5"></i></button>
                     </div>
                 </div>
                 <div class="col-auto col-sm-3 d-flex align-items-center justify-content-end" v-if="!mobileSearch">
@@ -143,11 +143,11 @@
                     </div>
                 </router-link>
                 <hr>
-                <router-link @click="closeCanvas" to="/about" class="item text-decoration-none rounded-3 d-block">
+                <router-link @click="closeCanvas" :to="{name: 'about'}" class="item text-decoration-none rounded-3 d-block">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-question-circle fs-5 me-4"></i>
                         <i class="active bi bi-question-circle-fill fs-5 me-4"></i>
-                        <span class="fs-7">Help</span>
+                        <span class="fs-6 flex-grow-1">Over</span>
                     </div>
                 </router-link>
             </div>
@@ -156,6 +156,7 @@
 </template>
 
 <script setup>
+import router from "@/router/index.js";
 import {useGeneralStore} from "@/stores/general.js";
 import {useContentStore} from "@/stores/content.js";
 import {ref} from "vue";
@@ -174,6 +175,8 @@ function switchTheme(theme) {
 
 function doSearch() {
     contentStore.filter()
+    generalStore.setView('search')
+    router.push({name: 'home'})
 }
 
 function closeCanvas() {

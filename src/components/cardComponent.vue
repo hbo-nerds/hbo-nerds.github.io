@@ -87,7 +87,7 @@ const props = defineProps({
 })
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
-const {images} = storeToRefs(contentStore)
+const {images, selectedCardId} = storeToRefs(contentStore)
 const {seenItems, likedItems} = storeToRefs(generalStore)
 
 const imgScr = computed(() => {
@@ -139,12 +139,13 @@ function secondsToHms() {
  * @param type
  */
 function goToCard(type = 'left') {
-    const path = props.isSeries ? `/series/${props.card['collection']}` : `/item/${props.card['id']}`
-    if (type === 'middle') {
-        const routeData = router.resolve({path: path});
-        window.open(routeData.href, '_blank');
-    } else
-        router.push({path: path})
+    selectedCardId.value = props.card['id']
+    // const path = props.isSeries ? `/series/${props.card['collection']}` : `/item/${props.card['id']}`
+    // if (type === 'middle') {
+    //     const routeData = router.resolve({path: path});
+    //     window.open(routeData.href, '_blank');
+    // } else
+    //     router.push({path: path})
 }
 
 

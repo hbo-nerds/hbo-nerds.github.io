@@ -3,7 +3,6 @@
     <main style="padding-top: 64px" class="position-relative">
         <filter-chips></filter-chips>
 
-
 <!--        <div class="row g-2 align-items-center mb-3">-->
 <!--            &lt;!&ndash; filter mobile &ndash;&gt;-->
 <!--            <div class="col-auto me-auto d-lg-none d-inline-block">-->

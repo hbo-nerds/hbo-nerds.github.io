@@ -34,8 +34,12 @@ export const useContentStore = defineStore('content', {
             },
             activity: []
         },
+        selectedCardId: null
     }),
     getters: {
+        selectedCard() {
+            return this.selectedCardId ? this.getSingleCard(this.selectedCardId) : false
+        },
         includedWords() {
             return this.search.split(' ').filter(w => !w.startsWith('-') && w.length).map(w => w.toLowerCase())
         },
@@ -223,45 +227,46 @@ export const useContentStore = defineStore('content', {
                 if (allowedTags.includes(first))
                     advancedSearch[first] = arr.pop()
             })
-            console.log(advancedSearch)
 
-            data = data.filter(item => this.f_type(item, advancedSearch['type']) &&
-                this.f_title(item, advancedSearch['title']) &&
-                this.f_desc(item, advancedSearch['desc']) &&
-                this.f_activity(item, advancedSearch['game']) &&
-                this.f_tag(item, advancedSearch['tag']) &&
-                this.f_year(item, advancedSearch['year']))
+            if (Object.keys(advancedSearch).length) {
+                data = data.filter(item => this.f_type(item, advancedSearch['type']) &&
+                    this.f_title(item, advancedSearch['title']) &&
+                    this.f_desc(item, advancedSearch['desc']) &&
+                    this.f_activity(item, advancedSearch['game']) &&
+                    this.f_tag(item, advancedSearch['tag']) &&
+                    this.f_year(item, advancedSearch['year']))
+            } else {
+                //check neg words
+                this.excludedWords.forEach((nw) => {
+                    const nw_normalized = this.normalizeInput(nw)
+                    data = data.filter((item) => {
+                        switch (item.type) {
+                            case 'podcast':
+                                return this.filterPodcast(item, nw_normalized, true)
+                            case 'video':
+                                return this.filterVideo(item, nw_normalized, true)
+                            case 'stream':
+                                return this.filterStream(item, nw_normalized, true)
+                        }
+                    })
+                })
 
+                // check pos words
+                this.includedWords.forEach((pw) => {
+                    const pw_normalized = this.normalizeInput(pw)
+                    data = data.filter((item) => {
+                        switch (item.type) {
+                            case 'podcast':
+                                return this.filterPodcast(item, pw_normalized)
+                            case 'video':
+                                return this.filterVideo(item, pw_normalized)
+                            case 'stream':
+                                return this.filterStream(item, pw_normalized)
+                        }
+                    })
+                })
+            }
 
-            // check neg words
-            // this.excludedWords.forEach((nw) => {
-            //     const nw_normalized = this.normalizeInput(nw)
-            //     data = data.filter((item) => {
-            //         switch (item.type) {
-            //             case 'podcast':
-            //                 return this.filterPodcast(item, nw_normalized, true)
-            //             case 'video':
-            //                 return this.filterVideo(item, nw_normalized, true)
-            //             case 'stream':
-            //                 return this.filterStream(item, nw_normalized, true)
-            //         }
-            //     })
-            // })
-
-            // check pos words
-            // this.includedWords.forEach((pw) => {
-            //     const pw_normalized = this.normalizeInput(pw)
-            //     data = data.filter((item) => {
-            //         switch (item.type) {
-            //             case 'podcast':
-            //                 return this.filterPodcast(item, pw_normalized)
-            //             case 'video':
-            //                 return this.filterVideo(item, pw_normalized)
-            //             case 'stream':
-            //                 return this.filterStream(item, pw_normalized)
-            //         }
-            //     })
-            // })
 
             // filter content
             data = data.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item))
@@ -408,7 +413,7 @@ export const useContentStore = defineStore('content', {
             return !input ? '' : input.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
         },
         /**
-         * Filter video
+         * Filter video on title & description & activity
          * @param v video object
          * @param w word
          * @param negative
@@ -421,7 +426,7 @@ export const useContentStore = defineStore('content', {
                 }) : this.normalizeInput(v['activity']).includes(w))) !== negative;
         },
         /**
-         * Filter podcast
+         * Filter podcast on title & description
          * @param p podcast object
          * @param w word
          * @param negative
@@ -431,7 +436,7 @@ export const useContentStore = defineStore('content', {
             return (this.normalizeInput(p['title']).includes(w) || this.normalizeInput(p['description']).includes(w)) !== negative
         },
         /**
-         * Filter stream
+         * Filter stream on title & custom_title & description & activities & tags
          * @param s stream object
          * @param w word
          * @param negative
