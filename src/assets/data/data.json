@@ -11547,8 +11547,6 @@
             "type": "stream",
             "date": "2017-03-04",
             "duration": 17220,
-            "youtube_id": "iKjnJrQUQRg",
-            "collection": 38,
             "titles": [
                 "Potje met Pietje: Zelda: Breath of the Wild"
             ],
@@ -11563,9 +11561,6 @@
                 }
             ],
             "twitchtracker_id": "24694620160",
-            "extra_urls": [
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
-            ],
             "tags": [
                 "casual",
                 "solo"
@@ -49931,6 +49926,44 @@
             "title": "Expeditie Robinson - Lekker spelen",
             "duration": 487,
             "youtube_id": "Z0I0ycynucQ"
+        },
+        {
+            "date": "2024-05-27",
+            "time_start": "20:44:37",
+            "time_end": "22:49:02",
+            "titles": [
+                "Welkom, bij Expeditie Robinson."
+            ],
+            "activities": [
+                {
+                    "title": "Expedition Wildlife",
+                    "duration": 6300
+                }
+            ],
+            "duration": 7465,
+            "twitch_id": "2156917472",
+            "youtube_id": "EP5urJgMdpA",
+            "id": "5e85",
+            "type": "stream"
+        },
+        {
+            "date": "2024-05-29",
+            "time_start": "20:33:12",
+            "time_end": "22:28:56",
+            "titles": [
+                "€600 POKÉMON PACK STREAM! 🎲"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 7200
+                }
+            ],
+            "duration": 6944,
+            "twitch_id": "2158580211",
+            "youtube_id": "dhQvec13gKc",
+            "id": "8528",
+            "type": "stream"
         }
     ]
 }
