@@ -49964,6 +49964,25 @@
             "youtube_id": "dhQvec13gKc",
             "id": "8528",
             "type": "stream"
+        },
+        {
+            "date": "2024-05-30",
+            "time_start": "23:32:29",
+            "time_end": "01:36:05",
+            "titles": [
+                "PLAYSTATION: STATE OF PLAY  + Silent Hill Transmission (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 6600
+                }
+            ],
+            "duration": 7416,
+            "twitch_id": "2159569029",
+            "youtube_id": "z2OVoUAgNXM",
+            "id": "7c77",
+            "type": "stream"
         }
     ]
 }
