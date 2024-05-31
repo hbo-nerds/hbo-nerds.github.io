@@ -19587,9 +19587,10 @@
             ],
             "twitchtracker_id": "27435177248",
             "twitch_id": "223753406",
-            "tags": [
-                "main"
-            ],
+          "tags": [
+            "main",
+            "#GESLIJPT"
+          ],
             "time_start": "20:22:00",
             "time_end": "23:15:00"
         },
@@ -33983,28 +33984,29 @@
             "time_start": "20:23:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "ae5b",
-            "type": "stream",
-            "date": "2020-05-23",
-            "duration": 3960,
-            "titles": [
-                "platinum peter - garfield kartvield"
-            ],
-            "activities": [
-                {
-                    "title": "Garfield Kartfield",
-                    "duration": 3960
-                }
-            ],
-            "twitchtracker_id": "38245111136",
-            "twitch_id": "648262926",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "23:38:00",
-            "time_end": "00:45:00"
-        },
+      {
+        "id": "ae5b",
+        "type": "stream",
+        "description": "peter pils doet een drunk stream vanaf zijn playstation met crap mic PETER PIIIIILS HEUUUUJ",
+        "date": "2020-05-23",
+        "duration": 3960,
+        "titles": [
+          "platinum peter - garfield kartvield"
+        ],
+        "activities": [
+          {
+            "title": "Garfield Kartfield",
+            "duration": 3960
+          }
+        ],
+        "twitchtracker_id": "38245111136",
+        "twitch_id": "648262926",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "23:38:00",
+        "time_end": "00:45:00"
+      },
         {
             "id": "8eae",
             "type": "stream",
@@ -44961,7 +44963,7 @@
             "duration": 9120,
             "youtube_id": "Hvab7QvmNek",
             "titles": [
-                "PETER VS TIMON: HORROR MAAND 🦇"
+                "PETER VS TIMON: HORROR MAAND 🦇 + Silent Hill Presentatie"
             ],
             "activities": [
                 {
