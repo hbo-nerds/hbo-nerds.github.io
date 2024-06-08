@@ -109,7 +109,7 @@ export const useContentStore = defineStore('content', {
                 if (this.checkSingleDate(c, 6)) p['< 6 maanden']++
                 if (this.checkSingleDate(c, 12)) p['< 12 maanden']++
                 return p;
-            }, { 'alle': 0,'< 3 maanden': 0, '< 6 maanden': 0, '< 12 maanden': 0});
+            }, {'alle': 0, '< 3 maanden': 0, '< 6 maanden': 0, '< 12 maanden': 0});
         },
         groupedActivities() {
             return this.content.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
@@ -309,7 +309,7 @@ export const useContentStore = defineStore('content', {
          */
         f_duration(item) {
             return (!this.filters.duration.min || (this.filters.duration.min * 60) < item.duration) &&
-            (!this.filters.duration.max || (this.filters.duration.max * 60) > item.duration)
+                (!this.filters.duration.max || (this.filters.duration.max * 60) > item.duration)
         },
         /**
          * Filter items by activity
@@ -321,9 +321,9 @@ export const useContentStore = defineStore('content', {
             const act = item['activity'] || item['activities'];
             if (Array.isArray(act)) {
                 if (typeof act[0] === 'string')
-                    return this.filters.activity.some(r=> act.includes(r))
+                    return this.filters.activity.some(r => act.includes(r))
                 else
-                    return this.filters.activity.some(r=> act.map(x => x.title).includes(r))
+                    return this.filters.activity.some(r => act.map(x => x.title).includes(r))
             } else
                 return this.filters.activity.includes(act)
         },
@@ -397,12 +397,15 @@ export const useContentStore = defineStore('content', {
          * Select some random items
          */
         pickRandomSet() {
-            let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.filteredData.length));
+            const l = this.filteredData.length <= 12 ? this.filteredData.length : 12
+            let nums = Array.from({length: l}, () => Math.floor(Math.random() * this.filteredData.length));
             this.randomData = []
+            const pickedNums = [];
             nums.forEach(num => {
-                while (!this.filteredData[num]['twitch_id'] && !this.filteredData[num]['youtube_id']) {
+                while ((!this.filteredData[num]['twitch_id'] && !this.filteredData[num]['youtube_id']) || pickedNums.includes(num)) {
                     this.filteredData.length === num + 1 ? num = 0 : num++
                 }
+                pickedNums.push(num)
                 this.randomData.push(this.filteredData[num])
             })
         },
@@ -446,16 +449,16 @@ export const useContentStore = defineStore('content', {
             }).filter(item => item)
         },
         setFilterFromQuery(urlParams) {
-            if(urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
-            if(urlParams.getAll('platform')) this.filters.platform = urlParams.getAll('platform')
-            if(urlParams.get('free')) this.filters.free = urlParams.get('free')
-            if(urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
-            if(urlParams.get('date_range')) this.filters.date.range = urlParams.get('date_range')
-            if(urlParams.get('date_after')) this.filters.date.after = urlParams.get('date_after')
-            if(urlParams.get('date_before')) this.filters.date.before = urlParams.get('date_before')
-            if(urlParams.get('duration_min')) this.filters.duration.min = urlParams.get('duration_min')
-            if(urlParams.get('duration_max')) this.filters.duration.max = urlParams.get('duration_max')
-            if(urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
+            if (urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
+            if (urlParams.getAll('platform')) this.filters.platform = urlParams.getAll('platform')
+            if (urlParams.get('free')) this.filters.free = urlParams.get('free')
+            if (urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
+            if (urlParams.get('date_range')) this.filters.date.range = urlParams.get('date_range')
+            if (urlParams.get('date_after')) this.filters.date.after = urlParams.get('date_after')
+            if (urlParams.get('date_before')) this.filters.date.before = urlParams.get('date_before')
+            if (urlParams.get('duration_min')) this.filters.duration.min = urlParams.get('duration_min')
+            if (urlParams.get('duration_max')) this.filters.duration.max = urlParams.get('duration_max')
+            if (urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
         },
         updateUrl() {
             const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
@@ -477,9 +480,11 @@ export const useContentStore = defineStore('content', {
             if (this.filters.duration.max)
                 search.append('duration_max', this.filters.duration.max)
             if (search.toString().length)
-                router.replace({query: { filter: search.toString() }}).then(r => {})
+                router.replace({query: {filter: search.toString()}}).then(r => {
+                })
             else
-                router.replace({query: null}).then(r => {})
+                router.replace({query: null}).then(r => {
+                })
 
         }
     }
