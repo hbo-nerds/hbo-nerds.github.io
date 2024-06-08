@@ -35,7 +35,7 @@
                 <ul class="dropdown-menu">
                     <li><button class="dropdown-item" type="button" @click="generalStore.toggleSeenItem(card['id'])"><i class="bi bi-eye me-2"></i>{{ isSeen ? 'Niet gezien' : 'Gezien'}}</button></li>
                     <li><button class="dropdown-item" type="button" data-bs-toggle="modal" :data-bs-target="'#playlistModal-' + card['id']"><i class="bi bi-collection-play me-2"></i>Bewaar</button></li>
-                    <li><button class="dropdown-item" type="button"><i class="bi bi-share me-2"></i>Deel</button></li>
+                    <li><button class="dropdown-item" type="button" @click="generalStore.toggleLikedItem(card['id'])"><i class="bi bi-hand-thumbs-up me-2"></i>{{ isLiked ? 'Niet leuk' : 'Leuk!'}}</button></li>
                 </ul>
             </div>
         </div>
@@ -62,7 +62,7 @@ const props = defineProps({
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
 const {images} = storeToRefs(contentStore)
-const {seenItems} = storeToRefs(generalStore)
+const {seenItems, likedItems} = storeToRefs(generalStore)
 
 const imgScr = computed(() => {
     return images.value['320'][`${props.card['twitch_id']}`] ||
@@ -85,6 +85,9 @@ const collectionCount = computed(() => {
 })
 const isSeen = computed(() => {
     return seenItems.value.includes(props.card['id'])
+})
+const isLiked = computed(() => {
+    return likedItems.value.includes(props.card['id'])
 })
 
 function secondsToHms() {
