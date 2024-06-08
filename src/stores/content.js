@@ -381,9 +381,12 @@ export const useContentStore = defineStore('content', {
                 if (typeof act[0] === 'string')
                     return advancedSearch ? act.some(a => this.normalizeInput(a).includes(s)) :
                         this.filters.activity.some(r => act.includes(r))
-                else
+                else {
                     return advancedSearch ? act.map(x => x.title).some(a => this.normalizeInput(a).includes(s)) :
-                        this.filters.activity.some(r => act.map(x => x.title).includes(r))
+                        this.filters.activity.some((r) => {
+                            return act.map(x => this.normalizeInput(x.title)).includes(this.normalizeInput(r))
+                        })
+                }
             } else
                 return advancedSearch ? this.normalizeInput(act).includes(s) : this.filters.activity.includes(act)
         },
@@ -462,12 +465,15 @@ export const useContentStore = defineStore('content', {
          * Select some random items
          */
         pickRandomSet() {
-            let nums = Array.from({length: 12}, () => Math.floor(Math.random() * this.filteredData.length));
+            const l = this.filteredData.length <= 12 ? this.filteredData.length : 12
+            let nums = Array.from({length: l}, () => Math.floor(Math.random() * this.filteredData.length));
             this.randomData = []
+            const pickedNums = [];
             nums.forEach(num => {
-                while (!this.filteredData[num]['twitch_id'] && !this.filteredData[num]['youtube_id']) {
+                while ((!this.filteredData[num]['twitch_id'] && !this.filteredData[num]['youtube_id']) || pickedNums.includes(num)) {
                     this.filteredData.length === num + 1 ? num = 0 : num++
                 }
+                pickedNums.push(num)
                 this.randomData.push(this.filteredData[num])
             })
         },

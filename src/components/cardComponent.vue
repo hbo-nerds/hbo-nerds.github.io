@@ -1,7 +1,7 @@
 <template>
     <div class="card h-100 border-0 bg-transparent position-relative">
         <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative rounded-3 z-1"
-             :class="card.type === 'stream' && card.free ? 'p-1 bg-warning' : ''">
+             :class="{'p-1 bg-warning' : card.type === 'stream' && card.free, 'p-1 bg-secondary' : card.id === selectedCardId }">
             <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100 rounded-3" alt="thumbnail">
             <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
                   style="--bs-bg-opacity: .75;">{{ duration }}</span>
@@ -9,21 +9,25 @@
                   class="badge rounded-0 bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
                 Gratis
             </span>
+            <span v-if="card.id === selectedCardId"
+                  class="badge rounded-0 bg-secondary position-absolute top-0 end-0 m-2 text-uppercase">
+                Open
+            </span>
 
             <div v-if="isSeen" class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
                 <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
             </div>
         </div>
         <div class="card-body pt-3 pb-0 px-0">
-            <div class="d-flex justify-content-between gap-2">
+            <div class="d-flex justify-content-between gap-2 position-relative">
                 <a v-if="card['twitch_id']" :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
-                    <img class="rounded-circle" src="../assets/img/twitch.png" width="36" height="36" alt="logo">
+                    <img class="rounded-circle" src="../assets/img/twitch.png" width="24" height="24" alt="logo">
                 </a>
                 <a v-else-if="card['type'] === 'podcast'" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
-                    <img class="rounded-circle" src="../assets/img/podcast.png" width="36" height="36" alt="logo">
+                    <img class="rounded-circle" src="../assets/img/podcast.png" width="24" height="24" alt="logo">
                 </a>
                 <a v-else-if="card['youtube_id']" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
-                    <img class="rounded-circle" src="../assets/img/youtube.png" width="36" height="36" alt="logo">
+                    <img class="rounded-circle" src="../assets/img/youtube.png" width="24" height="24" alt="logo">
                 </a>
 
 
@@ -47,11 +51,11 @@
                         <span class="small">{{ card['activity'] }}</span>
                     </div>
                 </div>
-                <div>
-                    <button class="action-btn btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="action-btn position-absolute top-0 end-0 rounded-circle bg-black">
+                    <button class="btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical"></i>
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu dropdown-menu-end">
                         <li v-if="card['collection']">
                             <router-link class="dropdown-item" :to="{name: 'single-serie', params: {id: card['collection'] }}" title="Ga naar serie">
                                 <i class="bi bi-collection-play me-2"></i>Naar collectie
@@ -139,7 +143,7 @@ function secondsToHms() {
  * @param type
  */
 function goToCard(type = 'left') {
-    selectedCardId.value = props.card['id']
+    selectedCardId.value = selectedCardId.value === props.card['id'] ? null : props.card['id']
     // const path = props.isSeries ? `/series/${props.card['collection']}` : `/item/${props.card['id']}`
     // if (type === 'middle') {
     //     const routeData = router.resolve({path: path});
@@ -179,9 +183,6 @@ const yearAgo =  computed(() => {
     -webkit-line-clamp: 2
     -webkit-box-orient: vertical
 
-.platform-link img
-    height: 24px
-    width: 24px
 .inline-meta
     line-height: 16px
     span:not(:first-of-type):before

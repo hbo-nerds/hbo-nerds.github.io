@@ -1,11 +1,11 @@
 <template>
-    <div class="position-absolute bg-body top-0 start-0 end-0 py-3">
-        <div class="d-flex gap-2">
-            <div class="chips flex-grow-1 d-flex flex-nowrap overflow-x-auto hide-scrollbar">
+    <div class="bg-body py-3">
+        <div class="d-flex gap-2 flex-wrap">
+            <div class="flex-grow-1 gap-2 d-flex flex-wrap">
                 <button @click="contentStore.resetFilters();" type="button" :class="!filters.type.length ? 'btn-light' : 'btn-dark'"
-                        class="fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap me-2">Alle</button>
+                        class="fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap">Alle</button>
 
-                <div class="me-2" v-for="(type, idx) in alphaTypes" :key="idx">
+                <div v-for="(type, idx) in alphaTypes" :key="idx">
                     <input class="d-none position-absolute" type="checkbox" :id="'type-' + type" :value="type" name="type"
                            @change="contentStore.filter()" v-model="filters.type">
                     <label type="button" :class="filters.type.includes(type) ? 'btn-light' : 'btn-dark'"
@@ -13,7 +13,7 @@
                 </div>
 
                 <button @click="toggleRecent" type="button" :class="filters.date.range === '< 3 maanden' ? 'btn-light' : 'btn-dark'"
-                        class="fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap me-2">Recente uploads</button>
+                        class="fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap">Recente uploads</button>
 
             </div>
             <div class="flex-shrink-0">

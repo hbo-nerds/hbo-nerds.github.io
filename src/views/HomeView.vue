@@ -1,7 +1,20 @@
 <template>
     <!-- main -->
-    <main style="padding-top: 64px" class="position-relative">
-        <filter-chips></filter-chips>
+    <main>
+        <div class="row">
+            <div class="col position-relative">
+                <filter-chips></filter-chips>
+                <cards-container></cards-container>
+            </div>
+            <div class="col-6 col-xl-4" v-if="selectedCard">
+                <div class="sticky-top mb-5">
+                    <div class="d-flex align-items-center py-3">
+                        <button @click="selectedCardId = null" type="button" class="btn-light fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap">Sluit</button>
+                    </div>
+                    <single-card-component :card="selectedCard"/>
+                </div>
+            </div>
+        </div>
 
 <!--        <div class="row g-2 align-items-center mb-3">-->
 <!--            &lt;!&ndash; filter mobile &ndash;&gt;-->
@@ -35,7 +48,6 @@
 <!--            </div>-->
 <!--        </div>-->
 
-        <cards-container></cards-container>
     </main>
 </template>
 
@@ -48,13 +60,13 @@ import CardsContainer from "@/containers/CardsContainer.vue";
 import FilterModal from "@/components/filterModal.vue";
 import NavigationSide from "@/components/navigationSide.vue";
 import FilterChips from "@/components/filterChips.vue";
+import SingleCardComponent from "@/components/singleCardComponent.vue";
 
-// store
 const generalStore = useGeneralStore()
 const contentStore = useContentStore()
 const {view} = storeToRefs(generalStore)
 
-const {sortOption} = storeToRefs(contentStore)
+const {sortOption, selectedCardId, selectedCard} = storeToRefs(contentStore)
 
 </script>
 
