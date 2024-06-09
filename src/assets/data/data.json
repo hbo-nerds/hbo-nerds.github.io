@@ -50061,6 +50061,44 @@
             "youtube_id": "f5m_tFzEjUQ",
             "id": "a638",
             "type": "stream"
+        },
+        {
+            "date": "2024-06-07",
+            "time_start": "22:36:26",
+            "time_end": "01:01:41",
+            "titles": [
+                "SUMMER GAME FEST 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 8000
+                }
+            ],
+            "duration": 8715,
+            "twitch_id": "2166292476",
+            "youtube_id": "RqJ_Ukhh37c",
+            "id": "6447",
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-09",
+            "time_start": "18:30:19",
+            "time_end": "20:22:26",
+            "titles": [
+                "XBOX GAMES SHOWCASE 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 5500
+                }
+            ],
+            "duration": 6727,
+            "twitch_id": "2167856007",
+            "youtube_id": "yRNtczGZmGY",
+            "id": "24a9",
+            "type": "stream"
         }
     ]
 }
