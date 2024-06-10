@@ -50099,6 +50099,25 @@
             "youtube_id": "yRNtczGZmGY",
             "id": "24a9",
             "type": "stream"
+        },
+        {
+            "date": "2024-06-10",
+            "time_start": "20:28:34",
+            "time_end": "22:10:27",
+            "titles": [
+                "UBISOFT FORWARD 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 5400
+                }
+            ],
+            "duration": 6113,
+            "twitch_id": "2168739201",
+            "youtube_id": "BnNBOrQ7hw0",
+            "id": "04ab",
+            "type": "stream"
         }
     ]
 }
