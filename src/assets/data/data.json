@@ -50118,6 +50118,25 @@
             "youtube_id": "BnNBOrQ7hw0",
             "id": "04ab",
             "type": "stream"
+        },
+        {
+            "date": "2024-06-12",
+            "time_start": "20:30:43",
+            "time_end": "23:52:02",
+            "titles": [
+                "Lekker spelen Origins"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 11113
+                }
+            ],
+            "duration": 12079,
+            "twitch_id": "2170491752",
+            "youtube_id": "kD2SL1R_Da0",
+            "id": "e084",
+            "type": "stream"
         }
     ]
 }
