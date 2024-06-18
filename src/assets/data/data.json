@@ -50137,6 +50137,24 @@
             "youtube_id": "kD2SL1R_Da0",
             "id": "e084",
             "type": "stream"
+        },
+        {
+            "date": "2024-06-17",
+            "time_start": "20:30:21",
+            "time_end": "22:56:56",
+            "titles": [
+                "Lekker spelen Origins (deel 2)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 7800
+                }
+            ],
+            "duration": 8795,
+            "youtube_id": "pOT7VIL6TkQ",
+            "id": "27ba",
+            "type": "stream"
         }
     ]
 }
