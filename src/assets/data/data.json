@@ -50155,6 +50155,25 @@
             "youtube_id": "pOT7VIL6TkQ",
             "id": "27ba",
             "type": "stream"
+        },
+        {
+            "date": "2024-06-18",
+            "time_start": "15:38:42",
+            "time_end": "16:46:07",
+            "titles": [
+                "NINTENDO DIRECT 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 3600
+                }
+            ],
+            "duration": 4045,
+            "twitch_id": "2175466545",
+            "youtube_id": "NikJ-7QWLnM",
+            "id": "9784",
+            "type": "stream"
         }
     ]
 }
