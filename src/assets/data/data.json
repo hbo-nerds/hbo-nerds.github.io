@@ -308,14 +308,14 @@
             "id": 80,
             "title": "Five nights at freddy's"
         },
-      {
-        "id": 81,
-        "title": "VR"
-      },
-      {
-        "id": 82,
-        "title": "Fanmade games"
-      }
+        {
+            "id": 81,
+            "title": "VR"
+        },
+        {
+            "id": 82,
+            "title": "Fanmade games"
+        }
     ],
     "content": [
         {
@@ -9721,16 +9721,16 @@
             "collection": 9,
             "activity": "Heavy Rain"
         },
-      {
-        "id": "e48c",
-        "type": "video",
-        "date": "2016-05-30",
-        "title": "Papflappies: The Game - Lekker spelen",
-        "duration": 735,
-        "youtube_id": "qUiPlu4k2NU",
-        "collection": 82,
-        "activity": "Papflappies: The Game"
-      },
+        {
+            "id": "e48c",
+            "type": "video",
+            "date": "2016-05-30",
+            "title": "Papflappies: The Game - Lekker spelen",
+            "duration": 735,
+            "youtube_id": "qUiPlu4k2NU",
+            "collection": 82,
+            "activity": "Papflappies: The Game"
+        },
         {
             "id": "de13",
             "type": "podcast",
@@ -25946,31 +25946,31 @@
             "time_start": "18:50:00",
             "time_end": "20:45:00"
         },
-      {
-        "id": "c5e6",
-        "type": "stream",
-        "date": "2018-12-17",
-        "duration": 10200,
-        "youtube_id": "hRFRPvsedX0",
-        "titles": [
-          "Een LEKKER SPELEN GAME spelen!"
-        ],
-        "activities": [
-          {
-            "title": "Art",
-            "duration": 10200
-          }
-        ],
-        "twitchtracker_id": "31720294304",
-        "twitch_id": "373395874",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:24:00",
-        "free": true,
-        "collection": 82,
-        "time_end": "23:15:00"
-      },
+        {
+            "id": "c5e6",
+            "type": "stream",
+            "date": "2018-12-17",
+            "duration": 10200,
+            "youtube_id": "hRFRPvsedX0",
+            "titles": [
+                "Een LEKKER SPELEN GAME spelen!"
+            ],
+            "activities": [
+                {
+                    "title": "Art",
+                    "duration": 10200
+                }
+            ],
+            "twitchtracker_id": "31720294304",
+            "twitch_id": "373395874",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:24:00",
+            "free": true,
+            "collection": 82,
+            "time_end": "23:15:00"
+        },
         {
             "id": "ec9d",
             "type": "stream",
@@ -26155,16 +26155,16 @@
             "time_start": "20:23:00",
             "time_end": "22:55:00"
         },
-      {
-        "id": "e02a",
-        "type": "video",
-        "date": "2019-01-11",
-        "title": "Een LEKKER SPELEN GAME spelen!",
-        "duration": 4022,
-        "youtube_id": "bd_ICLCBb8U",
-        "collection": 82,
-        "activity": "Glitch in Twitch"
-      },
+        {
+            "id": "e02a",
+            "type": "video",
+            "date": "2019-01-11",
+            "title": "Een LEKKER SPELEN GAME spelen!",
+            "duration": 4022,
+            "youtube_id": "bd_ICLCBb8U",
+            "collection": 82,
+            "activity": "Glitch in Twitch"
+        },
         {
             "id": "cf74",
             "type": "stream",
@@ -27459,37 +27459,37 @@
             "time_start": "20:17:00",
             "time_end": "23:15:00"
         },
-      {
-        "id": "5232",
-        "type": "stream",
-        "date": "2019-03-27",
-        "duration": 10260,
-        "youtube_id": "iBZsbaPjyBw",
-        "titles": [
-          "Een LEKKER SPELEN spelletje"
-        ],
-        "activities": [
-          {
-            "title": "Art",
-            "duration": 2760
-          },
-          {
-            "title": "Battlefield V",
-            "duration": 4800
-          },
-          {
-            "title": "Hello Neighbor",
-            "duration": 2700
-          }
-        ],
-        "twitchtracker_id": "33409264432",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:23:00",
-        "collection": 82,
-        "time_end": "23:15:00"
-      },
+        {
+            "id": "5232",
+            "type": "stream",
+            "date": "2019-03-27",
+            "duration": 10260,
+            "youtube_id": "iBZsbaPjyBw",
+            "titles": [
+                "Een LEKKER SPELEN spelletje"
+            ],
+            "activities": [
+                {
+                    "title": "Art",
+                    "duration": 2760
+                },
+                {
+                    "title": "Battlefield V",
+                    "duration": 4800
+                },
+                {
+                    "title": "Hello Neighbor",
+                    "duration": 2700
+                }
+            ],
+            "twitchtracker_id": "33409264432",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:23:00",
+            "collection": 82,
+            "time_end": "23:15:00"
+        },
         {
             "id": "9096",
             "type": "stream",
@@ -30471,54 +30471,54 @@
                 "12 UUR MARATHON!"
             ],
             "activities": [
-              {
-                "title": "Bloodborne",
-                "duration": 44100
-              },
-              {
-                "title": "Swat 4",
-                "duration": 44100
-              },
-              {
-                "title": "Heart of Darkness",
-                "duration": 44100
-              },
-              {
-                "title": "Dungeon Keeper 2",
-                "duration": 44100
-              },
-              {
-                "title": "Mirror's Edge'",
-                "duration": 44100
-              },
-              {
-                "title": "Mario 64",
-                "duration": 44100
-              },
-              {
-                "title": "Mario Kart 64",
-                "duration": 44100
-              },
-              {
-                "title": "Croc",
-                "duration": 44100
-              },
-              {
-                "title": "COD: World at War",
-                "duration": 44100
-              },
-              {
-                "title": "Silent Hill",
-                "duration": 44100
-              },
-              {
-                "title": "Timesplitters 3",
-                "duration": 44100
-              },
-              {
-                "title": "Rayman M",
-                "duration": 44100
-              }
+                {
+                    "title": "Bloodborne",
+                    "duration": 44100
+                },
+                {
+                    "title": "Swat 4",
+                    "duration": 44100
+                },
+                {
+                    "title": "Heart of Darkness",
+                    "duration": 44100
+                },
+                {
+                    "title": "Dungeon Keeper 2",
+                    "duration": 44100
+                },
+                {
+                    "title": "Mirror's Edge'",
+                    "duration": 44100
+                },
+                {
+                    "title": "Mario 64",
+                    "duration": 44100
+                },
+                {
+                    "title": "Mario Kart 64",
+                    "duration": 44100
+                },
+                {
+                    "title": "Croc",
+                    "duration": 44100
+                },
+                {
+                    "title": "COD: World at War",
+                    "duration": 44100
+                },
+                {
+                    "title": "Silent Hill",
+                    "duration": 44100
+                },
+                {
+                    "title": "Timesplitters 3",
+                    "duration": 44100
+                },
+                {
+                    "title": "Rayman M",
+                    "duration": 44100
+                }
             ],
             "twitchtracker_id": "35804678832",
             "twitch_id": "488758718",
@@ -50056,26 +50056,26 @@
             "collection": 4,
             "type": "stream"
         },
-      {
-        "date": "2024-05-30",
-        "time_start": "23:32:29",
-        "time_end": "01:36:05",
-        "titles": [
-          "PLAYSTATION: STATE OF PLAY  + Silent Hill Transmission (live reacties)"
-        ],
-        "activities": [
-          {
-            "title": "Speciale Evenementen",
-            "duration": 6600
-          }
-        ],
-        "duration": 7416,
-        "twitch_id": "2159569029",
-        "youtube_id": "z2OVoUAgNXM",
-        "id": "7c77",
-        "collection": 72,
-        "type": "stream"
-      },
+        {
+            "date": "2024-05-30",
+            "time_start": "23:32:29",
+            "time_end": "01:36:05",
+            "titles": [
+                "PLAYSTATION: STATE OF PLAY  + Silent Hill Transmission (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 6600
+                }
+            ],
+            "duration": 7416,
+            "twitch_id": "2159569029",
+            "youtube_id": "z2OVoUAgNXM",
+            "id": "7c77",
+            "collection": 72,
+            "type": "stream"
+        },
         {
             "date": "2024-06-03",
             "time_start": "20:32:35",
@@ -50115,105 +50115,105 @@
             "id": "a638",
             "type": "stream"
         },
-      {
-        "date": "2024-06-07",
-        "time_start": "22:36:26",
-        "time_end": "01:01:41",
-        "titles": [
-          "SUMMER GAME FEST 2024 (live reacties)"
-        ],
-        "activities": [
-          {
-            "title": "Speciale Evenementen",
-            "duration": 8000
-          }
-        ],
-        "duration": 8715,
-        "twitch_id": "2166292476",
-        "youtube_id": "RqJ_Ukhh37c",
-        "id": "6447",
-        "collection": 72,
-        "type": "stream"
-      },
-      {
-        "date": "2024-06-09",
-        "time_start": "18:30:19",
-        "time_end": "20:22:26",
-        "titles": [
-          "XBOX GAMES SHOWCASE 2024 (live reacties)"
-        ],
-        "activities": [
-          {
-            "title": "Speciale Evenementen",
-            "duration": 5500
-          }
-        ],
-        "duration": 6727,
-        "twitch_id": "2167856007",
-        "youtube_id": "yRNtczGZmGY",
-        "id": "24a9",
-        "collection": 72,
-        "type": "stream"
-      },
-      {
-        "date": "2024-06-10",
-        "time_start": "20:28:34",
-        "time_end": "22:10:27",
-        "titles": [
-          "UBISOFT FORWARD 2024 (live reacties)"
-        ],
-        "activities": [
-          {
-            "title": "Speciale Evenementen",
-            "duration": 5400
-          }
-        ],
-        "duration": 6113,
-        "twitch_id": "2168739201",
-        "youtube_id": "BnNBOrQ7hw0",
-        "id": "04ab",
-        "collection": 72,
-        "type": "stream"
-      },
-      {
-        "date": "2024-06-12",
-        "time_start": "20:30:43",
-        "time_end": "23:52:02",
-        "titles": [
-          "Lekker spelen Origins"
-        ],
-        "activities": [
-          {
-            "title": "Speciale Evenementen",
-            "duration": 11113
-          }
-        ],
-        "duration": 12079,
-        "twitch_id": "2170491752",
-        "youtube_id": "kD2SL1R_Da0",
-        "id": "e084",
-        "collection": 82,
-        "type": "stream"
-      },
-      {
-        "date": "2024-06-17",
-        "time_start": "20:30:21",
-        "time_end": "22:56:56",
-        "titles": [
-          "Lekker spelen Origins (deel 2)"
-        ],
-        "activities": [
-          {
-            "title": "Speciale Evenementen",
-            "duration": 7800
-          }
-        ],
-        "duration": 8795,
-        "youtube_id": "pOT7VIL6TkQ",
-        "id": "27ba",
-        "collection": 82,
-        "type": "stream"
-      },
+        {
+            "date": "2024-06-07",
+            "time_start": "22:36:26",
+            "time_end": "01:01:41",
+            "titles": [
+                "SUMMER GAME FEST 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 8000
+                }
+            ],
+            "duration": 8715,
+            "twitch_id": "2166292476",
+            "youtube_id": "RqJ_Ukhh37c",
+            "id": "6447",
+            "collection": 72,
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-09",
+            "time_start": "18:30:19",
+            "time_end": "20:22:26",
+            "titles": [
+                "XBOX GAMES SHOWCASE 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 5500
+                }
+            ],
+            "duration": 6727,
+            "twitch_id": "2167856007",
+            "youtube_id": "yRNtczGZmGY",
+            "id": "24a9",
+            "collection": 72,
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-10",
+            "time_start": "20:28:34",
+            "time_end": "22:10:27",
+            "titles": [
+                "UBISOFT FORWARD 2024 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 5400
+                }
+            ],
+            "duration": 6113,
+            "twitch_id": "2168739201",
+            "youtube_id": "BnNBOrQ7hw0",
+            "id": "04ab",
+            "collection": 72,
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-12",
+            "time_start": "20:30:43",
+            "time_end": "23:52:02",
+            "titles": [
+                "Lekker spelen Origins"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 11113
+                }
+            ],
+            "duration": 12079,
+            "twitch_id": "2170491752",
+            "youtube_id": "kD2SL1R_Da0",
+            "id": "e084",
+            "collection": 82,
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-17",
+            "time_start": "20:30:21",
+            "time_end": "22:56:56",
+            "titles": [
+                "Lekker spelen Origins (deel 2)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 7800
+                }
+            ],
+            "duration": 8795,
+            "youtube_id": "pOT7VIL6TkQ",
+            "id": "27ba",
+            "collection": 82,
+            "type": "stream"
+        },
         {
             "date": "2024-06-18",
             "time_start": "15:38:42",
@@ -50230,8 +50230,26 @@
             "duration": 4045,
             "twitch_id": "2175466545",
             "youtube_id": "NikJ-7QWLnM",
-          "id": "9784",
-          "collection":  72,
+            "id": "9784",
+            "collection": 72,
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-19",
+            "time_start": "20:30:19",
+            "time_end": "23:13:05",
+            "titles": [
+                "Lekker spelen Origins (deel 3)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 9766,
+            "youtube_id": "hlE0NC6SXcA",
+            "id": "944c",
             "type": "stream"
         }
     ]
