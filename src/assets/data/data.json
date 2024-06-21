@@ -312,10 +312,14 @@
             "id": 81,
             "title": "VR"
         },
-        {
-            "id": 82,
-            "title": "Fanmade games"
-        }
+      {
+        "id": 82,
+        "title": "Fanmade games"
+      },
+      {
+        "id": 83,
+        "title": "Horrormaand"
+      }
     ],
   "content": [
     {
@@ -40857,6 +40861,7 @@
       "id": "9d85",
       "type": "stream",
       "date": "2021-10-06",
+      "collection": 83,
       "duration": 5580,
       "youtube_id": "aRjBf3hz-WQ",
       "titles": [
@@ -40913,9 +40918,9 @@
       "id": "5785",
       "type": "stream",
       "date": "2021-10-13",
+      "collection": 83,
       "duration": 6900,
       "youtube_id": "FQH-o396vmk",
-      "collection": 60,
       "titles": [
         "FULL SQUAD PHASMOPHOBIA (Horror maand)"
       ],
@@ -40947,6 +40952,7 @@
       "id": "91ee",
       "type": "stream",
       "date": "2021-10-18",
+      "collection": 83,
       "duration": 5280,
       "youtube_id": "T00LeeLsgx8",
       "titles": [
@@ -40979,6 +40985,7 @@
       "id": "741b",
       "type": "stream",
       "date": "2021-10-20",
+      "collection": 83,
       "duration": 9960,
       "youtube_id": "Pu_4bc5lHX4",
       "titles": [
@@ -41046,6 +41053,7 @@
       "id": "5753",
       "type": "stream",
       "date": "2021-10-25",
+      "collection": 83,
       "duration": 13680,
       "youtube_id": "yJhKlnBYfyo",
       "titles": [
@@ -41092,6 +41100,7 @@
       "id": "2da8",
       "type": "stream",
       "date": "2021-10-27",
+      "collection": 83,
       "duration": 9960,
       "youtube_id": "wtbGmbG8Wq8",
       "titles": [
@@ -41198,7 +41207,7 @@
         "casual"
       ],
       "time_start": "22:08:00",
-      "collection": 81,
+      "collection": 83,
       "time_end": "00:05:00"
     },
     {
@@ -44933,6 +44942,7 @@
       "id": "d69a",
       "type": "stream",
       "date": "2022-10-03",
+      "collection": 83,
       "duration": 5700,
       "youtube_id": "FHc7ra_AdsQ",
       "titles": [
@@ -44955,6 +44965,7 @@
     {
       "id": "a9bc",
       "type": "stream",
+      "collection": 83,
       "date": "2022-10-05",
       "duration": 6480,
       "youtube_id": "JRfUqGTaZaI",
@@ -45002,6 +45013,7 @@
       "id": "9644",
       "type": "stream",
       "date": "2022-10-10",
+      "collection": 83,
       "duration": 6840,
       "youtube_id": "lBtXy9DThIA",
       "titles": [
@@ -45050,6 +45062,7 @@
       "id": "7c22",
       "type": "stream",
       "date": "2022-10-12",
+      "collection": 83,
       "duration": 6240,
       "youtube_id": "guq6N97zyGI",
       "titles": [
@@ -45073,9 +45086,9 @@
       "id": "5292",
       "type": "stream",
       "date": "2022-10-17",
+      "collection": 83,
       "duration": 7020,
       "youtube_id": "LP6dddDRKl0",
-      "collection": 58,
       "titles": [
         "Een lichaam openpellen 🔪🙂"
       ],
@@ -45120,7 +45133,7 @@
     {
       "id": "5b86",
       "type": "stream",
-      "collection": 74,
+      "collection": 83,
       "date": "2022-10-19",
       "duration": 9120,
       "youtube_id": "Hvab7QvmNek",
@@ -45245,6 +45258,7 @@
     {
       "id": "ec85",
       "type": "stream",
+      "collection": 83,
       "date": "2022-10-23",
       "duration": 7740,
       "youtube_id": "bthlM3Ij8J8",
@@ -45273,7 +45287,7 @@
       "date": "2022-10-24",
       "duration": 7380,
       "youtube_id": "wE0tjAMw-F8",
-      "collection": 58,
+      "collection": 83,
       "titles": [
         "The Devil in Me (WORLD PREMIERE) 👻",
         "the devil premiere (world)"
@@ -45340,7 +45354,7 @@
         "main"
       ],
       "time_start": "20:53:00",
-      "collection": 81,
+      "collection": 83,
       "time_end": "22:25:00"
     },
     {
@@ -45373,6 +45387,7 @@
       "id": "436a",
       "type": "stream",
       "date": "2022-10-31",
+      "collection": 83,
       "duration": 5640,
       "youtube_id": "b_f1tIE8MoA",
       "titles": [
@@ -48613,6 +48628,7 @@
     {
       "id": "e339",
       "type": "stream",
+      "collection": 83,
       "date": "2023-10-02",
       "duration": 7740,
       "youtube_id": "obPyWQVefNc",
@@ -48637,16 +48653,16 @@
       ],
       "time_start": "20:55:00",
       "description": "Timon en Peter spelen I'm on Observation Duty. Het is het begin van de horror maand en ze kondigen de nieuwe emotes aan: lekkereng en lekkeraanval. Ze spelen het level 'Hotel', 'Pool' en 'Hospital'.",
-      "time_end": "23:05:00",
-      "collection": 68
+      "time_end": "23:05:00"
     },
     {
       "id": "0bca",
       "type": "stream",
       "date": "2023-10-04",
+
       "duration": 8640,
       "youtube_id": "-ymbhBUJghY",
-      "collection": 58,
+      "collection": 83,
       "titles": [
         "Communiceren met de doden...👻 (HORROR MAAND 2023)"
       ],
@@ -48680,6 +48696,7 @@
       "id": "6f15",
       "type": "stream",
       "date": "2023-10-09",
+      "collection": 83,
       "duration": 8640,
       "youtube_id": "5YocLElDphE",
       "titles": [
@@ -48707,6 +48724,7 @@
       "id": "a130",
       "type": "stream",
       "date": "2023-10-11",
+      "collection": 83,
       "duration": 8820,
       "youtube_id": "nRPl72bfYMk",
       "titles": [
@@ -48733,6 +48751,7 @@
     {
       "id": "9571",
       "type": "stream",
+      "collection": 83,
       "date": "2023-10-16",
       "duration": 8340,
       "youtube_id": "FHI5CvNrAxI",
@@ -48761,7 +48780,7 @@
       "id": "5160",
       "type": "stream",
       "date": "2023-10-18",
-      "collection": 74,
+      "collection": 83,
       "duration": 9780,
       "youtube_id": "qttmXfxgJrw",
       "titles": [
@@ -48790,6 +48809,7 @@
     {
       "id": "f640",
       "type": "stream",
+      "collection": 83,
       "date": "2023-10-23",
       "duration": 6480,
       "youtube_id": "l21oxbXH3Is",
@@ -48818,6 +48838,7 @@
       "id": "b7f2",
       "type": "stream",
       "date": "2023-10-25",
+      "collection": 83,
       "duration": 6180,
       "youtube_id": "bmzcJTYLAqI",
       "titles": [
@@ -48835,16 +48856,15 @@
         "main"
       ],
       "time_start": "20:41:00",
-      "collection": 81,
       "time_end": "22:25:00"
     },
     {
       "id": "7ca9",
       "type": "stream",
       "date": "2023-10-30",
+      "collection": 83,
       "duration": 7080,
       "youtube_id": "ASMGwxdzPPw",
-      "collection": 60,
       "titles": [
         "We gaan LIVE een EXORCISM DOEN! 😨",
         "Super Mario met Satan (Luuk)"
@@ -48874,6 +48894,7 @@
     {
       "id": "d3b2",
       "type": "podcast",
+      "collection": 83,
       "date": "2023-10-31",
       "title": "Waargebeurde spookverhalen.. - Lekker griezelen",
       "duration": 1904,
@@ -48882,6 +48903,7 @@
     {
       "id": "44dd",
       "type": "video",
+      "collection": 83,
       "date": "2023-10-31",
       "title": "Wij riepen een GEEST op... (dit zijn de beelden)",
       "duration": 1099,
