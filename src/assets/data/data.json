@@ -38697,7 +38697,8 @@
       "twitchtracker_id": "41958709692",
       "twitch_id": "1010055259",
       "tags": [
-        "main"
+        "main",
+        "persconferentie"
       ],
       "time_start": "20:27:00",
       "time_end": "22:35:00"
@@ -47762,9 +47763,11 @@
       "twitchtracker_id": "40868719704",
       "twitch_id": "1862539905",
       "tags": [
-        "main"
+        "main",
+        "roleplay"
       ],
       "time_start": "20:40:00",
+      "description": "Ze roleplayen als politiemannen, brandweermannen en ambulancebroeders. Ze houden mensen aan, redden een kat uit een boom, blussen een brandje, en proberen een mensenleven te redden.",
       "time_end": "22:35:00"
     },
     {
