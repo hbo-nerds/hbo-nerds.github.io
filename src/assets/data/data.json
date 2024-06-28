@@ -21297,60 +21297,61 @@
             "youtube_id": "7kjWyOpVvPU",
             "activity": "Just Chatting"
         },
-        {
-            "id": "ca7f",
-            "type": "stream",
-            "date": "2018-04-07",
-            "youtube_id": "AW5JX0FPibs",
-            "duration": 44400,
-            "titles": [
-                "12 UUR STREAM MARATHON"
-            ],
-            "activities": [
-                {
-                    "title": "IRL",
-                    "duration": 3900
-                },
-                {
-                    "title": "Titan Souls",
-                    "duration": 9000
-                },
-                {
-                    "title": "Creative",
-                    "duration": 4800
-                },
-                {
-                    "title": "Variety",
-                    "duration": 9600
-                },
-                {
-                    "title": "Social Eating",
-                    "duration": 1800
-                },
-                {
-                    "title": "Splatoon 2",
-                    "duration": 4200
-                },
-                {
-                    "title": "Mario Party 10",
-                    "duration": 4800
-                },
-                {
-                    "title": "Deadstep",
-                    "duration": 1800
-                },
-                {
-                    "title": "Fortnite",
-                    "duration": 4500
-                }
-            ],
-            "twitchtracker_id": "28237695728",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "12:24:00",
-            "time_end": "00:45:00"
-        },
+      {
+        "id": "ca7f",
+        "type": "stream",
+        "date": "2018-04-07",
+        "free": true,
+        "youtube_id": "AW5JX0FPibs",
+        "duration": 44400,
+        "titles": [
+          "12 UUR STREAM MARATHON"
+        ],
+        "activities": [
+          {
+            "title": "IRL",
+            "duration": 3900
+          },
+          {
+            "title": "Titan Souls",
+            "duration": 9000
+          },
+          {
+            "title": "Creative",
+            "duration": 4800
+          },
+          {
+            "title": "Variety",
+            "duration": 9600
+          },
+          {
+            "title": "Social Eating",
+            "duration": 1800
+          },
+          {
+            "title": "Splatoon 2",
+            "duration": 4200
+          },
+          {
+            "title": "Mario Party 10",
+            "duration": 4800
+          },
+          {
+            "title": "Deadstep",
+            "duration": 1800
+          },
+          {
+            "title": "Fortnite",
+            "duration": 4500
+          }
+        ],
+        "twitchtracker_id": "28237695728",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "12:24:00",
+        "time_end": "00:45:00"
+      },
         {
             "id": "98a8",
             "type": "stream",
@@ -30516,7 +30517,7 @@
         "date": "2019-09-28",
         "free": true,
         "duration": 44100,
-        "youtube_id": "E394s16DcOA",
+        "youtube_id": "5ikVNw6FZ2Y",
         "titles": [
           "12 UUR MARATHON!"
         ],
