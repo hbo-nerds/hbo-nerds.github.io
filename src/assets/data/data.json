@@ -852,16 +852,17 @@
             "collection": 10,
             "activity": "Outlast"
         },
-        {
-            "id": "04b4",
-            "type": "video",
-            "date": "2013-12-27",
-            "title": "Lekker spelen: Tomb Raider -  Deel 1",
-            "duration": 834,
-            "youtube_id": "0S_RKNcRQD4",
-            "collection": 39,
-            "activity": "Tomb Raider"
-        },
+      {
+        "id": "04b4",
+        "type": "video",
+        "description": "Eerste video zonder hun oude logo in de thumbnail.",
+        "date": "2013-12-27",
+        "title": "Lekker spelen: Tomb Raider -  Deel 1",
+        "duration": 834,
+        "youtube_id": "0S_RKNcRQD4",
+        "collection": 39,
+        "activity": "Tomb Raider"
+      },
         {
             "id": "2574",
             "type": "video",
@@ -21300,6 +21301,7 @@
             "id": "ca7f",
             "type": "stream",
             "date": "2018-04-07",
+            "youtube_id": "AW5JX0FPibs",
             "duration": 44400,
             "titles": [
                 "12 UUR STREAM MARATHON"
@@ -24173,9 +24175,9 @@
             "date": "2018-08-28",
             "duration": 15060,
             "youtube_id": "0G26b8Heszc",
-            "titles": [
-                "PETER vs TIMON: PORTAL (SPEEDRUN)"
-            ],
+          "titles": [
+            "Strange Brigade - Lekker spelen"
+          ],
             "activities": [
                 {
                     "title": "Strange Brigade",
@@ -38532,10 +38534,11 @@
             ],
             "twitchtracker_id": "41888158092",
             "twitch_id": "1001977440",
-            "tags": [
-                "main",
-                "peter vs timon"
-            ],
+          "tags": [
+            "main",
+            "peter vs timon",
+            "persconferentie"
+          ],
             "time_start": "20:18:00",
             "time_end": "22:25:00"
         },
@@ -50411,6 +50414,25 @@
             "duration": 9761,
             "youtube_id": "qqUBc284DZY",
             "id": "d4c9",
+            "type": "stream"
+        },
+        {
+            "date": "2024-06-26",
+            "time_start": "20:38:38",
+            "time_end": "22:10:16",
+            "titles": [
+                "PETER vs TIMON: Juni⭐"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 5498,
+            "twitch_id": "2182435429",
+            "youtube_id": "p938a4KhsR0",
+            "id": "3d94",
             "type": "stream"
         }
     ]
