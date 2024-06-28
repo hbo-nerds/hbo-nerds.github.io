@@ -30510,73 +30510,74 @@
             "youtube_id": "jTWbi12GuSQ",
             "activity": "FIFA 20"
         },
-        {
-            "id": "394f",
-            "type": "stream",
-            "date": "2019-09-28",
-            "duration": 44100,
-            "youtube_id": "E394s16DcOA",
-            "titles": [
-                "12 UUR MARATHON!"
-            ],
-            "activities": [
-                {
-                    "title": "Bloodborne",
-                    "duration": 44100
-                },
-                {
-                    "title": "Swat 4",
-                    "duration": 44100
-                },
-                {
-                    "title": "Heart of Darkness",
-                    "duration": 44100
-                },
-                {
-                    "title": "Dungeon Keeper 2",
-                    "duration": 44100
-                },
-                {
-                    "title": "Mirror's Edge'",
-                    "duration": 44100
-                },
-                {
-                    "title": "Mario 64",
-                    "duration": 44100
-                },
-                {
-                    "title": "Mario Kart 64",
-                    "duration": 44100
-                },
-                {
-                    "title": "Croc",
-                    "duration": 44100
-                },
-                {
-                    "title": "COD: World at War",
-                    "duration": 44100
-                },
-                {
-                    "title": "Silent Hill",
-                    "duration": 44100
-                },
-                {
-                    "title": "Timesplitters 3",
-                    "duration": 44100
-                },
-                {
-                    "title": "Rayman M",
-                    "duration": 44100
-                }
-            ],
-            "twitchtracker_id": "35804678832",
-            "twitch_id": "488758718",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "12:49:00",
-            "time_end": "01:05:00"
-        },
+      {
+        "id": "394f",
+        "type": "stream",
+        "date": "2019-09-28",
+        "free": true,
+        "duration": 44100,
+        "youtube_id": "E394s16DcOA",
+        "titles": [
+          "12 UUR MARATHON!"
+        ],
+        "activities": [
+          {
+            "title": "Bloodborne",
+            "duration": 44100
+          },
+          {
+            "title": "Swat 4",
+            "duration": 44100
+          },
+          {
+            "title": "Heart of Darkness",
+            "duration": 44100
+          },
+          {
+            "title": "Dungeon Keeper 2",
+            "duration": 44100
+          },
+          {
+            "title": "Mirror's Edge'",
+            "duration": 44100
+          },
+          {
+            "title": "Mario 64",
+            "duration": 44100
+          },
+          {
+            "title": "Mario Kart 64",
+            "duration": 44100
+          },
+          {
+            "title": "Croc",
+            "duration": 44100
+          },
+          {
+            "title": "COD: World at War",
+            "duration": 44100
+          },
+          {
+            "title": "Silent Hill",
+            "duration": 44100
+          },
+          {
+            "title": "Timesplitters 3",
+            "duration": 44100
+          },
+          {
+            "title": "Rayman M",
+            "duration": 44100
+          }
+        ],
+        "twitchtracker_id": "35804678832",
+        "twitch_id": "488758718",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "12:49:00",
+        "time_end": "01:05:00"
+      },
         {
             "id": "e37f",
             "type": "stream",
