@@ -50342,25 +50342,26 @@
             "collection": 82,
             "type": "stream"
         },
-        {
-            "date": "2024-06-17",
-            "time_start": "20:30:21",
-            "time_end": "22:56:56",
-            "titles": [
-                "Lekker spelen Origins (deel 2)"
-            ],
-            "activities": [
-                {
-                    "title": "Speciale Evenementen",
-                    "duration": 7800
-                }
-            ],
-            "duration": 8795,
-            "youtube_id": "pOT7VIL6TkQ",
-            "id": "27ba",
-            "collection": 82,
-            "type": "stream"
-        },
+      {
+        "date": "2024-06-17",
+        "time_start": "20:30:21",
+        "time_end": "22:56:56",
+        "titles": [
+          "Lekker spelen Origins (deel 2)"
+        ],
+        "activities": [
+          {
+            "title": "Speciale Evenementen",
+            "duration": 7800
+          }
+        ],
+        "duration": 8795,
+        "youtube_id": "pOT7VIL6TkQ",
+        "twitch_id": "2174651996",
+        "id": "27ba",
+        "collection": 82,
+        "type": "stream"
+      },
         {
             "date": "2024-06-18",
             "time_start": "15:38:42",
@@ -50381,43 +50382,47 @@
             "collection": 72,
             "type": "stream"
         },
-        {
-            "date": "2024-06-19",
-            "time_start": "20:30:19",
-            "time_end": "23:13:05",
-            "titles": [
-                "Lekker spelen Origins (deel 3)"
-            ],
-            "activities": [
-                {
-                    "title": "Speciale Evenementen",
-                    "duration": 1
-                }
-            ],
-            "duration": 9766,
-            "youtube_id": "hlE0NC6SXcA",
-            "id": "944c",
-            "collection": 82,
-            "type": "stream"
-        },
-        {
-            "date": "2024-06-24",
-            "time_start": "20:43:00",
-            "time_end": "23:25:41",
-            "titles": [
-                "Lekker spelen Origins (deel 4)"
-            ],
-            "activities": [
-                {
-                    "title": "Speciale Evenementen",
-                    "duration": 1
-                }
-            ],
-            "duration": 9761,
-            "youtube_id": "qqUBc284DZY",
-            "id": "d4c9",
-            "type": "stream"
-        },
+      {
+        "date": "2024-06-19",
+        "time_start": "20:30:19",
+
+        "time_end": "23:13:05",
+        "titles": [
+          "Lekker spelen Origins (deel 3)"
+        ],
+        "activities": [
+          {
+            "title": "Speciale Evenementen",
+            "duration": 1
+          }
+        ],
+        "duration": 9766,
+        "youtube_id": "hlE0NC6SXcA",
+        "twitch_id": "2176363305",
+        "id": "944c",
+        "collection": 82,
+        "type": "stream"
+      },
+      {
+        "date": "2024-06-24",
+        "time_start": "20:43:00",
+        "time_end": "23:25:41",
+        "titles": [
+          "Lekker spelen Origins (deel 4)"
+        ],
+        "activities": [
+          {
+            "title": "Speciale Evenementen",
+            "duration": 1
+          }
+        ],
+        "duration": 9761,
+        "youtube_id": "qqUBc284DZY",
+        "twitch_id": "2180780587",
+        "collection": 82,
+        "id": "d4c9",
+        "type": "stream"
+      },
         {
             "date": "2024-06-26",
             "time_start": "20:38:38",
