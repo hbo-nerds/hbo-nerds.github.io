@@ -50478,6 +50478,48 @@
       "youtube_id": "ZD0ZBw77akg",
       "id": "djcv",
       "type": "stream"
+    },
+    {
+      "date": "2024-07-08",
+      "time_start": "20:38:38",
+      "time_end": "22:10:16",
+      "titles": [
+        "Als we 20 KEER vallen gaan we offline!"
+      ],
+      "activities": [
+        {
+          "title": "Chained Together",
+          "duration": 1
+        }
+      ],
+      "duration": 8100,
+      "twitch_id": "2192663587",
+      "youtube_id": "5pRk3kGKVws",
+      "id": "cb29",
+      "type": "stream"
+    },
+    {
+      "date": "2024-07-11",
+      "time_start": "20:38:38",
+      "time_end": "22:10:16",
+      "titles": [
+        "We spelen door tot we hem uitspelen"
+      ],
+      "activities": [
+        {
+          "title": "Chained Together",
+          "duration": 1
+        },
+        {
+          "title": "Wild Animal Sports Day",
+          "duration": 1
+        }
+      ],
+      "duration": 4500,
+      "twitch_id": "2195131658",
+      "youtube_id": "mw7ogZFyxI4",
+      "id": "di83",
+      "type": "stream"
     }
   ]
 }
