@@ -50527,6 +50527,47 @@
       "youtube_id": "mw7ogZFyxI4",
       "id": "di83",
       "type": "stream"
+    },
+    {
+      "date": "2024-07-15",
+      "time_start": "20:50:38",
+      "collection": 84,
+      "time_end": "23:00:16",
+      "titles": [
+        "Geesten bestaan. (sceptisten kunnen dit bewijs niet langer weerstaan)"
+      ],
+      "activities": [
+        {
+          "title": "Psalm 5:9-13",
+          "duration": 1
+        }
+      ],
+      "duration": 7400,
+      "twitch_id": "2198545922",
+      "youtube_id": "s25oQbW7aZU",
+      "id": "dn2i",
+      "type": "stream"
+    },
+    {
+      "date": "2024-07-17",
+      "time_start": "20:37:38",
+      "collection": 84,
+      "time_end": "22:45:16",
+      "titles": [
+        "Mario Kart Wii (team building)"
+      ],
+      "activities": [
+        {
+          "title": "Mario Kart Wii",
+          "duration": 1
+        }
+
+      ],
+      "duration": 7400,
+      "twitch_id": "2200283790",
+      "youtube_id": "jWOxsAopaxw",
+      "id": "dhdu",
+      "type": "stream"
     }
   ]
 }
