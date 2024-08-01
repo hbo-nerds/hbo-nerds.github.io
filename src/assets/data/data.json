@@ -50621,6 +50621,45 @@
       "youtube_id": "plgXr8v5OMM",
       "id": "f39d",
       "type": "stream"
+    },
+    {
+      "date": "2024-07-29",
+      "time_start": "20:37:38",
+      "time_end": "22:45:16",
+      "titles": [
+        "De laatste training voor LEKKER SPELEN vs KIJKERS 2024"
+      ],
+      "activities": [
+        {
+          "title": "Stretcher Men",
+          "duration": 1
+        }
+      ],
+      "duration": 5200,
+      "twitch_id": "2210694017",
+      "youtube_id": "OkzsGka6cVQ",
+      "id": "fhje",
+      "type": "stream"
+    },
+    {
+      "date": "2024-07-31",
+      "time_start": "20:37:38",    
+      "collection":  75,
+      "time_end": "22:45:16",
+      "titles": [
+        "LEKKER SPELEN vs KIJKERS 2024"
+      ],
+      "activities": [
+        {
+          "title": "Speciale Evenementen",
+          "duration": 1
+        }
+      ],
+      "duration": 6600,
+      "twitch_id": "2212417309",
+      "youtube_id": "JnWmQ243y7s",
+      "id": "4752",
+      "type": "stream"
     }
   ]
 }
