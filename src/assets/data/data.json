@@ -15451,11 +15451,12 @@
     {
       "id": "c8bf",
       "type": "stream",
+      "collection": 75,
       "date": "2017-08-09",
       "duration": 11280,
       "youtube_id": "ihKvVgjHNv0",
       "titles": [
-        "LEKKER SPELEN 3 (cheators) vs. KIJKERS 4 (winnaars)"
+        "LEKKER SPELEN "
       ],
       "activities": [
         {
@@ -16412,8 +16413,9 @@
     {
       "id": "7a33",
       "type": "video",
+      "collection": 75,
       "date": "2017-09-12",
-      "title": "LEKKER SPELEN vs DE KIJKERS",
+      "title": "LEKKER SPELEN vs DE KIJKERS 2017",
       "duration": 1026,
       "youtube_id": "Nk_HxZ6Ny-Q",
       "activity": [
@@ -19866,10 +19868,11 @@
       "id": "ea3b",
       "type": "stream",
       "date": "2018-02-07",
+      "collection": 75,
       "duration": 10620,
       "youtube_id": "uAIOo47IeEg",
       "titles": [
-        "LEKKER SPELEN vs. KIJKERS"
+        "LEKKER SPELEN vs. KIJKERS 2018"
       ],
       "activities": [
         {
@@ -20113,6 +20116,7 @@
     {
       "id": "3754",
       "type": "video",
+      "collection": 75,
       "date": "2018-02-17",
       "title": "LEKKER SPELEN vs DE KIJKERS  (2018)",
       "duration": 1256,
@@ -26604,6 +26608,7 @@
       "id": "3f0b",
       "type": "stream",
       "date": "2019-01-30",
+      "collection": 75,
       "duration": 5820,
       "youtube_id": "QJ6LNN8_eYI",
       "titles": [
@@ -50606,6 +50611,7 @@
     {
       "date": "2024-07-24",
       "time_start": "20:37:38",
+      "collection":  74,
       "time_end": "22:45:16",
       "titles": [
         "PETER vs TIMON: Juli ⭐"
