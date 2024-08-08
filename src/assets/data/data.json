@@ -50694,23 +50694,24 @@
             "id": "ac85",
             "type": "stream"
         },
-        {
-            "date": "2024-08-07",
-            "time_start": "20:38:18",
-            "time_end": "23:34:31",
-            "titles": [
-                "Werken in zo'n koffiehuis..."
-            ],
-            "activities": [
-                {
-                    "title": "The Closing Shift",
-                    "duration": 0
-                }
-            ],
-            "duration": 10573,
-            "youtube_id": "rSHymFSWWoE",
-            "id": "23b4",
-            "type": "stream"
-        }
+      {
+        "date": "2024-08-07",
+        "time_start": "20:38:18",
+        "time_end": "23:34:31",
+        "titles": [
+          "Werken in zo'n koffiehuis..."
+        ],
+        "activities": [
+          {
+            "title": "The Closing Shift",
+            "duration": 0
+          }
+        ],
+        "duration": 10573,
+        "twitch_id": "2218468991",
+        "youtube_id": "rSHymFSWWoE",
+        "id": "23b4",
+        "type": "stream"
+      }
     ]
 }
