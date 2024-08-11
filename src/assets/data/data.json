@@ -38770,30 +38770,31 @@
             "time_start": "20:15:00",
             "time_end": "23:15:00"
         },
-        {
-            "id": "8168",
-            "type": "stream",
-            "date": "2021-05-07",
-            "duration": 8700,
-            "youtube_id": "Dej697OPtSQ",
-            "collection": 55,
-            "titles": [
-                "Resident Evil: Village (HORROR)"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Village",
-                    "duration": 8700
-                }
-            ],
-            "twitchtracker_id": "41998683628",
-            "twitch_id": "1016276363",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "8168",
+        "type": "stream",
+        "free": true,
+        "date": "2021-05-07",
+        "duration": 8700,
+        "youtube_id": "Dej697OPtSQ",
+        "collection": 55,
+        "titles": [
+          "Resident Evil: Village (HORROR)"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Village",
+            "duration": 8700
+          }
+        ],
+        "twitchtracker_id": "41998683628",
+        "twitch_id": "1016276363",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:19:00",
+        "time_end": "22:45:00"
+      },
         {
             "id": "785d",
             "type": "stream",
@@ -38838,54 +38839,56 @@
             "time_start": "22:43:00",
             "time_end": "00:45:00"
         },
-        {
-            "id": "28f0",
-            "type": "stream",
-            "date": "2021-05-10",
-            "duration": 8940,
-            "youtube_id": "LWfK7RKOL2s",
-            "collection": 55,
-            "titles": [
-                "Resident Evil: Village (HORROR)"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Village",
-                    "duration": 8940
-                }
-            ],
-            "twitchtracker_id": "42030042908",
-            "twitch_id": "1018270183",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:15:00",
-            "time_end": "22:45:00"
-        },
-        {
-            "id": "7014",
-            "type": "stream",
-            "date": "2021-05-12",
-            "duration": 9300,
-            "youtube_id": "zUqicJwzSXg",
-            "collection": 55,
-            "titles": [
-                "Resident Evil: Village (HORROR)"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Village",
-                    "duration": 9300
-                }
-            ],
-            "twitchtracker_id": "42048826140",
-            "twitch_id": "1020459493",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:29:00",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "28f0",
+        "type": "stream",
+        "date": "2021-05-10",
+        "free": true,
+        "duration": 8940,
+        "youtube_id": "LWfK7RKOL2s",
+        "collection": 55,
+        "titles": [
+          "Resident Evil: Village (HORROR)"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Village",
+            "duration": 8940
+          }
+        ],
+        "twitchtracker_id": "42030042908",
+        "twitch_id": "1018270183",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:15:00",
+        "time_end": "22:45:00"
+      },
+      {
+        "id": "7014",
+        "type": "stream",
+        "date": "2021-05-12",
+        "free": true,
+        "duration": 9300,
+        "youtube_id": "zUqicJwzSXg",
+        "collection": 55,
+        "titles": [
+          "Resident Evil: Village (HORROR)"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Village",
+            "duration": 9300
+          }
+        ],
+        "twitchtracker_id": "42048826140",
+        "twitch_id": "1020459493",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:29:00",
+        "time_end": "23:05:00"
+      },
         {
             "id": "9e8a",
             "type": "stream",
