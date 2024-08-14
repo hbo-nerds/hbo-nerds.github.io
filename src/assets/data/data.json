@@ -45432,30 +45432,30 @@
             "time_start": "20:31:00",
             "time_end": "22:05:00"
         },
-        {
-            "id": "15ce",
-            "type": "stream",
-            "date": "2022-11-02",
-            "duration": 7800,
-            "youtube_id": "-cwVuUuvKBI",
-            "collection": 55,
-            "titles": [
-                "🕷️ NIEUWE RESIDENT EVIL 🕷️"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Village",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "40026124248",
-            "twitch_id": "1641637061",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:34:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "15ce",
+        "type": "stream",
+        "date": "2022-11-02",
+        "duration": 7800,
+        "youtube_id": "-cwVuUuvKBI",
+        "collection": 55,
+        "titles": [
+          "🕷️ NIEUWE RESIDENT EVIL 🕷️"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Village",
+            "duration": 7800
+          }
+        ],
+        "twitchtracker_id": "40026124248",
+        "twitch_id": "1641933784",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:34:00",
+        "time_end": "22:45:00"
+      },
         {
             "id": "9575",
             "type": "stream",
@@ -45480,33 +45480,33 @@
             "time_end": "22:35:00",
             "free": true
         },
-        {
-            "id": "4543",
-            "type": "stream",
-            "date": "2022-11-07",
-            "duration": 8400,
-            "youtube_id": "xoeSaGr24dM",
-            "collection": 55,
-            "titles": [
-                "De nieuwe RESIDENT EVIL uitspelen"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Village",
-                    "duration": 8400
-                }
-            ],
-            "twitchtracker_id": "40047363960",
-            "twitch_id": "1641933784",
-            "extra_urls": [
-                "https://www.twitch.tv/videos/1646591451"
-            ],
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:34:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "4543",
+        "type": "stream",
+        "date": "2022-11-07",
+        "duration": 8400,
+        "youtube_id": "xoeSaGr24dM",
+        "collection": 55,
+        "titles": [
+          "De nieuwe RESIDENT EVIL uitspelen"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Village",
+            "duration": 8400
+          }
+        ],
+        "twitchtracker_id": "40047363960",
+        "twitch_id": "1646591451",
+        "extra_urls": [
+          "https://www.twitch.tv/videos/1646591451"
+        ],
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:34:00",
+        "time_end": "22:55:00"
+      },
         {
             "id": "9174",
             "type": "stream",
