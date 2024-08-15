@@ -1,334 +1,334 @@
 {
-  "collections": [
-    {
-      "id": 1,
-      "title": "GTA V Roleplay"
-    },
-    {
-      "id": 2,
-      "title": "Detroit: Become Human"
-    },
-    {
-      "id": 3,
-      "title": "Rust"
-    },
-    {
-      "id": 4,
-      "title": "Pokémon unpackings"
-    },
-    {
-      "id": 5,
-      "title": "Grand Theft Auto V (GTA V)"
-    },
-    {
-      "id": 6,
-      "title": "Snipperclips streams"
-    },
-    {
-      "id": 7,
-      "title": "Beyond: Two Souls"
-    },
-    {
-      "id": 8,
-      "title": "Until Dawn"
-    },
-    {
-      "id": 9,
-      "title": "Heavy Rain"
-    },
-    {
-      "id": 10,
-      "title": "Outlast"
-    },
-    {
-      "id": 11,
-      "title": "Cuphead streams"
-    },
-    {
-      "id": 12,
-      "title": "Fallout 76"
-    },
-    {
-      "id": 13,
-      "title": "The Forest"
-    },
-    {
-      "id": 14,
-      "title": "Lion King"
-    },
-    {
-      "id": 15,
-      "title": "Lekker Spelen: De nieuwe host"
-    },
-    {
-      "id": 16,
-      "title": "Super Mario Bros.: The Lost Levels"
-    },
-    {
-      "id": 17,
-      "title": "Mario Kart 64"
-    },
-    {
-      "id": 18,
-      "title": "Resident Evil 7"
-    },
-    {
-      "id": 19,
-      "title": "Streampie met Tiempie: Getting Over It"
-    },
-    {
-      "id": 20,
-      "title": "The Stanley Parable"
-    },
-    {
-      "id": 21,
-      "title": "Pokémon Red"
-    },
-    {
-      "id": 22,
-      "title": "Trollface Quest & Trollface Quest: Video Memes"
-    },
-    {
-      "id": 23,
-      "title": "Outlast: Whistleblower DLC"
-    },
-    {
-      "id": 24,
-      "title": "Streampie met Tiempie: Dark Souls 3"
-    },
-    {
-      "id": 26,
-      "title": "Far Cry 4: Valley of the Yeti DLC"
-    },
-    {
-      "id": 27,
-      "title": "FIFA World Cup 2014Brazil"
-    },
-    {
-      "id": 28,
-      "title": "Slender: The Arrival"
-    },
-    {
-      "id": 29,
-      "title": "The Walking Dead: Season 2"
-    },
-    {
-      "id": 30,
-      "title": "Super Mario Land"
-    },
-    {
-      "id": 31,
-      "title": "Stranded Deep"
-    },
-    {
-      "id": 32,
-      "title": "Half-Life 2"
-    },
-    {
-      "id": 33,
-      "title": "Resident Evil 3 streams"
-    },
-    {
-      "id": 34,
-      "title": "Starlit Adventures"
-    },
-    {
-      "id": 35,
-      "title": "Amnesia: A Machine ForPigs"
-    },
-    {
-      "id": 36,
-      "title": "DayZ"
-    },
-    {
-      "id": 37,
-      "title": "Resident Evil 2 streams"
-    },
-    {
-      "id": 38,
-      "title": "Resident Evil Remastered streams"
-    },
-    {
-      "id": 39,
-      "title": "Tomb Raider"
-    },
-    {
-      "id": 40,
-      "title": "Little Nightmares streams"
-    },
-    {
-      "id": 41,
-      "title": "The Walking Dead: Michonne"
-    },
-    {
-      "id": 43,
-      "title": "Wolfenstein: The Old Blood"
-    },
-    {
-      "id": 44,
-      "title": "The Evil Within"
-    },
-    {
-      "id": 45,
-      "title": "Amnesia: The Dark Descent streams"
-    },
-    {
-      "id": 46,
-      "title": "Resident Evil Revelations 2 (co-op)"
-    },
-    {
-      "id": 47,
-      "title": "Daylight"
-    },
-    {
-      "id": 48,
-      "title": "jungle book"
-    },
-    {
-      "id": 50,
-      "title": "gta v (videos)"
-    },
-    {
-      "id": 51,
-      "title": "Animal Crossing: New Horizons"
-    },
-    {
-      "id": 52,
-      "title": "It Takes Two"
-    },
-    {
-      "id": 53,
-      "title": "Sons of the Forest"
-    },
-    {
-      "id": 54,
-      "title": "Elden Ring"
-    },
-    {
-      "id": 55,
-      "title": "Resident Evil Village"
-    },
-    {
-      "id": 56,
-      "title": "Drawing From Memory"
-    },
-    {
-      "id": 57,
-      "title": "The Quarry"
-    },
-    {
-      "id": 58,
-      "title": "Mortuary Assistant"
-    },
-    {
-      "id": 59,
-      "title": "Sea of Thieves"
-    },
-    {
-      "id": 60,
-      "title": "Phasmophobia"
-    },
-    {
-      "id": 61,
-      "title": "Backrooms"
-    },
-    {
-      "id": 62,
-      "title": "Lekker Spoilen Game of Thrones S6"
-    },
-    {
-      "id": 63,
-      "title": "Lekker Spoilen Game of Thrones S7"
-    },
-    {
-      "id": 64,
-      "title": "Lekker Spoilen Game of Thrones S8"
-    },
-    {
-      "id": 65,
-      "title": "H1Z1"
-    },
-    {
-      "id": 66,
-      "title": "Pokemon Let's Go (shiny's)"
-    },
-    {
-      "id": 67,
-      "title": "Royal Rumble"
-    },
-    {
-      "id": 68,
-      "title": "Zoek de verschillen"
-    },
-    {
-      "id": 69,
-      "title": "Fiver"
-    },
-    {
-      "id": 70,
-      "title": "Simulator Spellen"
-    },
-    {
-      "id": 71,
-      "title": "Coop Streams"
-    },
-    {
-      "id": 72,
-      "title": "E3/Summergamefest"
-    },
-    {
-      "id": 73,
-      "title": "Veed Awards"
-    },
-    {
-      "id": 74,
-      "title": "Peter VS Timon"
-    },
-    {
-      "id": 75,
-      "title": "Lekker Spelen VS Kijkers"
-    },
-    {
-      "id": 76,
-      "title": "Persconferenties"
-    },
-    {
-      "id": 77,
-      "title": "Final Fantasy"
-    },
-    {
-      "id": 78,
-      "title": "Co-op Games"
-    },
-    {
-      "id": 79,
-      "title": "Freddy Fish"
-    },
-    {
-      "id": 80,
-      "title": "Five nights at freddy's"
-    },
-    {
-      "id": 81,
-      "title": "VR"
-    },
-    {
-      "id": 82,
-      "title": "Fanmade games"
-    },
-    {
-      "id": 83,
-      "title": "Horrormaand"
-    },
-    {
-      "id": 84,
-      "title": "Chained Together"
-    },
-    {
-      "id": 85,
-      "title": "Visage"
-    }
-  ],
+    "collections": [
+        {
+            "id": 1,
+            "title": "GTA V Roleplay"
+        },
+        {
+            "id": 2,
+            "title": "Detroit: Become Human"
+        },
+        {
+            "id": 3,
+            "title": "Rust"
+        },
+        {
+            "id": 4,
+            "title": "Pokémon unpackings"
+        },
+        {
+            "id": 5,
+            "title": "Grand Theft Auto V (GTA V)"
+        },
+        {
+            "id": 6,
+            "title": "Snipperclips streams"
+        },
+        {
+            "id": 7,
+            "title": "Beyond: Two Souls"
+        },
+        {
+            "id": 8,
+            "title": "Until Dawn"
+        },
+        {
+            "id": 9,
+            "title": "Heavy Rain"
+        },
+        {
+            "id": 10,
+            "title": "Outlast"
+        },
+        {
+            "id": 11,
+            "title": "Cuphead streams"
+        },
+        {
+            "id": 12,
+            "title": "Fallout 76"
+        },
+        {
+            "id": 13,
+            "title": "The Forest"
+        },
+        {
+            "id": 14,
+            "title": "Lion King"
+        },
+        {
+            "id": 15,
+            "title": "Lekker Spelen: De nieuwe host"
+        },
+        {
+            "id": 16,
+            "title": "Super Mario Bros.: The Lost Levels"
+        },
+        {
+            "id": 17,
+            "title": "Mario Kart 64"
+        },
+        {
+            "id": 18,
+            "title": "Resident Evil 7"
+        },
+        {
+            "id": 19,
+            "title": "Streampie met Tiempie: Getting Over It"
+        },
+        {
+            "id": 20,
+            "title": "The Stanley Parable"
+        },
+        {
+            "id": 21,
+            "title": "Pokémon Red"
+        },
+        {
+            "id": 22,
+            "title": "Trollface Quest & Trollface Quest: Video Memes"
+        },
+        {
+            "id": 23,
+            "title": "Outlast: Whistleblower DLC"
+        },
+        {
+            "id": 24,
+            "title": "Streampie met Tiempie: Dark Souls 3"
+        },
+        {
+            "id": 26,
+            "title": "Far Cry 4: Valley of the Yeti DLC"
+        },
+        {
+            "id": 27,
+            "title": "FIFA World Cup 2014Brazil"
+        },
+        {
+            "id": 28,
+            "title": "Slender: The Arrival"
+        },
+        {
+            "id": 29,
+            "title": "The Walking Dead: Season 2"
+        },
+        {
+            "id": 30,
+            "title": "Super Mario Land"
+        },
+        {
+            "id": 31,
+            "title": "Stranded Deep"
+        },
+        {
+            "id": 32,
+            "title": "Half-Life 2"
+        },
+        {
+            "id": 33,
+            "title": "Resident Evil 3 streams"
+        },
+        {
+            "id": 34,
+            "title": "Starlit Adventures"
+        },
+        {
+            "id": 35,
+            "title": "Amnesia: A Machine ForPigs"
+        },
+        {
+            "id": 36,
+            "title": "DayZ"
+        },
+        {
+            "id": 37,
+            "title": "Resident Evil 2 streams"
+        },
+        {
+            "id": 38,
+            "title": "Resident Evil Remastered streams"
+        },
+        {
+            "id": 39,
+            "title": "Tomb Raider"
+        },
+        {
+            "id": 40,
+            "title": "Little Nightmares streams"
+        },
+        {
+            "id": 41,
+            "title": "The Walking Dead: Michonne"
+        },
+        {
+            "id": 43,
+            "title": "Wolfenstein: The Old Blood"
+        },
+        {
+            "id": 44,
+            "title": "The Evil Within"
+        },
+        {
+            "id": 45,
+            "title": "Amnesia: The Dark Descent streams"
+        },
+        {
+            "id": 46,
+            "title": "Resident Evil Revelations 2 (co-op)"
+        },
+        {
+            "id": 47,
+            "title": "Daylight"
+        },
+        {
+            "id": 48,
+            "title": "jungle book"
+        },
+        {
+            "id": 50,
+            "title": "gta v (videos)"
+        },
+        {
+            "id": 51,
+            "title": "Animal Crossing: New Horizons"
+        },
+        {
+            "id": 52,
+            "title": "It Takes Two"
+        },
+        {
+            "id": 53,
+            "title": "Sons of the Forest"
+        },
+        {
+            "id": 54,
+            "title": "Elden Ring"
+        },
+        {
+            "id": 55,
+            "title": "Resident Evil Village"
+        },
+        {
+            "id": 56,
+            "title": "Drawing From Memory"
+        },
+        {
+            "id": 57,
+            "title": "The Quarry"
+        },
+        {
+            "id": 58,
+            "title": "Mortuary Assistant"
+        },
+        {
+            "id": 59,
+            "title": "Sea of Thieves"
+        },
+        {
+            "id": 60,
+            "title": "Phasmophobia"
+        },
+        {
+            "id": 61,
+            "title": "Backrooms"
+        },
+        {
+            "id": 62,
+            "title": "Lekker Spoilen Game of Thrones S6"
+        },
+        {
+            "id": 63,
+            "title": "Lekker Spoilen Game of Thrones S7"
+        },
+        {
+            "id": 64,
+            "title": "Lekker Spoilen Game of Thrones S8"
+        },
+        {
+            "id": 65,
+            "title": "H1Z1"
+        },
+        {
+            "id": 66,
+            "title": "Pokemon Let's Go (shiny's)"
+        },
+        {
+            "id": 67,
+            "title": "Royal Rumble"
+        },
+        {
+            "id": 68,
+            "title": "Zoek de verschillen"
+        },
+        {
+            "id": 69,
+            "title": "Fiver"
+        },
+        {
+            "id": 70,
+            "title": "Simulator Spellen"
+        },
+        {
+            "id": 71,
+            "title": "Coop Streams"
+        },
+        {
+            "id": 72,
+            "title": "E3/Summergamefest"
+        },
+        {
+            "id": 73,
+            "title": "Veed Awards"
+        },
+        {
+            "id": 74,
+            "title": "Peter VS Timon"
+        },
+        {
+            "id": 75,
+            "title": "Lekker Spelen VS Kijkers"
+        },
+        {
+            "id": 76,
+            "title": "Persconferenties"
+        },
+        {
+            "id": 77,
+            "title": "Final Fantasy"
+        },
+        {
+            "id": 78,
+            "title": "Co-op Games"
+        },
+        {
+            "id": 79,
+            "title": "Freddy Fish"
+        },
+        {
+            "id": 80,
+            "title": "Five nights at freddy's"
+        },
+        {
+            "id": 81,
+            "title": "VR"
+        },
+        {
+            "id": 82,
+            "title": "Fanmade games"
+        },
+        {
+            "id": 83,
+            "title": "Horrormaand"
+        },
+        {
+            "id": 84,
+            "title": "Chained Together"
+        },
+        {
+            "id": 85,
+            "title": "Visage"
+        }
+    ],
     "content": [
         {
             "id": "0a16",
@@ -12295,9 +12295,9 @@
             "duration": 3120,
             "youtube_id": "Nz9yJjWucsk",
             "collection": 40,
-          "titles": [
-            "Little Nightmares (Deel 2)"
-          ],
+            "titles": [
+                "Little Nightmares (Deel 2)"
+            ],
             "activities": [
                 {
                     "title": "Little Nightmares",
@@ -12362,9 +12362,9 @@
             "duration": 11520,
             "youtube_id": "ArmL8deA3_4",
             "collection": 40,
-          "titles": [
-            "Little Nightmares (Deel 3)"
-          ],
+            "titles": [
+                "Little Nightmares (Deel 3)"
+            ],
             "activities": [
                 {
                     "title": "Dungeon Keeper 2",
@@ -15397,9 +15397,9 @@
             "duration": 13320,
             "youtube_id": "gBvsxYPOVSI",
             "collection": 40,
-          "titles": [
-            "Little Nightmares (DLC)"
-          ],
+            "titles": [
+                "Little Nightmares (DLC)"
+            ],
             "activities": [
                 {
                     "title": "Little Nightmares",
@@ -16098,9 +16098,9 @@
             "type": "stream",
             "date": "2017-08-30",
             "duration": 12720,
-          "titles": [
-            "Peter speelt DOTA 2 totdat hij een potje wint (ft. Sidekick Timon)"
-          ],
+            "titles": [
+                "Peter speelt DOTA 2 totdat hij een potje wint (ft. Sidekick Timon)"
+            ],
             "activities": [
                 {
                     "title": "Dota 2",
@@ -24946,34 +24946,34 @@
             "time_start": "16:23:00",
             "time_end": "17:55:00"
         },
-      {
-        "id": "e1fd",
-        "type": "stream",
-        "collection": 85,
-        "date": "2018-10-10",
-        "duration": 9660,
-        "youtube_id": "LSKhKkAkUl8",
-        "titles": [
-          "HORROR STREAM"
-        ],
-        "activities": [
-          {
-            "title": "Visage",
-            "duration": 5760
-          },
-          {
-            "title": "Super Mario Party",
-            "duration": 3900
-          }
-        ],
-        "twitchtracker_id": "30719066912",
-        "twitch_id": "342465981",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:53:00",
-        "time_end": "23:35:00"
-      },
+        {
+            "id": "e1fd",
+            "type": "stream",
+            "collection": 85,
+            "date": "2018-10-10",
+            "duration": 9660,
+            "youtube_id": "LSKhKkAkUl8",
+            "titles": [
+                "HORROR STREAM"
+            ],
+            "activities": [
+                {
+                    "title": "Visage",
+                    "duration": 5760
+                },
+                {
+                    "title": "Super Mario Party",
+                    "duration": 3900
+                }
+            ],
+            "twitchtracker_id": "30719066912",
+            "twitch_id": "342465981",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:53:00",
+            "time_end": "23:35:00"
+        },
         {
             "id": "8b00",
             "type": "video",
@@ -25316,30 +25316,30 @@
             "youtube_id": "MJviE_uDsao",
             "activity": "Aankondiging"
         },
-      {
-        "id": "c043",
-        "type": "stream",
-        "date": "2018-10-31",
-        "collection": 85,
-        "duration": 8160,
-        "youtube_id": "V8qxF_DTQY0",
-        "titles": [
-          "HALLOWEEN HORROR STREAM"
-        ],
-        "activities": [
-          {
-            "title": "Visage",
-            "duration": 8160
-          }
-        ],
-        "twitchtracker_id": "31027639312",
-        "twitch_id": "352783170",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:38:00",
-        "time_end": "22:55:00"
-      },
+        {
+            "id": "c043",
+            "type": "stream",
+            "date": "2018-10-31",
+            "collection": 85,
+            "duration": 8160,
+            "youtube_id": "V8qxF_DTQY0",
+            "titles": [
+                "HALLOWEEN HORROR STREAM"
+            ],
+            "activities": [
+                {
+                    "title": "Visage",
+                    "duration": 8160
+                }
+            ],
+            "twitchtracker_id": "31027639312",
+            "twitch_id": "352783170",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:38:00",
+            "time_end": "22:55:00"
+        },
         {
             "id": "d5bc",
             "type": "podcast",
@@ -31009,30 +31009,30 @@
             "time_start": "20:19:00",
             "time_end": "23:45:00"
         },
-      {
-        "id": "e8db",
-        "type": "stream",
-        "collection": 85,
-        "date": "2019-10-30",
-        "duration": 10140,
-        "youtube_id": "HKYNVMvbUdY",
-        "titles": [
-          "HALLOWEEN STREAM (met hartslagmeter)"
-        ],
-        "activities": [
-          {
-            "title": "Visage",
-            "duration": 10140
-          }
-        ],
-        "twitchtracker_id": "36105420992",
-        "twitch_id": "510235223",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:15:00",
-        "time_end": "23:05:00"
-      },
+        {
+            "id": "e8db",
+            "type": "stream",
+            "collection": 85,
+            "date": "2019-10-30",
+            "duration": 10140,
+            "youtube_id": "HKYNVMvbUdY",
+            "titles": [
+                "HALLOWEEN STREAM (met hartslagmeter)"
+            ],
+            "activities": [
+                {
+                    "title": "Visage",
+                    "duration": 10140
+                }
+            ],
+            "twitchtracker_id": "36105420992",
+            "twitch_id": "510235223",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:15:00",
+            "time_end": "23:05:00"
+        },
         {
             "id": "3238",
             "type": "stream",
@@ -38770,31 +38770,31 @@
             "time_start": "20:15:00",
             "time_end": "23:15:00"
         },
-      {
-        "id": "8168",
-        "type": "stream",
-        "free": true,
-        "date": "2021-05-07",
-        "duration": 8700,
-        "youtube_id": "Dej697OPtSQ",
-        "collection": 55,
-        "titles": [
-          "Resident Evil: Village (HORROR)"
-        ],
-        "activities": [
-          {
-            "title": "Resident Evil Village",
-            "duration": 8700
-          }
-        ],
-        "twitchtracker_id": "41998683628",
-        "twitch_id": "1016276363",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "20:19:00",
-        "time_end": "22:45:00"
-      },
+        {
+            "id": "8168",
+            "type": "stream",
+            "free": true,
+            "date": "2021-05-07",
+            "duration": 8700,
+            "youtube_id": "Dej697OPtSQ",
+            "collection": 55,
+            "titles": [
+                "Resident Evil: Village (HORROR)"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil Village",
+                    "duration": 8700
+                }
+            ],
+            "twitchtracker_id": "41998683628",
+            "twitch_id": "1016276363",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "20:19:00",
+            "time_end": "22:45:00"
+        },
         {
             "id": "785d",
             "type": "stream",
@@ -38839,56 +38839,56 @@
             "time_start": "22:43:00",
             "time_end": "00:45:00"
         },
-      {
-        "id": "28f0",
-        "type": "stream",
-        "date": "2021-05-10",
-        "free": true,
-        "duration": 8940,
-        "youtube_id": "LWfK7RKOL2s",
-        "collection": 55,
-        "titles": [
-          "Resident Evil: Village (HORROR)"
-        ],
-        "activities": [
-          {
-            "title": "Resident Evil Village",
-            "duration": 8940
-          }
-        ],
-        "twitchtracker_id": "42030042908",
-        "twitch_id": "1018270183",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:15:00",
-        "time_end": "22:45:00"
-      },
-      {
-        "id": "7014",
-        "type": "stream",
-        "date": "2021-05-12",
-        "free": true,
-        "duration": 9300,
-        "youtube_id": "zUqicJwzSXg",
-        "collection": 55,
-        "titles": [
-          "Resident Evil: Village (HORROR)"
-        ],
-        "activities": [
-          {
-            "title": "Resident Evil Village",
-            "duration": 9300
-          }
-        ],
-        "twitchtracker_id": "42048826140",
-        "twitch_id": "1020459493",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:29:00",
-        "time_end": "23:05:00"
-      },
+        {
+            "id": "28f0",
+            "type": "stream",
+            "date": "2021-05-10",
+            "free": true,
+            "duration": 8940,
+            "youtube_id": "LWfK7RKOL2s",
+            "collection": 55,
+            "titles": [
+                "Resident Evil: Village (HORROR)"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil Village",
+                    "duration": 8940
+                }
+            ],
+            "twitchtracker_id": "42030042908",
+            "twitch_id": "1018270183",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:15:00",
+            "time_end": "22:45:00"
+        },
+        {
+            "id": "7014",
+            "type": "stream",
+            "date": "2021-05-12",
+            "free": true,
+            "duration": 9300,
+            "youtube_id": "zUqicJwzSXg",
+            "collection": 55,
+            "titles": [
+                "Resident Evil: Village (HORROR)"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil Village",
+                    "duration": 9300
+                }
+            ],
+            "twitchtracker_id": "42048826140",
+            "twitch_id": "1020459493",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:29:00",
+            "time_end": "23:05:00"
+        },
         {
             "id": "9e8a",
             "type": "stream",
@@ -45312,7 +45312,7 @@
             "date": "2022-10-24",
             "duration": 7380,
             "youtube_id": "wE0tjAMw-F8",
-          "collection": 58,
+            "collection": 58,
             "titles": [
                 "The Devil in Me (WORLD PREMIERE) 👻",
                 "the devil premiere (world)"
@@ -45432,30 +45432,30 @@
             "time_start": "20:31:00",
             "time_end": "22:05:00"
         },
-      {
-        "id": "15ce",
-        "type": "stream",
-        "date": "2022-11-02",
-        "duration": 7800,
-        "youtube_id": "-cwVuUuvKBI",
-        "collection": 55,
-        "titles": [
-          "🕷️ NIEUWE RESIDENT EVIL 🕷️"
-        ],
-        "activities": [
-          {
-            "title": "Resident Evil Village",
-            "duration": 7800
-          }
-        ],
-        "twitchtracker_id": "40026124248",
-        "twitch_id": "1641933784",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:34:00",
-        "time_end": "22:45:00"
-      },
+        {
+            "id": "15ce",
+            "type": "stream",
+            "date": "2022-11-02",
+            "duration": 7800,
+            "youtube_id": "-cwVuUuvKBI",
+            "collection": 55,
+            "titles": [
+                "🕷️ NIEUWE RESIDENT EVIL 🕷️"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil Village",
+                    "duration": 7800
+                }
+            ],
+            "twitchtracker_id": "40026124248",
+            "twitch_id": "1641933784",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:34:00",
+            "time_end": "22:45:00"
+        },
         {
             "id": "9575",
             "type": "stream",
@@ -45480,33 +45480,33 @@
             "time_end": "22:35:00",
             "free": true
         },
-      {
-        "id": "4543",
-        "type": "stream",
-        "date": "2022-11-07",
-        "duration": 8400,
-        "youtube_id": "xoeSaGr24dM",
-        "collection": 55,
-        "titles": [
-          "De nieuwe RESIDENT EVIL uitspelen"
-        ],
-        "activities": [
-          {
-            "title": "Resident Evil Village",
-            "duration": 8400
-          }
-        ],
-        "twitchtracker_id": "40047363960",
-        "twitch_id": "1646591451",
-        "extra_urls": [
-          "https://www.twitch.tv/videos/1646591451"
-        ],
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:34:00",
-        "time_end": "22:55:00"
-      },
+        {
+            "id": "4543",
+            "type": "stream",
+            "date": "2022-11-07",
+            "duration": 8400,
+            "youtube_id": "xoeSaGr24dM",
+            "collection": 55,
+            "titles": [
+                "De nieuwe RESIDENT EVIL uitspelen"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil Village",
+                    "duration": 8400
+                }
+            ],
+            "twitchtracker_id": "40047363960",
+            "twitch_id": "1646591451",
+            "extra_urls": [
+                "https://www.twitch.tv/videos/1646591451"
+            ],
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:34:00",
+            "time_end": "22:55:00"
+        },
         {
             "id": "9174",
             "type": "stream",
@@ -48687,7 +48687,7 @@
             "date": "2023-10-04",
             "duration": 8640,
             "youtube_id": "-ymbhBUJghY",
-          "collection": 58,
+            "collection": 58,
             "titles": [
                 "Communiceren met de doden...👻 (HORROR MAAND 2023)"
             ],
@@ -50697,24 +50697,62 @@
             "id": "ac85",
             "type": "stream"
         },
-      {
-        "date": "2024-08-07",
-        "time_start": "20:38:18",
-        "time_end": "23:34:31",
-        "titles": [
-          "Werken in zo'n koffiehuis..."
-        ],
-        "activities": [
-          {
-            "title": "The Closing Shift",
-            "duration": 0
-          }
-        ],
-        "duration": 10573,
-        "twitch_id": "2218468991",
-        "youtube_id": "rSHymFSWWoE",
-        "id": "23b4",
-        "type": "stream"
-      }
+        {
+            "date": "2024-08-07",
+            "time_start": "20:38:18",
+            "time_end": "23:34:31",
+            "titles": [
+                "Werken in zo'n koffiehuis..."
+            ],
+            "activities": [
+                {
+                    "title": "The Closing Shift",
+                    "duration": 0
+                }
+            ],
+            "duration": 10573,
+            "twitch_id": "2218468991",
+            "youtube_id": "rSHymFSWWoE",
+            "id": "23b4",
+            "type": "stream"
+        },
+        {
+            "date": "2024-08-12",
+            "time_start": "20:38:25",
+            "time_end": "22:37:02",
+            "titles": [
+                "Five nights at freddy's...😔"
+            ],
+            "activities": [
+                {
+                    "title": "Five nights at freddy's: into the pit",
+                    "duration": 0
+                }
+            ],
+            "duration": 7117,
+            "twitch_id": "2222664459",
+            "youtube_id": "lAFCbr_KWFQ",
+            "id": "6fe5",
+            "type": "stream"
+        },
+        {
+            "date": "2024-08-14",
+            "time_start": "20:50:04",
+            "time_end": "22:46:52",
+            "titles": [
+                "Roleplayen als dinosauriër 2024"
+            ],
+            "activities": [
+                {
+                    "title": "The Isle",
+                    "duration": 0
+                }
+            ],
+            "duration": 7008,
+            "twitch_id": "2224342794",
+            "youtube_id": "G3geE0WzTbs",
+            "id": "42db",
+            "type": "stream"
+        }
     ]
 }
