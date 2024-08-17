@@ -1,334 +1,350 @@
 {
-    "collections": [
-        {
-            "id": 1,
-            "title": "GTA V Roleplay"
-        },
-        {
-            "id": 2,
-            "title": "Detroit: Become Human"
-        },
-        {
-            "id": 3,
-            "title": "Rust"
-        },
-        {
-            "id": 4,
-            "title": "Pokémon unpackings"
-        },
-        {
-            "id": 5,
-            "title": "Grand Theft Auto V (GTA V)"
-        },
-        {
-            "id": 6,
-            "title": "Snipperclips streams"
-        },
-        {
-            "id": 7,
-            "title": "Beyond: Two Souls"
-        },
-        {
-            "id": 8,
-            "title": "Until Dawn"
-        },
-        {
-            "id": 9,
-            "title": "Heavy Rain"
-        },
-        {
-            "id": 10,
-            "title": "Outlast"
-        },
-        {
-            "id": 11,
-            "title": "Cuphead streams"
-        },
-        {
-            "id": 12,
-            "title": "Fallout 76"
-        },
-        {
-            "id": 13,
-            "title": "The Forest"
-        },
-        {
-            "id": 14,
-            "title": "Lion King"
-        },
-        {
-            "id": 15,
-            "title": "Lekker Spelen: De nieuwe host"
-        },
-        {
-            "id": 16,
-            "title": "Super Mario Bros.: The Lost Levels"
-        },
-        {
-            "id": 17,
-            "title": "Mario Kart 64"
-        },
-        {
-            "id": 18,
-            "title": "Resident Evil 7"
-        },
-        {
-            "id": 19,
-            "title": "Streampie met Tiempie: Getting Over It"
-        },
-        {
-            "id": 20,
-            "title": "The Stanley Parable"
-        },
-        {
-            "id": 21,
-            "title": "Pokémon Red"
-        },
-        {
-            "id": 22,
-            "title": "Trollface Quest & Trollface Quest: Video Memes"
-        },
-        {
-            "id": 23,
-            "title": "Outlast: Whistleblower DLC"
-        },
-        {
-            "id": 24,
-            "title": "Streampie met Tiempie: Dark Souls 3"
-        },
-        {
-            "id": 26,
-            "title": "Far Cry 4: Valley of the Yeti DLC"
-        },
-        {
-            "id": 27,
-            "title": "FIFA World Cup 2014Brazil"
-        },
-        {
-            "id": 28,
-            "title": "Slender: The Arrival"
-        },
-        {
-            "id": 29,
-            "title": "The Walking Dead: Season 2"
-        },
-        {
-            "id": 30,
-            "title": "Super Mario Land"
-        },
-        {
-            "id": 31,
-            "title": "Stranded Deep"
-        },
-        {
-            "id": 32,
-            "title": "Half-Life 2"
-        },
-        {
-            "id": 33,
-            "title": "Resident Evil 3 streams"
-        },
-        {
-            "id": 34,
-            "title": "Starlit Adventures"
-        },
-        {
-            "id": 35,
-            "title": "Amnesia: A Machine ForPigs"
-        },
-        {
-            "id": 36,
-            "title": "DayZ"
-        },
-        {
-            "id": 37,
-            "title": "Resident Evil 2 streams"
-        },
-        {
-            "id": 38,
-            "title": "Resident Evil Remastered streams"
-        },
-        {
-            "id": 39,
-            "title": "Tomb Raider"
-        },
-        {
-            "id": 40,
-            "title": "Little Nightmares streams"
-        },
-        {
-            "id": 41,
-            "title": "The Walking Dead: Michonne"
-        },
-        {
-            "id": 43,
-            "title": "Wolfenstein: The Old Blood"
-        },
-        {
-            "id": 44,
-            "title": "The Evil Within"
-        },
-        {
-            "id": 45,
-            "title": "Amnesia: The Dark Descent streams"
-        },
-        {
-            "id": 46,
-            "title": "Resident Evil Revelations 2 (co-op)"
-        },
-        {
-            "id": 47,
-            "title": "Daylight"
-        },
-        {
-            "id": 48,
-            "title": "jungle book"
-        },
-        {
-            "id": 50,
-            "title": "gta v (videos)"
-        },
-        {
-            "id": 51,
-            "title": "Animal Crossing: New Horizons"
-        },
-        {
-            "id": 52,
-            "title": "It Takes Two"
-        },
-        {
-            "id": 53,
-            "title": "Sons of the Forest"
-        },
-        {
-            "id": 54,
-            "title": "Elden Ring"
-        },
-        {
-            "id": 55,
-            "title": "Resident Evil Village"
-        },
-        {
-            "id": 56,
-            "title": "Drawing From Memory"
-        },
-        {
-            "id": 57,
-            "title": "The Quarry"
-        },
-        {
-            "id": 58,
-            "title": "Mortuary Assistant"
-        },
-        {
-            "id": 59,
-            "title": "Sea of Thieves"
-        },
-        {
-            "id": 60,
-            "title": "Phasmophobia"
-        },
-        {
-            "id": 61,
-            "title": "Backrooms"
-        },
-        {
-            "id": 62,
-            "title": "Lekker Spoilen Game of Thrones S6"
-        },
-        {
-            "id": 63,
-            "title": "Lekker Spoilen Game of Thrones S7"
-        },
-        {
-            "id": 64,
-            "title": "Lekker Spoilen Game of Thrones S8"
-        },
-        {
-            "id": 65,
-            "title": "H1Z1"
-        },
-        {
-            "id": 66,
-            "title": "Pokemon Let's Go (shiny's)"
-        },
-        {
-            "id": 67,
-            "title": "Royal Rumble"
-        },
-        {
-            "id": 68,
-            "title": "Zoek de verschillen"
-        },
-        {
-            "id": 69,
-            "title": "Fiver"
-        },
-        {
-            "id": 70,
-            "title": "Simulator Spellen"
-        },
-        {
-            "id": 71,
-            "title": "Coop Streams"
-        },
-        {
-            "id": 72,
-            "title": "E3/Summergamefest"
-        },
-        {
-            "id": 73,
-            "title": "Veed Awards"
-        },
-        {
-            "id": 74,
-            "title": "Peter VS Timon"
-        },
-        {
-            "id": 75,
-            "title": "Lekker Spelen VS Kijkers"
-        },
-        {
-            "id": 76,
-            "title": "Persconferenties"
-        },
-        {
-            "id": 77,
-            "title": "Final Fantasy"
-        },
-        {
-            "id": 78,
-            "title": "Co-op Games"
-        },
-        {
-            "id": 79,
-            "title": "Freddy Fish"
-        },
-        {
-            "id": 80,
-            "title": "Five nights at freddy's"
-        },
-        {
-            "id": 81,
-            "title": "VR"
-        },
-        {
-            "id": 82,
-            "title": "Fanmade games"
-        },
-        {
-            "id": 83,
-            "title": "Horrormaand"
-        },
-        {
-            "id": 84,
-            "title": "Chained Together"
-        },
-        {
-            "id": 85,
-            "title": "Visage"
-        }
-    ],
+  "collections": [
+    {
+      "id": 1,
+      "title": "GTA V Roleplay"
+    },
+    {
+      "id": 2,
+      "title": "Detroit: Become Human"
+    },
+    {
+      "id": 3,
+      "title": "Rust"
+    },
+    {
+      "id": 4,
+      "title": "Pokémon unpackings"
+    },
+    {
+      "id": 5,
+      "title": "Grand Theft Auto V (GTA V)"
+    },
+    {
+      "id": 6,
+      "title": "Snipperclips streams"
+    },
+    {
+      "id": 7,
+      "title": "Beyond: Two Souls"
+    },
+    {
+      "id": 8,
+      "title": "Until Dawn"
+    },
+    {
+      "id": 9,
+      "title": "Heavy Rain"
+    },
+    {
+      "id": 10,
+      "title": "Outlast"
+    },
+    {
+      "id": 11,
+      "title": "Cuphead streams"
+    },
+    {
+      "id": 12,
+      "title": "Fallout 76"
+    },
+    {
+      "id": 13,
+      "title": "The Forest"
+    },
+    {
+      "id": 14,
+      "title": "Lion King"
+    },
+    {
+      "id": 15,
+      "title": "Lekker Spelen: De nieuwe host"
+    },
+    {
+      "id": 16,
+      "title": "Super Mario Bros.: The Lost Levels"
+    },
+    {
+      "id": 17,
+      "title": "Mario Kart 64"
+    },
+    {
+      "id": 18,
+      "title": "Resident Evil 7"
+    },
+    {
+      "id": 19,
+      "title": "Streampie met Tiempie: Getting Over It"
+    },
+    {
+      "id": 20,
+      "title": "The Stanley Parable"
+    },
+    {
+      "id": 21,
+      "title": "Pokémon Red"
+    },
+    {
+      "id": 22,
+      "title": "Trollface Quest & Trollface Quest: Video Memes"
+    },
+    {
+      "id": 23,
+      "title": "Outlast: Whistleblower DLC"
+    },
+    {
+      "id": 24,
+      "title": "Streampie met Tiempie: Dark Souls 3"
+    },
+    {
+      "id": 26,
+      "title": "Far Cry 4: Valley of the Yeti DLC"
+    },
+    {
+      "id": 27,
+      "title": "FIFA World Cup 2014Brazil"
+    },
+    {
+      "id": 28,
+      "title": "Slender: The Arrival"
+    },
+    {
+      "id": 29,
+      "title": "The Walking Dead: Season 2"
+    },
+    {
+      "id": 30,
+      "title": "Super Mario Land"
+    },
+    {
+      "id": 31,
+      "title": "Stranded Deep"
+    },
+    {
+      "id": 32,
+      "title": "Half-Life 2"
+    },
+    {
+      "id": 33,
+      "title": "Resident Evil 3 streams"
+    },
+    {
+      "id": 34,
+      "title": "Starlit Adventures"
+    },
+    {
+      "id": 35,
+      "title": "Amnesia: A Machine ForPigs"
+    },
+    {
+      "id": 36,
+      "title": "DayZ"
+    },
+    {
+      "id": 37,
+      "title": "Resident Evil 2 streams"
+    },
+    {
+      "id": 38,
+      "title": "Resident Evil Remastered streams"
+    },
+    {
+      "id": 39,
+      "title": "Tomb Raider"
+    },
+    {
+      "id": 40,
+      "title": "Little Nightmares streams"
+    },
+    {
+      "id": 41,
+      "title": "The Walking Dead: Michonne"
+    },
+    {
+      "id": 43,
+      "title": "Wolfenstein: The Old Blood"
+    },
+    {
+      "id": 44,
+      "title": "The Evil Within"
+    },
+    {
+      "id": 45,
+      "title": "Amnesia: The Dark Descent streams"
+    },
+    {
+      "id": 46,
+      "title": "Resident Evil Revelations 2 (co-op)"
+    },
+    {
+      "id": 47,
+      "title": "Daylight"
+    },
+    {
+      "id": 48,
+      "title": "jungle book"
+    },
+    {
+      "id": 50,
+      "title": "gta v (videos)"
+    },
+    {
+      "id": 51,
+      "title": "Animal Crossing: New Horizons"
+    },
+    {
+      "id": 52,
+      "title": "It Takes Two"
+    },
+    {
+      "id": 53,
+      "title": "Sons of the Forest"
+    },
+    {
+      "id": 54,
+      "title": "Elden Ring"
+    },
+    {
+      "id": 55,
+      "title": "Resident Evil Village"
+    },
+    {
+      "id": 56,
+      "title": "Drawing From Memory"
+    },
+    {
+      "id": 57,
+      "title": "The Quarry"
+    },
+    {
+      "id": 58,
+      "title": "Mortuary Assistant"
+    },
+    {
+      "id": 59,
+      "title": "Sea of Thieves"
+    },
+    {
+      "id": 60,
+      "title": "Phasmophobia"
+    },
+    {
+      "id": 61,
+      "title": "Backrooms"
+    },
+    {
+      "id": 62,
+      "title": "Lekker Spoilen Game of Thrones S6"
+    },
+    {
+      "id": 63,
+      "title": "Lekker Spoilen Game of Thrones S7"
+    },
+    {
+      "id": 64,
+      "title": "Lekker Spoilen Game of Thrones S8"
+    },
+    {
+      "id": 65,
+      "title": "H1Z1"
+    },
+    {
+      "id": 66,
+      "title": "Pokemon Let's Go (shiny's)"
+    },
+    {
+      "id": 67,
+      "title": "Royal Rumble"
+    },
+    {
+      "id": 68,
+      "title": "Zoek de verschillen"
+    },
+    {
+      "id": 69,
+      "title": "Fiver"
+    },
+    {
+      "id": 70,
+      "title": "Simulator Spellen"
+    },
+    {
+      "id": 71,
+      "title": "Coop Streams"
+    },
+    {
+      "id": 72,
+      "title": "E3/Summergamefest"
+    },
+    {
+      "id": 73,
+      "title": "Veed Awards"
+    },
+    {
+      "id": 74,
+      "title": "Peter VS Timon"
+    },
+    {
+      "id": 75,
+      "title": "Lekker Spelen VS Kijkers"
+    },
+    {
+      "id": 76,
+      "title": "Persconferenties"
+    },
+    {
+      "id": 77,
+      "title": "Final Fantasy"
+    },
+    {
+      "id": 78,
+      "title": "Co-op Games"
+    },
+    {
+      "id": 79,
+      "title": "Freddy Fish"
+    },
+    {
+      "id": 80,
+      "title": "Five nights at freddy's"
+    },
+    {
+      "id": 81,
+      "title": "VR"
+    },
+    {
+      "id": 82,
+      "title": "Fanmade games"
+    },
+    {
+      "id": 83,
+      "title": "Horrormaand"
+    },
+    {
+      "id": 84,
+      "title": "Chained Together"
+    },
+    {
+      "id": 85,
+      "title": "Visage"
+    },
+    {
+      "id": 86,
+      "title": "The Isle"
+    },
+    {
+      "id": 87,
+      "title": "Dungeons & Dragons"
+    },
+    {
+      "id": 88,
+      "title": "Rainbow Six Extraction"
+    },
+    {
+      "id": 89,
+      "title": "Multiversus"
+    }
+  ],
     "content": [
         {
             "id": "0a16",
@@ -348,7 +364,7 @@
             "duration": 404,
             "youtube_id": "n_BYzLmYyks",
             "description": "Peter en Timon spelen The Lion King, waarbij ze Peters zangtalent ontdekken. Ze spelen het eerste level uit.",
-            "collection": 14,
+            "collection": 87,
             "activity": "The Lion King"
         },
         {
@@ -11308,7 +11324,6 @@
             "title": "Hoe je een milky way NIET moet eten!",
             "duration": 109,
             "youtube_id": "eszg-GBMk3U",
-            "collection": 18,
             "activity": "Resident Evil Remastered"
         },
         {
@@ -14335,28 +14350,29 @@
             "time_start": "00:40:00",
             "time_end": "01:45:00"
         },
-        {
-            "id": "024d",
-            "type": "stream",
-            "date": "2017-07-09",
-            "duration": 27660,
-            "youtube_id": "vPYyoKBXcxU",
-            "titles": [
-                "Resident Evil 7 marathon [Vodcast Playlist] - Samen kijken"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil 7",
-                    "duration": 27660
-                }
-            ],
-            "twitchtracker_id": "25708223280",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:03:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "024d",
+        "type": "stream",
+        "date": "2017-07-09",
+        "collection": 18,
+        "duration": 27660,
+        "youtube_id": "vPYyoKBXcxU",
+        "titles": [
+          "Resident Evil 7 marathon [Vodcast Playlist] - Samen kijken"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil 7",
+            "duration": 27660
+          }
+        ],
+        "twitchtracker_id": "25708223280",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "15:03:00",
+        "time_end": "22:45:00"
+      },
         {
             "id": "d5b2",
             "type": "stream",
@@ -20713,29 +20729,30 @@
             "time_start": "20:23:00",
             "time_end": "22:05:00"
         },
-        {
-            "id": "aea2",
-            "type": "stream",
-            "date": "2018-03-13",
-            "duration": 8700,
-            "youtube_id": "_OwTIBvs0AM",
-            "titles": [
-                "Dungeons & Dragons: Ons eerste avontuur"
-            ],
-            "activities": [
-                {
-                    "title": "Dungeons & Dragons",
-                    "duration": 8700
-                }
-            ],
-            "twitchtracker_id": "27920436416",
-            "twitch_id": "246353465",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:29:00",
-            "time_end": "22:55:00"
-        },
+      {
+        "id": "aea2",
+        "type": "stream",
+        "date": "2018-03-13",
+        "collection": 87,
+        "duration": 8700,
+        "youtube_id": "_OwTIBvs0AM",
+        "titles": [
+          "Dungeons & Dragons: Ons eerste avontuur"
+        ],
+        "activities": [
+          {
+            "title": "Dungeons & Dragons",
+            "duration": 8700
+          }
+        ],
+        "twitchtracker_id": "27920436416",
+        "twitch_id": "246353465",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:29:00",
+        "time_end": "22:55:00"
+      },
         {
             "id": "9652",
             "type": "stream",
@@ -20765,14 +20782,15 @@
             "description": "Onderdeel van de ROG Arc. Timon geeft een nieuwe muis cadeau aan Peter omdat hij zijn muis heeft gesloopt. Daarna blijkt dat hij ook op Twitter bezig is geweest. Peter is er niet blij mee. Na een hoop draadbreuk gedoe moet Timon een horrorgame in zijn eentje spelen, wederom omdat hij Peters muis heeft gesloopt, en heeft hij het constant over hoe goed de nieuwe muis is. De horrorgame is niet heel eng, maar dat vindt Timon natuurlijk niet erg. Peter is er niet tevreden mee, en laat hem daarom Outlast 2 spelen. Uiteindelijk komt Peter er ook wel weer bij zitten.",
             "time_end": "23:15:00"
         },
-        {
-            "id": "607d",
-            "type": "podcast",
-            "date": "2018-03-15",
-            "title": "Dungeons & Dragons - Ons eerste avontuur",
-            "duration": 151,
-            "youtube_id": "m213ARfYj1w"
-        },
+      {
+        "id": "607d",
+        "type": "podcast",
+        "date": "2018-03-15",
+        "collection": 87,
+        "title": "Dungeons & Dragons - Ons eerste avontuur",
+        "duration": 151,
+        "youtube_id": "m213ARfYj1w"
+      },
         {
             "id": "efd7",
             "type": "stream",
@@ -29411,41 +29429,42 @@
             "time_start": "20:15:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "a62f",
-            "type": "stream",
-            "date": "2019-07-17",
-            "duration": 8820,
-            "youtube_id": "Mlp5oSvonkU",
-            "titles": [
-                "Het is DINO DAG!"
-            ],
-            "activities": [
-                {
-                    "title": "Super Mario Land",
-                    "duration": 720
-                },
-                {
-                    "title": "Dinomaster Party",
-                    "duration": 3600
-                },
-                {
-                    "title": "Variety",
-                    "duration": 3000
-                },
-                {
-                    "title": "The Isle",
-                    "duration": 1500
-                }
-            ],
-            "twitchtracker_id": "34940720224",
-            "twitch_id": "454180946",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:17:00",
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "a62f",
+        "type": "stream",
+        "date": "2019-07-17",
+        "collection": 86,
+        "duration": 8820,
+        "youtube_id": "Mlp5oSvonkU",
+        "titles": [
+          "Het is DINO DAG!"
+        ],
+        "activities": [
+          {
+            "title": "Super Mario Land",
+            "duration": 720
+          },
+          {
+            "title": "Dinomaster Party",
+            "duration": 3600
+          },
+          {
+            "title": "Variety",
+            "duration": 3000
+          },
+          {
+            "title": "The Isle",
+            "duration": 1500
+          }
+        ],
+        "twitchtracker_id": "34940720224",
+        "twitch_id": "454180946",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:17:00",
+        "time_end": "22:45:00"
+      },
         {
             "id": "1729",
             "type": "stream",
@@ -30467,33 +30486,34 @@
             "duration": 1329,
             "youtube_id": "j0kwiLXDmsc"
         },
-        {
-            "id": "7896",
-            "type": "stream",
-            "date": "2019-09-24",
-            "duration": 9780,
-            "youtube_id": "9wUear7-XWQ",
-            "titles": [
-                "Dungeons & Dragons (alerts staan uit)"
-            ],
-            "activities": [
-                {
-                    "title": "Dungeons & Dragons",
-                    "duration": 7080
-                },
-                {
-                    "title": "Special Events",
-                    "duration": 2700
-                }
-            ],
-            "twitchtracker_id": "35767059072",
-            "twitch_id": "485954065",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "19:41:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "7896",
+        "type": "stream",
+        "date": "2019-09-24",
+        "collection": 87,
+        "duration": 9780,
+        "youtube_id": "9wUear7-XWQ",
+        "titles": [
+          "Dungeons & Dragons (alerts staan uit)"
+        ],
+        "activities": [
+          {
+            "title": "Dungeons & Dragons",
+            "duration": 7080
+          },
+          {
+            "title": "Special Events",
+            "duration": 2700
+          }
+        ],
+        "twitchtracker_id": "35767059072",
+        "twitch_id": "485954065",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "19:41:00",
+        "time_end": "22:25:00"
+      },
         {
             "id": "f4e3",
             "type": "stream",
@@ -30710,14 +30730,15 @@
             "time_start": "20:14:00",
             "time_end": "22:15:00"
         },
-        {
-            "id": "c9a5",
-            "type": "podcast",
-            "date": "2019-10-03",
-            "title": "Dungeons & Dragons - Het super geheime boek",
-            "duration": 2199,
-            "youtube_id": "bqa6y_8r_T8"
-        },
+      {
+        "id": "c9a5",
+        "type": "podcast",
+        "collection": 87,
+        "date": "2019-10-03",
+        "title": "Dungeons & Dragons - Het super geheime boek",
+        "duration": 2199,
+        "youtube_id": "bqa6y_8r_T8"
+      },
         {
             "id": "1a9a",
             "type": "stream",
@@ -38203,29 +38224,30 @@
             "time_start": "13:56:00",
             "time_end": "17:05:00"
         },
-        {
-            "id": "74b1",
-            "type": "stream",
-            "date": "2021-03-31",
-            "duration": 9900,
-            "youtube_id": "MTP3kvU2ANQ",
-            "titles": [
-                "DUNGEONS & DRAGONS: Rollen & Dollen"
-            ],
-            "activities": [
-                {
-                    "title": "Dungeons & Dragons",
-                    "duration": 9900
-                }
-            ],
-            "twitchtracker_id": "41610237276",
-            "twitch_id": "970549901",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "74b1",
+        "type": "stream",
+        "date": "2021-03-31",
+        "collection": 87,
+        "duration": 9900,
+        "youtube_id": "MTP3kvU2ANQ",
+        "titles": [
+          "DUNGEONS & DRAGONS: Rollen & Dollen"
+        ],
+        "activities": [
+          {
+            "title": "Dungeons & Dragons",
+            "duration": 9900
+          }
+        ],
+        "twitchtracker_id": "41610237276",
+        "twitch_id": "970549901",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:19:00",
+        "time_end": "23:05:00"
+      },
         {
             "id": "dadb",
             "type": "video",
@@ -38341,14 +38363,15 @@
             "time_start": "23:16:00",
             "time_end": "00:15:00"
         },
-        {
-            "id": "1314",
-            "type": "podcast",
-            "date": "2021-04-08",
-            "title": "Dungeons & Dragons:  De super mysterieuze toren",
-            "duration": 1169,
-            "youtube_id": "t_yVa2715v0"
-        },
+      {
+        "id": "1314",
+        "type": "podcast",
+        "collection": 87,
+        "date": "2021-04-08",
+        "title": "Dungeons & Dragons:  De super mysterieuze toren",
+        "duration": 1169,
+        "youtube_id": "t_yVa2715v0"
+      },
         {
             "id": "e040",
             "type": "stream",
@@ -41960,29 +41983,30 @@
             "time_end": "22:55:00",
             "collection": 69
         },
-        {
-            "id": "7f67",
-            "type": "stream",
-            "date": "2022-01-20",
-            "duration": 7800,
-            "youtube_id": "E3Ekfvi_YhM",
-            "titles": [
-                "HET IS SLIJM TIME! !Extraction"
-            ],
-            "activities": [
-                {
-                    "title": "Tom Clancy's Rainbow Six Extraction",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "44445688060",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:24:00",
-            "free": true,
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "7f67",
+        "type": "stream",
+        "date": "2022-01-20",
+        "collection": 88,
+        "duration": 7800,
+        "youtube_id": "E3Ekfvi_YhM",
+        "titles": [
+          "HET IS SLIJM TIME! !Extraction"
+        ],
+        "activities": [
+          {
+            "title": "Tom Clancy's Rainbow Six Extraction",
+            "duration": 7800
+          }
+        ],
+        "twitchtracker_id": "44445688060",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:24:00",
+        "free": true,
+        "time_end": "22:35:00"
+      },
         {
             "id": "1385",
             "type": "podcast",
@@ -41991,29 +42015,30 @@
             "duration": 2182,
             "youtube_id": "aTBg4WiTWOQ"
         },
-        {
-            "id": "1abb",
-            "type": "stream",
-            "date": "2022-01-22",
-            "duration": 7800,
-            "youtube_id": "dJf8psWposg",
-            "titles": [
-                "SLIJMERIG MAAR SMAKELIJK! !Extraction"
-            ],
-            "activities": [
-                {
-                    "title": "Tom Clancy's Rainbow Six Extraction",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "44468269148",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:34:00",
-            "free": true,
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "1abb",
+        "type": "stream",
+        "date": "2022-01-22",
+        "collection": 88,
+        "duration": 7800,
+        "youtube_id": "dJf8psWposg",
+        "titles": [
+          "SLIJMERIG MAAR SMAKELIJK! !Extraction"
+        ],
+        "activities": [
+          {
+            "title": "Tom Clancy's Rainbow Six Extraction",
+            "duration": 7800
+          }
+        ],
+        "twitchtracker_id": "44468269148",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:34:00",
+        "free": true,
+        "time_end": "22:45:00"
+      },
         {
             "id": "f263",
             "type": "stream",
@@ -42038,29 +42063,30 @@
             "time_start": "20:32:00",
             "time_end": "23:25:00"
         },
-        {
-            "id": "659d",
-            "type": "stream",
-            "date": "2022-01-25",
-            "duration": 7620,
-            "youtube_id": "n_P8nKHJzI0",
-            "titles": [
-                "We hebben hier het beste TEAM voor nodig !extraction"
-            ],
-            "activities": [
-                {
-                    "title": "Tom Clancy's Rainbow Six Extraction",
-                    "duration": 7620
-                }
-            ],
-            "twitchtracker_id": "44498399788",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:27:00",
-            "free": true,
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "659d",
+        "type": "stream",
+        "date": "2022-01-25",
+        "collection": 88,
+        "duration": 7620,
+        "youtube_id": "n_P8nKHJzI0",
+        "titles": [
+          "We hebben hier het beste TEAM voor nodig !extraction"
+        ],
+        "activities": [
+          {
+            "title": "Tom Clancy's Rainbow Six Extraction",
+            "duration": 7620
+          }
+        ],
+        "twitchtracker_id": "44498399788",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:27:00",
+        "free": true,
+        "time_end": "22:35:00"
+      },
         {
             "id": "8d26",
             "type": "stream",
@@ -43425,38 +43451,40 @@
             "time_start": "20:34:00",
             "time_end": "22:05:00"
         },
-        {
-            "id": "44d5",
-            "type": "video",
-            "date": "2022-05-24",
-            "title": "MultiVersus  -  Lekker spelen",
-            "duration": 346,
-            "youtube_id": "Ijr7dlOP3WE",
-            "activity": "MultiVersus"
-        },
-        {
-            "id": "311f",
-            "type": "stream",
-            "date": "2022-05-25",
-            "duration": 6420,
-            "youtube_id": "3OAYD6a3HS4",
-            "titles": [
-                "Super Smash Warner Bros."
-            ],
-            "activities": [
-                {
-                    "title": "MultiVersus",
-                    "duration": 6420
-                }
-            ],
-            "twitchtracker_id": "39444046120",
-            "twitch_id": "1308914356",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:17:00",
-            "time_end": "22:05:00"
-        },
+      {
+        "id": "44d5",
+        "type": "video",
+        "collection": 89,
+        "date": "2022-05-24",
+        "title": "MultiVersus  -  Lekker spelen",
+        "duration": 346,
+        "youtube_id": "Ijr7dlOP3WE",
+        "activity": "MultiVersus"
+      },
+      {
+        "id": "311f",
+        "type": "stream",
+        "date": "2022-05-25",
+        "collection": 89,
+        "duration": 6420,
+        "youtube_id": "3OAYD6a3HS4",
+        "titles": [
+          "Super Smash Warner Bros."
+        ],
+        "activities": [
+          {
+            "title": "MultiVersus",
+            "duration": 6420
+          }
+        ],
+        "twitchtracker_id": "39444046120",
+        "twitch_id": "1308914356",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:17:00",
+        "time_end": "22:05:00"
+      },
         {
             "id": "46f6",
             "type": "stream",
@@ -44055,30 +44083,31 @@
             "time_start": "20:35:00",
             "time_end": "23:25:00"
         },
-        {
-            "id": "f8ec",
-            "type": "stream",
-            "date": "2022-07-19",
-            "duration": 8280,
-            "youtube_id": "IKN6Y_OhSAc",
-            "titles": [
-                "DENNIS IS HIER?!",
-                "DENNIS IS HIER?! FT. 5K PIET (LFT)"
-            ],
-            "activities": [
-                {
-                    "title": "MultiVersus",
-                    "duration": 8280
-                }
-            ],
-            "twitchtracker_id": "39642002232",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:46:00",
-            "free": true,
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "f8ec",
+        "type": "stream",
+        "date": "2022-07-19",
+        "duration": 8280,
+        "collection": 89,
+        "youtube_id": "IKN6Y_OhSAc",
+        "titles": [
+          "DENNIS IS HIER?!",
+          "DENNIS IS HIER?! FT. 5K PIET (LFT)"
+        ],
+        "activities": [
+          {
+            "title": "MultiVersus",
+            "duration": 8280
+          }
+        ],
+        "twitchtracker_id": "39642002232",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:46:00",
+        "free": true,
+        "time_end": "23:05:00"
+      },
         {
             "id": "77ac",
             "type": "stream",
@@ -44104,30 +44133,31 @@
             "time_start": "20:30:00",
             "time_end": "21:55:00"
         },
-        {
-            "id": "39fe",
-            "type": "stream",
-            "date": "2022-07-23",
-            "duration": 7560,
-            "youtube_id": "R-BIwbnzHa4",
-            "titles": [
-                "We gaan officieel in de Top 1000 staan 😎"
-            ],
-            "activities": [
-                {
-                    "title": "MultiVersus",
-                    "duration": 7560
-                }
-            ],
-            "twitchtracker_id": "39654564504",
-            "twitch_id": "1556246881",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:38:00",
-            "free": true,
-            "time_end": "22:45:00"
-        },
+      {
+        "id": "39fe",
+        "type": "stream",
+        "date": "2022-07-23",
+        "collection": 89,
+        "duration": 7560,
+        "youtube_id": "R-BIwbnzHa4",
+        "titles": [
+          "We gaan officieel in de Top 1000 staan 😎"
+        ],
+        "activities": [
+          {
+            "title": "MultiVersus",
+            "duration": 7560
+          }
+        ],
+        "twitchtracker_id": "39654564504",
+        "twitch_id": "1556246881",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:38:00",
+        "free": true,
+        "time_end": "22:45:00"
+      },
         {
             "id": "cda0",
             "type": "stream",
@@ -44195,30 +44225,31 @@
             "time_start": "20:54:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "f886",
-            "type": "stream",
-            "date": "2022-08-01",
-            "duration": 9060,
-            "youtube_id": "qf5vr4WHzYM",
-            "titles": [
-                "MULTIVERSUS TOERNOOI! (Met hoofdprijs)"
-            ],
-            "activities": [
-                {
-                    "title": "MultiVersus",
-                    "duration": 9060
-                }
-            ],
-            "twitchtracker_id": "39682902712",
-            "twitch_id": "1556248803",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:33:00",
-            "free": true,
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "f886",
+        "type": "stream",
+        "date": "2022-08-01",
+        "collection": 89,
+        "duration": 9060,
+        "youtube_id": "qf5vr4WHzYM",
+        "titles": [
+          "MULTIVERSUS TOERNOOI! (Met hoofdprijs)"
+        ],
+        "activities": [
+          {
+            "title": "MultiVersus",
+            "duration": 9060
+          }
+        ],
+        "twitchtracker_id": "39682902712",
+        "twitch_id": "1556248803",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:33:00",
+        "free": true,
+        "time_end": "23:05:00"
+      },
         {
             "id": "6f32",
             "type": "stream",
@@ -47962,29 +47993,30 @@
             "time_start": "20:32:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "6c92",
-            "type": "stream",
-            "date": "2023-07-24",
-            "duration": 6360,
-            "youtube_id": "-IJV7l-aDFw",
-            "titles": [
-                "Opgroeien tot 100% dino 🦖 [PERMA-DEATH]"
-            ],
-            "activities": [
-                {
-                    "title": "The Isle",
-                    "duration": 6360
-                }
-            ],
-            "twitchtracker_id": "40928229016",
-            "twitch_id": "1880697971",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:38:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "6c92",
+        "type": "stream",
+        "date": "2023-07-24",
+        "collection": 86,
+        "duration": 6360,
+        "youtube_id": "-IJV7l-aDFw",
+        "titles": [
+          "Opgroeien tot 100% dino 🦖 [PERMA-DEATH]"
+        ],
+        "activities": [
+          {
+            "title": "The Isle",
+            "duration": 6360
+          }
+        ],
+        "twitchtracker_id": "40928229016",
+        "twitch_id": "1880697971",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:38:00",
+        "time_end": "22:25:00"
+      },
         {
             "id": "0353",
             "type": "stream",
@@ -48010,29 +48042,30 @@
             "time_start": "20:29:00",
             "time_end": "22:25:00"
         },
-        {
-            "id": "ac96",
-            "type": "stream",
-            "date": "2023-07-31",
-            "duration": 8820,
-            "youtube_id": "IUBaObr9Rfo",
-            "titles": [
-                "ROLLEN & DOLLEN: Een Dungeons & Dragons avontuur 🎲"
-            ],
-            "activities": [
-                {
-                    "title": "Dungeons & Dragons",
-                    "duration": 8820
-                }
-            ],
-            "twitchtracker_id": "40948284216",
-            "twitch_id": "1886766252",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:37:00",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "ac96",
+        "type": "stream",
+        "date": "2023-07-31",
+        "collection": 87,
+        "duration": 8820,
+        "youtube_id": "IUBaObr9Rfo",
+        "titles": [
+          "ROLLEN & DOLLEN: Een Dungeons & Dragons avontuur 🎲"
+        ],
+        "activities": [
+          {
+            "title": "Dungeons & Dragons",
+            "duration": 8820
+          }
+        ],
+        "twitchtracker_id": "40948284216",
+        "twitch_id": "1886766252",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:37:00",
+        "time_end": "23:05:00"
+      },
         {
             "id": "6cb4",
             "type": "stream",
@@ -48158,56 +48191,58 @@
             "time_start": "20:51:00",
             "time_end": "22:35:00"
         },
-        {
-            "id": "739d",
-            "type": "stream",
-            "date": "2023-08-17",
-            "duration": 16740,
-            "youtube_id": "W8pQennK-MY",
-            "titles": [
-                "STRAFSTEAM: Een Dino tot 100% laten groeien 💀"
-            ],
-            "activities": [
-                {
-                    "title": "The Isle",
-                    "duration": 16740
-                }
-            ],
-            "twitchtracker_id": "40997272488",
-            "twitch_id": "1901294175",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:05:00",
-            "time_end": "19:45:00"
-        },
-        {
-            "id": "cde4",
-            "type": "stream",
-            "date": "2023-08-21",
-            "duration": 6900,
-            "youtube_id": "SXsquatajWA",
-            "titles": [
-                "The Texas Chain Saw Massacre"
-            ],
-            "activities": [
-                {
-                    "title": "The Texas Chain Saw Massacre",
-                    "duration": 5400
-                },
-                {
-                    "title": "The Isle",
-                    "duration": 1500
-                }
-            ],
-            "twitchtracker_id": "41009283368",
-            "twitch_id": "1904962323",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:29:00",
-            "time_end": "22:25:00"
-        },
+      {
+        "id": "739d",
+        "type": "stream",
+        "date": "2023-08-17",
+        "duration": 16740,
+        "collection": 86,
+        "youtube_id": "W8pQennK-MY",
+        "titles": [
+          "STRAFSTEAM: Een Dino tot 100% laten groeien 💀"
+        ],
+        "activities": [
+          {
+            "title": "The Isle",
+            "duration": 16740
+          }
+        ],
+        "twitchtracker_id": "40997272488",
+        "twitch_id": "1901294175",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "15:05:00",
+        "time_end": "19:45:00"
+      },
+      {
+        "id": "cde4",
+        "type": "stream",
+        "collection": 86,
+        "date": "2023-08-21",
+        "duration": 6900,
+        "youtube_id": "SXsquatajWA",
+        "titles": [
+          "The Texas Chain Saw Massacre"
+        ],
+        "activities": [
+          {
+            "title": "The Texas Chain Saw Massacre",
+            "duration": 5400
+          },
+          {
+            "title": "The Isle",
+            "duration": 1500
+          }
+        ],
+        "twitchtracker_id": "41009283368",
+        "twitch_id": "1904962323",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:29:00",
+        "time_end": "22:25:00"
+      },
         {
             "id": "dc93",
             "type": "stream",
@@ -48368,33 +48403,34 @@
             "youtube_id": "ZNuHl3P4KP4",
             "activity": "Starfield"
         },
-        {
-            "id": "be7f",
-            "type": "stream",
-            "date": "2023-09-06",
-            "duration": 6960,
-            "youtube_id": "xSpl5lXu4Ek",
-            "titles": [
-                "Geen Timon, Geen probleem."
-            ],
-            "activities": [
-                {
-                    "title": "Just Chatting",
-                    "duration": 2460
-                },
-                {
-                    "title": "The Isle",
-                    "duration": 4500
-                }
-            ],
-            "twitchtracker_id": "41071627064",
-            "twitch_id": "1918865090",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:38:00",
-            "time_end": "22:35:00"
-        },
+      {
+        "id": "be7f",
+        "type": "stream",
+        "date": "2023-09-06",
+        "collection": 86,
+        "duration": 6960,
+        "youtube_id": "xSpl5lXu4Ek",
+        "titles": [
+          "Geen Timon, Geen probleem."
+        ],
+        "activities": [
+          {
+            "title": "Just Chatting",
+            "duration": 2460
+          },
+          {
+            "title": "The Isle",
+            "duration": 4500
+          }
+        ],
+        "twitchtracker_id": "41071627064",
+        "twitch_id": "1918865090",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:38:00",
+        "time_end": "22:35:00"
+      },
         {
             "id": "b3c5",
             "type": "stream",
@@ -48709,14 +48745,15 @@
             "time_start": "20:40:00",
             "time_end": "23:05:00"
         },
-        {
-            "id": "1306",
-            "type": "podcast",
-            "date": "2023-10-06",
-            "title": "Dungeons & Dragons - Verdwaald in een bos",
-            "duration": 763,
-            "youtube_id": "6WnFVzmONTM"
-        },
+      {
+        "id": "1306",
+        "type": "podcast",
+        "date": "2023-10-06",
+        "collection": 87,
+        "title": "Dungeons & Dragons - Verdwaald in een bos",
+        "duration": 763,
+        "youtube_id": "6WnFVzmONTM"
+      },
         {
             "id": "6f15",
             "type": "stream",
@@ -50735,24 +50772,25 @@
             "id": "6fe5",
             "type": "stream"
         },
-        {
-            "date": "2024-08-14",
-            "time_start": "20:50:04",
-            "time_end": "22:46:52",
-            "titles": [
-                "Roleplayen als dinosauriër 2024"
-            ],
-            "activities": [
-                {
-                    "title": "The Isle",
-                    "duration": 0
-                }
-            ],
-            "duration": 7008,
-            "twitch_id": "2224342794",
-            "youtube_id": "G3geE0WzTbs",
-            "id": "42db",
-            "type": "stream"
-        }
+      {
+        "date": "2024-08-14",
+        "time_start": "20:50:04",
+        "collection": 86,
+        "time_end": "22:46:52",
+        "titles": [
+          "Roleplayen als dinosauriër 2024"
+        ],
+        "activities": [
+          {
+            "title": "The Isle",
+            "duration": 0
+          }
+        ],
+        "duration": 7008,
+        "twitch_id": "2224342794",
+        "youtube_id": "G3geE0WzTbs",
+        "id": "42db",
+        "type": "stream"
+      }
     ]
 }
