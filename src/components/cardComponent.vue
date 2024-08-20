@@ -1,7 +1,7 @@
 <template>
     <div class="card h-100 border-0 bg-transparent">
         <div @click="goToCard" @click.middle="goToCard('middle')" class="img-wrapper position-relative"
-             :class="card.type === 'podcast' ? 'border-success' : card.type === 'video' ? 'border-yt' : 'border-tw'" type="button">
+             :class="[card.type === 'podcast' ? 'border-success' : card.type === 'video' ? 'border-yt' : 'border-tw', {active: card.id === selectedCardId}]" type="button">
 
             <div class="corner-top"></div>
             <div class="corner-bottom"></div>
@@ -10,15 +10,14 @@
 
             <div class="transform-wrapper position-relative">
                 <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
-                <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
+                <span class="badge bg-black position-absolute top-0 start-0 m-2"
+                      style="--bs-bg-opacity: .75;">{{ card.date }}</span>
+
+                <span class="badge bg-black position-absolute bottom-0 end-0 m-2"
                       style="--bs-bg-opacity: .75;">{{ duration }}</span>
                 <span v-if="card.type === 'stream' && card.free"
-                      class="badge rounded-0 bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
+                      class="badge bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
                     Gratis
-                </span>
-                <span v-if="card.id === selectedCardId"
-                      class="badge rounded-0 bg-secondary position-absolute top-0 end-0 m-2 text-uppercase">
-                    Open
                 </span>
 
                 <div v-if="isSeen" class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
@@ -240,7 +239,8 @@ const yearAgo =  computed(() => {
         .edge-left, .edge-bottom
             background: #6441A5
 
-    &:hover
+    &:hover,
+    &.active
         .corner-top, .corner-bottom,
         .edge-left, .edge-bottom
             transition-delay: 75ms

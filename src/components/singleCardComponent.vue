@@ -22,6 +22,28 @@
                         target="_blank">Stuur een beschrijving op!</a>
                 </div>
             </div>
+            <!-- actions -->
+            <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
+                <div class="card-body">
+                    <div class="d-flex flex-wrap gap-2">
+                        <button :class="{active: isLiked}" class="btn btn-sm btn-outline-success rounded-pill"
+                                type="button" @click="generalStore.toggleLikedItem(card.id)"><i
+                            :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'" class="bi me-1"></i>Like
+                        </button>
+                        <button :class="{active: isSeen}" class="btn btn-sm btn-outline-secondary rounded-pill"
+                                type="button" @click="generalStore.toggleSeenItem(card.id)"><i
+                            :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-1"></i>Gezien
+                        </button>
+                        <button :data-bs-target="'#playlistModal-' + card.id"
+                                class="btn btn-sm btn-outline-secondary rounded-pill"
+                                data-bs-toggle="modal" type="button"><i
+                            class="bi bi-collection-play me-1"></i>Bewaar
+                        </button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
+                        </button>
+                    </div>
+                </div>
+            </div>
             <!-- links -->
             <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
                 <div class="card-body">
@@ -55,7 +77,7 @@
                                   class="badge rounded-pill text-wrap">-</span>
                             <span v-for="act in card.activities"
                                   :title="`Zoek op '${act.title}'`"
-                                  class="badge rounded-pill text-wrap" type="button"
+                                  class="badge text-decoration-underline rounded-pill text-wrap" type="button"
                                   @click="searchActivity(act.title)">{{ act.title }}</span>
                             <template v-if="Array.isArray(card.activity)">
                                 <span v-for="act in card.activity"
@@ -98,28 +120,6 @@
                                 <mini-card-component :card="card"></mini-card-component>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <!-- actions -->
-            <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
-                <div class="card-body">
-                    <div class="d-flex flex-wrap gap-2">
-                        <button :class="{active: isLiked}" class="btn btn-sm btn-outline-success rounded-pill"
-                                type="button" @click="generalStore.toggleLikedItem(card.id)"><i
-                            :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'" class="bi me-1"></i>Like
-                        </button>
-                        <button :class="{active: isSeen}" class="btn btn-sm btn-outline-secondary rounded-pill"
-                                type="button" @click="generalStore.toggleSeenItem(card.id)"><i
-                            :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-1"></i>Gezien
-                        </button>
-                        <button :data-bs-target="'#playlistModal-' + card.id"
-                                class="btn btn-sm btn-outline-secondary rounded-pill"
-                                data-bs-toggle="modal" type="button"><i
-                            class="bi bi-collection-play me-1"></i>Bewaar
-                        </button>
-                        <button class="btn btn-sm btn-outline-secondary rounded-pill" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer link
-                        </button>
                     </div>
                 </div>
             </div>
