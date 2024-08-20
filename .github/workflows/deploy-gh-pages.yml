@@ -2,7 +2,7 @@ name: Deploy to GH Pages
 on:
   push:
     branches:
-      - master
+      - testing
 jobs:
   build_vue:
     runs-on: ubuntu-latest
