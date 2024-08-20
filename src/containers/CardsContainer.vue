@@ -18,7 +18,7 @@
     </template>
     <template v-if="view === 'search'">
         <div :class="selectedCardId ? 'row-cols-1 row-cols-xl-2 row-cols-xxl-3 row-cols-3xl-4 row-cols-4xl-5' :
-        'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'" class="row g-3 mb-5">
+        'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'" class="row g-4 mb-5">
             <div v-for="(card, idx) in paginatedData" :key="idx" class="col">
                 <card-component :card="card"/>
             </div>

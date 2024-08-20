@@ -1,35 +1,43 @@
 <template>
-    <div class="card h-100 border-0 bg-transparent position-relative">
-        <div @click="goToCard" @click.middle="goToCard('middle')" class="thumbnail-wrapper position-relative rounded-3 z-1"
-             :class="{'p-1 bg-warning' : card.type === 'stream' && card.free, 'p-1 bg-secondary' : card.id === selectedCardId }">
-            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100 rounded-3" alt="thumbnail">
-            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
-                  style="--bs-bg-opacity: .75;">{{ duration }}</span>
-            <span v-if="card.type === 'stream' && card.free"
-                  class="badge rounded-0 bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
-                Gratis
-            </span>
-            <span v-if="card.id === selectedCardId"
-                  class="badge rounded-0 bg-secondary position-absolute top-0 end-0 m-2 text-uppercase">
-                Open
-            </span>
+    <div class="card h-100 border-0 bg-transparent">
+        <div @click="goToCard" @click.middle="goToCard('middle')" class="img-wrapper position-relative"
+             :class="card.type === 'podcast' ? 'border-success' : card.type === 'video' ? 'border-yt' : 'border-tw'" type="button">
 
-            <div v-if="isSeen" class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
-                <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
+            <div class="corner-top"></div>
+            <div class="corner-bottom"></div>
+            <div class="edge-left"></div>
+            <div class="edge-bottom"></div>
+
+            <div class="transform-wrapper position-relative">
+                <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" class="w-100" alt="thumbnail">
+                <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
+                      style="--bs-bg-opacity: .75;">{{ duration }}</span>
+                <span v-if="card.type === 'stream' && card.free"
+                      class="badge rounded-0 bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
+                    Gratis
+                </span>
+                <span v-if="card.id === selectedCardId"
+                      class="badge rounded-0 bg-secondary position-absolute top-0 end-0 m-2 text-uppercase">
+                    Open
+                </span>
+
+                <div v-if="isSeen" class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
+                    <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
+                </div>
             </div>
+
         </div>
         <div class="card-body pt-3 pb-0 px-0">
             <div class="d-flex justify-content-between gap-2 position-relative">
                 <a v-if="card['twitch_id']" :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
-                    <img class="rounded-circle" src="../assets/img/twitch.png" width="24" height="24" alt="logo">
+                    <img class="rounded-circle" src="../assets/img/twitch.png" width="32" height="32" alt="logo">
                 </a>
                 <a v-else-if="card['type'] === 'podcast'" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
-                    <img class="rounded-circle" src="../assets/img/podcast.png" width="24" height="24" alt="logo">
+                    <img class="rounded-circle" src="../assets/img/podcast.png" width="32" height="32" alt="logo">
                 </a>
                 <a v-else-if="card['youtube_id']" :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
-                    <img class="rounded-circle" src="../assets/img/youtube.png" width="24" height="24" alt="logo">
+                    <img class="rounded-circle" src="../assets/img/youtube.png" width="32" height="32" alt="logo">
                 </a>
-
 
                 <div class="meta flex-grow-1">
                     <h3 @click="goToCard" @click.middle="goToCard('middle')" type="button" class="fs-6 fw-bold mb-1">{{ isSeries ? `${collectionName} - (${collectionCount})` : title }}</h3>
@@ -51,8 +59,8 @@
                         <span class="small">{{ card['activity'] }}</span>
                     </div>
                 </div>
-                <div class="action-btn position-absolute top-0 end-0 rounded-circle bg-black">
-                    <button class="btn btn-sm btn-link" data-bs-toggle="dropdown" aria-expanded="false">
+                <div>
+                    <button class="btn btn-sm btn-dark rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="bi bi-three-dots-vertical"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -170,11 +178,11 @@ const yearAgo =  computed(() => {
 </script>
 
 <style scoped lang="sass">
-.card
-    &:hover .action-btn
-        visibility: unset
-    .action-btn
-        visibility: hidden
+//.card
+//    &:hover .action-btn
+//        visibility: unset
+//    .action-btn
+//        visibility: hidden
 
 .meta h3
     overflow: hidden
@@ -195,4 +203,101 @@ const yearAgo =  computed(() => {
     left: 8px
     right: 8px
     margin-top: -1px
+
+.img-wrapper
+    *
+        transition-property: transform
+        transition-timing-function: ease
+        transition-duration: 100ms
+
+    &.border-success
+        .corner-top
+            border-right-color: rgb(25, 135, 84)
+
+        .corner-bottom
+            border-top-color: rgb(25, 135, 84)
+
+        .edge-left, .edge-bottom
+            background: rgb(25, 135, 84)
+
+    &.border-yt
+        .corner-top
+            border-right-color: #FF0000
+
+        .corner-bottom
+            border-top-color: #FF0000
+
+        .edge-left, .edge-bottom
+            background: #FF0000
+
+    &.border-tw
+        .corner-top
+            border-right-color: #6441A5
+
+        .corner-bottom
+            border-top-color: #6441A5
+
+        .edge-left, .edge-bottom
+            background: #6441A5
+
+    &:hover
+        .corner-top, .corner-bottom,
+        .edge-left, .edge-bottom
+            transition-delay: 75ms
+
+        .corner-top
+            transform: translateY(-0.4rem) scale(1)
+
+        .corner-bottom
+            transform: translateX(0.4rem) scale(1)
+
+        .edge-left
+            transform: scaleX(1)
+
+        .edge-bottom
+            transform: scaleY(1)
+
+        .transform-wrapper
+            transform: translate3d(0.4rem, -0.4rem, 0px)
+            transition-delay: 75ms
+
+.corner-top
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    border-top: 0.4rem solid transparent
+    border-bottom: 0.4rem solid transparent
+    border-right: 0.4rem solid
+    transform-origin: left center
+    transform: translateY(-0.4rem) scale(0)
+.corner-bottom
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 0
+    height: 0
+    border-left: 0.4rem solid transparent
+    border-right: 0.4rem solid transparent
+    border-top: 0.4rem solid
+    transform-origin: center bottom
+    transform: translateX(0.4rem) scale(0)
+.edge-left
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    transform-origin: 0 100%
+    width: 0.4rem
+    transform: scaleX(0)
+.edge-bottom
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    transform-origin: 0 100%
+    height: 0.4rem
+    transform: scaleY(0)
+
 </style>

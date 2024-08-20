@@ -3,7 +3,7 @@
     <main>
         <div class="row">
             <div class="col position-relative">
-                <filter-chips></filter-chips>
+                <filter-chips class="mb-3"></filter-chips>
                 <cards-container></cards-container>
             </div>
             <div class="col-6 col-xl-4" v-if="selectedCard">
