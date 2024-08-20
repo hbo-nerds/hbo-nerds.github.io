@@ -15,7 +15,7 @@
                 </div>
             </div>
 
-<!--            <footer-bar></footer-bar>-->
+            <footer-bar></footer-bar>
         </main>
 <!--        <div v-if="showCookie" class="bg-dark-subtle fixed-bottom">-->
 <!--            <div class="container">-->
