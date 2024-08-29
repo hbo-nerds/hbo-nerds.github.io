@@ -50837,6 +50837,60 @@
             "title": "Een LEKKER SPELEN GAME van een kijker!",
             "duration": 14164,
             "youtube_id": "lzWH2RqQyN4"
+        },
+        {
+            "date": "2024-08-26",
+            "time_start": "20:52:49",
+            "time_end": "22:58:26",
+            "titles": [
+                "Hoe is het om een hond te zijn?"
+            ],
+            "activities": [
+                {
+                    "title": "The Wild",
+                    "duration": 1
+                },
+                {
+                    "title": "Seeing Things",
+                    "duration": 1
+                },
+                {
+                    "title": "Feather Party",
+                    "duration": 1
+                }
+            ],
+            "duration": 7537,
+            "twitch_id": "2234767865",
+            "youtube_id": "4jB6daSgb3g",
+            "id": "0367",
+            "type": "stream"
+        },
+        {
+            "date": "2024-08-28",
+            "time_start": "20:42:28",
+            "time_end": "22:41:05",
+            "titles": [
+                "Is dit hem?!"
+            ],
+            "activities": [
+                {
+                    "title": "Totally Accurate Battle Simulator",
+                    "duration": 1
+                },
+                {
+                    "title": "Can't Revert",
+                    "duration": 1
+                },
+                {
+                    "title": "The Game of Sisyphus",
+                    "duration": 1
+                }
+            ],
+            "duration": 7117,
+            "twitch_id": "2236478146",
+            "youtube_id": "7B48tTewHZI",
+            "id": "fc0f",
+            "type": "stream"
         }
     ]
 }
