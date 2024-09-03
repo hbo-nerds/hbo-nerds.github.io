@@ -33269,33 +33269,34 @@
             "free": true,
             "time_end": "21:15:00"
         },
-        {
-            "id": "902c",
-            "type": "stream",
-            "date": "2020-03-26",
-            "duration": 15960,
-            "youtube_id": "bDDhKLGQaDI",
-            "titles": [
-                "€100.000 Warzone toernooi - Twitch Rivals"
-            ],
-            "activities": [
-                {
-                    "title": "Special Events",
-                    "duration": 15960
-                }
-            ],
-            "twitchtracker_id": "969257713",
-            "twitch_id": "584535989",
-            "extra_urls": [
-                "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
-            ],
-            "tags": [
-                "casual"
-            ],
-            "time_start": "16:38:00",
-            "free": true,
-            "time_end": "21:05:00"
-        },
+      {
+        "id": "902c",
+        "type": "stream",
+        "description": "https://www.twitch.tv/videos/584535037, https://www.twitch.tv/videos/584535989, https://www.twitch.tv/videos/584536154, https://www.twitch.tv/videos/584536325",
+        "date": "2020-03-26",
+        "duration": 15960,
+        "youtube_id": "bDDhKLGQaDI",
+        "titles": [
+          "€100.000 Warzone toernooi - Twitch Rivals"
+        ],
+        "activities": [
+          {
+            "title": "Special Events",
+            "duration": 15960
+          }
+        ],
+        "twitchtracker_id": "969257713",
+        "twitch_id": "584535989",
+        "extra_urls": [
+          "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
+        ],
+        "tags": [
+          "casual"
+        ],
+        "time_start": "16:38:00",
+        "free": true,
+        "time_end": "21:05:00"
+      },
         {
             "id": "f8b9",
             "type": "video",
