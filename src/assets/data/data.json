@@ -50854,33 +50854,37 @@
             "duration": 14164,
             "youtube_id": "lzWH2RqQyN4"
         },
-        {
-            "date": "2024-08-26",
-            "time_start": "20:52:49",
-            "time_end": "22:58:26",
-            "titles": [
-                "Hoe is het om een hond te zijn?"
-            ],
-            "activities": [
-                {
-                    "title": "The Wild",
-                    "duration": 1
-                },
-                {
-                    "title": "Seeing Things",
-                    "duration": 1
-                },
-                {
-                    "title": "Feather Party",
-                    "duration": 1
-                }
-            ],
-            "duration": 7537,
-            "twitch_id": "2234767865",
-            "youtube_id": "4jB6daSgb3g",
-            "id": "0367",
-            "type": "stream"
-        },
+      {
+        "date": "2024-08-26",
+        "time_start": "20:52:49",
+        "time_end": "22:58:26",
+        "titles": [
+          "Hoe is het om een hond te zijn?"
+        ],
+        "activities": [
+          {
+            "title": "The Wild",
+            "duration": 1
+          },
+          {
+            "title": "Seeing Things",
+            "duration": 1
+          },
+          {
+            "title": "Feather Party",
+            "duration": 1
+          }
+        ],
+
+        "tags": [
+          "Zoek de verschillen"
+        ],
+        "duration": 7537,
+        "twitch_id": "2234767865",
+        "youtube_id": "4jB6daSgb3g",
+        "id": "0367",
+        "type": "stream"
+      },
         {
             "date": "2024-08-28",
             "time_start": "20:42:28",
