@@ -33269,34 +33269,34 @@
             "free": true,
             "time_end": "21:15:00"
         },
-      {
-        "id": "902c",
-        "type": "stream",
-        "description": "https://www.twitch.tv/videos/584535037, https://www.twitch.tv/videos/584535989, https://www.twitch.tv/videos/584536154, https://www.twitch.tv/videos/584536325",
-        "date": "2020-03-26",
-        "duration": 15960,
-        "youtube_id": "bDDhKLGQaDI",
-        "titles": [
-          "€100.000 Warzone toernooi - Twitch Rivals"
-        ],
-        "activities": [
-          {
-            "title": "Special Events",
-            "duration": 15960
-          }
-        ],
-        "twitchtracker_id": "969257713",
-        "twitch_id": "584535989",
-        "extra_urls": [
-          "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
-        ],
-        "tags": [
-          "casual"
-        ],
-        "time_start": "16:38:00",
-        "free": true,
-        "time_end": "21:05:00"
-      },
+        {
+            "id": "902c",
+            "type": "stream",
+            "description": "https://www.twitch.tv/videos/584535037, https://www.twitch.tv/videos/584535989, https://www.twitch.tv/videos/584536154, https://www.twitch.tv/videos/584536325",
+            "date": "2020-03-26",
+            "duration": 15960,
+            "youtube_id": "bDDhKLGQaDI",
+            "titles": [
+                "€100.000 Warzone toernooi - Twitch Rivals"
+            ],
+            "activities": [
+                {
+                    "title": "Special Events",
+                    "duration": 15960
+                }
+            ],
+            "twitchtracker_id": "969257713",
+            "twitch_id": "584535989",
+            "extra_urls": [
+                "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
+            ],
+            "tags": [
+                "casual"
+            ],
+            "time_start": "16:38:00",
+            "free": true,
+            "time_end": "21:05:00"
+        },
         {
             "id": "f8b9",
             "type": "video",
@@ -50892,6 +50892,60 @@
             "youtube_id": "7B48tTewHZI",
             "id": "fc0f",
             "type": "stream"
+        },
+        {
+            "date": "2024-09-02",
+            "time_start": "20:29:54",
+            "time_end": "22:32:53",
+            "titles": [
+                "Een eekhoorn met een pistool"
+            ],
+            "activities": [
+                {
+                    "title": "Squirrel with a Gun",
+                    "duration": 1
+                }
+            ],
+            "duration": 7379,
+            "twitch_id": "2240977770",
+            "youtube_id": "7AeJ3DDXDQQ",
+            "id": "1a47",
+            "type": "stream"
+        },
+        {
+            "date": "2024-09-04",
+            "time_start": "20:36:09",
+            "time_end": "22:30:41",
+            "titles": [
+                "Wanneer wordt het GEHEIME PROJECT gerevealed...?"
+            ],
+            "activities": [
+                {
+                    "title": "Ten Bells",
+                    "duration": 1
+                },
+                {
+                    "title": "Fossilfuel",
+                    "duration": 1
+                },
+                {
+                    "title": "Luigi's Mansion 2 HD",
+                    "duration": 1
+                }
+            ],
+            "duration": 6872,
+            "twitch_id": "2242659592",
+            "youtube_id": "TtcDtLgIMp0",
+            "id": "7362",
+            "type": "stream"
+        },
+        {
+            "id": "933c",
+            "type": "video",
+            "date": "2024-09-03",
+            "title": "Hell's Kitchen - Lekker spelen",
+            "duration": 325,
+            "youtube_id": "J0OxCK3_Bu8"
         }
     ]
 }
