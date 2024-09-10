@@ -2,71 +2,44 @@
     <!-- main -->
     <main>
         <div class="row">
-            <div class="col position-relative">
-                <filter-chips class="mb-3"></filter-chips>
-                <cards-container></cards-container>
+            <div class="col-12 col-sm position-relative pt-3">
+                <list-component/>
             </div>
-            <div class="col-6 col-xl-4" v-if="selectedCard">
-                <div class="sticky-top mb-5">
-                    <div class="d-flex align-items-center py-3">
-                        <button @click="selectedCardId = null" type="button" class="btn-light fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap">Sluit</button>
-                    </div>
-                    <single-card-component :card="selectedCard"/>
+<!--            <div v-if="selectedCard" class="col-sm-6 col-xl-4">-->
+<!--                <div class="sticky-top mb-5">-->
+<!--                    <div class="d-flex align-items-center py-3">-->
+<!--                        <button class="btn-light fs-7 btn btm-sm rounded-3 text-capitalize text-nowrap ms-auto" type="button"-->
+<!--                                @click="selectedCardId = null">Sluit-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                    <single-card-component :card="selectedCard"/>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+            <div class="offcanvas offcanvas-end bg-body border-0 px-0" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <button class="btn-light btn btn-sm rounded-3 ms-auto" type="button"
+                            data-bs-dismiss="offcanvas">Sluit
+                    </button>
+                </div>
+                <div class="offcanvas-body pt-0">
+<!--                    <single-card-component v-if="selectedCard" :card="selectedCard"/>-->
                 </div>
             </div>
         </div>
-
-<!--        <div class="row g-2 align-items-center mb-3">-->
-<!--            &lt;!&ndash; filter mobile &ndash;&gt;-->
-<!--            <div class="col-auto me-auto d-lg-none d-inline-block">-->
-<!--                <filter-modal>-->
-<!--                    <filter-component></filter-component>-->
-<!--                </filter-modal>-->
-<!--            </div>-->
-<!--            <div class="col-auto">-->
-<!--                <button type="button" class="btn btn-sm btn-outline-primary"-->
-<!--                        :class="{active: view === 'search'}" @click="generalStore.setView('search')"><i-->
-<!--                    class="bi bi-search me-1"></i>Zoekresultaten-->
-<!--                </button>-->
-<!--            </div>-->
-<!--            <div class="col-auto">-->
-<!--                <button type="button" class="btn btn-sm btn-outline-primary"-->
-<!--                        :class="{active: view === 'random'}" @click="generalStore.setView('random');contentStore.pickRandomSet()"><i-->
-<!--                    class="bi bi-dice-6 me-1"></i>Random-->
-<!--                </button>-->
-<!--            </div>-->
-<!--            <div class="col-auto ms-auto d-none d-md-block">-->
-<!--                <span>Sorteer op</span>-->
-<!--            </div>-->
-<!--            <div class="col-auto ms-auto ms-md-0">-->
-<!--                <select class="form-select form-select-sm" v-model="sortOption">-->
-<!--                    <option value="newOld">Datum (nieuw-oud)</option>-->
-<!--                    <option value="oldNew">Datum (oud-nieuw)</option>-->
-<!--                    <option value="shortLong">Duur (kort-lang)</option>-->
-<!--                    <option value="longShort">Duur (lang-kort)</option>-->
-<!--                </select>-->
-<!--            </div>-->
-<!--        </div>-->
-
     </main>
 </template>
 
 <script setup>
-import {useGeneralStore} from "@/stores/general.js";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
-import FilterComponent from "@/components/filterComponent.vue";
-import CardsContainer from "@/containers/CardsContainer.vue";
-import FilterModal from "@/components/filterModal.vue";
-import NavigationSide from "@/components/navigationSide.vue";
-import FilterChips from "@/components/filterChips.vue";
 import SingleCardComponent from "@/components/singleCardComponent.vue";
+import ListComponent from "@/components/ListComponent.vue";
 
-const generalStore = useGeneralStore()
 const contentStore = useContentStore()
-const {view} = storeToRefs(generalStore)
 
-const {sortOption, selectedCardId, selectedCard} = storeToRefs(contentStore)
+const {selectedCardId, selectedCard} = storeToRefs(contentStore)
 
 </script>
 

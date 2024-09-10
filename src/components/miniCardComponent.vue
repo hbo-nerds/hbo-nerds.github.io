@@ -3,7 +3,7 @@
         <div :class="card.type === 'stream' && card.free ? 'p-1 bg-warning' : ''" class="thumbnail-wrapper position-relative rounded-3 z-1"
              @click="goToCard"
              @click.middle="goToCard('middle')">
-            <img v-lazy="{ src: imgScr, loading: images['320'][`default`]}" alt="thumbnail" class="w-100 rounded-3">
+            <img :src="imgScr" alt="thumbnail" class="w-100">
             <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
                   style="--bs-bg-opacity: .75;">{{ duration }}</span>
             <span v-if="card.type === 'stream' && card.free"
@@ -17,9 +17,9 @@
             </div>
         </div>
         <div class="card-body pt-3 pb-0 px-0">
-            <h3 class="fs-6 fw-bold mb-1" type="button" @click="goToCard" @click.middle="goToCard('middle')">{{
-                    title
-                }}</h3>
+            <span class="small fw-lighter" type="button" @click="goToCard" @click.middle="goToCard('middle')">
+                {{title }}
+            </span>
         </div>
     </div>
 </template>

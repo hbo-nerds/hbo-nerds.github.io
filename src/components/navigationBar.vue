@@ -1,86 +1,123 @@
 <template>
     <nav class="bg-body py-2">
         <div class="container-fluid">
-            <div class="row g-0 g-sm-3">
-                <div class="col-3" v-if="!mobileSearch">
-                    <div class="d-flex align-items-center">
-                        <div type="button" class="d-flex align-items-center justify-content-center p-2" style="width: 40px;height: 40px"
-                             data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <div class="row align-items-center g-2">
+                <div v-if="!mobileSearch" class="col-3">
+                    <div class="d-flex gap-3 align-items-center h-100">
+                        <div aria-controls="offcanvasExample"
+                             class="d-none d-md-flex align-items-center justify-content-center p-2"
+                             data-bs-target="#offcanvasExample"
+                             data-bs-toggle="offcanvas" style="width: 40px;height: 40px"
+                             type="button">
                             <i class="bi bi-list fs-3"></i>
                         </div>
-                        <router-link to="/" class="ps-3 text-decoration-none d-flex align-items-center">
-                            <img src="../assets/img/lekkerSicko.png" alt="Logo" width="30px" height="26" class="me-1">
-                            <span class="fs-7 text-body" style="line-height: 100%">Lekker<br>Speuren</span>
+                        <router-link class="text-decoration-none d-flex align-items-center" to="/">
+                            <img alt="Logo" class="me-2" height="26" src="../assets/img/lekkerspelen_official.png"
+                                 width="30px">
                         </router-link>
                     </div>
                 </div>
-                <div class="col-auto" v-if="mobileSearch">
-                    <button @click="mobileSearch = false" type="button" class="btn rounded-pill me-3"><i class="bi bi-caret-left-square"></i></button>
-                </div>
+                <!-- center search bar -->
                 <div class="col">
-                    <div class="d-none d-sm-flex">
-                        <div class="input-group flex-nowrap" :class="{ 'focus-margin' : !focus }">
-                            <span v-if="focus" class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
+                    <!-- search desktop -->
+                    <div class="d-none d-sm-flex gap-2 align-items-center">
+                        <div :class="{ 'focus-margin' : !focus }" class="input-group flex-nowrap">
+                            <span v-if="focus"
+                                  class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
                                   style="border-color: #1c62b9"><i class="bi bi-search"></i></span>
-                            <input @focus="focus = true" @focusout="focus = false" type="search" class="form-control shadow-none"
-                                   :class="[ focus ? 'border-start-0 focus-border' : 'rounded-start-pill' ]" placeholder="Zoek"
-                                   style="background-color: #121212" v-model="search" @keydown.enter="doSearch"/>
-                            <button @click="doSearch" type="button" class="input-group-text rounded-end-pill px-4"><i class="bi bi-search"></i></button>
+                            <input v-model="search"
+                                   :class="[ focus ? 'border-start-0 focus-border' : 'rounded-start-pill' ]"
+                                   class="form-control shadow-none"
+                                   inputmode="search"
+                                   placeholder="Zoek"
+                                   style="background-color: #121212"
+                                   type="search" @focus="focus = true" @focusout="focus = false"
+                                   @keydown.enter="doSearch"/>
+                            <button class="input-group-text rounded-end-pill px-4" type="button" @click="doSearch"><i
+                                class="bi bi-search"></i></button>
                         </div>
-                        <button @click="generalStore.setView('random');contentStore.pickRandomSet()" type="button" class="ms-3 btn btn-dark rounded-pill"><i class="bi bi-dice-5"></i></button>
+                        <filter-modal :text="false"/>
+                        <button :class="{active : view === 'random' }" class="btn btn-dark rounded-circle lh-1 p-2"
+                                type="button"
+                                @click="toggleView"><i class="bi bi-dice-5"></i></button>
                     </div>
-                    <div class="d-flex d-sm-none justify-content-end">
-                        <div class="input-group flex-nowrap" v-if="mobileSearch">
-                            <span class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
-                                  style="border-color: #1c62b9"><i class="bi bi-search"></i></span>
-                            <input type="search" class="form-control shadow-none border-start-0 focus-border"
-                                   placeholder="Zoek" style="background-color: #121212" v-model="search"/>
-                            <button @click="doSearch" type="button" class="input-group-text rounded-end-pill px-4"><i class="bi bi-search"></i></button>
+                    <!-- search mobile -->
+                    <div v-if="showSearchMobile" class="d-flex d-sm-none gap-2 justify-content-end align-items-center">
+                        <div>
+                            <button class="btn btn-sm btn-dark rounded-circle lh-1 p-2" type="button"
+                                    @click="mobileSearch = false; search = ''"><i
+                                class="bi bi-chevron-left"></i></button>
                         </div>
-                        <button v-if="!mobileSearch" @click="mobileSearch = true" type="button" class="btn rounded-pill"><i class="bi bi-search"></i></button>
-                        <button @click="generalStore.setView('random');contentStore.pickRandomSet()" type="button" class="btn rounded-pill"><i class="bi bi-dice-5"></i></button>
+                        <div class="input-group input-group-sm flex-nowrap">
+                            <span class="input-group-text rounded-start-pill border-2 border-end-0 bg-transparent pe-0"
+                                  style="border-color: #1c62b9"><i class="bi bi-search"></i></span>
+                            <input ref="mobileSearchInput" v-model="search"
+                                   class="form-control shadow-none rounded-end-pill border-2 border-start-0 focus-border"
+                                   inputmode="search" placeholder="Zoek" style="background-color: #121212"
+                                   type="search" @keydown.enter="doSearch"/>
+                        </div>
                     </div>
                 </div>
-                <div class="col-auto col-sm-3 d-flex align-items-center justify-content-end" v-if="!mobileSearch">
-                    <a href="https://github.com/lekkersicko/lekker-speuren" target="_blank" title="Bekijk project op GitHub">
-                        <button type="button" class="btn rounded-pill"><i class="bi bi-github"></i></button>
-                    </a>
-                    <div class="dropdown px-2">
-                        <button
-                            class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
-                            id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown"
-                            data-bs-display="static" aria-label="Toggle theme (dark)">
-                            <i class="bi bi-moon-stars-fill"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-                            <li>
-                                <button @click="switchTheme('light')" type="button"
-                                        class="dropdown-item d-flex align-items-center"
-                                        :class="{active: generalStore.theme === 'light'}" data-bs-theme-value="light">
-                                    <i class="bi bi-sun-fill me-2 opacity-50"></i>
-                                    Light
-                                    <i v-if="generalStore.theme === 'light'" class="bi ms-auto bi-check2"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button @click="switchTheme('dark')" type="button"
-                                        class="dropdown-item d-flex align-items-center"
-                                        :class="{active: generalStore.theme === 'dark'}" data-bs-theme-value="dark">
-                                    <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
-                                    Dark
-                                    <i v-if="generalStore.theme === 'dark'" class="bi ms-auto bi-check2"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <button @click="switchTheme('auto')" type="button"
-                                        class="dropdown-item d-flex align-items-center"
-                                        :class="{active: generalStore.theme === 'auto'}" data-bs-theme-value="auto">
-                                    <i class="bi bi-circle-half me-2 opacity-50"></i>
-                                    Auto
-                                    <i v-if="generalStore.theme === 'auto'" class="bi ms-auto bi-check2"></i>
-                                </button>
-                            </li>
-                        </ul>
+                <div class="col-auto col-sm-3">
+                    <div class="d-flex gap-2 align-items-center justify-content-end">
+                        <!-- Github -->
+                        <a v-if="!showSearchMobile" href="https://github.com/lekkersicko/lekker-speuren" target="_blank"
+                           title="Bekijk project op GitHub">
+                            <button class="btn btn-sm rounded-circle lh-1 p-2" type="button"><i
+                                class="bi bi-github"></i></button>
+                        </a>
+                        <!-- theme -->
+                        <div v-if="!showSearchMobile" class="dropdown">
+                            <button
+                                id="bd-theme"
+                                aria-expanded="false" aria-label="Toggle theme (dark)"
+                                class="btn btn-sm rounded-circle lh-1 p-2" data-bs-display="static"
+                                data-bs-toggle="dropdown" type="button">
+                                <i class="bi bi-moon-stars-fill"></i>
+                            </button>
+                            <ul aria-labelledby="bd-theme-text" class="dropdown-menu dropdown-menu-end">
+                                <li>
+                                    <button :class="{active: generalStore.theme === 'light'}"
+                                            class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="light"
+                                            type="button" @click="switchTheme('light')">
+                                        <i class="bi bi-sun-fill me-2 opacity-50"></i>
+                                        Light
+                                        <i v-if="generalStore.theme === 'light'" class="bi ms-auto bi-check2"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button :class="{active: generalStore.theme === 'dark'}"
+                                            class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="dark"
+                                            type="button" @click="switchTheme('dark')">
+                                        <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
+                                        Dark
+                                        <i v-if="generalStore.theme === 'dark'" class="bi ms-auto bi-check2"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button :class="{active: generalStore.theme === 'auto'}"
+                                            class="dropdown-item d-flex align-items-center"
+                                            data-bs-theme-value="auto"
+                                            type="button" @click="switchTheme('auto')">
+                                        <i class="bi bi-circle-half me-2 opacity-50"></i>
+                                        Auto
+                                        <i v-if="generalStore.theme === 'auto'" class="bi ms-auto bi-check2"></i>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- random -->
+                        <button v-if="!mobileSearch" :class="{active : view === 'random' }"
+                                class="d-sm-none btn btn-sm btn-dark rounded-circle lh-1 p-2" type="button"
+                                @click="toggleView"><i class="bi bi-dice-5"></i></button>
+                        <!-- search -->
+                        <button v-if="!mobileSearch" id="mobile-search-btn"
+                                class="d-sm-none btn btn-sm btn-dark rounded-circle lh-1 p-2"
+                                type="button" @click="startTyping"><i class="bi bi-search"></i></button>
+                        <!-- filter -->
+                        <filter-modal :text="false"/>
                     </div>
                 </div>
             </div>
@@ -88,26 +125,29 @@
     </nav>
 
     <teleport to="body">
-        <div class="offcanvas offcanvas-start bg-body" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" class="offcanvas offcanvas-start bg-body"
+             tabindex="-1">
             <div class="offcanvas-header px-4 py-2">
-                <div ref="closeOffcanvas" type="button" class="d-flex align-items-center justify-content-center p-2" style="width: 40px;height: 40px"
-                     data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <div ref="closeOffcanvas" aria-controls="offcanvasExample"
+                     class="d-flex align-items-center justify-content-center p-2"
+                     data-bs-target="#offcanvasExample"
+                     data-bs-toggle="offcanvas" style="width: 40px;height: 40px" type="button">
                     <i class="bi bi-list fs-3"></i>
                 </div>
-                <router-link @click="closeCanvas" to="/" class="ps-3 text-decoration-none d-flex align-items-center">
-                    <img src="../assets/img/lekkerSicko.png" alt="Logo" width="30px" height="26" class="me-1">
+                <router-link class="ps-3 text-decoration-none d-flex align-items-center" to="/" @click="closeCanvas">
+                    <img alt="Logo" class="me-1" height="26" src="../assets/img/lekkerSicko.png" width="30px">
                     <span class="fs-7 text-body" style="line-height: 100%">Lekker<br>Speuren</span>
                 </router-link>
             </div>
             <div class="offcanvas-body py-3">
-                <router-link @click="closeCanvas" to="/" class="item text-decoration-none rounded-3 d-block">
+                <router-link class="item text-decoration-none rounded-3 d-block" to="/" @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-house-door fs-5 me-4"></i>
                         <i class="active bi bi-house-door-fill fs-5 me-4"></i>
                         <span class="fs-6 flex-grow-1">Home</span>
                     </div>
                 </router-link>
-                <router-link @click="closeCanvas" to="/series" class="item text-decoration-none rounded-3 d-block">
+                <router-link class="item text-decoration-none rounded-3 d-block" to="/series" @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-collection-play fs-5 me-4"></i>
                         <i class="active bi bi-collection-play-fill fs-5 me-4"></i>
@@ -115,27 +155,30 @@
                     </div>
                 </router-link>
                 <hr>
-                <router-link @click="closeCanvas" to="/you" class="item text-decoration-none rounded-3 d-block">
+                <router-link class="item text-decoration-none rounded-3 d-block" to="/you" @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <span class="fs-6 me-2">You</span>
                         <i class="bi bi-chevron-right fs-6 d-block"></i>
                     </div>
                 </router-link>
-                <router-link @click="closeCanvas" :to="{name: 'history'}" class="item text-decoration-none rounded-3 d-block">
+                <router-link :to="{name: 'history'}" class="item text-decoration-none rounded-3 d-block"
+                             @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-clock-history fs-5 me-4"></i>
                         <i class="active bi bi-clock-history fs-5 me-4"></i>
                         <span class="fs-6 flex-grow-1">Geschiedenis</span>
                     </div>
                 </router-link>
-                <router-link @click="closeCanvas" :to="{name: 'playlists'}" class="item text-decoration-none rounded-3 d-block">
+                <router-link :to="{name: 'playlists'}" class="item text-decoration-none rounded-3 d-block"
+                             @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-collection-play fs-5 me-4"></i>
                         <i class="active bi bi-collection-play-fill fs-5 me-4"></i>
                         <span class="fs-6 flex-grow-1">Afspeellijsten</span>
                     </div>
                 </router-link>
-                <router-link @click="closeCanvas" :to="{name: 'liked-items'}" class="item text-decoration-none rounded-3 d-block">
+                <router-link :to="{name: 'liked-items'}" class="item text-decoration-none rounded-3 d-block"
+                             @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-hand-thumbs-up fs-5 me-4"></i>
                         <i class="active bi bi-hand-thumbs-up-fill fs-5 me-4"></i>
@@ -143,7 +186,8 @@
                     </div>
                 </router-link>
                 <hr>
-                <router-link @click="closeCanvas" :to="{name: 'about'}" class="item text-decoration-none rounded-3 d-block">
+                <router-link :to="{name: 'about'}" class="item text-decoration-none rounded-3 d-block"
+                             @click="closeCanvas">
                     <div class="d-flex align-items-center text-body px-3 py-2">
                         <i class="bi bi-question-circle fs-5 me-4"></i>
                         <i class="active bi bi-question-circle-fill fs-5 me-4"></i>
@@ -159,23 +203,49 @@
 import router from "@/router/index.js";
 import {useGeneralStore} from "@/stores/general.js";
 import {useContentStore} from "@/stores/content.js";
-import {ref} from "vue";
+import {computed, nextTick, ref} from "vue";
 import {storeToRefs} from "pinia";
+import FilterModal from "@/components/filterModal.vue";
 
 const generalStore = useGeneralStore()
 const contentStore = useContentStore()
+const {view} = storeToRefs(generalStore)
 const {search} = storeToRefs(contentStore)
 const focus = ref(false)
 const mobileSearch = ref(false)
 const closeOffcanvas = ref(false)
+const mobileSearchInput = ref(null)
+
+/**
+ * Whether to show searchbar on mobile.
+ * @type {ComputedRef<unknown>}
+ */
+const showSearchMobile = computed(() => {
+    return !!(search.value || mobileSearch.value)
+})
+
+function toggleView() {
+    if (view.value === 'random') {
+        generalStore.setView('main')
+    } else {
+        generalStore.setView('random');
+        contentStore.pickRandomSet()
+    }
+}
 
 function switchTheme(theme) {
     generalStore.setTheme(theme)
 }
 
+async function startTyping() {
+    mobileSearch.value = true
+    await nextTick()
+    mobileSearchInput.value.focus()
+}
+
 function doSearch() {
     contentStore.filter()
-    generalStore.setView('search')
+    generalStore.setView('main')
     router.push({name: 'home'})
 }
 
@@ -190,22 +260,26 @@ function closeCanvas() {
 .focus-margin {
     margin-left: 29px;
 }
+
 .focus-border {
-    border-color: #1c62b9!important;
+    border-color: #1c62b9 !important;
 }
 
 .offcanvas-body .item {
     &:hover {
         background-color: rgba(var(--bs-tertiary-bg-rgb));
     }
+
     &.router-link-active {
         i:not(.active) {
             display: none;
         }
+
         i.active {
             display: block;
         }
     }
+
     i.active {
         display: none;
     }

@@ -10,7 +10,6 @@ $new-grid-breakpoints: (
         3xl: 1750px,
         4xl: 2075px
 );
-$offcanvas-horizontal-width: 240px;
 $font-sizes: map-merge($font-sizes, $new-font-sizes);
 $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
 
@@ -54,4 +53,5 @@ body {
 
 [data-bs-theme=dark] {
   --bs-body-bg-rgb: 15, 15, 15;
+  --bs-body-bg: #000000;
 }

@@ -1,159 +1,157 @@
 <template>
-    <h6 class="fw-bold mb-2">Verfijn resultaten</h6>
-    <div class="mb-3">
+    <div class="row g-3">
+        <!-- date -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">Upload date</h4>
+            <div class="d-flex flex-column gap-1">
+                <div v-for="(date, idx) in groupedDates" :key="idx" class="form-check">
+                    <input :id="'date-' + idx" v-model="filters.date.range" :value="date.value" class="form-check-input"
+                           type="radio" @change="contentStore.filter()" name="date-filter">
+                    <label :for="'date-' + idx" class="form-check-label text-capitalize text-nowrap">
+                        {{ date.label }} ({{ date.count }})
+                    </label>
+                </div>
+                <!-- other -->
+                <div class="form-check">
+                    <input id="checkOther" v-model="filters.date.range" class="form-check-input" type="radio"
+                           value="other">
+                    <label class="form-check-label text-nowrap" for="checkOther">
+                        Other...
+                    </label>
+                </div>
+                <div v-if="filters.date.range === 'other'" class="mt-3">
+                    <label class="form-label small" for="afterDate">Na:</label>
+                    <input id="afterDate" v-model="filters.date.after" class="form-control" type="date"
+                           @change="contentStore.filter()">
 
-        <div class="accordion accordion-flush">
-            <!-- type -->
-            <div class="accordion-item bg-transparent">
-                <h2 class="accordion-header">
-                    <button class="accordion-button bg-transparent px-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseType" aria-expanded="true" aria-controls="collapseType">
-                        <small>Type</small>
-                    </button>
-                </h2>
-                <div id="collapseType" class="accordion-collapse collapse show px-0">
-                    <div class="accordion-body px-0 pt-0">
-                        <div class="form-check" v-for="(count, type, idx) in groupedTypes" :key="idx">
-                            <input class="form-check-input" type="checkbox" :id="'type-' + type" :value="type" name="type"
-                                   @change="contentStore.filter()" v-model="filters.type">
-                            <label class="form-check-label text-capitalize" :for="'type-' + type">
-                                {{type}} ({{ count }})
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapsePlatform" aria-expanded="false" aria-controls="collapsePlatform">
-                        <small>Platform</small>
-                    </button>
-                </h2>
-                <div id="collapsePlatform" class="accordion-collapse collapse px-0">
-                    <div class="accordion-body px-0">
-                        <div class="form-check" v-for="(count, platform, idx) in groupedPlatforms" :key="idx">
-                            <input class="form-check-input" type="checkbox" :id="'platform-' + platform" :value="platform" name="platform"
-                                   @change="contentStore.filter()" v-model="filters.platform">
-                            <label class="form-check-label text-capitalize" :for="'platform-' + platform">
-                                {{platform}} ({{ count }})
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- date -->
-            <div class="accordion-item bg-transparent">
-                <h2 class="accordion-header">
-                    <button class="accordion-button bg-transparent collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseDate" aria-expanded="false" aria-controls="collapseDate">
-                        <small>Datum</small>
-                    </button>
-                </h2>
-                <div id="collapseDate" class="accordion-collapse collapse px-0">
-                    <div class="accordion-body px-0 pt-0">
-                        <div class="form-check" v-for="(count, date, idx) in groupedDates" :key="idx">
-                            <input class="form-check-input" type="radio" :id="'date-' + date" :value="date"
-                                   @change="contentStore.filter()" v-model="filters.date.range">
-                            <label class="form-check-label text-capitalize" :for="'date-' + date">
-                                {{ date }} ({{ count }})
-                            </label>
-                        </div>
-
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" id="checkOther" value="other"
-                                   v-model="filters.date.range">
-                            <label class="form-check-label" for="checkOther">
-                                Anders...
-                            </label>
-                        </div>
-                        <div v-if="filters.date.range === 'other'" class="mt-3">
-                            <label for="afterDate" class="form-label small">Na:</label>
-                            <input type="date" class="form-control" id="afterDate" @change="contentStore.filter()" v-model="filters.date.after">
-
-                            <label for="beforeDate" class="form-label small">Voor:</label>
-                            <input type="date" class="form-control" id="beforeDate" @change="contentStore.filter()" v-model="filters.date.before">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- duration -->
-            <div class="accordion-item bg-transparent">
-                <h2 class="accordion-header">
-                    <button class="accordion-button bg-transparent collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseDuration" aria-expanded="false" aria-controls="collapseDuration">
-                        <small>Duur</small>
-                    </button>
-                </h2>
-                <div id="collapseDuration" class="accordion-collapse collapse px-0">
-                    <div class="accordion-body px-0 pt-0">
-                        <div class="form-label small">In minuten</div>
-                        <div class="input-group input-group-sm">
-                            <input type="number" class="form-control" placeholder="min" @change="contentStore.filter()" v-model="filters.duration.min">
-                            <span class="input-group-text"><i class="bi bi-arrows"></i></span>
-                            <input type="number" class="form-control" placeholder="max" @change="contentStore.filter()" v-model="filters.duration.max">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- activity -->
-            <div class="accordion-item bg-transparent">
-                <h2 class="accordion-header">
-                    <button class="accordion-button bg-transparent collapsed px-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        <small>Activiteit</small>
-                    </button>
-                </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse px-0">
-                    <div class="accordion-body px-0">
-                        <input class="form-control form-control-sm mb-3" id="f_activity" placeholder="Filter activiteiten" type="search" v-model="f_term"/>
-                        <div class="form-check" v-for="(key, idx) in a_activities" :key="idx">
-                            <input class="form-check-input" type="checkbox" :id="'act-' + idx" :value="key" name="activity"
-                                   @change="contentStore.filter()" v-model="filters.activity">
-                            <label class="form-check-label small text-capitalize" :for="'act-' + idx">
-                                {{ key }} ({{ groupedActivities[key] }})
-                            </label>
-                        </div>
-                        <hr v-if="a_activities.length">
-                        <div class="overflow-y-auto" style="max-height: 200px">
-                            <div class="form-check" v-for="(key, idx) in f_activities" :key="idx">
-                                <input class="form-check-input" type="checkbox" :id="'act-' + idx" :value="key" name="activity"
-                                       @change="contentStore.filter()" v-model="filters.activity">
-                                <label class="form-check-label small text-capitalize" :for="'act-' + idx">
-                                    {{ key }} ({{ groupedActivities[key] }})
-                                </label>
-                            </div>
-                            <span v-if="!f_activities.length" class="form-check-label small text-capitalize">Geen activiteiten beschikbaar.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- algemeen -->
-            <div class="accordion-item bg-transparent">
-                <h2 class="accordion-header">
-                    <button class="accordion-button bg-transparent px-0 shadow-none" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseGeneral" aria-expanded="true" aria-controls="collapseGeneral">
-                        <small>Algemeen</small>
-                    </button>
-                </h2>
-                <div id="collapseGeneral" class="accordion-collapse collapse show px-0">
-                    <div class="accordion-body px-0">
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="VOD" role="switch" id="hide_no_vod"
-                                   @change="contentStore.filter()" v-model="filters.vodOnly">
-                            <label class="form-check-label small" for="hide_no_vod">Verberg zonder VOD</label>
-                        </div>
-                        <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="free" role="switch" id="hide_paywall"
-                                   @change="contentStore.filter()" v-model="filters.free">
-                            <label class="form-check-label small" for="hide_paywall">Verberg met paywall</label>
-                        </div>
-                    </div>
+                    <label class="form-label small" for="beforeDate">Voor:</label>
+                    <input id="beforeDate" v-model="filters.date.before" class="form-control" type="date"
+                           @change="contentStore.filter()">
                 </div>
             </div>
         </div>
-
-        <button class="btn btn-outline-primary" @click="contentStore.resetFilters">Reset filters</button>
+        <!-- type -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">Type</h4>
+            <div class="d-flex flex-column gap-1">
+                <div v-for="(count, type, idx) in groupedTypes" :key="idx" class="form-check">
+                    <input :id="'type-' + type" v-model="filters.type" :value="type" class="form-check-input"
+                           name="type"
+                           type="checkbox" @change="contentStore.filter()">
+                    <label :for="'type-' + type" class="form-check-label text-capitalize text-nowrap">
+                        {{ type }} ({{ count }})
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- platform -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">Platform</h4>
+            <div class="d-flex flex-column gap-1">
+                <div v-for="(count, platform, idx) in groupedPlatforms" :key="idx" class="form-check">
+                    <input :id="'platform-' + platform" v-model="filters.platform" :value="platform"
+                           class="form-check-input"
+                           name="platform"
+                           type="checkbox" @change="contentStore.filter()">
+                    <label :for="'platform-' + platform" class="form-check-label text-capitalize text-nowrap">
+                        {{ platform }} ({{ count }})
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- duration -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">Duration</h4>
+            <div class="d-flex flex-column gap-1">
+                <div v-for="(count, date, idx) in groupedDuration" :key="idx" class="form-check">
+                    <input :id="'date-' + date" v-model="filters.duration" :value="date" class="form-check-input"
+                           type="radio" @change="contentStore.filter()">
+                    <label :for="'date-' + date" class="form-check-label text-capitalize text-nowrap">
+                        {{ date }} ({{ count }})
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- general -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">General</h4>
+            <div class="d-flex flex-column gap-1">
+                <div class="form-check form-switch">
+                    <input id="hide_no_vod" v-model="filters.vodOnly" class="form-check-input" name="VOD"
+                           role="switch"
+                           type="checkbox" @change="contentStore.filter()">
+                    <label class="form-check-label small text-nowrap" for="hide_no_vod">Verberg zonder VOD</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input id="hide_paywall" v-model="filters.free" class="form-check-input" name="free"
+                           role="switch"
+                           type="checkbox" @change="contentStore.filter()">
+                    <label class="form-check-label small text-nowrap" for="hide_paywall">Verberg met paywall</label>
+                </div>
+            </div>
+        </div>
+        <!-- activity -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">Activity</h4>
+            <input id="f_activity" v-model="f_term"
+                   class="form-control form-control-sm mb-3" placeholder="Search activity"
+                   type="search"/>
+            <div v-for="(key, idx) in a_activities" :key="idx" class="form-check">
+                <input :id="'act-' + idx" v-model="filters.activity" :value="key" class="form-check-input"
+                       name="activity"
+                       type="checkbox" @change="contentStore.filter()">
+                <label :for="'act-' + idx" class="form-check-label small text-capitalize">
+                    {{ key }} ({{ groupedActivities[key] }})
+                </label>
+            </div>
+            <hr v-if="a_activities.length">
+            <div class="d-flex flex-column gap-1 overflow-y-auto" style="max-height: 200px">
+                <div v-for="(key, idx) in f_activities" :key="idx" class="form-check">
+                    <input :id="'act-' + idx" v-model="filters.activity" :value="key"
+                           class="form-check-input"
+                           name="activity"
+                           type="checkbox" @change="contentStore.filter()">
+                    <label :for="'act-' + idx" class="form-check-label small text-capitalize">
+                        {{ key }} ({{ groupedActivities[key] }})
+                    </label>
+                </div>
+                <span v-if="!f_activities.length" class="form-check-label small text-capitalize">Geen activiteiten beschikbaar.</span>
+            </div>
+        </div>
+        <!-- sort -->
+        <div class="col-sm">
+            <h4 class="small py-2 fw-lighter border-bottom mb-3">Sort</h4>
+            <div class="d-flex flex-column gap-1">
+                <div class="form-check">
+                    <input id="order-1" v-model="sortOption" class="form-check-input" type="radio"
+                           value="newOld">
+                    <label class="form-check-label" for="order-1">
+                        Upload date (new first)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="order-2" v-model="sortOption" class="form-check-input" type="radio"
+                           value="oldNew">
+                    <label class="form-check-label" for="order-2">
+                        Upload date (old first)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="order-3" v-model="sortOption" class="form-check-input" type="radio"
+                           value="shortLong">
+                    <label class="form-check-label" for="order-3">
+                        Duration (shortest first)
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input id="order-4" v-model="sortOption" class="form-check-input" type="radio"
+                           value="longShort">
+                    <label class="form-check-label" for="order-4">
+                        Duration (longest first)
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -163,7 +161,15 @@ import {storeToRefs} from "pinia";
 import {computed, ref} from "vue";
 
 const contentStore = useContentStore()
-const {filters, groupedActivities, groupedTypes, groupedPlatforms, groupedDates} = storeToRefs(contentStore)
+const {
+    sortOption,
+    filters,
+    groupedActivities,
+    groupedTypes,
+    groupedPlatforms,
+    groupedDates,
+    groupedDuration
+} = storeToRefs(contentStore)
 
 const f_term = ref('')
 const f_activities = computed(() => {

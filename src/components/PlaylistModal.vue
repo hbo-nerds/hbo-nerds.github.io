@@ -1,12 +1,13 @@
 <template>
-    <div class="modal fade" :id="'playlistModal-' + id" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered mx-auto">
+    <div class="modal fade" id="playlist-modal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-6 me-2">Bewaar video in...</h1>
+                <div class="modal-header border-0">
+                    <h1 class="modal-title fs-6 me-2">Save to...</h1>
                     <button ref="close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <span class="small">{{selectedCardTitle}}</span>
                     <div v-for="(i, idx) in playlists" class="py-2" :key="idx">
                         <div class="form-check">
                             <input @change="toggle($event, i.title)" name="playlist" class="form-check-input" type="checkbox"
@@ -22,11 +23,11 @@
                     <div v-else class="mt-3">
                         <form @submit.prevent="createList">
                             <div class="mb-3">
-                                <label for="newListName" class="form-label small">Naam</label>
+                                <label for="newListName" class="form-label small">Name</label>
                                 <input v-model="listName" type="text" class="form-control" id="newListName"
-                                       placeholder="Lijst titel" required>
+                                       placeholder="Enter playlist title..." required>
                             </div>
-                            <button type="submit" class="btn btn-sm btn-outline-primary rounded-pill float-end">Maak
+                            <button type="submit" class="btn btn-sm btn-outline-primary rounded-pill float-end">Create
                             </button>
                         </form>
                     </div>
@@ -40,18 +41,24 @@
 import {storeToRefs} from "pinia";
 import {useGeneralStore} from "@/stores/general.js";
 import {ref} from "vue";
+import {useContentStore} from "@/stores/content.js";
 
 const generalStore = useGeneralStore()
+const contentStore = useContentStore()
 const {playlists} = storeToRefs(generalStore)
+const {selectedCardTitle} = storeToRefs(contentStore)
 
 const props = defineProps({
-    id: {type: String, required: true}
+    id: {type: String, required: false}
 })
 
 const close = ref(null)
 const create = ref(false)
 const listName = ref('')
 
+/**
+ * Create a new playlist and add current item.
+ */
 function createList() {
     close.value.click() //hide modal
     generalStore.createPlaylist(listName.value) //create new list
@@ -59,6 +66,11 @@ function createList() {
     listName.value = '';
 }
 
+/**
+ * Toggle item in playlist.
+ * @param event
+ * @param title
+ */
 function toggle(event, title) {
     generalStore.togglePlaylistItem(title, props.id)
 }

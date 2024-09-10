@@ -1,7 +1,7 @@
 <template>
     <div class="h-100 d-flex flex-column" style="min-height: 100vh">
-        <navigation-bar></navigation-bar>
-        <main class="flex-grow-1 bg-body overflow-y-auto">
+        <navigation-bar/>
+        <main id="main-content" class="flex-grow-1 d-flex flex-column bg-body overflow-y-auto overflow-x-hidden pb-5 pb-md-0">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-auto d-none d-md-block">
@@ -15,8 +15,16 @@
                 </div>
             </div>
 
-            <footer-bar></footer-bar>
+<!--            <footer-bar class="d-none d-md-block mt-auto"></footer-bar>-->
+
+            <!-- Modal -->
+            <teleport to="body">
+                <playlist-modal :id="selectedCardId"/>
+            </teleport>
         </main>
+        <navigation-bar-mob/>
+
+
 <!--        <div v-if="showCookie" class="bg-dark-subtle fixed-bottom">-->
 <!--            <div class="container">-->
 <!--                <div class="d-flex py-3 justify-content-center align-items-center">-->
@@ -39,12 +47,16 @@ import {useContentStore} from "@/stores/content.js";
 import {useGeneralStore} from "@/stores/general.js";
 import {onBeforeMount, onMounted, ref} from "vue";
 import NavigationSide from "@/components/navigationSide.vue";
-
+import PlaylistModal from "@/components/PlaylistModal.vue";
+import {storeToRefs} from "pinia";
+import NavigationBarMob from "@/components/navigationBarMob.vue";
 
 const router = useRouter()
 const route = useRoute();
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
+
+const {selectedCardId} = storeToRefs(contentStore)
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLocaleStorage();

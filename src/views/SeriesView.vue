@@ -1,14 +1,9 @@
 <template>
     <!-- main -->
-    <main style="padding-top: 42px" class="position-relative">
+    <main>
         <div class="row mb-3">
             <div class="col">
                 <h3>Series</h3>
-                <p>Perfect voor een luie zondagmiddag binge!
-                    Ontdek onze verzameling Video on Demand (VOD) afleveringen, van epische multiplayer avonturen tot
-                    hilarische singleplayer escapades. Klik op een serie en laat je meevoeren door een wereld vol
-                    plezier, verrassingen en onvergetelijke momenten. Het beste excuus voor een ontspannen bingesessie
-                    op een luie zondagmiddag!</p>
             </div>
         </div>
         <div class="row align-items-center mb-3">
