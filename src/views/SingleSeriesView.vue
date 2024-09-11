@@ -1,11 +1,14 @@
 <template>
-    <main>
-        <h3 class="mb-1">{{ serie.title }}</h3>
-        <p v-if="serie.description">{{ serie.description }}</p>
-        <div class="row g-2">
-            <div class="col-12">{{ items.length}} resultaten</div>
-            <div class="col-6 col-md-4 col-lg-3" v-for="(card, idx) in items" :key="idx">
-                <card-component :card="card"/>
+    <main class="pt-3 pb-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="fw-bold mb-4">{{ serie.title }}</h1>
+                <p v-if="serie.description">{{ serie.description }}</p>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="(card, idx) in items" :key="idx" class="col">
+                        <card-component :card="card"/>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

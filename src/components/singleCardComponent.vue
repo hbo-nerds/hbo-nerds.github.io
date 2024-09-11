@@ -1,115 +1,122 @@
 <template>
     <transition>
-        <div :key="card.id">
-            <img :src="imgScr" alt="thumbnail" class="w-100 mb-3">
-            <h5 class="fw-bold">{{ title }}</h5>
+        <div :key="card.id" class="row g-3">
+            <div class="col-12 col-lg-6">
+                <img :src="imgScr" alt="thumbnail" class="w-100 mb-2">
+                <h5 class="fw-bold">{{ title }}</h5>
+            </div>
             <!-- description -->
-            <div class="card border-0 rounded-4 mb-3" style="background-color: rgba(255,255,255,0.1)">
-                <div class="card-body">
-                    <div class="d-flex gap-3 mb-3 small">
-                        <span>
-                            <i class="bi bi-clock me-2"></i>
-                            <span>{{ duration }}</span>
-                        </span>
-                        <span>
-                            <i class="bi bi-calendar4-range me-2"></i>
-                            <span>{{ date }}</span>
-                        </span>
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 rounded-4" style="background-color: rgba(255,255,255,0.1)">
+                    <div class="card-body">
+                        <div class="d-flex gap-3 mb-3 small">
+                            <span>
+                                <i class="bi bi-clock me-2"></i>
+                                <span>{{ duration }}</span>
+                            </span>
+                            <span>
+                                <i class="bi bi-calendar4-range me-2"></i>
+                                <span>{{ date }}</span>
+                            </span>
+                        </div>
+                        <p v-if="card.description">{{ card.description }}</p>
+                        <a
+                            :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
+                            target="_blank">Stuur een beschrijving op!</a>
                     </div>
-                    <p v-if="card.description">{{ card.description }}</p>
-                    <a
-                        :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
-                        target="_blank">Stuur een beschrijving op!</a>
                 </div>
             </div>
-
             <!-- actions -->
-            <div class="d-flex flex-wrap gap-2 mb-3">
-                <button :class="{active: isLiked}" class="btn border rounded-pill text-nowrap"
-                        type="button" @click="generalStore.toggleLikedItem(card.id)"><i
-                    :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'" class="bi me-2"></i>Like
-                </button>
-                <button :class="{active: isSeen}" class="btn border rounded-pill text-nowrap"
-                        type="button" @click="generalStore.toggleSeenItem(card.id)">
-                    <i :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-2"></i>Gezien
-                </button>
-                <button :data-bs-target="'#playlistModal-' + card.id"
-                        class="btn border rounded-pill text-nowrap"
-                        data-bs-toggle="modal" type="button">
-                    <i class="bi bi-collection-play me-2"></i>Bewaar
-                </button>
-                <button class="btn border rounded-pill text-nowrap" @click="copyLink"><i class="bi bi-copy me-2"></i>Kopieer
-                    link
-                </button>
+            <div class="col-12">
+                <div class="d-flex flex-wrap gap-2">
+                    <button :class="{active: isLiked}" class="btn border rounded-pill text-nowrap"
+                            type="button" @click="generalStore.toggleLikedItem(card.id)"><i
+                        :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'" class="bi me-2"></i>Like
+                    </button>
+                    <button :class="{active: isSeen}" class="btn border rounded-pill text-nowrap"
+                            type="button" @click="generalStore.toggleSeenItem(card.id)">
+                        <i :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-2"></i>Gezien
+                    </button>
+                    <button :data-bs-target="'#playlistModal-' + card.id"
+                            class="btn border rounded-pill text-nowrap"
+                            data-bs-toggle="modal" type="button">
+                        <i class="bi bi-collection-play me-2"></i>Bewaar
+                    </button>
+                    <button class="btn border rounded-pill text-nowrap" @click="copyLink"><i
+                        class="bi bi-copy me-2"></i>Kopieer
+                        link
+                    </button>
+                </div>
             </div>
 
             <!-- links -->
-            <div class="card border-0 rounded-4 mb-3" style="background-color: rgba(255,255,255,0.1)">
-                <div class="card-body">
-                    <div class="small fw-lighter mb-2">Bekijk op:</div>
-                    <ul class="mb-0">
-                        <li v-if="card['twitch_id']">
-                            <a :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
-                                <i class="bi bi-twitch me-2"></i>Twitch
-                            </a>
-                        </li>
-                        <li v-if="card['youtube_id']">
-                            <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
-                                <i class="bi bi-youtube me-2"></i>YouTube
-                            </a>
-                        </li>
-                        <li v-if="card['twitchtracker_id']">
-                            <a :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
-                               target="_blank">
-                                <i class="bi bi-twitch me-2"></i>TwitchTracker
-                            </a>
-                        </li>
-                        <li v-for="(extra, idx) in card['extra_urls']">
-                            <a :href="extra" target="_blank">
-                                <i class="bi bi-gift me-2"></i>Extra {{ idx + 1 }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- activities -->
-            <div class="card border-0 rounded-4 mb-3" style="background-color: rgba(255,255,255,0.1)">
-                <div class="card-body">
-                    <div class="small fw-lighter mb-2">Activiteiten/games:</div>
-                    <ul class="mb-0">
-                        <li v-for="act in card.activities">
-                            <span :title="`Zoek op '${act.title}'`"
-                                  class="text-decoration-underline text-wrap" type="button"
-                                  @click="searchActivity(act.title)">{{ act.title }}</span>
-                        </li>
-                        <template v-if="Array.isArray(card.activity)">
-                            <li v-for="act in card.activity">
-                                <span :title="`Zoek op '${act}'`"
-                                      class="text-decoration-underline text-wrap" type="button"
-                                      @click="searchActivity(act)">{{ act }}</span>
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 rounded-4 h-100" style="background-color: rgba(255,255,255,0.1)">
+                    <div class="card-body">
+                        <div class="small fw-lighter mb-2">Bekijk op:</div>
+                        <ul class="mb-0">
+                            <li v-if="card['twitch_id']">
+                                <a :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
+                                    <i class="bi bi-twitch me-2"></i>Twitch
+                                </a>
                             </li>
-                        </template>
-                        <li v-if="card.activity">
-                            <span :title="`Zoek op '${card.activity}'`"
-                                  class="text-decoration-underline text-wrap" type="button"
-                                  @click="searchActivity(card.activity)">{{ card.activity }}</span>
-                        </li>
-                    </ul>
+                            <li v-if="card['youtube_id']">
+                                <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
+                                    <i class="bi bi-youtube me-2"></i>YouTube
+                                </a>
+                            </li>
+                            <li v-if="card['twitchtracker_id']">
+                                <a :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
+                                   target="_blank">
+                                    <i class="bi bi-twitch me-2"></i>TwitchTracker
+                                </a>
+                            </li>
+                            <li v-for="(extra, idx) in card['extra_urls']">
+                                <a :href="extra" target="_blank">
+                                    <i class="bi bi-gift me-2"></i>Extra {{ idx + 1 }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
+            <!-- activities -->
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 rounded-4 h-100" style="background-color: rgba(255,255,255,0.1)">
+                    <div class="card-body">
+                        <div class="small fw-lighter mb-2">Activiteiten/games:</div>
+                        <ul class="mb-0">
+                            <li v-for="act in card.activities">
+                                <span :title="`Zoek op '${act.title}'`"
+                                      class="text-decoration-underline text-wrap" type="button"
+                                      @click="searchActivity(act.title)">{{ act.title }}</span>
+                            </li>
+                            <template v-if="Array.isArray(card.activity)">
+                                <li v-for="act in card.activity">
+                                    <span :title="`Zoek op '${act}'`"
+                                          class="text-decoration-underline text-wrap" type="button"
+                                          @click="searchActivity(act)">{{ act }}</span>
+                                </li>
+                            </template>
+                            <li v-if="card.activity">
+                                <span :title="`Zoek op '${card.activity}'`"
+                                      class="text-decoration-underline text-wrap" type="button"
+                                      @click="searchActivity(card.activity)">{{ card.activity }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <!-- tags -->
-            <div class="card border-0 mb-3" style="background-color: rgba(255,255,255,0.1)">
-                <div class="card-body">
-                    <div class="d-flex gap-3">
-                        <i class="bi bi-tag fs-5 lh-1"></i>
-                        <div class="d-flex gap-2 flex-wrap text-capitalize">
-                            <span v-if="!card.tags?.length" class="badge rounded-pill">-</span>
-                            <span v-for="tag in card.tags" class="badge rounded-pill">{{
-                                    tag
-                                }}</span>
-                        </div>
+            <div class="col-12 col-lg-6">
+                <div class="card border-0 rounded-4 h-100" style="background-color: rgba(255,255,255,0.1)">
+                    <div class="card-body">
+                        <div class="small fw-lighter mb-2">Tags:</div>
+                        <ul class="mb-0">
+                            <li v-for="tag in card.tags">
+                                <span class="text-wrap">{{ tag }}</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -118,7 +125,9 @@
             <div v-if="collectionName" class="mb-3">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                     <span class="fw-bold">Meer zoals dit</span>
-                    <button class="btn btn-sm border rounded-pill text-nowrap" @click="show_more = !show_more">Toon {{ show_more ? 'minder' : 'meer' }}</button>
+                    <button class="btn btn-sm border rounded-pill text-nowrap" @click="show_more = !show_more">Toon
+                        {{ show_more ? 'minder' : 'meer' }}
+                    </button>
                 </div>
                 <div class="row g-2">
                     <div v-for="card in collectionItems.slice(0, show_more ? collectionItems.length : 2)" class="col-6">
@@ -139,7 +148,7 @@
 
 </template>
 <script setup>
-import {computed, onMounted, onUpdated, ref} from "vue";
+import {computed, onMounted, ref} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import {useGeneralStore} from "@/stores/general.js";

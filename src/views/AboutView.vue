@@ -1,8 +1,8 @@
 <template>
     <!-- main -->
-    <main class="position-relative py-5">
+    <main class="pt-3 pb-5">
         <div class="row justify-content-center gap-3">
-            <div class="col-7">
+            <div class="col-md-7">
                 <h3>Welkom bij Lekker Speuren!</h3>
                 <p>Wij zijn een groep toegewijde communityleden van het populaire Twitch-kanaal <a href="https://www.twitch.tv/lekkerspelen" target="_blank">Lekker Spelen</a>. Gedreven door onze passie voor het kanaal en de geweldige content die ze produceren, hebben we Lekker Speuren gecreëerd - dé zoekmachine waar je alle video's, podcasts en streams van Lekker Spelen kunt vinden.</p>
                 <p>Bij Lekker Spelen draait alles om plezier, humor en het delen van geweldige momenten met de community. Of het nu gaat om epische gameplays, hilarische podcasts of live interacties met kijkers, het kanaal brengt mensen samen en laat hen genieten van de unieke sfeer die alleen Lekker Spelen kan bieden.</p>
@@ -28,9 +28,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-3">
                 <h3>Met dank aan</h3>
-                <ul class="list-group list-group-flush" style="width: fit-content">
+                <ul class="list-group list-group-flush w-100" style="width: fit-content">
                     <li class="list-group-item bg-transparent" v-for="p in people">{{ p }}</li>
                 </ul>
             </div>

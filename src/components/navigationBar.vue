@@ -12,8 +12,7 @@
                             <i class="bi bi-list fs-3"></i>
                         </div>
                         <router-link class="text-decoration-none d-flex align-items-center" to="/">
-                            <img alt="Logo" class="me-2" height="26" src="../assets/img/lekkerspelen_official.png"
-                                 width="30px">
+                            <img alt="Logo" src="../assets/img/lekkerspelen_official.png" width="30px">
                         </router-link>
                     </div>
                 </div>
@@ -36,7 +35,7 @@
                             <button class="input-group-text rounded-end-pill px-4" type="button" @click="doSearch"><i
                                 class="bi bi-search"></i></button>
                         </div>
-                        <filter-modal :text="false"/>
+                        <filter-modal v-if="!mobileSearch"/>
                         <button :class="{active : view === 'random' }" class="btn btn-dark rounded-circle lh-1 p-2"
                                 type="button"
                                 @click="toggleView"><i class="bi bi-dice-5"></i></button>
@@ -117,7 +116,7 @@
                                 class="d-sm-none btn btn-sm btn-dark rounded-circle lh-1 p-2"
                                 type="button" @click="startTyping"><i class="bi bi-search"></i></button>
                         <!-- filter -->
-                        <filter-modal :text="false"/>
+                        <filter-modal v-if="mobileSearch"/>
                     </div>
                 </div>
             </div>
@@ -135,8 +134,7 @@
                     <i class="bi bi-list fs-3"></i>
                 </div>
                 <router-link class="ps-3 text-decoration-none d-flex align-items-center" to="/" @click="closeCanvas">
-                    <img alt="Logo" class="me-1" height="26" src="../assets/img/lekkerSicko.png" width="30px">
-                    <span class="fs-7 text-body" style="line-height: 100%">Lekker<br>Speuren</span>
+                    <img alt="Logo" src="../assets/img/lekkerspelen_official.png" width="30px">
                 </router-link>
             </div>
             <div class="offcanvas-body py-3">

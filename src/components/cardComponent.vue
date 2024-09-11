@@ -1,6 +1,7 @@
 <template>
     <div class="card h-100 border-0 bg-transparent">
-        <div v-if="isSeries" class="stack border border-3 z-0"></div>
+        <div v-if="isSeries" class="stack-2 border border-3 border-dark bg-dark z-0"></div>
+        <div v-if="isSeries" class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
         <div :class="[card.type === 'podcast' ? 'border-success' : card.type === 'video' ? 'border-yt' : 'border-tw', {active: card.id === selectedCardId}]" class="img-wrapper position-relative" type="button"
              @click="goToCard"
              @click.middle="goToCard('middle')">
@@ -106,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <button ref="canvasBtn" class="d-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+        <button ref="canvasBtn" class="d-none" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
     </div>
 </template>
 
@@ -284,6 +285,13 @@ const yearAgo = computed(() => {
     height: 16px
     left: 8px
     right: 8px
+    margin-top: -1px
+.stack-2
+    position: absolute
+    top: -8px
+    height: 16px
+    left: 12px
+    right: 12px
     margin-top: -1px
 
 .img-wrapper

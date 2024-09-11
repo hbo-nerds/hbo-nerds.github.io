@@ -19,8 +19,8 @@ export const useContentStore = defineStore('content', {
         sortOption: 'newOld',
         sortOptionSeries: 'newOld',
         filters: {
-            type: [],
-            platform: [],
+            type: ['all'],
+            platform: ['all'],
             free: false,
             vodOnly: false,
             date: {
@@ -28,18 +28,23 @@ export const useContentStore = defineStore('content', {
                 after: '',
                 before: ''
             },
-            duration: {
-                min: '',
-                max: ''
-            },
+            duration: 'all',
             activity: []
         },
         selectedCardId: null
     }),
     getters: {
-        selectedCard() {
-            return this.selectedCardId ? this.getSingleCard(this.selectedCardId) : false
+        /**
+         * Return current selected card.
+         * @returns {*|boolean}
+         */
+        selectedCard(state) {
+            return state.selectedCardId ? this.getSingleCard(state.selectedCardId) : false
         },
+        /**
+         * Return title of current selected card.
+         * @returns {*|string}
+         */
         selectedCardTitle() {
             if (!this.selectedCard) return ''
             if (['podcast', 'video'].includes(this.selectedCard['type']))
@@ -53,14 +58,25 @@ export const useContentStore = defineStore('content', {
                     return this.selectedCard['titles'][0]
             }
         },
+        /**
+         * Return list of words included in search results.
+         * @returns {*}
+         */
         includedWords() {
             return this.search.split(' ').filter(w => !w.startsWith('-') && w.length).map(w => w.toLowerCase())
         },
+        /**
+         * Return list of words excluded in search results.
+         * @returns {*}
+         */
         excludedWords() {
             return this.search.split(' ').filter(w => w.startsWith('-') && w.length).map(w => w.slice(1).toLowerCase()).filter(w => w)
         },
+        /**
+         * Order the filtered search data.
+         * @returns {*}
+         */
         sortedData() {
-            console.log(this.sortOption)
             return this.filteredData.sort((a, b) => {
                 let dateA = new Date(a.date);
                 let dateB = new Date(b.date);
@@ -77,48 +93,67 @@ export const useContentStore = defineStore('content', {
                 } else return true
             })
         },
-        sortedDataSeries() {
+        /**
+         * Order the series.
+         * @returns {*}
+         */
+        sortedDataSeries(state) {
             return this.seriesFirstItems().sort((a, b) => {
                 let dateA = new Date(a.date);
                 let dateB = new Date(b.date);
 
-                if (!this.sortOptionSeries) return true
-                else if (this.sortOptionSeries === 'oldNew') {
+                if (!state.sortOptionSeries) return true
+                else if (state.sortOptionSeries === 'oldNew') {
                     return dateA - dateB
-                } else if (this.sortOptionSeries === 'newOld') {
+                } else if (state.sortOptionSeries === 'newOld') {
                     return dateB - dateA
-                } else if (this.sortOptionSeries === 'shortLong') {
+                } else if (state.sortOptionSeries === 'shortLong') {
                     return a.duration - b.duration
-                } else if (this.sortOptionSeries === 'longShort') {
+                } else if (state.sortOptionSeries === 'longShort') {
                     return b.duration - a.duration
                 } else return true
             })
         },
+        /**
+         * Group VODs by upload date.
+         * @returns {*}
+         */
         groupedTypes() {
             return this.content.filter(item => this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
+                p[0].count++
                 const type = c.type;
-                if (!p.hasOwnProperty(type)) {
-                    p[type] = 0;
+                const group = p.find(group => group.value === type)
+                if (!group) {
+                    p.push({label: type, value: type, count: 1});
+                } else {
+                    group.count++;
                 }
-                p[type]++;
                 return p;
-            }, {});
+            }, [{label: 'All', value: 'all', count: 0}]);
         },
+        /**
+         * Group VODs by platform.
+         * @returns {*}
+         */
         groupedPlatforms() {
             return this.content.filter(item => this.f_type(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item) && this.f_activity(item)).reduce((p, c) => {
                 // Making this dynamic would require a change in the JSON to give the platform property a unique prefix/suffix.
                 // Currently _id is also used by twitchtracker_id.
                 // Alternatively it could be put inside a platforms array.
                 // E.g. platforms: [{ name: 'twitch', id: '1234' }, { name: 'youtube', id: '5678' }]
+                p[0].count++
                 for (const platform of ['twitch', 'youtube']) {
-                    if (!c.hasOwnProperty(platform + '_id')) continue
-                    if (!p.hasOwnProperty(platform)) {
-                        p[platform] = 0;
+                    if (!c.hasOwnProperty(platform + '_id')) continue;
+
+                    const group = p.find(group => group.value === platform)
+                    if (!group) {
+                        p.push({label: platform, value: platform, count: 1});
+                    } else {
+                        group.count++;
                     }
-                    p[platform]++;
                 }
                 return p;
-            }, {});
+            }, [{label: 'All', value: 'all', count: 0}]);
         },
         /**
          * Group VODs by upload date.
@@ -135,9 +170,7 @@ export const useContentStore = defineStore('content', {
                 {label: 'This week', value: 1, count: 0},
                 {label: 'This month', value: 4, count: 0},
                 {label: 'This year', value: 52, count: 0},
-            ]
-        )
-
+            ])
         },
         /**
          * Group VODs by duration.
@@ -145,14 +178,23 @@ export const useContentStore = defineStore('content', {
          */
         groupedDuration() {
             return this.content.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_activity(item)).reduce((p, c) => {
-                p['All']++
-                if (c.duration / 60 < 20) p['Under 20 minutes']++
-                if (c.duration / 60 < 60) p['Under 1 hour']++
-                if (c.duration / 60 < 120) p['Under 2 hours']++
-                if (c.duration / 60 > 120) p['Over 2 hours']++
+                p[0].count++
+                if (c.duration / 60 < 20) p[1].count++
+                if (c.duration / 60 < 60) p[2].count++
+                if (c.duration / 60 < 120) p[3].count++
+                if (c.duration / 60 > 120) p[4].count++
                 return p;
-            }, {'All': 0, 'Under 20 minutes': 0, 'Under 1 hour': 0, 'Under 2 hours': 0, 'Over 2 hours': 0});
+            }, [{label: 'All', value: 'all', count: 0},
+                {label: 'Under 20 minutes', value: 20, count: 0},
+                {label: 'Under 1 hour', value: 60, count: 0},
+                {label: 'Under 2 hours', value: 120, count: 0},
+                {label: 'Over 2 hours', value: 'over120', count: 0}
+            ]);
         },
+        /**
+         * Group VODs by activity.
+         * @returns {*}
+         */
         groupedActivities() {
             return this.content.filter(item => this.f_type(item) && this.f_platform(item) && this.f_paywall(item) && this.f_vod(item) && this.f_date(item) && this.f_duration(item)).reduce((p, c) => {
                 const act = c['activity'] || c['activities'];
@@ -178,6 +220,10 @@ export const useContentStore = defineStore('content', {
                 }
             }, {});
         },
+        /**
+         * Return array containing user liked items.
+         * @returns {*[]}
+         */
         likedContent() {
             const s = useGeneralStore()
             let res = []
@@ -187,6 +233,10 @@ export const useContentStore = defineStore('content', {
             })
             return res
         },
+        /**
+         * Return array containing user last visit items.
+         * @returns {*[]}
+         */
         historyContent() {
             const s = useGeneralStore()
             let res = []
@@ -243,7 +293,7 @@ export const useContentStore = defineStore('content', {
             )
         },
         /**
-         * Main filter function
+         * Main filter function.
          */
         filter() {
             console.log('start filtering...')
@@ -314,17 +364,18 @@ export const useContentStore = defineStore('content', {
             console.log('done filtering.')
         },
         /**
-         * Filter items by type
+         * Filter items by type.
          * @param item
          * @param advancedSearchType
          * @returns {boolean|*}
          */
         f_type(item, advancedSearchType = '') {
+            if (this.filters.type.includes('all')) return true
             if (!this.filters.type.length && !advancedSearchType) return true
             return advancedSearchType ? item.type.toLowerCase().includes(advancedSearchType.toLowerCase()) : this.filters.type.includes(item.type)
         },
         /**
-         * Filter item by title
+         * Filter item by title.
          * @param item
          * @param advancedSearchTitle
          * @returns {boolean|*|boolean}
@@ -342,15 +393,17 @@ export const useContentStore = defineStore('content', {
             return this.normalizeInput(item['description']).includes(s)
         },
         /**
-         * Filter items by platform
+         * Filter items by platform.
          * @param item
          * @returns {boolean|*}
          */
         f_platform(item) {
-            return !this.filters.platform.length || this.filters.platform.some(platform => item[platform + "_id"]);
+            if (this.filters.platform.includes('all')) return true
+            if (!this.filters.type.length) return true
+            return this.filters.platform.some(platform => item[platform + "_id"]);
         },
         /**
-         * Filter item by paywall
+         * Filter item by paywall.
          * @param item
          * @returns {boolean}
          */
@@ -359,14 +412,14 @@ export const useContentStore = defineStore('content', {
             return item.type !== 'stream' || item.free
         },
         /**
-         * Filter item by VOD availability
+         * Filter item by VOD availability.
          */
         f_vod(item) {
             if (!this.filters.vodOnly) return true
             return item['twitch_id'] || item['youtube_id']
         },
         /**
-         * Filter items by date
+         * Filter items by date.
          * @param item
          * @returns {boolean}
          */
@@ -382,7 +435,7 @@ export const useContentStore = defineStore('content', {
             }
         },
         /**
-         * Filter item by upload year
+         * Filter item by upload year.
          * @param item
          * @param year
          * @returns {boolean}
@@ -393,16 +446,17 @@ export const useContentStore = defineStore('content', {
             return yearToCheck === Number(year)
         },
         /**
-         * Filter items by duration
+         * Filter items by duration.
          * @param item
          * @returns {boolean}
          */
         f_duration(item) {
-            return (!this.filters.duration.min || (this.filters.duration.min * 60) < item.duration) &&
-                (!this.filters.duration.max || (this.filters.duration.max * 60) > item.duration)
+            if (this.filters.duration === 'all') return true
+            if (this.filters.duration === 'over120') return (item.duration / 60) > 120
+            return ((item.duration / 60) < this.filters.duration)
         },
         /**
-         * Filter items by activity
+         * Filter items by activity.
          * @param item
          * @param advancedSearch
          * @returns {*|boolean}
@@ -431,7 +485,7 @@ export const useContentStore = defineStore('content', {
             return item['tags'] ? item['tags'].some(tag => this.normalizeInput(tag).includes(s)) : false
         },
         /**
-         * Check if item's date is in range
+         * Check if item's date is in range.
          * @param item
          * @param wks
          * @returns {boolean}
@@ -529,8 +583,8 @@ export const useContentStore = defineStore('content', {
          */
         resetFilters() {
             this.filters = {
-                type: [],
-                platform: [],
+                type: ['all'],
+                platform: ['all'],
                 free: false,
                 vodOnly: false,
                 date: {
@@ -538,10 +592,7 @@ export const useContentStore = defineStore('content', {
                     after: '',
                     before: ''
                 },
-                duration: {
-                    min: '',
-                    max: ''
-                },
+                duration: 'all',
                 activity: []
             }
             this.filter()
@@ -563,18 +614,22 @@ export const useContentStore = defineStore('content', {
                 return this.content.find(item => item.collection === col.id)
             }).filter(item => item)
         },
+        /**
+         * Set filter from url query.
+         * @param urlParams
+         */
         setFilterFromQuery(urlParams) {
             if (urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
             if (urlParams.getAll('platform')) this.filters.platform = urlParams.getAll('platform')
             if (urlParams.get('free')) this.filters.free = urlParams.get('free')
             if (urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
-            if (urlParams.get('date_weeks')) this.filters.date.range = urlParams.get('date_weeks')
-            if (urlParams.get('date_after')) this.filters.date.after = urlParams.get('date_after')
-            if (urlParams.get('date_before')) this.filters.date.before = urlParams.get('date_before')
-            if (urlParams.get('duration_min')) this.filters.duration.min = urlParams.get('duration_min')
-            if (urlParams.get('duration_max')) this.filters.duration.max = urlParams.get('duration_max')
+            if (urlParams.get('date_weeks')) this.filters.date.range = parseInt(urlParams.get('date_weeks'))
+            if (urlParams.get('duration')) this.filters.duration = urlParams.get('duration')
             if (urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
         },
+        /**
+         * Update url query after filter change.
+         */
         updateUrl() {
             const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
             const platforms = this.filters.platform.length ? this.filters.platform.map(t => ['platform', t]) : []
@@ -584,16 +639,11 @@ export const useContentStore = defineStore('content', {
                 search.append('free', this.filters.free)
             if (this.filters.vodOnly)
                 search.append('vodOnly', this.filters.vodOnly)
-            if (this.filters.date.range !== 'alle')
+            if (this.filters.date.range !== 'all')
                 search.append('date_weeks', this.filters.date.range)
-            if (this.filters.date.after)
-                search.append('date_after', this.filters.date.after)
-            if (this.filters.date.before)
-                search.append('date_before', this.filters.date.before)
-            if (this.filters.duration.min)
-                search.append('duration_min', this.filters.duration.min)
-            if (this.filters.duration.max)
-                search.append('duration_max', this.filters.duration.max)
+            if (this.filters.duration !== 'all')
+                search.append('duration', this.filters.duration)
+
             if (search.toString().length)
                 router.replace({query: {filter: search.toString()}}).then(r => {
                 })

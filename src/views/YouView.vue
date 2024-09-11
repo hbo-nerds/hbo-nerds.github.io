@@ -1,45 +1,48 @@
 <template>
     <!-- main -->
-    <main style="padding-top: 42px" class="position-relative">
-        <div class="row justify-content-center">
-            <div class="col col-xl-10">
-                <div class="you-block mb-5">
-                    <div class="you-block-title d-flex align-items-center mb-3">
-                        <h2 class="fs-5 fw-bold m-0">Geschiedenis</h2>
-                        <router-link :to="{name: 'history'}" class="ms-auto">
-                            <button type="button" class="btn btn-sm btn-dark rounded-pill">Toon alles</button>
-                        </router-link>
-                    </div>
-                    <div class="you-block-content row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-3xl-5 row-cols-4xl-6 gx-1 gy-3 mb-3">
-                        <div class="col" v-for="item in historyContent.slice(0, itemsToShow)">
-                            <card-component :card="item"/>
-                        </div>
+    <main class="pt-3 pb-5">
+        <h1 class="fw-bold mb-4">You</h1>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold mb-0">History</h2>
+                    <router-link :to="{name: 'history'}" class="ms-auto">
+                        <button class="btn border rounded-pill" type="button">Toon alles</button>
+                    </router-link>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="item in historyContent.slice(0, itemsToShow)" class="col">
+                        <card-component :card="item"/>
                     </div>
                 </div>
-                <div class="you-block">
-                    <div class="you-block-title d-flex align-items-center mb-3">
-                        <h2 class="fs-5 fw-bold m-0">Afspeellijsten</h2>
-                        <router-link :to="{name: 'playlists'}" class="ms-auto">
-                            <button type="button" class="btn btn-sm btn-dark rounded-pill">Toon alles</button>
-                        </router-link>
-                    </div>
-                    <div class="you-block-content row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-3xl-5 row-cols-4xl-6 gx-1 gy-3 mb-3">
-                        <div class="col" v-for="playlist in playlists.slice(0, itemsToShow)">
-                            <playlist-component :playlist="playlist"/>
-                        </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold m-0">Playlists</h2>
+                    <router-link :to="{name: 'playlists'}" class="ms-auto">
+                        <button class="btn border rounded-pill" type="button">Toon alles</button>
+                    </router-link>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="playlist in playlists.slice(0, itemsToShow)" class="col">
+                        <playlist-component :playlist="playlist"/>
                     </div>
                 </div>
-                <div class="you-block mb-5">
-                    <div class="you-block-title d-flex align-items-center mb-3">
-                        <h2 class="fs-5 fw-bold m-0">Liked</h2>
-                        <router-link :to="{name: 'liked-items'}" class="ms-auto">
-                            <button type="button" class="btn btn-sm btn-dark rounded-pill">Toon alles</button>
-                        </router-link>
-                    </div>
-                    <div class="you-block-content row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-3xl-5 row-cols-4xl-6 gx-1 gy-3 mb-3">
-                        <div class="col" v-for="item in likedContent.slice(0, itemsToShow)">
-                            <card-component :card="item"/>
-                        </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold m-0">Liked</h2>
+                    <router-link :to="{name: 'liked-items'}" class="ms-auto">
+                        <button class="btn border rounded-pill" type="button">Toon alles</button>
+                    </router-link>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="item in likedContent.slice(0, itemsToShow)" class="col">
+                        <card-component :card="item"/>
                     </div>
                 </div>
             </div>
@@ -67,12 +70,12 @@ const CardComponent = defineAsyncComponent(() =>
 
 function setItems() {
     const w = window.innerWidth
-    if (w < 576) itemsToShow.value = 2
-    else if (w < 768) itemsToShow.value = 3
-    else if (w < 992) itemsToShow.value = 4
-    else if (w < 1200) itemsToShow.value = 5
-    else if (w < 1400) itemsToShow.value = 5
-    else if (w < 1750) itemsToShow.value = 5
+    if (w < 576) itemsToShow.value = 1
+    else if (w < 768) itemsToShow.value = 2
+    else if (w < 992) itemsToShow.value = 3
+    else if (w < 1200) itemsToShow.value = 4
+    else if (w < 1750) itemsToShow.value = 4
+    else if (w < 2075) itemsToShow.value = 5
     else itemsToShow.value = 6
 }
 

@@ -1,23 +1,12 @@
 <template>
     <!-- main -->
-    <main>
-        <div class="row mb-3">
-            <div class="col">
-                <h3>Series</h3>
+    <main class="pt-3 pb-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="fw-bold mb-4">Series</h1>
+                <series-container/>
             </div>
         </div>
-        <div class="row align-items-center mb-3">
-            <div class="col-auto ms-auto d-none d-md-block">
-                <span>Sorteer op</span>
-            </div>
-            <div class="col-auto ms-auto ms-md-0">
-                <select class="form-select form-select-sm" v-model="sortOptionSeries">
-                    <option value="newOld">Datum (nieuw-oud)</option>
-                    <option value="oldNew">Datum (oud-nieuw)</option>
-                </select>
-            </div>
-        </div>
-        <series-container></series-container>
     </main>
 </template>
 

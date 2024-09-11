@@ -1,6 +1,7 @@
 <template>
-    <div class="scrolling-component pb-5" ref="scrollComponent">
-        <div v-if="view === 'main'" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+    <div ref="scrollComponent" class="scrolling-component pb-5">
+        <div v-if="view === 'main'"
+             class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
             <div v-for="(card, index) in cards" :key="index" class="col">
                 <card-component :card="card"/>
             </div>
@@ -8,7 +9,8 @@
         <div v-else>
             <div class="d-flex flex-wrap gap-3 align-items-center mb-3">
                 <button class="btn btn-dark rounded-pill d-inline-block" type="button"
-                        @click="contentStore.pickRandomSet()"><i class="bi bi-dice-5 me-2"></i>Geef mij wat anders</button>
+                        @click="contentStore.pickRandomSet()"><i class="bi bi-dice-5 me-2"></i>Geef mij wat anders
+                </button>
                 <span class="d-inline-flex gap-2">
                     <span class="badge rounded-pill text-bg-warning">Let op!</span>
                     <span class="fw-lighter small">De randomizer maakt gebruik van de huidige filters.</span>
@@ -24,16 +26,19 @@
 </template>
 
 <script setup>
-import CardComponent from "@/components/cardComponent.vue";
-import {ref, watch} from "vue";
-import {useContentStore} from "@/stores/content.js";
+import {defineAsyncComponent, ref, watch} from "vue";
 import {storeToRefs} from "pinia";
 import {useInfiniteScroll} from "@vueuse/core";
+import {useContentStore} from "@/stores/content.js";
 import {useGeneralStore} from "@/stores/general.js";
+
+const CardComponent = defineAsyncComponent(() =>
+    import("@/components/cardComponent.vue")
+)
 
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
-const {sortedData, randomData, selectedCardId} = storeToRefs(contentStore)
+const {sortedData, randomData} = storeToRefs(contentStore)
 const {view} = storeToRefs(generalStore)
 
 const cards = ref([])
@@ -45,7 +50,7 @@ useInfiniteScroll(
     () => {
         loadMoreCards()
     },
-    { distance: 10}
+    {distance: 10}
 )
 
 const loadMoreCards = () => {
@@ -66,10 +71,8 @@ function initialize() {
 watch(() => sortedData.value, () => {
     console.log('change!');
     initialize()
-}, { deep: true })
+}, {deep: true})
+
 </script>
 
-
-<style scoped>
-
-</style>
+<style scoped></style>
