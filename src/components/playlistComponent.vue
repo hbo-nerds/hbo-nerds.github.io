@@ -106,7 +106,7 @@ function goToCard(type = 'left') {
     top: -4px
     height: 16px
     left: 8px
-    right: 8pxs
+    right: 8px
     margin-top: -1px
 .stack-2
     position: absolute
