@@ -5,7 +5,11 @@ import SingleItemView from "@/views/SingleItemView.vue";
 import SingleSeriesView from "@/views/SingleSeriesView.vue";
 import YouView from "@/views/YouView.vue";
 import SinglePlaylistView from "@/views/SinglePlaylistView.vue";
+import YouPlaylists from "@/views/YouPlaylists.vue";
 import ToolView from "@/views/ToolView.vue";
+import YouHistory from "@/views/YouHistory.vue";
+import YouLiked from "@/views/YouLiked.vue";
+import AboutView from "@/views/AboutView.vue";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -14,6 +18,11 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/over',
+      name: 'about',
+      component: AboutView
     },
     {
       path: '/series',
@@ -26,7 +35,10 @@ const router = createRouter({
       path: '/you',
       children: [
         { path: '', name: 'you', component: YouView},
-        { path: 'playlist/:title', name: 'single-playlist', component: SinglePlaylistView},
+        { path: 'history', name: 'history', component: YouHistory},
+        { path: 'playlists', name: 'playlists', component: YouPlaylists},
+        { path: 'playlists/:title', name: 'single-playlist', component: SinglePlaylistView},
+        { path: 'liked-items', name: 'liked-items', component: YouLiked},
       ]
     },
     {
@@ -40,7 +52,14 @@ const router = createRouter({
       component: ToolView
     },
     { path: "/:pathMatch(.*)*", redirect: '/' }
-  ]
+  ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
 })
 
 export default router

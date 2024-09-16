@@ -15,10 +15,13 @@ $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
 
 @import "bootstrap/scss/bootstrap";
 
+html :not(.hide-scrollbar) {
+  scrollbar-color: #aaa transparent;
+}
+
 body {
   height: 100vh;
   font-family: 'Inter', sans-serif;
-  background-color: #fff;
   overflow: hidden;
 }
 
@@ -45,4 +48,9 @@ body {
 }
 .bg-tw {
   background-color: #6441A5 !important;
+}
+
+[data-bs-theme=dark] {
+  --bs-body-bg-rgb: 15, 15, 15;
+  --bs-body-bg: #000000;
 }
