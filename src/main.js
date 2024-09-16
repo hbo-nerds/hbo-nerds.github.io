@@ -1,7 +1,6 @@
 import vueDebounce from 'vue-debounce'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import VueLazyLoad from 'vue3-lazyload'
 import VueGtag from "vue-gtag";
 
 import App from './App.vue'
@@ -12,7 +11,6 @@ import "./scss/styles.scss"
 
 const app = createApp(App)
 
-app.use(VueLazyLoad)
 app.use(VueGtag, {
     config: {id: import.meta.env.VITE_GA_MEASUREMENT_ID}
 }, router)

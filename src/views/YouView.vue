@@ -1,76 +1,59 @@
 <template>
-    <div class="container-fluid py-4">
-        <div class="row g-3 justify-content-center">
-            <!-- main -->
-            <div class="col-12 col-lg-10">
-                <div class="accordion accordion-flush">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseOne">
-                                <i class="bi bi-clock-history me-3"></i>Geschiedenis
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body px-0">
-                                <p v-if="!historyContent.length">Bezochte items zullen hier te vinden zijn.</p>
-                                <div v-else class="row g-2">
-                                    <div class="col-6 col-md-3 col-xl-2" v-for="item in historyContent">
-                                        <card-component :card="item"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseTwo">
-                                <i class="bi bi-hand-thumbs-up me-3"></i>Liked videos<span
-                                class="ms-2 small fw-normal">({{ likedContent.length }})</span>
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
-                            <div class="accordion-body px-0">
-                                <div class="row g-2">
-                                    <div class="col-6 col-md-3 col-xl-2" v-for="item in likedContent">
-                                        <card-component :card="item"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true"
-                                    aria-controls="panelsStayOpen-collapseThree">
-                                <i class="bi bi-list-ul me-3"></i>Afspeellijsten
-                            </button>
-                        </h2>
-                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse show">
-                            <div class="accordion-body px-0">
-                                <p v-if="!playlists.length">Jouw gemaakte afspeellijsten zullen hier te vinden zijn.</p>
-                                <div v-else class="row g-2">
-                                    <div class="col-6 col-md-3 col-xl-2" v-for="playlist in playlists">
-                                        <playlist-component :playlist="playlist"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <!-- main -->
+    <main class="pt-3 pb-5">
+        <h1 class="fw-bold mb-4">You</h1>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold mb-0">History</h2>
+                    <router-link :to="{name: 'history'}" class="ms-auto">
+                        <button class="btn border rounded-pill" type="button">Toon alles</button>
+                    </router-link>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="item in historyContent.slice(0, itemsToShow)" class="col">
+                        <card-component :card="item"/>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold m-0">Playlists</h2>
+                    <router-link :to="{name: 'playlists'}" class="ms-auto">
+                        <button class="btn border rounded-pill" type="button">Toon alles</button>
+                    </router-link>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="playlist in playlists.slice(0, itemsToShow)" class="col">
+                        <playlist-component :playlist="playlist"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex align-items-center mb-3">
+                    <h2 class="fs-4 fw-bold m-0">Liked</h2>
+                    <router-link :to="{name: 'liked-items'}" class="ms-auto">
+                        <button class="btn border rounded-pill" type="button">Toon alles</button>
+                    </router-link>
+                </div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4">
+                    <div v-for="item in likedContent.slice(0, itemsToShow)" class="col">
+                        <card-component :card="item"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </template>
 
 <script setup>
 import {storeToRefs} from "pinia";
 import {useContentStore} from "@/stores/content.js";
-import {defineAsyncComponent} from "vue";
+import {defineAsyncComponent, onMounted, ref} from "vue";
 import {useGeneralStore} from "@/stores/general.js";
 import PlaylistComponent from "@/components/playlistComponent.vue";
 
@@ -79,7 +62,27 @@ const generalStore = useGeneralStore()
 const {likedContent, historyContent} = storeToRefs(contentStore)
 const {playlists} = storeToRefs(generalStore)
 
+const itemsToShow = ref(6)
+
 const CardComponent = defineAsyncComponent(() =>
     import("@/components/cardComponent.vue")
 )
+
+function setItems() {
+    const w = window.innerWidth
+    if (w < 576) itemsToShow.value = 1
+    else if (w < 768) itemsToShow.value = 2
+    else if (w < 992) itemsToShow.value = 3
+    else if (w < 1200) itemsToShow.value = 4
+    else if (w < 1750) itemsToShow.value = 4
+    else if (w < 2075) itemsToShow.value = 5
+    else itemsToShow.value = 6
+}
+
+onMounted(() => {
+    setItems()
+    window.addEventListener("resize", (event) => {
+        setItems()
+    });
+})
 </script>
