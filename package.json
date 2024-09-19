@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'"
+    "prettier:check": "prettier --check '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'",
+    "prettier:format": "prettier --write '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
