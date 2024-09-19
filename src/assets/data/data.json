@@ -12856,60 +12856,61 @@
             "collection": 18,
             "activity": "Resident Evil 7"
         },
-        {
-            "id": "b42e",
-            "type": "stream",
-            "date": "2017-05-17",
-            "duration": 18960,
-            "youtube_id": "P9GgFvOx_Ec",
-            "titles": [
-                "Afterparty with the boyz 4 life"
-            ],
-            "activities": [
-                {
-                    "title": "Variety",
-                    "duration": 2460
-                },
-                {
-                    "title": "LocoRoco",
-                    "duration": 2400
-                },
-                {
-                    "title": "Lethal League",
-                    "duration": 1200
-                },
-                {
-                    "title": "Mortal Kombat X",
-                    "duration": 1200
-                },
-                {
-                    "title": "Mario Kart 8",
-                    "duration": 2400
-                },
-                {
-                    "title": "Shovel Knight: Specter of Torment",
-                    "duration": 600
-                },
-                {
-                    "title": "Tetris",
-                    "duration": 4800
-                },
-                {
-                    "title": "Rocket League",
-                    "duration": 1800
-                },
-                {
-                    "title": "EA Sports UFC 2",
-                    "duration": 2100
-                }
-            ],
-            "twitchtracker_id": "25299842016",
-            "tags": [
-                "main"
-            ],
-            "time_start": "19:18:00",
-            "time_end": "00:35:00"
-        },
+      {
+        "id": "b42e",
+        "type": "stream",
+        "date": "2017-05-17",
+        "description": "Marathon Stream 450 subs",
+        "duration": 18960,
+        "youtube_id": "P9GgFvOx_Ec",
+        "titles": [
+          "Afterparty with the boyz 4 life"
+        ],
+        "activities": [
+          {
+            "title": "Variety",
+            "duration": 2460
+          },
+          {
+            "title": "LocoRoco",
+            "duration": 2400
+          },
+          {
+            "title": "Lethal League",
+            "duration": 1200
+          },
+          {
+            "title": "Mortal Kombat X",
+            "duration": 1200
+          },
+          {
+            "title": "Mario Kart 8",
+            "duration": 2400
+          },
+          {
+            "title": "Shovel Knight: Specter of Torment",
+            "duration": 600
+          },
+          {
+            "title": "Tetris",
+            "duration": 4800
+          },
+          {
+            "title": "Rocket League",
+            "duration": 1800
+          },
+          {
+            "title": "EA Sports UFC 2",
+            "duration": 2100
+          }
+        ],
+        "twitchtracker_id": "25299842016",
+        "tags": [
+          "main"
+        ],
+        "time_start": "19:18:00",
+        "time_end": "00:35:00"
+      },
         {
             "id": "5015",
             "type": "video",
@@ -24329,29 +24330,30 @@
             "time_start": "21:34:00",
             "time_end": "23:45:00"
         },
-        {
-            "id": "1a8b",
-            "type": "stream",
-            "date": "2018-09-03",
-            "duration": 9840,
-            "youtube_id": "YVWo-KXL0po",
-            "titles": [
-                "Werken in een ziekenhuis"
-            ],
-            "activities": [
-                {
-                    "title": "Two Point Hospital",
-                    "duration": 9840
-                }
-            ],
-            "twitchtracker_id": "30206458512",
-            "twitch_id": "307109484",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:20:00",
-            "time_end": "23:05:00"
-        },
+      {
+        "id": "1a8b",
+        "type": "stream",
+        "date": "2018-09-03",
+        "description": "De mannen gaan bijna Two Point Hospital spelen, maar komen er net op tijd achter dat ze daar eigenlijk geen zin in hebben en vullen de stream dan maar met het bekijken van filmpjes van aapjes en donkere grotten.",
+        "duration": 9840,
+        "youtube_id": "YVWo-KXL0po",
+        "titles": [
+          "Werken in een ziekenhuis"
+        ],
+        "activities": [
+          {
+            "title": "Two Point Hospital",
+            "duration": 9840
+          }
+        ],
+        "twitchtracker_id": "30206458512",
+        "twitch_id": "307109484",
+        "tags": [
+          "main"
+        ],
+        "time_start": "20:20:00",
+        "time_end": "23:05:00"
+      },
         {
             "id": "34cc",
             "type": "video",
@@ -24851,33 +24853,34 @@
             "time_start": "20:40:00",
             "time_end": "22:45:00"
         },
-        {
-            "id": "9f30",
-            "type": "stream",
-            "date": "2018-10-04",
-            "duration": 13920,
-            "youtube_id": "peXuS0Byvho",
-            "titles": [
-                "Eerste 3 bazen in Dark Souls verslaan - Timons Strafstream (Poging 2)"
-            ],
-            "activities": [
-                {
-                    "title": "Dark Souls",
-                    "duration": 10620
-                },
-                {
-                    "title": "Shadow of the Tomb Raider",
-                    "duration": 3300
-                }
-            ],
-            "twitchtracker_id": "30634163760",
-            "twitch_id": "342462761",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:22:00",
-            "time_end": "00:15:00"
-        },
+      {
+        "id": "9f30",
+        "type": "stream",
+        "date": "2018-10-04",
+        "description": "timpie de main male speelt dark souls tot hij de eerste 3 bazen verslagen heeft (DEEL 1) dit is een straf stream nadat peter hem verslagen heeft in een portal speedrun",
+        "duration": 13920,
+        "youtube_id": "peXuS0Byvho",
+        "titles": [
+          "Eerste 3 bazen in Dark Souls verslaan - Timons Strafstream (Poging 2)"
+        ],
+        "activities": [
+          {
+            "title": "Dark Souls",
+            "duration": 10620
+          },
+          {
+            "title": "Shadow of the Tomb Raider",
+            "duration": 3300
+          }
+        ],
+        "twitchtracker_id": "30634163760",
+        "twitch_id": "342462761",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "20:22:00",
+        "time_end": "00:15:00"
+      },
         {
             "id": "9e3e",
             "type": "podcast",
@@ -34933,29 +34936,31 @@
             "youtube_id": "FJaXidkyZj0",
             "activity": "Rocket Arena"
         },
-        {
-            "id": "f3b3",
-            "type": "stream",
-            "date": "2020-07-22",
-            "duration": 6420,
-            "youtube_id": "uyDPNSfAl1w",
-            "titles": [
-                "Ghost of Tsushima (op zijn moeilijkst)"
-            ],
-            "activities": [
-                {
-                    "title": "Ghost of Tsushima",
-                    "duration": 6420
-                }
-            ],
-            "twitchtracker_id": "118460722",
-            "twitch_id": "692602119",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:17:00",
-            "time_end": "22:05:00"
-        },
+      {
+        "id": "f3b3",
+        "type": "stream",
+        "date": "2020-07-22",
+        "description": "Timon is aan het roer. Ze spelen de intro missie en de eerste Yuna missie in de open world. Peter bespot Timon's hooikoorts, maar geeft chat dan de schuld.  Timon voelt de game hard en wil een honorabele samoerai worden. Peter begint het spel ook te voelen.  Ze proberen meerdere malen te stunten met paarden.  Ze zijn nog steeds geen scan-mannen en Timon haat het menu met alle upgrades van vaardigheden.",
+        "duration": 6420,
+        "youtube_id": "uyDPNSfAl1w",
+        "titles": [
+          "Ghost of Tsushima (op zijn moeilijkst)"
+        ],
+        "activities": [
+          {
+            "title": "Ghost of Tsushima",
+            "duration": 6420
+          }
+        ],
+        "twitchtracker_id": "118460722",
+        "twitch_id": "692602119",
+        "tags": [
+          "main",
+          "casual"
+        ],
+        "time_start": "20:17:00",
+        "time_end": "22:05:00"
+      },
         {
             "id": "a6c4",
             "type": "stream",
@@ -50102,25 +50107,26 @@
             "collection": 20,
             "type": "stream"
         },
-        {
-            "date": "2024-05-06",
-            "time_start": "20:38:09",
-            "time_end": "00:14:42",
-            "titles": [
-                "Er kan er maar één zijn."
-            ],
-            "activities": [
-                {
-                    "title": "Murder House",
-                    "duration": 10000
-                }
-            ],
-            "duration": 12993,
-            "twitch_id": "2139170682",
-            "youtube_id": "1N_-anfSWjM",
-            "id": "7e2c",
-            "type": "stream"
-        },
+      {
+        "date": "2024-05-06",
+        "description": "Peter speelt Murder House in zijn eentje. hij kloot een uur met een piano die niet werkt en speelt het spel helemaal uit",
+        "time_start": "20:38:09",
+        "time_end": "00:14:42",
+        "titles": [
+          "Er kan er maar één zijn."
+        ],
+        "activities": [
+          {
+            "title": "Murder House",
+            "duration": 10000
+          }
+        ],
+        "duration": 12993,
+        "twitch_id": "2139170682",
+        "youtube_id": "1N_-anfSWjM",
+        "id": "7e2c",
+        "type": "stream"
+      },
         {
             "date": "2024-05-08",
             "time_start": "20:36:46",
