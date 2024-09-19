@@ -1,94 +1,94 @@
 <template>
-    <div class="h-100 d-flex flex-column" style="min-height: 100vh">
-        <navigation-bar/>
-        <main id="main-content" class="flex-grow-1 d-flex flex-column bg-body overflow-y-auto overflow-x-hidden pb-5 pb-md-0">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-auto d-none d-md-block">
-                        <div class="sticky-top">
-                            <navigation-side/>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <router-view/>
-                    </div>
-                </div>
+  <div class="h-100 d-flex flex-column" style="min-height: 100vh">
+    <NavigationBarDesktop />
+    <main
+      id="main-content"
+      class="flex-grow-1 d-flex flex-column bg-body overflow-y-auto overflow-x-hidden pb-5 pb-md-0"
+    >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-auto d-none d-md-block">
+            <div class="sticky-top">
+              <NavigationSideBar />
             </div>
+          </div>
+          <div class="col">
+            <router-view />
+          </div>
+        </div>
+      </div>
 
-<!--            <footer-bar class="d-none d-md-block mt-auto"></footer-bar>-->
+      <!--<FooterBar class="d-none d-md-block mt-auto"></FooterBar>-->
 
-            <!-- Modal -->
-            <teleport to="body">
-                <playlist-modal :id="selectedCardId"/>
-            </teleport>
-        </main>
-        <navigation-bar-mob/>
+      <!-- Modal -->
+      <Teleport to="body">
+        <PlaylistModal :id="selectedCardId" />
+      </Teleport>
+    </main>
+    <NavigationBarMobile />
 
-
-<!--        <div v-if="showCookie" class="bg-dark-subtle fixed-bottom">-->
-<!--            <div class="container">-->
-<!--                <div class="d-flex py-3 justify-content-center align-items-center">-->
-<!--                    <i class="bi bi-cookie me-2 fs-4"></i>-->
-<!--                    <p class="m-0">Wij gebruiken cookies om het gebruik van de website te kunnen meten met Google-->
-<!--                        Analytics. <a href="https://policies.google.com/technologies/cookies?hl=nl" target="_blank">Lees-->
-<!--                            meer.</a></p>-->
-<!--                    <button @click="hideCookieBanner" class="btn btn-primary ms-2">Begrepen</button>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-    </div>
+    <!--        <div v-if="showCookie" class="bg-dark-subtle fixed-bottom">-->
+    <!--            <div class="container">-->
+    <!--                <div class="d-flex py-3 justify-content-center align-items-center">-->
+    <!--                    <i class="bi bi-cookie me-2 fs-4"></i>-->
+    <!--                    <p class="m-0">Wij gebruiken cookies om het gebruik van de website te kunnen meten met Google-->
+    <!--                        Analytics. <a href="https://policies.google.com/technologies/cookies?hl=nl" target="_blank">Lees-->
+    <!--                            meer.</a></p>-->
+    <!--                    <button @click="hideCookieBanner" class="btn btn-primary ms-2">Begrepen</button>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+  </div>
 </template>
 
 <script setup>
-import {RouterView, useRoute, useRouter} from 'vue-router'
-import NavigationBar from "@/components/navigationBar.vue";
-import FooterBar from "@/components/footerBar.vue";
-import {useContentStore} from "@/stores/content.js";
-import {useGeneralStore} from "@/stores/general.js";
-import {onBeforeMount, onMounted, ref} from "vue";
-import NavigationSide from "@/components/navigationSide.vue";
+import NavigationBarDesktop from "@/components/NavigationBarDesktop.vue";
+import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
+import NavigationSideBar from "@/components/NavigationSideBar.vue";
 import PlaylistModal from "@/components/PlaylistModal.vue";
-import {storeToRefs} from "pinia";
-import NavigationBarMob from "@/components/navigationBarMob.vue";
+import { useContentStore } from "@/stores/content.js";
+import { useGeneralStore } from "@/stores/general.js";
+import { storeToRefs } from "pinia";
+import { onBeforeMount, onMounted, ref } from "vue";
+import { RouterView, useRoute, useRouter } from "vue-router";
 
-const router = useRouter()
+const router = useRouter();
 const route = useRoute();
-const contentStore = useContentStore()
-const generalStore = useGeneralStore()
+const contentStore = useContentStore();
+const generalStore = useGeneralStore();
 
-const {selectedCardId} = storeToRefs(contentStore)
+const { selectedCardId } = storeToRefs(contentStore);
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLocaleStorage();
 
-const showCookie = ref(false)
+const showCookie = ref(false);
 
-function hideCookieBanner(){
-    localStorage.setItem("isCookieAccepted", "yes");
-    showCookie.value = false;
+function hideCookieBanner() {
+  localStorage.setItem("isCookieAccepted", "yes");
+  showCookie.value = false;
 }
 
 onBeforeMount(() => {
-    let isCookieAccepted = localStorage.getItem("isCookieAccepted");
-    if (isCookieAccepted === null || isCookieAccepted === "no") {
-        localStorage.setItem("isCookieAccepted", "no");
-        showCookie.value = true;
-    }
-})
+  let isCookieAccepted = localStorage.getItem("isCookieAccepted");
+  if (isCookieAccepted === null || isCookieAccepted === "no") {
+    localStorage.setItem("isCookieAccepted", "no");
+    showCookie.value = true;
+  }
+});
 
 onMounted(() => {
-    getUrlQueryParams()
-})
+  getUrlQueryParams();
+});
 
 async function getUrlQueryParams() {
-    //router is async so we wait for it to be ready
-    await router.isReady()
+  //router is async so we wait for it to be ready
+  await router.isReady();
 
-    //once its ready we can access the query params
-    if (route.query.filter)
-        contentStore.setFilterFromQuery(new URLSearchParams(route.query.filter))
+  //once its ready we can access the query params
+  if (route.query.filter) contentStore.setFilterFromQuery(new URLSearchParams(route.query.filter));
 
-    contentStore.filter();
+  contentStore.filter();
 }
 </script>
 

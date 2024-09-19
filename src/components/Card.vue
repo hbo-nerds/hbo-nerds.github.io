@@ -9,7 +9,7 @@
           : card.type === 'video'
             ? 'border-yt'
             : 'border-tw',
-        { active: card.id === selectedCardId }
+        { active: card.id === selectedCardId },
       ]"
       class="img-wrapper position-relative"
       type="button"
@@ -103,13 +103,13 @@
 
           <div class="inline-meta text-body-secondary">
             <span v-if="daysAgo < 14" class="small"
-              >{{ daysAgo }} {{ daysAgo > 1 ? 'dagen' : 'dag' }} geleden</span
+              >{{ daysAgo }} {{ daysAgo > 1 ? "dagen" : "dag" }} geleden</span
             >
             <span v-else-if="weeksAgo < 4" class="small"
-              >{{ weeksAgo }} {{ weeksAgo > 1 ? 'weken' : 'week' }} geleden</span
+              >{{ weeksAgo }} {{ weeksAgo > 1 ? "weken" : "week" }} geleden</span
             >
             <span v-else-if="monthsAgo < 12" class="small"
-              >{{ monthsAgo }} {{ monthsAgo > 1 ? 'maanden' : 'maand' }} geleden</span
+              >{{ monthsAgo }} {{ monthsAgo > 1 ? "maanden" : "maand" }} geleden</span
             >
             <span v-else class="small">{{ yearAgo }} jaar geleden</span>
             <span v-if="card['collection']" class="small"
@@ -118,16 +118,16 @@
           </div>
           <div class="inline-meta text-body-secondary">
             <span v-for="act in card['activities']?.slice(0, 1)" class="small"
-              >{{ act.title }} {{ card['activities']?.length > 1 ? 'en meer' : '' }}</span
+              >{{ act.title }} {{ card["activities"]?.length > 1 ? "en meer" : "" }}</span
             >
           </div>
           <div v-if="Array.isArray(card['activity'])" class="inline-meta text-body-secondary">
             <span v-for="act in card['activity']?.slice(0, 1)" class="small"
-              >{{ act }} {{ card['activity']?.length > 1 ? 'en meer' : '' }}</span
+              >{{ act }} {{ card["activity"]?.length > 1 ? "en meer" : "" }}</span
             >
           </div>
           <div v-else-if="card['activity']" class="inline-meta text-body-secondary">
-            <span class="small">{{ card['activity'] }}</span>
+            <span class="small">{{ card["activity"] }}</span>
           </div>
         </div>
         <div>
@@ -140,13 +140,13 @@
           </button>
           <ul class="dropdown-menu dropdown-menu-end">
             <li v-if="card['collection']">
-              <router-link
-                :to="{ name: 'single-serie', params: { id: card['collection'] } }"
+              <RouterLink
+                :to="{ name: 'serie', params: { id: card['collection'] } }"
                 class="dropdown-item"
                 title="Ga naar serie"
               >
                 <i class="bi bi-collection-play me-2"></i>Naar collectie
-              </router-link>
+              </RouterLink>
             </li>
             <li>
               <button
@@ -154,7 +154,7 @@
                 type="button"
                 @click="generalStore.toggleSeenItem(card['id'])"
               >
-                <i class="bi bi-eye me-2"></i>{{ isSeen ? 'Niet gezien' : 'Gezien' }}
+                <i class="bi bi-eye me-2"></i>{{ isSeen ? "Niet gezien" : "Gezien" }}
               </button>
             </li>
             <li>
@@ -174,7 +174,7 @@
                 type="button"
                 @click="generalStore.toggleLikedItem(card['id'])"
               >
-                <i class="bi bi-hand-thumbs-up me-2"></i>{{ isLiked ? 'Niet leuk' : 'Leuk!' }}
+                <i class="bi bi-hand-thumbs-up me-2"></i>{{ isLiked ? "Niet leuk" : "Leuk!" }}
               </button>
             </li>
           </ul>
@@ -192,22 +192,22 @@
 </template>
 
 <script setup>
-import { computed, ref } from 'vue'
-import { useContentStore } from '@/stores/content.js'
-import { storeToRefs } from 'pinia'
-import router from '@/router/index.js'
-import { useGeneralStore } from '@/stores/general.js'
+import router from "@/router/index.js";
+import { useContentStore } from "@/stores/content.js";
+import { useGeneralStore } from "@/stores/general.js";
+import { storeToRefs } from "pinia";
+import { computed, ref } from "vue";
 
 const props = defineProps({
   card: { type: Object, required: true },
-  isSeries: { type: Boolean, default: false }
-})
-const contentStore = useContentStore()
-const generalStore = useGeneralStore()
-const { images, selectedCardId } = storeToRefs(contentStore)
-const { seenItems, likedItems } = storeToRefs(generalStore)
+  isSeries: { type: Boolean, default: false },
+});
+const contentStore = useContentStore();
+const generalStore = useGeneralStore();
+const { images, selectedCardId } = storeToRefs(contentStore);
+const { seenItems, likedItems } = storeToRefs(generalStore);
 
-const canvasBtn = ref(null)
+const canvasBtn = ref(null);
 
 /**
  * Look for VOD thumbnail.
@@ -215,96 +215,96 @@ const canvasBtn = ref(null)
  */
 const imgScr = computed(() => {
   return (
-    images.value['320'][`${props.card['twitch_id']}`] ||
-    images.value['320'][`${props.card['youtube_id']}`] ||
-    (!props.card['twitch_id'] && !props.card['youtube_id']
-      ? images.value['320'][`no_video`]
-      : images.value['320'][`default`])
-  )
-})
+    images.value["320"][`${props.card["twitch_id"]}`] ||
+    images.value["320"][`${props.card["youtube_id"]}`] ||
+    (!props.card["twitch_id"] && !props.card["youtube_id"]
+      ? images.value["320"][`no_video`]
+      : images.value["320"][`default`])
+  );
+});
 
 /**
  * Convert seconds to h:m:s.
  * @type {ComputedRef<string>}
  */
 const duration = computed(() => {
-  return secondsToHms()
-})
+  return secondsToHms();
+});
 
 /**
  * Get VOD title.
  * @type {ComputedRef<ComputedRef<*>>}
  */
 const title = computed(() => {
-  if (['podcast', 'video'].includes(props.card['type'])) return props.card['title']
+  if (["podcast", "video"].includes(props.card["type"])) return props.card["title"];
   else {
-    if (props.card['custom_title']) return props.card['custom_title']
-    else if (props.card['title_main']) return props.card['titles'][props.card['title_main']]
-    else return props.card['titles'][0]
+    if (props.card["custom_title"]) return props.card["custom_title"];
+    else if (props.card["title_main"]) return props.card["titles"][props.card["title_main"]];
+    else return props.card["titles"][0];
   }
-})
+});
 
 /**
  * Check VOD collection name.
  * @type {ComputedRef<*|null>}
  */
 const collectionName = computed(() => {
-  return props.card['collection']
-    ? contentStore.getCollection(props.card['collection']).title
-    : null
-})
+  return props.card["collection"]
+    ? contentStore.getCollection(props.card["collection"]).title
+    : null;
+});
 
 /**
  * Check VOD collection count.
  * @type {ComputedRef<*|null>}
  */
 const collectionCount = computed(() => {
-  return props.card['collection'] ? contentStore.countSeriesItems(props.card['collection']) : 0
-})
+  return props.card["collection"] ? contentStore.countSeriesItems(props.card["collection"]) : 0;
+});
 
 /**
  * Whether user has seen VOD.
  * @type {ComputedRef<*>}
  */
 const isSeen = computed(() => {
-  return seenItems.value.includes(props.card['id'])
-})
+  return seenItems.value.includes(props.card["id"]);
+});
 
 /**
  * Whether user has liked VOD.
  * @type {ComputedRef<*>}
  */
 const isLiked = computed(() => {
-  return likedItems.value.includes(props.card['id'])
-})
+  return likedItems.value.includes(props.card["id"]);
+});
 
 /**
  * Convert VOD seconds to h:m:s.
  * @returns {string}
  */
 function secondsToHms() {
-  let d = Number(props.card.duration)
-  let h = Math.floor(d / 3600)
-  let m = Math.floor((d % 3600) / 60)
-  let s = Math.floor((d % 3600) % 60)
+  let d = Number(props.card.duration);
+  let h = Math.floor(d / 3600);
+  let m = Math.floor((d % 3600) / 60);
+  let s = Math.floor((d % 3600) % 60);
 
-  return ('0' + h).slice(-2) + ':' + ('0' + m).slice(-2) + ':' + ('0' + s).slice(-2)
+  return ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
 }
 
 /**
  * Navigate to item
  * @param type
  */
-function goToCard(type = 'left') {
+function goToCard(type = "left") {
   if (props.isSeries) {
-    const path = `/series/${props.card['collection']}`
-    if (type === 'middle') {
-      const routeData = router.resolve({ path: path })
-      window.open(routeData.href, '_blank')
-    } else router.push({ path: path })
+    const path = `/series/${props.card["collection"]}`;
+    if (type === "middle") {
+      const routeData = router.resolve({ path: path });
+      window.open(routeData.href, "_blank");
+    } else router.push({ path: path });
   } else {
-    selectedCardId.value = selectedCardId.value === props.card['id'] ? null : props.card['id']
-    if (selectedCardId.value && canvasBtn.value) canvasBtn.value.click()
+    selectedCardId.value = selectedCardId.value === props.card["id"] ? null : props.card["id"];
+    if (selectedCardId.value && canvasBtn.value) canvasBtn.value.click();
   }
   // const path = props.isSeries ? `/series/${props.card['collection']}` : `/item/${props.card['id']}`
 }
@@ -314,37 +314,37 @@ function goToCard(type = 'left') {
  * @type {ComputedRef<number>}
  */
 const daysAgo = computed(() => {
-  return Math.round((new Date() - new Date(props.card['date'])) / (24 * 60 * 60 * 1000))
-})
+  return Math.round((new Date() - new Date(props.card["date"])) / (24 * 60 * 60 * 1000));
+});
 
 /**
  * Count amount of weeks ago.
  * @type {ComputedRef<number>}
  */
 const weeksAgo = computed(() => {
-  return Math.round((new Date() - new Date(props.card['date'])) / (7 * 24 * 60 * 60 * 1000))
-})
+  return Math.round((new Date() - new Date(props.card["date"])) / (7 * 24 * 60 * 60 * 1000));
+});
 
 /**
  * Count amount of months ago.
  * @type {ComputedRef<number>}
  */
 const monthsAgo = computed(() => {
-  const now = new Date()
+  const now = new Date();
   return (
     now.getMonth() -
-    new Date(props.card['date']).getMonth() +
-    12 * (now.getFullYear() - new Date(props.card['date']).getFullYear())
-  )
-})
+    new Date(props.card["date"]).getMonth() +
+    12 * (now.getFullYear() - new Date(props.card["date"]).getFullYear())
+  );
+});
 
 /**
  * Count amount of years ago.
  * @type {ComputedRef<number>}
  */
 const yearAgo = computed(() => {
-  return new Date().getFullYear() - new Date(props.card['date']).getFullYear()
-})
+  return new Date().getFullYear() - new Date(props.card["date"]).getFullYear();
+});
 </script>
 
 <style lang="sass" scoped>

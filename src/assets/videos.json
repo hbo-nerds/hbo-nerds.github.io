@@ -2192,11 +2192,7 @@
     "id": "200",
     "date": "25/11/2014",
     "title": "60fps test video - MARIO KART 8, FIFA 15 & BATTLEFIELD 4",
-    "game": [
-      "Mario Kart 8",
-      "FIFA 15",
-      "Battlefield 4"
-    ],
+    "game": ["Mario Kart 8", "FIFA 15", "Battlefield 4"],
     "duration": "01:17",
     "url": "https://youtube.com/watch?v=-lqmSBs0VY4",
     "description": null,
@@ -6461,11 +6457,7 @@
     "id": "584",
     "date": "21/03/2019",
     "title": "LEKKER SPELEN vs TWITCHERS (2019)",
-    "game": [
-      "Super Mario Bros NES",
-      "Galgje",
-      "Fifa 19"
-    ],
+    "game": ["Super Mario Bros NES", "Galgje", "Fifa 19"],
     "duration": "19:41",
     "url": "https://youtube.com/watch?v=20H-DcXKJL0",
     "description": null,

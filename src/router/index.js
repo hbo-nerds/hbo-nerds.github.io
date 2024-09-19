@@ -1,65 +1,65 @@
-import {createRouter, createWebHistory} from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import SeriesView from "@/views/SeriesView.vue";
-import SingleItemView from "@/views/SingleItemView.vue";
-import SingleSeriesView from "@/views/SingleSeriesView.vue";
-import YouView from "@/views/YouView.vue";
-import SinglePlaylistView from "@/views/SinglePlaylistView.vue";
-import YouPlaylists from "@/views/YouPlaylists.vue";
-import ToolView from "@/views/ToolView.vue";
-import YouHistory from "@/views/YouHistory.vue";
-import YouLiked from "@/views/YouLiked.vue";
-import AboutView from "@/views/AboutView.vue";
+import About from "@/views/About.vue";
+import Card from "@/views/Card.vue";
+import History from "@/views/History.vue";
+import Home from "@/views/Home.vue";
+import Liked from "@/views/Liked.vue";
+import Playlist from "@/views/Playlist.vue";
+import Playlists from "@/views/Playlists.vue";
+import Serie from "@/views/Serie.vue";
+import Series from "@/views/Series.vue";
+import UploadTool from "@/views/UploadTool.vue";
+import You from "@/views/You.vue";
+import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
+      path: "/",
+      name: "home",
+      component: Home,
     },
     {
-      path: '/over',
-      name: 'about',
-      component: AboutView
+      path: "/over",
+      name: "about",
+      component: About,
     },
     {
-      path: '/series',
+      path: "/series",
       children: [
-        { path: '', name: 'series', component: SeriesView },
-        { path: ':id', name: 'single-serie', component: SingleSeriesView },
-      ]
+        { path: "", name: "series", component: Series },
+        { path: ":id", name: "serie", component: Serie },
+      ],
     },
     {
-      path: '/you',
+      path: "/you",
       children: [
-        { path: '', name: 'you', component: YouView},
-        { path: 'history', name: 'history', component: YouHistory},
-        { path: 'playlists', name: 'playlists', component: YouPlaylists},
-        { path: 'playlists/:title', name: 'single-playlist', component: SinglePlaylistView},
-        { path: 'liked-items', name: 'liked-items', component: YouLiked},
-      ]
+        { path: "", name: "you", component: You },
+        { path: "history", name: "history", component: History },
+        { path: "playlists", name: "playlists", component: Playlists },
+        { path: "playlists/:title", name: "playlist", component: Playlist },
+        { path: "liked-items", name: "liked-items", component: Liked },
+      ],
     },
     {
-      path: '/item/:id',
-      name: 'single-item',
-      component: SingleItemView
+      path: "/item/:id",
+      name: "card",
+      component: Card,
     },
     {
-      path: '/upload-tool',
-      name: 'upload-tool',
-      component: ToolView
+      path: "/upload-tool",
+      name: "upload-tool",
+      component: UploadTool,
     },
-    { path: "/:pathMatch(.*)*", redirect: '/' }
+    { path: "/:pathMatch(.*)*", redirect: "/" },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
-      return savedPosition
+      return savedPosition;
     } else {
-      return { top: 0 }
+      return { top: 0 };
     }
   },
-})
+});
 
-export default router
+export default router;
