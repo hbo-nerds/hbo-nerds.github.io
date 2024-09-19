@@ -31,3 +31,4 @@ coverage
 /.vite/
 /.vscode/
 /dist/
+/dev-dist/
