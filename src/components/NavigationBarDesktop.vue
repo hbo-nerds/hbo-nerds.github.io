@@ -300,11 +300,14 @@
           <i class="bi bi-list fs-3"></i>
         </div>
         <RouterLink
-          class="ps-3 text-decoration-none d-flex align-items-center"
+          class="text-decoration-none d-flex align-items-center gap-2"
           to="/"
           @click="closeCanvas"
         >
-          <img alt="Logo" src="../assets/img/lekkerspelen_official.png" width="30px" />
+          <img alt="Logo" src="../assets/img/lekker_speuren_logo.png" width="40px" />
+          <span class="d-none text-light d-md-block special-elite-regular lh-1 text-truncate"
+            >Lekker Speuren</span
+          >
         </RouterLink>
       </div>
       <div class="offcanvas-body py-3">
