@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: Build-Vue
-        run: | 
+        run: |
           npm ci
           npm run build
           cd dist

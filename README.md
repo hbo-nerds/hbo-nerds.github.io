@@ -33,6 +33,14 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Check and format with [Prettier](https://prettier.io/)
+
+```sh
+npm run prettier:check
+npm run prettier:format
+```
+
 ## Deployment
 
 Deployment is orchestrated through a Continuous Integration/Continuous Deployment (CI/CD) pipeline, located in the .github/workflows directory within the repository. The GitHub workflow initiates upon a push to the repository's 'master' branch. It undertakes the task of building the Vue application and subsequently pushes the resulting 'dist' folder to the 'gh-pages' branch.

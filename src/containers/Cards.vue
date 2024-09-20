@@ -23,7 +23,7 @@
       class="row g-3 mb-5"
     >
       <div v-for="(card, idx) in randomData" :key="idx" class="col">
-        <card-component :card="card" />
+        <Card :card="card" />
       </div>
     </div>
   </div>
@@ -37,18 +37,18 @@
       class="row g-4 mb-5"
     >
       <div v-for="(card, idx) in paginatedData" :key="idx" class="col">
-        <card-component :card="card" />
+        <Card :card="card" />
       </div>
     </div>
     <div class="row align-items-center mb-5">
       <div class="col-12 col-md">
-        <pagination
+        <Pagination
           :current-page="pageNumber + 1"
           :items-per-page="pageSize"
           :total-items="sortedData.length"
           @update:currentPage="
             (num) => {
-              pageNumber = num - 1
+              pageNumber = num - 1;
             }
           "
           :max-visible-pages="3"
@@ -73,26 +73,26 @@
 </template>
 
 <script setup>
-import { computed, defineAsyncComponent } from 'vue'
-import { useContentStore } from '@/stores/content.js'
-import { storeToRefs } from 'pinia'
-import { useGeneralStore } from '@/stores/general.js'
-import Pagination from '@/components/pagination.vue'
+import Pagination from "@/components/Pagination.vue";
+import { useContentStore } from "@/stores/content.js";
+import { useGeneralStore } from "@/stores/general.js";
+import { storeToRefs } from "pinia";
+import { computed, defineAsyncComponent } from "vue";
 
-const CardComponent = defineAsyncComponent(() => import('@/components/cardComponent.vue'))
+const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
 // store
-const generalStore = useGeneralStore()
-const contentStore = useContentStore()
-const { view, pageSize, pageNumber } = storeToRefs(generalStore)
-const { sortedData, randomData, selectedCardId } = storeToRefs(contentStore)
+const generalStore = useGeneralStore();
+const contentStore = useContentStore();
+const { view, pageSize, pageNumber } = storeToRefs(generalStore);
+const { sortedData, randomData, selectedCardId } = storeToRefs(contentStore);
 
 const paginatedData = computed(() => {
-  if (pageSize.value === 'all') return sortedData.value
+  if (pageSize.value === "all") return sortedData.value;
   const start = pageNumber.value * pageSize.value,
-    end = start + pageSize.value
-  return sortedData.value.slice(start, end)
-})
+    end = start + pageSize.value;
+  return sortedData.value.slice(start, end);
+});
 </script>
 
 <style scoped></style>
