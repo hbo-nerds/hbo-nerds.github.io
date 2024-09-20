@@ -1,6 +1,6 @@
 <template>
-    <button class="btn btn-sm btn-dark rounded-circle lh-1 p-2" data-bs-target="#filterModal"
-            data-bs-toggle="modal" type="button">
+    <button class="btn btn-dark btn-circle rounded-circle" data-bs-target="#filterModal"
+            data-bs-toggle="modal" title="Open filter" type="button">
         <i class="bi bi-sliders2"></i>
     </button>
 
@@ -34,13 +34,9 @@
 
 <script setup>
 import {useContentStore} from "@/stores/content.js";
-import {storeToRefs} from "pinia";
 import FilterComponent from "@/components/filterComponent.vue";
 
 const content = useContentStore()
-const {filteredData, sortedData, randomData, search} = storeToRefs(content)
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -15,6 +15,12 @@ $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
 
 @import "bootstrap/scss/bootstrap";
 
+.special-elite-regular {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
 html :not(.hide-scrollbar) {
   scrollbar-color: #aaa transparent;
 }
@@ -53,4 +59,45 @@ body {
 [data-bs-theme=dark] {
   --bs-body-bg-rgb: 15, 15, 15;
   --bs-body-bg: #000000;
+}
+
+input[type="checkbox"],
+input[type="checkbox"] + label {
+  cursor:pointer;
+}
+
+//------------ ROUNDED BUTTONS ----------------//
+.btn-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  &.btn-sm {
+    width: 30px;
+    height: 30px;
+  }
+
+  &.btn-lg {
+    width: 50px;
+    height: 50px;
+  }
+
+  &.btn-xl {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+//------------ SMALL MODAL ----------------//
+@media (max-width: 575px) {
+  .modal-xs {
+    --bs-modal-width: 300px;
+  }
+  .modal-dialog {
+    max-width: var(--bs-modal-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }

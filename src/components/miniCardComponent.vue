@@ -1,25 +1,73 @@
 <template>
     <div class="card border-0 bg-transparent position-relative">
-        <div :class="card.type === 'stream' && card.free ? 'p-1 bg-warning' : ''" class="thumbnail-wrapper position-relative rounded-3 z-1"
-             @click="goToCard"
-             @click.middle="goToCard('middle')">
-            <img :src="imgScr" alt="thumbnail" class="w-100">
-            <span class="badge rounded-0 bg-black position-absolute bottom-0 end-0 m-2"
-                  style="--bs-bg-opacity: .75;">{{ duration }}</span>
-            <span v-if="card.type === 'stream' && card.free"
-                  class="badge rounded-0 bg-warning position-absolute top-0 end-0 m-2 text-uppercase">
-                Gratis
-            </span>
-
-            <div v-if="isSeen"
-                 class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center">
-                <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
+        <div class="row g-2">
+            <div class="col-4">
+                <div :class="card.type === 'stream' && card.free ? 'p-1 bg-warning' : ''"
+                     class="thumbnail-wrapper position-relative rounded-3 z-1"
+                     @click="goToCard"
+                     @click.middle="goToCard('middle')">
+                    <img :src="imgScr" alt="thumbnail" class="w-100">
+                    <span class="badge bg-black position-absolute bottom-0 end-0 m-2"
+                          style="--bs-bg-opacity: .75;">{{ duration }}</span>
+                </div>
             </div>
-        </div>
-        <div class="card-body pt-3 pb-0 px-0">
-            <span class="small fw-lighter" type="button" @click="goToCard" @click.middle="goToCard('middle')">
-                {{title }}
-            </span>
+            <div class="col">
+                <h3 class="fs-6 fw-bold mb-1" type="button" @click="goToCard" @click.middle="goToCard('middle')">
+                    {{ title }}</h3>
+
+                <div class="inline-meta text-body-secondary">
+                    <span v-if="daysAgo < 14" class="small">{{ daysAgo }} {{
+                            daysAgo > 1 ? 'dagen' : 'dag'
+                        }} geleden</span>
+                    <span v-else-if="weeksAgo < 4" class="small">{{ weeksAgo }} {{
+                            weeksAgo > 1 ? 'weken' : 'week'
+                        }} geleden</span>
+                    <span v-else-if="monthsAgo < 12" class="small">{{
+                            monthsAgo
+                        }} {{ monthsAgo > 1 ? 'maanden' : 'maand' }} geleden</span>
+                    <span v-else class="small">{{ yearAgo }} jaar geleden</span>
+                    <span v-if="card['collection']" class="small"><i class="bi bi-collection-play"></i></span>
+                </div>
+                <div class="inline-meta text-body-secondary">
+                        <span v-for="act in card['activities']?.slice(0, 1)" class="small">{{
+                                act.title
+                            }} {{ card['activities']?.length > 1 ? 'en meer' : '' }}</span>
+                </div>
+                <div v-if="Array.isArray(card['activity'])" class="inline-meta text-body-secondary">
+                        <span v-for="act in card['activity']?.slice(0, 1)" class="small">{{
+                                act
+                            }} {{ card['activity']?.length > 1 ? 'en meer' : '' }}</span>
+                </div>
+                <div v-else-if="card['activity']" class="inline-meta text-body-secondary">
+                    <span class="small">{{ card['activity'] }}</span>
+                </div>
+            </div>
+            <div class="col-auto">
+                <button aria-expanded="false" class="btn btn-sm rounded-circle lh-1 p-2" data-bs-offset="0,10"
+                        data-bs-toggle="dropdown">
+                    <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <button class="dropdown-item" type="button"
+                                @click="generalStore.toggleSeenItem(card['id'])"><i
+                            class="bi bi-eye me-3"></i>{{ isSeen ? 'Niet gezien' : 'Gezien' }}
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" data-bs-target="#playlist-modal" data-bs-toggle="modal"
+                                type="button" @click="selectedCardId = card.id"><i
+                            class="bi bi-collection-play me-3"></i>Bewaar
+                        </button>
+                    </li>
+                    <li>
+                        <button class="dropdown-item" type="button"
+                                @click="generalStore.toggleLikedItem(card['id'])"><i
+                            class="bi bi-hand-thumbs-up me-3"></i>{{ isLiked ? 'Niet leuk' : 'Leuk!' }}
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -28,7 +76,6 @@
 import {computed} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
-import router from "@/router/index.js";
 import {useGeneralStore} from "@/stores/general.js";
 
 const props = defineProps({
@@ -37,24 +84,54 @@ const props = defineProps({
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
 const {images, selectedCardId} = storeToRefs(contentStore)
-const {seenItems} = storeToRefs(generalStore)
+const {seenItems, likedItems} = storeToRefs(generalStore)
 
+/**
+ * Look for VOD thumbnail.
+ * @type {ComputedRef<unknown>}
+ */
 const imgScr = computed(() => {
     return images.value['320'][`${props.card['twitch_id']}`] ||
         images.value['320'][`${props.card['youtube_id']}`] ||
         (!props.card['twitch_id'] && !props.card['youtube_id'] ? images.value['320'][`no_video`] : images.value['320'][`default`])
 })
 
+/**
+ * Convert seconds to h:m:s.
+ * @type {ComputedRef<string>}
+ */
 const duration = computed(() => {
     return secondsToHms()
 })
+
+/**
+ * Get VOD title.
+ * @type {ComputedRef<ComputedRef<*>>}
+ */
 const title = computed(() => {
     return setMainTitle()
 })
+
+/**
+ * Whether user has seen VOD.
+ * @type {ComputedRef<*>}
+ */
 const isSeen = computed(() => {
     return seenItems.value.includes(props.card['id'])
 })
 
+/**
+ * Whether user has liked VOD.
+ * @type {ComputedRef<*>}
+ */
+const isLiked = computed(() => {
+    return likedItems.value.includes(props.card['id'])
+})
+
+/**
+ * Convert VOD seconds to h:m:s.
+ * @returns {string}
+ */
 function secondsToHms() {
     let d = Number(props.card.duration);
     let h = Math.floor(d / 3600);
@@ -81,13 +158,59 @@ function goToCard() {
     selectedCardId.value = selectedCardId.value === props.card['id'] ? null : props.card['id']
     // router.push({path: `/item/${props.card['id']}`})
 }
+
+/**
+ * Count amount of days ago.
+ * @type {ComputedRef<number>}
+ */
+const daysAgo = computed(() => {
+    return Math.round((new Date() - new Date(props.card['date'])) / (24 * 60 * 60 * 1000));
+})
+
+/**
+ * Count amount of weeks ago.
+ * @type {ComputedRef<number>}
+ */
+const weeksAgo = computed(() => {
+    return Math.round((new Date() - new Date(props.card['date'])) / (7 * 24 * 60 * 60 * 1000));
+})
+
+/**
+ * Count amount of months ago.
+ * @type {ComputedRef<number>}
+ */
+const monthsAgo = computed(() => {
+    const now = new Date();
+    return now.getMonth() - new Date(props.card['date']).getMonth() +
+        (12 * (now.getFullYear() - new Date(props.card['date']).getFullYear()))
+})
+
+/**
+ * Count amount of years ago.
+ * @type {ComputedRef<number>}
+ */
+const yearAgo = computed(() => {
+    return new Date().getFullYear() - new Date(props.card['date']).getFullYear();
+})
 </script>
 
 <style lang="sass" scoped>
 .card
     &:hover .action-btn
         visibility: unset
+
     .action-btn
         visibility: hidden
+
+.inline-meta
+    line-height: 16px
+
+    span:not(:first-of-type):before
+        margin: 0 4px
+        content: "•"
+
+.dropdown-menu
+    background-color: #292929
+    --bs-dropdown-link-hover-bg: #3d3d3d
 
 </style>

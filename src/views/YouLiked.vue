@@ -3,6 +3,13 @@
     <main class="pt-3 pb-5">
         <div class="row">
             <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><router-link :to="{name: 'you'}">You</router-link></li>
+                        <li class="breadcrumb-item active" aria-current="page">Liked</li>
+                    </ol>
+                </nav>
+
                 <h1 class="fw-bold mb-4">Liked</h1>
                 <select v-model="sort" class="form-select mb-4 w-auto">
                     <option value="newOld">Upload date (new first)</option>

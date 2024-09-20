@@ -261,8 +261,8 @@ export const useContentStore = defineStore('content', {
          * @param collectionId id of the collection
          * @returns {*|*[]}
          */
-        getSingleCollection(collectionId) {
-            return collectionId ? this.content.filter(item => item.collection === parseInt(collectionId)) : []
+        getSingleCollection(collectionId, except) {
+            return collectionId ? this.content.filter(item => (item.collection === parseInt(collectionId) && item.id !== except)) : []
         },
         /**
          * Return the collection by id
@@ -307,15 +307,16 @@ export const useContentStore = defineStore('content', {
             // start with all items
             let data = this.content.slice()
 
-            const allowedTags = ['type', 'title', 'desc', 'game', 'tag', 'year']
-            const something = this.search.match(/([\w\d]+:[\w\d\s]+?)(?= [\w\d]+:|$)/g) || []
+            //TODO search based on tags in input???
             const advancedSearch = {}
-            something.forEach(item => {
-                const arr = item.split(':');
-                let first = arr.shift();
-                if (allowedTags.includes(first))
-                    advancedSearch[first] = arr.pop()
-            })
+            // const allowedTags = ['type', 'title', 'desc', 'game', 'tag', 'year']
+            // const something = this.search.match(/([\w\d]+:[\w\d\s]+?)(?= [\w\d]+:|$)/g) || []
+            // something.forEach(item => {
+            //     const arr = item.split(':');
+            //     let first = arr.shift();
+            //     if (allowedTags.includes(first))
+            //         advancedSearch[first] = arr.pop()
+            // })
 
             if (Object.keys(advancedSearch).length) {
                 data = data.filter(item => this.f_type(item, advancedSearch['type']) &&
@@ -621,11 +622,12 @@ export const useContentStore = defineStore('content', {
         setFilterFromQuery(urlParams) {
             if (urlParams.getAll('type')) this.filters.type = urlParams.getAll('type')
             if (urlParams.getAll('platform')) this.filters.platform = urlParams.getAll('platform')
+            if (urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
             if (urlParams.get('free')) this.filters.free = urlParams.get('free')
             if (urlParams.get('vodOnly')) this.filters.vodOnly = urlParams.get('vodOnly')
             if (urlParams.get('date_weeks')) this.filters.date.range = parseInt(urlParams.get('date_weeks'))
             if (urlParams.get('duration')) this.filters.duration = urlParams.get('duration')
-            if (urlParams.getAll('activity')) this.filters.activity = urlParams.getAll('activity')
+            this.search = urlParams.get('search') || ''
         },
         /**
          * Update url query after filter change.
@@ -634,23 +636,26 @@ export const useContentStore = defineStore('content', {
             const types = this.filters.type.length ? this.filters.type.map(t => ['type', t]) : []
             const platforms = this.filters.platform.length ? this.filters.platform.map(t => ['platform', t]) : []
             const acts = this.filters.activity.length ? this.filters.activity.map(t => ['activity', t]) : []
-            let search = new URLSearchParams(types.concat(acts).concat(platforms))
+            let search_params = new URLSearchParams(types.concat(acts).concat(platforms))
             if (this.filters.free)
-                search.append('free', this.filters.free)
+                search_params.append('free', this.filters.free)
             if (this.filters.vodOnly)
-                search.append('vodOnly', this.filters.vodOnly)
+                search_params.append('vodOnly', this.filters.vodOnly)
             if (this.filters.date.range !== 'all')
-                search.append('date_weeks', this.filters.date.range)
+                search_params.append('date_weeks', this.filters.date.range)
             if (this.filters.duration !== 'all')
-                search.append('duration', this.filters.duration)
+                search_params.append('duration', this.filters.duration)
+            if (this.search)
+                search_params.append('search', this.search)
 
-            if (search.toString().length)
-                router.replace({query: {filter: search.toString()}}).then(r => {
+            let url_search = search_params.toString()
+            if (url_search) {
+                router.replace({query: {filter: url_search}}).then(r => {
                 })
-            else
+            } else {
                 router.replace({query: null}).then(r => {
                 })
-
+            }
         }
     }
 })

@@ -12,8 +12,4 @@
 
 <script setup>
 import SeriesContainer from "@/containers/SeriesContainer.vue";
-import {storeToRefs} from "pinia";
-import {useContentStore} from "@/stores/content.js";
-const contentStore = useContentStore()
-const {sortOptionSeries} = storeToRefs(contentStore)
 </script>

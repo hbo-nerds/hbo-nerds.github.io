@@ -1,6 +1,6 @@
 <template>
-    <nav class="mobile-menubar d-sm-none fixed-bottom border-top pb-3 px-3">
-        <ul class="nav align-items-center justify-content-evenly mb-0 pt-1">
+    <nav class="mobile-menubar d-sm-none fixed-bottom border-top pb-4 px-3">
+        <ul class="nav align-items-center justify-content-evenly mb-0">
             <li class="nav-item">
                 <router-link :to="{name: 'home'}" class="nav-link">
                     <i class="fs-5 lh-1 bi bi-house-door"></i>
@@ -17,8 +17,8 @@
             </li>
             <li class="nav-item">
                 <div class="nav-link">
-                    <button class="btn btn-sm btn-dark rounded-circle lh-1 p-2" type="button" @click="startSearch">
-                        <i class="fs-5 bi bi-search"></i>
+                    <button class="btn btn-dark btn-circle rounded-circle border-0" type="button" @click="startSearch">
+                        <i class="bi bi-search"></i>
                     </button>
                 </div>
             </li>
@@ -41,6 +41,9 @@
 </template>
 
 <script setup>
+/**
+ * On mobile, activate the search input and focus on it.
+ */
 function startSearch() {
  const el = document.getElementById('mobile-search-btn');
  if (el) el.click();
@@ -53,7 +56,7 @@ function startSearch() {
     align-items: center;
     justify-content: space-around;
     z-index: 1000;
-    backdrop-filter: blur(10px); /* Apply blur for the glassy effect */
+    backdrop-filter: blur(8px); /* Apply blur for the glassy effect */
     background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
     border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
     box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */

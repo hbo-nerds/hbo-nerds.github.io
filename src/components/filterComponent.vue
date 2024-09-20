@@ -45,7 +45,7 @@
             <div class="d-flex flex-column gap-1">
                 <div v-for="(type, idx) in groupedTypes" :key="idx" class="pe-3">
                     <input :id="'type-' + idx" v-model="filters.type" :value="type.value" class="d-none"
-                           name="type" type="checkbox" @change="contentStore.filter()">
+                           name="type" type="checkbox" @change="checkType(type.value)">
                     <label :class="filters.type.includes(type.value) ? '' : 'text-body-tertiary'" :for="'type-' + idx"
                            class="form-check-label text-nowrap small w-100">
                         {{ type.label }} ({{ type.count }})
@@ -60,7 +60,7 @@
             <div class="d-flex flex-column gap-1">
                 <div v-for="(platform, idx) in groupedPlatforms" :key="idx" class="pe-3">
                     <input :id="'platform-' + idx" v-model="filters.platform" :value="platform.value"
-                           class="d-none" name="platform" type="checkbox" @change="contentStore.filter()">
+                           class="d-none" name="platform" type="checkbox" @change="checkPlatform(platform.value)">
                     <label :class="filters.platform.includes(platform.value) ? '' : 'text-body-tertiary'" :for="'platform-' + idx"
                            class="form-check-label text-nowrap small w-100">
                         {{ platform.label }} ({{ platform.count }})
@@ -205,6 +205,34 @@ const a_activities = computed(() => {
 
 function normalizeInput(input) {
     return !input ? '' : input.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "")
+}
+
+/**
+ * If 'all' is chosen, remove other options.
+ * If other type is selected, remove 'all' option.
+ * @param value
+ */
+function checkType(value) {
+    if (value === 'all' && filters.value.type.includes('all'))
+        filters.value.type = ['all']
+    else if (filters.value.type.includes(value) && filters.value.type.includes('all'))
+        filters.value.type.splice(filters.value.type.indexOf('all'), 1);
+
+    contentStore.filter()
+}
+
+/**
+ * If 'all' is chosen, remove other options.
+ * If other type is selected, remove 'all' option.
+ * @param value
+ */
+function checkPlatform(value) {
+    if (value === 'all' && filters.value.platform.includes('all'))
+        filters.value.platform = ['all']
+    else if (filters.value.platform.includes(value) && filters.value.platform.includes('all'))
+        filters.value.platform.splice(filters.value.platform.indexOf('all'), 1);
+
+    contentStore.filter()
 }
 
 </script>

@@ -2,7 +2,7 @@
     <transition>
         <div :key="card.id" class="row g-3">
             <div class="col-12 col-lg-6">
-                <img :src="imgScr" alt="thumbnail" class="w-100 mb-2">
+                <img :src="imgScr" alt="thumbnail" class="w-100 mb-3">
                 <h5 class="fw-bold">{{ title }}</h5>
             </div>
             <!-- description -->
@@ -37,9 +37,9 @@
                             type="button" @click="generalStore.toggleSeenItem(card.id)">
                         <i :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-2"></i>Gezien
                     </button>
-                    <button :data-bs-target="'#playlistModal-' + card.id"
-                            class="btn border rounded-pill text-nowrap"
-                            data-bs-toggle="modal" type="button">
+                    <button class="btn border rounded-pill text-nowrap"
+                            data-bs-target="#playlist-modal"
+                            data-bs-toggle="modal" type="button" @click="selectedCardId = card.id">
                         <i class="bi bi-collection-play me-2"></i>Bewaar
                     </button>
                     <button class="btn border rounded-pill text-nowrap" @click="copyLink"><i
@@ -54,29 +54,27 @@
                 <div class="card border-0 rounded-4 h-100" style="background-color: rgba(255,255,255,0.1)">
                     <div class="card-body">
                         <div class="small fw-lighter mb-2">Bekijk op:</div>
-                        <ul class="mb-0">
-                            <li v-if="card['twitch_id']">
-                                <a :href="'https://www.twitch.tv/videos/' + card['twitch_id']" target="_blank">
-                                    <i class="bi bi-twitch me-2"></i>Twitch
-                                </a>
-                            </li>
-                            <li v-if="card['youtube_id']">
-                                <a :href="'https://youtube.com/watch?v=' + card['youtube_id']" target="_blank">
-                                    <i class="bi bi-youtube me-2"></i>YouTube
-                                </a>
-                            </li>
-                            <li v-if="card['twitchtracker_id']">
-                                <a :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
-                                   target="_blank">
-                                    <i class="bi bi-twitch me-2"></i>TwitchTracker
-                                </a>
-                            </li>
-                            <li v-for="(extra, idx) in card['extra_urls']">
-                                <a :href="extra" target="_blank">
-                                    <i class="bi bi-gift me-2"></i>Extra {{ idx + 1 }}
-                                </a>
-                            </li>
-                        </ul>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <a v-if="card['twitch_id']" :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+                               class="btn border rounded-pill text-nowrap d-flex align-items-center" target="_blank">
+                                <img alt="logo" class="rounded-circle me-2" height="24"
+                                     src="../assets/img/twitch-icon.png">
+                                <span>Twitch</span>
+                            </a>
+                            <a v-if="card['youtube_id']" :href="'https://youtube.com/watch?v=' + card['youtube_id']"
+                               class="btn border rounded-pill text-nowrap d-flex align-items-center" target="_blank">
+                                <img alt="logo" class="rounded-circle me-2" height="24"
+                                     src="../assets/img/youtube.png">
+                                <span>YouTube</span>
+                            </a>
+                            <a v-if="card['twitchtracker_id']" :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
+                               class="btn border rounded-pill text-nowrap d-flex align-items-center" target="_blank">
+                                <img alt="logo" class="rounded-circle me-2" height="24"
+                                     src="../assets/img/twitch_tracker_1x.png">
+                                <span>TwitchTracker</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -85,25 +83,14 @@
                 <div class="card border-0 rounded-4 h-100" style="background-color: rgba(255,255,255,0.1)">
                     <div class="card-body">
                         <div class="small fw-lighter mb-2">Activiteiten/games:</div>
-                        <ul class="mb-0">
-                            <li v-for="act in card.activities">
-                                <span :title="`Zoek op '${act.title}'`"
-                                      class="text-decoration-underline text-wrap" type="button"
-                                      @click="searchActivity(act.title)">{{ act.title }}</span>
-                            </li>
-                            <template v-if="Array.isArray(card.activity)">
-                                <li v-for="act in card.activity">
-                                    <span :title="`Zoek op '${act}'`"
-                                          class="text-decoration-underline text-wrap" type="button"
-                                          @click="searchActivity(act)">{{ act }}</span>
-                                </li>
-                            </template>
-                            <li v-if="card.activity">
-                                <span :title="`Zoek op '${card.activity}'`"
-                                      class="text-decoration-underline text-wrap" type="button"
-                                      @click="searchActivity(card.activity)">{{ card.activity }}</span>
-                            </li>
-                        </ul>
+
+                        <span v-if="!activities.length">-</span>
+                        <div class="d-flex flex-wrap gap-2">
+                            <button v-for="act in activities" class="btn border rounded-pill text-nowrap d-flex align-items-center text-truncate"
+                                    @click="searchActivity(act.title)" :title="`Filter on '${act.title}'`">
+                                <span class="text-truncate">{{ act.title }}</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,32 +99,30 @@
                 <div class="card border-0 rounded-4 h-100" style="background-color: rgba(255,255,255,0.1)">
                     <div class="card-body">
                         <div class="small fw-lighter mb-2">Tags:</div>
-                        <ul class="mb-0">
-                            <li v-for="tag in card.tags">
-                                <span class="text-wrap">{{ tag }}</span>
-                            </li>
-                        </ul>
+
+                        <span v-if="!card.tags || !card.tags.length">-</span>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span v-for="tag in card.tags" class="badge rounded-pill text-bg-secondary">{{ tag }}</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- series -->
-            <div v-if="collectionName" class="mb-3">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <span class="fw-bold">Meer zoals dit</span>
-                    <button class="btn btn-sm border rounded-pill text-nowrap" @click="show_more = !show_more">Toon
-                        {{ show_more ? 'minder' : 'meer' }}
-                    </button>
-                </div>
-                <div class="row g-2">
-                    <div v-for="card in collectionItems.slice(0, show_more ? collectionItems.length : 2)" class="col-6">
-                        <mini-card-component :card="card"></mini-card-component>
+            <div v-if="collectionName" class="col-12">
+                <hr>
+                <div class="mb-3">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <span class="fw-bold">Meer zoals dit</span>
+                    </div>
+                    <div v-for="card in sortedCollectionItems">
+                        <mini-card-component :card="card" class="mb-3"></mini-card-component>
                     </div>
                 </div>
             </div>
 
             <!-- info -->
-            <span class="small fst-italic">Item-nummer: {{ card.id }}</span>
+            <!-- <span class="small fst-italic">Item-nummer: {{ card.id }}</span>-->
         </div>
     </transition>
 
@@ -148,7 +133,7 @@
 
 </template>
 <script setup>
-import {computed, onMounted, ref} from "vue";
+import {computed, onMounted} from "vue";
 import {useContentStore} from "@/stores/content.js";
 import {storeToRefs} from "pinia";
 import {useGeneralStore} from "@/stores/general.js";
@@ -157,10 +142,8 @@ import MiniCardComponent from "@/components/miniCardComponent.vue";
 
 const contentStore = useContentStore()
 const generalStore = useGeneralStore()
-const {images, filters} = storeToRefs(contentStore)
+const {images, filters, selectedCardId} = storeToRefs(contentStore)
 const {likedItems, seenItems} = storeToRefs(generalStore)
-
-const show_more = ref(false)
 
 const props = defineProps({
     card: {type: Object, required: true}
@@ -176,22 +159,43 @@ const imgScr = computed(() => {
         (!props.card['twitch_id'] && !props.card['youtube_id'] ? images.value['640'][`no_video`] : images.value['640'][`default`])
 })
 
+/**
+ * Convert seconds to h:m:s.
+ * @type {ComputedRef<string>}
+ */
 const duration = computed(() => {
     return secondsToHms()
 })
+
+/**
+ * Get VOD title.
+ * @type {ComputedRef<ComputedRef<*>>}
+ */
 const title = computed(() => {
     return setMainTitle()
 })
+
 const shareUrl = computed(() => {
     const host = window.location.host;
     return `${host}/item/${card.value['id']}`
 })
-const isLiked = computed(() => {
-    return likedItems.value.includes(props.card['id'])
-})
+
+/**
+ * Whether user has seen VOD.
+ * @type {ComputedRef<*>}
+ */
 const isSeen = computed(() => {
     return seenItems.value.includes(props.card['id'])
 })
+
+/**
+ * Whether user has liked VOD.
+ * @type {ComputedRef<*>}
+ */
+const isLiked = computed(() => {
+    return likedItems.value.includes(props.card['id'])
+})
+
 const date = computed(() => {
     return date ? new Date(props.card['date']).toLocaleString('nl-NL', {
         weekday: 'short',
@@ -200,11 +204,39 @@ const date = computed(() => {
         year: "2-digit",
     }) : '-'
 })
+
+/**
+ * Name of collection if card is in one.
+ * @type {ComputedRef<*|null>}
+ */
 const collectionName = computed(() => {
     return card.value.collection ? contentStore.getCollection(card.value.collection).title : null
 })
+
+/**
+ * List of all items in the same collection as current card.
+ * @type {ComputedRef<*|*[]>}
+ */
 const collectionItems = computed(() => {
-    return collectionName.value ? contentStore.getSingleCollection(card.value['collection']) : []
+    return collectionName.value ? contentStore.getSingleCollection(card.value['collection'], card.value.id) : []
+})
+
+/**
+ * Sorted collectionItems.
+ * @type {ComputedRef<*|*[]>}
+ */
+const sortedCollectionItems = computed(() => {
+    return collectionItems.value.length ? collectionItems.value.sort((a, b) => {
+        let dateA = new Date(a.date);
+        let dateB = new Date(b.date);
+        return dateB - dateA;
+    }) : []
+})
+
+const activities = computed(() => {
+    if (card.value.activity) return [].concat(Array.isArray(card.value.activity) ? card.value.activity.map(act => {return {title: act}}) : [{title: card.value.activity}])
+    else if (card.value.activities) return [].concat(card.value.activities)
+    else return []
 })
 
 onMounted(() => {
@@ -256,6 +288,7 @@ function searchActivity(activity) {
     contentStore.resetFilters() //reset
     filters.value.activity = [activity] //set
     contentStore.filter() //call
+    //TODO close modal...
 }
 </script>
 

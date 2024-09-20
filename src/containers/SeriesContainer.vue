@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import {defineAsyncComponent, ref, watch} from "vue";
+import {computed, defineAsyncComponent, ref, watch} from "vue";
 import {storeToRefs} from "pinia";
 import {useInfiniteScroll} from "@vueuse/core";
 import {useContentStore} from "@/stores/content.js";
@@ -49,7 +49,6 @@ function initialize() {
  * Start from 0 if base data changes due to filter.
  */
 watch(() => sortedDataSeries.value, () => {
-    console.log('change!');
     initialize()
 }, {deep: true})
 

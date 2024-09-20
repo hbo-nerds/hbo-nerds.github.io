@@ -1,18 +1,17 @@
 <template>
     <div class="modal fade" id="playlist-modal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-            <div class="modal-content">
-                <div class="modal-header border-0">
+        <div class="modal-dialog modal-dialog-centered modal-xs">
+            <div class="modal-content" style="background-color: #292929">
+                <div class="modal-header px-4 border-0">
                     <h1 class="modal-title fs-6 me-2">Save to...</h1>
                     <button ref="close" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <span class="small">{{selectedCardTitle}}</span>
+                <div class="modal-body px-4">
                     <div v-for="(i, idx) in playlists" class="py-2" :key="idx">
                         <div class="form-check">
-                            <input @change="toggle($event, i.title)" name="playlist" class="form-check-input" type="checkbox"
+                            <input @change="toggle($event, i.title)" name="playlist" class="form-check-input me-3" type="checkbox"
                                    :id="'box-' + idx" :checked="getValue(i.items)" :value="'list'+idx">
-                            <label class="form-check-label" :for="'box-' + idx">
+                            <label class="form-check-label fw-lighter small" :for="'box-' + idx">
                                 {{i.title}}
                             </label>
                         </div>

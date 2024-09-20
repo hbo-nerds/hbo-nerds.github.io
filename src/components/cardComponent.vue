@@ -74,8 +74,8 @@
                     </div>
                 </div>
                 <div>
-                    <button aria-expanded="false" class="btn btn-sm  rounded-circle lh-1 p-2" data-bs-toggle="dropdown">
-                        <i class="bi bi-three-dots-vertical"></i>
+                    <button aria-expanded="false" class="btn btn-circle btn-sm rounded-circle" data-bs-toggle="dropdown" data-bs-offset="0,10">
+                        <i class="bi bi-three-dots-vertical lh-1"></i>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li v-if="card['collection']">
@@ -278,6 +278,10 @@ const yearAgo = computed(() => {
     span:not(:first-of-type):before
         margin: 0 4px
         content: "•"
+
+.dropdown-menu
+    background-color: #292929
+    --bs-dropdown-link-hover-bg: #3d3d3d
 
 .stack
     position: absolute
