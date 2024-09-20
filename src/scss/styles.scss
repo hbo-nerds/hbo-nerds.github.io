@@ -4,11 +4,11 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 $new-font-sizes: (
-        7: 0.75rem,
+  7: 0.75rem,
 );
 $new-grid-breakpoints: (
-        3xl: 1750px,
-        4xl: 2075px
+  3xl: 1750px,
+  4xl: 2075px,
 );
 $font-sizes: map-merge($font-sizes, $new-font-sizes);
 $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
@@ -27,7 +27,7 @@ html :not(.hide-scrollbar) {
 
 body {
   height: 100vh;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   overflow: hidden;
 }
 
@@ -38,32 +38,32 @@ body {
 }
 
 .text-yt {
-  color: #FF0000 !important;
+  color: #ff0000 !important;
 }
 .border-yt {
-  border-color: #FF0000 !important;
+  border-color: #ff0000 !important;
 }
 .bg-yt {
-  background-color: #FF0000 !important;
+  background-color: #ff0000 !important;
 }
 .text-tw {
-  color: #6441A5 !important;
+  color: #6441a5 !important;
 }
 .border-tw {
-  border-color: #6441A5 !important;
+  border-color: #6441a5 !important;
 }
 .bg-tw {
-  background-color: #6441A5 !important;
+  background-color: #6441a5 !important;
 }
 
-[data-bs-theme=dark] {
+[data-bs-theme="dark"] {
   --bs-body-bg-rgb: 15, 15, 15;
   --bs-body-bg: #000000;
 }
 
 input[type="checkbox"],
 input[type="checkbox"] + label {
-  cursor:pointer;
+  cursor: pointer;
 }
 
 //------------ ROUNDED BUTTONS ----------------//
