@@ -10357,7 +10357,14 @@
             ],
             "twitch_id": "95809561",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "main"
@@ -10463,7 +10470,14 @@
             ],
             "twitch_id": "99703195",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "main"
@@ -11032,8 +11046,14 @@
             "twitchtracker_id": "24257325040",
             "twitch_id": "118555042",
             "extra_urls": [
-                "https://www.twitch.tv/videos/119226671",
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "main"
@@ -11227,7 +11247,14 @@
             "twitchtracker_id": "24413175536",
             "twitch_id": "119226671",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "casual"
@@ -11312,8 +11339,14 @@
             "twitchtracker_id": "24478300720",
             "twitch_id": "123374337",
             "extra_urls": [
-                "https://www.twitch.tv/videos/125959350",
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "casual"
@@ -11598,7 +11631,14 @@
             "twitchtracker_id": "24674837776",
             "twitch_id": "125958796",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "casual"
@@ -11743,7 +11783,14 @@
             "twitchtracker_id": "24778324672",
             "twitch_id": "128530785",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                {
+                    "label": "deel 1 t/m 5",
+                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+                },
+                {
+                    "label": "deel 6 t/m 10",
+                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+                }
             ],
             "tags": [
                 "main"
@@ -12379,7 +12426,7 @@
             "type": "stream",
             "date": "2017-04-26",
             "duration": 11520,
-            "youtube_id": "ArmL8deA3_4",
+            "youtube_id": "jO9P8vberNE",
             "collection": 40,
             "titles": [
                 "Little Nightmares (Deel 3)"
@@ -12397,7 +12444,10 @@
             "twitchtracker_id": "25143273552",
             "twitch_id": "148515888",
             "extra_urls": [
-                "https://youtube.com/watch?v=jO9P8vberNE"
+                {
+                    "label": "timon dungeon keeper perspectief 13 minuten",
+                    "url": "https://www.youtube.com/watch?v=ArmL8deA3_4"
+                }
             ],
             "tags": [
                 "main"
@@ -12471,9 +12521,6 @@
                 }
             ],
             "twitchtracker_id": "25174545104",
-            "extra_urls": [
-                "https://www.youtube.com/watch?v=kqRq5ZThBjI"
-            ],
             "tags": [
                 "casual",
                 "solo"
@@ -12856,61 +12903,61 @@
             "collection": 18,
             "activity": "Resident Evil 7"
         },
-      {
-        "id": "b42e",
-        "type": "stream",
-        "date": "2017-05-17",
-        "description": "Marathon Stream 450 subs",
-        "duration": 18960,
-        "youtube_id": "P9GgFvOx_Ec",
-        "titles": [
-          "Afterparty with the boyz 4 life"
-        ],
-        "activities": [
-          {
-            "title": "Variety",
-            "duration": 2460
-          },
-          {
-            "title": "LocoRoco",
-            "duration": 2400
-          },
-          {
-            "title": "Lethal League",
-            "duration": 1200
-          },
-          {
-            "title": "Mortal Kombat X",
-            "duration": 1200
-          },
-          {
-            "title": "Mario Kart 8",
-            "duration": 2400
-          },
-          {
-            "title": "Shovel Knight: Specter of Torment",
-            "duration": 600
-          },
-          {
-            "title": "Tetris",
-            "duration": 4800
-          },
-          {
-            "title": "Rocket League",
-            "duration": 1800
-          },
-          {
-            "title": "EA Sports UFC 2",
-            "duration": 2100
-          }
-        ],
-        "twitchtracker_id": "25299842016",
-        "tags": [
-          "main"
-        ],
-        "time_start": "19:18:00",
-        "time_end": "00:35:00"
-      },
+        {
+            "id": "b42e",
+            "type": "stream",
+            "date": "2017-05-17",
+            "description": "Marathon Stream 450 subs",
+            "duration": 18960,
+            "youtube_id": "P9GgFvOx_Ec",
+            "titles": [
+                "Afterparty with the boyz 4 life"
+            ],
+            "activities": [
+                {
+                    "title": "Variety",
+                    "duration": 2460
+                },
+                {
+                    "title": "LocoRoco",
+                    "duration": 2400
+                },
+                {
+                    "title": "Lethal League",
+                    "duration": 1200
+                },
+                {
+                    "title": "Mortal Kombat X",
+                    "duration": 1200
+                },
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 2400
+                },
+                {
+                    "title": "Shovel Knight: Specter of Torment",
+                    "duration": 600
+                },
+                {
+                    "title": "Tetris",
+                    "duration": 4800
+                },
+                {
+                    "title": "Rocket League",
+                    "duration": 1800
+                },
+                {
+                    "title": "EA Sports UFC 2",
+                    "duration": 2100
+                }
+            ],
+            "twitchtracker_id": "25299842016",
+            "tags": [
+                "main"
+            ],
+            "time_start": "19:18:00",
+            "time_end": "00:35:00"
+        },
         {
             "id": "5015",
             "type": "video",
@@ -14769,8 +14816,14 @@
             "twitchtracker_id": "25786074176",
             "twitch_id": "165231534",
             "extra_urls": [
-                "https://www.twitch.tv/videos/165231851",
-                "https://www.twitch.tv/videos/165232313"
+                {
+                    "label": "Stream 2/3 (stream is in drie delen geknipt",
+                    "url": "https://www.twitch.tv/videos/165231851"
+                },
+                {
+                    "label": "Stream 3/3 (stream is in drie delen geknipt",
+                    "url": "https://www.twitch.tv/videos/165232313"
+                }
             ],
             "tags": [
                 "casual"
@@ -14950,13 +15003,15 @@
             "twitchtracker_id": "25836766960",
             "twitch_id": "165233276",
             "extra_urls": [
-                "https://www.twitch.tv/videos/165233495"
+                {
+                    "label": "Deel 2",
+                    "url": "https://www.twitch.tv/videos/165233495"
+                }
             ],
             "tags": [
                 "main"
             ],
             "time_start": "20:38:00",
-            "description": "deel2: https://www.twitch.tv/videos/165233495",
             "time_end": "01:15:00"
         },
         {
@@ -15059,8 +15114,14 @@
             "twitchtracker_id": "25853299200",
             "twitch_id": "165234579",
             "extra_urls": [
-                "https://www.twitch.tv/videos/165234837",
-                "https://youtube.com/watch?v=Kfgi63cZz58"
+                {
+                    "label": "twitch deel 2",
+                    "url": "https://www.twitch.tv/videos/165234837"
+                },
+                {
+                    "label": "youtube deel 2",
+                    "url": "https://youtube.com/watch?v=Kfgi63cZz58"
+                }
             ],
             "tags": [
                 "main",
@@ -15516,9 +15577,18 @@
             "twitchtracker_id": "25968437856",
             "twitch_id": "165751036",
             "extra_urls": [
-                "https://www.twitch.tv/videos/165751449",
-                "https://www.twitch.tv/videos/165752394",
-                "https://www.twitch.tv/videos/165752505"
+                {
+                    "label": " deel 2",
+                    "url": "https://www.twitch.tv/videos/165751449"
+                },
+                {
+                    "label": " deel 3",
+                    "url": "https://www.twitch.tv/videos/165752394"
+                },
+                {
+                    "label": " deel 4",
+                    "url": "https://www.twitch.tv/videos/165752505"
+                }
             ],
             "tags": [
                 "main"
@@ -15827,7 +15897,10 @@
             "twitchtracker_id": "26043734768",
             "twitch_id": "177544470",
             "extra_urls": [
-                "https://www.twitch.tv/videos/170948769"
+                {
+                    "label": "life is strange deel 2",
+                    "url": "https://www.twitch.tv/videos/170948769"
+                }
             ],
             "tags": [
                 "casual"
@@ -16071,9 +16144,6 @@
                 }
             ],
             "twitchtracker_id": "26133869568",
-            "extra_urls": [
-                "https://www.youtube.com/watch?v=Rm9LvA-45_Q"
-            ],
             "tags": [
                 "casual"
             ],
@@ -16918,7 +16988,10 @@
             "twitchtracker_id": "26407062384",
             "twitch_id": "202990908",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "volledige playthrough gratis",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "main"
@@ -16974,7 +17047,10 @@
             ],
             "twitchtracker_id": "26420271776",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "volledige playthrough gratis",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "casual"
@@ -17104,7 +17180,10 @@
             ],
             "twitchtracker_id": "26452900608",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "volledige playthrough gratis",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "casual"
@@ -17153,7 +17232,10 @@
             ],
             "twitchtracker_id": "26461434912",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "volledige playthrough gratis",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "main"
@@ -17179,7 +17261,10 @@
             ],
             "twitchtracker_id": "26467223152",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "volledige playthrough gratis",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "casual"
@@ -17441,7 +17526,10 @@
             ],
             "twitchtracker_id": "26555136208",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "volledige playthrough gratis",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "main"
@@ -17456,7 +17544,7 @@
             "duration": 7800,
             "youtube_id": "VhYCJX90Jjg",
             "titles": [
-                "Een worstelaar maken (voor tegen Peter)"
+                "Werken op de boerderij, m'n jongen"
             ],
             "activities": [
                 {
@@ -17470,12 +17558,13 @@
                 {
                     "title": "WWE 2K18",
                     "duration": 2700
+                },
+                {
+                    "title": "Farming simulator",
+                    "duration": 2700
                 }
             ],
             "twitchtracker_id": "26560710848",
-            "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
-            ],
             "tags": [
                 "casual"
             ],
@@ -17500,7 +17589,10 @@
             "twitchtracker_id": "26570871472",
             "twitch_id": "210583678",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cuT4G75K2wM"
+                {
+                    "label": "deel 2",
+                    "url": "https://www.youtube.com/watch?v=cuT4G75K2wM"
+                }
             ],
             "tags": [
                 "main"
@@ -21894,7 +21986,10 @@
             ],
             "twitchtracker_id": "28601216368",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=vT2PrNXaHV8"
+                {
+                    "label": "deel 2",
+                    "url": "https://www.youtube.com/watch?v=vT2PrNXaHV8"
+                }
             ],
             "tags": [
                 "casual"
@@ -22560,16 +22655,19 @@
             ],
             "twitchtracker_id": "29040464432",
             "twitch_id": "271986520",
-            "extra_urls": [
-                "https://www.twitch.tv/videos/271985297"
-            ],
             "tags": [
                 "casual",
                 "e3"
             ],
             "time_start": "21:12:00",
             "time_end": "04:55:00",
-            "collection": 72
+            "collection": 72,
+            "extra_urls": [
+                {
+                    "label": "twitch stream xbox presentatie",
+                    "url": "https://www.twitch.tv/videos/271985297"
+                }
+            ]
         },
         {
             "id": "010e",
@@ -22606,16 +22704,19 @@
             ],
             "twitchtracker_id": "29052708640",
             "twitch_id": "272383040",
-            "extra_urls": [
-                "https://www.twitch.tv/videos/272375871"
-            ],
             "tags": [
                 "main",
                 "e3"
             ],
             "time_start": "21:06:00",
             "time_end": "04:35:00",
-            "collection": 72
+            "collection": 72,
+            "extra_urls": [
+                {
+                    "label": "twitch stream ubisoft presentatie",
+                    "url": "https://www.twitch.tv/videos/272375871"
+                }
+            ]
         },
         {
             "id": "42a6",
@@ -22686,15 +22787,21 @@
             ],
             "twitchtracker_id": "29077267152",
             "twitch_id": "273490346",
-            "extra_urls": [
-                "https://www.twitch.tv/videos/275605968",
-                "https://www.twitch.tv/videos/275606662"
-            ],
             "tags": [
                 "main"
             ],
             "time_start": "20:23:00",
-            "time_end": "23:45:00"
+            "time_end": "23:45:00",
+            "extra_urls": [
+                {
+                    "label": "deel 2",
+                    "url": "https://www.twitch.tv/videos/275605968"
+                },
+                {
+                    "label": "deel 3",
+                    "url": "https://www.twitch.tv/videos/275606662"
+                }
+            ]
         },
         {
             "id": "43e5",
@@ -22769,14 +22876,17 @@
             ],
             "twitchtracker_id": "29165807312",
             "twitch_id": "278348963",
-            "extra_urls": [
-                "https://www.youtube.com/watch?v=qJtp5HhkwSU"
-            ],
             "tags": [
                 "main"
             ],
             "time_start": "20:24:00",
-            "time_end": "23:45:00"
+            "time_end": "23:45:00",
+            "extra_urls": [
+                {
+                    "label": "Deel 3",
+                    "url": "https://www.youtube.com/watch?v=qJtp5HhkwSU"
+                }
+            ]
         },
         {
             "id": "c855",
@@ -24330,30 +24440,30 @@
             "time_start": "21:34:00",
             "time_end": "23:45:00"
         },
-      {
-        "id": "1a8b",
-        "type": "stream",
-        "date": "2018-09-03",
-        "description": "De mannen gaan bijna Two Point Hospital spelen, maar komen er net op tijd achter dat ze daar eigenlijk geen zin in hebben en vullen de stream dan maar met het bekijken van filmpjes van aapjes en donkere grotten.",
-        "duration": 9840,
-        "youtube_id": "YVWo-KXL0po",
-        "titles": [
-          "Werken in een ziekenhuis"
-        ],
-        "activities": [
-          {
-            "title": "Two Point Hospital",
-            "duration": 9840
-          }
-        ],
-        "twitchtracker_id": "30206458512",
-        "twitch_id": "307109484",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:20:00",
-        "time_end": "23:05:00"
-      },
+        {
+            "id": "1a8b",
+            "type": "stream",
+            "date": "2018-09-03",
+            "description": "De mannen gaan bijna Two Point Hospital spelen, maar komen er net op tijd achter dat ze daar eigenlijk geen zin in hebben en vullen de stream dan maar met het bekijken van filmpjes van aapjes en donkere grotten.",
+            "duration": 9840,
+            "youtube_id": "YVWo-KXL0po",
+            "titles": [
+                "Werken in een ziekenhuis"
+            ],
+            "activities": [
+                {
+                    "title": "Two Point Hospital",
+                    "duration": 9840
+                }
+            ],
+            "twitchtracker_id": "30206458512",
+            "twitch_id": "307109484",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:20:00",
+            "time_end": "23:05:00"
+        },
         {
             "id": "34cc",
             "type": "video",
@@ -24853,34 +24963,34 @@
             "time_start": "20:40:00",
             "time_end": "22:45:00"
         },
-      {
-        "id": "9f30",
-        "type": "stream",
-        "date": "2018-10-04",
-        "description": "timpie de main male speelt dark souls tot hij de eerste 3 bazen verslagen heeft (DEEL 1) dit is een straf stream nadat peter hem verslagen heeft in een portal speedrun",
-        "duration": 13920,
-        "youtube_id": "peXuS0Byvho",
-        "titles": [
-          "Eerste 3 bazen in Dark Souls verslaan - Timons Strafstream (Poging 2)"
-        ],
-        "activities": [
-          {
-            "title": "Dark Souls",
-            "duration": 10620
-          },
-          {
-            "title": "Shadow of the Tomb Raider",
-            "duration": 3300
-          }
-        ],
-        "twitchtracker_id": "30634163760",
-        "twitch_id": "342462761",
-        "tags": [
-          "casual"
-        ],
-        "time_start": "20:22:00",
-        "time_end": "00:15:00"
-      },
+        {
+            "id": "9f30",
+            "type": "stream",
+            "date": "2018-10-04",
+            "description": "timpie de main male speelt dark souls tot hij de eerste 3 bazen verslagen heeft (DEEL 1) dit is een straf stream nadat peter hem verslagen heeft in een portal speedrun",
+            "duration": 13920,
+            "youtube_id": "peXuS0Byvho",
+            "titles": [
+                "Eerste 3 bazen in Dark Souls verslaan - Timons Strafstream (Poging 2)"
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls",
+                    "duration": 10620
+                },
+                {
+                    "title": "Shadow of the Tomb Raider",
+                    "duration": 3300
+                }
+            ],
+            "twitchtracker_id": "30634163760",
+            "twitch_id": "342462761",
+            "tags": [
+                "casual"
+            ],
+            "time_start": "20:22:00",
+            "time_end": "00:15:00"
+        },
         {
             "id": "9e3e",
             "type": "podcast",
@@ -34936,31 +35046,31 @@
             "youtube_id": "FJaXidkyZj0",
             "activity": "Rocket Arena"
         },
-      {
-        "id": "f3b3",
-        "type": "stream",
-        "date": "2020-07-22",
-        "description": "Timon is aan het roer. Ze spelen de intro missie en de eerste Yuna missie in de open world. Peter bespot Timon's hooikoorts, maar geeft chat dan de schuld.  Timon voelt de game hard en wil een honorabele samoerai worden. Peter begint het spel ook te voelen.  Ze proberen meerdere malen te stunten met paarden.  Ze zijn nog steeds geen scan-mannen en Timon haat het menu met alle upgrades van vaardigheden.",
-        "duration": 6420,
-        "youtube_id": "uyDPNSfAl1w",
-        "titles": [
-          "Ghost of Tsushima (op zijn moeilijkst)"
-        ],
-        "activities": [
-          {
-            "title": "Ghost of Tsushima",
-            "duration": 6420
-          }
-        ],
-        "twitchtracker_id": "118460722",
-        "twitch_id": "692602119",
-        "tags": [
-          "main",
-          "casual"
-        ],
-        "time_start": "20:17:00",
-        "time_end": "22:05:00"
-      },
+        {
+            "id": "f3b3",
+            "type": "stream",
+            "date": "2020-07-22",
+            "description": "Timon is aan het roer. Ze spelen de intro missie en de eerste Yuna missie in de open world. Peter bespot Timon's hooikoorts, maar geeft chat dan de schuld.  Timon voelt de game hard en wil een honorabele samoerai worden. Peter begint het spel ook te voelen.  Ze proberen meerdere malen te stunten met paarden.  Ze zijn nog steeds geen scan-mannen en Timon haat het menu met alle upgrades van vaardigheden.",
+            "duration": 6420,
+            "youtube_id": "uyDPNSfAl1w",
+            "titles": [
+                "Ghost of Tsushima (op zijn moeilijkst)"
+            ],
+            "activities": [
+                {
+                    "title": "Ghost of Tsushima",
+                    "duration": 6420
+                }
+            ],
+            "twitchtracker_id": "118460722",
+            "twitch_id": "692602119",
+            "tags": [
+                "main",
+                "casual"
+            ],
+            "time_start": "20:17:00",
+            "time_end": "22:05:00"
+        },
         {
             "id": "a6c4",
             "type": "stream",
@@ -50107,26 +50217,26 @@
             "collection": 20,
             "type": "stream"
         },
-      {
-        "date": "2024-05-06",
-        "description": "Peter speelt Murder House in zijn eentje. hij kloot een uur met een piano die niet werkt en speelt het spel helemaal uit",
-        "time_start": "20:38:09",
-        "time_end": "00:14:42",
-        "titles": [
-          "Er kan er maar één zijn."
-        ],
-        "activities": [
-          {
-            "title": "Murder House",
-            "duration": 10000
-          }
-        ],
-        "duration": 12993,
-        "twitch_id": "2139170682",
-        "youtube_id": "1N_-anfSWjM",
-        "id": "7e2c",
-        "type": "stream"
-      },
+        {
+            "date": "2024-05-06",
+            "description": "Peter speelt Murder House in zijn eentje. hij kloot een uur met een piano die niet werkt en speelt het spel helemaal uit",
+            "time_start": "20:38:09",
+            "time_end": "00:14:42",
+            "titles": [
+                "Er kan er maar één zijn."
+            ],
+            "activities": [
+                {
+                    "title": "Murder House",
+                    "duration": 10000
+                }
+            ],
+            "duration": 12993,
+            "twitch_id": "2139170682",
+            "youtube_id": "1N_-anfSWjM",
+            "id": "7e2c",
+            "type": "stream"
+        },
         {
             "date": "2024-05-08",
             "time_start": "20:36:46",
@@ -51049,6 +51159,14 @@
             "type": "stream"
         },
         {
+            "id": "60a7",
+            "type": "video",
+            "date": "2024-09-17",
+            "title": "Eurotruck Simulator 2   - Lekker spelen",
+            "duration": 237,
+            "youtube_id": "rc8c-dpzFJo"
+        },
+        {
             "date": "2024-09-18",
             "time_start": "20:30:39",
             "time_end": "22:14:41",
@@ -51068,12 +51186,42 @@
             "type": "stream"
         },
         {
-            "id": "60a7",
-            "type": "video",
-            "date": "2024-09-17",
-            "title": "Eurotruck Simulator 2   - Lekker spelen",
-            "duration": 237,
-            "youtube_id": "rc8c-dpzFJo"
+            "date": "2024-09-23",
+            "time_start": "20:30:27",
+            "time_end": "22:36:30",
+            "titles": [
+                "We openen onze Pokémon kaarten winkel!"
+            ],
+            "activities": [
+                {
+                    "title": "TCG Card Shop Simulator",
+                    "duration": 1
+                }
+            ],
+            "duration": 7563,
+            "twitch_id": "2258666921",
+            "youtube_id": "SRGZ-GcjfpM",
+            "id": "ea19",
+            "type": "stream"
+        },
+        {
+            "date": "2024-09-24",
+            "time_start": "23:29:53",
+            "time_end": "00:44:15",
+            "titles": [
+                "PLAYSTATION STATE OF PLAY (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 4462,
+            "twitch_id": "2259555758",
+            "youtube_id": "JLM-dzdp5CM",
+            "id": "c72c",
+            "type": "stream"
         }
     ]
 }
