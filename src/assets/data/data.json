@@ -51222,6 +51222,25 @@
             "youtube_id": "JLM-dzdp5CM",
             "id": "c72c",
             "type": "stream"
+        },
+        {
+            "date": "2024-09-25",
+            "time_start": "20:40:04",
+            "time_end": "22:52:41",
+            "titles": [
+                "SUPER SMASH TOERNOOI + GROTE VERANDERINGEN 2025"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Brothers Ultimate",
+                    "duration": 1
+                }
+            ],
+            "duration": 7957,
+            "twitch_id": "2260299537",
+            "youtube_id": "5_rZ7BbIMJc",
+            "id": "952a",
+            "type": "stream"
         }
     ]
 }
