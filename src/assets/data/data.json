@@ -31549,7 +31549,7 @@
                 "casual"
             ],
             "time_start": "20:26:00",
-            "free": true,
+            
             "time_end": "00:25:00"
         },
         {
@@ -31577,28 +31577,6 @@
             ],
             "time_start": "20:24:00",
             "time_end": "00:05:00"
-        },
-        {
-            "id": "03b1",
-            "type": "stream",
-            "date": "2019-12-03",
-            "duration": 660,
-            "titles": [
-                "De grootste Call of Duty update ooit checken!"
-            ],
-            "activities": [
-                {
-                    "title": "Call of Duty: Warzone",
-                    "duration": 660
-                }
-            ],
-            "twitchtracker_id": "257746385",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:33:00",
-            "free": true,
-            "time_end": "20:45:00"
         },
         {
             "id": "2f9b",
