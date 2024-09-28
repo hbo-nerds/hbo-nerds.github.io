@@ -1,8 +1,8 @@
 import router from "@/router/index.js";
-import { filename } from "pathe/utils";
-import { defineStore } from "pinia";
+import {filename} from "pathe/utils";
+import {defineStore} from "pinia";
 import og_data from "../assets/data/data.json";
-import { useGeneralStore } from "./general.js";
+import {useGeneralStore} from "./general.js";
 
 export const useContentStore = defineStore("content", {
   state: () => ({
@@ -18,11 +18,13 @@ export const useContentStore = defineStore("content", {
     search: "",
     sortOption: "newOld",
     sortOptionSeries: "newOld",
+    filtering: false,
     filters: {
       type: ["all"],
       platform: ["all"],
       free: false,
-      vodOnly: false,
+      vod: "all",
+      // vodOnly: false,
       date: {
         range: "all",
         after: "",
@@ -314,6 +316,36 @@ export const useContentStore = defineStore("content", {
       });
       return res;
     },
+    /**
+     * Get data for heatmap.
+     * @returns {*}
+     */
+    groupedYearDate() {
+      return this.sortedData.reduce((p, c) => {
+        let date = new Date(c.date);
+        let year = date.getFullYear();
+        if (p.hasOwnProperty(year)) {
+          p[year].dates.push({
+            id: c.id,
+            thumbnail: this.getCardThumbnail(c),
+            date: date,
+            count: (c.duration / 3600).toFixed(1),
+          });
+        } else {
+          p[year] = {
+            dates: [
+              {
+                id: c.id,
+                thumbnail: this.getCardThumbnail(c),
+                date: date,
+                count: (c.duration / 3600).toFixed(1),
+              },
+            ],
+          };
+        }
+        return p;
+      }, {})
+    },
   },
   actions: {
     /**
@@ -323,6 +355,62 @@ export const useContentStore = defineStore("content", {
      */
     getSingleCard(id) {
       return this.content.find((item) => item.id === id);
+    },
+    /**
+     * Return the title for a single card.
+     * @param card
+     * @returns {*}
+     */
+    getCardTitle(card) {
+      if (["podcast", "video"].includes(card["type"])) return card["title"];
+      else {
+        if (card["custom_title"]) return card["custom_title"];
+        else if (card["title_main"]) return card["titles"][card["title_main"]];
+        else return card["titles"][0];
+      }
+    },
+    /**
+     * Return the thumbnail for a single card.
+     * @param card
+     * @returns {*}
+     */
+    getCardThumbnail(card) {
+      return (
+        this.images["640"][`${card["twitch_id"]}`] ||
+        this.images["640"][`${card["youtube_id"]}`] ||
+        (!card["twitch_id"] && !card["youtube_id"]
+          ? this.images["640"][`no_video`]
+          : this.images["640"][`default`])
+      );
+    },
+    /**
+     * Return the duration for a single card.
+     * @param card
+     * @returns {*}
+     */
+    getCardDuration(card) {
+      let d = Number(card.duration);
+      let h = Math.floor(d / 3600);
+      let m = Math.floor((d % 3600) / 60);
+      let s = Math.floor((d % 3600) % 60);
+      return ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
+    },
+    /**
+     * Return the activities for a single card.
+     * @param card
+     * @returns {*}
+     */
+    getCardActivities(card) {
+      if (card.activity)
+        return [].concat(
+          Array.isArray(card.activity)
+            ? card.activity.map((act) => {
+                return { title: act };
+              })
+            : [{ title: card.activity }],
+        );
+      else if (card.activities) return [].concat(card.activities);
+      else return [];
     },
     /**
      * Return a list of items within collection
@@ -368,7 +456,7 @@ export const useContentStore = defineStore("content", {
      * Main filter function.
      */
     filter() {
-      console.log("start filtering...");
+      this.filtering = true;
       this.updateUrl();
 
       const s = useGeneralStore();
@@ -444,8 +532,7 @@ export const useContentStore = defineStore("content", {
           this.f_activity(item),
       );
       this.filteredData = [...data];
-
-      console.log("done filtering.");
+      this.filtering = false;
     },
     /**
      * Filter items by type.
@@ -503,8 +590,15 @@ export const useContentStore = defineStore("content", {
      * Filter item by VOD availability.
      */
     f_vod(item) {
-      if (!this.filters.vodOnly) return true;
-      return item["twitch_id"] || item["youtube_id"];
+      if (this.filters.vod === 'all') return true
+      else if (this.filters.vod === 'vod_only')
+        return item["twitch_id"] || item["youtube_id"];
+      else if (this.filters.vod === 'no_vod_only')
+        return !item["twitch_id"] && !item["youtube_id"];
+
+
+      // if (!this.filters.vodOnly) return true;
+      // return item["twitch_id"] || item["youtube_id"];
     },
     /**
      * Filter items by date.
@@ -709,9 +803,10 @@ export const useContentStore = defineStore("content", {
         type: ["all"],
         platform: ["all"],
         free: false,
-        vodOnly: false,
+        vod: 'all',
+        // vodOnly: false,
         date: {
-          range: "alle",
+          range: "all",
           after: "",
           before: "",
         },
@@ -748,7 +843,7 @@ export const useContentStore = defineStore("content", {
       if (urlParams.getAll("platform")) this.filters.platform = urlParams.getAll("platform");
       if (urlParams.getAll("activity")) this.filters.activity = urlParams.getAll("activity");
       if (urlParams.get("free")) this.filters.free = urlParams.get("free");
-      if (urlParams.get("vodOnly")) this.filters.vodOnly = urlParams.get("vodOnly");
+      if (urlParams.get("vod")) this.filters.vod = urlParams.get("vod");
       if (urlParams.get("date_weeks"))
         this.filters.date.range = parseInt(urlParams.get("date_weeks"));
       if (urlParams.get("duration")) this.filters.duration = urlParams.get("duration");
@@ -767,7 +862,7 @@ export const useContentStore = defineStore("content", {
         : [];
       let search_params = new URLSearchParams(types.concat(acts).concat(platforms));
       if (this.filters.free) search_params.append("free", this.filters.free);
-      if (this.filters.vodOnly) search_params.append("vodOnly", this.filters.vodOnly);
+      if (this.filters.vod) search_params.append("vod", this.filters.vod);
       if (this.filters.date.range !== "all")
         search_params.append("date_weeks", this.filters.date.range);
       if (this.filters.duration !== "all") search_params.append("duration", this.filters.duration);
@@ -779,6 +874,6 @@ export const useContentStore = defineStore("content", {
       } else {
         router.replace({ query: null }).then((r) => {});
       }
-    },
+    }
   },
 });

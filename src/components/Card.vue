@@ -103,13 +103,13 @@
 
           <div class="inline-meta text-body-secondary">
             <span v-if="daysAgo < 14" class="small"
-              >{{ daysAgo }} {{ daysAgo > 1 ? "dagen" : "dag" }} geleden</span
+              >{{ daysAgo }} {{ daysAgo !== 1 ? "dagen" : "dag" }} geleden</span
             >
             <span v-else-if="weeksAgo < 4" class="small"
-              >{{ weeksAgo }} {{ weeksAgo > 1 ? "weken" : "week" }} geleden</span
+              >{{ weeksAgo }} {{ weeksAgo !== 1 ? "weken" : "week" }} geleden</span
             >
             <span v-else-if="monthsAgo < 12" class="small"
-              >{{ monthsAgo }} {{ monthsAgo > 1 ? "maanden" : "maand" }} geleden</span
+              >{{ monthsAgo }} {{ monthsAgo !== 1 ? "maanden" : "maand" }} geleden</span
             >
             <span v-else class="small">{{ yearAgo }} jaar geleden</span>
             <span v-if="card['collection']" class="small"
@@ -187,7 +187,7 @@
       class="d-none"
       type="button"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#singleCardModel"
     ></button>
   </div>
 </template>
@@ -331,12 +331,7 @@ const weeksAgo = computed(() => {
  * @type {ComputedRef<number>}
  */
 const monthsAgo = computed(() => {
-  const now = new Date();
-  return (
-    now.getMonth() -
-    new Date(props.card["date"]).getMonth() +
-    12 * (now.getFullYear() - new Date(props.card["date"]).getFullYear())
-  );
+  return Math.floor(weeksAgo.value / 4);
 });
 
 /**

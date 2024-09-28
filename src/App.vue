@@ -6,7 +6,7 @@
       class="flex-grow-1 d-flex flex-column bg-body overflow-y-auto overflow-x-hidden pb-5 pb-md-0"
     >
       <div class="container-fluid">
-        <div class="row">
+        <div class="row flex-nowrap">
           <div class="col-auto d-none d-md-block">
             <div class="sticky-top">
               <NavigationSideBar />
@@ -22,7 +22,7 @@
       <!-- Modals -->
       <Teleport to="body">
         <div
-          id="exampleModal"
+          id="singleCardModel"
           aria-hidden="true"
           aria-labelledby="exampleModalLabel"
           class="modal fade"
@@ -81,6 +81,7 @@ import PlaylistModal from "@/components/PlaylistModal.vue";
 import SingleCard from "@/components/SingleCard.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
+import { Tooltip } from "bootstrap";
 import { storeToRefs } from "pinia";
 import { onBeforeMount, onMounted, ref } from "vue";
 import { RouterView, useRoute, useRouter } from "vue-router";
@@ -115,6 +116,10 @@ onBeforeMount(() => {
 
 onMounted(() => {
   getUrlQueryParams();
+
+  new Tooltip(document.body, {
+    selector: "[data-bs-toggle='tooltip']",
+  });
 });
 
 /**
@@ -132,4 +137,9 @@ async function getUrlQueryParams() {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.modal.fade .modal-dialog
+  transition: transform 0.1s ease-out
+.fade
+  transition: opacity 0.05s linear
+</style>

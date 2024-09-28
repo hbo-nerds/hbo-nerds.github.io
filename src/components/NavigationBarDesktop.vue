@@ -68,7 +68,7 @@
               class="btn btn-dark btn-circle rounded-circle"
               title="Toggle random view"
               type="button"
-              @click="toggleView"
+              @click="toggleView('random')"
             >
               <i class="bi bi-dice-5"></i>
             </button>
@@ -410,11 +410,11 @@ const mobileSearchInput = ref(null);
 /**
  * Switch between main/random views.
  */
-function toggleView() {
-  if (view.value === "random") {
+function toggleView(type) {
+  if (view.value === type) {
     generalStore.setView("main");
   } else {
-    generalStore.setView("random");
+    generalStore.setView(type);
     contentStore.pickRandomSet();
   }
 }
@@ -442,8 +442,10 @@ async function startTyping() {
  */
 function doSearch() {
   generalStore.setView("main");
-  router.push({ name: "home" });
-  contentStore.filter();
+  router.push({ path: "/" });
+  setTimeout(() => {
+    contentStore.filter();
+  }, 200)
 }
 
 /**

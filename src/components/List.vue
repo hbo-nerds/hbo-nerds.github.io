@@ -8,7 +8,7 @@
         <Card :card="card" />
       </div>
     </div>
-    <div v-else>
+    <div v-else-if="view === 'random'">
       <div class="d-flex flex-wrap gap-3 align-items-center mb-3">
         <button
           class="btn btn-dark rounded-pill d-inline-block"

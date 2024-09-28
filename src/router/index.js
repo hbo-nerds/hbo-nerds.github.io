@@ -1,4 +1,5 @@
 import About from "@/views/About.vue";
+import CalendarHeatmap from "@/views/CalendarHeatmap.vue";
 import Card from "@/views/Card.vue";
 import History from "@/views/History.vue";
 import Home from "@/views/Home.vue";
@@ -50,6 +51,11 @@ const router = createRouter({
       path: "/upload-tool",
       name: "upload-tool",
       component: UploadTool,
+    },
+    {
+      path: "/heatmap",
+      name: "heatmap",
+      component: CalendarHeatmap,
     },
     { path: "/:pathMatch(.*)*", redirect: "/" },
   ],

@@ -2,7 +2,7 @@
   <div class="row g-3">
     <!-- date -->
     <div class="col-sm-3">
-      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Upload date</h4>
+      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Upload datum</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(date, idx) in groupedDates" :key="idx" class="pe-3">
           <input
@@ -121,7 +121,7 @@
     </div>
     <!-- duration -->
     <div class="col-sm-3">
-      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Duration</h4>
+      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Duur</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(duration, idx) in groupedDuration" :key="idx" class="pe-3">
           <input
@@ -149,12 +149,12 @@
     </div>
     <!-- activity -->
     <div class="col-sm-12">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">Activity</h4>
+      <h4 class="small py-2 fw-lighter border-bottom mb-3">Activiteit</h4>
       <input
         id="f_activity"
         v-model="f_term"
         class="form-control form-control-sm mb-3"
-        placeholder="Search activity"
+        placeholder="Zoek activiteit"
         type="search"
       />
       <div v-for="(key, idx) in a_activities" :key="idx" class="form-check">
@@ -192,33 +192,78 @@
         >
       </div>
     </div>
-    <!-- general -->
-    <div class="col-sm-6">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">General</h4>
+    <!-- vod -->
+    <div class="col-sm-4">
+      <h4 class="small py-2 fw-lighter border-bottom mb-3">VOD</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input
-            id="hide_no_vod"
-            v-model="filters.vodOnly"
+            id="vod_all"
+            v-model="filters.vod"
+            :value="'all'"
             class="d-none"
-            name="VOD"
-            type="checkbox"
+            name="vod_filter"
+            type="radio"
             @change="contentStore.filter()"
           />
           <label
             class="form-check-label small text-nowrap w-100"
-            for="hide_no_vod"
-            :class="filters.vodOnly ? '' : 'text-body-tertiary'"
+            for="vod_all"
+            :class="filters.vod === 'all' ? '' : 'text-body-tertiary'"
           >
-            Hide no VOD items
-            <i v-if="filters.vodOnly" class="bi bi-check-lg ms-2"></i>
+            Met en zonder VOD
+            <i v-if="filters.vod === 'all'" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
         <div class="pe-3">
           <input
+            id="vod_only"
+            v-model="filters.vod"
+            :value="'vod_only'"
+            class="d-none"
+            name="vod_filter"
+            type="radio"
+            @change="contentStore.filter()"
+          />
+          <label
+            class="form-check-label small text-nowrap w-100"
+            for="vod_only"
+            :class="filters.vod === 'vod_only' ? '' : 'text-body-tertiary'"
+          >
+            Alleen met VOD
+            <i v-if="filters.vod === 'vod_only'" class="bi bi-check-lg ms-2"></i>
+          </label>
+        </div>
+        <div class="pe-3">
+          <input
+            id="no_vod_only"
+            v-model="filters.vod"
+            :value="'no_vod_only'"
+            class="d-none"
+            name="vod_filter"
+            type="radio"
+            @change="contentStore.filter()"
+          />
+          <label
+            class="form-check-label small text-nowrap w-100"
+            for="no_vod_only"
+            :class="filters.vod === 'no_vod_only' ? '' : 'text-body-tertiary'"
+          >
+            Alleen zonder VOD
+            <i v-if="filters.vod === 'no_vod_only'" class="bi bi-check-lg ms-2"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+    <!-- general -->
+    <div class="col-sm-4">
+      <h4 class="small py-2 fw-lighter border-bottom mb-3">Algemeen</h4>
+      <div class="d-flex flex-column gap-1">
+        <div class="form-check">
+          <input
             id="hide_paywall"
             v-model="filters.free"
-            class="d-none"
+            class="form-check-input"
             name="free"
             type="checkbox"
             @change="contentStore.filter()"
@@ -228,15 +273,14 @@
             for="hide_paywall"
             :class="filters.free ? '' : 'text-body-tertiary'"
           >
-            Hide paywall items
-            <i v-if="filters.free" class="bi bi-check-lg ms-2"></i>
+            Verberg items met paywall
           </label>
         </div>
       </div>
     </div>
     <!-- sort -->
-    <div class="col-sm-6">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">Sort</h4>
+    <div class="col-sm-4">
+      <h4 class="small py-2 fw-lighter border-bottom mb-3">Sorteer</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input id="order-1" v-model="sortOption" class="d-none" type="radio" value="newOld" />
@@ -245,7 +289,7 @@
             for="order-1"
             :class="sortOption === 'newOld' ? '' : 'text-body-tertiary'"
           >
-            Upload date (new first)
+            Upload datum (nieuwste eerst)
             <i v-if="sortOption === 'newOld'" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
@@ -256,7 +300,7 @@
             for="order-2"
             :class="sortOption === 'oldNew' ? '' : 'text-body-tertiary'"
           >
-            Upload date (old first)
+            Upload datum (oudste eerst)
             <i v-if="sortOption === 'oldNew'" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
@@ -267,7 +311,7 @@
             for="order-3"
             :class="sortOption === 'shortLong' ? '' : 'text-body-tertiary'"
           >
-            Duration (shortest first)
+            Duur (kortste eerst)
             <i v-if="sortOption === 'shortLong'" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
@@ -278,7 +322,7 @@
             for="order-4"
             :class="sortOption === 'longShort' ? '' : 'text-body-tertiary'"
           >
-            Duration (longest first)
+            Duur (langste eerst)
             <i v-if="sortOption === 'longShort'" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
@@ -295,6 +339,7 @@ import { computed, ref } from "vue";
 const contentStore = useContentStore();
 const {
   sortOption,
+  filtering,
   filters,
   groupedActivities,
   groupedTypes,
@@ -354,5 +399,8 @@ function checkPlatform(value) {
 <style lang="css" scoped>
 label:first-letter {
   text-transform: uppercase;
+}
+label:hover {
+  cursor: pointer;
 }
 </style>

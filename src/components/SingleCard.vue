@@ -228,7 +228,7 @@ const duration = computed(() => {
  * @type {ComputedRef<ComputedRef<*>>}
  */
 const title = computed(() => {
-  return setMainTitle();
+  return contentStore.getCardTitle(card.value);
 });
 
 const shareUrl = computed(() => {
@@ -323,19 +323,6 @@ function secondsToHms() {
   let s = Math.floor((d % 3600) % 60);
 
   return ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
-}
-
-/**
- * Returns card main title
- * @returns {any}
- */
-function setMainTitle() {
-  if (["podcast", "video"].includes(card.value["type"])) return card.value["title"];
-  else {
-    if (card.value["custom_title"]) return card.value["custom_title"];
-    else if (card.value["title_main"]) return card.value["titles"][card.value["title_main"]];
-    else return card.value["titles"][0];
-  }
 }
 
 /**
