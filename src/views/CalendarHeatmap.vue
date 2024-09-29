@@ -4,14 +4,12 @@
       <span class="badge rounded-pill text-bg-warning">Let op!</span>
       <span class="fw-lighter small">De heatmap maakt gebruik van de huidige filters.</span>
     </span>
-    <div v-for="(value, key, index) in groupedYearDate" class="overflow-y-auto mb-3">
+    <div v-for="(value, key, index) in heatmapData" class="overflow-y-auto mb-3">
       <span>{{ key }}</span>
       <CalendarHeatmap
-        :key="index"
-        :allow-future-days="true"
+        :key="`${key}_${index}`"
         :end-date="key + '-12-31'"
         :show-legend="false"
-        :start-weekday="1"
         :values="value.dates"
         class="heatmap"
         dark-mode
@@ -30,15 +28,14 @@
 
 <script setup>
 import CalendarHeatmap from "@/components/Heatmap/CalendarHeatmap.vue";
-import {useContentStore} from "@/stores/content.js";
-import {storeToRefs} from "pinia";
-import {onMounted, ref} from "vue";
+import { useContentStore } from "@/stores/content.js";
+import { storeToRefs } from "pinia";
+import { computed, ref } from "vue";
 
 const contentStore = useContentStore();
-const {selectedCardId, groupedYearDate} = storeToRefs(contentStore);
+const { selectedCardId } = storeToRefs(contentStore);
 
 const canvasBtn = ref(null);
-const loading = ref(false);
 
 /**
  * Navigate to item
@@ -49,12 +46,9 @@ function goToCard(day) {
   if (selectedCardId.value && canvasBtn.value) canvasBtn.value.click();
 }
 
-onMounted(() => {
-  loading.value = true;
-  setTimeout(async () => {
-    loading.value = false;
-  }, 500)
-})
+const heatmapData = computed(() => {
+  return contentStore.groupedYearDate;
+});
 </script>
 
 <style lang="sass">

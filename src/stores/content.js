@@ -1,8 +1,8 @@
 import router from "@/router/index.js";
-import {filename} from "pathe/utils";
-import {defineStore} from "pinia";
+import { filename } from "pathe/utils";
+import { defineStore } from "pinia";
 import og_data from "../assets/data/data.json";
-import {useGeneralStore} from "./general.js";
+import { useGeneralStore } from "./general.js";
 
 export const useContentStore = defineStore("content", {
   state: () => ({
@@ -344,7 +344,7 @@ export const useContentStore = defineStore("content", {
           };
         }
         return p;
-      }, {})
+      }, {});
     },
   },
   actions: {
@@ -590,12 +590,9 @@ export const useContentStore = defineStore("content", {
      * Filter item by VOD availability.
      */
     f_vod(item) {
-      if (this.filters.vod === 'all') return true
-      else if (this.filters.vod === 'vod_only')
-        return item["twitch_id"] || item["youtube_id"];
-      else if (this.filters.vod === 'no_vod_only')
-        return !item["twitch_id"] && !item["youtube_id"];
-
+      if (this.filters.vod === "all") return true;
+      else if (this.filters.vod === "vod_only") return item["twitch_id"] || item["youtube_id"];
+      else if (this.filters.vod === "no_vod_only") return !item["twitch_id"] && !item["youtube_id"];
 
       // if (!this.filters.vodOnly) return true;
       // return item["twitch_id"] || item["youtube_id"];
@@ -803,7 +800,7 @@ export const useContentStore = defineStore("content", {
         type: ["all"],
         platform: ["all"],
         free: false,
-        vod: 'all',
+        vod: "all",
         // vodOnly: false,
         date: {
           range: "all",
@@ -865,7 +862,7 @@ export const useContentStore = defineStore("content", {
       if (this.filters.vod) search_params.append("vod", this.filters.vod);
       if (this.filters.date.range !== "all")
         search_params.append("date_weeks", this.filters.date.range);
-      if (this.filters.duration !== "all") search_params.append("duration", this.filters.duration);
+      if (this.filters.duration) search_params.append("duration", this.filters.duration);
       if (this.search) search_params.append("search", this.search);
 
       let url_search = search_params.toString();
@@ -874,6 +871,6 @@ export const useContentStore = defineStore("content", {
       } else {
         router.replace({ query: null }).then((r) => {});
       }
-    }
+    },
   },
 });

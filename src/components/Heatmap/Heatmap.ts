@@ -60,9 +60,7 @@ export class Heatmap {
     less: "Minder",
     more: "Meer",
   };
-  static readonly DAYS_IN_ONE_YEAR = 365;
   static readonly DAYS_IN_WEEK = 7;
-  static readonly SQUARE_SIZE = 10;
 
   startDate: Date;
   endDate: Date;
@@ -74,13 +72,11 @@ export class Heatmap {
   private _activities?: Activities;
   private _calendar?: Calendar;
 
-  constructor(endDate: Date | string, values: Value[], max?: number, startWeekday: number = 0) {
+  constructor(endDate: Date | string, values: Value[], startWeekday: number = 0) {
+    this.startDate = this.shiftDate(endDate, -365);
     this.endDate = this.parseDate(endDate);
     this.startWeekday = startWeekday;
-    // let sections = this.colorRange.length-1;
-    // this.max = max || Math.ceil((Math.max(...values.map(day => day.count)) / sections) * (sections-1));
-    this.max = max || Math.ceil((Math.max(...values.map((day) => day.count)) / 5) * 4);
-    this.startDate = this.shiftDate(endDate, -Heatmap.DAYS_IN_ONE_YEAR);
+    this.max = Math.ceil((Math.max(...values.map((day) => day.count)) / 5) * 4);
     this._values = values;
   }
 
@@ -111,7 +107,7 @@ export class Heatmap {
   }
 
   get weekCount() {
-    return this.getDaysCount() / Heatmap.DAYS_IN_WEEK;
+    return this.getDaysCount() / 7;
   }
 
   get calendar() {
@@ -120,8 +116,8 @@ export class Heatmap {
       date = new Date(date.getFullYear(), date.getMonth(), date.getDate());
       this._calendar = new Array(this.weekCount);
       for (let i = 0, len = this._calendar.length; i < len; i++) {
-        this._calendar[i] = new Array(Heatmap.DAYS_IN_WEEK);
-        for (let j = 0; j < Heatmap.DAYS_IN_WEEK; j++) {
+        this._calendar[i] = new Array(7);
+        for (let j = 0; j < 7; j++) {
           const dayValues = this.activities.get(this.keyDayParser(date));
           this._calendar![i][j] = {
             date: new Date(date.valueOf()),
@@ -167,23 +163,19 @@ export class Heatmap {
   }
 
   getCountEmptyDaysAtStart() {
-    // return this.startDate.getDay();
     return this.getDayOfWeek(this.startDate);
   }
 
   getCountEmptyDaysAtEnd() {
-    // return Heatmap.DAYS_IN_WEEK - 1 - this.endDate.getDay();
-    return Heatmap.DAYS_IN_WEEK - 1 - this.getDayOfWeek(this.endDate);
+    return 7 - 1 - this.getDayOfWeek(this.endDate);
   }
 
   getDayOfWeek(day: Date) {
-    return (day.getDay() - this.startWeekday + Heatmap.DAYS_IN_WEEK) % Heatmap.DAYS_IN_WEEK;
+    return (day.getDay() - this.startWeekday + 7) % 7;
   }
 
   getDaysCount() {
-    return (
-      Heatmap.DAYS_IN_ONE_YEAR + 1 + this.getCountEmptyDaysAtStart() + this.getCountEmptyDaysAtEnd()
-    );
+    return 365 + 1 + this.getCountEmptyDaysAtStart() + this.getCountEmptyDaysAtEnd();
   }
 
   private shiftDate(date: Date | string, numDays: number) {

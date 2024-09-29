@@ -445,7 +445,7 @@ function doSearch() {
   router.push({ path: "/" });
   setTimeout(() => {
     contentStore.filter();
-  }, 200)
+  }, 200);
 }
 
 /**

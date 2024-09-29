@@ -127,7 +127,7 @@
           <input
             :id="'duration-' + idx"
             v-model="filters.duration"
-            :value="duration.value"
+            :value="duration.value.toString()"
             class="d-none"
             type="radio"
             @change="contentStore.filter()"
@@ -135,14 +135,17 @@
           />
           <label
             :class="[
-              { 'text-body-tertiary': filters.duration !== duration.value },
+              { 'text-body-tertiary': filters.duration !== duration.value.toString() },
               { 'text-decoration-line-through': !duration.count },
             ]"
             :for="'duration-' + idx"
             class="form-check-label text-nowrap small w-100"
           >
             {{ duration.label }} ({{ duration.count }})
-            <i v-if="filters.duration === duration.value" class="bi bi-check-lg ms-2"></i>
+            <i
+              v-if="filters.duration === duration.value.toString()"
+              class="bi bi-check-lg ms-2"
+            ></i>
           </label>
         </div>
       </div>
