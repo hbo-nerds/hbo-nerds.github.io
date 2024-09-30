@@ -160,6 +160,58 @@
           </div>
         </div>
       </div>
+      <!-- bonus -->
+      <div class="col-12 col-lg-6" v-if="card['extra_urls']">
+        <div
+          class="card border-0 rounded-4 h-100"
+          style="background-color: rgba(255, 255, 255, 0.1)"
+        >
+          <div class="card-body">
+            <div class="small fw-lighter mb-2">Bonus:</div>
+
+            <div class="d-flex flex-wrap gap-2">
+              <template v-for="(url, i) in card['extra_urls']" :key="i">
+                <a
+                  v-if="url.includes('twitch')"
+                  :href="url"
+                  class="btn border rounded-pill text-nowrap d-flex align-items-center"
+                  target="_blank"
+                >
+                  <img
+                    alt="logo"
+                    class="rounded-circle me-2"
+                    height="24"
+                    src="../assets/img/twitch-icon.png"
+                  />
+                  <span>Twitch</span>
+                </a>
+                <a
+                  v-else-if="url.includes('youtube')"
+                  :href="url"
+                  class="btn border rounded-pill text-nowrap d-flex align-items-center"
+                  target="_blank"
+                >
+                  <img
+                    alt="logo"
+                    class="rounded-circle me-2"
+                    height="24"
+                    src="../assets/img/youtube.png"
+                  />
+                  <span>YouTube</span>
+                </a>
+                <a
+                  v-else
+                  :href="url"
+                  class="btn border rounded-pill text-nowrap d-flex align-items-center"
+                  target="_blank"
+                >
+                  <span>Anders</span>
+                </a>
+              </template>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- series -->
       <div v-if="collectionName" class="col-12">
