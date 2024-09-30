@@ -23,7 +23,7 @@
 import { useContentStore } from "@/stores/content.js";
 import { useInfiniteScroll } from "@vueuse/core";
 import { storeToRefs } from "pinia";
-import {computed, defineAsyncComponent, ref, watch} from "vue";
+import { computed, defineAsyncComponent, ref, watch } from "vue";
 
 const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
@@ -41,21 +41,23 @@ const sort = ref("alphaAsc");
  * @type {ComputedRef<*>}
  */
 const sortedPlaylists = computed(() => {
-  return getCompleteCollections.value.filter((col) => col.items.length).sort((a, b) => {
-    if (sort.value === "alphaAsc") {
-      return a.title.localeCompare(b.title);
-    } else if (sort.value === "alphaDesc") {
-      return b.title.localeCompare(a.title);
-    } else if (sort.value === "createdAsc") {
-      return a.created - b.created;
-    } else if (sort.value === "createdDesc") {
-      return b.created - a.created;
-    } else if (sort.value === "updatedAsc") {
-      return a.updated - b.updated;
-    } else if (sort.value === "updatedDesc") {
-      return b.updated - a.updated;
-    } else return true
-  });
+  return getCompleteCollections.value
+    .filter((col) => col.items.length)
+    .sort((a, b) => {
+      if (sort.value === "alphaAsc") {
+        return a.title.localeCompare(b.title);
+      } else if (sort.value === "alphaDesc") {
+        return b.title.localeCompare(a.title);
+      } else if (sort.value === "createdAsc") {
+        return a.created - b.created;
+      } else if (sort.value === "createdDesc") {
+        return b.created - a.created;
+      } else if (sort.value === "updatedAsc") {
+        return a.updated - b.updated;
+      } else if (sort.value === "updatedDesc") {
+        return b.updated - a.updated;
+      } else return true;
+    });
 });
 
 useInfiniteScroll(
@@ -67,7 +69,9 @@ useInfiniteScroll(
 );
 
 const loadMoreCards = () => {
-  let newCards = sortedPlaylists.value.slice(start.value, start.value + 20).map((col) => col.items[0]);
+  let newCards = sortedPlaylists.value
+    .slice(start.value, start.value + 20)
+    .map((col) => col.items[0]);
   start.value += 20;
   cards.value.push(...newCards);
 };
