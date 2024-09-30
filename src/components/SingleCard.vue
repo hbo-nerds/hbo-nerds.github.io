@@ -99,7 +99,7 @@
                   height="24"
                   src="../assets/img/youtube.png"
                 />
-                <span>YouTube</span>
+                <span>YouTube<i v-if="card.free" class="ms-2 bi bi-star-fill text-warning"></i></span>
               </a>
               <a
                 v-if="card['twitchtracker_id']"
