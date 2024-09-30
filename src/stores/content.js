@@ -1,8 +1,8 @@
 import router from "@/router/index.js";
-import { filename } from "pathe/utils";
-import { defineStore } from "pinia";
+import {filename} from "pathe/utils";
+import {defineStore} from "pinia";
 import og_data from "../assets/data/data.json";
-import { useGeneralStore } from "./general.js";
+import {useGeneralStore} from "./general.js";
 
 export const useContentStore = defineStore("content", {
   state: () => ({
@@ -101,25 +101,19 @@ export const useContentStore = defineStore("content", {
       });
     },
     /**
-     * Order the series.
+     * Return all collections with items.
      * @returns {*}
      */
-    sortedDataSeries(state) {
-      return this.seriesFirstItems().sort((a, b) => {
-        let dateA = new Date(a.date);
-        let dateB = new Date(b.date);
-
-        if (!state.sortOptionSeries) return true;
-        else if (state.sortOptionSeries === "oldNew") {
-          return dateA - dateB;
-        } else if (state.sortOptionSeries === "newOld") {
-          return dateB - dateA;
-        } else if (state.sortOptionSeries === "shortLong") {
-          return a.duration - b.duration;
-        } else if (state.sortOptionSeries === "longShort") {
-          return b.duration - a.duration;
-        } else return true;
-      });
+    getCompleteCollections(state) {
+      return state.collections.map((col) => {
+        const id = col.id;
+        col.items = this.content.filter((item) => item.collection === id)
+        if (col.items.length) {
+          col.created = new Date(col.items[0].date);
+          col.updated = new Date(col.items[col.items.length - 1].date);
+        }
+        return col;
+      })
     },
     /**
      * Group VODs by upload date.
