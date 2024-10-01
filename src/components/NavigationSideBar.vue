@@ -22,7 +22,18 @@
       <div class="d-flex flex-column align-items-center text-body">
         <i class="bi bi-person fs-5"></i>
         <i class="active bi bi-person-fill fs-5"></i>
-        <span class="fs-7">You</span>
+        <span class="fs-7">Jij</span>
+      </div>
+    </RouterLink>
+    <RouterLink
+      :to="'/over'"
+      class="item text-decoration-none py-3 rounded-3"
+      active-class="active"
+    >
+      <div class="d-flex flex-column align-items-center text-body">
+        <i class="bi bi-question-circle fs-5"></i>
+        <i class="active bi bi-question-circle-fill fs-5"></i>
+        <span class="fs-7">Over</span>
       </div>
     </RouterLink>
   </div>

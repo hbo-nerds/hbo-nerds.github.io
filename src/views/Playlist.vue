@@ -4,9 +4,9 @@
       <div class="col-12">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><RouterLink :to="{ name: 'you' }">You</RouterLink></li>
+            <li class="breadcrumb-item"><RouterLink :to="{ name: 'you' }">Jij</RouterLink></li>
             <li class="breadcrumb-item">
-              <RouterLink :to="{ name: 'playlists' }">Playlists</RouterLink>
+              <RouterLink :to="{ name: 'playlists' }">Afspeellijsten</RouterLink>
             </li>
             <li class="breadcrumb-item active" aria-current="page">{{ playlist.title }}</li>
           </ol>
@@ -14,10 +14,10 @@
 
         <h1 class="fw-bold mb-4">{{ playlist.title }}</h1>
         <select v-model="sort" class="form-select mb-4 w-auto">
-          <option value="newOld">Upload date (new first)</option>
-          <option value="oldNew">Upload date (old first)</option>
-          <option value="shortLong">Duration (shortest first)</option>
-          <option value="longShort">Duration (longest first)</option>
+          <option value="newOld">Upload datum (nieuwste eerst)</option>
+          <option value="oldNew">Upload datum (oudste eerst)</option>
+          <option value="shortLong">Duur (kortste eerst)</option>
+          <option value="longShort">Duur (langste eerst)</option>
         </select>
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"

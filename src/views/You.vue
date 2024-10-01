@@ -1,13 +1,13 @@
 <template>
   <!-- main -->
   <main class="pt-3 pb-5">
-    <h1 class="fw-bold mb-4">You</h1>
+    <h1 class="fw-bold mb-4">Jij</h1>
     <div class="row mb-5">
       <div class="col-12">
-        <div class="d-flex align-items-center mb-3">
-          <h2 class="fs-4 fw-bold mb-0">History</h2>
-          <RouterLink :to="{ name: 'history' }" class="ms-auto">
-            <button class="btn border rounded-pill" type="button">Toon alles</button>
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <h2 class="fs-4 fw-bold mb-0">Geschiedenis</h2>
+          <RouterLink tag="button" :to="{ name: 'history' }" class="btn btn-sm border rounded-pill">
+            Alles bekijken
           </RouterLink>
         </div>
         <div
@@ -21,10 +21,14 @@
     </div>
     <div class="row mb-5">
       <div class="col-12">
-        <div class="d-flex align-items-center mb-3">
-          <h2 class="fs-4 fw-bold m-0">Playlists</h2>
-          <RouterLink :to="{ name: 'playlists' }" class="ms-auto">
-            <button class="btn border rounded-pill" type="button">Toon alles</button>
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <h2 class="fs-4 fw-bold m-0">Afspeellijsten</h2>
+          <RouterLink
+            tag="button"
+            :to="{ name: 'playlists' }"
+            class="btn btn-sm border rounded-pill"
+          >
+            Alles bekijken
           </RouterLink>
         </div>
         <div
@@ -38,10 +42,14 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="d-flex align-items-center mb-3">
-          <h2 class="fs-4 fw-bold m-0">Liked</h2>
-          <RouterLink :to="{ name: 'liked-items' }" class="ms-auto">
-            <button class="btn border rounded-pill" type="button">Toon alles</button>
+        <div class="d-flex gap-3 align-items-center mb-3">
+          <h2 class="fs-4 fw-bold m-0">Gelikete items</h2>
+          <RouterLink
+            tag="button"
+            :to="{ name: 'liked-items' }"
+            class="btn btn-sm border rounded-pill"
+          >
+            Alles bekijken
           </RouterLink>
         </div>
         <div

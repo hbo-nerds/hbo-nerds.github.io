@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="d-inline-flex gap-2 mb-3">
+    <span class="d-inline-flex align-items-baseline gap-2 mb-3">
       <span class="badge rounded-pill text-bg-warning">Let op!</span>
       <span class="fw-lighter small">De heatmap maakt gebruik van de huidige filters.</span>
     </span>
@@ -28,6 +28,7 @@
 
 <script setup>
 import CalendarHeatmap from "@/components/Heatmap/CalendarHeatmap.vue";
+import router from "@/router/index.js";
 import { useContentStore } from "@/stores/content.js";
 import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
@@ -40,10 +41,15 @@ const canvasBtn = ref(null);
 /**
  * Navigate to item
  */
-function goToCard(day) {
+function goToCard(day, type) {
+  if (!day.id) return;
+
   let id = day.id;
-  selectedCardId.value = selectedCardId.value === id ? null : id;
-  if (selectedCardId.value && canvasBtn.value) canvasBtn.value.click();
+  const path = `/item/${id}`;
+  if (type === "middle") {
+    const routeData = router.resolve({ path: path });
+    window.open(routeData.href, "_blank");
+  } else selectedCardId.value = selectedCardId.value === id ? null : id;
 }
 
 const heatmapData = computed(() => {
