@@ -15,14 +15,18 @@ $grid-breakpoints: map-merge($grid-breakpoints, $new-grid-breakpoints);
 
 @import "bootstrap/scss/bootstrap";
 
-.special-elite-regular {
-  font-family: "Special Elite", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 html :not(.hide-scrollbar) {
   scrollbar-color: #aaa transparent;
+}
+
+.hide-scrollbar {
+  scrollbar-color: transparent transparent;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 body {

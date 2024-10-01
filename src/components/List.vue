@@ -1,8 +1,13 @@
 <template>
-  <div ref="scrollComponent" class="scrolling-component pb-5">
+  <div ref="scrollComponent" class="scrolling-component">
     <div
       v-if="view === 'main'"
       class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+      :class="
+        selectedCard
+          ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+          : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+      "
     >
       <div v-for="(card, index) in cards" :key="index" class="col">
         <Card :card="card" />
@@ -44,7 +49,7 @@ const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { sortedData, randomData } = storeToRefs(contentStore);
+const { sortedData, randomData, selectedCard } = storeToRefs(contentStore);
 const { view } = storeToRefs(generalStore);
 
 const cards = ref([]);

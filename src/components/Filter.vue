@@ -17,14 +17,17 @@
           />
           <label
             :class="[
-              { 'text-body-tertiary': filters.date.range !== date.value },
+              { 'text-body-tertiary': filters.date.range.toString() !== date.value.toString() },
               { 'text-decoration-line-through': !date.count },
             ]"
             :for="'date-' + idx"
             class="form-check-label text-nowrap small w-100"
           >
             {{ date.label }} ({{ date.count }})
-            <i v-if="filters.date.range === date.value" class="bi bi-check-lg ms-2"></i>
+            <i
+              v-if="filters.date.range.toString() === date.value.toString()"
+              class="bi bi-check-lg ms-2"
+            ></i>
           </label>
         </div>
         <!-- other -->
@@ -41,29 +44,29 @@
             class="form-check-label text-nowrap small w-100"
             for="checkOther"
           >
-            Other...
-            <i v-if="filters.date.range === 'other'" class="bi bi-x-lg ms-2"></i>
+            Anders...
+            <i v-if="filters.date.range === 'other'" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
         <div v-if="filters.date.range === 'other'">
           <div class="mb-2">
-            <label class="form-label small fw-lighter mb-1" for="afterDate">Na:</label>
-            <input
-              id="afterDate"
-              v-model="filters.date.after"
-              class="form-control form-control-sm"
-              type="date"
-              @change="contentStore.filter()"
-            />
-          </div>
-          <div>
             <label class="form-label small fw-lighter mb-1" for="beforeDate">Voor:</label>
             <input
               id="beforeDate"
-              v-model="filters.date.before"
+              :value="filters.date.before"
               class="form-control form-control-sm"
               type="date"
-              @change="contentStore.filter()"
+              @focusout="setDateBefore($event)"
+            />
+          </div>
+          <div>
+            <label class="form-label small fw-lighter mb-1" for="afterDate">Op of na:</label>
+            <input
+              id="afterDate"
+              :value="filters.date.after"
+              class="form-control form-control-sm"
+              type="date"
+              @focusout="setDateAfter($event)"
             />
           </div>
         </div>
@@ -342,7 +345,6 @@ import { computed, ref } from "vue";
 const contentStore = useContentStore();
 const {
   sortOption,
-  filtering,
   filters,
   groupedActivities,
   groupedTypes,
@@ -395,6 +397,24 @@ function checkPlatform(value) {
   else if (filters.value.platform.includes(value) && filters.value.platform.includes("all"))
     filters.value.platform.splice(filters.value.platform.indexOf("all"), 1);
 
+  contentStore.filter();
+}
+
+/**
+ * Set the 'after' date when focus out.
+ * @param e
+ */
+function setDateAfter(e) {
+  filters.value.date.after = e.target.value;
+  contentStore.filter();
+}
+
+/**
+ * Set the 'before' date when focus out.
+ * @param e
+ */
+function setDateBefore(e) {
+  filters.value.date.before = e.target.value;
   contentStore.filter();
 }
 </script>

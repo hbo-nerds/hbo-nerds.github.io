@@ -1,30 +1,76 @@
 <template>
-  <transition>
+  <!-- single-card -->
+  <div :id="'singleCard_' + card.id" class="pt-3 pb-5">
+    <div class="d-flex gap-2 mb-3">
+      <button class="btn btn-dark rounded" @click="selectedCardId = null">Sluit</button>
+    </div>
     <div :key="card.id" class="row g-3">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-12">
         <img :src="imgScr" alt="thumbnail" class="w-100 mb-3" />
         <h5 class="fw-bold">{{ title }}</h5>
       </div>
       <!-- description -->
-      <div class="col-12 col-lg-6">
-        <div class="card border-0 rounded-4" style="background-color: rgba(255, 255, 255, 0.1)">
+      <div class="col-12 col-3xl-6">
+        <div
+          class="card border-0 rounded-4 h-100"
+          style="background-color: rgba(255, 255, 255, 0.1)"
+        >
           <div class="card-body">
-            <div class="d-flex gap-3 mb-3 small">
-              <span>
+            <div class="d-flex flex-wrap gap-2 mb-3 small">
+              <span class="text-nowrap">
                 <i class="bi bi-clock me-2"></i>
                 <span>{{ duration }}</span>
               </span>
-              <span>
+              <span class="text-nowrap">
                 <i class="bi bi-calendar4-range me-2"></i>
                 <span>{{ date }}</span>
               </span>
             </div>
-            <p v-if="card.description">{{ card.description }}</p>
+            <p v-if="card.description">
+              {{
+                card.description.length > 100 && readMore
+                  ? card.description
+                  : card.description.slice(0, 100)
+              }}
+              <button
+                class="btn btn-link btn-sm"
+                v-if="card.description.length > 100"
+                @click="readMore = !readMore"
+              >
+                ...lees {{ readMore ? "minder" : "meer" }}
+              </button>
+            </p>
             <a
               :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
               target="_blank"
-              >Stuur een beschrijving op!</a
+              class="btn btn-sm btn-outline-light rounded"
+              >{{ card.description ? "Feedback" : "Stuur beschrijving" }}</a
             >
+          </div>
+        </div>
+      </div>
+      <!-- links -->
+      <div class="col-12 col-3xl-6">
+        <div class="card border-0 rounded-4" style="background-color: rgba(255, 255, 255, 0.1)">
+          <div class="card-body">
+            <div class="d-flex flex-wrap gap-2">
+              <a
+                v-if="card['twitch_id']"
+                class="flex-grow-0"
+                style="max-width: 60px"
+                :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+              >
+                <img class="w-100 rounded-4" src="../assets/img/twitch-icon.png" alt="twitch_vod" />
+              </a>
+              <a
+                v-if="card['youtube_id']"
+                class="flex-grow-0"
+                style="max-width: 60px"
+                :href="'https://youtube.com/watch?v=' + card['youtube_id']"
+              >
+                <img class="w-100 rounded-4" src="../assets/img/youtube.png" alt="youtube_vod" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -60,69 +106,24 @@
           <button class="btn border rounded-pill text-nowrap" @click="copyLink">
             <i class="bi bi-copy me-2"></i>Kopieer link
           </button>
-        </div>
-      </div>
-
-      <!-- links -->
-      <div class="col-12 col-lg-6">
-        <div
-          class="card border-0 rounded-4 h-100"
-          style="background-color: rgba(255, 255, 255, 0.1)"
-        >
-          <div class="card-body">
-            <div class="small fw-lighter mb-2">Bekijk op:</div>
-
-            <div class="d-flex flex-wrap gap-2">
-              <a
-                v-if="card['twitch_id']"
-                :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
-                class="btn border rounded-pill text-nowrap d-flex align-items-center"
-                target="_blank"
-              >
-                <img
-                  alt="logo"
-                  class="rounded-circle me-2"
-                  height="24"
-                  src="../assets/img/twitch-icon.png"
-                />
-                <span>Twitch</span>
-              </a>
-              <a
-                v-if="card['youtube_id']"
-                :href="'https://youtube.com/watch?v=' + card['youtube_id']"
-                class="btn border rounded-pill text-nowrap d-flex align-items-center"
-                target="_blank"
-              >
-                <img
-                  alt="logo"
-                  class="rounded-circle me-2"
-                  height="24"
-                  src="../assets/img/youtube.png"
-                />
-                <span
-                  >YouTube<i v-if="card.free" class="ms-2 bi bi-star-fill text-warning"></i
-                ></span>
-              </a>
-              <a
-                v-if="card['twitchtracker_id']"
-                :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
-                class="btn border rounded-pill text-nowrap d-flex align-items-center"
-                target="_blank"
-              >
-                <img
-                  alt="logo"
-                  class="rounded-circle me-2"
-                  height="24"
-                  src="../assets/img/twitch_tracker_1x.png"
-                />
-                <span>TwitchTracker</span>
-              </a>
-            </div>
-          </div>
+          <a
+            v-if="card['twitchtracker_id']"
+            :href="'https://twitchtracker.com/lekkerspelen/streams/' + card['twitchtracker_id']"
+            class="btn border rounded-pill text-nowrap d-flex align-items-center"
+            target="_blank"
+          >
+            <img
+              alt="logo"
+              class="rounded-circle me-2"
+              height="24"
+              src="../assets/img/twitch_tracker_1x.png"
+            />
+            <span>TwitchTracker</span>
+          </a>
         </div>
       </div>
       <!-- activities -->
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-3xl-6">
         <div
           class="card border-0 rounded-4 h-100"
           style="background-color: rgba(255, 255, 255, 0.1)"
@@ -134,9 +135,9 @@
             <div class="d-flex flex-wrap gap-2">
               <button
                 v-for="act in activities"
+                :title="`Filter on '${act.title}'`"
                 class="btn border rounded-pill text-nowrap d-flex align-items-center text-truncate"
                 @click="searchActivity(act.title)"
-                :title="`Filter on '${act.title}'`"
               >
                 <span class="text-truncate">{{ act.title }}</span>
               </button>
@@ -145,7 +146,7 @@
         </div>
       </div>
       <!-- tags -->
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-3xl-6">
         <div
           class="card border-0 rounded-4 h-100"
           style="background-color: rgba(255, 255, 255, 0.1)"
@@ -163,13 +164,13 @@
         </div>
       </div>
       <!-- bonus -->
-      <div class="col-12 col-lg-6" v-if="card['extra_urls']">
+      <div v-if="card['extra_urls']" class="col-12 col-3xl-6">
         <div
           class="card border-0 rounded-4 h-100"
           style="background-color: rgba(255, 255, 255, 0.1)"
         >
           <div class="card-body">
-            <div class="small fw-lighter mb-2">Bonus:</div>
+            <div class="small fw-lighter mb-2">Extra:</div>
 
             <div class="d-flex flex-wrap gap-2">
               <template v-for="(url, i) in card['extra_urls']" :key="i">
@@ -214,42 +215,36 @@
           </div>
         </div>
       </div>
-
       <!-- series -->
       <div v-if="collectionName" class="col-12">
         <hr />
         <div class="mb-3">
           <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="fw-bold">Meer zoals dit</span>
+            <span class="fw-bold">Meer uit '{{ collectionName }}'</span>
           </div>
           <div v-for="card in sortedCollectionItems">
             <MiniCard :card="card" class="mb-3"></MiniCard>
           </div>
         </div>
       </div>
-
       <!-- info -->
-      <!-- <span class="small fst-italic">Item-nummer: {{ card.id }}</span>-->
+      <span class="small fst-italic">item-id: {{ card.id }}</span>
     </div>
-  </transition>
-
-  <!-- Modal -->
-  <Teleport to="body">
-    <PlaylistModal :id="card.id" :key="card['id']" />
-  </Teleport>
+  </div>
 </template>
 <script setup>
 import MiniCard from "@/components/MiniCard.vue";
-import PlaylistModal from "@/components/PlaylistModal.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { computed, onMounted } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
 const { images, filters, selectedCardId } = storeToRefs(contentStore);
 const { likedItems, seenItems } = storeToRefs(generalStore);
+
+const readMore = ref(false);
 
 const props = defineProps({
   card: { type: Object, required: true },
@@ -398,11 +393,4 @@ function searchActivity(activity) {
 }
 </script>
 
-<style lang="sass" scoped>
-.v-enter-active
-  transition: opacity 0.3s ease
-
-.v-enter-from,
-.v-leave-to
-  opacity: 0
-</style>
+<style lang="sass" scoped></style>

@@ -57,13 +57,17 @@
                   :data-day-index="dayIndex"
                   :data-week-index="weekIndex"
                   :height="SQUARE_SIZE - SQUARE_BORDER_SIZE"
-                  :style="{ fill: rangeColor[day.colorIndex] }"
+                  :style="{
+                    fill:
+                      day.id && day.id === selectedCardId ? '#ffc107' : rangeColor[day.colorIndex],
+                  }"
                   :transform="`translate(0, ${dayIndex * SQUARE_SIZE})`"
                   :width="SQUARE_SIZE - SQUARE_BORDER_SIZE"
                   class="vch__day__square"
                   data-bs-html="true"
                   data-bs-toggle="tooltip"
-                  @click="$emit('dayClick', day)"
+                  @click="$emit('dayClick', day, 'left')"
+                  @click.middle="$emit('dayClick', day, 'middle')"
                 />
               </template>
             </g>
@@ -109,6 +113,7 @@
 <script setup>
 import { Heatmap } from "@/components/Heatmap/Heatmap";
 import { useContentStore } from "@/stores/content.js";
+import { storeToRefs } from "pinia";
 import { onMounted, ref, toRef, watch } from "vue";
 
 const emit = defineEmits(["dayClick"]);
@@ -122,6 +127,7 @@ const props = defineProps({
 });
 
 const contentStore = useContentStore();
+const { selectedCardId } = storeToRefs(contentStore);
 
 const loading = ref(false);
 const SQUARE_BORDER_SIZE = 10 / 5;
@@ -142,15 +148,6 @@ const lo = ref(Heatmap.DEFAULT_LOCALE);
 const rangeColor = ref(
   props.darkMode ? Heatmap.DEFAULT_RANGE_COLOR_DARK : Heatmap.DEFAULT_RANGE_COLOR_LIGHT,
 );
-
-/**
- * Return the translate-position for a week.
- * @param index
- * @returns {string}
- */
-function getWeekPosition(index) {
-  return `translate(${index * SQUARE_SIZE}, 0)`;
-}
 
 /**
  * Return position of month label.

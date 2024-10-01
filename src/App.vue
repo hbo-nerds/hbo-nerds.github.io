@@ -15,9 +15,22 @@
           <div class="col">
             <router-view />
           </div>
+          <template v-if="selectedCard">
+            <div class="d-none d-md-block col-md-4 col-lg-3">
+              <div class="sticky-top overflow-y-auto hide-scrollbar" style="max-height: 90vh">
+                <SingleCard v-if="selectedCard" :card="selectedCard" />
+              </div>
+            </div>
+
+            <div
+              class="position-absolute top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto pb-5"
+              style="z-index: 9999"
+            >
+              <SingleCard v-if="selectedCard" :card="selectedCard" />
+            </div>
+          </template>
         </div>
       </div>
-      <!--<FooterBar class="d-none d-md-block mt-auto"></FooterBar>-->
 
       <!-- Modals -->
       <Teleport to="body">
@@ -54,26 +67,12 @@
     </main>
     <NavigationBarMobile />
 
-    <div v-if="showCookie" class="bg-body fixed-bottom border-top pb-4 pb-sm-0">
-      <div class="container">
-        <div class="row py-3">
-          <div class="col-12">
-            <h3>Cookiebeleid</h3>
-            <p>
-              Wij gebruiken cookies om het gebruik van onze website te analyseren via Google
-              Analytics. Deze gegevens worden uitsluitend gebruikt om de website te verbeteren. Wij
-              delen geen gegevens met derden. Door verder te gaan, ga je akkoord met ons gebruik van
-              cookies voor deze doeleinden.
-            </p>
-            <button class="btn btn-dark w-100" @click="hideCookieBanner">OK</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Cookies v-if="showCookie" @ok="hideCookieBanner" />
   </div>
 </template>
 
 <script setup>
+import Cookies from "@/components/Cookies.vue";
 import NavigationBarDesktop from "@/components/NavigationBarDesktop.vue";
 import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
 import NavigationSideBar from "@/components/NavigationSideBar.vue";
