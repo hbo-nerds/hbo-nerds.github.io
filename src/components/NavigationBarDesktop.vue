@@ -7,19 +7,17 @@
           <div class="d-flex gap-3 align-items-center h-100">
             <div
               aria-controls="offcanvasExample"
-              class="d-none d-md-flex align-items-center justify-content-center p-2"
+              class="d-md-none align-items-center justify-content-center p-2"
               data-bs-target="#offcanvasExample"
               data-bs-toggle="offcanvas"
               style="width: 40px; height: 40px"
               type="button"
             >
-              <i class="bi bi-list fs-3"></i>
+              <i class="bi bi-list fs-3 lh-1"></i>
             </div>
             <RouterLink class="text-decoration-none d-flex align-items-center gap-2" to="/">
               <img alt="Logo" src="../assets/img/lekker_speuren_logo.png" width="40px" />
-              <span class="d-none text-light d-md-block special-elite-regular lh-1 text-truncate"
-                >Lekker Speuren</span
-              >
+              <span class="d-none text-light d-md-block text-truncate">Lekker Speuren</span>
             </RouterLink>
           </div>
         </div>
@@ -336,7 +334,7 @@
           @click="closeCanvas"
         >
           <div class="d-flex align-items-center text-body px-3 py-2">
-            <span class="fs-6 me-2">You</span>
+            <span class="fs-6 me-2">Jij</span>
             <i class="bi bi-chevron-right fs-6 d-block"></i>
           </div>
         </RouterLink>
@@ -370,7 +368,7 @@
           <div class="d-flex align-items-center text-body px-3 py-2">
             <i class="bi bi-hand-thumbs-up fs-5 me-4"></i>
             <i class="active bi bi-hand-thumbs-up-fill fs-5 me-4"></i>
-            <span class="fs-6 flex-grow-1">Liked items</span>
+            <span class="fs-6 flex-grow-1">Gelikete items</span>
           </div>
         </RouterLink>
         <hr />

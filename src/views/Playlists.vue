@@ -5,17 +5,17 @@
       <div class="col-12">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><RouterLink :to="{ name: 'you' }">You</RouterLink></li>
-            <li class="breadcrumb-item active" aria-current="page">Playlists</li>
+            <li class="breadcrumb-item"><RouterLink :to="{ name: 'you' }">Jij</RouterLink></li>
+            <li class="breadcrumb-item active" aria-current="page">Afspeellijsten</li>
           </ol>
         </nav>
 
-        <h1 class="fw-bold mb-4">Playlists</h1>
+        <h1 class="fw-bold mb-4">Afspeellijsten</h1>
         <select v-model="sort" class="form-select mb-4 w-auto">
           <option value="alphaAsc">A-Z</option>
           <option value="alphaDesc">Z-A</option>
-          <option value="itemsAsc">Most items</option>
-          <option value="itemsDesc">Least items</option>
+          <option value="itemsAsc">Meeste items</option>
+          <option value="itemsDesc">Minste items</option>
         </select>
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"

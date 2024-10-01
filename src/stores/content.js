@@ -24,7 +24,6 @@ export const useContentStore = defineStore("content", {
       platform: ["all"],
       free: false,
       vod: "all",
-      // vodOnly: false,
       date: {
         range: "all",
         after: "",
@@ -142,7 +141,7 @@ export const useContentStore = defineStore("content", {
             }
             return p;
           },
-          [{ label: "All", value: "all", count: 0 }],
+          [{ label: "Alle", value: "all", count: 0 }],
         );
     },
     /**
@@ -179,7 +178,7 @@ export const useContentStore = defineStore("content", {
             }
             return p;
           },
-          [{ label: "All", value: "all", count: 0 }],
+          [{ label: "Alle", value: "all", count: 0 }],
         );
     },
     /**
@@ -206,10 +205,10 @@ export const useContentStore = defineStore("content", {
             return p;
           },
           [
-            { label: "All", value: "all", count: 0 },
-            { label: "This week", value: 1, count: 0 },
-            { label: "This month", value: 4, count: 0 },
-            { label: "This year", value: 52, count: 0 },
+            { label: "Alle", value: "all", count: 0 },
+            { label: "Deze week", value: 1, count: 0 },
+            { label: "Deze maand", value: 4, count: 0 },
+            { label: "Dit jaar", value: 52, count: 0 },
           ],
         );
     },
@@ -238,11 +237,11 @@ export const useContentStore = defineStore("content", {
             return p;
           },
           [
-            { label: "All", value: "all", count: 0 },
-            { label: "Under 20 minutes", value: 20, count: 0 },
-            { label: "Under 1 hour", value: 60, count: 0 },
-            { label: "Under 2 hours", value: 120, count: 0 },
-            { label: "Over 2 hours", value: "over120", count: 0 },
+            { label: "Alle", value: "all", count: 0 },
+            { label: "Minder dan 20 minuten", value: 20, count: 0 },
+            { label: "Minder dan 1 uur", value: 60, count: 0 },
+            { label: "Minder dan 2 uur", value: 120, count: 0 },
+            { label: "Meer dan 2 uur", value: "over120", count: 0 },
           ],
         );
     },
@@ -461,58 +460,35 @@ export const useContentStore = defineStore("content", {
       // start with all items
       let data = this.content.slice();
 
-      //TODO search based on tags in input???
-      const advancedSearch = {};
-      // const allowedTags = ['type', 'title', 'desc', 'game', 'tag', 'year']
-      // const something = this.search.match(/([\w\d]+:[\w\d\s]+?)(?= [\w\d]+:|$)/g) || []
-      // something.forEach(item => {
-      //     const arr = item.split(':');
-      //     let first = arr.shift();
-      //     if (allowedTags.includes(first))
-      //         advancedSearch[first] = arr.pop()
-      // })
-
-      if (Object.keys(advancedSearch).length) {
-        data = data.filter(
-          (item) =>
-            this.f_type(item, advancedSearch["type"]) &&
-            this.f_title(item, advancedSearch["title"]) &&
-            this.f_desc(item, advancedSearch["desc"]) &&
-            this.f_activity(item, advancedSearch["game"]) &&
-            this.f_tag(item, advancedSearch["tag"]) &&
-            this.f_year(item, advancedSearch["year"]),
-        );
-      } else {
-        //check neg words
-        this.excludedWords.forEach((nw) => {
-          const nw_normalized = this.normalizeInput(nw);
-          data = data.filter((item) => {
-            switch (item.type) {
-              case "podcast":
-                return this.filterPodcast(item, nw_normalized, true);
-              case "video":
-                return this.filterVideo(item, nw_normalized, true);
-              case "stream":
-                return this.filterStream(item, nw_normalized, true);
-            }
-          });
+      //check neg words
+      this.excludedWords.forEach((nw) => {
+        const nw_normalized = this.normalizeInput(nw);
+        data = data.filter((item) => {
+          switch (item.type) {
+            case "podcast":
+              return this.filterPodcast(item, nw_normalized, true);
+            case "video":
+              return this.filterVideo(item, nw_normalized, true);
+            case "stream":
+              return this.filterStream(item, nw_normalized, true);
+          }
         });
+      });
 
-        // check pos words
-        this.includedWords.forEach((pw) => {
-          const pw_normalized = this.normalizeInput(pw);
-          data = data.filter((item) => {
-            switch (item.type) {
-              case "podcast":
-                return this.filterPodcast(item, pw_normalized);
-              case "video":
-                return this.filterVideo(item, pw_normalized);
-              case "stream":
-                return this.filterStream(item, pw_normalized);
-            }
-          });
+      // check pos words
+      this.includedWords.forEach((pw) => {
+        const pw_normalized = this.normalizeInput(pw);
+        data = data.filter((item) => {
+          switch (item.type) {
+            case "podcast":
+              return this.filterPodcast(item, pw_normalized);
+            case "video":
+              return this.filterVideo(item, pw_normalized);
+            case "stream":
+              return this.filterStream(item, pw_normalized);
+          }
         });
-      }
+      });
 
       // filter content
       data = data.filter(
@@ -542,26 +518,6 @@ export const useContentStore = defineStore("content", {
         : this.filters.type.includes(item.type);
     },
     /**
-     * Filter item by title.
-     * @param item
-     * @param advancedSearchTitle
-     * @returns {boolean|*|boolean}
-     */
-    f_title(item, advancedSearchTitle = "") {
-      if (!advancedSearchTitle) return true;
-      const s = this.normalizeInput(advancedSearchTitle);
-      return (
-        this.normalizeInput(item["title"]).includes(this.normalizeInput(s)) ||
-        (item["titles"] ? item["titles"].some((t) => this.normalizeInput(t).includes(s)) : false) ||
-        this.normalizeInput(item["custom_title"]).includes(s)
-      );
-    },
-    f_desc(item, advancedSearchDesc = "") {
-      if (!advancedSearchDesc) return true;
-      const s = this.normalizeInput(advancedSearchDesc);
-      return this.normalizeInput(item["description"]).includes(s);
-    },
-    /**
      * Filter items by platform.
      * @param item
      * @returns {boolean|*}
@@ -587,9 +543,6 @@ export const useContentStore = defineStore("content", {
       if (this.filters.vod === "all") return true;
       else if (this.filters.vod === "vod_only") return item["twitch_id"] || item["youtube_id"];
       else if (this.filters.vod === "no_vod_only") return !item["twitch_id"] && !item["youtube_id"];
-
-      // if (!this.filters.vodOnly) return true;
-      // return item["twitch_id"] || item["youtube_id"];
     },
     /**
      * Filter items by date.
@@ -606,21 +559,10 @@ export const useContentStore = defineStore("content", {
         let end = this.filters.date.before
           ? new Date(this.filters.date.before)
           : new Date("2099-01-01");
-        return toCheck < end && toCheck > start;
+        return toCheck < end && toCheck >= start;
       } else {
         return this.checkWithinWeeks(item, this.filters.date.range);
       }
-    },
-    /**
-     * Filter item by upload year.
-     * @param item
-     * @param year
-     * @returns {boolean}
-     */
-    f_year(item, year) {
-      if (!year) return true;
-      const yearToCheck = new Date(item.date).getFullYear();
-      return yearToCheck === Number(year);
     },
     /**
      * Filter items by duration.
@@ -662,13 +604,6 @@ export const useContentStore = defineStore("content", {
           ? this.normalizeInput(act).includes(s)
           : this.filters.activity.includes(act);
     },
-    f_tag(item, advancedSearchTag = "") {
-      if (!advancedSearchTag) return true;
-      const s = this.normalizeInput(advancedSearchTag);
-      return item["tags"]
-        ? item["tags"].some((tag) => this.normalizeInput(tag).includes(s))
-        : false;
-    },
     /**
      * Check if item's date is in range.
      * @param item
@@ -679,18 +614,6 @@ export const useContentStore = defineStore("content", {
       let toCheck = new Date(item.date);
       let d = new Date();
       d.setDate(d.getDate() - 7 * wks);
-      return toCheck > d;
-    },
-    /**
-     * Check if item's date is in range
-     * @param item
-     * @param mth
-     * @returns {boolean}
-     */
-    checkWithinMonths(item, mth) {
-      let toCheck = new Date(item.date);
-      let d = new Date();
-      d.setMonth(d.getMonth() - mth);
       return toCheck > d;
     },
     /**
@@ -795,7 +718,6 @@ export const useContentStore = defineStore("content", {
         platform: ["all"],
         free: false,
         vod: "all",
-        // vodOnly: false,
         date: {
           range: "all",
           after: "",
@@ -815,17 +737,6 @@ export const useContentStore = defineStore("content", {
       return this.content.filter((i) => i.collection === collectionId).length;
     },
     /**
-     * Return array with collection first items
-     * @returns {*[]}
-     */
-    seriesFirstItems() {
-      return this.collections
-        .map((col) => {
-          return this.content.find((item) => item.collection === col.id);
-        })
-        .filter((item) => item);
-    },
-    /**
      * Set filter from url query.
      * @param urlParams
      */
@@ -835,8 +746,12 @@ export const useContentStore = defineStore("content", {
       if (urlParams.getAll("activity")) this.filters.activity = urlParams.getAll("activity");
       if (urlParams.get("free")) this.filters.free = urlParams.get("free");
       if (urlParams.get("vod")) this.filters.vod = urlParams.get("vod");
-      if (urlParams.get("date_weeks"))
-        this.filters.date.range = parseInt(urlParams.get("date_weeks"));
+      if (urlParams.get("date")) this.filters.date.range = urlParams.get("date");
+      if (this.filters.date.range === "other") {
+        if (urlParams.get("date_after")) this.filters.date.after = urlParams.get("date_after");
+        if (urlParams.get("date_before")) this.filters.date.before = urlParams.get("date_before");
+      }
+
       if (urlParams.get("duration")) this.filters.duration = urlParams.get("duration");
       this.search = urlParams.get("search") || "";
     },
@@ -854,10 +769,14 @@ export const useContentStore = defineStore("content", {
       let search_params = new URLSearchParams(types.concat(acts).concat(platforms));
       if (this.filters.free) search_params.append("free", this.filters.free);
       if (this.filters.vod) search_params.append("vod", this.filters.vod);
-      if (this.filters.date.range !== "all")
-        search_params.append("date_weeks", this.filters.date.range);
       if (this.filters.duration) search_params.append("duration", this.filters.duration);
       if (this.search) search_params.append("search", this.search);
+      if (this.filters.date.range) search_params.append("date", this.filters.date.range);
+
+      if (this.filters.date.range === "other") {
+        if (this.filters.date.after) search_params.append("date_after", this.filters.date.after);
+        if (this.filters.date.before) search_params.append("date_before", this.filters.date.before);
+      }
 
       let url_search = search_params.toString();
       if (url_search) {

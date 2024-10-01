@@ -1,5 +1,5 @@
 <template>
-  <div class="card h-100 border-0 bg-transparent">
+  <div :id="'card_' + card.id" class="card h-100 border-0 bg-transparent">
     <div v-if="isSeries" class="stack-2 border border-3 border-dark bg-dark z-0"></div>
     <div v-if="isSeries" class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
     <div
@@ -23,22 +23,31 @@
 
       <div class="transform-wrapper position-relative">
         <img :src="imgScr" alt="thumbnail" class="w-100" />
+        <!-- date -->
         <span
           class="badge bg-black position-absolute top-0 start-0 m-2"
           style="--bs-bg-opacity: 0.75"
           >{{ card.date }}</span
         >
-
+        <!-- duration -->
         <span
           class="badge bg-black position-absolute bottom-0 end-0 m-2"
           style="--bs-bg-opacity: 0.75"
           >{{ duration }}</span
         >
+        <!-- free -->
         <span
           v-if="card.type === 'stream' && card.free"
           class="badge bg-warning position-absolute top-0 end-0 m-2 text-uppercase"
         >
           Gratis
+        </span>
+        <!-- type -->
+        <span
+          class="badge bg-black position-absolute bottom-0 start-0 m-2"
+          style="--bs-bg-opacity: 0.75"
+        >
+          {{ card.type }}
         </span>
 
         <div
@@ -51,45 +60,79 @@
     </div>
     <div class="card-body pt-3 pb-0 px-2 px-sm-0">
       <div class="d-flex justify-content-between gap-2 position-relative">
-        <a
-          v-if="card['twitch_id']"
-          :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
-          target="_blank"
+        <div
+          class="flex-shrink-0 position-relative"
+          style="width: 32px; height: 32px"
+          v-if="card['twitch_id'] && card['youtube_id']"
         >
-          <img
-            alt="logo"
-            class="rounded-circle"
-            height="32"
-            src="../assets/img/twitch-icon.png"
-            width="32"
-          />
-        </a>
-        <a
-          v-else-if="card['type'] === 'podcast'"
-          :href="'https://youtube.com/watch?v=' + card['youtube_id']"
-          target="_blank"
-        >
-          <img
-            alt="logo"
-            class="rounded-circle"
-            height="32"
-            src="../assets/img/podcast.png"
-            width="32"
-          />
-        </a>
-        <a
-          v-else-if="card['youtube_id']"
-          :href="'https://youtube.com/watch?v=' + card['youtube_id']"
-          target="_blank"
-        >
-          <img
-            alt="logo"
-            class="rounded-circle"
-            height="32"
-            src="../assets/img/youtube.png"
-            width="32"
-          />
-        </a>
+          <a
+            :href="'https://youtube.com/watch?v=' + card['youtube_id']"
+            target="_blank"
+            class="position-absolute end-0 bottom-0 lh-1"
+          >
+            <img
+              alt="logo"
+              class="rounded-circle"
+              height="24"
+              src="../assets/img/youtube.png"
+              width="24"
+            />
+          </a>
+          <a
+            :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+            target="_blank"
+            class="position-absolute top-0 start-0 lh-1"
+          >
+            <img
+              alt="logo"
+              class="rounded-circle"
+              height="24"
+              src="../assets/img/twitch-icon.png"
+              width="24"
+            />
+          </a>
+        </div>
+        <template v-else>
+          <a
+            v-if="card['twitch_id']"
+            :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+            target="_blank"
+          >
+            <img
+              alt="logo"
+              class="rounded-circle"
+              height="32"
+              src="../assets/img/twitch-icon.png"
+              width="32"
+            />
+          </a>
+          <a
+            v-else-if="card['type'] === 'podcast'"
+            :href="'https://youtube.com/watch?v=' + card['youtube_id']"
+            target="_blank"
+          >
+            <img
+              alt="logo"
+              class="rounded-circle"
+              height="32"
+              src="../assets/img/podcast.png"
+              width="32"
+            />
+          </a>
+          <a
+            v-else-if="card['youtube_id']"
+            :href="'https://youtube.com/watch?v=' + card['youtube_id']"
+            target="_blank"
+          >
+            <img
+              alt="logo"
+              class="rounded-circle"
+              height="32"
+              src="../assets/img/youtube.png"
+              width="32"
+            />
+          </a>
+        </template>
 
         <div class="meta flex-grow-1">
           <h3
@@ -304,10 +347,25 @@ function goToCard(type = "left") {
       window.open(routeData.href, "_blank");
     } else router.push({ path: path });
   } else {
-    selectedCardId.value = selectedCardId.value === props.card["id"] ? null : props.card["id"];
-    if (selectedCardId.value && canvasBtn.value) canvasBtn.value.click();
+    const path = `/item/${props.card.id}`;
+    if (type === "middle") {
+      const routeData = router.resolve({ path: path });
+      window.open(routeData.href, "_blank");
+    } else {
+      selectedCardId.value = selectedCardId.value === props.card["id"] ? null : props.card["id"];
+      if (selectedCardId.value) scrollIntoView();
+    }
   }
-  // const path = props.isSeries ? `/series/${props.card['collection']}` : `/item/${props.card['id']}`
+}
+
+/**
+ * Scroll card into view.
+ */
+function scrollIntoView() {
+  setTimeout(() => {
+    const el = document.getElementById("card_" + props.card.id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, 200);
 }
 
 /**
@@ -352,7 +410,7 @@ const yearAgo = computed(() => {
   -webkit-box-orient: vertical
 
 .inline-meta
-  line-height: 16px
+  line-height: 18px
 
   span:not(:first-of-type):before
     margin: 0 4px

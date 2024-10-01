@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered modal-xs">
       <div class="modal-content" style="background-color: #292929">
         <div class="modal-header px-4 border-0">
-          <h1 class="modal-title fs-6 me-2">Save to...</h1>
+          <h1 class="modal-title fs-6 me-2">Opslaan in...</h1>
           <button
             ref="close"
             type="button"
@@ -35,18 +35,18 @@
           <div v-else class="mt-3">
             <form @submit.prevent="createList">
               <div class="mb-3">
-                <label for="newListName" class="form-label small">Name</label>
+                <label for="newListName" class="form-label small">Naam</label>
                 <input
                   v-model="listName"
                   type="text"
                   class="form-control"
                   id="newListName"
-                  placeholder="Enter playlist title..."
+                  placeholder="Title van de afspeellijst..."
                   required
                 />
               </div>
               <button type="submit" class="btn btn-sm btn-outline-primary rounded-pill float-end">
-                Create
+                Creëren
               </button>
             </form>
           </div>
