@@ -31549,7 +31549,6 @@
                 "casual"
             ],
             "time_start": "20:26:00",
-            
             "time_end": "00:25:00"
         },
         {
@@ -51218,6 +51217,44 @@
             "twitch_id": "2260299537",
             "youtube_id": "5_rZ7BbIMJc",
             "id": "952a",
+            "type": "stream"
+        },
+        {
+            "date": "2024-09-30",
+            "time_start": "20:36:42",
+            "time_end": "22:26:40",
+            "titles": [
+                "Peters laatste DONKEY KONG SPEEDRUN 2024"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 6598,
+            "twitch_id": "2264443960",
+            "youtube_id": "OGjFaehWfYw",
+            "id": "73c9",
+            "type": "stream"
+        },
+        {
+            "date": "2024-10-02",
+            "time_start": "20:40:37",
+            "time_end": "22:44:20",
+            "titles": [
+                "HORROR MAAND 2024 IS BEGONNEN!"
+            ],
+            "activities": [
+                {
+                    "title": "Zoochology",
+                    "duration": 1
+                }
+            ],
+            "duration": 7423,
+            "twitch_id": "2266049440",
+            "youtube_id": "QhJNL6aUvGY",
+            "id": "60a5",
             "type": "stream"
         }
     ]
