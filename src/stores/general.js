@@ -5,7 +5,7 @@ import { event } from "vue-gtag";
 export const useGeneralStore = defineStore("general", {
   state: () => ({
     theme: "dark",
-    view: "main",
+    view: "thumbnail",
     pageSize: 24,
     pageNumber: 0,
     pageNumberSeries: 0,

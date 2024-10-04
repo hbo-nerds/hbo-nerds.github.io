@@ -416,10 +416,6 @@ const yearAgo = computed(() => {
     margin: 0 4px
     content: "•"
 
-.dropdown-menu
-  background-color: #292929
-  --bs-dropdown-link-hover-bg: #3d3d3d
-
 .stack
   position: absolute
   top: -4px

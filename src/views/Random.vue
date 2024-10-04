@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <div class="d-flex flex-wrap gap-3 align-items-center mb-3">
+      <button
+        class="btn btn-dark border-0 rounded-pill d-inline-block"
+        type="button"
+        @click="contentStore.pickRandomSet()"
+      >
+        <i class="bi bi-dice-5 me-2"></i>Geef mij wat anders
+      </button>
+      <span class="d-inline-flex gap-2">
+        <span class="badge rounded-pill text-bg-warning">Let op!</span>
+        <span class="fw-lighter small">De randomizer maakt gebruik van de huidige filters.</span>
+      </span>
+    </div>
+    <div
+      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+    >
+      <div v-for="(card, index) in randomData" :key="index" class="col">
+        <Card :card="card" />
+      </div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { useContentStore } from "@/stores/content.js";
+import { storeToRefs } from "pinia";
+import { defineAsyncComponent, onActivated } from "vue";
+
+const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
+
+const contentStore = useContentStore();
+const { randomData } = storeToRefs(contentStore);
+
+onActivated(() => {
+  if (!randomData.value.length) contentStore.pickRandomSet();
+});
+</script>
+
+<style scoped></style>

@@ -18,11 +18,11 @@ export const useContentStore = defineStore("content", {
     search: "",
     sortOption: "newOld",
     sortOptionSeries: "newOld",
-    filtering: false,
     filters: {
       type: ["all"],
       platform: ["all"],
       free: false,
+      hideSeen: false,
       vod: "all",
       date: {
         range: "all",
@@ -31,6 +31,7 @@ export const useContentStore = defineStore("content", {
       },
       duration: "all",
       activity: [],
+      tag: [],
     },
     selectedCardId: null,
   }),
@@ -124,10 +125,12 @@ export const useContentStore = defineStore("content", {
           (item) =>
             this.f_platform(item) &&
             this.f_paywall(item) &&
+            this.f_seen(item) &&
             this.f_vod(item) &&
             this.f_date(item) &&
             this.f_duration(item) &&
-            this.f_activity(item),
+            this.f_activity(item) &&
+            this.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -154,10 +157,12 @@ export const useContentStore = defineStore("content", {
           (item) =>
             this.f_type(item) &&
             this.f_paywall(item) &&
+            this.f_seen(item) &&
             this.f_vod(item) &&
             this.f_date(item) &&
             this.f_duration(item) &&
-            this.f_activity(item),
+            this.f_activity(item) &&
+            this.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -192,9 +197,11 @@ export const useContentStore = defineStore("content", {
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
+            this.f_seen(item) &&
             this.f_vod(item) &&
             this.f_duration(item) &&
-            this.f_activity(item),
+            this.f_activity(item) &&
+            this.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -223,9 +230,11 @@ export const useContentStore = defineStore("content", {
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
+            this.f_seen(item) &&
             this.f_vod(item) &&
             this.f_date(item) &&
-            this.f_activity(item),
+            this.f_activity(item) &&
+            this.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -256,9 +265,11 @@ export const useContentStore = defineStore("content", {
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
+            this.f_seen(item) &&
             this.f_vod(item) &&
             this.f_date(item) &&
-            this.f_duration(item),
+            this.f_duration(item) &&
+            this.f_tag(item),
         )
         .reduce((p, c) => {
           const act = c["activity"] || c["activities"];
@@ -277,6 +288,39 @@ export const useContentStore = defineStore("content", {
           } else {
             if (!p.hasOwnProperty(act)) p[act] = 0;
             p[act]++;
+            return p;
+          }
+        }, {});
+    },
+    /**
+     * Group VODs by tag.
+     * @returns {*}
+     */
+    groupedTags() {
+      return this.content
+        .filter(
+          (item) =>
+            this.f_type(item) &&
+            this.f_platform(item) &&
+            this.f_paywall(item) &&
+            this.f_seen(item) &&
+            this.f_vod(item) &&
+            this.f_date(item) &&
+            this.f_duration(item) &&
+            this.f_activity(item),
+        )
+        .reduce((p, c) => {
+          const tags = c["tags"];
+          if (tags === undefined) return p;
+          if (Array.isArray(tags)) {
+            tags.forEach((tag) => {
+              if (!p.hasOwnProperty(tag)) p[tag] = 0;
+              p[tag]++;
+            });
+            return p;
+          } else {
+            if (!p.hasOwnProperty(tags)) p[tags] = 0;
+            p[tags]++;
             return p;
           }
         }, {});
@@ -449,7 +493,6 @@ export const useContentStore = defineStore("content", {
      * Main filter function.
      */
     filter() {
-      this.filtering = true;
       this.updateUrl();
 
       const s = useGeneralStore();
@@ -496,13 +539,14 @@ export const useContentStore = defineStore("content", {
           this.f_type(item) &&
           this.f_platform(item) &&
           this.f_paywall(item) &&
+          this.f_seen(item) &&
           this.f_vod(item) &&
           this.f_date(item) &&
           this.f_duration(item) &&
-          this.f_activity(item),
+          this.f_activity(item) &&
+          this.f_tag(item),
       );
       this.filteredData = [...data];
-      this.filtering = false;
     },
     /**
      * Filter items by type.
@@ -535,6 +579,16 @@ export const useContentStore = defineStore("content", {
     f_paywall(item) {
       if (!this.filters.free) return true;
       return item.type !== "stream" || item.free;
+    },
+    /**
+     * Filter item by suser seen.
+     * @param item
+     * @returns {boolean}
+     */
+    f_seen(item) {
+      if (!this.filters.hideSeen) return true;
+      const s = useGeneralStore();
+      return !s.seenItems.includes(item.id);
     },
     /**
      * Filter item by VOD availability.
@@ -603,6 +657,26 @@ export const useContentStore = defineStore("content", {
         return advancedSearch
           ? this.normalizeInput(act).includes(s)
           : this.filters.activity.includes(act);
+    },
+    /**
+     * Filter items by tag.
+     * @param item
+     * @param advancedSearch
+     * @returns {*|boolean}
+     */
+    f_tag(item, advancedSearch = "") {
+      if (!this.filters.tag.length && !advancedSearch) return true;
+      const s = this.normalizeInput(advancedSearch);
+      const tags = item["tags"];
+      if (!tags) return false;
+      if (Array.isArray(tags)) {
+        return advancedSearch
+          ? tags.some((a) => this.normalizeInput(a).includes(s))
+          : this.filters.tag.some((r) => tags.includes(r));
+      } else
+        return advancedSearch
+          ? this.normalizeInput(tags).includes(s)
+          : this.filters.tag.includes(tags);
     },
     /**
      * Check if item's date is in range.
@@ -717,6 +791,7 @@ export const useContentStore = defineStore("content", {
         type: ["all"],
         platform: ["all"],
         free: false,
+        hideSeen: false,
         vod: "all",
         date: {
           range: "all",
@@ -725,6 +800,7 @@ export const useContentStore = defineStore("content", {
         },
         duration: "all",
         activity: [],
+        tag: [],
       };
       this.filter();
     },
@@ -744,7 +820,9 @@ export const useContentStore = defineStore("content", {
       if (urlParams.getAll("type")) this.filters.type = urlParams.getAll("type");
       if (urlParams.getAll("platform")) this.filters.platform = urlParams.getAll("platform");
       if (urlParams.getAll("activity")) this.filters.activity = urlParams.getAll("activity");
+      if (urlParams.getAll("tag")) this.filters.tag = urlParams.getAll("tag");
       if (urlParams.get("free")) this.filters.free = urlParams.get("free");
+      if (urlParams.get("hide_seen")) this.filters.hideSeen = urlParams.get("hide_seen");
       if (urlParams.get("vod")) this.filters.vod = urlParams.get("vod");
       if (urlParams.get("date")) this.filters.date.range = urlParams.get("date");
       if (this.filters.date.range === "other") {
@@ -766,8 +844,10 @@ export const useContentStore = defineStore("content", {
       const acts = this.filters.activity.length
         ? this.filters.activity.map((t) => ["activity", t])
         : [];
-      let search_params = new URLSearchParams(types.concat(acts).concat(platforms));
+      const tags = this.filters.tag.length ? this.filters.tag.map((t) => ["tag", t]) : [];
+      let search_params = new URLSearchParams(types.concat(acts).concat(platforms).concat(tags));
       if (this.filters.free) search_params.append("free", this.filters.free);
+      if (this.filters.hideSeen) search_params.append("hide_seen", this.filters.hideSeen);
       if (this.filters.vod) search_params.append("vod", this.filters.vod);
       if (this.filters.duration) search_params.append("duration", this.filters.duration);
       if (this.search) search_params.append("search", this.search);

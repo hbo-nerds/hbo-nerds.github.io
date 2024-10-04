@@ -154,7 +154,7 @@
       </div>
     </div>
     <!-- activity -->
-    <div class="col-sm-12">
+    <div class="col-sm-6">
       <h4 class="small py-2 fw-lighter border-bottom mb-3">Activiteit</h4>
       <input
         id="f_activity"
@@ -195,6 +195,51 @@
         </div>
         <span v-if="!f_activities.length" class="form-check-label small text-capitalize"
           >Geen activiteiten beschikbaar.</span
+        >
+      </div>
+    </div>
+    <!-- tag -->
+    <div class="col-sm-6">
+      <h4 class="small py-2 fw-lighter border-bottom mb-3">Tag</h4>
+      <input
+        id="f_tag"
+        v-model="f_tag"
+        class="form-control form-control-sm mb-3"
+        placeholder="Zoek tag"
+        type="search"
+      />
+      <div v-for="(key, idx) in a_tags" :key="idx" class="form-check">
+        <input
+          :id="'tag-' + idx"
+          v-model="filters.tag"
+          :value="key"
+          class="form-check-input"
+          name="tag"
+          type="checkbox"
+          @change="contentStore.filter()"
+        />
+        <label :for="'tag-' + idx" class="form-check-label small text-capitalize">
+          {{ key }} ({{ groupedTags[key] }})
+        </label>
+      </div>
+      <hr v-if="a_tags.length" />
+      <div class="d-flex flex-column gap-1 overflow-y-auto" style="height: 150px">
+        <div v-for="(key, idx) in f_tags" :key="idx" class="form-check">
+          <input
+            :id="'tag-' + idx"
+            v-model="filters.tag"
+            :value="key"
+            class="form-check-input"
+            name="tag"
+            type="checkbox"
+            @change="contentStore.filter()"
+          />
+          <label :for="'tag-' + idx" class="form-check-label small text-capitalize w-100">
+            {{ key }} ({{ groupedTags[key] }})
+          </label>
+        </div>
+        <span v-if="!f_tags.length" class="form-check-label small text-capitalize"
+          >Geen tags beschikbaar.</span
         >
       </div>
     </div>
@@ -265,11 +310,11 @@
     <div class="col-sm-4">
       <h4 class="small py-2 fw-lighter border-bottom mb-3">Algemeen</h4>
       <div class="d-flex flex-column gap-1">
-        <div class="form-check">
+        <div class="pe-3">
           <input
             id="hide_paywall"
             v-model="filters.free"
-            class="form-check-input"
+            class="d-none"
             name="free"
             type="checkbox"
             @change="contentStore.filter()"
@@ -280,6 +325,25 @@
             :class="filters.free ? '' : 'text-body-tertiary'"
           >
             Verberg items met paywall
+            <i v-if="filters.free" class="bi bi-check-lg ms-2"></i>
+          </label>
+        </div>
+        <div class="pe-3">
+          <input
+            id="hide_seen"
+            v-model="filters.hideSeen"
+            class="d-none"
+            name="seen"
+            type="checkbox"
+            @change="contentStore.filter()"
+          />
+          <label
+            class="form-check-label small text-nowrap w-100"
+            for="hide_seen"
+            :class="filters.hideSeen ? '' : 'text-body-tertiary'"
+          >
+            Verberg bekeken items
+            <i v-if="filters.hideSeen" class="bi bi-check-lg ms-2"></i>
           </label>
         </div>
       </div>
@@ -347,6 +411,7 @@ const {
   sortOption,
   filters,
   groupedActivities,
+  groupedTags,
   groupedTypes,
   groupedPlatforms,
   groupedDates,
@@ -354,6 +419,12 @@ const {
 } = storeToRefs(contentStore);
 
 const f_term = ref("");
+const f_tag = ref("");
+
+/**
+ * Filter activities
+ * @type {ComputedRef<string[]>}
+ */
 const f_activities = computed(() => {
   return Object.keys(groupedActivities.value)
     .filter((i) => normalizeInput(i).includes(normalizeInput(f_term.value)))
@@ -361,8 +432,33 @@ const f_activities = computed(() => {
       return a.toLowerCase().localeCompare(b.toLowerCase());
     });
 });
+
+/**
+ * List with active activities
+ * @type {ComputedRef<string[]>}
+ */
 const a_activities = computed(() => {
   return Object.keys(groupedActivities.value).filter((i) => filters.value.activity.includes(i));
+});
+
+/**
+ * Filter tags
+ * @type {ComputedRef<string[]>}
+ */
+const f_tags = computed(() => {
+  return Object.keys(groupedTags.value)
+    .filter((i) => normalizeInput(i).includes(normalizeInput(f_tag.value)))
+    .sort((a, b) => {
+      return a.toLowerCase().localeCompare(b.toLowerCase());
+    });
+});
+
+/**
+ * List with active tags
+ * @type {ComputedRef<string[]>}
+ */
+const a_tags = computed(() => {
+  return Object.keys(groupedTags.value).filter((i) => filters.value.tag.includes(i));
 });
 
 function normalizeInput(input) {
