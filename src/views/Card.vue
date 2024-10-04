@@ -1,8 +1,8 @@
 <template>
   <div class="container-fluid py-4">
     <div class="row gy-3 justify-content-center">
-      <div class="col-12 col-md-8 mb-md-0">
-        <SingleCard :card="card"></SingleCard>
+      <div class="col-12 col-md-8 col-xl-6 mb-md-0">
+        <SingleCard :card="card" :show-close-btn="false"></SingleCard>
       </div>
     </div>
   </div>

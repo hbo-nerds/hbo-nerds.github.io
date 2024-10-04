@@ -10,13 +10,17 @@
           </ol>
         </nav>
 
-        <h1 class="fw-bold mb-4">Afspeellijsten</h1>
-        <select v-model="sort" class="form-select mb-4 w-auto">
-          <option value="alphaAsc">A-Z</option>
-          <option value="alphaDesc">Z-A</option>
-          <option value="itemsAsc">Meeste items</option>
-          <option value="itemsDesc">Minste items</option>
-        </select>
+        <h1 class="fw-bold mb-2">Afspeellijsten</h1>
+        <SortSelect
+          class="mb-4"
+          :sort-options="sortOptions"
+          :active="sort"
+          @select="
+            (val) => {
+              sort = val;
+            }
+          "
+        />
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
         >
@@ -31,6 +35,7 @@
 
 <script setup>
 import Playlist from "@/components/Playlist.vue";
+import SortSelect from "@/components/SortSelect.vue";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
@@ -39,6 +44,12 @@ const generalStore = useGeneralStore();
 const { playlists } = storeToRefs(generalStore);
 
 const sort = ref("alphaAsc");
+const sortOptions = [
+  { value: "alphaAsc", label: "A-Z" },
+  { value: "alphaDesc", label: "Z-A" },
+  { value: "itemsAsc", label: "Meeste items" },
+  { value: "itemsDesc", label: "Minste items" },
+];
 
 /**
  * Return sorted list of playlists.

@@ -16,11 +16,11 @@
     "@vueuse/core": "^11.1.0",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
+    "lodash.debounce": "^4.0.8",
     "npm-check-updates": "^17.1.2",
     "pathe": "^1.1.2",
     "pinia": "^2.2.2",
     "vue": "^3.5.6",
-    "vue-debounce": "^5.0.0",
     "vue-gtag": "^2.0.1",
     "vue-router": "^4.4.5"
   },
@@ -31,11 +31,11 @@
     "eslint": "^9.10.0",
     "eslint-plugin-vue": "^9.28.0",
     "prettier": "^3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0",
     "sass": "^1.79.1",
+    "typescript": "^5.6.2",
     "vite": "^5.4.6",
     "vite-plugin-pwa": "^0.20.5",
-    "prettier-plugin-organize-imports": "^4.0.0",
-    "typescript": "^5.6.2",
     "vue-tsc": "^2.0.29"
   }
 }

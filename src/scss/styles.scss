@@ -105,3 +105,51 @@ input[type="checkbox"] + label {
     margin-left: auto;
   }
 }
+
+[data-bs-theme="dark"] {
+  .card {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .btn-dark {
+    --bs-btn-color: #f1f1f1;
+    --bs-btn-bg: rgba(255, 255, 255, 0.1);
+    --bs-btn-border-color: rgba(255, 255, 255, 0.1);
+    --bs-btn-hover-color: #f1f1f1;
+    --bs-btn-hover-bg: rgba(255, 255, 255, 0.2);
+    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.2);
+    --bs-btn-active-color: #0f0f0f;
+    --bs-btn-active-bg: #f1f1f1;
+    --bs-btn-active-border-color: #f1f1f1;
+  }
+  .accordion {
+    --bs-accordion-bg: transparent;
+
+    --bs-accordion-color: var(--bs-body-color);
+
+    --bs-accordion-btn-color: var(--bs-body-color);
+    --bs-accordion-btn-bg: var(--bs-accordion-bg);
+    --bs-accordion-btn-focus-box-shadow: none;
+    --bs-accordion-active-color: var(--bs-body-color);
+    --bs-accordion-active-bg: transparent;
+    .accordion-header:hover {
+      background-color: #2c2c2c;
+    }
+  }
+}
+
+[data-bs-theme="light"] {
+  .card {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .btn-dark {
+    --bs-btn-color: #0f0f0f;
+    --bs-btn-bg: rgba(0, 0, 0, 0.05);
+    --bs-btn-border-color: rgba(0, 0, 0, 0.05);
+    --bs-btn-hover-color: #0f0f0f;
+    --bs-btn-hover-bg: rgba(0, 0, 0, 0.1);
+    --bs-btn-hover-border-color: rgba(0, 0, 0, 0.1);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0f0f0f;
+    --bs-btn-active-border-color: #0f0f0f;
+  }
+}
