@@ -4,100 +4,102 @@
     <div class="row justify-content-center gap-3">
       <div class="col-md-7">
         <article class="mb-4">
-          <div class="card rounded-5">
+          <h3 class="fw-lighter fs-5 mb-3">Over</h3>
+          <div class="card rounded-3 bg-body">
             <div class="card-body p-4">
-              <h3>Welkom bij Lekker Speuren!</h3>
               <p>
-                Wij zijn een groep toegewijde communityleden van het populaire Twitch-kanaal
-                <a href="https://www.twitch.tv/lekkerspelen" target="_blank">Lekker Spelen</a>.
-                Gedreven door onze passie voor het kanaal en de geweldige content die ze produceren,
-                hebben we Lekker Speuren gecreëerd - dé zoekmachine waar je alle video's, podcasts
-                en streams van Lekker Spelen kunt vinden.
+                Welkom bij Lekker Speuren, dé zoekmachine voor alle content van het populaire Twitch
+                en YouTube-kanaal Lekker Spelen! Gedreven door onze passie voor het kanaal hebben we
+                één plek gecreëerd waar je video's, podcasts en streams kunt vinden.
               </p>
               <p>
-                Bij Lekker Spelen draait alles om plezier, humor en het delen van geweldige momenten
-                met de community. Of het nu gaat om epische gameplays, hilarische podcasts of live
-                interacties met kijkers, het kanaal brengt mensen samen en laat hen genieten van de
-                unieke sfeer die alleen Lekker Spelen kan bieden.
+                Lekker Spelen draait om plezier, humor en het samenbrengen van de community met
+                epische gameplays en hilarische interacties. Met Lekker Speuren maken we deze
+                ervaring nog toegankelijker. Zoek je favoriete video’s, beleef streams opnieuw, en
+                geniet van alles wat Lekker Spelen te bieden heeft!
               </p>
-              <p>
-                Met Lekker Speuren streven we ernaar om deze ervaring nog toegankelijker te maken.
-                Of je nu op zoek bent naar een specifieke video, een favoriete stream wilt
-                herbeleven of gewoon wat lachtijd nodig hebt, wij hebben het allemaal voor je op één
-                plek verzameld.
-              </p>
-              <p>
-                Dus ga er lekker voor zitten, speur naar je favoriete content en laat je meevoeren
-                door de wereld van Lekker Spelen. We zijn er trots op om deel uit te maken van deze
-                geweldige community en hopen dat Lekker Speuren je helpt om nog meer te genieten van
-                alles wat Lekker Spelen te bieden heeft!
-              </p>
-              <a href="https://github.com/lekkersicko/lekker-speuren" target="_blank">
-                <i class="bi bi-github me-2"></i>Bekijk het project op GitHub.
-              </a>
+              <p>Namens het team, veel speurplezier!</p>
             </div>
           </div>
         </article>
         <article class="mb-4">
-          <div class="card rounded-5">
+          <h3 class="fw-lighter fs-5 mb-3">Help</h3>
+          <!-- QA -->
+          <Accordion class="mb-5" />
+          <!-- Community -->
+          <div class="card bg-body">
+            <div class="card-body p-4 p-md-5 text-center">
+              <h3>Meer hulp nodig?</h3>
+              <p>De community is er voor je:</p>
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                  <a
+                    class="d-flex align-items-center gap-3 rounded-4 bg-body-tertiary p-3 shadow-lg text-decoration-none"
+                    href="https://www.reddit.com/r/lekkerspelen/"
+                    target="_blank"
+                  >
+                    <i class="fs-2 bi bi-people"></i>
+                    <div class="text-body text-start">
+                      <span class="d-block">Stel je vraag in de subreddit</span>
+                      <span class="fw-lighter">Krijg antwoord van communityleden</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="mb-4">
+          <h3 class="fw-lighter fs-5 mb-3">Credits</h3>
+          <!-- Credits -->
+          <div class="card rounded-3 bg-body mb-5">
             <div class="card-body p-4">
-              <h3>Mede mogelijk gemaakt door:</h3>
-
               <div class="mb-3">
-                <div class="small">Dev team:</div>
+                <div class="small"><i class="me-2 bi bi-bug"></i>Dev team:</div>
                 <template v-for="(p, i) in devTeam">
                   {{ p }} {{ i < devTeam.length - 1 ? "| " : "" }}
                 </template>
               </div>
 
               <div class="mb-0">
-                <div class="small">Data team:</div>
+                <div class="small"><i class="me-2 bi bi-clipboard-data"></i>Data team:</div>
                 <template v-for="(p, i) in dataTeam">
                   {{ p }} {{ i < dataTeam.length - 1 ? "| " : "" }}
                 </template>
               </div>
             </div>
           </div>
+          <!-- Community -->
+          <div class="card bg-body">
+            <div class="card-body p-4 p-md-5 text-center">
+              <h3>Ook bijdragen?</h3>
+              <p>Samen sta je sterker dan alleen:</p>
+              <div class="row justify-content-center">
+                <div class="col-12 col-md-8">
+                  <a
+                    class="d-flex align-items-center gap-3 rounded-4 bg-body-tertiary p-3 shadow-lg text-decoration-none"
+                    href="https://github.com/hbo-nerds"
+                    target="_blank"
+                  >
+                    <i class="fs-2 bi bi-github"></i>
+                    <div class="text-body text-start">
+                      <span class="d-block">Bijdragen of gewoon benieuwd</span>
+                      <span class="fw-lighter">Bekijk het project op GitHub</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </article>
-
-        <!--        <div>-->
-        <!--          <div class="d-flex gap-4">-->
-        <!--            <i class="bi bi-search fs-1"></i>-->
-        <!--            <div>-->
-        <!--              <h5>Hoe kan ik zoeken naar items?</h5>-->
-        <!--              <p>-->
-        <!--                Wil je gerichter zoeken naar content op Lekker Speuren? Gebruik dan onze-->
-        <!--                geavanceerde zoekfunctie!-->
-        <!--              </p>-->
-        <!--              <p>-->
-        <!--                Met de geavanceerde zoekopties kun je je zoekopdracht verfijnen en specifieke-->
-        <!--                resultaten vinden die aan jouw criteria voldoen. Je kunt bijvoorbeeld filteren op-->
-        <!--                ...-->
-        <!--              </p>-->
-        <!--              <p>-->
-        <!--                Om gebruik te maken van de geavanceerde zoekfunctie, klik op de "Geavanceerd zoeken"-->
-        <!--                link naast de zoekbalk. Hier kun je verschillende zoekfilters instellen om je-->
-        <!--                zoekopdracht aan te passen aan jouw behoeften.-->
-        <!--              </p>-->
-        <!--              <p>...</p>-->
-        <!--              <p>-->
-        <!--                Of je nu op zoek bent naar recente video's, oude favorieten wilt terugvinden, of-->
-        <!--                specifieke genres of thema's zoekt, met onze geavanceerde zoekfunctie vind je-->
-        <!--                precies wat je zoekt, snel en efficiënt.-->
-        <!--              </p>-->
-        <!--              <p>-->
-        <!--                Dus ga aan de slag en ontdek de volledige mogelijkheden van Lekker Speuren met onze-->
-        <!--                geavanceerde zoekfunctie!-->
-        <!--              </p>-->
-        <!--            </div>-->
-        <!--          </div>-->
-        <!--        </div>-->
       </div>
     </div>
   </main>
 </template>
 
 <script setup>
+import Accordion from "@/components/QA/Accordion.vue";
+
 const dataTeam = ["Braxshinoa", "Sheepolution"];
 const devTeam = ["Superruudje", "Krekkie"];
 </script>

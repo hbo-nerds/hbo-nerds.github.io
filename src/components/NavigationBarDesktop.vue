@@ -17,7 +17,7 @@
             </div>
             <RouterLink class="text-decoration-none d-flex align-items-center gap-2" to="/">
               <img alt="Logo" src="../assets/img/lekker_speuren_logo.png" width="40px" />
-              <span class="d-none text-light d-md-block text-truncate">Lekker Speuren</span>
+              <span class="d-none text-body d-md-block text-truncate">Lekker Speuren</span>
             </RouterLink>
           </div>
         </div>
@@ -42,10 +42,9 @@
               <input
                 v-model="search"
                 :class="[focus ? 'border-start-0 focus-border' : 'rounded-start-pill']"
-                class="form-control shadow-none"
+                class="form-control shadow-none bg-transparent"
                 inputmode="search"
                 placeholder="Zoek"
-                style="background-color: #121212"
                 type="search"
                 @focus="focus = true"
                 @focusout="focus = false"
@@ -61,15 +60,6 @@
               </button>
             </div>
             <FilterModal />
-            <button
-              :class="{ active: view === 'random' }"
-              class="btn btn-dark btn-circle rounded-circle"
-              title="Toggle random view"
-              type="button"
-              @click="toggleView('random')"
-            >
-              <i class="bi bi-dice-5"></i>
-            </button>
           </div>
           <!-- search mobile -->
           <div
@@ -78,7 +68,7 @@
           >
             <div>
               <button
-                class="btn btn-dark btn-circle rounded-circle"
+                class="btn btn-dark btn-circle rounded-circle border-0"
                 type="button"
                 @click="mobileSearch = false"
               >
@@ -109,12 +99,12 @@
           <div class="d-flex gap-2 align-items-center justify-content-end">
             <!-- Github -->
             <a
-              href="https://github.com/lekkersicko/lekker-speuren"
+              href="https://github.com/hbo-nerds/hbo-nerds.github.io"
               target="_blank"
               title="View project on GitHub"
             >
               <button
-                class="btn btn-dark btn-circle rounded-circle"
+                class="btn btn-dark btn-circle rounded-circle border-0"
                 title="Change theme"
                 type="button"
               >
@@ -127,18 +117,21 @@
                 id="bd-theme"
                 aria-expanded="false"
                 aria-label="Toggle theme (dark)"
-                class="btn btn-dark btn-circle rounded-circle"
+                class="btn btn-dark btn-circle rounded-circle border-0"
                 data-bs-display="static"
                 data-bs-toggle="dropdown"
                 type="button"
               >
                 <i class="bi bi-moon-stars-fill"></i>
               </button>
-              <ul aria-labelledby="bd-theme-text" class="dropdown-menu dropdown-menu-end">
+              <ul
+                aria-labelledby="bd-theme-text"
+                class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden"
+              >
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'light' }"
-                    class="dropdown-item d-flex align-items-center"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="light"
                     type="button"
                     @click="switchTheme('light')"
@@ -170,7 +163,7 @@
                     @click="switchTheme('auto')"
                   >
                     <i class="bi bi-circle-half me-2 opacity-50"></i>
-                    Auto
+                    Systeem
                     <i v-if="generalStore.theme === 'auto'" class="bi ms-auto bi-check2"></i>
                   </button>
                 </li>
@@ -183,15 +176,11 @@
             <!-- Github -->
             <a
               v-if="!mobileSearch"
-              href="https://github.com/lekkersicko/lekker-speuren"
+              href="https://github.com/hbo-nerds/hbo-nerds.github.io"
               target="_blank"
               title="View project on GitHub"
             >
-              <button
-                class="btn btn-dark btn-circle rounded-circle"
-                title="Change theme"
-                type="button"
-              >
+              <button class="btn btn-dark btn-circle rounded-circle border-0" type="button">
                 <i class="bi bi-github"></i>
               </button>
             </a>
@@ -201,18 +190,18 @@
                 id="bd-theme"
                 aria-expanded="false"
                 aria-label="Toggle theme (dark)"
-                class="btn btn-dark btn-circle rounded-circle"
+                class="btn btn-dark btn-circle rounded-circle border-0"
                 data-bs-display="static"
                 data-bs-toggle="dropdown"
                 type="button"
               >
                 <i class="bi bi-moon-stars-fill"></i>
               </button>
-              <ul aria-labelledby="bd-theme-text" class="dropdown-menu dropdown-menu-end">
+              <ul class="dropdown-menu dropdown-menu-end rounded-3 py-0 overflow-hidden">
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'light' }"
-                    class="dropdown-item d-flex align-items-center"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="light"
                     type="button"
                     @click="switchTheme('light')"
@@ -225,7 +214,7 @@
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'dark' }"
-                    class="dropdown-item d-flex align-items-center"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="dark"
                     type="button"
                     @click="switchTheme('dark')"
@@ -238,7 +227,7 @@
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'auto' }"
-                    class="dropdown-item d-flex align-items-center"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="auto"
                     type="button"
                     @click="switchTheme('auto')"
@@ -250,21 +239,11 @@
                 </li>
               </ul>
             </div>
-            <!-- random -->
-            <button
-              v-if="!mobileSearch"
-              :class="{ active: view === 'random' }"
-              class="d-sm-none btn btn-dark btn-circle rounded-circle"
-              type="button"
-              @click="toggleView"
-            >
-              <i class="bi bi-dice-5"></i>
-            </button>
             <!-- search -->
             <button
               v-if="!mobileSearch"
               id="mobile-search-btn"
-              class="d-sm-none btn btn-dark btn-circle rounded-circle"
+              class="d-sm-none btn btn-dark btn-circle rounded-circle border-0"
               type="button"
               @click="startTyping"
             >
@@ -393,9 +372,12 @@ import FilterModal from "@/components/FilterModal.vue";
 import router from "@/router/index.js";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
+import debounce from "lodash.debounce";
 import { storeToRefs } from "pinia";
-import { nextTick, ref } from "vue";
+import { nextTick, ref, watch } from "vue";
+import { useRoute } from "vue-router";
 
+const route = useRoute();
 const generalStore = useGeneralStore();
 const contentStore = useContentStore();
 const { view } = storeToRefs(generalStore);
@@ -440,7 +422,7 @@ async function startTyping() {
  */
 function doSearch() {
   generalStore.setView("main");
-  router.push({ path: "/" });
+  if (route.path !== "/") router.push({ path: "/" });
   setTimeout(() => {
     contentStore.filter();
   }, 200);
@@ -454,6 +436,13 @@ function closeCanvas() {
     closeOffcanvas.value.click();
   }, 200);
 }
+
+watch(
+  search,
+  debounce(() => {
+    doSearch();
+  }, 500),
+);
 </script>
 
 <style scoped>

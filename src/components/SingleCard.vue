@@ -1,8 +1,8 @@
 <template>
   <!-- single-card -->
   <div :id="'singleCard_' + card.id" class="pt-3 pb-5">
-    <div class="d-flex gap-2 mb-3">
-      <button class="btn btn-dark rounded" @click="selectedCardId = null">Sluit</button>
+    <div v-if="showCloseBtn" class="d-flex gap-2 mb-3">
+      <button class="btn btn-dark rounded-3 border-0" @click="selectedCardId = null">Sluit</button>
     </div>
     <div :key="card.id" class="row g-3">
       <div class="col-12 col-lg-12">
@@ -11,10 +11,7 @@
       </div>
       <!-- description -->
       <div class="col-12 col-3xl-6">
-        <div
-          class="card border-0 rounded-4 h-100"
-          style="background-color: rgba(255, 255, 255, 0.1)"
-        >
+        <div class="card border-0 rounded-4 h-100">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2 mb-3 small">
               <span class="text-nowrap">
@@ -43,21 +40,22 @@
             <a
               :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
               target="_blank"
-              class="btn btn-sm btn-outline-light rounded"
-              >{{ card.description ? "Feedback" : "Stuur beschrijving" }}</a
+              class="btn btn-sm btn-dark rounded-3 border-0"
+              >{{ card.description ? "Feedback" : "Stuur een beschrijving" }}</a
             >
           </div>
         </div>
       </div>
       <!-- links -->
       <div class="col-12 col-3xl-6">
-        <div class="card border-0 rounded-4" style="background-color: rgba(255, 255, 255, 0.1)">
+        <div class="card border-0 rounded-4">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2">
               <a
                 v-if="card['twitch_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
+                target="_blank"
                 :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
               >
                 <img class="w-100 rounded-4" src="../assets/img/twitch-icon.png" alt="twitch_vod" />
@@ -66,6 +64,7 @@
                 v-if="card['youtube_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
+                target="_blank"
                 :href="'https://youtube.com/watch?v=' + card['youtube_id']"
               >
                 <img class="w-100 rounded-4" src="../assets/img/youtube.png" alt="youtube_vod" />
@@ -79,23 +78,22 @@
         <div class="d-flex flex-wrap gap-2">
           <button
             :class="{ active: isLiked }"
-            class="btn border rounded-pill text-nowrap"
+            class="btn btn-dark border-0 rounded-pill text-nowrap"
             type="button"
             @click="generalStore.toggleLikedItem(card.id)"
           >
-            <i :class="isLiked ? 'bi-hand-thumbs-up-fill' : 'bi-hand-thumbs-up'" class="bi me-2"></i
-            >Like
+            <i class="bi bi-hand-thumbs-up me-2"></i>Like
           </button>
           <button
             :class="{ active: isSeen }"
-            class="btn border rounded-pill text-nowrap"
+            class="btn btn-dark border-0 rounded-pill text-nowrap"
             type="button"
             @click="generalStore.toggleSeenItem(card.id)"
           >
-            <i :class="isSeen ? 'bi-eye-fill' : 'bi-eye'" class="bi me-2"></i>Gezien
+            <i class="bi bi-eye me-2"></i>Gezien
           </button>
           <button
-            class="btn border rounded-pill text-nowrap"
+            class="btn btn-dark border-0 rounded-pill text-nowrap"
             data-bs-target="#playlist-modal"
             data-bs-toggle="modal"
             type="button"
@@ -103,7 +101,7 @@
           >
             <i class="bi bi-collection-play me-2"></i>Bewaar
           </button>
-          <button class="btn border rounded-pill text-nowrap" @click="copyLink">
+          <button class="btn btn-dark border-0 rounded-pill text-nowrap" @click="copyLink">
             <i class="bi bi-copy me-2"></i>Kopieer link
           </button>
           <a
@@ -124,10 +122,7 @@
       </div>
       <!-- activities -->
       <div class="col-12 col-3xl-6">
-        <div
-          class="card border-0 rounded-4 h-100"
-          style="background-color: rgba(255, 255, 255, 0.1)"
-        >
+        <div class="card border-0 rounded-4 h-100">
           <div class="card-body">
             <div class="small fw-lighter mb-2">Activiteiten/games:</div>
 
@@ -147,10 +142,7 @@
       </div>
       <!-- tags -->
       <div class="col-12 col-3xl-6">
-        <div
-          class="card border-0 rounded-4 h-100"
-          style="background-color: rgba(255, 255, 255, 0.1)"
-        >
+        <div class="card border-0 rounded-4 h-100">
           <div class="card-body">
             <div class="small fw-lighter mb-2">Tags:</div>
 
@@ -165,10 +157,7 @@
       </div>
       <!-- bonus -->
       <div v-if="card['extra_urls']" class="col-12 col-3xl-6">
-        <div
-          class="card border-0 rounded-4 h-100"
-          style="background-color: rgba(255, 255, 255, 0.1)"
-        >
+        <div class="card border-0 rounded-4 h-100">
           <div class="card-body">
             <div class="small fw-lighter mb-2">Extra:</div>
 
@@ -248,6 +237,7 @@ const readMore = ref(false);
 
 const props = defineProps({
   card: { type: Object, required: true },
+  showCloseBtn: { type: Boolean, default: true },
 });
 
 const card = computed(() => {

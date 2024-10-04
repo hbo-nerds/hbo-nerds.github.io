@@ -8,7 +8,6 @@ import Playlist from "@/views/Playlist.vue";
 import Playlists from "@/views/Playlists.vue";
 import Serie from "@/views/Serie.vue";
 import Series from "@/views/Series.vue";
-import UploadTool from "@/views/UploadTool.vue";
 import You from "@/views/You.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -46,11 +45,6 @@ const router = createRouter({
       path: "/item/:id",
       name: "card",
       component: Card,
-    },
-    {
-      path: "/upload-tool",
-      name: "upload-tool",
-      component: UploadTool,
     },
     {
       path: "/heatmap",

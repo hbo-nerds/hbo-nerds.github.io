@@ -1,13 +1,14 @@
 <template>
-  <select v-model="sort" class="form-select mb-4 w-auto">
-    <option value="alphaAsc">A-Z</option>
-    <option value="alphaDesc">Z-A</option>
-    <option value="createdAsc">Aanmaakdatum (oudste eerst)</option>
-    <option value="createdDesc">Aanmaakdatum (nieuwste eerst)</option>
-    <option value="updatedAsc">Updatedatum (oudste eerst)</option>
-    <option value="updatedDesc">Updatedatum (nieuwste eerst)</option>
-  </select>
-
+  <SortSelect
+    class="mb-4"
+    :sort-options="sortOptions"
+    :active="sort"
+    @select="
+      (val) => {
+        sort = val;
+      }
+    "
+  />
   <div ref="scrollComponent" class="scrolling-component pb-5">
     <div
       class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
@@ -20,6 +21,7 @@
 </template>
 
 <script setup>
+import SortSelect from "@/components/SortSelect.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useInfiniteScroll } from "@vueuse/core";
 import { storeToRefs } from "pinia";
@@ -35,6 +37,14 @@ const start = ref(0);
 const scrollComponent = ref(null);
 
 const sort = ref("alphaAsc");
+const sortOptions = [
+  { value: "alphaAsc", label: "A-Z" },
+  { value: "alphaDesc", label: "Z-A" },
+  { value: "createdAsc", label: "Aanmaakdatum (oudste eerst)" },
+  { value: "createdDesc", label: "Aanmaakdatum (nieuwste eerst)" },
+  { value: "updatedAsc", label: "Updatedatum (oudste eerst)" },
+  { value: "updatedDesc", label: "Updatedatum (nieuwste eerst)" },
+];
 
 /**
  * Return sorted list of playlists.

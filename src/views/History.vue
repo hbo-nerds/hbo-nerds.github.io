@@ -12,13 +12,17 @@
           </ol>
         </nav>
 
-        <h1 class="fw-bold mb-4">Geschiedenis</h1>
-        <select v-model="sort" class="form-select mb-4 w-auto">
-          <option value="newOld">Upload datum (nieuwste eerst)</option>
-          <option value="oldNew">Upload datum (oudste eerst)</option>
-          <option value="shortLong">Duur (kortste eerst)</option>
-          <option value="longShort">Duur (langste eerst)</option>
-        </select>
+        <h1 class="fw-bold mb-2">Geschiedenis</h1>
+        <SortSelect
+          class="mb-4"
+          :sort-options="sortOptions"
+          :active="sort"
+          @select="
+            (val) => {
+              sort = val;
+            }
+          "
+        />
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
         >
@@ -33,6 +37,7 @@
 
 <script setup>
 import Card from "@/components/Card.vue";
+import SortSelect from "@/components/SortSelect.vue";
 import { useContentStore } from "@/stores/content.js";
 import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
@@ -41,6 +46,12 @@ const contentStore = useContentStore();
 const { historyContent } = storeToRefs(contentStore);
 
 const sort = ref("newOld");
+const sortOptions = [
+  { value: "newOld", label: "Upload datum (nieuwste eerst)" },
+  { value: "oldNew", label: "Upload datum (oudste eerst)" },
+  { value: "shortLong", label: "Duur (kortste eerst)" },
+  { value: "longShort", label: "Duur (langste eerst)" },
+];
 
 /**
  * Return sorted list of playlists.

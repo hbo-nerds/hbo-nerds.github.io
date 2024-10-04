@@ -1,9 +1,9 @@
 <template>
   <button
-    class="btn btn-dark btn-circle rounded-circle"
+    class="btn btn-dark btn-circle rounded-circle border-0"
     data-bs-target="#filterModal"
     data-bs-toggle="modal"
-    title="Open filter"
+    title="Geavanceerde filter"
     type="button"
   >
     <i class="bi bi-sliders2"></i>
@@ -15,7 +15,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
         <div class="modal-content bg-body border-0">
           <div class="modal-header border-0 px-4">
-            <h1 id="exampleModalLabel" class="modal-title fs-5">Zoek filters</h1>
+            <h1 id="exampleModalLabel" class="modal-title fs-5">Geavanceerde filters</h1>
             <button
               aria-label="Close"
               class="btn-close"
@@ -30,7 +30,7 @@
             <div class="d-flex gap-2 w-100">
               <div class="flex-grow-1">
                 <button
-                  class="btn btn-dark border w-100"
+                  class="btn btn-dark border-0 rounded-3 w-100"
                   type="button"
                   @click="content.resetFilters"
                 >

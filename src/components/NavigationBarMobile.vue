@@ -30,14 +30,14 @@
         <RouterLink :to="{ name: 'about' }" class="nav-link">
           <i class="fs-5 lh-1 bi bi-question-circle"></i>
           <i class="fs-5 lh-1 bi bi-question-circle-fill active"></i>
-          <span class="small">About</span>
+          <span class="small">Over</span>
         </RouterLink>
       </li>
       <li class="nav-item">
         <RouterLink :to="{ name: 'you' }" class="nav-link">
           <i class="fs-5 lh-1 bi bi-person"></i>
           <i class="fs-5 lh-1 bi bi-person-fill active"></i>
-          <span class="small">You</span>
+          <span class="small">Jij</span>
         </RouterLink>
       </li>
     </ul>
@@ -80,7 +80,7 @@ function startSearch() {
   text-align: center;
   color: #fff; /* Light text color for dark mode */
   font-size: 14px;
-  &.RouterLink-active {
+  &.router-link-active {
     i:not(.active) {
       display: none;
     }
