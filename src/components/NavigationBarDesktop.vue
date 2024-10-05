@@ -136,7 +136,7 @@
                     type="button"
                     @click="switchTheme('light')"
                   >
-                    <i class="bi bi-sun-fill me-2 opacity-50"></i>
+                    <i class="bi bi-sun-fill me-2"></i>
                     Light
                     <i v-if="generalStore.theme === 'light'" class="bi ms-auto bi-check2"></i>
                   </button>
@@ -144,12 +144,12 @@
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'dark' }"
-                    class="dropdown-item d-flex align-items-center"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="dark"
                     type="button"
                     @click="switchTheme('dark')"
                   >
-                    <i class="bi bi-moon-stars-fill me-2 opacity-50"></i>
+                    <i class="bi bi-moon-stars-fill me-2"></i>
                     Dark
                     <i v-if="generalStore.theme === 'dark'" class="bi ms-auto bi-check2"></i>
                   </button>
@@ -157,12 +157,12 @@
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'auto' }"
-                    class="dropdown-item d-flex align-items-center"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="auto"
                     type="button"
                     @click="switchTheme('auto')"
                   >
-                    <i class="bi bi-circle-half me-2 opacity-50"></i>
+                    <i class="bi bi-circle-half me-2"></i>
                     Systeem
                     <i v-if="generalStore.theme === 'auto'" class="bi ms-auto bi-check2"></i>
                   </button>
@@ -197,7 +197,7 @@
               >
                 <i class="bi bi-moon-stars-fill"></i>
               </button>
-              <ul class="dropdown-menu dropdown-menu-end rounded-3 py-0 overflow-hidden">
+              <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
                 <li>
                   <button
                     :class="{ active: generalStore.theme === 'light' }"
@@ -386,18 +386,6 @@ const focus = ref(false);
 const mobileSearch = ref(false);
 const closeOffcanvas = ref(false);
 const mobileSearchInput = ref(null);
-
-/**
- * Switch between main/random views.
- */
-function toggleView(type) {
-  if (view.value === type) {
-    generalStore.setView("main");
-  } else {
-    generalStore.setView(type);
-    contentStore.pickRandomSet();
-  }
-}
 
 /**
  * Change UI color schema.

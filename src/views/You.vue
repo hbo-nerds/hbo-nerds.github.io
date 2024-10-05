@@ -62,7 +62,7 @@
             class="btn btn-dark btn-sm border-0 rounded-pill"
             tag="button"
           >
-            Alles bekijken
+            Alle gelikete
           </RouterLink>
         </div>
         <div

@@ -8,7 +8,7 @@
       >
         <i class="bi bi-dice-5 me-2"></i>Geef mij wat anders
       </button>
-      <span class="d-inline-flex gap-2">
+      <span class="d-inline-flex align-items-baseline gap-2">
         <span class="badge rounded-pill text-bg-warning">Let op!</span>
         <span class="fw-lighter small">De randomizer maakt gebruik van de huidige filters.</span>
       </span>
