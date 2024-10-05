@@ -2,7 +2,7 @@
   <div :class="{ vch__container: true, 'dark-mode': darkMode }">
     <Transition name="fade" mode="out-in">
       <div v-if="loading">
-        <div class="d-flex justify-content-center py-5">
+        <div class="py-5">
           <div class="spinner-border" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>

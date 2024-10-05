@@ -1,9 +1,9 @@
 <template>
   <div class="modal fade" id="playlist-modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xs">
-      <div class="modal-content" style="background-color: #292929">
-        <div class="modal-header px-4 border-0">
-          <h1 class="modal-title fs-6 me-2">Opslaan in...</h1>
+      <div class="modal-content bg-body border-0">
+        <div class="modal-header border-0">
+          <h1 class="modal-title fs-5">Opslaan in...</h1>
           <button
             ref="close"
             type="button"
@@ -12,8 +12,8 @@
             aria-label="Close"
           ></button>
         </div>
-        <div class="modal-body px-4">
-          <div v-for="(i, idx) in playlists" class="py-2" :key="idx">
+        <div class="modal-body">
+          <div v-for="(i, idx) in playlists" class="mb-2" :key="idx">
             <div class="form-check">
               <input
                 @change="toggle($event, i.title)"
@@ -41,7 +41,7 @@
                   type="text"
                   class="form-control"
                   id="newListName"
-                  placeholder="Title van de afspeellijst..."
+                  placeholder="Titel van de afspeellijst..."
                   required
                 />
               </div>
@@ -57,15 +57,12 @@
 </template>
 
 <script setup>
-import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
 
 const generalStore = useGeneralStore();
-const contentStore = useContentStore();
 const { playlists } = storeToRefs(generalStore);
-const { selectedCardTitle } = storeToRefs(contentStore);
 
 const props = defineProps({
   id: { type: String, required: false },
@@ -82,6 +79,7 @@ function createList() {
   close.value.click(); //hide modal
   generalStore.createPlaylist(listName.value); //create new list
   generalStore.togglePlaylistItem(listName.value, props.id); //add item to new list
+  create.value = false;
   listName.value = "";
 }
 

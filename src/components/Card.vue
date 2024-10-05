@@ -182,11 +182,11 @@
           >
             <i class="bi bi-three-dots-vertical lh-1"></i>
           </button>
-          <ul class="dropdown-menu dropdown-menu-end">
+          <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
             <li v-if="card['collection']">
               <RouterLink
                 :to="{ name: 'serie', params: { id: card['collection'] } }"
-                class="dropdown-item"
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 title="Ga naar serie"
               >
                 <i class="bi bi-collection-play me-2"></i>Naar collectie
@@ -194,16 +194,17 @@
             </li>
             <li>
               <button
-                class="dropdown-item"
+                :class="{ active: isSeen }"
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 type="button"
                 @click="generalStore.toggleSeenItem(card['id'])"
               >
-                <i class="bi bi-eye me-2"></i>{{ isSeen ? "Niet gezien" : "Gezien" }}
+                <i class="bi bi-eye me-2"></i>Gezien
               </button>
             </li>
             <li>
               <button
-                class="dropdown-item"
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 data-bs-target="#playlist-modal"
                 data-bs-toggle="modal"
                 type="button"
@@ -214,11 +215,12 @@
             </li>
             <li>
               <button
-                class="dropdown-item"
+                :class="{ active: isLiked }"
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 type="button"
                 @click="generalStore.toggleLikedItem(card['id'])"
               >
-                <i class="bi bi-hand-thumbs-up me-2"></i>{{ isLiked ? "Niet leuk" : "Leuk!" }}
+                <i class="bi bi-hand-thumbs-up me-2"></i>Like
               </button>
             </li>
           </ul>
