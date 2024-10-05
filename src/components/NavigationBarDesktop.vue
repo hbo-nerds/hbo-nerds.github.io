@@ -388,18 +388,6 @@ const closeOffcanvas = ref(false);
 const mobileSearchInput = ref(null);
 
 /**
- * Switch between main/random views.
- */
-function toggleView(type) {
-  if (view.value === type) {
-    generalStore.setView("main");
-  } else {
-    generalStore.setView(type);
-    contentStore.pickRandomSet();
-  }
-}
-
-/**
  * Change UI color schema.
  * @param theme
  */
