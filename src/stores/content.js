@@ -123,6 +123,7 @@ export const useContentStore = defineStore("content", {
       return this.content
         .filter(
           (item) =>
+            this.f_search(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
             this.f_seen(item) &&
@@ -155,6 +156,7 @@ export const useContentStore = defineStore("content", {
       return this.content
         .filter(
           (item) =>
+            this.f_search(item) &&
             this.f_type(item) &&
             this.f_paywall(item) &&
             this.f_seen(item) &&
@@ -194,6 +196,7 @@ export const useContentStore = defineStore("content", {
       return this.content
         .filter(
           (item) =>
+            this.f_search(item) &&
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
@@ -227,6 +230,7 @@ export const useContentStore = defineStore("content", {
       return this.content
         .filter(
           (item) =>
+            this.f_search(item) &&
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
@@ -262,6 +266,7 @@ export const useContentStore = defineStore("content", {
       return this.content
         .filter(
           (item) =>
+            this.f_search(item) &&
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
@@ -300,6 +305,7 @@ export const useContentStore = defineStore("content", {
       return this.content
         .filter(
           (item) =>
+            this.f_search(item) &&
             this.f_type(item) &&
             this.f_platform(item) &&
             this.f_paywall(item) &&
@@ -503,39 +509,10 @@ export const useContentStore = defineStore("content", {
       // start with all items
       let data = this.content.slice();
 
-      //check neg words
-      this.excludedWords.forEach((nw) => {
-        const nw_normalized = this.normalizeInput(nw);
-        data = data.filter((item) => {
-          switch (item.type) {
-            case "podcast":
-              return this.filterPodcast(item, nw_normalized, true);
-            case "video":
-              return this.filterVideo(item, nw_normalized, true);
-            case "stream":
-              return this.filterStream(item, nw_normalized, true);
-          }
-        });
-      });
-
-      // check pos words
-      this.includedWords.forEach((pw) => {
-        const pw_normalized = this.normalizeInput(pw);
-        data = data.filter((item) => {
-          switch (item.type) {
-            case "podcast":
-              return this.filterPodcast(item, pw_normalized);
-            case "video":
-              return this.filterVideo(item, pw_normalized);
-            case "stream":
-              return this.filterStream(item, pw_normalized);
-          }
-        });
-      });
-
       // filter content
       data = data.filter(
         (item) =>
+          this.f_search(item) &&
           this.f_type(item) &&
           this.f_platform(item) &&
           this.f_paywall(item) &&
@@ -547,6 +524,21 @@ export const useContentStore = defineStore("content", {
           this.f_tag(item),
       );
       this.filteredData = [...data];
+    },
+    f_search(item) {
+      //check negative words
+      for (let i = 0; i < this.excludedWords.length; i++) {
+        const word = this.normalizeInput(this.excludedWords[i]);
+        if (!this.checkWord(item, word, true)) return false;
+      }
+
+      //check positive words
+      for (let i = 0; i < this.includedWords.length; i++) {
+        const word = this.normalizeInput(this.includedWords[i]);
+        if (!this.checkWord(item, word, false)) return false;
+      }
+
+      return true;
     },
     /**
      * Filter items by type.
@@ -702,6 +694,23 @@ export const useContentStore = defineStore("content", {
             .toLowerCase()
             .normalize("NFD")
             .replace(/\p{Diacritic}/gu, "");
+    },
+    /**
+     * Check for excluded words
+     * @param item
+     * @param word
+     * @param isNegative
+     * @returns {boolean}
+     */
+    checkWord(item, word, isNegative) {
+      switch (item.type) {
+        case "podcast":
+          return this.filterPodcast(item, word, isNegative);
+        case "video":
+          return this.filterVideo(item, word, isNegative);
+        case "stream":
+          return this.filterStream(item, word, isNegative);
+      }
     },
     /**
      * Filter video on title & description & activity

@@ -15,7 +15,7 @@
       <div class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-lg-down">
         <div class="modal-content bg-body border-0">
           <div class="modal-header border-0 px-4">
-            <h1 id="exampleModalLabel" class="modal-title fs-5">Geavanceerde filters</h1>
+            <h1 class="modal-title fs-5">Geavanceerde filters</h1>
             <button
               aria-label="Close"
               class="btn-close"

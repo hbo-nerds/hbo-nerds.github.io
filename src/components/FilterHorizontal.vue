@@ -11,8 +11,8 @@
         Upload datum:
         <span class="text-lowercase">{{ date_label }}</span>
       </button>
-      <div class="dropdown-menu p-3">
-        <div v-for="(date, idx) in groupedDates" :key="idx" class="pe-3">
+      <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
+        <div v-for="(date, idx) in groupedDates" :key="idx">
           <input
             :id="'date-' + idx"
             v-model="filters.date.range"
@@ -24,15 +24,15 @@
             :disabled="!date.count"
           />
           <label
-            :class="[
-              { 'text-body-tertiary': filters.date.range.toString() !== date.value.toString() },
-              { 'text-decoration-line-through': !date.count },
-            ]"
+            :class="[{ 'text-decoration-line-through': !date.count }]"
             :for="'date-' + idx"
-            class="form-check-label text-nowrap small w-100"
+            class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ date.label }} ({{ date.count }})
-            <i v-if="filters.date.range === date.value.toString()" class="bi bi-check-lg ms-2"></i>
+            <i
+              v-if="filters.date.range.toString() === date.value.toString()"
+              class="bi bi-check-lg ms-2"
+            ></i>
           </label>
         </div>
       </div>
@@ -50,8 +50,8 @@
         Type:
         <span class="text-lowercase">{{ type_label }}</span>
       </button>
-      <div class="dropdown-menu p-3">
-        <div v-for="(type, idx) in groupedTypes" :key="idx" class="pe-3">
+      <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
+        <div v-for="(type, idx) in groupedTypes" :key="idx">
           <input
             :id="'type-' + idx"
             v-model="filters.type"
@@ -62,9 +62,8 @@
             @change="checkType(type.value)"
           />
           <label
-            :class="filters.type.includes(type.value) ? '' : 'text-body-tertiary'"
             :for="'type-' + idx"
-            class="form-check-label text-nowrap small w-100"
+            class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ type.label }} ({{ type.count }})
             <i v-if="filters.type.includes(type.value)" class="bi bi-check-lg ms-2"></i>
@@ -85,8 +84,8 @@
         Platform:
         <span class="text-lowercase">{{ platform_label }}</span>
       </button>
-      <div class="dropdown-menu p-3">
-        <div v-for="(platform, idx) in groupedPlatforms" :key="idx" class="pe-3">
+      <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
+        <div v-for="(platform, idx) in groupedPlatforms" :key="idx">
           <input
             :id="'platform-' + idx"
             v-model="filters.platform"
@@ -97,9 +96,8 @@
             @change="checkPlatform(platform.value)"
           />
           <label
-            :class="filters.platform.includes(platform.value) ? '' : 'text-body-tertiary'"
             :for="'platform-' + idx"
-            class="form-check-label text-nowrap small w-100"
+            class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ platform.label }} ({{ platform.count }})
             <i v-if="filters.platform.includes(platform.value)" class="bi bi-check-lg ms-2"></i>
@@ -120,8 +118,8 @@
         Duur:
         <span class="text-lowercase">{{ duration_label }}</span>
       </button>
-      <div class="dropdown-menu p-3">
-        <div v-for="(duration, idx) in groupedDuration" :key="idx" class="pe-3">
+      <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
+        <div v-for="(duration, idx) in groupedDuration" :key="idx">
           <input
             :id="'duration-' + idx"
             v-model="filters.duration"
@@ -132,16 +130,13 @@
             :disabled="!duration.count"
           />
           <label
-            :class="[
-              { 'text-body-tertiary': filters.duration !== duration.value.toString() },
-              { 'text-decoration-line-through': !duration.count },
-            ]"
+            :class="[{ 'text-decoration-line-through': !duration.count }]"
             :for="'duration-' + idx"
-            class="form-check-label text-nowrap small w-100"
+            class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ duration.label }} ({{ duration.count }})
             <i
-              v-if="filters.duration === duration.value.toString()"
+              v-if="filters.duration.toString() === duration.value.toString()"
               class="bi bi-check-lg ms-2"
             ></i>
           </label>
