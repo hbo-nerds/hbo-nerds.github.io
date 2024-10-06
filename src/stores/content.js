@@ -34,6 +34,7 @@ export const useContentStore = defineStore("content", {
       tag: [],
     },
     selectedCardId: null,
+    playlistCardId: null,
   }),
   getters: {
     /**

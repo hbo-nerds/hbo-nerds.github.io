@@ -84,7 +84,7 @@
               <input
                 ref="mobileSearchInput"
                 v-model="search"
-                class="form-control shadow-none rounded-end-pill border-2 border-start-0 focus-border"
+                class="form-control shadow-none bg-transparent rounded-end-pill border-2 border-start-0 focus-border"
                 inputmode="search"
                 placeholder="Zoek"
                 style="background-color: #121212"

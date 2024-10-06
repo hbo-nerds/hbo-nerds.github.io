@@ -97,7 +97,7 @@
             data-bs-target="#playlist-modal"
             data-bs-toggle="modal"
             type="button"
-            @click="selectedCardId = card.id"
+            @click="playlistCardId = card.id"
           >
             <i class="bi bi-collection-play me-2"></i>Bewaar
           </button>
@@ -252,7 +252,7 @@ import { computed, onMounted, ref } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, filters, selectedCardId, getCompleteCollections } = storeToRefs(contentStore);
+const { images, filters, selectedCardId, playlistCardId, getCompleteCollections } = storeToRefs(contentStore);
 const { likedItems, seenItems } = storeToRefs(generalStore);
 
 const readMore = ref(false);

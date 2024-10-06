@@ -199,7 +199,7 @@
                 data-bs-target="#playlist-modal"
                 data-bs-toggle="modal"
                 type="button"
-                @click="selectedCardId = card.id"
+                @click="playlistCardId = card.id"
               >
                 <i class="bi bi-collection-play me-2"></i>Bewaar
               </button>
@@ -251,7 +251,7 @@ const props = defineProps({
 });
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, selectedCardId } = storeToRefs(contentStore);
+const { images, selectedCardId, playlistCardId } = storeToRefs(contentStore);
 const { seenItems, likedItems } = storeToRefs(generalStore);
 
 const canvasBtn = ref(null);
