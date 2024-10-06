@@ -13,8 +13,8 @@
     <div
       class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
     >
-      <div v-for="(card, idx) in cards" :key="idx" class="col">
-        <Card :card="card" :is-series="true" />
+      <div v-for="(serie, idx) in series" :key="idx" class="col">
+        <Card :card="serie.card" :serie="serie" />
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@ const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 const contentStore = useContentStore();
 const { getCompleteCollections } = storeToRefs(contentStore);
 
-const cards = ref([]);
+const series = ref([]);
 const start = ref(0);
 const scrollComponent = ref(null);
 
@@ -79,16 +79,18 @@ useInfiniteScroll(
 );
 
 const loadMoreCards = () => {
-  let newCards = sortedPlaylists.value
-    .slice(start.value, start.value + 20)
-    .map((col) => col.items[0]);
+  let newCards = sortedPlaylists.value.slice(start.value, start.value + 20).map((col) => {
+    return { title: col.title, card: col.items[0], id: col.id, count: col.items.length };
+  });
   start.value += 20;
-  cards.value.push(...newCards);
+  series.value.push(...newCards);
 };
 
 function initialize() {
   start.value = 0;
-  cards.value = sortedPlaylists.value.slice(start.value, 20).map((col) => col.items[0]);
+  series.value = sortedPlaylists.value.slice(start.value, 20).map((col) => {
+    return { title: col.title, card: col.items[0], id: col.id };
+  });
   start.value += 20;
 }
 

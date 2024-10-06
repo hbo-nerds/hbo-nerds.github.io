@@ -30,8 +30,8 @@
                   : card.description.slice(0, 100)
               }}
               <button
-                class="btn btn-link btn-sm"
                 v-if="card.description.length > 100"
+                class="btn btn-link btn-sm"
                 @click="readMore = !readMore"
               >
                 ...lees {{ readMore ? "minder" : "meer" }}
@@ -39,8 +39,8 @@
             </p>
             <a
               :href="`https://docs.google.com/forms/d/e/1FAIpQLSeuPAoJu8xsn6JrxrYnRY5v2hw6iSj3eZCXX8QIpFqN6Uy1bA/viewform?usp=pp_url&entry.483165980=${card.id}`"
-              target="_blank"
               class="btn btn-sm btn-dark rounded-3 border-0"
+              target="_blank"
               >{{ card.description ? "Feedback" : "Stuur een beschrijving" }}</a
             >
           </div>
@@ -53,21 +53,21 @@
             <div class="d-flex flex-wrap gap-2">
               <a
                 v-if="card['twitch_id']"
+                :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
                 target="_blank"
-                :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
               >
-                <img class="w-100 rounded-4" src="../assets/img/twitch-icon.png" alt="twitch_vod" />
+                <img alt="twitch_vod" class="w-100 rounded-4" src="../assets/img/twitch-icon.png" />
               </a>
               <a
                 v-if="card['youtube_id']"
+                :href="'https://youtube.com/watch?v=' + card['youtube_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
                 target="_blank"
-                :href="'https://youtube.com/watch?v=' + card['youtube_id']"
               >
-                <img class="w-100 rounded-4" src="../assets/img/youtube.png" alt="youtube_vod" />
+                <img alt="youtube_vod" class="w-100 rounded-4" src="../assets/img/youtube.png" />
               </a>
             </div>
           </div>
@@ -205,14 +205,36 @@
         </div>
       </div>
       <!-- series -->
-      <div v-if="collectionName" class="col-12">
+      <div v-if="collections.length" class="col-12">
         <hr />
-        <div class="mb-3">
-          <div class="d-flex align-items-center justify-content-between mb-3">
-            <span class="fw-bold">Meer uit '{{ collectionName }}'</span>
-          </div>
-          <div v-for="card in sortedCollectionItems">
-            <MiniCard :card="card" class="mb-3"></MiniCard>
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <span class="fw-bold">Meer uit:</span>
+        </div>
+        <div class="accordion" id="accordionCollections">
+          <div v-for="(col, index) in collections" class="accordion-item" :key="index">
+            <h2 class="accordion-header">
+              <button
+                aria-controls="collapseOne"
+                aria-expanded="false"
+                class="accordion-button collapsed"
+                :data-bs-target="'#COL_' + index"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                {{ col.title }}
+              </button>
+            </h2>
+            <div
+              :id="'COL_' + index"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionCollections"
+            >
+              <div class="accordion-body">
+                <div v-for="card in col.items">
+                  <MiniCard :card="card" class="mb-3"></MiniCard>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -230,7 +252,7 @@ import { computed, onMounted, ref } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, filters, selectedCardId } = storeToRefs(contentStore);
+const { images, filters, selectedCardId, getCompleteCollections } = storeToRefs(contentStore);
 const { likedItems, seenItems } = storeToRefs(generalStore);
 
 const readMore = ref(false);
@@ -303,33 +325,15 @@ const date = computed(() => {
 });
 
 /**
- * Name of collection if card is in one.
- * @type {ComputedRef<*|null>}
- */
-const collectionName = computed(() => {
-  return card.value.collection ? contentStore.getCollection(card.value.collection).title : null;
-});
-
-/**
- * List of all items in the same collection as current card.
+ * Return collections card is in.
  * @type {ComputedRef<*|*[]>}
  */
-const collectionItems = computed(() => {
-  return collectionName.value
-    ? contentStore.getSingleCollection(card.value["collection"], card.value.id)
-    : [];
-});
-
-/**
- * Sorted collectionItems.
- * @type {ComputedRef<*|*[]>}
- */
-const sortedCollectionItems = computed(() => {
-  return collectionItems.value.length
-    ? collectionItems.value.sort((a, b) => {
-        let dateA = new Date(a.date);
-        let dateB = new Date(b.date);
-        return dateB - dateA;
+const collections = computed(() => {
+  return card.value.collection
+    ? getCompleteCollections.value.filter((collection) => {
+        if (Array.isArray(card.value.collection))
+          return card.value.collection.includes(collection.id);
+        else return card.value.collection === collection.id;
       })
     : [];
 });

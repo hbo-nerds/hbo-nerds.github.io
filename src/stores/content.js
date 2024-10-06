@@ -107,7 +107,10 @@ export const useContentStore = defineStore("content", {
     getCompleteCollections(state) {
       return state.collections.map((col) => {
         const id = col.id;
-        col.items = this.content.filter((item) => item.collection === id);
+        col.items = this.content.filter((item) => {
+          if (Array.isArray(item.collection)) return item.collection.includes(id);
+          else return item.collection === id;
+        });
         if (col.items.length) {
           col.created = new Date(col.items[0].date);
           col.updated = new Date(col.items[col.items.length - 1].date);
@@ -455,25 +458,8 @@ export const useContentStore = defineStore("content", {
       else if (card.activities) return [].concat(card.activities);
       else return [];
     },
-    /**
-     * Return a list of items within collection
-     * @param collectionId id of the collection
-     * @returns {*|*[]}
-     */
-    getSingleCollection(collectionId, except) {
-      return collectionId
-        ? this.content.filter(
-            (item) => item.collection === parseInt(collectionId) && item.id !== except,
-          )
-        : [];
-    },
-    /**
-     * Return the collection by id
-     * @param collectionId
-     * @returns {*}
-     */
-    getCollection(collectionId) {
-      return this.collections.find((item) => item.id === parseInt(collectionId));
+    getSingleCollection(id) {
+      return this.collections.find((item) => item.id === id);
     },
     /**
      * Fetch json data
@@ -812,14 +798,6 @@ export const useContentStore = defineStore("content", {
         tag: [],
       };
       this.filter();
-    },
-    /**
-     * Return amount of items in collection
-     * @param collectionId
-     * @returns {*}
-     */
-    countSeriesItems(collectionId) {
-      return this.content.filter((i) => i.collection === collectionId).length;
     },
     /**
      * Set filter from url query.

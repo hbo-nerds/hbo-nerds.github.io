@@ -408,12 +408,12 @@ async function startTyping() {
 /**
  * Perform search and make shore main view is active.
  */
-function doSearch() {
+async function doSearch() {
   generalStore.setView("main");
-  if (route.path !== "/") router.push({ path: "/" });
-  setTimeout(() => {
-    contentStore.filter();
-  }, 200);
+  if (route.path !== "/") {
+    await router.push({ path: "/" });
+  }
+  contentStore.filter();
 }
 
 /**
@@ -429,7 +429,7 @@ watch(
   search,
   debounce(() => {
     doSearch();
-  }, 500),
+  }, 300),
 );
 </script>
 
@@ -447,7 +447,7 @@ watch(
     background-color: rgba(var(--bs-tertiary-bg-rgb));
   }
 
-  &.RouterLink-active {
+  &.router-link-active {
     i:not(.active) {
       display: none;
     }
