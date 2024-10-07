@@ -296,7 +296,7 @@ const title = computed(() => {
 });
 
 const shareUrl = computed(() => {
-  const host = window.location.host;
+  const host = "https://" + window.location.host;
   return `${host}/item/${card.value["id"]}`;
 });
 

@@ -9,10 +9,10 @@ import Playlists from "@/views/Playlists.vue";
 import Serie from "@/views/Serie.vue";
 import Series from "@/views/Series.vue";
 import You from "@/views/You.vue";
-import { createRouter, createWebHistory } from "vue-router";
+import {createRouter, createWebHashHistory} from "vue-router";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: [
     {
       path: "/",
