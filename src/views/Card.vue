@@ -19,8 +19,26 @@ const card = ref(null);
 
 const contentStore = useContentStore();
 
+function updateMeta() {
+  const title = contentStore.getCardTitle(card.value);
+  const url = `${window.location.host}/item/${card.value["id"]}`;
+  document.title = "Lekker Speuren | " + title;
+  document.querySelector('meta[name="title"]').setAttribute("content", "Lekker Speuren | " + title);
+  document
+    .querySelector('meta[property="og:title"]')
+    .setAttribute("content", "Lekker Speuren | " + title);
+  document
+    .querySelector('meta[property="twitter:title"]')
+    .setAttribute("content", "Lekker Speuren | " + title);
+  document.querySelector('meta[property="og:url"]').setAttribute("content", url);
+  document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
+  // document.querySelector('meta[property="og:image"]').setAttribute("content", imgScr.value);
+  // document.querySelector('meta[property="twitter:image"]').setAttribute("content", imgScr.value);
+}
+
 onBeforeMount(() => {
   card.value = contentStore.getSingleCard(route.params.id);
+  updateMeta();
 });
 
 onBeforeRouteUpdate((to, from) => {

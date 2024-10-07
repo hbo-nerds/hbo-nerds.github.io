@@ -22,7 +22,7 @@
       <div class="edge-bottom"></div>
 
       <div class="transform-wrapper position-relative">
-        <img :src="imgScr" alt="thumbnail" class="w-100" />
+        <img :src="imgScr" alt="thumbnail" class="w-100" width="100%" />
         <!-- date -->
         <span
           class="badge bg-black position-absolute top-0 start-0 m-2"
@@ -65,11 +65,7 @@
           class="flex-shrink-0 position-relative"
           style="width: 32px; height: 32px"
         >
-          <a
-            :href="'https://youtube.com/watch?v=' + card['youtube_id']"
-            class="position-absolute end-0 bottom-0 lh-1"
-            target="_blank"
-          >
+          <div class="position-absolute end-0 bottom-0 lh-1">
             <img
               alt="logo"
               class="rounded-circle"
@@ -77,12 +73,8 @@
               src="../assets/img/youtube.png"
               width="24"
             />
-          </a>
-          <a
-            :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
-            class="position-absolute top-0 start-0 lh-1"
-            target="_blank"
-          >
+          </div>
+          <div class="position-absolute top-0 start-0 lh-1">
             <img
               alt="logo"
               class="rounded-circle"
@@ -90,7 +82,7 @@
               src="../assets/img/twitch-icon.png"
               width="24"
             />
-          </a>
+          </div>
         </div>
         <template v-else>
           <a
@@ -175,6 +167,8 @@
         </div>
         <div>
           <button
+            aria-label="Dropdown"
+            type="button"
             aria-expanded="false"
             class="btn btn-circle btn-sm rounded-circle"
             data-bs-offset="0,10"

@@ -372,20 +372,24 @@ export const useContentStore = defineStore("content", {
         let date = new Date(c.date);
         let year = date.getFullYear();
         if (p.hasOwnProperty(year)) {
-          p[year].dates.push({
-            id: c.id,
-            thumbnail: this.getCardThumbnail(c),
-            date: date,
-            count: (c.duration / 3600).toFixed(1),
-          });
+          let double = p[year].dates.find((i) => i.date.getTime() === date.getTime());
+          if (double) {
+            double.id.push(c.id);
+            double.count += c.duration;
+          } else {
+            p[year].dates.push({
+              id: [c.id],
+              date: date,
+              count: c.duration,
+            });
+          }
         } else {
           p[year] = {
             dates: [
               {
-                id: c.id,
-                thumbnail: this.getCardThumbnail(c),
+                id: [c.id],
                 date: date,
-                count: (c.duration / 3600).toFixed(1),
+                count: c.duration,
               },
             ],
           };
@@ -405,7 +409,7 @@ export const useContentStore = defineStore("content", {
     },
     /**
      * Return the title for a single card.
-     * @param card
+     * @param card complete card object.
      * @returns {*}
      */
     getCardTitle(card) {
@@ -487,10 +491,6 @@ export const useContentStore = defineStore("content", {
      */
     filter() {
       this.updateUrl();
-
-      const s = useGeneralStore();
-      s.pageNumber = 0;
-
       this.filteredData = [];
 
       // start with all items

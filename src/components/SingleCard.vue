@@ -47,7 +47,7 @@
         </div>
       </div>
       <!-- links -->
-      <div class="col-12 col-3xl-6">
+      <div class="col-12 col-3xl-6" v-if="card['twitch_id'] || card['youtube_id']">
         <div class="card border-0 rounded-4">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2">
@@ -56,6 +56,7 @@
                 :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
+                title="Bekijk op Twitch"
                 target="_blank"
               >
                 <img alt="twitch_vod" class="w-100 rounded-4" src="../assets/img/twitch-icon.png" />
@@ -65,6 +66,7 @@
                 :href="'https://youtube.com/watch?v=' + card['youtube_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
+                title="Bekijk op YouTube"
                 target="_blank"
               >
                 <img alt="youtube_vod" class="w-100 rounded-4" src="../assets/img/youtube.png" />
@@ -252,7 +254,8 @@ import { computed, onMounted, ref } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, filters, selectedCardId, playlistCardId, getCompleteCollections } = storeToRefs(contentStore);
+const { images, filters, selectedCardId, playlistCardId, getCompleteCollections } =
+  storeToRefs(contentStore);
 const { likedItems, seenItems } = storeToRefs(generalStore);
 
 const readMore = ref(false);
