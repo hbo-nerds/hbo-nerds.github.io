@@ -21,7 +21,7 @@ const contentStore = useContentStore();
 
 function updateMeta() {
   const title = contentStore.getCardTitle(card.value);
-  const url = `${window.location.host}/item/${card.value["id"]}`;
+  const url = `https://${window.location.host}/item/${card.value["id"]}`;
   const img = contentStore.getCardThumbnail(card.value);
   const desc = card.value.description || "Dit item heeft nog geen beschrijving.";
   document.title = "Lekker Speuren | " + title;
@@ -34,12 +34,8 @@ function updateMeta() {
     .setAttribute("content", "Lekker Speuren | " + title);
   document.querySelector('meta[property="og:url"]').setAttribute("content", url);
   document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
-  document
-    .querySelector('meta[property="og:image"]')
-    .setAttribute("content", img);
-  document
-    .querySelector('meta[property="twitter:image"]')
-    .setAttribute("content", img);
+  document.querySelector('meta[property="og:image"]').setAttribute("content", img);
+  document.querySelector('meta[property="twitter:image"]').setAttribute("content", img);
   document.querySelector('meta[name="description"]').setAttribute("content", desc);
   document.querySelector('meta[property="og:description"]').setAttribute("content", desc);
   document.querySelector('meta[property="twitter:description"]').setAttribute("content", desc);
