@@ -46,6 +46,7 @@
                 inputmode="search"
                 placeholder="Zoek"
                 type="search"
+                name="search"
                 @focus="focus = true"
                 @focusout="focus = false"
                 @keydown.enter="doSearch"
@@ -84,9 +85,10 @@
               <input
                 ref="mobileSearchInput"
                 v-model="search"
-                class="form-control shadow-none rounded-end-pill border-2 border-start-0 focus-border"
+                class="form-control shadow-none bg-transparent rounded-end-pill border-2 border-start-0 focus-border"
                 inputmode="search"
                 placeholder="Zoek"
+                name="search"
                 style="background-color: #121212"
                 type="search"
                 @keydown.enter="doSearch"
@@ -408,12 +410,12 @@ async function startTyping() {
 /**
  * Perform search and make shore main view is active.
  */
-function doSearch() {
+async function doSearch() {
   generalStore.setView("main");
-  if (route.path !== "/") router.push({ path: "/" });
-  setTimeout(() => {
-    contentStore.filter();
-  }, 200);
+  if (route.path !== "/") {
+    await router.push({ path: "/" });
+  }
+  contentStore.filter();
 }
 
 /**
@@ -429,7 +431,7 @@ watch(
   search,
   debounce(() => {
     doSearch();
-  }, 500),
+  }, 300),
 );
 </script>
 
@@ -447,7 +449,7 @@ watch(
     background-color: rgba(var(--bs-tertiary-bg-rgb));
   }
 
-  &.RouterLink-active {
+  &.router-link-active {
     i:not(.active) {
       display: none;
     }

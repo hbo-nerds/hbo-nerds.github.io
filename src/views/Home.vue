@@ -3,31 +3,31 @@
   <main class="pt-3 pb-5">
     <div class="sticky-top z-3 bg-body row align-items-center g-3 pb-3">
       <div class="col-auto">
-        <div class="btn-group" role="group">
+        <div class="btn-group">
           <button
-            type="button"
-            class="btn btn-dark border-0"
-            @click="view = 'thumbnail'"
-            title="Thumbnail view"
             :class="{ active: view === 'thumbnail' }"
+            class="btn btn-dark border-0"
+            title="Thumbnail view"
+            type="button"
+            @click="view = 'thumbnail'"
           >
             <i class="bi bi-images"></i>
           </button>
           <button
-            type="button"
-            class="btn btn-dark border-0"
-            @click="view = 'heatmap'"
-            title="Heatmap view"
             :class="{ active: view === 'heatmap' }"
+            class="btn btn-dark border-0"
+            title="Heatmap view"
+            type="button"
+            @click="view = 'heatmap'"
           >
             <i class="bi bi-calendar3"></i>
           </button>
           <button
-            type="button"
-            class="btn btn-dark border-0"
-            @click="view = 'random'"
-            title="Random view"
             :class="{ active: view === 'random' }"
+            class="btn btn-dark border-0"
+            title="Random view"
+            type="button"
+            @click="view = 'random'"
           >
             <i class="bi bi-dice-5"></i>
           </button>
@@ -40,6 +40,7 @@
         >
       </div>
     </div>
+
     <div class="row">
       <div class="col-12 col-sm">
         <keep-alive>

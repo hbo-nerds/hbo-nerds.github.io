@@ -1,12 +1,12 @@
 export interface Value {
   date: Date | string;
   count: number;
-  id: string;
+  id: string[];
 }
 
 export interface Activity {
   count: number;
-  id: string;
+  id: string[];
   colorIndex: number;
 }
 
@@ -15,7 +15,7 @@ export type Activities = Map<string, Activity>;
 export interface CalendarItem {
   date: Date;
   count?: number;
-  id?: string;
+  id?: string[];
   colorIndex: number;
 }
 

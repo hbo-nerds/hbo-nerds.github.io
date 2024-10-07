@@ -14,7 +14,7 @@
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
         <div v-for="(date, idx) in groupedDates" :key="idx">
           <input
-            :id="'date-' + idx"
+            :id="'date-hor-' + idx"
             v-model="filters.date.range"
             :value="date.value"
             class="d-none"
@@ -25,7 +25,7 @@
           />
           <label
             :class="[{ 'text-decoration-line-through': !date.count }]"
-            :for="'date-' + idx"
+            :for="'date-hor-' + idx"
             class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ date.label }} ({{ date.count }})
@@ -53,7 +53,7 @@
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
         <div v-for="(type, idx) in groupedTypes" :key="idx">
           <input
-            :id="'type-' + idx"
+            :id="'type-hor-' + idx"
             v-model="filters.type"
             :value="type.value"
             class="d-none"
@@ -62,7 +62,7 @@
             @change="checkType(type.value)"
           />
           <label
-            :for="'type-' + idx"
+            :for="'type-hor-' + idx"
             class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ type.label }} ({{ type.count }})
@@ -87,7 +87,7 @@
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
         <div v-for="(platform, idx) in groupedPlatforms" :key="idx">
           <input
-            :id="'platform-' + idx"
+            :id="'platform-hor-' + idx"
             v-model="filters.platform"
             :value="platform.value"
             class="d-none"
@@ -96,7 +96,7 @@
             @change="checkPlatform(platform.value)"
           />
           <label
-            :for="'platform-' + idx"
+            :for="'platform-hor-' + idx"
             class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ platform.label }} ({{ platform.count }})
@@ -121,7 +121,7 @@
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
         <div v-for="(duration, idx) in groupedDuration" :key="idx">
           <input
-            :id="'duration-' + idx"
+            :id="'duration-hor-' + idx"
             v-model="filters.duration"
             :value="duration.value.toString()"
             class="d-none"
@@ -131,7 +131,7 @@
           />
           <label
             :class="[{ 'text-decoration-line-through': !duration.count }]"
-            :for="'duration-' + idx"
+            :for="'duration-hor-' + idx"
             class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-nowrap"
           >
             {{ duration.label }} ({{ duration.count }})

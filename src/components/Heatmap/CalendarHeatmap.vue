@@ -1,6 +1,6 @@
 <template>
   <div :class="{ vch__container: true, 'dark-mode': darkMode }">
-    <Transition name="fade" mode="out-in">
+    <Transition mode="out-in" name="fade">
       <div v-if="loading">
         <div class="py-5">
           <div class="spinner-border" role="status">
@@ -53,20 +53,22 @@
             >
               <template v-for="(day, dayIndex) in week" :key="dayIndex">
                 <rect
-                  :data-bs-title="getTooltip(day)"
+                  :id="`rect_${endDate}_${weekIndex}_${dayIndex}`"
                   :data-day-index="dayIndex"
                   :data-week-index="weekIndex"
                   :height="SQUARE_SIZE - SQUARE_BORDER_SIZE"
                   :style="{
                     fill:
-                      day.id && day.id === selectedCardId ? '#ffc107' : rangeColor[day.colorIndex],
+                      day.id && day.id.includes(selectedCardId)
+                        ? '#ffc107'
+                        : rangeColor[day.colorIndex],
                   }"
                   :transform="`translate(0, ${dayIndex * SQUARE_SIZE})`"
                   :width="SQUARE_SIZE - SQUARE_BORDER_SIZE"
                   class="vch__day__square"
-                  data-bs-html="true"
-                  data-bs-toggle="tooltip"
                   @click="$emit('dayClick', day, 'left')"
+                  @mouseover="showTooltip($event, day)"
+                  @mouseout="hideTooltip($event, day)"
                   @click.middle="$emit('dayClick', day, 'middle')"
                 />
               </template>
@@ -113,8 +115,9 @@
 <script setup>
 import { Heatmap } from "@/components/Heatmap/Heatmap";
 import { useContentStore } from "@/stores/content.js";
+import { Tooltip } from "bootstrap";
 import { storeToRefs } from "pinia";
-import { onMounted, ref, toRef, watch } from "vue";
+import { onMounted, ref, watch } from "vue";
 
 const emit = defineEmits(["dayClick"]);
 const props = defineProps({
@@ -159,87 +162,97 @@ function getMonthLabelPosition(month) {
 }
 
 /**
- *
+ * Create and show the tooltip.
+ * @param event
  * @param item
  */
-function getTooltip(item) {
+function showTooltip(event, item) {
+  if (!item.id) return;
+  let el = event.target;
+  const tooltip = new Tooltip(el, {
+    title: createHtml(item),
+    html: true,
+    customClass: "customTooltip",
+  });
+  tooltip.show();
+}
+
+/**
+ * Dispose the tooltip.
+ * @param event
+ * @param item
+ */
+function hideTooltip(event, item) {
+  if (!item.id) return;
+  let el = event.target;
+  const tooltip = Tooltip.getInstance(el);
+  if (tooltip) tooltip.dispose();
+}
+
+/**
+ * Create the HTML for inside the tooltip.
+ * @param item
+ */
+function createHtml(item) {
   let html = "";
   let date = item.date.toLocaleString("nl-NL", { dateStyle: "medium" });
-  if (item.id) {
-    let card = contentStore.getSingleCard(item.id);
+
+  html +=
+    "<div class='text-start d-flex flex-column gap-2 small'>" +
+    " <div class='text-center fw-lighter'>" +
+    date +
+    " </div>" +
+    "<hr class='m-0'>" +
+    "<div class='d-flex flex-column gap-2'>";
+
+  item.id.forEach((id) => {
+    let card = contentStore.getSingleCard(id);
     let title = contentStore.getCardTitle(card);
     let thumbnail = contentStore.getCardThumbnail(card);
     let duration = contentStore.getCardDuration(card);
-    let activities = contentStore.getCardActivities(card);
 
-    html +=
-      "<div class='text-start d-flex flex-column gap-2 small'>" +
-      "        <div class='text-center fw-lighter'>" +
-      date +
-      "</div>" +
-      "        <hr class='m-0'>" +
-      "        <div class='d-flex justify-content-between gap-2'>" +
-      "          <span>Duur</span>" +
-      "          <span>" +
-      duration +
-      "</span>" +
-      "        </div>" +
-      "        <hr class='m-0'>" +
-      "        <div class='d-flex justify-content-between gap-2'>" +
-      "          <span class='text-nowrap'>Bekijk op</span>" +
-      "          <div class='d-flex justify-content-end flex-wrap gap-2'>";
+    let temp = "<div class='d-flex flex-column gap-2'>";
 
-    if (card["twitch_id"]) html += "<span class='badge text-bg-secondary'>Twitch</span>";
-    if (card["youtube_id"]) html += "<span class='badge text-bg-secondary'>YouTube</span>";
-    if (card["twitchtracker_id"])
-      html += "<span class='badge text-bg-secondary'>TwitchTracker</span>";
-    if (!card["twitch_id"] && !card["youtube_id"] && !card["twitchtracker_id"])
-      html += "<span>-</span>";
-
-    html +=
-      "    </div>" +
-      "        </div>" +
-      "        <hr class='m-0'>" +
-      "        <div class='d-flex justify-content-between gap-2'>" +
-      "          <span class='text-nowrap'>Activiteiten</span>" +
-      "          <div class='d-flex justify-content-end flex-wrap gap-2 overflow-hidden'>";
-
-    activities.forEach((activity) => {
-      html += "<span class='badge text-bg-secondary text-truncate'>" + activity.title + "</span>";
-    });
-
-    html +=
-      "     </div>" +
-      "        </div>" +
-      "        <hr class='m-0'>" +
-      "        <img alt='thumbnail' src=" +
+    temp +=
+      "<div class='position-relative'>" +
+      " <img class='w-100' alt='thumbnail' src=" +
       thumbnail +
       " />" +
-      "        <span>" +
+      " <span class='badge bg-black position-absolute bottom-0 end-0 m-1' style='--bs-bg-opacity: 0.75'>" +
+      duration +
+      "</span>" +
+      " <span class='badge bg-black position-absolute bottom-0 start-0 m-1' style='--bs-bg-opacity: 0.75'>" +
+      card.type +
+      "</span>" +
+      "</div>" +
+      "<span>" +
       title +
       "</span>" +
-      "        <hr class='m-0'>" +
-      "        <div class='text-center fw-lighter'>Klik om te openen</div>" +
-      "      </div>";
+      "</div>";
 
-    return html;
-  } else {
-    html +=
-      "<div class='text-start d-flex flex-column gap-2 small'>" +
-      "        <div class='text-center fw-lighter'>" +
-      date +
-      "</div>" +
-      "      </div>";
-    return html;
-  }
+    html += temp;
+  });
+
+  html +=
+    "</div>" +
+    " <hr class='m-0'>" +
+    " <div class='text-center fw-lighter'>Klik om te openen</div>" +
+    "</div>";
+
+  return html;
 }
 
 /**
  * Watcher for colors and theme.
  */
-watch([toRef(props, "darkMode")], ([dm]) => {
-  rangeColor.value = dm ? Heatmap.DEFAULT_RANGE_COLOR_DARK : Heatmap.DEFAULT_RANGE_COLOR_LIGHT;
-});
+watch(
+  () => props.darkMode,
+  (newValue) => {
+    rangeColor.value = newValue
+      ? Heatmap.DEFAULT_RANGE_COLOR_DARK
+      : Heatmap.DEFAULT_RANGE_COLOR_LIGHT;
+  },
+);
 
 /**
  * Watcher for resize.

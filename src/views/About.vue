@@ -61,11 +61,24 @@
                 </template>
               </div>
 
-              <div class="mb-0">
+              <div class="mb-3">
                 <div class="small"><i class="me-2 bi bi-clipboard-data"></i>Data team:</div>
                 <template v-for="(p, i) in dataTeam">
                   {{ p }} {{ i < dataTeam.length - 1 ? "| " : "" }}
                 </template>
+              </div>
+
+              <div class="mb-0">
+                <div class="small"><i class="me-2 bi bi-lightning-charge"></i>Powered by:</div>
+                <div class="d-flex align-items-center gap-2">
+                  <a target="_blank" href="https://vuejs.org/">
+                    <img width="20" src="@/assets/img/vue-icon.svg" alt="Vue icon" />
+                  </a>
+                  <span>+</span>
+                  <a target="_blank" href="https://getbootstrap.com/">
+                    <img width="20" src="@/assets/img/bootstrap-icon.png" alt="Vue icon" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
