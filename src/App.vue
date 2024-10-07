@@ -23,8 +23,7 @@
             </div>
 
             <div
-              class="position-absolute top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto pb-5"
-              style="z-index: 9999"
+              class="position-absolute top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto pb-5 z-3"
             >
               <SingleCard v-if="selectedCard" :card="selectedCard" />
             </div>
@@ -62,7 +61,7 @@
       </Teleport>
       <!-- Modal -->
       <Teleport to="body">
-        <PlaylistModal :id="selectedCardId" />
+        <PlaylistModal :id="playlistCardId" />
       </Teleport>
     </main>
     <NavigationBarMobile />
@@ -90,7 +89,7 @@ const route = useRoute();
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
 
-const { selectedCard, selectedCardId } = storeToRefs(contentStore);
+const { selectedCard, selectedCardId, playlistCardId } = storeToRefs(contentStore);
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLocaleStorage();

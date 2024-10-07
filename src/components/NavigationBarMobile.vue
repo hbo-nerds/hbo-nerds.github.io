@@ -2,14 +2,14 @@
   <nav class="mobile-menubar d-sm-none fixed-bottom border-top pb-4 px-3">
     <ul class="nav align-items-center justify-content-evenly mb-0">
       <li class="nav-item">
-        <RouterLink :to="{ name: 'home' }" class="nav-link">
+        <RouterLink :to="{ name: 'home' }" class="nav-link text-body">
           <i class="fs-5 lh-1 bi bi-house-door"></i>
           <i class="fs-5 lh-1 bi bi-house-door-fill active"></i>
           <span class="small">Home</span>
         </RouterLink>
       </li>
       <li class="nav-item">
-        <RouterLink :to="{ name: 'series' }" class="nav-link">
+        <RouterLink :to="{ name: 'series' }" class="nav-link text-body">
           <i class="fs-5 lh-1 bi bi-collection-play"></i>
           <i class="fs-5 lh-1 bi bi-collection-play-fill active"></i>
           <span class="small">Series</span>
@@ -27,14 +27,14 @@
         </div>
       </li>
       <li class="nav-item">
-        <RouterLink :to="{ name: 'about' }" class="nav-link">
+        <RouterLink :to="{ name: 'about' }" class="nav-link text-body">
           <i class="fs-5 lh-1 bi bi-question-circle"></i>
           <i class="fs-5 lh-1 bi bi-question-circle-fill active"></i>
           <span class="small">Over</span>
         </RouterLink>
       </li>
       <li class="nav-item">
-        <RouterLink :to="{ name: 'you' }" class="nav-link">
+        <RouterLink :to="{ name: 'you' }" class="nav-link text-body">
           <i class="fs-5 lh-1 bi bi-person"></i>
           <i class="fs-5 lh-1 bi bi-person-fill active"></i>
           <span class="small">Jij</span>
@@ -60,25 +60,21 @@ function startSearch() {
   align-items: center;
   justify-content: space-around;
   z-index: 1000;
-  backdrop-filter: blur(8px); /* Apply blur for the glassy effect */
-  background: rgba(0, 0, 0, 0.9); /* Dark semi-transparent background */
-  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
-  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+  backdrop-filter: blur(8px);
 }
 .nav {
   display: flex;
   flex-direction: row;
-  width: 100%; /* Ensure the nav spans the full width of the screen */
+  width: 100%;
 }
 .nav-item {
-  flex: 1; /* Each nav-item takes up equal width */
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
 .nav-link {
   text-align: center;
-  color: #fff; /* Light text color for dark mode */
   font-size: 14px;
   &.router-link-active {
     i:not(.active) {

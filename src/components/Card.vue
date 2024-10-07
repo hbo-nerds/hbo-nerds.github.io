@@ -1,7 +1,7 @@
 <template>
   <div :id="'card_' + card.id" class="card h-100 border-0 bg-transparent">
-    <div v-if="isSeries" class="stack-2 border border-3 border-dark bg-dark z-0"></div>
-    <div v-if="isSeries" class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
+    <div v-if="serie" class="stack-2 border border-3 border-dark bg-dark z-0"></div>
+    <div v-if="serie" class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
     <div
       :class="[
         card.type === 'podcast'
@@ -22,7 +22,7 @@
       <div class="edge-bottom"></div>
 
       <div class="transform-wrapper position-relative">
-        <img :src="imgScr" alt="thumbnail" class="w-100" />
+        <img :src="imgScr" alt="thumbnail" class="w-100" width="100%" />
         <!-- date -->
         <span
           class="badge bg-black position-absolute top-0 start-0 m-2"
@@ -61,15 +61,11 @@
     <div class="card-body pt-3 pb-0 px-2 px-sm-0">
       <div class="d-flex justify-content-between gap-2 position-relative">
         <div
+          v-if="card['twitch_id'] && card['youtube_id']"
           class="flex-shrink-0 position-relative"
           style="width: 32px; height: 32px"
-          v-if="card['twitch_id'] && card['youtube_id']"
         >
-          <a
-            :href="'https://youtube.com/watch?v=' + card['youtube_id']"
-            target="_blank"
-            class="position-absolute end-0 bottom-0 lh-1"
-          >
+          <div class="position-absolute end-0 bottom-0 lh-1">
             <img
               alt="logo"
               class="rounded-circle"
@@ -77,12 +73,8 @@
               src="../assets/img/youtube.png"
               width="24"
             />
-          </a>
-          <a
-            :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
-            target="_blank"
-            class="position-absolute top-0 start-0 lh-1"
-          >
+          </div>
+          <div class="position-absolute top-0 start-0 lh-1">
             <img
               alt="logo"
               class="rounded-circle"
@@ -90,7 +82,7 @@
               src="../assets/img/twitch-icon.png"
               width="24"
             />
-          </a>
+          </div>
         </div>
         <template v-else>
           <a
@@ -141,7 +133,7 @@
             @click="goToCard"
             @click.middle="goToCard('middle')"
           >
-            {{ isSeries ? `${collectionName} - (${collectionCount})` : title }}
+            {{ serie ? `${serie.title} - (${serie.count})` : title }}
           </h3>
 
           <div class="inline-meta text-body-secondary">
@@ -175,23 +167,16 @@
         </div>
         <div>
           <button
+            aria-label="Dropdown"
+            type="button"
             aria-expanded="false"
             class="btn btn-circle btn-sm rounded-circle"
-            data-bs-toggle="dropdown"
             data-bs-offset="0,10"
+            data-bs-toggle="dropdown"
           >
             <i class="bi bi-three-dots-vertical lh-1"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
-            <li v-if="card['collection']">
-              <RouterLink
-                :to="{ name: 'serie', params: { id: card['collection'] } }"
-                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
-                title="Ga naar serie"
-              >
-                <i class="bi bi-collection-play me-2"></i>Naar collectie
-              </RouterLink>
-            </li>
             <li>
               <button
                 :class="{ active: isSeen }"
@@ -208,7 +193,7 @@
                 data-bs-target="#playlist-modal"
                 data-bs-toggle="modal"
                 type="button"
-                @click="selectedCardId = card.id"
+                @click="playlistCardId = card.id"
               >
                 <i class="bi bi-collection-play me-2"></i>Bewaar
               </button>
@@ -223,6 +208,16 @@
                 <i class="bi bi-hand-thumbs-up me-2"></i>Like
               </button>
             </li>
+            <li v-if="collections.length"><hr class="dropdown-divider" /></li>
+            <li v-for="col in collections">
+              <RouterLink
+                :to="{ name: 'serie', params: { id: col['id'] } }"
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                title="Ga naar serie"
+              >
+                <i class="bi bi-collection-play me-2"></i>Naar '{{ col.title }}'
+              </RouterLink>
+            </li>
           </ul>
         </div>
       </div>
@@ -230,9 +225,9 @@
     <button
       ref="canvasBtn"
       class="d-none"
-      type="button"
-      data-bs-toggle="modal"
       data-bs-target="#singleCardModel"
+      data-bs-toggle="modal"
+      type="button"
     ></button>
   </div>
 </template>
@@ -246,11 +241,11 @@ import { computed, ref } from "vue";
 
 const props = defineProps({
   card: { type: Object, required: true },
-  isSeries: { type: Boolean, default: false },
+  serie: { type: Object, required: false },
 });
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, selectedCardId } = storeToRefs(contentStore);
+const { images, selectedCardId, playlistCardId } = storeToRefs(contentStore);
 const { seenItems, likedItems } = storeToRefs(generalStore);
 
 const canvasBtn = ref(null);
@@ -291,24 +286,6 @@ const title = computed(() => {
 });
 
 /**
- * Check VOD collection name.
- * @type {ComputedRef<*|null>}
- */
-const collectionName = computed(() => {
-  return props.card["collection"]
-    ? contentStore.getCollection(props.card["collection"]).title
-    : null;
-});
-
-/**
- * Check VOD collection count.
- * @type {ComputedRef<*|null>}
- */
-const collectionCount = computed(() => {
-  return props.card["collection"] ? contentStore.countSeriesItems(props.card["collection"]) : 0;
-});
-
-/**
  * Whether user has seen VOD.
  * @type {ComputedRef<*>}
  */
@@ -322,6 +299,18 @@ const isSeen = computed(() => {
  */
 const isLiked = computed(() => {
   return likedItems.value.includes(props.card["id"]);
+});
+
+const collections = computed(() => {
+  if (Array.isArray(props.card["collection"])) {
+    let cols = [];
+    props.card["collection"].forEach((col) => {
+      cols.push(contentStore.getSingleCollection(col));
+    });
+    return cols;
+  } else if (props.card["collection"])
+    return [contentStore.getSingleCollection(props.card["collection"])];
+  return [];
 });
 
 /**
@@ -342,8 +331,8 @@ function secondsToHms() {
  * @param type
  */
 function goToCard(type = "left") {
-  if (props.isSeries) {
-    const path = `/series/${props.card["collection"]}`;
+  if (props.serie) {
+    const path = `/series/${props.serie["id"]}`;
     if (type === "middle") {
       const routeData = router.resolve({ path: path });
       window.open(routeData.href, "_blank");
@@ -405,130 +394,131 @@ const yearAgo = computed(() => {
 
 <style lang="sass" scoped>
 .meta h3
-  overflow: hidden
-  text-overflow: ellipsis
-  display: -webkit-box
-  -webkit-line-clamp: 2
-  -webkit-box-orient: vertical
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: 2
+    -webkit-box-orient: vertical
 
 .inline-meta
-  line-height: 18px
+    line-height: 18px
 
-  span:not(:first-of-type):before
-    margin: 0 4px
-    content: "•"
+    span:not(:first-of-type):before
+        margin: 0 4px
+        content: "•"
 
 .stack
-  position: absolute
-  top: -4px
-  height: 16px
-  left: 8px
-  right: 8px
-  margin-top: -1px
+    position: absolute
+    top: -4px
+    height: 16px
+    left: 8px
+    right: 8px
+    margin-top: -1px
+
 .stack-2
-  position: absolute
-  top: -8px
-  height: 16px
-  left: 12px
-  right: 12px
-  margin-top: -1px
+    position: absolute
+    top: -8px
+    height: 16px
+    left: 12px
+    right: 12px
+    margin-top: -1px
 
 .img-wrapper
-  *
-    transition-property: transform
-    transition-timing-function: ease
-    transition-duration: 100ms
+    *
+        transition-property: transform
+        transition-timing-function: ease
+        transition-duration: 100ms
 
-  &.border-success
-    .corner-top
-      border-right-color: rgb(25, 135, 84)
+    &.border-success
+        .corner-top
+            border-right-color: rgb(25, 135, 84)
 
-    .corner-bottom
-      border-top-color: rgb(25, 135, 84)
+        .corner-bottom
+            border-top-color: rgb(25, 135, 84)
 
-    .edge-left, .edge-bottom
-      background: rgb(25, 135, 84)
+        .edge-left, .edge-bottom
+            background: rgb(25, 135, 84)
 
-  &.border-yt
-    .corner-top
-      border-right-color: #FF0000
+    &.border-yt
+        .corner-top
+            border-right-color: #FF0000
 
-    .corner-bottom
-      border-top-color: #FF0000
+        .corner-bottom
+            border-top-color: #FF0000
 
-    .edge-left, .edge-bottom
-      background: #FF0000
+        .edge-left, .edge-bottom
+            background: #FF0000
 
-  &.border-tw
-    .corner-top
-      border-right-color: #6441A5
+    &.border-tw
+        .corner-top
+            border-right-color: #6441A5
 
-    .corner-bottom
-      border-top-color: #6441A5
+        .corner-bottom
+            border-top-color: #6441A5
 
-    .edge-left, .edge-bottom
-      background: #6441A5
+        .edge-left, .edge-bottom
+            background: #6441A5
 
-  &.active
-    .corner-top, .corner-bottom,
-    .edge-left, .edge-bottom
-      transition-delay: 75ms
+    &.active
+        .corner-top, .corner-bottom,
+        .edge-left, .edge-bottom
+            transition-delay: 75ms
 
-    .corner-top
-      transform: translateY(-0.4rem) scale(1)
+        .corner-top
+            transform: translateY(-0.4rem) scale(1)
 
-    .corner-bottom
-      transform: translateX(0.4rem) scale(1)
+        .corner-bottom
+            transform: translateX(0.4rem) scale(1)
 
-    .edge-left
-      transform: scaleX(1)
+        .edge-left
+            transform: scaleX(1)
 
-    .edge-bottom
-      transform: scaleY(1)
+        .edge-bottom
+            transform: scaleY(1)
 
-    .transform-wrapper
-      transform: translate3d(0.4rem, -0.4rem, 0px)
-      transition-delay: 75ms
+        .transform-wrapper
+            transform: translate3d(0.4rem, -0.4rem, 0px)
+            transition-delay: 75ms
 
 .corner-top
-  position: absolute
-  top: 0
-  left: 0
-  width: 0
-  height: 0
-  border-top: 0.4rem solid transparent
-  border-bottom: 0.4rem solid transparent
-  border-right: 0.4rem solid
-  transform-origin: left center
-  transform: translateY(-0.4rem) scale(0)
+    position: absolute
+    top: 0
+    left: 0
+    width: 0
+    height: 0
+    border-top: 0.4rem solid transparent
+    border-bottom: 0.4rem solid transparent
+    border-right: 0.4rem solid
+    transform-origin: left center
+    transform: translateY(-0.4rem) scale(0)
 
 .corner-bottom
-  position: absolute
-  bottom: 0
-  right: 0
-  width: 0
-  height: 0
-  border-left: 0.4rem solid transparent
-  border-right: 0.4rem solid transparent
-  border-top: 0.4rem solid
-  transform-origin: center bottom
-  transform: translateX(0.4rem) scale(0)
+    position: absolute
+    bottom: 0
+    right: 0
+    width: 0
+    height: 0
+    border-left: 0.4rem solid transparent
+    border-right: 0.4rem solid transparent
+    border-top: 0.4rem solid
+    transform-origin: center bottom
+    transform: translateX(0.4rem) scale(0)
 
 .edge-left
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  transform-origin: 0 100%
-  width: 0.4rem
-  transform: scaleX(0)
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    transform-origin: 0 100%
+    width: 0.4rem
+    transform: scaleX(0)
 
 .edge-bottom
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  transform-origin: 0 100%
-  height: 0.4rem
-  transform: scaleY(0)
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    transform-origin: 0 100%
+    height: 0.4rem
+    transform: scaleY(0)
 </style>
