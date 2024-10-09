@@ -26,15 +26,18 @@
 
     <Teleport to="body">
       <div class="modal fade" id="multiItemModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-sm">
-          <div class="modal-content border-0 rounded-3 py-0 overflow-hidden">
-            <button
-              ref="closeBtn"
-              type="button"
-              class="d-none"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
+        <div class="modal-dialog modal-dialog-centered modal-xs">
+          <div class="modal-content bg-body border-0">
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-5">Selecteer een item...</h1>
+              <button
+                ref="closeBtn"
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
             <div class="modal-body p-0">
               <button
                 v-for="item in titles"
