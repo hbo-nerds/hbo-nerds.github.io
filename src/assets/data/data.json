@@ -12249,7 +12249,8 @@
       ],
       "twitchtracker_id": "25086181168",
       "tags": [
-        "main"
+        "main",
+        "solo"
       ],
       "time_start": "13:48:00",
       "time_end": "17:35:00"
@@ -34210,16 +34211,35 @@
         {
           "title": "Cuphead",
           "duration": 7620
-        },
-        {
-          "title": "The Last Guardian",
-          "duration": 2100
         }
       ],
       "twitchtracker_id": "38034864224",
       "twitch_id": "620567890",
       "tags": [
         "main"
+      ],
+      "time_start": "20:32:00",
+      "time_end": "23:15:00"
+    },
+    {
+      "id": "ee1f",
+      "type": "stream",
+      "date": "2020-05-13",
+      "duration": 9720,
+      "youtube_id": "Wh0oKyQfloU",
+      "titles": [
+        "pietermannetje live :)"
+      ],
+      "activities": [
+        {
+          "title": "The Last Guardian",
+          "duration": 2100
+        }
+      ],
+      "twitchtracker_id": "38034864224",
+      "tags": [
+        "solo",
+        "potje met peetje"
       ],
       "time_start": "20:32:00",
       "time_end": "23:15:00"
@@ -36826,7 +36846,8 @@
       "twitchtracker_id": "40019637660",
       "twitch_id": "813512038",
       "tags": [
-        "casual"
+        "casual",
+        "solo"
       ],
       "time_start": "12:56:00",
       "time_end": "18:15:00"
@@ -37135,6 +37156,30 @@
       "extra_urls": [
         "https://www.youtube.com/watch?v=oQKgjDxy4Zs"
       ],
+      "tags": [
+        "casual"
+      ],
+      "time_start": "15:00:00",
+      "free": true,
+      "time_end": "21:35:00"
+    },
+    {
+      "id": "vns9",
+      "type": "stream",
+      "date": "2020-12-08",
+      "duration": 23640,
+      "youtube_id": "0PjMOWwVEqA",
+      "titles": [
+        "Nieuwe seizoen RAINBOW SIX checken"
+      ],
+      "activities": [
+    
+        {
+          "title": "Tom Clancy's Rainbow Six Siege",
+          "duration": 4500
+        }   
+      ],
+      "twitchtracker_id": "40277512796",
       "tags": [
         "casual"
       ],
@@ -38395,7 +38440,8 @@
       ],
       "twitchtracker_id": "41596374284",
       "tags": [
-        "casual"
+        "casual",
+        "solo"
       ],
       "time_start": "13:56:00",
       "time_end": "17:05:00"
@@ -39349,7 +39395,8 @@
       ],
       "twitchtracker_id": "42295997836",
       "tags": [
-        "casual"
+        "casual",
+        "solo"
       ],
       "time_start": "13:02:00",
       "free": true,
@@ -40140,7 +40187,8 @@
       ],
       "twitchtracker_id": "42854084892",
       "tags": [
-        "casual"
+        "casual",
+        "solo"
       ],
       "time_start": "10:34:00",
       "time_end": "12:35:00"
@@ -40404,6 +40452,7 @@
     {
       "id": "a01c",
       "type": "stream",
+      "youtube_id": "xsAmR4Wjni8",
       "date": "2021-08-20",
       "duration": 3300,
       "titles": [
@@ -45389,7 +45438,8 @@
       "twitchtracker_id": "39962264072",
       "twitch_id": "1636107189",
       "tags": [
-        "casual"
+        "casual",
+        "solo"
       ],
       "time_start": "14:07:00",
       "time_end": "17:15:00"
@@ -45436,32 +45486,10 @@
       "time_end": "23:25:00"
     },
     {
-      "id": "c606",
-      "type": "stream",
-      "date": "2022-10-20",
-      "youtube_id": "uozkYf4cMgY",
-      "duration": 1320,
-      "titles": [
-        "pot met piet"
-      ],
-      "activities": [
-        {
-          "title": "Scorn",
-          "duration": 1320
-        }
-      ],
-      "twitchtracker_id": "39968558008",
-      "tags": [
-        "casual"
-      ],
-      "time_start": "00:42:00",
-      "time_end": "01:05:00"
-    },
-    {
       "id": "a8e5",
       "type": "stream",
       "date": "2022-10-20",
-      "youtube_id": "Cc9pG8HSCMw",
+      "youtube_id": "uozkYf4cMgY",
       "duration": 11220,
       "titles": [
         "pot met piet"
@@ -45483,6 +45511,7 @@
       "id": "dee5",
       "type": "stream",
       "date": "2022-10-20",
+      "youtube_id": "Cc9pG8HSCMw",
       "duration": 10140,
       "titles": [
         "pot met piet"
