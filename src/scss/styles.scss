@@ -21,6 +21,7 @@ html :not(.hide-scrollbar) {
 
 .hide-scrollbar {
   scrollbar-color: transparent transparent;
+  scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {

@@ -66,7 +66,10 @@
                   :transform="`translate(0, ${dayIndex * SQUARE_SIZE})`"
                   :width="SQUARE_SIZE - SQUARE_BORDER_SIZE"
                   class="vch__day__square"
-                  @click="hideTooltip($event, day); $emit('dayClick', day, 'left')"
+                  @click="
+                    hideTooltip($event, day);
+                    $emit('dayClick', day, 'left');
+                  "
                   @mouseover="showTooltip($event, day)"
                   @mouseout="hideTooltip($event, day)"
                   @click.middle="$emit('dayClick', day, 'middle')"

@@ -1,6 +1,6 @@
 <template>
   <!-- single-card -->
-  <div :id="'singleCard_' + card.id" class="pt-3 pb-5">
+  <div :id="'singleCard_' + card.id" class="pt-3 pb-5 overflow-x-hidden">
     <div v-if="showCloseBtn" class="d-flex gap-2 mb-3">
       <button class="btn btn-dark rounded-3 border-0" @click="selectedCardId = null">Sluit</button>
     </div>
@@ -149,10 +149,20 @@
             <div class="small fw-lighter mb-2">Tags:</div>
 
             <span v-if="!card.tags || !card.tags.length">-</span>
-            <div class="d-flex flex-wrap gap-2">
-              <span v-for="tag in card.tags" class="badge rounded-pill text-bg-secondary">{{
-                tag
-              }}</span>
+            <div class="d-flex flex-wrap">
+              <button
+                v-for="tag in card.tags"
+                @click="searchTag(tag)"
+                class="btn btn-sm btn-link text-decoration-none"
+                :title="`Filter op #${tag}`"
+              >
+                #{{
+                  tag
+                    .split(" ")
+                    .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+                    .join("")
+                }}
+              </button>
             </div>
           </div>
         </div>
@@ -386,7 +396,16 @@ function searchActivity(activity) {
   contentStore.resetFilters(); //reset
   filters.value.activity = [activity]; //set
   contentStore.filter(); //call
-  //TODO close modal...
+}
+
+/**
+ * Search for clicked tag
+ * @param tag
+ */
+function searchTag(tag) {
+  contentStore.resetFilters(); //reset
+  filters.value.tag = [tag]; //set
+  contentStore.filter(); //call
 }
 </script>
 

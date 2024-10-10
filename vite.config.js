@@ -26,32 +26,31 @@ export default defineConfig({
           "Introducing Lekker Speuren. Een database van ALLE Lekker Spelen content waar je vliegensvlug doorheen kan speuren.",
         icons: [
           {
-            src: "/android-chrome-192x192.png",
+            src: "/web-app-manifest-192x192.png",
             sizes: "192x192",
             type: "image/png",
           },
           {
-            src: "/android-chrome-256x256.png",
-            sizes: "256x256",
+            src: "/web-app-manifest-512x512.png",
+            sizes: "512x512",
             type: "image/png",
           },
         ],
         screenshots: [
           {
             src: "/screenshots/ls-home.png",
-            sizes: "720x627",
-            form_factor: "wide",
+            sizes: "654x564",
             label: "Zoek naar VOD's van de malle makkers.",
           },
           {
             src: "/screenshots/ls-series.png",
-            sizes: "720x627",
+            sizes: "654x564",
             form_factor: "wide",
-            label: "Bekijk series voor een malle marathon.",
+            label: "Bekijk series voor een marathon.",
           },
           {
             src: "/screenshots/ls-profile.png",
-            sizes: "720x627",
+            sizes: "654x564",
             form_factor: "wide",
             label: "Maak eigen playlists.",
           },
@@ -61,11 +60,25 @@ export default defineConfig({
             name: "Your page",
             description: "Go to your page with history, playlists and liked items.",
             url: "/you",
+            icons: [
+              {
+                src: "/shortcut_you.png",
+                sizes: "96x96",
+                type: "image/png",
+              },
+            ],
           },
           {
             name: "Series",
             description: "View all Lekker Speler series.",
             url: "/series",
+            icons: [
+              {
+                src: "/shortcut_series.png",
+                sizes: "96x96",
+                type: "image/png",
+              },
+            ],
           },
         ],
         start_url: "/",

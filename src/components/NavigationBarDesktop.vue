@@ -16,7 +16,7 @@
               <i class="bi bi-list fs-3 lh-1"></i>
             </div>
             <RouterLink class="text-decoration-none d-flex align-items-center gap-2" to="/">
-              <img alt="Logo" src="../assets/img/lekker_speuren_logo.png" width="40px" />
+              <img alt="Logo" src="../assets/img/detective_sicko.png" width="40px" />
               <span class="d-none text-body d-md-block text-truncate">Lekker Speuren</span>
             </RouterLink>
           </div>
@@ -24,7 +24,7 @@
         <div v-if="!mobileSearch" class="col-3 d-sm-none">
           <div class="d-flex gap-3 align-items-center h-100">
             <RouterLink class="text-decoration-none d-flex align-items-center" to="/">
-              <img alt="Logo" src="../assets/img/lekker_speuren_logo.png" width="40px" />
+              <img alt="Logo" src="../assets/img/detective_sicko.png" width="40px" />
             </RouterLink>
           </div>
         </div>
@@ -107,7 +107,7 @@
             >
               <button
                 class="btn btn-dark btn-circle rounded-circle border-0"
-                title="Change theme"
+                title="Bezoek project op GitHub"
                 type="button"
               >
                 <i class="bi bi-github"></i>
@@ -122,6 +122,7 @@
                 class="btn btn-dark btn-circle rounded-circle border-0"
                 data-bs-display="static"
                 data-bs-toggle="dropdown"
+                title="Verander thema"
                 type="button"
               >
                 <i class="bi bi-moon-stars-fill"></i>

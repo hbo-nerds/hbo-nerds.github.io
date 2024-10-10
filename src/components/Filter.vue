@@ -219,7 +219,13 @@
           @change="contentStore.filter()"
         />
         <label :for="'tag-' + idx" class="form-check-label small text-capitalize">
-          {{ key }} ({{ groupedTags[key] }})
+          {{
+            key
+              .split(" ")
+              .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+              .join("")
+          }}
+          ({{ groupedTags[key] }})
         </label>
       </div>
       <hr v-if="a_tags.length" />
@@ -235,7 +241,13 @@
             @change="contentStore.filter()"
           />
           <label :for="'tag-' + idx" class="form-check-label small text-capitalize w-100">
-            {{ key }} ({{ groupedTags[key] }})
+            {{
+              key
+                .split(" ")
+                .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
+                .join("")
+            }}
+            ({{ groupedTags[key] }})
           </label>
         </div>
         <span v-if="!f_tags.length" class="form-check-label small text-capitalize"
