@@ -13,7 +13,11 @@
             </div>
           </div>
           <div class="col">
-            <router-view />
+            <router-view v-slot="{ Component }">
+              <keep-alive>
+                <component :is="Component" />
+              </keep-alive>
+            </router-view>
           </div>
           <template v-if="selectedCard">
             <div class="d-none d-md-block col-md-4 col-lg-3">

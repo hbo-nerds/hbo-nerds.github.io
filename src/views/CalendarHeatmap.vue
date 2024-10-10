@@ -61,7 +61,7 @@ import router from "@/router/index.js";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { computed, ref } from "vue";
+import { computed, onActivated, ref } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
@@ -103,6 +103,11 @@ function open(id, type) {
 
 const heatmapData = computed(() => {
   return contentStore.groupedYearDate;
+});
+
+onActivated(() => {
+  const el = document.getElementById("main-content");
+  if (el) el.scrollTo({ top: 0, behavior: "instant" });
 });
 </script>
 

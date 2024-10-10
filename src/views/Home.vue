@@ -9,7 +9,7 @@
             class="btn btn-dark border-0"
             title="Thumbnail view"
             type="button"
-            @click="view = 'thumbnail'"
+            @click="changeView('thumbnail')"
           >
             <i class="bi bi-images"></i>
           </button>
@@ -18,7 +18,7 @@
             class="btn btn-dark border-0"
             title="Heatmap view"
             type="button"
-            @click="view = 'heatmap'"
+            @click="changeView('heatmap')"
           >
             <i class="bi bi-calendar3"></i>
           </button>
@@ -27,7 +27,7 @@
             class="btn btn-dark border-0"
             title="Random view"
             type="button"
-            @click="view = 'random'"
+            @click="changeView('random')"
           >
             <i class="bi bi-dice-5"></i>
           </button>
@@ -56,15 +56,28 @@
 <script setup>
 import FilterHorizontal from "@/components/FilterHorizontal.vue";
 import { useContentStore } from "@/stores/content.js";
+import { useLayoutStore } from "@/stores/layout.js";
 import CalendarHeatmap from "@/views/CalendarHeatmap.vue";
 import List from "@/views/List.vue";
 import Random from "@/views/Random.vue";
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
+import { onBeforeRouteLeave } from "vue-router";
 
 const contentStore = useContentStore();
+const layoutStore = useLayoutStore();
 const { sortedData } = storeToRefs(contentStore);
 const view = ref("thumbnail");
+
+function changeView(newView) {
+  if (view.value === "thumbnail")
+    layoutStore.homeScroll = document.getElementById("main-content").scrollTop;
+  view.value = newView;
+}
+
+onBeforeRouteLeave(() => {
+  layoutStore.homeScroll = document.getElementById("main-content").scrollTop;
+});
 </script>
 
 <style scoped></style>

@@ -23,13 +23,16 @@
 <script setup>
 import SortSelect from "@/components/SortSelect.vue";
 import { useContentStore } from "@/stores/content.js";
+import { useLayoutStore } from "@/stores/layout.js";
 import { useInfiniteScroll } from "@vueuse/core";
 import { storeToRefs } from "pinia";
-import { computed, defineAsyncComponent, ref, watch } from "vue";
+import { computed, defineAsyncComponent, onActivated, ref, watch } from "vue";
+import { onBeforeRouteLeave } from "vue-router";
 
 const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
 const contentStore = useContentStore();
+const layoutStore = useLayoutStore();
 const { getCompleteCollections } = storeToRefs(contentStore);
 
 const series = ref([]);
@@ -45,6 +48,15 @@ const sortOptions = [
   { value: "updatedAsc", label: "Updatedatum (oudste eerst)" },
   { value: "updatedDesc", label: "Updatedatum (nieuwste eerst)" },
 ];
+
+onActivated(() => {
+  const el = document.getElementById("main-content");
+  if (el) el.scrollTo({ top: layoutStore.seriesScroll, behavior: "instant" });
+});
+
+onBeforeRouteLeave(() => {
+  layoutStore.seriesScroll = document.getElementById("main-content").scrollTop;
+});
 
 /**
  * Return sorted list of playlists.
