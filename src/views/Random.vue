@@ -35,6 +35,8 @@ const { randomData } = storeToRefs(contentStore);
 
 onActivated(() => {
   if (!randomData.value.length) contentStore.pickRandomSet();
+  const el = document.getElementById("main-content");
+  if (el) el.scrollTo({ top: 0, behavior: "instant" });
 });
 </script>
 

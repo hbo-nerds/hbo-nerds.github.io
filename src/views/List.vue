@@ -17,15 +17,18 @@
 
 <script setup>
 import { useContentStore } from "@/stores/content.js";
+import { useLayoutStore } from "@/stores/layout.js";
 import { useInfiniteScroll } from "@vueuse/core";
 import { storeToRefs } from "pinia";
-import { defineAsyncComponent, ref, watch } from "vue";
+import { defineAsyncComponent, onActivated, onDeactivated, ref, watch } from "vue";
 
 const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
 const contentStore = useContentStore();
+const layoutStore = useLayoutStore();
 const { sortedData, selectedCard } = storeToRefs(contentStore);
 
+const active = ref(false);
 const cards = ref([]);
 const start = ref(0);
 const scrollComponent = ref(null);
@@ -33,7 +36,7 @@ const scrollComponent = ref(null);
 useInfiniteScroll(
   document.getElementById("main-content"),
   () => {
-    loadMoreCards();
+    if (active.value) loadMoreCards();
   },
   { distance: 10 },
 );
@@ -49,6 +52,16 @@ function initialize() {
   cards.value = sortedData.value.slice(start.value, 20);
   start.value += 20;
 }
+
+onDeactivated(() => {
+  active.value = false;
+});
+
+onActivated(() => {
+  active.value = true;
+  const el = document.getElementById("main-content");
+  if (el) el.scrollTo({ top: layoutStore.homeScroll, behavior: "instant" });
+});
 
 /**
  * Start from 0 if base data changes due to filter.
