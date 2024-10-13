@@ -45406,7 +45406,7 @@
             ],
             "activities": [
                 {
-                    "title": "The Mortuary Assistant",
+                    "title": "Mortuary Assistant",
                     "duration": 7020
                 }
             ],
@@ -45593,7 +45593,7 @@
                     "duration": 3480
                 },
                 {
-                    "title": "The Mortuary Assistant",
+                    "title": "Mortuary Assistant",
                     "duration": 3900
                 }
             ],
@@ -51424,29 +51424,30 @@
             "id": "9bc0",
             "type": "stream"
         },
-        {
-            "date": "2024-10-09",
-            "time_start": "20:30:41",
-            "time_end": "22:43:05",
-            "titles": [
-                "Lijkschouwer simulator (HORROR MAAND)"
-            ],
-            "activities": [
-                {
-                    "title": "Mortuary Assistant",
-                    "duration": 1
-                }
-            ],
-            "duration": 7944,
-            "twitch_id": "2271869758",
-            "youtube_id": "l-2jhXbkOII",
-            "id": "b741",
-            "type": "stream"
-        },
+      {
+        "date": "2024-10-09",
+        "time_start": "20:30:41",
+        "collection": 58,
+        "time_end": "22:43:05",
+        "titles": [
+          "Lijkschouwer simulator (HORROR MAAND)"
+        ],
+        "activities": [
+          {
+            "title": "Mortuary Assistant",
+            "duration": 1
+          }
+        ],
+        "duration": 7944,
+        "twitch_id": "2271869758",
+        "youtube_id": "l-2jhXbkOII",
+        "id": "b741",
+        "type": "stream"
+      },
         {
             "date": "2024-10-10",
-          "time_start": "20:37:30",
-          "free":  true,
+            "time_start": "20:37:30",
+            "free": true,
             "time_end": "22:53:01",
             "titles": [
                 "We gaan door tot we VERLIEZEN! 🥊"
@@ -51461,6 +51462,14 @@
             "youtube_id": "7VBBmHqEZIw",
             "id": "236d",
             "type": "stream"
+        },
+        {
+            "id": "ef5f",
+            "type": "video",
+            "date": "2024-10-08",
+            "title": "Bob de Bouwer - Lekker spelen",
+            "duration": 544,
+            "youtube_id": "StsDtBuPi6s"
         }
     ]
 }
