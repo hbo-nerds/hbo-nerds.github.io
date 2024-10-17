@@ -1,7 +1,7 @@
 <template>
   <nav class="bg-body py-2">
     <div class="container-fluid">
-      <div class="row align-items-center g-2">
+      <div class="row align-items-center gx-2">
         <!-- left -->
         <div class="col-2 col-md-3 d-none d-sm-block">
           <div class="d-flex gap-3 align-items-center h-100">
@@ -69,7 +69,7 @@
           >
             <div>
               <button
-                class="btn btn-dark btn-circle rounded-circle border-0"
+                class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
                 type="button"
                 @click="mobileSearch = false"
               >
@@ -96,7 +96,7 @@
             </div>
           </div>
         </div>
-        <!-- right -->
+        <!-- right desktop -->
         <div class="col-2 col-md-3 d-none d-sm-block">
           <div class="d-flex gap-2 align-items-center justify-content-end">
             <!-- Github -->
@@ -174,6 +174,7 @@
             </div>
           </div>
         </div>
+        <!-- right mobile -->
         <div class="d-sm-none col-auto col-sm-3">
           <div class="d-flex gap-2 align-items-center justify-content-end">
             <!-- Github -->
@@ -183,7 +184,10 @@
               target="_blank"
               title="View project on GitHub"
             >
-              <button class="btn btn-dark btn-circle rounded-circle border-0" type="button">
+              <button
+                class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
+                type="button"
+              >
                 <i class="bi bi-github"></i>
               </button>
             </a>
@@ -193,7 +197,7 @@
                 id="bd-theme"
                 aria-expanded="false"
                 aria-label="Toggle theme (dark)"
-                class="btn btn-dark btn-circle rounded-circle border-0"
+                class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
                 data-bs-display="static"
                 data-bs-toggle="dropdown"
                 type="button"
@@ -242,18 +246,18 @@
                 </li>
               </ul>
             </div>
+            <!-- filter -->
+            <filter-modal />
             <!-- search -->
             <button
               v-if="!mobileSearch"
               id="mobile-search-btn"
-              class="d-sm-none btn btn-dark btn-circle rounded-circle border-0"
+              class="d-sm-none btn btn-dark bg-trans btn-circle rounded-circle border-0"
               type="button"
               @click="startTyping"
             >
               <i class="bi bi-search"></i>
             </button>
-            <!-- filter -->
-            <filter-modal v-if="mobileSearch" />
           </div>
         </div>
       </div>

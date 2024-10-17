@@ -1,6 +1,6 @@
 <template>
   <button
-    class="btn btn-dark btn-circle rounded-circle border-0"
+    class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
     data-bs-target="#filterModal"
     data-bs-toggle="modal"
     title="Geavanceerde filter"

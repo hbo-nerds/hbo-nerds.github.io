@@ -49,7 +49,22 @@
           >
             <p>Klik links op je scherm op het 'Jij' icoon, deze bevindt zich in de menubalk.</p>
             <img alt="desktop_you_1" class="w-75" src="@/assets/img/qa/qa_you_desktop_1.png" />
-            <p>...</p>
+            <p>Op de 'Jij' pagina vindt je de volgende informatie:</p>
+            <ol>
+              <li>
+                Geschiedenis: Dit zijn de door jouw laatst geopende items. Klik op 'Alle
+                geschiedenis' voor meer.
+              </li>
+              <li>
+                Afspeellijsten: Dit zijn jouw persoonlijke afspeellijsten. Klik op een afspeellijst
+                om een overzicht te krijgen van alle items in de lijst. Klik op 'Alle
+                afspeellijsten' voor meer.
+              </li>
+              <li>
+                Gelikete items: Dit zijn jouw gelikete items. Klik op 'Alle gelikete' voor meer.
+              </li>
+            </ol>
+            <img alt="desktop_you_2" class="w-75" src="@/assets/img/qa/qa_you_desktop_2.png" />
           </div>
           <div
             v-if="device === 'smartphone'"

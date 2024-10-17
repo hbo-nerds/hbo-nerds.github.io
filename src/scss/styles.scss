@@ -107,6 +107,12 @@ input[type="checkbox"] + label {
   }
 }
 
+@media (max-width: 656px) {
+  .btn-dark.bg-trans {
+    background-color: transparent;
+  }
+}
+
 [data-bs-theme="dark"] {
   .mobile-menubar {
     background: rgba(0, 0, 0, 0.9);

@@ -62,30 +62,33 @@
         >
           <i class="bi bi-three-dots-vertical"></i>
         </button>
-        <ul class="dropdown-menu dropdown-menu-end">
+        <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
           <li>
             <button
-              class="dropdown-item"
+              :class="{ active: isSeen }"
+              class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
               type="button"
               @click="generalStore.toggleSeenItem(card['id'])"
             >
-              <i class="bi bi-eye me-3"></i>{{ isSeen ? "Niet gezien" : "Gezien" }}
+              <i class="bi bi-eye me-3"></i><span class="small">Gezien</span>
             </button>
           </li>
           <li>
             <button
-              class="dropdown-item"
+              class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
               data-bs-target="#playlist-modal"
               data-bs-toggle="modal"
               type="button"
               @click="playlistCardId = card.id"
             >
-              <i class="bi bi-collection-play me-3"></i>Bewaar
+              <i class="bi bi-collection-play me-3"></i
+              ><span class="small">Bewaar in afspeellijst</span>
             </button>
           </li>
           <li>
             <button
-              class="dropdown-item"
+              :class="{ active: isLiked }"
+              class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
               type="button"
               @click="generalStore.toggleLikedItem(card['id'])"
             >
@@ -237,8 +240,4 @@ const yearAgo = computed(() => {
   span:not(:first-of-type):before
     margin: 0 4px
     content: "•"
-
-.dropdown-menu
-  background-color: #292929
-  --bs-dropdown-link-hover-bg: #3d3d3d
 </style>

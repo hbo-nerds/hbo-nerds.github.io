@@ -1,44 +1,58 @@
 <template>
-  <div class="col-md-auto">
-    <h6 class="fw-semibold mb-3">Download jouw opgeslagen data.</h6>
-    <button class="btn btn-dark border-0 rounded-pill" @click="downloadUserData">Download</button>
+  <div class="col-md">
+    <div class="card bg-body">
+      <div class="card-body p-3">
+        <h5>Download jouw opgeslagen data.</h5>
+        <button class="btn btn-dark border-0 rounded-pill" @click="downloadUserData">
+          Download
+        </button>
+      </div>
+    </div>
   </div>
-  <div class="col-md-auto">
-    <h6 class="fw-semibold mb-3">Upload vanaf backup.</h6>
-    <span class="d-flex gap-2 mb-3" v-if="success">
-      <span class="badge rounded-pill text-bg-success">Yeah!</span>
-      <span class="fw-lighter small">Data succesvol ingeladen en opgeslagen.</span>
-    </span>
-    <span class="d-flex gap-2 mb-3" v-if="invalid">
-      <span class="badge rounded-pill text-bg-danger">Ooh!</span>
-      <span class="fw-lighter small">Geen bruikbare data gevonden.</span>
-    </span>
-    <div v-if="files" class="fw-lighter mb-3">{{ files[0].name }}</div>
-    <button v-if="!files" class="btn btn-light border-0 rounded-pill" @click="selectFile">
-      Selecteer bestand
-    </button>
-    <template v-else>
-      <button class="btn btn-light border-0 rounded-pill me-2" @click="uploadUserData">
-        Upload bestand
-        <template v-if="waiting">
-          <span aria-hidden="true" class="spinner-border spinner-border-sm"></span>
-          <span class="visually-hidden" role="status">Loading...</span>
+  <div class="col-md">
+    <div class="card bg-body">
+      <div class="card-body p-3">
+        <h5>Upload vanaf backup.</h5>
+        <span v-if="success" class="d-flex gap-2 mb-3">
+          <span class="badge rounded-pill text-bg-success">Yeah!</span>
+          <span class="fw-lighter small">Data succesvol ingeladen en opgeslagen.</span>
+        </span>
+        <span v-if="invalid" class="d-flex gap-2 mb-3">
+          <span class="badge rounded-pill text-bg-danger">Ooh!</span>
+          <span class="fw-lighter small">Geen bruikbare data gevonden.</span>
+        </span>
+        <div v-if="files" class="fw-lighter mb-3">{{ files[0].name }}</div>
+        <button v-if="!files" class="btn btn-light border-0 rounded-pill" @click="selectFile">
+          Selecteer bestand
+        </button>
+        <template v-else>
+          <button class="btn btn-light border-0 rounded-pill me-2" @click="uploadUserData">
+            Upload bestand
+            <template v-if="waiting">
+              <span aria-hidden="true" class="spinner-border spinner-border-sm"></span>
+              <span class="visually-hidden" role="status">Loading...</span>
+            </template>
+          </button>
+          <button class="btn btn-dark border-0 rounded-pill" @click="cancelUpload">Annuleer</button>
         </template>
-      </button>
-      <button class="btn btn-dark border-0 rounded-pill" @click="cancelUpload">Annuleer</button>
-    </template>
-    <input
-      id="formFile"
-      ref="fileInput"
-      accept=".json"
-      class="d-none"
-      type="file"
-      @change="handleFileChange"
-    />
+        <input
+          id="formFile"
+          ref="fileInput"
+          accept=".json"
+          class="d-none"
+          type="file"
+          @change="handleFileChange"
+        />
+      </div>
+    </div>
   </div>
-  <div class="col-md-auto">
-    <h6 class="fw-semibold mb-3">Verwijder alle opgeslagen data.</h6>
-    <button class="btn btn-danger rounded-pill" @click="clearStorage">Verwijder</button>
+  <div class="col-md">
+    <div class="card bg-body">
+      <div class="card-body p-3">
+        <h5>Verwijder alle opgeslagen data.</h5>
+        <button class="btn btn-danger rounded-pill" @click="clearStorage">Verwijder</button>
+      </div>
+    </div>
   </div>
 </template>
 
