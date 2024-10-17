@@ -1,9 +1,9 @@
 <template>
   <!-- main -->
-  <main class="pt-3 pb-5">
-    <div class="sticky-top z-3 bg-body row align-items-center g-3 pb-3">
+  <main class="pb-5">
+    <div class="sticky-top z-3 bg-body row align-items-center gx-3 py-2">
       <div class="col-auto">
-        <div class="btn-group">
+        <div class="btn-group overflow-hidden">
           <button
             :class="{ active: view === 'thumbnail' }"
             class="btn btn-dark border-0"

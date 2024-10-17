@@ -101,7 +101,7 @@
             type="button"
             @click="playlistCardId = card.id"
           >
-            <i class="bi bi-collection-play me-2"></i>Bewaar
+            <i class="bi bi-collection-play me-2"></i>Bewaar in afspeellijst
           </button>
           <button class="btn btn-dark border-0 rounded-pill text-nowrap" @click="copyLink">
             <i class="bi bi-copy me-2"></i>Kopieer link

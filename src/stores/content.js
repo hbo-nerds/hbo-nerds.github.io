@@ -510,6 +510,10 @@ export const useContentStore = defineStore("content", {
           this.f_activity(item) &&
           this.f_tag(item),
       );
+
+      const el = document.getElementById("main-content");
+      if (el) el.scrollTo({ top: 0, behavior: "instant" });
+
       this.filteredData = [...data];
     },
     f_search(item) {

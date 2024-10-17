@@ -38,15 +38,17 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body p-0">
-              <button
-                v-for="item in titles"
-                @click="open(item.id, 'left')"
-                @click.middle="open(item.id, 'middle')"
-                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2 text-truncate"
-              >
-                {{ item.title }}
-              </button>
+            <div class="modal-body">
+              <div class="d-flex flex-wrap gap-3">
+                <button
+                  v-for="item in titles"
+                  @click="open(item.id, 'left')"
+                  @click.middle="open(item.id, 'middle')"
+                  class="btn btn-dark border-0 text-truncate"
+                >
+                  {{ item.title }}
+                </button>
+              </div>
             </div>
           </div>
         </div>

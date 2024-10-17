@@ -172,6 +172,7 @@
             aria-expanded="false"
             class="btn btn-circle btn-sm rounded-circle"
             data-bs-offset="0,10"
+            data-bs-auto-close="outside"
             data-bs-toggle="dropdown"
           >
             <i class="bi bi-three-dots-vertical lh-1"></i>
@@ -184,7 +185,7 @@
                 type="button"
                 @click="generalStore.toggleSeenItem(card['id'])"
               >
-                <i class="bi bi-eye me-2"></i>Gezien
+                <i class="bi bi-eye me-2"></i><span class="small">Gezien</span>
               </button>
             </li>
             <li>
@@ -195,7 +196,8 @@
                 type="button"
                 @click="playlistCardId = card.id"
               >
-                <i class="bi bi-collection-play me-2"></i>Bewaar
+                <i class="bi bi-collection-play me-2"></i
+                ><span class="small">Bewaar in afspeellijst</span>
               </button>
             </li>
             <li>
@@ -205,17 +207,18 @@
                 type="button"
                 @click="generalStore.toggleLikedItem(card['id'])"
               >
-                <i class="bi bi-hand-thumbs-up me-2"></i>Like
+                <i class="bi bi-hand-thumbs-up me-2"></i><span class="small">Like</span>
               </button>
             </li>
-            <li v-if="collections.length"><hr class="dropdown-divider" /></li>
+            <li v-if="collections.length"><hr class="dropdown-divider m-0 border-2" /></li>
             <li v-for="col in collections">
               <RouterLink
                 :to="{ name: 'serie', params: { id: col['id'] } }"
                 class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 title="Ga naar serie"
               >
-                <i class="bi bi-collection-play me-2"></i>Naar '{{ col.title }}'
+                <i class="bi bi-collection-play me-2"></i
+                ><span class="small">Naar '{{ col.title }}'</span>
               </RouterLink>
             </li>
           </ul>

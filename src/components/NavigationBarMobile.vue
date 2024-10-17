@@ -18,7 +18,7 @@
       <li class="nav-item">
         <div class="nav-link">
           <button
-            class="btn btn-dark btn-circle rounded-circle border-0"
+            class="btn btn-dark bg-trans btn-circle rounded-circle border-secondary"
             type="button"
             @click="startSearch"
           >
