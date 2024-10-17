@@ -51424,26 +51424,34 @@
             "id": "9bc0",
             "type": "stream"
         },
-      {
-        "date": "2024-10-09",
-        "time_start": "20:30:41",
-        "collection": 58,
-        "time_end": "22:43:05",
-        "titles": [
-          "Lijkschouwer simulator (HORROR MAAND)"
-        ],
-        "activities": [
-          {
-            "title": "Mortuary Assistant",
-            "duration": 1
-          }
-        ],
-        "duration": 7944,
-        "twitch_id": "2271869758",
-        "youtube_id": "l-2jhXbkOII",
-        "id": "b741",
-        "type": "stream"
-      },
+        {
+            "id": "ef5f",
+            "type": "video",
+            "date": "2024-10-08",
+            "title": "Bob de Bouwer - Lekker spelen",
+            "duration": 544,
+            "youtube_id": "StsDtBuPi6s"
+        },
+        {
+            "date": "2024-10-09",
+            "time_start": "20:30:41",
+            "collection": 58,
+            "time_end": "22:43:05",
+            "titles": [
+                "Lijkschouwer simulator (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "Mortuary Assistant",
+                    "duration": 1
+                }
+            ],
+            "duration": 7944,
+            "twitch_id": "2271869758",
+            "youtube_id": "l-2jhXbkOII",
+            "id": "b741",
+            "type": "stream"
+        },
         {
             "date": "2024-10-10",
             "time_start": "20:37:30",
@@ -51464,12 +51472,50 @@
             "type": "stream"
         },
         {
-            "id": "ef5f",
+            "date": "2024-10-14",
+            "time_start": "20:30:16",
+            "time_end": "22:58:35",
+            "titles": [
+                "SILENT HILL IS TERUG! (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "Silent Hill 2",
+                    "duration": 1
+                }
+            ],
+            "duration": 8899,
+            "twitch_id": "2276132261",
+            "youtube_id": "k8E1wRuOKa8",
+            "id": "9ac1",
+            "type": "stream"
+        },
+        {
+            "date": "2024-10-16",
+            "time_start": "20:30:25",
+            "time_end": "00:06:42",
+            "titles": [
+                "Sceptisten zijn om: spoken bestaan! (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "The Classrooms",
+                    "duration": 1
+                }
+            ],
+            "duration": 12977,
+            "twitch_id": "2277814988",
+            "youtube_id": "iz1s3PrCQ7o",
+            "id": "5e3e",
+            "type": "stream"
+        },
+        {
+            "id": "9a48",
             "type": "video",
-            "date": "2024-10-08",
-            "title": "Bob de Bouwer - Lekker spelen",
-            "duration": 544,
-            "youtube_id": "StsDtBuPi6s"
+            "date": "2024-10-15",
+            "title": "Boksen - Lekker spelen",
+            "duration": 242,
+            "youtube_id": "p_PaJXb2QVo"
         }
     ]
 }
