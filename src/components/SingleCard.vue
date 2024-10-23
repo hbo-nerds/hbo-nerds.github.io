@@ -2,7 +2,10 @@
   <!-- single-card -->
   <div :id="'singleCard_' + card.id" class="pt-3 pb-5 overflow-x-hidden">
     <div v-if="showCloseBtn" class="d-flex gap-2 mb-3">
-      <button class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter" @click="selectedCardId = null">
+      <button
+        class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter"
+        @click="selectedCardId = null"
+      >
         sluiten
       </button>
     </div>
