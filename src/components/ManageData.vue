@@ -60,6 +60,7 @@
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { ref } from "vue";
+import { toast } from "vue3-toastify";
 
 const generalStore = useGeneralStore();
 const { likedItems, seenItems, history, playlists } = storeToRefs(generalStore);
@@ -147,7 +148,11 @@ function uploadUserData() {
 }
 
 function clearStorage() {
-  if (window.confirm("Weet je het zeker?")) localStorage.clear();
+  if (window.confirm("Weet je het zeker?")) {
+    localStorage.clear();
+    toast("Alle data verwijderd");
+    generalStore.getLocaleStorage();
+  }
 }
 </script>
 

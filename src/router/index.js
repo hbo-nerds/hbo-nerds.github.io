@@ -53,13 +53,13 @@ const router = createRouter({
     },
     { path: "/:pathMatch(.*)*", redirect: "/" },
   ],
-  scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition;
-    } else {
-      return { top: 0 };
-    }
-  },
+});
+
+router.beforeEach((to, from, next) => {
+  console.log("router.beforeEach...");
+  const el = document.getElementById("main-content");
+  if (el) el.scrollTo({ top: 0, behavior: "instant" });
+  next();
 });
 
 export default router;

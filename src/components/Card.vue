@@ -4,11 +4,7 @@
     <div v-if="serie" class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
     <div
       :class="[
-        card.type === 'podcast'
-          ? 'border-success'
-          : card.type === 'video'
-            ? 'border-yt'
-            : 'border-tw',
+        card.type === 'podcast' ? 'bg-success' : card.type === 'video' ? 'bg-yt' : 'bg-tw',
         { active: card.id === selectedCardId },
       ]"
       class="img-wrapper position-relative"
@@ -16,13 +12,8 @@
       @click="goToCard"
       @click.middle="goToCard('middle')"
     >
-      <div class="corner-top"></div>
-      <div class="corner-bottom"></div>
-      <div class="edge-left"></div>
-      <div class="edge-bottom"></div>
-
       <div class="transform-wrapper position-relative">
-        <img :src="imgScr" alt="thumbnail" class="w-100" width="100%" />
+        <img :src="imgScr" alt="thumbnail" class="w-100" />
         <!-- date -->
         <span
           class="badge bg-black position-absolute top-0 start-0 m-2"
@@ -43,18 +34,14 @@
           Gratis
         </span>
         <!-- type -->
-        <span
-          class="badge bg-black position-absolute bottom-0 start-0 m-2"
-          style="--bs-bg-opacity: 0.75"
-        >
-          {{ card.type }}
-        </span>
-
-        <div
-          v-if="isSeen"
-          class="bg-dark opacity-75 position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center"
-        >
-          <i class="text-light bi bi-eye-fill fs-4 opacity-100"></i>
+        <div class="position-absolute bottom-0 start-0 m-2 d-flex gap-1">
+          <span class="badge bg-black" style="--bs-bg-opacity: 0.75">{{ card.type }}</span>
+          <span v-if="isSeen" class="badge bg-black" style="--bs-bg-opacity: 0.75"
+            ><i class="bi bi-eye-fill"></i
+          ></span>
+          <span v-if="isLiked" class="badge bg-black" style="--bs-bg-opacity: 0.75"
+            ><i class="bi bi-hand-thumbs-up-fill"></i
+          ></span>
         </div>
       </div>
     </div>
@@ -167,25 +154,35 @@
         </div>
         <div>
           <button
-            aria-label="Dropdown"
-            type="button"
             aria-expanded="false"
+            aria-label="Dropdown"
             class="btn btn-circle btn-sm rounded-circle"
-            data-bs-offset="0,10"
             data-bs-auto-close="outside"
+            data-bs-offset="0,10"
             data-bs-toggle="dropdown"
+            type="button"
           >
             <i class="bi bi-three-dots-vertical lh-1"></i>
           </button>
           <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
             <li>
               <button
-                :class="{ active: isSeen }"
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                type="button"
+                @click="generalStore.toggleLikedItem(card['id'])"
+              >
+                <i class="bi bi-hand-thumbs-up me-2"></i
+                ><span class="small">Like <i v-if="isLiked" class="ms-2 bi bi-check-lg"></i></span>
+              </button>
+            </li>
+            <li>
+              <button
                 class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 type="button"
                 @click="generalStore.toggleSeenItem(card['id'])"
               >
-                <i class="bi bi-eye me-2"></i><span class="small">Gezien</span>
+                <i class="bi bi-eye me-2"></i
+                ><span class="small">Gezien <i v-if="isSeen" class="ms-2 bi bi-check-lg"></i></span>
               </button>
             </li>
             <li>
@@ -202,15 +199,18 @@
             </li>
             <li>
               <button
-                :class="{ active: isLiked }"
                 class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                data-bs-target="#share-modal"
+                data-bs-toggle="modal"
                 type="button"
-                @click="generalStore.toggleLikedItem(card['id'])"
+                @click="shareCardId = card.id"
               >
-                <i class="bi bi-hand-thumbs-up me-2"></i><span class="small">Like</span>
+                <i class="bi bi-share me-2"></i><span class="small">Delen</span>
               </button>
             </li>
-            <li v-if="collections.length"><hr class="dropdown-divider m-0 border-2" /></li>
+            <li v-if="collections.length">
+              <hr class="dropdown-divider m-0 border-2" />
+            </li>
             <li v-for="col in collections">
               <RouterLink
                 :to="{ name: 'serie', params: { id: col['id'] } }"
@@ -248,7 +248,7 @@ const props = defineProps({
 });
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, selectedCardId, playlistCardId } = storeToRefs(contentStore);
+const { images, selectedCardId, playlistCardId, shareCardId } = storeToRefs(contentStore);
 const { seenItems, likedItems } = storeToRefs(generalStore);
 
 const canvasBtn = ref(null);
@@ -432,96 +432,8 @@ const yearAgo = computed(() => {
         transition-timing-function: ease
         transition-duration: 100ms
 
-    &.border-success
-        .corner-top
-            border-right-color: rgb(25, 135, 84)
-
-        .corner-bottom
-            border-top-color: rgb(25, 135, 84)
-
-        .edge-left, .edge-bottom
-            background: rgb(25, 135, 84)
-
-    &.border-yt
-        .corner-top
-            border-right-color: #FF0000
-
-        .corner-bottom
-            border-top-color: #FF0000
-
-        .edge-left, .edge-bottom
-            background: #FF0000
-
-    &.border-tw
-        .corner-top
-            border-right-color: #6441A5
-
-        .corner-bottom
-            border-top-color: #6441A5
-
-        .edge-left, .edge-bottom
-            background: #6441A5
-
     &.active
-        .corner-top, .corner-bottom,
-        .edge-left, .edge-bottom
-            transition-delay: 75ms
-
-        .corner-top
-            transform: translateY(-0.4rem) scale(1)
-
-        .corner-bottom
-            transform: translateX(0.4rem) scale(1)
-
-        .edge-left
-            transform: scaleX(1)
-
-        .edge-bottom
-            transform: scaleY(1)
-
         .transform-wrapper
-            transform: translate3d(0.4rem, -0.4rem, 0px)
             transition-delay: 75ms
-
-.corner-top
-    position: absolute
-    top: 0
-    left: 0
-    width: 0
-    height: 0
-    border-top: 0.4rem solid transparent
-    border-bottom: 0.4rem solid transparent
-    border-right: 0.4rem solid
-    transform-origin: left center
-    transform: translateY(-0.4rem) scale(0)
-
-.corner-bottom
-    position: absolute
-    bottom: 0
-    right: 0
-    width: 0
-    height: 0
-    border-left: 0.4rem solid transparent
-    border-right: 0.4rem solid transparent
-    border-top: 0.4rem solid
-    transform-origin: center bottom
-    transform: translateX(0.4rem) scale(0)
-
-.edge-left
-    position: absolute
-    top: 0
-    bottom: 0
-    left: 0
-    transform-origin: 0 100%
-    width: 0.4rem
-    transform: scaleX(0)
-
-.edge-bottom
-    position: absolute
-    bottom: 0
-    left: 0
-    right: 0
-    transform-origin: 0 100%
-    height: 0.4rem
-    transform: scaleY(0)
+            transform: scale(0.97, 0.946)
 </style>

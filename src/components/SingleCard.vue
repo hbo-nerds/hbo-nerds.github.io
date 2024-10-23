@@ -2,11 +2,20 @@
   <!-- single-card -->
   <div :id="'singleCard_' + card.id" class="pt-3 pb-5 overflow-x-hidden">
     <div v-if="showCloseBtn" class="d-flex gap-2 mb-3">
-      <button class="btn btn-dark rounded-3 border-0" @click="selectedCardId = null">Sluit</button>
+      <button class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter" @click="selectedCardId = null">
+        sluiten
+      </button>
     </div>
     <div :key="card.id" class="row g-3">
       <div class="col-12 col-lg-12">
-        <img :src="imgScr" alt="thumbnail" class="w-100 mb-3" />
+        <img
+          :src="lowResImg"
+          :srcset="`${lowResImg} 320w, ${highResImg} 640w`"
+          alt="Thumbnail"
+          class="w-100 mb-3"
+          sizes="(max-width: 600px) 320px, 640px"
+          style="aspect-ratio: 16 / 9"
+        />
         <h5 class="fw-bold">{{ title }}</h5>
       </div>
       <!-- description -->
@@ -47,7 +56,7 @@
         </div>
       </div>
       <!-- links -->
-      <div class="col-12 col-3xl-6" v-if="card['twitch_id'] || card['youtube_id']">
+      <div v-if="card['twitch_id'] || card['youtube_id']" class="col-12 col-3xl-6">
         <div class="card border-0 rounded-4">
           <div class="card-body">
             <div class="d-flex flex-wrap gap-2">
@@ -56,8 +65,8 @@
                 :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
-                title="Bekijk op Twitch"
                 target="_blank"
+                title="Bekijk op Twitch"
               >
                 <img alt="twitch_vod" class="w-100 rounded-4" src="../assets/img/twitch-icon.png" />
               </a>
@@ -66,8 +75,8 @@
                 :href="'https://youtube.com/watch?v=' + card['youtube_id']"
                 class="flex-grow-0"
                 style="max-width: 60px"
-                title="Bekijk op YouTube"
                 target="_blank"
+                title="Bekijk op YouTube"
               >
                 <img alt="youtube_vod" class="w-100 rounded-4" src="../assets/img/youtube.png" />
               </a>
@@ -103,8 +112,14 @@
           >
             <i class="bi bi-collection-play me-2"></i>Bewaar in afspeellijst
           </button>
-          <button class="btn btn-dark border-0 rounded-pill text-nowrap" @click="copyLink">
-            <i class="bi bi-copy me-2"></i>Kopieer link
+          <button
+            class="btn btn-dark border-0 rounded-pill text-nowrap"
+            data-bs-target="#share-modal"
+            data-bs-toggle="modal"
+            type="button"
+            @click="shareCardId = card.id"
+          >
+            <i class="bi bi-share me-2"></i>Delen
           </button>
           <a
             v-if="card['twitchtracker_id']"
@@ -152,9 +167,9 @@
             <div class="d-flex flex-wrap">
               <button
                 v-for="tag in card.tags"
-                @click="searchTag(tag)"
-                class="btn btn-sm btn-link text-decoration-none"
                 :title="`Filter op #${tag}`"
+                class="btn btn-sm btn-link text-decoration-none"
+                @click="searchTag(tag)"
               >
                 #{{
                   tag
@@ -222,14 +237,14 @@
         <div class="d-flex align-items-center justify-content-between mb-3">
           <span class="fw-bold">Meer uit:</span>
         </div>
-        <div class="accordion" id="accordionCollections">
-          <div v-for="(col, index) in collections" class="accordion-item" :key="index">
+        <div id="accordionCollections" class="accordion">
+          <div v-for="(col, index) in collections" :key="index" class="accordion-item">
             <h2 class="accordion-header">
               <button
+                :data-bs-target="'#COL_' + index"
                 aria-controls="collapseOne"
                 aria-expanded="false"
                 class="accordion-button collapsed"
-                :data-bs-target="'#COL_' + index"
                 data-bs-toggle="collapse"
                 type="button"
               >
@@ -260,11 +275,11 @@ import MiniCard from "@/components/MiniCard.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { computed, onMounted, ref } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, filters, selectedCardId, playlistCardId, getCompleteCollections } =
+const { images, filters, selectedCardId, playlistCardId, shareCardId, getCompleteCollections } =
   storeToRefs(contentStore);
 const { likedItems, seenItems } = storeToRefs(generalStore);
 
@@ -279,13 +294,31 @@ const card = computed(() => {
   return props.card;
 });
 
-const imgScr = computed(() => {
+/**
+ * path to high-res thumbnail
+ * @type {ComputedRef<unknown>}
+ */
+const highResImg = computed(() => {
   return (
     images.value["640"][`${props.card["twitch_id"]}`] ||
     images.value["640"][`${props.card["youtube_id"]}`] ||
     (!props.card["twitch_id"] && !props.card["youtube_id"]
       ? images.value["640"][`no_video`]
       : images.value["640"][`default`])
+  );
+});
+
+/**
+ * path to low-res thumbnail
+ * @type {ComputedRef<unknown>}
+ */
+const lowResImg = computed(() => {
+  return (
+    images.value["320"][`${props.card["twitch_id"]}`] ||
+    images.value["320"][`${props.card["youtube_id"]}`] ||
+    (!props.card["twitch_id"] && !props.card["youtube_id"]
+      ? images.value["320"][`no_video`]
+      : images.value["320"][`default`])
   );
 });
 
@@ -303,11 +336,6 @@ const duration = computed(() => {
  */
 const title = computed(() => {
   return contentStore.getCardTitle(card.value);
-});
-
-const shareUrl = computed(() => {
-  const host = "https://" + window.location.host;
-  return `${host}/item/${card.value["id"]}`;
 });
 
 /**
@@ -368,6 +396,13 @@ onMounted(() => {
   generalStore.updateHistory(card.value.id);
 });
 
+watch(
+  () => card.value,
+  () => {
+    generalStore.updateHistory(card.value.id);
+  },
+);
+
 /**
  * Convert durations to h-m-s
  * @returns {string}
@@ -379,13 +414,6 @@ function secondsToHms() {
   let s = Math.floor((d % 3600) % 60);
 
   return ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
-}
-
-/**
- * Copy link to clipboard
- */
-function copyLink() {
-  navigator.clipboard.writeText(shareUrl.value);
 }
 
 /**

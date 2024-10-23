@@ -1,20 +1,17 @@
 <template>
   <nav class="bg-body py-2">
     <div class="container-fluid">
-      <div class="row align-items-center gx-2">
+      <div class="row align-items-center gx-0">
         <!-- left -->
         <div class="col-2 col-md-3 d-none d-sm-block">
-          <div class="d-flex gap-3 align-items-center h-100">
-            <div
-              aria-controls="offcanvasExample"
-              class="d-md-none align-items-center justify-content-center p-2"
-              data-bs-target="#offcanvasExample"
-              data-bs-toggle="offcanvas"
-              style="width: 40px; height: 40px"
+          <div class="d-flex gap-3 align-items-center" style="padding-left: 4px">
+            <button
+              class="btn btn-dark bg-none btn-circle rounded-circle border-0"
               type="button"
+              @click="generalStore.sideOpen = !generalStore.sideOpen"
             >
-              <i class="bi bi-list fs-3 lh-1"></i>
-            </div>
+              <i class="text-body bi bi-list fs-5"></i>
+            </button>
             <RouterLink class="text-decoration-none d-flex align-items-center gap-2" to="/">
               <img alt="Logo" src="../assets/img/detective_sicko.png" width="40px" />
               <span class="d-none text-body d-md-block text-truncate">Lekker Speuren</span>
@@ -44,15 +41,15 @@
                 :class="[focus ? 'border-start-0 focus-border' : 'rounded-start-pill']"
                 class="form-control shadow-none bg-transparent"
                 inputmode="search"
-                placeholder="Zoek"
-                type="search"
                 name="search"
+                placeholder="Start zoekopdracht"
+                type="search"
                 @focus="focus = true"
                 @focusout="focus = false"
                 @keydown.enter="doSearch"
               />
               <button
-                class="input-group-text rounded-end-pill px-4"
+                class="btn btn-dark rounded-end-pill px-4"
                 title="Search"
                 type="button"
                 @click="doSearch"
@@ -87,8 +84,8 @@
                 v-model="search"
                 class="form-control shadow-none bg-transparent rounded-end-pill border-2 border-start-0 focus-border"
                 inputmode="search"
-                placeholder="Zoek"
                 name="search"
+                placeholder="Start zoekopdracht"
                 style="background-color: #121212"
                 type="search"
                 @keydown.enter="doSearch"
@@ -133,7 +130,6 @@
               >
                 <li>
                   <button
-                    :class="{ active: generalStore.theme === 'light' }"
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="light"
                     type="button"
@@ -146,7 +142,6 @@
                 </li>
                 <li>
                   <button
-                    :class="{ active: generalStore.theme === 'dark' }"
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="dark"
                     type="button"
@@ -159,7 +154,6 @@
                 </li>
                 <li>
                   <button
-                    :class="{ active: generalStore.theme === 'auto' }"
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="auto"
                     type="button"
@@ -295,24 +289,6 @@
         </RouterLink>
       </div>
       <div class="offcanvas-body py-3">
-        <RouterLink class="item text-decoration-none rounded-3 d-block" to="/" @click="closeCanvas">
-          <div class="d-flex align-items-center text-body px-3 py-2">
-            <i class="bi bi-house-door fs-5 me-4"></i>
-            <i class="active bi bi-house-door-fill fs-5 me-4"></i>
-            <span class="fs-6 flex-grow-1">Home</span>
-          </div>
-        </RouterLink>
-        <RouterLink
-          class="item text-decoration-none rounded-3 d-block"
-          to="/series"
-          @click="closeCanvas"
-        >
-          <div class="d-flex align-items-center text-body px-3 py-2">
-            <i class="bi bi-collection-play fs-5 me-4"></i>
-            <i class="active bi bi-collection-play-fill fs-5 me-4"></i>
-            <span class="fs-6 flex-grow-1">Series</span>
-          </div>
-        </RouterLink>
         <hr />
         <RouterLink
           class="item text-decoration-none rounded-3 d-block"
@@ -416,6 +392,7 @@ async function startTyping() {
  * Perform search and make shore main view is active.
  */
 async function doSearch() {
+  console.log("search...");
   generalStore.setView("main");
   if (route.path !== "/") {
     await router.push({ path: "/" });

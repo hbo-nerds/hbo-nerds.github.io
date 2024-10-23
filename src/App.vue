@@ -3,16 +3,16 @@
     <NavigationBarDesktop />
     <main
       id="main-content"
-      class="flex-grow-1 d-flex flex-column bg-body overflow-y-auto overflow-x-hidden pb-5 pb-md-0"
+      class="flex-grow-1 d-flex flex-column bg-body overflow-y-auto overflow-x-hidden position-relative pb-5 pb-md-0"
     >
-      <div class="container-fluid">
-        <div class="row flex-nowrap">
-          <div class="col-auto d-none d-md-block">
-            <div class="sticky-top">
+      <div class="container-fluid px-0">
+        <div class="row flex-nowrap gx-0">
+          <div class="col-auto d-none d-sm-block">
+            <div class="sticky-top" style="padding: 0 4px">
               <NavigationSideBar />
             </div>
           </div>
-          <div class="col">
+          <div class="col" style="padding: 0 12px">
             <router-view v-slot="{ Component }">
               <keep-alive>
                 <component :is="Component" />
@@ -20,52 +20,32 @@
             </router-view>
           </div>
           <template v-if="selectedCard">
-            <div class="d-none d-md-block col-md-4 col-lg-3">
+            <div class="d-none d-md-block col-md-4 col-lg-3" style="padding: 0 12px">
               <div class="sticky-top overflow-y-auto hide-scrollbar z-3" style="max-height: 90vh">
                 <SingleCard v-if="selectedCard" :card="selectedCard" />
               </div>
             </div>
 
             <div
-              class="position-absolute top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto pb-5 z-3"
+              class="position-absolute top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto p-2 pb-5 z-3"
             >
               <SingleCard v-if="selectedCard" :card="selectedCard" />
             </div>
           </template>
         </div>
       </div>
+      <div class="position-fixed bottom-0 end-0 m-3 rounded-circle bg-body" @click="toTop">
+        <button class="btn btn-dark bg-trans btn-circle rounded-circle border-0">
+          <i class="bi bi-arrow-up"></i>
+        </button>
+      </div>
 
       <!-- Modals -->
       <Teleport to="body">
-        <div
-          id="singleCardModel"
-          aria-hidden="true"
-          aria-labelledby="exampleModalLabel"
-          class="modal fade"
-          tabindex="-1"
-        >
-          <div class="modal-dialog modal-dialog-scrollable modal-fullscreen-sm-down modal-lg">
-            <div class="modal-content bg-body">
-              <div class="modal-body">
-                <SingleCard v-if="selectedCard" :card="selectedCard" />
-              </div>
-              <div class="modal-footer">
-                <button
-                  class="btn-light btn btn-sm rounded-3 ms-auto"
-                  data-bs-dismiss="modal"
-                  type="button"
-                  @click="selectedCardId = null"
-                >
-                  Sluit
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Teleport>
-      <!-- Modal -->
-      <Teleport to="body">
         <PlaylistModal :id="playlistCardId" />
+      </Teleport>
+      <Teleport to="body">
+        <ShareModal :id="shareCardId" />
       </Teleport>
     </main>
     <NavigationBarMobile />
@@ -80,6 +60,7 @@ import NavigationBarDesktop from "@/components/NavigationBarDesktop.vue";
 import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
 import NavigationSideBar from "@/components/NavigationSideBar.vue";
 import PlaylistModal from "@/components/PlaylistModal.vue";
+import ShareModal from "@/components/ShareModal.vue";
 import SingleCard from "@/components/SingleCard.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
@@ -93,7 +74,7 @@ const route = useRoute();
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
 
-const { selectedCard, selectedCardId, playlistCardId } = storeToRefs(contentStore);
+const { selectedCard, playlistCardId, shareCardId } = storeToRefs(contentStore);
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLocaleStorage();
@@ -106,6 +87,11 @@ const showCookie = ref(false);
 function hideCookieBanner() {
   localStorage.setItem("isCookieAccepted", "yes");
   showCookie.value = false;
+}
+
+function toTop() {
+  const el = document.getElementById("main-content");
+  if (el) el.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 onBeforeMount(() => {

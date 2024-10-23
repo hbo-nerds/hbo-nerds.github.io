@@ -2,7 +2,7 @@
   <div class="row g-3">
     <!-- date -->
     <div class="col-sm-3">
-      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Upload datum</h4>
+      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Upload datum</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(date, idx) in groupedDates" :key="idx" class="pe-3">
           <input
@@ -74,7 +74,7 @@
     </div>
     <!-- type -->
     <div class="col-sm-3">
-      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Type</h4>
+      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Type</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(type, idx) in groupedTypes" :key="idx" class="pe-3">
           <input
@@ -99,7 +99,7 @@
     </div>
     <!-- platform -->
     <div class="col-sm-3">
-      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Platform</h4>
+      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Platform</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(platform, idx) in groupedPlatforms" :key="idx" class="pe-3">
           <input
@@ -124,7 +124,7 @@
     </div>
     <!-- duration -->
     <div class="col-sm-3">
-      <h4 class="fs-7 py-2 fw-lighter border-bottom mb-3">Duur</h4>
+      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Duur</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(duration, idx) in groupedDuration" :key="idx" class="pe-3">
           <input

@@ -4,7 +4,9 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 $new-font-sizes: (
-  7: 0.75rem,
+  7: 0.85rem,
+  8: 0.75rem,
+  9: 0.65rem,
 );
 $new-grid-breakpoints: (
   3xl: 1750px,
@@ -130,6 +132,9 @@ input[type="checkbox"] + label {
     --bs-btn-active-color: #0f0f0f;
     --bs-btn-active-bg: #f1f1f1;
     --bs-btn-active-border-color: #f1f1f1;
+    &.bg-none {
+      --bs-btn-bg: transparent;
+    }
   }
   .accordion {
     --bs-accordion-bg: transparent;
@@ -164,5 +169,24 @@ input[type="checkbox"] + label {
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #0f0f0f;
     --bs-btn-active-border-color: #0f0f0f;
+    &.bg-none {
+      --bs-btn-bg: transparent;
+    }
   }
+}
+
+/****** TOAST OVERRIDE *******/
+.Toastify__toast-container {
+  width: fit-content;
+}
+.Toastify__toast {
+  font-size: 12px;
+  color: #000;
+  border-radius: 8px;
+  min-height: unset;
+  margin-bottom: 0;
+}
+.Toastify__toast-body {
+  padding: 4px;
+  margin: 0;
 }
