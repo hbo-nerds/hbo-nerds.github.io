@@ -1,11 +1,13 @@
 import { useContentStore } from "@/stores/content.js";
 import { defineStore } from "pinia";
 import { event } from "vue-gtag";
+import { toast } from "vue3-toastify";
 
 export const useGeneralStore = defineStore("general", {
   state: () => ({
     theme: "dark",
     view: "thumbnail",
+    sideOpen: false,
     likedItems: [],
     seenItems: [],
     history: [],
@@ -83,7 +85,12 @@ export const useGeneralStore = defineStore("general", {
      */
     deletePlaylist(title) {
       const index = this.playlists.findIndex((p) => p.title === title);
-      if (index > -1) this.playlists.splice(index, 1);
+      if (index > -1) {
+        this.playlists.splice(index, 1);
+        toast(`Afspeellijst ${title} verwijderd`, {
+          position: toast.POSITION.BOTTOM_LEFT,
+        });
+      }
       localStorage.setItem("playlists", JSON.stringify(this.playlists));
     },
     /**
@@ -93,8 +100,17 @@ export const useGeneralStore = defineStore("general", {
      */
     togglePlaylistItem(title, itemId) {
       const playlist = this.playlists.find((pl) => pl.title === title);
-      if (!playlist.items.includes(itemId)) playlist.items.push(itemId);
-      else playlist.items.splice(playlist.items.indexOf(itemId), 1);
+      if (!playlist.items.includes(itemId)) {
+        playlist.items.push(itemId);
+        toast(`Toegevoegd aan ${title}`, {
+          position: toast.POSITION.BOTTOM_LEFT,
+        });
+      } else {
+        playlist.items.splice(playlist.items.indexOf(itemId), 1);
+        toast(`Verwijderd van ${title}`, {
+          position: toast.POSITION.BOTTOM_LEFT,
+        });
+      }
       localStorage.setItem("playlists", JSON.stringify(this.playlists));
     },
     getPlaylist(title) {

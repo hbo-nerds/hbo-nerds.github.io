@@ -2,13 +2,13 @@
   <div class="col-auto d-none d-md-block">
     <div class="dropdown">
       <button
-        class="btn btn-dark dropdown-toggle border-0 rounded-3"
+        class="btn btn-sm btn-dark dropdown-toggle border-0 rounded-3 fw-lighter"
         type="button"
         data-bs-toggle="dropdown"
         data-bs-auto-close="outside"
         aria-expanded="false"
       >
-        Upload datum:
+        upload datum:
         <span class="text-lowercase">{{ date_label }}</span>
       </button>
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
@@ -41,13 +41,13 @@
   <div class="col-auto d-none d-md-block">
     <div class="dropdown">
       <button
-        class="btn btn-dark dropdown-toggle border-0 rounded-3"
+        class="btn btn-sm btn-dark dropdown-toggle border-0 rounded-3 fw-lighter"
         type="button"
         data-bs-toggle="dropdown"
         data-bs-auto-close="outside"
         aria-expanded="false"
       >
-        Type:
+        type:
         <span class="text-lowercase">{{ type_label }}</span>
       </button>
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
@@ -75,13 +75,13 @@
   <div class="col-auto d-none d-md-block">
     <div class="dropdown">
       <button
-        class="btn btn-dark dropdown-toggle border-0 rounded-3"
+        class="btn btn-sm btn-dark dropdown-toggle border-0 rounded-3 fw-lighter"
         type="button"
         data-bs-toggle="dropdown"
         data-bs-auto-close="outside"
         aria-expanded="false"
       >
-        Platform:
+        platform:
         <span class="text-lowercase">{{ platform_label }}</span>
       </button>
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
@@ -109,13 +109,13 @@
   <div class="col-auto d-none d-md-block">
     <div class="dropdown">
       <button
-        class="btn btn-dark dropdown-toggle border-0 rounded-3"
+        class="btn btn-sm btn-dark dropdown-toggle border-0 rounded-3 fw-lighter"
         type="button"
         data-bs-toggle="dropdown"
         data-bs-auto-close="outside"
         aria-expanded="false"
       >
-        Duur:
+        duur:
         <span class="text-lowercase">{{ duration_label }}</span>
       </button>
       <div class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
@@ -143,6 +143,16 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-auto d-none d-md-block">
+    <button
+      class="btn btn-sm btn-dark border-0 rounded-3"
+      type="button"
+      title="Reset filters"
+      @click="contentStore.resetFilters"
+    >
+      <i class="bi bi-arrow-repeat"></i>
+    </button>
   </div>
 </template>
 

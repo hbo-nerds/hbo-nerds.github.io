@@ -35,6 +35,7 @@ export const useContentStore = defineStore("content", {
     },
     selectedCardId: null,
     playlistCardId: null,
+    shareCardId: null,
   }),
   getters: {
     /**
@@ -512,7 +513,7 @@ export const useContentStore = defineStore("content", {
       );
 
       const el = document.getElementById("main-content");
-      if (el) el.scrollTo({ top: 0, behavior: "instant" });
+      if (el) el.scrollTo({ top: 0, behavior: "smooth" });
 
       this.filteredData = [...data];
     },
