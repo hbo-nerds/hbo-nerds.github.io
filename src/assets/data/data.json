@@ -10340,36 +10340,37 @@
                 "main"
             ]
         },
-        {
-            "id": "6253",
-            "type": "stream",
-            "date": "2016-10-19",
-            "duration": 6060,
-            "youtube_id": "iKjnJrQUQRg",
-            "titles": [
-                "Resident Evil: Remastered (Deel 1)"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Remastered",
-                    "duration": 6060
-                }
-            ],
-            "twitch_id": "95809561",
-            "extra_urls": [
-                {
-                    "label": "deel 1 t/m 5",
-                    "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
-                },
-                {
-                    "label": "deel 6 t/m 10",
-                    "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
-                }
-            ],
-            "tags": [
-                "main"
-            ]
-        },
+      {
+        "id": "6253",
+        "type": "stream",
+        "date": "2016-10-19",
+        "collection": 38,
+        "duration": 6060,
+        "youtube_id": "iKjnJrQUQRg",
+        "titles": [
+          "Resident Evil: Remastered (Deel 1)"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Remastered",
+            "duration": 6060
+          }
+        ],
+        "twitch_id": "95809561",
+        "extra_urls": [
+          {
+            "label": "deel 1 t/m 5",
+            "url": "https://www.youtube.com/watch?v=iKjnJrQUQRg"
+          },
+          {
+            "label": "deel 6 t/m 10",
+            "url": "https://www.youtube.com/watch?v=4MNFsHtol5U"
+          }
+        ],
+        "tags": [
+          "main"
+        ]
+      },
         {
             "id": "bd78",
             "type": "stream",
@@ -10455,7 +10456,8 @@
         },
         {
             "id": "88eb",
-            "type": "stream",
+          "type": "stream",
+          "collection":  38,
             "date": "2016-11-07",
             "duration": 6180,
             "youtube_id": "iKjnJrQUQRg",
@@ -11655,32 +11657,33 @@
             "youtube_id": "YwgmtEDo6Xc",
             "activity": "Snipperclips"
         },
-        {
-            "id": "85cf",
-            "type": "stream",
-            "date": "2017-03-04",
-            "duration": 17220,
-            "titles": [
-                "Potje met Pietje: Zelda: Breath of the Wild"
-            ],
-            "activities": [
-                {
-                    "title": "Resident Evil Remastered",
-                    "duration": 13920
-                },
-                {
-                    "title": "The Legend of Zelda: Breath of the Wild",
-                    "duration": 3300
-                }
-            ],
-            "twitchtracker_id": "24694620160",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "21:47:00",
-            "time_end": "02:35:00"
-        },
+      {
+        "id": "85cf",
+        "type": "stream",
+        "date": "2017-03-04",
+        "collection": 38,
+        "duration": 17220,
+        "titles": [
+          "Potje met Pietje: Zelda: Breath of the Wild"
+        ],
+        "activities": [
+          {
+            "title": "Resident Evil Remastered",
+            "duration": 13920
+          },
+          {
+            "title": "The Legend of Zelda: Breath of the Wild",
+            "duration": 3300
+          }
+        ],
+        "twitchtracker_id": "24694620160",
+        "tags": [
+          "casual",
+          "solo"
+        ],
+        "time_start": "21:47:00",
+        "time_end": "02:35:00"
+      },
         {
             "id": "32ce",
             "type": "stream",
@@ -25298,32 +25301,32 @@
             "time_start": "16:16:00",
             "time_end": "18:35:00"
         },
-      {
-        "id": "3484",
-        "type": "stream",
-        "date": "2018-10-22",
-        "youtube_id": "eG-cOhSEt-s",
-        "duration": 13140,
-        "titles": [
-          "Jackbox Party Pack 5 (super leuk volgens timon)"
-        ],
-        "activities": [
-          {
-            "title": "The Jackbox Party Pack 5",
-            "duration": 9840
-          },
-          {
-            "title": "Super Mario Party",
-            "duration": 3300
-          }
-        ],
-        "twitchtracker_id": "30888892592",
-        "tags": [
-          "main"
-        ],
-        "time_start": "20:15:00",
-        "time_end": "23:55:00"
-      },
+        {
+            "id": "3484",
+            "type": "stream",
+            "date": "2018-10-22",
+            "youtube_id": "eG-cOhSEt-s",
+            "duration": 13140,
+            "titles": [
+                "Jackbox Party Pack 5 (super leuk volgens timon)"
+            ],
+            "activities": [
+                {
+                    "title": "The Jackbox Party Pack 5",
+                    "duration": 9840
+                },
+                {
+                    "title": "Super Mario Party",
+                    "duration": 3300
+                }
+            ],
+            "twitchtracker_id": "30888892592",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:15:00",
+            "time_end": "23:55:00"
+        },
         {
             "id": "3342",
             "type": "stream",
@@ -36842,6 +36845,10 @@
                 {
                     "title": "Tom Clancy's Rainbow Six Siege",
                     "duration": 2400
+                },
+                {
+                    "title": "Tom Clancy's Rainbow Six Siege",
+                    "duration": 2400
                 }
             ],
             "twitchtracker_id": "40019637660",
@@ -43449,28 +43456,28 @@
             "time_start": "20:39:00",
             "time_end": "23:25:00"
         },
-        {
-            "id": "6029",
-            "type": "stream",
-            "date": "2022-05-01",
-            "youtube_id": "nZy5D-KJL0",
-            "duration": 5880,
-            "titles": [
-                "1 potje"
-            ],
-            "activities": [
-                {
-                    "title": "Mario Kart 8",
-                    "duration": 5880
-                }
-            ],
-            "twitchtracker_id": "39350763144",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "01:06:00",
-            "time_end": "02:45:00"
-        },
+      {
+        "id": "6029",
+        "type": "stream",
+        "date": "2022-05-01",
+        "youtube_id": "mnZy5D-KJL0",
+        "duration": 5880,
+        "titles": [
+          "1 potje"
+        ],
+        "activities": [
+          {
+            "title": "Mario Kart 8",
+            "duration": 5880
+          }
+        ],
+        "twitchtracker_id": "39350763144",
+        "tags": [
+          "casual"
+        ],
+        "time_start": "01:06:00",
+        "time_end": "02:45:00"
+      },
         {
             "id": "d3ac",
             "type": "stream",
@@ -47547,7 +47554,7 @@
             ],
             "activities": [
                 {
-                    "title": "Just Chatting",
+                    "title": "Super Mario Maker 2",
                     "duration": 4020
                 }
             ],
@@ -51492,6 +51499,14 @@
             "type": "stream"
         },
         {
+            "id": "9a48",
+            "type": "video",
+            "date": "2024-10-15",
+            "title": "Boksen - Lekker spelen",
+            "duration": 242,
+            "youtube_id": "p_PaJXb2QVo"
+        },
+        {
             "date": "2024-10-16",
             "time_start": "20:30:25",
             "time_end": "00:06:42",
@@ -51511,12 +51526,42 @@
             "type": "stream"
         },
         {
-            "id": "9a48",
-            "type": "video",
-            "date": "2024-10-15",
-            "title": "Boksen - Lekker spelen",
-            "duration": 242,
-            "youtube_id": "p_PaJXb2QVo"
+            "date": "2024-10-21",
+            "time_start": "20:54:11",
+            "time_end": "22:51:51",
+            "titles": [
+                "Sceptisten twijfelen: Is dit spel eng? (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "Panicore",
+                    "duration": 1
+                }
+            ],
+            "duration": 7060,
+            "twitch_id": "2281919671",
+            "youtube_id": "fOHcqOln0hE",
+            "id": "949c",
+            "type": "stream"
+        },
+        {
+            "date": "2024-10-23",
+            "time_start": "20:59:09",
+            "time_end": "22:51:39",
+            "titles": [
+                "CLASSIC HORROR BOYS (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "Phasmophobia",
+                    "duration": 1
+                }
+            ],
+            "duration": 6750,
+            "twitch_id": "2283517029",
+            "youtube_id": "q_2z12VOvuY",
+            "id": "f8b0",
+            "type": "stream"
         }
     ]
 }
