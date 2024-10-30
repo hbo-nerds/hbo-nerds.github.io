@@ -43,22 +43,7 @@ export const useContentStore = defineStore("content", {
      * @returns {*|boolean}
      */
     selectedCard(state) {
-      return state.selectedCardId ? this.getSingleCard(state.selectedCardId) : false;
-    },
-    /**
-     * Return title of current selected card.
-     * @returns {*|string}
-     */
-    selectedCardTitle() {
-      if (!this.selectedCard) return "";
-      if (["podcast", "video"].includes(this.selectedCard["type"]))
-        return this.selectedCard["title"];
-      else {
-        if (this.selectedCard["custom_title"]) return this.selectedCard["custom_title"];
-        else if (this.selectedCard["title_main"])
-          return this.selectedCard["titles"][this.selectedCard["title_main"]];
-        else return this.selectedCard["titles"][0];
-      }
+      return state.selectedCardId ? state.getSingleCard(state.selectedCardId) : false;
     },
     /**
      * Return list of words included in search results.
@@ -82,36 +67,36 @@ export const useContentStore = defineStore("content", {
         .filter((w) => w);
     },
     /**
-     * Order the filtered search data.
+     * Sort the filtered search data.
      * @returns {*}
      */
-    sortedData() {
-      return this.filteredData.sort((a, b) => {
+    sortedData(state) {
+      return state.filteredData.sort((a, b) => {
         let dateA = new Date(a.date);
         let dateB = new Date(b.date);
 
-        if (!this.sortOption) return true;
-        else if (this.sortOption === "oldNew") {
+        if (!state.sortOption) return true;
+        else if (state.sortOption === "oldNew") {
           return dateA - dateB;
-        } else if (this.sortOption === "newOld") {
+        } else if (state.sortOption === "newOld") {
           return dateB - dateA;
-        } else if (this.sortOption === "shortLong") {
+        } else if (state.sortOption === "shortLong") {
           return a.duration - b.duration;
-        } else if (this.sortOption === "longShort") {
+        } else if (state.sortOption === "longShort") {
           return b.duration - a.duration;
         } else return true;
       });
     },
     /**
-     * Return all collections with items.
+     * Return all collections (items included).
      * @returns {*}
      */
     getCompleteCollections(state) {
       return state.collections.map((col) => {
         const id = col.id;
         col.items = this.content.filter((item) => {
-          if (Array.isArray(item.collection)) return item.collection.includes(id);
-          else return item.collection === id;
+          if (Array.isArray(item['collection'])) return item['collection'].includes(id);
+          else return item['collection'] === id;
         });
         if (col.items.length) {
           col.created = new Date(col.items[0].date);
@@ -121,22 +106,22 @@ export const useContentStore = defineStore("content", {
       });
     },
     /**
-     * Group VODs by upload date.
+     * Group VODs by type.
      * @returns {*}
      */
-    groupedTypes() {
+    groupedTypes(state) {
       return this.content
         .filter(
           (item) =>
-            this.f_search(item) &&
-            this.f_platform(item) &&
-            this.f_paywall(item) &&
-            this.f_seen(item) &&
-            this.f_vod(item) &&
-            this.f_date(item) &&
-            this.f_duration(item) &&
-            this.f_activity(item) &&
-            this.f_tag(item),
+            state.f_search(item) &&
+            state.f_platform(item) &&
+            state.f_paywall(item) &&
+            state.f_seen(item) &&
+            state.f_vod(item) &&
+            state.f_date(item) &&
+            state.f_duration(item) &&
+            state.f_activity(item) &&
+            state.f_tag(item)
         )
         .reduce(
           (p, c) => {
@@ -157,19 +142,19 @@ export const useContentStore = defineStore("content", {
      * Group VODs by platform.
      * @returns {*}
      */
-    groupedPlatforms() {
+    groupedPlatforms(state) {
       return this.content
         .filter(
           (item) =>
-            this.f_search(item) &&
-            this.f_type(item) &&
-            this.f_paywall(item) &&
-            this.f_seen(item) &&
-            this.f_vod(item) &&
-            this.f_date(item) &&
-            this.f_duration(item) &&
-            this.f_activity(item) &&
-            this.f_tag(item),
+            state.f_search(item) &&
+            state.f_type(item) &&
+            state.f_paywall(item) &&
+            state.f_seen(item) &&
+            state.f_vod(item) &&
+            state.f_date(item) &&
+            state.f_duration(item) &&
+            state.f_activity(item) &&
+            state.f_tag(item)
         )
         .reduce(
           (p, c) => {
@@ -197,26 +182,26 @@ export const useContentStore = defineStore("content", {
      * Group VODs by upload date.
      * @returns {*}
      */
-    groupedDates() {
+    groupedDates(state) {
       return this.content
         .filter(
           (item) =>
-            this.f_search(item) &&
-            this.f_type(item) &&
-            this.f_platform(item) &&
-            this.f_paywall(item) &&
-            this.f_seen(item) &&
-            this.f_vod(item) &&
-            this.f_duration(item) &&
-            this.f_activity(item) &&
-            this.f_tag(item),
+            state.f_search(item) &&
+            state.f_type(item) &&
+            state.f_platform(item) &&
+            state.f_paywall(item) &&
+            state.f_seen(item) &&
+            state.f_vod(item) &&
+            state.f_duration(item) &&
+            state.f_activity(item) &&
+            state.f_tag(item)
         )
         .reduce(
           (p, c) => {
             p[0].count++;
-            if (this.checkWithinWeeks(c, 1)) p[1].count++;
-            if (this.checkWithinWeeks(c, 4)) p[2].count++;
-            if (this.checkWithinWeeks(c, 52)) p[3].count++;
+            if (state.checkWithinWeeks(c, 1)) p[1].count++;
+            if (state.checkWithinWeeks(c, 4)) p[2].count++;
+            if (state.checkWithinWeeks(c, 52)) p[3].count++;
             return p;
           },
           [
@@ -231,19 +216,19 @@ export const useContentStore = defineStore("content", {
      * Group VODs by duration.
      * @returns {*}
      */
-    groupedDuration() {
+    groupedDuration(state) {
       return this.content
         .filter(
           (item) =>
-            this.f_search(item) &&
-            this.f_type(item) &&
-            this.f_platform(item) &&
-            this.f_paywall(item) &&
-            this.f_seen(item) &&
-            this.f_vod(item) &&
-            this.f_date(item) &&
-            this.f_activity(item) &&
-            this.f_tag(item),
+            state.f_search(item) &&
+            state.f_type(item) &&
+            state.f_platform(item) &&
+            state.f_paywall(item) &&
+            state.f_seen(item) &&
+            state.f_vod(item) &&
+            state.f_date(item) &&
+            state.f_activity(item) &&
+            state.f_tag(item)
         )
         .reduce(
           (p, c) => {
@@ -267,19 +252,19 @@ export const useContentStore = defineStore("content", {
      * Group VODs by activity.
      * @returns {*}
      */
-    groupedActivities() {
+    groupedActivities(state) {
       return this.content
         .filter(
           (item) =>
-            this.f_search(item) &&
-            this.f_type(item) &&
-            this.f_platform(item) &&
-            this.f_paywall(item) &&
-            this.f_seen(item) &&
-            this.f_vod(item) &&
-            this.f_date(item) &&
-            this.f_duration(item) &&
-            this.f_tag(item),
+            state.f_search(item) &&
+            state.f_type(item) &&
+            state.f_platform(item) &&
+            state.f_paywall(item) &&
+            state.f_seen(item) &&
+            state.f_vod(item) &&
+            state.f_date(item) &&
+            state.f_duration(item) &&
+            state.f_tag(item)
         )
         .reduce((p, c) => {
           const act = c["activity"] || c["activities"];
@@ -306,19 +291,19 @@ export const useContentStore = defineStore("content", {
      * Group VODs by tag.
      * @returns {*}
      */
-    groupedTags() {
+    groupedTags(state) {
       return this.content
         .filter(
           (item) =>
-            this.f_search(item) &&
-            this.f_type(item) &&
-            this.f_platform(item) &&
-            this.f_paywall(item) &&
-            this.f_seen(item) &&
-            this.f_vod(item) &&
-            this.f_date(item) &&
-            this.f_duration(item) &&
-            this.f_activity(item),
+            state.f_search(item) &&
+            state.f_type(item) &&
+            state.f_platform(item) &&
+            state.f_paywall(item) &&
+            state.f_seen(item) &&
+            state.f_vod(item) &&
+            state.f_date(item) &&
+            state.f_duration(item) &&
+            state.f_activity(item)
         )
         .reduce((p, c) => {
           const tags = c["tags"];
@@ -401,8 +386,8 @@ export const useContentStore = defineStore("content", {
   },
   actions: {
     /**
-     * Return a single item by id
-     * @param id
+     * Return a single item by id.
+     * @param id id of single item.
      * @returns {*}
      */
     getSingleCard(id) {
@@ -423,7 +408,7 @@ export const useContentStore = defineStore("content", {
     },
     /**
      * Return the thumbnail for a single card.
-     * @param card
+     * @param card complete card object.
      * @returns {*}
      */
     getCardThumbnail(card) {
@@ -437,7 +422,7 @@ export const useContentStore = defineStore("content", {
     },
     /**
      * Return the duration for a single card.
-     * @param card
+     * @param card complete card object.
      * @returns {*}
      */
     getCardDuration(card) {
@@ -448,43 +433,32 @@ export const useContentStore = defineStore("content", {
       return ("0" + h).slice(-2) + ":" + ("0" + m).slice(-2) + ":" + ("0" + s).slice(-2);
     },
     /**
-     * Return the activities for a single card.
-     * @param card
+     * Get collection object by id.
+     * @param id id of the collection.
      * @returns {*}
      */
-    getCardActivities(card) {
-      if (card.activity)
-        return [].concat(
-          Array.isArray(card.activity)
-            ? card.activity.map((act) => {
-                return { title: act };
-              })
-            : [{ title: card.activity }],
-        );
-      else if (card.activities) return [].concat(card.activities);
-      else return [];
-    },
     getSingleCollection(id) {
       return this.collections.find((item) => item.id === id);
     },
     /**
-     * Fetch json data
+     * Fetch json data.
      */
     fetchData() {
       this.collections = og_data.collections;
       this.content = og_data.content;
     },
     /**
-     * Set images file names
+     * Set images file names.
      */
     setImages() {
-      let glob = import.meta.glob("@/assets/img/thumbnails/*320px/*.webp", { eager: true });
+      let lowResImages = import.meta.glob("@/assets/img/thumbnails/*320px/*.webp", { eager: true });
+      let highResImages = import.meta.glob("@/assets/img/thumbnails/*640px/*.webp", { eager: true });
+
       this.images["320"] = Object.fromEntries(
-        Object.entries(glob).map(([key, value]) => [filename(key), value.default]),
+        Object.entries(lowResImages).map(([key, value]) => [filename(key), value.default]),
       );
-      glob = import.meta.glob("@/assets/img/thumbnails/*640px/*.webp", { eager: true });
       this.images["640"] = Object.fromEntries(
-        Object.entries(glob).map(([key, value]) => [filename(key), value.default]),
+        Object.entries(highResImages).map(([key, value]) => [filename(key), value.default]),
       );
     },
     /**
@@ -517,6 +491,11 @@ export const useContentStore = defineStore("content", {
 
       this.filteredData = [...data];
     },
+    /**
+     * Filter on search input.
+     * @param item
+     * @returns {boolean}
+     */
     f_search(item) {
       //check negative words
       for (let i = 0; i < this.excludedWords.length; i++) {

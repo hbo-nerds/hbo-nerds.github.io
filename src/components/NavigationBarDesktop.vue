@@ -29,7 +29,7 @@
         <div class="col">
           <!-- search desktop -->
           <div class="d-none d-sm-flex gap-2 align-items-center">
-            <div :class="{ 'focus-margin': !focus }" class="input-group flex-nowrap">
+            <div :class="{ 'focus-margin': !focus }" class="input-group flex-nowrap position-relative">
               <span
                 v-if="focus"
                 class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
@@ -45,34 +45,63 @@
                 placeholder="Start zoekopdracht"
                 type="search"
                 @focus="focus = true"
-                @focusout="focus = false"
-                @keydown.enter="doSearch"
+                @focusout="onFocusOut"
+                @keydown.enter="onFocusOut(); doSearch(true)"
+                autocomplete="off"
               />
               <button
                 class="btn btn-dark rounded-end-pill px-4"
                 title="Search"
                 type="button"
-                @click="doSearch"
+                @click="doSearch(true)"
               >
                 <i class="bi bi-search"></i>
               </button>
+              <ul :class="{show: focus}"
+                  style="background-color: #272727"
+                  class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 overflow-hidden w-100"
+                  @mouseenter="focus = true"
+                  v-if="filteredHistory.length || smartSearch.length"
+              >
+                <li>
+                  <div
+                    v-for="(search, i) in filteredHistory"
+                    :key="i"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start px-3 py-1 d-flex align-items-center"
+                    type="button"
+                    @click="searchFromPrediction(search)"
+                  >
+                    <i class="bi bi-clock-history me-3"></i>
+                    <span class="fw-bolder">{{ search }}</span>
+                    <a @click.stop="removeFromSearchHistory(i)" type="button" class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Verwijder</a>
+                  </div>
+                  <div
+                    v-for="smart in smartSearch"
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start px-3 py-1 d-flex align-items-center"
+                    type="button"
+                    @click="searchFromPrediction(smart)"
+                  >
+                    <i class="bi bi-search me-3"></i>
+                    <span class="fw-bolder">{{ smart }}</span>
+                  </div>
+                </li>
+              </ul>
             </div>
+
             <FilterModal />
           </div>
           <!-- search mobile -->
           <div
             v-if="mobileSearch"
-            class="d-flex d-sm-none gap-2 justify-content-end align-items-center"
+            class="d-flex d-sm-none gap-2 justify-content-end align-items-center position-relative"
           >
-            <div>
-              <button
-                class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
-                type="button"
-                @click="mobileSearch = false"
-              >
-                <i class="bi bi-chevron-left"></i>
-              </button>
-            </div>
+            <button
+              class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
+              type="button"
+              @click="mobileSearch = false"
+            >
+              <i class="bi bi-chevron-left"></i>
+            </button>
             <div class="input-group flex-nowrap">
               <span
                 class="input-group-text rounded-start-pill border-2 border-end-0 bg-transparent pe-0"
@@ -88,9 +117,45 @@
                 placeholder="Start zoekopdracht"
                 style="background-color: #121212"
                 type="search"
+                @focus="focus = true"
                 @keydown.enter="doSearch"
+                @focusout="onFocusOut"
+                autocomplete="off"
               />
             </div>
+            <!-- filter -->
+            <FilterModal :mob="true" />
+
+            <ul :class="{show: focus}"
+                style="background-color: #272727"
+                class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 overflow-hidden w-100"
+                @mouseenter="focus = true"
+                v-if="filteredHistory.length || smartSearch.length"
+            >
+              <li>
+                <div
+                  v-for="(search, i) in filteredHistory"
+                  :key="i"
+                  class="d-flex gap-3 w-100 btn btn-dark border-0 rounded-0 px-3 py-1 align-items-center"
+                  type="button"
+                  @click="searchFromPrediction(search)"
+                >
+                  <i class="bi bi-clock-history"></i>
+                  <span class="fw-bolder text-truncate">{{ search }}</span>
+                  <a @click.stop="removeFromSearchHistory(i)" type="button" class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Verwijder</a>
+                </div>
+                <div
+                  v-for="smart in smartSearch"
+                  class="d-block w-100 btn btn-dark border-0 rounded-0 text-start px-3 py-1 d-flex align-items-center"
+                  type="button"
+                  @click="searchFromPrediction(smart)"
+                >
+                  <i class="bi bi-search me-3"></i>
+                  <span class="fw-bolder text-truncate">{{ smart }}</span>
+                </div>
+              </li>
+            </ul>
+
           </div>
         </div>
         <!-- right desktop -->
@@ -240,8 +305,6 @@
                 </li>
               </ul>
             </div>
-            <!-- filter -->
-            <filter-modal />
             <!-- search -->
             <button
               v-if="!mobileSearch"
@@ -357,14 +420,14 @@ import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import debounce from "lodash.debounce";
 import { storeToRefs } from "pinia";
-import { nextTick, ref, watch } from "vue";
+import {computed, nextTick, ref, watch} from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
 const generalStore = useGeneralStore();
 const contentStore = useContentStore();
-const { view } = storeToRefs(generalStore);
-const { search } = storeToRefs(contentStore);
+const { search, groupedActivities } = storeToRefs(contentStore);
+const { searchHistory } = storeToRefs(generalStore);
 const focus = ref(false);
 const mobileSearch = ref(false);
 const closeOffcanvas = ref(false);
@@ -389,15 +452,53 @@ async function startTyping() {
 }
 
 /**
- * Perform search and make shore main view is active.
+ * Filtered search history
+ * @type {ComputedRef<*>}
  */
-async function doSearch() {
-  console.log("search...");
+const filteredHistory = computed(() => {
+  return searchHistory.value.filter(term => term.toLowerCase().includes(search.value.toLowerCase())).slice(0, 15 - smartSearch.value.length);
+})
+
+const smartSearch = computed(() => {
+  return search.value ? Object.keys(groupedActivities.value).filter(activity =>
+    activity.toLowerCase().startsWith(search.value.toLowerCase())).slice(0, 10) : []
+})
+
+/**
+ * Perform search and make shore main view is active.
+ * @param save whether to save search in history
+ */
+async function doSearch(save = false) {
+  if(save && search.value) generalStore.updateSearchHistory(search.value)
   generalStore.setView("main");
   if (route.path !== "/") {
     await router.push({ path: "/" });
   }
   contentStore.filter();
+}
+
+/**
+ * Pick search from history
+ * @param term
+ */
+function searchFromPrediction(term) {
+  focus.value = false;
+  search.value = term
+  doSearch(true);
+}
+
+/**
+ * Remove item from history
+ * @param index
+ */
+function removeFromSearchHistory(index) {
+  generalStore.removeSearchHistory(index)
+}
+
+function onFocusOut() {
+  setTimeout(() => {
+    focus.value = false;
+  }, 100)
 }
 
 /**
@@ -409,6 +510,9 @@ function closeCanvas() {
   }, 200);
 }
 
+/**
+ * Auto-search with debounce.
+ */
 watch(
   search,
   debounce(() => {

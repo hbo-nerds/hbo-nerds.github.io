@@ -357,6 +357,10 @@ const isLiked = computed(() => {
   return likedItems.value.includes(props.card["id"]);
 });
 
+/**
+ * Get formatted date string.
+ * @type {ComputedRef<string|string>}
+ */
 const date = computed(() => {
   return date
     ? new Date(props.card["date"]).toLocaleString("nl-NL", {
@@ -382,6 +386,10 @@ const collections = computed(() => {
     : [];
 });
 
+/**
+ * Create array of item activities.
+ * @type {ComputedRef<*[]|[]>}
+ */
 const activities = computed(() => {
   if (card.value.activity)
     return [].concat(
