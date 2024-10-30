@@ -43,7 +43,7 @@ export const useGeneralStore = defineStore("general", {
       this.seenItems = JSON.parse(localStorage.getItem("seenItems")) || [];
       this.history = JSON.parse(localStorage.getItem("history")) || [];
       this.playlists = JSON.parse(localStorage.getItem("playlists")) || [];
-      this.searchHistory =  JSON.parse(localStorage.getItem("searchHistory")) || [];
+      this.searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
     },
     /**
      * Toggle 'like' attribute for given item.
@@ -82,7 +82,8 @@ export const useGeneralStore = defineStore("general", {
      * @param searchTerm string.
      */
     updateSearchHistory(searchTerm) {
-      if (this.searchHistory.includes(searchTerm)) this.searchHistory.splice(this.searchHistory.indexOf(searchTerm), 1);
+      if (this.searchHistory.includes(searchTerm))
+        this.searchHistory.splice(this.searchHistory.indexOf(searchTerm), 1);
       this.searchHistory.unshift(searchTerm);
       if (this.searchHistory.length > 20) this.searchHistory.pop();
       localStorage.setItem("searchHistory", JSON.stringify(this.searchHistory));
@@ -92,7 +93,7 @@ export const useGeneralStore = defineStore("general", {
      * @param index number.
      */
     removeSearchHistory(index) {
-      this.searchHistory.splice(index, 1)
+      this.searchHistory.splice(index, 1);
       localStorage.setItem("searchHistory", JSON.stringify(this.searchHistory));
     },
     /**

@@ -95,8 +95,8 @@ export const useContentStore = defineStore("content", {
       return state.collections.map((col) => {
         const id = col.id;
         col.items = this.content.filter((item) => {
-          if (Array.isArray(item['collection'])) return item['collection'].includes(id);
-          else return item['collection'] === id;
+          if (Array.isArray(item["collection"])) return item["collection"].includes(id);
+          else return item["collection"] === id;
         });
         if (col.items.length) {
           col.created = new Date(col.items[0].date);
@@ -121,7 +121,7 @@ export const useContentStore = defineStore("content", {
             state.f_date(item) &&
             state.f_duration(item) &&
             state.f_activity(item) &&
-            state.f_tag(item)
+            state.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -154,7 +154,7 @@ export const useContentStore = defineStore("content", {
             state.f_date(item) &&
             state.f_duration(item) &&
             state.f_activity(item) &&
-            state.f_tag(item)
+            state.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -194,7 +194,7 @@ export const useContentStore = defineStore("content", {
             state.f_vod(item) &&
             state.f_duration(item) &&
             state.f_activity(item) &&
-            state.f_tag(item)
+            state.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -228,7 +228,7 @@ export const useContentStore = defineStore("content", {
             state.f_vod(item) &&
             state.f_date(item) &&
             state.f_activity(item) &&
-            state.f_tag(item)
+            state.f_tag(item),
         )
         .reduce(
           (p, c) => {
@@ -264,7 +264,7 @@ export const useContentStore = defineStore("content", {
             state.f_vod(item) &&
             state.f_date(item) &&
             state.f_duration(item) &&
-            state.f_tag(item)
+            state.f_tag(item),
         )
         .reduce((p, c) => {
           const act = c["activity"] || c["activities"];
@@ -303,7 +303,7 @@ export const useContentStore = defineStore("content", {
             state.f_vod(item) &&
             state.f_date(item) &&
             state.f_duration(item) &&
-            state.f_activity(item)
+            state.f_activity(item),
         )
         .reduce((p, c) => {
           const tags = c["tags"];
@@ -452,7 +452,9 @@ export const useContentStore = defineStore("content", {
      */
     setImages() {
       let lowResImages = import.meta.glob("@/assets/img/thumbnails/*320px/*.webp", { eager: true });
-      let highResImages = import.meta.glob("@/assets/img/thumbnails/*640px/*.webp", { eager: true });
+      let highResImages = import.meta.glob("@/assets/img/thumbnails/*640px/*.webp", {
+        eager: true,
+      });
 
       this.images["320"] = Object.fromEntries(
         Object.entries(lowResImages).map(([key, value]) => [filename(key), value.default]),

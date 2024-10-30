@@ -9308,6 +9308,7 @@
       "id": "6253",
       "type": "stream",
       "date": "2016-10-19",
+      "collection": 38,
       "duration": 6060,
       "youtube_id": "iKjnJrQUQRg",
       "titles": ["Resident Evil: Remastered (Deel 1)"],
@@ -9408,6 +9409,7 @@
     {
       "id": "88eb",
       "type": "stream",
+      "collection": 38,
       "date": "2016-11-07",
       "duration": 6180,
       "youtube_id": "iKjnJrQUQRg",
@@ -10431,6 +10433,7 @@
       "id": "85cf",
       "type": "stream",
       "date": "2017-03-04",
+      "collection": 38,
       "duration": 17220,
       "titles": ["Potje met Pietje: Zelda: Breath of the Wild"],
       "activities": [
@@ -31590,6 +31593,10 @@
         {
           "title": "Tom Clancy's Rainbow Six Siege",
           "duration": 2400
+        },
+        {
+          "title": "Tom Clancy's Rainbow Six Siege",
+          "duration": 2400
         }
       ],
       "twitchtracker_id": "40019637660",
@@ -34621,6 +34628,29 @@
       "time_end": "04:15:00"
     },
     {
+      "id": "dncu",
+      "type": "stream",
+      "date": "2021-08-21",
+      "duration": 10980,
+      "youtube_id": "Sc1mlimq544",
+      "titles": ["saaiste stream van nederland Pokemon Unite"],
+      "activities": [
+        {
+          "title": "Pokémon UNITE",
+          "duration": 6480
+        },
+        {
+          "title": "Dinosis Survival",
+          "duration": 4500
+        }
+      ],
+      "twitchtracker_id": "43015916268",
+      "twitch_id": "1125590244",
+      "tags": ["casual"],
+      "time_start": "01:11:00",
+      "time_end": "04:15:00"
+    },
+    {
       "id": "aecf",
       "type": "stream",
       "date": "2021-08-21",
@@ -36963,6 +36993,7 @@
       "id": "30fc",
       "type": "stream",
       "date": "2022-04-15",
+      "youtube_id": "pXyOMyQxurM",
       "duration": 6300,
       "titles": ["1 cuppie"],
       "activities": [
@@ -37100,7 +37131,7 @@
       "id": "6029",
       "type": "stream",
       "date": "2022-05-01",
-      "youtube_id": "nZy5D-KJL0",
+      "youtube_id": "mnZy5D-KJL0",
       "duration": 5880,
       "titles": ["1 potje"],
       "activities": [
@@ -37197,7 +37228,7 @@
       "date": "2022-05-15",
       "youtube_id": "YSmri8rKGko",
       "duration": 8940,
-      "titles": ["1"],
+      "titles": ["Demon's souls deel 2'"],
       "activities": [
         {
           "title": "Demon's Souls",
@@ -37213,8 +37244,9 @@
       "id": "d61f",
       "type": "stream",
       "date": "2022-05-15",
+      "youtube_id": "u2vrfSzdU3I",
       "duration": 5760,
-      "titles": ["1"],
+      "titles": ["Demon's souls deel 1"],
       "activities": [
         {
           "title": "Demon's Souls",
@@ -39419,6 +39451,7 @@
       "youtube_id": "lROjpvP69Q0",
       "date": "2022-12-21",
       "collection": 74,
+      "free": true,
       "duration": 10980,
       "titles": ["PETER vs TIMON: Civilization VI (Peters Perspectief)"],
       "activities": [
@@ -40515,7 +40548,7 @@
       "titles": ["1 potje"],
       "activities": [
         {
-          "title": "Just Chatting",
+          "title": "Super Mario Maker 2",
           "duration": 4020
         }
       ],
@@ -43936,6 +43969,14 @@
       "type": "stream"
     },
     {
+      "id": "9a48",
+      "type": "video",
+      "date": "2024-10-15",
+      "title": "Boksen - Lekker spelen",
+      "duration": 242,
+      "youtube_id": "p_PaJXb2QVo"
+    },
+    {
       "date": "2024-10-16",
       "time_start": "20:30:25",
       "time_end": "00:06:42",
@@ -43953,12 +43994,39 @@
       "type": "stream"
     },
     {
-      "id": "9a48",
-      "type": "video",
-      "date": "2024-10-15",
-      "title": "Boksen - Lekker spelen",
-      "duration": 242,
-      "youtube_id": "p_PaJXb2QVo"
+      "date": "2024-10-21",
+      "time_start": "20:54:11",
+      "time_end": "22:51:51",
+      "titles": ["Sceptisten twijfelen: Is dit spel eng? (HORROR MAAND)"],
+      "activities": [
+        {
+          "title": "Panicore",
+          "duration": 1
+        }
+      ],
+      "duration": 7060,
+      "twitch_id": "2281919671",
+      "youtube_id": "fOHcqOln0hE",
+      "id": "949c",
+      "type": "stream"
+    },
+    {
+      "date": "2024-10-23",
+      "time_start": "20:59:09",
+      "time_end": "22:51:39",
+      "titles": ["CLASSIC HORROR BOYS (HORROR MAAND)"],
+      "activities": [
+        {
+          "title": "Phasmophobia",
+          "duration": 1
+        }
+      ],
+      "duration": 6750,
+      "twitch_id": "2283517029",
+      "collection": 60,
+      "youtube_id": "q_2z12VOvuY",
+      "id": "f8b0",
+      "type": "stream"
     }
   ]
 }

@@ -50,7 +50,9 @@
         </div>
         <div v-if="filters.date.range === 'other'">
           <div class="mb-2">
-            <label class="form-label small fw-lighter mb-1" :for="prefix + 'beforeDate'">Voor:</label>
+            <label class="form-label small fw-lighter mb-1" :for="prefix + 'beforeDate'"
+              >Voor:</label
+            >
             <input
               :id="prefix + 'beforeDate'"
               :value="filters.date.before"
@@ -60,7 +62,9 @@
             />
           </div>
           <div>
-            <label class="form-label small fw-lighter mb-1" :for="prefix + 'afterDate'">Op of na:</label>
+            <label class="form-label small fw-lighter mb-1" :for="prefix + 'afterDate'"
+              >Op of na:</label
+            >
             <input
               :id="prefix + 'afterDate'"
               :value="filters.date.after"
@@ -365,7 +369,13 @@
       <h4 class="small py-2 fw-lighter border-bottom mb-3">Sorteer</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
-          <input :id="prefix + 'order-1'" v-model="sortOption" class="d-none" type="radio" value="newOld" />
+          <input
+            :id="prefix + 'order-1'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="newOld"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
             :for="prefix + 'order-1'"
@@ -376,7 +386,13 @@
           </label>
         </div>
         <div class="pe-3">
-          <input :id="prefix + 'order-2'" v-model="sortOption" class="d-none" type="radio" value="oldNew" />
+          <input
+            :id="prefix + 'order-2'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="oldNew"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
             :for="prefix + 'order-2'"
@@ -387,7 +403,13 @@
           </label>
         </div>
         <div class="pe-3">
-          <input :id="prefix + 'order-3'" v-model="sortOption" class="d-none" type="radio" value="shortLong" />
+          <input
+            :id="prefix + 'order-3'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="shortLong"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
             :for="prefix + 'order-3'"
@@ -398,7 +420,13 @@
           </label>
         </div>
         <div class="pe-3">
-          <input :id="prefix + 'order-4'" v-model="sortOption" class="d-none" type="radio" value="longShort" />
+          <input
+            :id="prefix + 'order-4'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="longShort"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
             :for="prefix + 'order-4'"

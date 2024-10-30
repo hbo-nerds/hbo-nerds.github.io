@@ -29,7 +29,10 @@
         <div class="col">
           <!-- search desktop -->
           <div class="d-none d-sm-flex gap-2 align-items-center">
-            <div :class="{ 'focus-margin': !focus }" class="input-group flex-nowrap position-relative">
+            <div
+              :class="{ 'focus-margin': !focus }"
+              class="input-group flex-nowrap position-relative"
+            >
               <span
                 v-if="focus"
                 class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
@@ -46,7 +49,10 @@
                 type="search"
                 @focus="focus = true"
                 @focusout="onFocusOut"
-                @keydown.enter="onFocusOut(); doSearch(true)"
+                @keydown.enter="
+                  onFocusOut();
+                  doSearch(true);
+                "
                 autocomplete="off"
               />
               <button
@@ -57,11 +63,12 @@
               >
                 <i class="bi bi-search"></i>
               </button>
-              <ul :class="{show: focus}"
-                  style="background-color: #272727"
-                  class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 overflow-hidden w-100"
-                  @mouseenter="focus = true"
-                  v-if="filteredHistory.length || smartSearch.length"
+              <ul
+                :class="{ show: focus }"
+                style="background-color: #272727"
+                class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 overflow-hidden w-100"
+                @mouseenter="focus = true"
+                v-if="filteredHistory.length || smartSearch.length"
               >
                 <li>
                   <div
@@ -73,7 +80,12 @@
                   >
                     <i class="bi bi-clock-history me-3"></i>
                     <span class="fw-bolder">{{ search }}</span>
-                    <a @click.stop="removeFromSearchHistory(i)" type="button" class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Verwijder</a>
+                    <a
+                      @click.stop="removeFromSearchHistory(i)"
+                      type="button"
+                      class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                      >Verwijder</a
+                    >
                   </div>
                   <div
                     v-for="smart in smartSearch"
@@ -126,11 +138,12 @@
             <!-- filter -->
             <FilterModal :mob="true" />
 
-            <ul :class="{show: focus}"
-                style="background-color: #272727"
-                class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 overflow-hidden w-100"
-                @mouseenter="focus = true"
-                v-if="filteredHistory.length || smartSearch.length"
+            <ul
+              :class="{ show: focus }"
+              style="background-color: #272727"
+              class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 overflow-hidden w-100"
+              @mouseenter="focus = true"
+              v-if="filteredHistory.length || smartSearch.length"
             >
               <li>
                 <div
@@ -142,7 +155,12 @@
                 >
                   <i class="bi bi-clock-history"></i>
                   <span class="fw-bolder text-truncate">{{ search }}</span>
-                  <a @click.stop="removeFromSearchHistory(i)" type="button" class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover">Verwijder</a>
+                  <a
+                    @click.stop="removeFromSearchHistory(i)"
+                    type="button"
+                    class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+                    >Verwijder</a
+                  >
                 </div>
                 <div
                   v-for="smart in smartSearch"
@@ -155,7 +173,6 @@
                 </div>
               </li>
             </ul>
-
           </div>
         </div>
         <!-- right desktop -->
@@ -420,7 +437,7 @@ import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import debounce from "lodash.debounce";
 import { storeToRefs } from "pinia";
-import {computed, nextTick, ref, watch} from "vue";
+import { computed, nextTick, ref, watch } from "vue";
 import { useRoute } from "vue-router";
 
 const route = useRoute();
@@ -456,20 +473,25 @@ async function startTyping() {
  * @type {ComputedRef<*>}
  */
 const filteredHistory = computed(() => {
-  return searchHistory.value.filter(term => term.toLowerCase().includes(search.value.toLowerCase())).slice(0, 15 - smartSearch.value.length);
-})
+  return searchHistory.value
+    .filter((term) => term.toLowerCase().includes(search.value.toLowerCase()))
+    .slice(0, 15 - smartSearch.value.length);
+});
 
 const smartSearch = computed(() => {
-  return search.value ? Object.keys(groupedActivities.value).filter(activity =>
-    activity.toLowerCase().startsWith(search.value.toLowerCase())).slice(0, 10) : []
-})
+  return search.value
+    ? Object.keys(groupedActivities.value)
+        .filter((activity) => activity.toLowerCase().startsWith(search.value.toLowerCase()))
+        .slice(0, 10)
+    : [];
+});
 
 /**
  * Perform search and make shore main view is active.
  * @param save whether to save search in history
  */
 async function doSearch(save = false) {
-  if(save && search.value) generalStore.updateSearchHistory(search.value)
+  if (save && search.value) generalStore.updateSearchHistory(search.value);
   generalStore.setView("main");
   if (route.path !== "/") {
     await router.push({ path: "/" });
@@ -483,7 +505,7 @@ async function doSearch(save = false) {
  */
 function searchFromPrediction(term) {
   focus.value = false;
-  search.value = term
+  search.value = term;
   doSearch(true);
 }
 
@@ -492,13 +514,13 @@ function searchFromPrediction(term) {
  * @param index
  */
 function removeFromSearchHistory(index) {
-  generalStore.removeSearchHistory(index)
+  generalStore.removeSearchHistory(index);
 }
 
 function onFocusOut() {
   setTimeout(() => {
     focus.value = false;
-  }, 100)
+  }, 100);
 }
 
 /**

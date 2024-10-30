@@ -23,9 +23,7 @@
               type="button"
             ></button>
           </div>
-          <div class="modal-body px-4">
-            <Filter :prefix="mob ? 'mob-' : ''" />s
-          </div>
+          <div class="modal-body px-4"><Filter :prefix="mob ? 'mob-' : ''" />s</div>
           <div class="modal-footer px-4">
             <div class="d-flex gap-2 w-100">
               <div class="flex-grow-1">
@@ -50,8 +48,8 @@ import Filter from "@/components/Filter.vue";
 import { useContentStore } from "@/stores/content.js";
 
 const props = defineProps({
-  mob: {type: Boolean}
-})
+  mob: { type: Boolean },
+});
 const content = useContentStore();
 </script>
 
