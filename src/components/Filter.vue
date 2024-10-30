@@ -6,7 +6,7 @@
       <div class="d-flex flex-column gap-1">
         <div v-for="(date, idx) in groupedDates" :key="idx" class="pe-3">
           <input
-            :id="'date-' + idx"
+            :id="prefix + 'date-' + idx"
             v-model="filters.date.range"
             :value="date.value"
             class="d-none"
@@ -20,7 +20,7 @@
               { 'text-body-tertiary': filters.date.range.toString() !== date.value.toString() },
               { 'text-decoration-line-through': !date.count },
             ]"
-            :for="'date-' + idx"
+            :for="prefix + 'date-' + idx"
             class="form-check-label text-nowrap small w-100"
           >
             {{ date.label }} ({{ date.count }})
@@ -33,7 +33,7 @@
         <!-- other -->
         <div class="pe-3">
           <input
-            id="checkOther"
+            :id="prefix + 'checkOther'"
             v-model="filters.date.range"
             class="d-none"
             type="radio"
@@ -42,7 +42,7 @@
           <label
             :class="filters.date.range === 'other' ? '' : 'text-body-tertiary'"
             class="form-check-label text-nowrap small w-100"
-            for="checkOther"
+            :for="prefix + 'checkOther'"
           >
             Anders...
             <i v-if="filters.date.range === 'other'" class="bi bi-check-lg ms-2"></i>
@@ -50,9 +50,11 @@
         </div>
         <div v-if="filters.date.range === 'other'">
           <div class="mb-2">
-            <label class="form-label small fw-lighter mb-1" for="beforeDate">Voor:</label>
+            <label class="form-label small fw-lighter mb-1" :for="prefix + 'beforeDate'"
+              >Voor:</label
+            >
             <input
-              id="beforeDate"
+              :id="prefix + 'beforeDate'"
               :value="filters.date.before"
               class="form-control form-control-sm"
               type="date"
@@ -60,9 +62,11 @@
             />
           </div>
           <div>
-            <label class="form-label small fw-lighter mb-1" for="afterDate">Op of na:</label>
+            <label class="form-label small fw-lighter mb-1" :for="prefix + 'afterDate'"
+              >Op of na:</label
+            >
             <input
-              id="afterDate"
+              :id="prefix + 'afterDate'"
               :value="filters.date.after"
               class="form-control form-control-sm"
               type="date"
@@ -78,7 +82,7 @@
       <div class="d-flex flex-column gap-1">
         <div v-for="(type, idx) in groupedTypes" :key="idx" class="pe-3">
           <input
-            :id="'type-' + idx"
+            :id="prefix + 'type-' + idx"
             v-model="filters.type"
             :value="type.value"
             class="d-none"
@@ -88,7 +92,7 @@
           />
           <label
             :class="filters.type.includes(type.value) ? '' : 'text-body-tertiary'"
-            :for="'type-' + idx"
+            :for="prefix + 'type-' + idx"
             class="form-check-label text-nowrap small w-100"
           >
             {{ type.label }} ({{ type.count }})
@@ -103,7 +107,7 @@
       <div class="d-flex flex-column gap-1">
         <div v-for="(platform, idx) in groupedPlatforms" :key="idx" class="pe-3">
           <input
-            :id="'platform-' + idx"
+            :id="prefix + 'platform-' + idx"
             v-model="filters.platform"
             :value="platform.value"
             class="d-none"
@@ -113,7 +117,7 @@
           />
           <label
             :class="filters.platform.includes(platform.value) ? '' : 'text-body-tertiary'"
-            :for="'platform-' + idx"
+            :for="prefix + 'platform-' + idx"
             class="form-check-label text-nowrap small w-100"
           >
             {{ platform.label }} ({{ platform.count }})
@@ -128,7 +132,7 @@
       <div class="d-flex flex-column gap-1">
         <div v-for="(duration, idx) in groupedDuration" :key="idx" class="pe-3">
           <input
-            :id="'duration-' + idx"
+            :id="prefix + 'duration-' + idx"
             v-model="filters.duration"
             :value="duration.value.toString()"
             class="d-none"
@@ -141,7 +145,7 @@
               { 'text-body-tertiary': filters.duration !== duration.value.toString() },
               { 'text-decoration-line-through': !duration.count },
             ]"
-            :for="'duration-' + idx"
+            :for="prefix + 'duration-' + idx"
             class="form-check-label text-nowrap small w-100"
           >
             {{ duration.label }} ({{ duration.count }})
@@ -157,7 +161,7 @@
     <div class="col-sm-6">
       <h4 class="small py-2 fw-lighter border-bottom mb-3">Activiteit</h4>
       <input
-        id="f_activity"
+        :id="prefix + 'f_activity'"
         v-model="f_term"
         class="form-control form-control-sm mb-3"
         placeholder="Zoek activiteit"
@@ -165,7 +169,7 @@
       />
       <div v-for="(key, idx) in a_activities" :key="idx" class="form-check">
         <input
-          :id="'act-' + idx"
+          :id="prefix + 'act-' + idx"
           v-model="filters.activity"
           :value="key"
           class="form-check-input"
@@ -173,7 +177,7 @@
           type="checkbox"
           @change="contentStore.filter()"
         />
-        <label :for="'act-' + idx" class="form-check-label small text-capitalize">
+        <label :for="prefix + 'act-' + idx" class="form-check-label small text-capitalize">
           {{ key }} ({{ groupedActivities[key] }})
         </label>
       </div>
@@ -181,7 +185,7 @@
       <div class="d-flex flex-column gap-1 overflow-y-auto" style="height: 150px">
         <div v-for="(key, idx) in f_activities" :key="idx" class="form-check">
           <input
-            :id="'act-' + idx"
+            :id="prefix + 'act-' + idx"
             v-model="filters.activity"
             :value="key"
             class="form-check-input"
@@ -189,7 +193,7 @@
             type="checkbox"
             @change="contentStore.filter()"
           />
-          <label :for="'act-' + idx" class="form-check-label small text-capitalize w-100">
+          <label :for="prefix + 'act-' + idx" class="form-check-label small text-capitalize w-100">
             {{ key }} ({{ groupedActivities[key] }})
           </label>
         </div>
@@ -202,7 +206,7 @@
     <div class="col-sm-6">
       <h4 class="small py-2 fw-lighter border-bottom mb-3">Tag</h4>
       <input
-        id="f_tag"
+        :id="prefix + 'f_tag'"
         v-model="f_tag"
         class="form-control form-control-sm mb-3"
         placeholder="Zoek tag"
@@ -210,7 +214,7 @@
       />
       <div v-for="(key, idx) in a_tags" :key="idx" class="form-check">
         <input
-          :id="'tag-' + idx"
+          :id="prefix + 'tag-' + idx"
           v-model="filters.tag"
           :value="key"
           class="form-check-input"
@@ -218,7 +222,7 @@
           type="checkbox"
           @change="contentStore.filter()"
         />
-        <label :for="'tag-' + idx" class="form-check-label small text-capitalize">
+        <label :for="prefix + 'tag-' + idx" class="form-check-label small text-capitalize">
           {{
             key
               .split(" ")
@@ -232,7 +236,7 @@
       <div class="d-flex flex-column gap-1 overflow-y-auto" style="height: 150px">
         <div v-for="(key, idx) in f_tags" :key="idx" class="form-check">
           <input
-            :id="'tag-' + idx"
+            :id="prefix + 'tag-' + idx"
             v-model="filters.tag"
             :value="key"
             class="form-check-input"
@@ -240,7 +244,7 @@
             type="checkbox"
             @change="contentStore.filter()"
           />
-          <label :for="'tag-' + idx" class="form-check-label small text-capitalize w-100">
+          <label :for="prefix + 'tag-' + idx" class="form-check-label small text-capitalize w-100">
             {{
               key
                 .split(" ")
@@ -261,7 +265,7 @@
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input
-            id="vod_all"
+            :id="prefix + 'vod_all'"
             v-model="filters.vod"
             :value="'all'"
             class="d-none"
@@ -271,7 +275,7 @@
           />
           <label
             class="form-check-label small text-nowrap w-100"
-            for="vod_all"
+            :for="prefix + 'vod_all'"
             :class="filters.vod === 'all' ? '' : 'text-body-tertiary'"
           >
             Met en zonder VOD
@@ -280,7 +284,7 @@
         </div>
         <div class="pe-3">
           <input
-            id="vod_only"
+            :id="prefix + 'vod_only'"
             v-model="filters.vod"
             :value="'vod_only'"
             class="d-none"
@@ -290,7 +294,7 @@
           />
           <label
             class="form-check-label small text-nowrap w-100"
-            for="vod_only"
+            :for="prefix + 'vod_only'"
             :class="filters.vod === 'vod_only' ? '' : 'text-body-tertiary'"
           >
             Alleen met VOD
@@ -299,7 +303,7 @@
         </div>
         <div class="pe-3">
           <input
-            id="no_vod_only"
+            :id="prefix + 'no_vod_only'"
             v-model="filters.vod"
             :value="'no_vod_only'"
             class="d-none"
@@ -309,7 +313,7 @@
           />
           <label
             class="form-check-label small text-nowrap w-100"
-            for="no_vod_only"
+            :for="prefix + 'no_vod_only'"
             :class="filters.vod === 'no_vod_only' ? '' : 'text-body-tertiary'"
           >
             Alleen zonder VOD
@@ -324,7 +328,7 @@
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input
-            id="hide_paywall"
+            :id="prefix + 'hide_paywall'"
             v-model="filters.free"
             class="d-none"
             name="free"
@@ -333,7 +337,7 @@
           />
           <label
             class="form-check-label small text-nowrap w-100"
-            for="hide_paywall"
+            :for="prefix + 'hide_paywall'"
             :class="filters.free ? '' : 'text-body-tertiary'"
           >
             Verberg items met paywall
@@ -342,7 +346,7 @@
         </div>
         <div class="pe-3">
           <input
-            id="hide_seen"
+            :id="prefix + 'hide_seen'"
             v-model="filters.hideSeen"
             class="d-none"
             name="seen"
@@ -351,7 +355,7 @@
           />
           <label
             class="form-check-label small text-nowrap w-100"
-            for="hide_seen"
+            :for="prefix + 'hide_seen'"
             :class="filters.hideSeen ? '' : 'text-body-tertiary'"
           >
             Verberg bekeken items
@@ -365,10 +369,16 @@
       <h4 class="small py-2 fw-lighter border-bottom mb-3">Sorteer</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
-          <input id="order-1" v-model="sortOption" class="d-none" type="radio" value="newOld" />
+          <input
+            :id="prefix + 'order-1'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="newOld"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
-            for="order-1"
+            :for="prefix + 'order-1'"
             :class="sortOption === 'newOld' ? '' : 'text-body-tertiary'"
           >
             Upload datum (nieuwste eerst)
@@ -376,10 +386,16 @@
           </label>
         </div>
         <div class="pe-3">
-          <input id="order-2" v-model="sortOption" class="d-none" type="radio" value="oldNew" />
+          <input
+            :id="prefix + 'order-2'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="oldNew"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
-            for="order-2"
+            :for="prefix + 'order-2'"
             :class="sortOption === 'oldNew' ? '' : 'text-body-tertiary'"
           >
             Upload datum (oudste eerst)
@@ -387,10 +403,16 @@
           </label>
         </div>
         <div class="pe-3">
-          <input id="order-3" v-model="sortOption" class="d-none" type="radio" value="shortLong" />
+          <input
+            :id="prefix + 'order-3'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="shortLong"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
-            for="order-3"
+            :for="prefix + 'order-3'"
             :class="sortOption === 'shortLong' ? '' : 'text-body-tertiary'"
           >
             Duur (kortste eerst)
@@ -398,10 +420,16 @@
           </label>
         </div>
         <div class="pe-3">
-          <input id="order-4" v-model="sortOption" class="d-none" type="radio" value="longShort" />
+          <input
+            :id="prefix + 'order-4'"
+            v-model="sortOption"
+            class="d-none"
+            type="radio"
+            value="longShort"
+          />
           <label
             class="form-check-label text-nowrap small w-100"
-            for="order-4"
+            :for="prefix + 'order-4'"
             :class="sortOption === 'longShort' ? '' : 'text-body-tertiary'"
           >
             Duur (langste eerst)
@@ -429,6 +457,10 @@ const {
   groupedDates,
   groupedDuration,
 } = storeToRefs(contentStore);
+
+const props = defineProps({
+  prefix: { type: String },
+});
 
 const f_term = ref("");
 const f_tag = ref("");

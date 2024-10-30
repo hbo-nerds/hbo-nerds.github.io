@@ -116,19 +116,24 @@ input[type="checkbox"] + label {
 }
 
 [data-bs-theme="dark"] {
+  * {
+    //--ls-btn-dark-bg: rgba(255, 255, 255, 0.1);
+    --ls-btn-dark-bg: #272727;
+    --ls-btn-dark-hover-bg: #3f3f3f;
+  }
   .mobile-menubar {
     background: rgba(0, 0, 0, 0.9);
   }
   .card {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--ls-btn-dark-bg);
   }
   .btn-dark {
     --bs-btn-color: #f1f1f1;
-    --bs-btn-bg: rgba(255, 255, 255, 0.1);
-    --bs-btn-border-color: rgba(255, 255, 255, 0.1);
+    --bs-btn-bg: var(--ls-btn-dark-bg);
+    --bs-btn-border-color: var(--ls-btn-dark-bg);
     --bs-btn-hover-color: #f1f1f1;
-    --bs-btn-hover-bg: rgba(255, 255, 255, 0.2);
-    --bs-btn-hover-border-color: rgba(255, 255, 255, 0.2);
+    --bs-btn-hover-bg: var(--ls-btn-dark-hover-bg);
+    --bs-btn-hover-border-color: var(--ls-btn-dark-hover-bg);
     --bs-btn-active-color: #0f0f0f;
     --bs-btn-active-bg: #f1f1f1;
     --bs-btn-active-border-color: #f1f1f1;
@@ -153,6 +158,9 @@ input[type="checkbox"] + label {
 }
 
 [data-bs-theme="light"] {
+  * {
+    --ls-btn-dark-bg: rgba(0, 0, 0, 0.05);
+  }
   .mobile-menubar {
     background: rgba(255, 255, 255, 0.9);
   }
