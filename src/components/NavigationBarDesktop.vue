@@ -495,6 +495,7 @@ onMounted(() => {
   }
   window.addEventListener("resize", checkIfMobile);
   screen.orientation.addEventListener("change", checkOrientation);
+  window.onorientationchange = checkOrientation;
 });
 
 onBeforeUnmount(() => {
