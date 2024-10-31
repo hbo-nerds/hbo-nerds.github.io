@@ -466,14 +466,9 @@ function checkIfMobile() {
   isMobile.value = window.innerWidth <= 768;
 }
 
-function checkOrientation() {
-  setTimeout(() => {
-    checkIfMobile();
-  }, 200);
-}
-
 function handleScroll(event) {
   // Only run on mobile devices
+    checkIfMobile()
   if (!isMobile.value) {
     isNavbarVisible.value = true;
     return;
@@ -493,9 +488,6 @@ onMounted(() => {
   if (mainContent) {
     mainContent.addEventListener("scroll", handleScroll);
   }
-  window.addEventListener("resize", checkIfMobile);
-  screen.orientation.addEventListener("change", checkOrientation);
-  window.onorientationchange = checkOrientation;
 });
 
 onBeforeUnmount(() => {
@@ -503,8 +495,6 @@ onBeforeUnmount(() => {
   if (mainContent) {
     mainContent.removeEventListener("scroll", handleScroll);
   }
-  window.removeEventListener("resize", checkIfMobile);
-  screen.orientation.removeEventListener("change", checkOrientation);
 });
 </script>
 
