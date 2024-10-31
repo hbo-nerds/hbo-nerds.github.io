@@ -487,6 +487,7 @@ onMounted(() => {
     mainContent.addEventListener("scroll", handleScroll);
   }
   window.addEventListener("resize", checkIfMobile); // Update on resize
+  window.addEventListener("orientationchange", checkIfMobile); // Update on resize
 });
 
 onBeforeUnmount(() => {
@@ -495,6 +496,7 @@ onBeforeUnmount(() => {
     mainContent.removeEventListener("scroll", handleScroll);
   }
   window.removeEventListener("resize", checkIfMobile);
+  window.removeEventListener("orientationchange", checkIfMobile);
 });
 </script>
 
