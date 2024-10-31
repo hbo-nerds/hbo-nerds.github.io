@@ -23,18 +23,24 @@
               type="button"
             ></button>
           </div>
-          <div class="modal-body px-4"><Filter :prefix="mob ? 'mob-' : ''" />s</div>
+          <div class="modal-body px-4"><Filter :prefix="mob ? 'mob-' : ''" /></div>
           <div class="modal-footer px-4">
             <div class="d-flex gap-2 w-100">
-              <div class="flex-grow-1">
-                <button
-                  class="btn btn-dark border-0 rounded-3 w-100"
-                  type="button"
-                  @click="content.resetFilters"
-                >
-                  Reset filters
-                </button>
-              </div>
+              <button
+                class="btn btn-dark border-0 rounded-3 w-100"
+                type="button"
+                @click="content.resetFilters"
+              >
+                Reset filters
+              </button>
+              <button
+                aria-label="Close"
+                class="btn btn-dark border-0 rounded-3 w-100"
+                data-bs-dismiss="modal"
+                type="button"
+              >
+                Sluit
+              </button>
             </div>
           </div>
         </div>

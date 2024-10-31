@@ -44,6 +44,16 @@
         <span class="fs-9">Over</span>
       </div>
     </RouterLink>
+    <a
+      href="https://www.buymeacoffee.com/superruudje"
+      target="_blank"
+      class="item btn btn-dark bg-none border-0 rounded-3 py-3"
+    >
+      <div class="d-flex flex-column align-items-center text-body">
+        <img class="mb-2" src="@/assets/svg/bmc/bmc-logo-native.svg" alt="bmc-logo" width="20" />
+        <span class="fs-9">Support</span>
+      </div>
+    </a>
   </div>
   <div v-else class="d-flex flex-column px-2 pt-2">
     <RouterLink
@@ -119,6 +129,13 @@
         <span class="fs-7 flex-grow-1 text-start">Over</span>
       </div>
     </RouterLink>
+    <hr />
+    <a href="https://www.buymeacoffee.com/superruudje" target="_blank">
+      <img
+        src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
+        alt="bmc-btn"
+      />
+    </a>
   </div>
 </template>
 

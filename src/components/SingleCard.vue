@@ -3,7 +3,7 @@
   <div :id="'singleCard_' + card.id" class="pt-3 pb-5 overflow-x-hidden">
     <div v-if="showCloseBtn" class="d-flex gap-2 mb-3">
       <button
-        class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter"
+        class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter w-100"
         @click="selectedCardId = null"
       >
         sluiten
@@ -270,6 +270,14 @@
       </div>
       <!-- info -->
       <span class="small fst-italic">item-id: {{ card.id }}</span>
+    </div>
+    <div v-if="showCloseBtn" class="d-flex gap-2 mb-3 mt-3">
+      <button
+        class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter w-100"
+        @click="selectedCardId = null"
+      >
+        sluiten
+      </button>
     </div>
   </div>
 </template>

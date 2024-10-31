@@ -90,9 +90,11 @@ export const useGeneralStore = defineStore("general", {
     },
     /**
      * Remove item from search history.
-     * @param index number.
+     * @param search value.
      */
-    removeSearchHistory(index) {
+    removeSearchHistory(search) {
+      let index = this.searchHistory.indexOf(search);
+      if (index < 0) return;
       this.searchHistory.splice(index, 1);
       localStorage.setItem("searchHistory", JSON.stringify(this.searchHistory));
     },
