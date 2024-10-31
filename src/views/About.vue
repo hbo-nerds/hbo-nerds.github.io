@@ -68,7 +68,7 @@
                 </template>
               </div>
 
-              <div class="mb-0">
+              <div class="mb-3">
                 <div class="small"><i class="me-2 bi bi-lightning-charge"></i>Powered by:</div>
                 <div class="d-flex align-items-center gap-2">
                   <a target="_blank" href="https://vuejs.org/">
@@ -80,6 +80,13 @@
                   </a>
                 </div>
               </div>
+
+              <a href="https://www.buymeacoffee.com/superruudje" target="_blank">
+                <img
+                  src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
+                  alt="bmc-btn"
+                />
+              </a>
             </div>
           </div>
           <!-- Community -->

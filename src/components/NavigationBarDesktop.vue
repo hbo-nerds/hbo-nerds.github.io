@@ -188,68 +188,19 @@
         <!-- right mobile -->
         <div v-if="!mobileSearch" class="d-sm-none col-auto col-sm-3">
           <div class="d-flex gap-2 align-items-center justify-content-end">
-            <!-- home view -->
-            <div class="dropdown">
+            <!-- Bmc -->
+            <a
+              href="https://www.buymeacoffee.com/superruudje"
+              target="_blank"
+              title="Buy us a coffee"
+            >
               <button
-                id="bd-view"
-                aria-expanded="false"
-                aria-label="Toggle view"
                 class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
-                data-bs-offset="0,10"
-                data-bs-toggle="dropdown"
                 type="button"
-                title="Verander view"
               >
-                <i
-                  class="bi"
-                  :class="
-                    homeView === 'thumbnail'
-                      ? 'bi-images'
-                      : homeView === 'heatmap'
-                        ? 'bi-calendar3'
-                        : 'bi-dice-5'
-                  "
-                ></i>
+                <i class="bi bi-cup-hot-fill"></i>
               </button>
-              <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
-                <li>
-                  <button
-                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
-                    data-bs-theme-value="light"
-                    type="button"
-                    @click="layoutStore.setHomeView('thumbnail')"
-                  >
-                    <i class="bi bi-images me-2 opacity-50"></i>
-                    Thumbnail
-                    <i v-if="homeView === 'thumbnail'" class="bi ms-auto bi-check2"></i>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
-                    data-bs-theme-value="dark"
-                    type="button"
-                    @click="layoutStore.setHomeView('heatmap')"
-                  >
-                    <i class="bi bi-calendar3 me-2 opacity-50"></i>
-                    Heatmap
-                    <i v-if="homeView === 'heatmap'" class="bi ms-auto bi-check2"></i>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
-                    data-bs-theme-value="auto"
-                    type="button"
-                    @click="layoutStore.setHomeView('random')"
-                  >
-                    <i class="bi bi-dice-5 me-2 opacity-50"></i>
-                    Random
-                    <i v-if="homeView === 'random'" class="bi ms-auto bi-check2"></i>
-                  </button>
-                </li>
-              </ul>
-            </div>
+            </a>
             <!-- Github -->
             <a
               href="https://github.com/hbo-nerds/hbo-nerds.github.io"
@@ -315,6 +266,68 @@
                     <i class="bi bi-circle-half me-2"></i>
                     Systeem
                     <i v-if="generalStore.theme === 'auto'" class="bi ms-auto bi-check2"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <!-- home view -->
+            <div class="dropdown">
+              <button
+                id="bd-view"
+                aria-expanded="false"
+                aria-label="Toggle view"
+                class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
+                data-bs-offset="0,10"
+                data-bs-toggle="dropdown"
+                type="button"
+                title="Verander view"
+              >
+                <i
+                  class="bi"
+                  :class="
+                    homeView === 'thumbnail'
+                      ? 'bi-images'
+                      : homeView === 'heatmap'
+                        ? 'bi-calendar3'
+                        : 'bi-dice-5'
+                  "
+                ></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
+                <li>
+                  <button
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                    data-bs-theme-value="light"
+                    type="button"
+                    @click="layoutStore.setHomeView('thumbnail')"
+                  >
+                    <i class="bi bi-images me-2 opacity-50"></i>
+                    Thumbnail
+                    <i v-if="homeView === 'thumbnail'" class="bi ms-auto bi-check2"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                    data-bs-theme-value="dark"
+                    type="button"
+                    @click="layoutStore.setHomeView('heatmap')"
+                  >
+                    <i class="bi bi-calendar3 me-2 opacity-50"></i>
+                    Heatmap
+                    <i v-if="homeView === 'heatmap'" class="bi ms-auto bi-check2"></i>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                    data-bs-theme-value="auto"
+                    type="button"
+                    @click="layoutStore.setHomeView('random')"
+                  >
+                    <i class="bi bi-dice-5 me-2 opacity-50"></i>
+                    Random
+                    <i v-if="homeView === 'random'" class="bi ms-auto bi-check2"></i>
                   </button>
                 </li>
               </ul>

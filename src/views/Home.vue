@@ -1,7 +1,7 @@
 <template>
   <!-- main -->
   <main class="pb-5">
-    <div class="d-none d-sm-flex sticky-top z-3 bg-body row align-items-center gx-2 py-3">
+    <div class="d-none d-sm-flex sticky-top z-1 bg-body row align-items-center gx-2 py-3">
       <div class="col-auto">
         <div class="btn-group btn-group-sm overflow-hidden">
           <button
