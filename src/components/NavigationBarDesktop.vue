@@ -473,7 +473,7 @@ function handleScroll(event) {
   const mainContent = event.target;
   const currentScrollPosition = mainContent.scrollTop;
 
-  isNavbarVisible.value = currentScrollPosition <= lastScrollPosition.value;
+  isNavbarVisible.value = currentScrollPosition <= 60 ? true : currentScrollPosition <= lastScrollPosition.value;
 
   lastScrollPosition.value = currentScrollPosition;
 }

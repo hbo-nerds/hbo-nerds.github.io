@@ -22,7 +22,7 @@
           <template v-if="selectedCard">
             <!-- desktop -->
             <div class="d-none d-md-block col-md-4 col-lg-3" style="padding: 0 12px">
-              <div class="sticky-top overflow-y-auto hide-scrollbar z-3" style="max-height: 90vh">
+              <div class="sticky-top overflow-y-auto hide-scrollbar z-1" style="max-height: 90vh">
                 <SingleCard v-if="selectedCard" :card="selectedCard" />
               </div>
             </div>

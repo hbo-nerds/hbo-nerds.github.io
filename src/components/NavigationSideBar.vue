@@ -50,7 +50,7 @@
       class="item btn btn-dark bg-none border-0 rounded-3 py-3"
     >
       <div class="d-flex flex-column align-items-center text-body">
-        <img class="mb-2" src="@/assets/svg/bmc/bmc-logo-native.svg" alt="bmc-logo" width="20" />
+        <IconBmc class="mb-2"/>
         <span class="fs-9">Support</span>
       </div>
     </a>
@@ -141,6 +141,7 @@
 
 <script setup>
 import { useGeneralStore } from "@/stores/general.js";
+import IconBmc from "@/components/IconBmc.vue";
 
 const generalStore = useGeneralStore();
 </script>

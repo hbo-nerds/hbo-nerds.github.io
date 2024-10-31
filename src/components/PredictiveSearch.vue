@@ -1,8 +1,7 @@
 <template>
   <ul
     :class="{ show: focus }"
-    class="dropdown-menu border-0 py-3 top-100 rounded-4 mt-1 w-100"
-    style="background-color: #272727"
+    class="dropdown-menu ls-menu border-0 py-3 top-100 rounded-4 mt-1 w-100"
     @mouseover="mouseOver = true"
     @mouseleave="mouseOver = false"
   >
@@ -142,4 +141,8 @@ const highlightedResults = computed(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.dropdown-menu.ls-menu {
+  background-color: var(--ls-btn-dark-bg);
+}
+</style>
