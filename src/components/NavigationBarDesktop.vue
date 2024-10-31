@@ -463,7 +463,7 @@ watch(
  * Check if on mobile
  */
 function checkIfMobile() {
-  isMobile.value = window.innerWidth <= 768;
+  isMobile.value = window.innerWidth <= 576;
 }
 
 function handleScroll(event) {
