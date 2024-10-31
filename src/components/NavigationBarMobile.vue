@@ -1,6 +1,6 @@
 <template>
   <nav class="mobile-menubar d-sm-none fixed-bottom border-top pb-4 px-3 z-3">
-    <ul class="nav align-items-center justify-content-evenly mb-0">
+    <ul class="nav flex-nowrap align-items-center justify-content-evenly mb-0">
       <li class="nav-item">
         <RouterLink :to="{ name: 'home' }" class="nav-link text-body">
           <i class="fs-5 lh-1 bi bi-house-door"></i>

@@ -1,7 +1,7 @@
 <template>
   <nav :class="{ 'hidden-navbar': !isNavbarVisible }" class="my-navbar bg-body py-2 z-3">
     <div class="container-fluid">
-      <div class="row align-items-center gx-0">
+      <div class="row flex-nowrap align-items-center gx-0">
         <!-- left -->
         <div class="col-2 col-md-3 d-none d-sm-block">
           <div class="d-flex gap-3 align-items-center" style="padding-left: 4px">
@@ -468,7 +468,10 @@ function checkIfMobile() {
 
 function handleScroll(event) {
   // Only run on mobile devices
-  if (!isMobile.value) return;
+  if (!isMobile.value) {
+      isNavbarVisible.value = true
+      return;
+  }
 
   const mainContent = event.target;
   const currentScrollPosition = mainContent.scrollTop;

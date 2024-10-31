@@ -82,6 +82,8 @@ generalStore.getLocaleStorage();
 
 const showCookie = ref(false);
 
+screen.orientation.lock('portrait');
+
 /**
  * Set locale storage and hide cookie banner.
  */
