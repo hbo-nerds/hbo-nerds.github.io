@@ -136,8 +136,8 @@
                 class="btn btn-dark btn-circle rounded-circle border-0"
                 data-bs-offset="0,10"
                 data-bs-toggle="dropdown"
-                type="button"
                 title="Verander thema"
+                type="button"
               >
                 <i class="bi bi-moon-stars-fill"></i>
               </button>
@@ -223,8 +223,8 @@
                 class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
                 data-bs-offset="0,10"
                 data-bs-toggle="dropdown"
-                type="button"
                 title="Verander thema"
+                type="button"
               >
                 <i class="bi bi-moon-stars-fill"></i>
               </button>
@@ -279,11 +279,10 @@
                 class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
                 data-bs-offset="0,10"
                 data-bs-toggle="dropdown"
-                type="button"
                 title="Verander view"
+                type="button"
               >
                 <i
-                  class="bi"
                   :class="
                     homeView === 'thumbnail'
                       ? 'bi-images'
@@ -291,6 +290,7 @@
                         ? 'bi-calendar3'
                         : 'bi-dice-5'
                   "
+                  class="bi"
                 ></i>
               </button>
               <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
@@ -466,17 +466,24 @@ function checkIfMobile() {
   isMobile.value = window.innerWidth <= 768;
 }
 
+function checkOrientation() {
+  setTimeout(() => {
+    checkIfMobile();
+  }, 200);
+}
+
 function handleScroll(event) {
   // Only run on mobile devices
   if (!isMobile.value) {
-      isNavbarVisible.value = true
-      return;
+    isNavbarVisible.value = true;
+    return;
   }
 
   const mainContent = event.target;
   const currentScrollPosition = mainContent.scrollTop;
 
-  isNavbarVisible.value = currentScrollPosition <= 60 ? true : currentScrollPosition <= lastScrollPosition.value;
+  isNavbarVisible.value =
+    currentScrollPosition <= 60 ? true : currentScrollPosition <= lastScrollPosition.value;
 
   lastScrollPosition.value = currentScrollPosition;
 }
@@ -486,8 +493,8 @@ onMounted(() => {
   if (mainContent) {
     mainContent.addEventListener("scroll", handleScroll);
   }
-  window.addEventListener("resize", checkIfMobile); // Update on resize
-  window.addEventListener("orientationchange", checkIfMobile); // Update on resize
+  window.addEventListener("resize", checkIfMobile);
+  screen.orientation.addEventListener("change", checkOrientation);
 });
 
 onBeforeUnmount(() => {
@@ -496,7 +503,7 @@ onBeforeUnmount(() => {
     mainContent.removeEventListener("scroll", handleScroll);
   }
   window.removeEventListener("resize", checkIfMobile);
-  window.removeEventListener("orientationchange", checkIfMobile);
+  screen.orientation.removeEventListener("change", checkOrientation);
 });
 </script>
 

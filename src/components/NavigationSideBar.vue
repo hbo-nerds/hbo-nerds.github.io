@@ -50,7 +50,7 @@
       class="item btn btn-dark bg-none border-0 rounded-3 py-3"
     >
       <div class="d-flex flex-column align-items-center text-body">
-        <IconBmc class="mb-2"/>
+        <IconBmc class="mb-2" />
         <span class="fs-9">Support</span>
       </div>
     </a>
@@ -140,8 +140,8 @@
 </template>
 
 <script setup>
-import { useGeneralStore } from "@/stores/general.js";
 import IconBmc from "@/components/IconBmc.vue";
+import { useGeneralStore } from "@/stores/general.js";
 
 const generalStore = useGeneralStore();
 </script>
