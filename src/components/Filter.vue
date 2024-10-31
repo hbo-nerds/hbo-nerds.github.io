@@ -182,7 +182,7 @@
         </label>
       </div>
       <hr v-if="a_activities.length" />
-      <div class="d-flex flex-column gap-1 overflow-y-auto" style="height: 150px">
+      <div class="d-flex flex-column gap-1 overflow-y-auto" style="max-height: 150px">
         <div v-for="(key, idx) in f_activities" :key="idx" class="form-check">
           <input
             :id="prefix + 'act-' + idx"
@@ -233,7 +233,7 @@
         </label>
       </div>
       <hr v-if="a_tags.length" />
-      <div class="d-flex flex-column gap-1 overflow-y-auto" style="height: 150px">
+      <div class="d-flex flex-column gap-1 overflow-y-auto" style="max-height: 150px">
         <div v-for="(key, idx) in f_tags" :key="idx" class="form-check">
           <input
             :id="prefix + 'tag-' + idx"

@@ -20,14 +20,15 @@
             </router-view>
           </div>
           <template v-if="selectedCard">
+            <!-- desktop -->
             <div class="d-none d-md-block col-md-4 col-lg-3" style="padding: 0 12px">
               <div class="sticky-top overflow-y-auto hide-scrollbar z-3" style="max-height: 90vh">
                 <SingleCard v-if="selectedCard" :card="selectedCard" />
               </div>
             </div>
-
+            <!-- mobile -->
             <div
-              class="position-absolute top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto p-2 pb-5 z-3"
+              class="position-fixed top-0 bottom-0 left-0 right-0 d-md-none bg-body overflow-y-auto p-2 pb-5 z-3"
             >
               <SingleCard v-if="selectedCard" :card="selectedCard" />
             </div>
@@ -126,6 +127,8 @@ async function getUrlQueryParams() {
 </script>
 
 <style lang="sass" scoped>
+#main-content
+  padding-top: 60px
 .modal.fade .modal-dialog
   transition: transform 0.1s ease-out
 .fade

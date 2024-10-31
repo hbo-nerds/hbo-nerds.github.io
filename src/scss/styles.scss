@@ -140,12 +140,14 @@ input[type="checkbox"] + label {
     &.bg-none {
       --bs-btn-bg: transparent;
     }
+    &.show {
+      color: var(--bs-btn-active-color);
+      background-color: var(--bs-btn-active-bg);
+    }
   }
   .accordion {
     --bs-accordion-bg: transparent;
-
     --bs-accordion-color: var(--bs-body-color);
-
     --bs-accordion-btn-color: var(--bs-body-color);
     --bs-accordion-btn-bg: var(--bs-accordion-bg);
     --bs-accordion-btn-focus-box-shadow: none;
@@ -179,6 +181,10 @@ input[type="checkbox"] + label {
     --bs-btn-active-border-color: #0f0f0f;
     &.bg-none {
       --bs-btn-bg: transparent;
+    }
+    &.show {
+      color: var(--bs-btn-active-color);
+      background-color: var(--bs-btn-active-bg);
     }
   }
 }

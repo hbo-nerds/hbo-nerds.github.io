@@ -1,33 +1,33 @@
 <template>
   <!-- main -->
   <main class="pb-5">
-    <div class="sticky-top z-3 bg-body row align-items-center gx-2 py-3">
+    <div class="d-none d-sm-flex sticky-top z-3 bg-body row align-items-center gx-2 py-3">
       <div class="col-auto">
         <div class="btn-group btn-group-sm overflow-hidden">
           <button
-            :class="{ active: view === 'thumbnail' }"
+            :class="{ active: homeView === 'thumbnail' }"
             class="btn btn-dark border-0"
             title="Thumbnail view"
             type="button"
-            @click="changeView('thumbnail')"
+            @click="layoutStore.setHomeView('thumbnail')"
           >
             <i class="bi bi-images"></i>
           </button>
           <button
-            :class="{ active: view === 'heatmap' }"
+            :class="{ active: homeView === 'heatmap' }"
             class="btn btn-dark border-0"
             title="Heatmap view"
             type="button"
-            @click="changeView('heatmap')"
+            @click="layoutStore.setHomeView('heatmap')"
           >
             <i class="bi bi-calendar3"></i>
           </button>
           <button
-            :class="{ active: view === 'random' }"
+            :class="{ active: homeView === 'random' }"
             class="btn btn-dark border-0"
             title="Random view"
             type="button"
-            @click="changeView('random')"
+            @click="layoutStore.setHomeView('random')"
           >
             <i class="bi bi-dice-5"></i>
           </button>
@@ -44,9 +44,9 @@
     <div class="row">
       <div class="col-12 col-sm">
         <keep-alive>
-          <List v-if="view === 'thumbnail'" />
-          <CalendarHeatmap v-else-if="view === 'heatmap'" />
-          <Random v-else-if="view === 'random'" />
+          <List v-if="homeView === 'thumbnail'" />
+          <CalendarHeatmap v-else-if="homeView === 'heatmap'" />
+          <Random v-else-if="homeView === 'random'" />
         </keep-alive>
       </div>
     </div>
@@ -61,19 +61,12 @@ import CalendarHeatmap from "@/views/CalendarHeatmap.vue";
 import List from "@/views/List.vue";
 import Random from "@/views/Random.vue";
 import { storeToRefs } from "pinia";
-import { ref } from "vue";
 import { onBeforeRouteLeave } from "vue-router";
 
 const contentStore = useContentStore();
 const layoutStore = useLayoutStore();
 const { sortedData } = storeToRefs(contentStore);
-const view = ref("thumbnail");
-
-function changeView(newView) {
-  if (view.value === "thumbnail")
-    layoutStore.homeScroll = document.getElementById("main-content").scrollTop;
-  view.value = newView;
-}
+const { homeView } = storeToRefs(layoutStore);
 
 onBeforeRouteLeave(() => {
   layoutStore.homeScroll = document.getElementById("main-content").scrollTop;

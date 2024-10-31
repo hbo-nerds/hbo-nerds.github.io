@@ -1,5 +1,5 @@
 <template>
-  <nav class="mobile-menubar d-sm-none fixed-bottom border-top pb-4 px-3">
+  <nav class="mobile-menubar d-sm-none fixed-bottom border-top pb-4 px-3 z-3">
     <ul class="nav align-items-center justify-content-evenly mb-0">
       <li class="nav-item">
         <RouterLink :to="{ name: 'home' }" class="nav-link text-body">
@@ -59,7 +59,6 @@ function startSearch() {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  z-index: 1000;
   backdrop-filter: blur(8px);
 }
 .nav {
