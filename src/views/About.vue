@@ -90,7 +90,7 @@
             </div>
           </div>
           <!-- Community -->
-          <div class="card bg-body">
+          <div class="card bg-body mb-3">
             <div class="card-body p-4 p-md-5 text-center">
               <h3>Ook bijdragen?</h3>
               <p>Samen sta je sterker dan alleen:</p>
@@ -111,6 +111,10 @@
               </div>
             </div>
           </div>
+          <span class="small text-body-secondary"
+            >© {{ new Date().getFullYear() }} Lekker Speuren. Alle rechten voorbehouden. Niet
+            geaffilieerd van Lekker Spelen.</span
+          >
         </article>
       </div>
     </div>

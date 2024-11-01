@@ -8,6 +8,7 @@ import Playlist from "@/views/Playlist.vue";
 import Playlists from "@/views/Playlists.vue";
 import Serie from "@/views/Serie.vue";
 import Series from "@/views/Series.vue";
+import SharedPlaylist from "@/views/SharedPlaylist.vue";
 import You from "@/views/You.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -50,6 +51,11 @@ const router = createRouter({
       path: "/heatmap",
       name: "heatmap",
       component: CalendarHeatmap,
+    },
+    {
+      path: "/shared-playlist",
+      name: "sharedPlaylist",
+      component: SharedPlaylist,
     },
     { path: "/:pathMatch(.*)*", redirect: "/" },
   ],

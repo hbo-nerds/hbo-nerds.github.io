@@ -193,8 +193,7 @@
                 type="button"
                 @click="playlistCardId = card.id"
               >
-                <i class="bi bi-collection-play me-2"></i
-                ><span class="small">Bewaar in afspeellijst</span>
+                <i class="bi bi-bookmark me-2"></i><span class="small">Bewaar in afspeellijst</span>
               </button>
             </li>
             <li>

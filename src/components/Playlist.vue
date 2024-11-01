@@ -3,6 +3,7 @@
     <div class="stack-2 border border-3 border-dark bg-dark z-0"></div>
     <div class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
     <div
+      v-if="card"
       :class="[
         card.type === 'podcast' ? 'bg-success' : card.type === 'video' ? 'bg-yt' : 'bg-tw',
         { active: card.id === selectedCardId },
@@ -19,6 +20,23 @@
           style="--bs-bg-opacity: 0.75"
           ><i class="bi bi-collection-play me-1"></i> {{ playlist["items"].length }}
           {{ playlist["items"].length > 1 ? "items" : "item" }}
+        </span>
+      </div>
+    </div>
+    <div
+      v-else
+      class="img-wrapper position-relative"
+      type="button"
+      @click="goToCard"
+      @click.middle="goToCard('middle')"
+    >
+      <div class="transform-wrapper position-relative">
+        <img :src="imgScr" alt="thumbnail" class="w-100" />
+        <span
+          class="badge bg-black position-absolute bottom-0 end-0 m-2"
+          style="--bs-bg-opacity: 0.75"
+          ><i class="bi bi-collection-play me-1"></i> {{ playlist["items"].length }}
+          {{ playlist["items"].length === 1 ? "item" : "items" }}
         </span>
       </div>
     </div>
@@ -55,7 +73,18 @@
                 type="button"
                 @click="generalStore.deletePlaylist(playlist['title'])"
               >
-                <i class="bi bi-trash me-2"></i><span class="small">Verwijder</span>
+                <i class="bi bi-trash me-2"></i><span class="small">Verwijderen</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                data-bs-target="#share-playlist-modal"
+                data-bs-toggle="modal"
+                type="button"
+                @click="sharePlaylistTitle = playlist['title']"
+              >
+                <i class="bi bi-share me-2"></i><span class="small">Delen</span>
               </button>
             </li>
           </ul>
@@ -71,6 +100,7 @@ import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { computed, onBeforeMount, ref } from "vue";
+import { toast } from "vue3-toastify";
 
 const generalStore = useGeneralStore();
 
@@ -78,7 +108,7 @@ const props = defineProps({
   playlist: { type: Object, required: true },
 });
 const contentStore = useContentStore();
-const { images } = storeToRefs(contentStore);
+const { images, selectedCardId, sharePlaylistTitle } = storeToRefs(contentStore);
 
 const card = ref(null);
 
@@ -108,6 +138,21 @@ function goToCard(type = "left") {
   } else {
     router.push({ name: "playlist", params: { title: props.playlist["title"] } });
   }
+}
+
+/**
+ * Create playlist URL to share.
+ */
+function createPlaylistUrl() {
+  let search_params = new URLSearchParams(props.playlist["items"].map((s) => ["items", s]));
+  search_params.append("title", props.playlist["title"]);
+
+  let url = window.location.host + `/shared-playlist?${search_params.toString()}`;
+
+  navigator.clipboard.writeText(url);
+  toast("Link gekopieerd!", {
+    position: toast.POSITION.BOTTOM_LEFT,
+  });
 }
 </script>
 

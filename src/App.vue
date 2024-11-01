@@ -48,6 +48,9 @@
       <Teleport to="body">
         <ShareModal :id="shareCardId" />
       </Teleport>
+      <Teleport to="body">
+        <SharePlaylistModal :title="sharePlaylistTitle" />
+      </Teleport>
     </main>
     <NavigationBarMobile />
 
@@ -62,6 +65,7 @@ import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
 import NavigationSideBar from "@/components/NavigationSideBar.vue";
 import PlaylistModal from "@/components/PlaylistModal.vue";
 import ShareModal from "@/components/ShareModal.vue";
+import SharePlaylistModal from "@/components/SharePlaylistModal.vue";
 import SingleCard from "@/components/SingleCard.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
@@ -75,7 +79,7 @@ const route = useRoute();
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
 
-const { selectedCard, playlistCardId, shareCardId } = storeToRefs(contentStore);
+const { selectedCard, playlistCardId, shareCardId, sharePlaylistTitle } = storeToRefs(contentStore);
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLocaleStorage();

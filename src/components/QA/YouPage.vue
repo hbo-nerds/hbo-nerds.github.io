@@ -9,7 +9,7 @@
         data-bs-toggle="collapse"
         type="button"
       >
-        De Jij pagina.
+        De Jij pagina
       </button>
     </h2>
     <div id="QA_you" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
@@ -63,6 +63,7 @@
               <li>
                 Gelikete items: Dit zijn jouw gelikete items. Klik op 'Alle gelikete' voor meer.
               </li>
+              <li>Beheer je data: Download, upload of verwijder al jouw opgeslagen data.</li>
             </ol>
             <img alt="desktop_you_2" class="w-75" src="@/assets/img/qa/qa_you_desktop_2.png" />
           </div>
@@ -78,7 +79,27 @@
               class="w-25"
               src="@/assets/img/qa/qa_you_smartphone_1.png"
             />
-            <p>...</p>
+            <p>Op de 'Jij' pagina vindt je de volgende informatie:</p>
+            <ol>
+              <li>
+                Geschiedenis: Dit zijn de door jouw laatst geopende items. Klik op 'Alle
+                geschiedenis' voor meer.
+              </li>
+              <li>
+                Afspeellijsten: Dit zijn jouw persoonlijke afspeellijsten. Klik op een afspeellijst
+                om een overzicht te krijgen van alle items in de lijst. Klik op 'Alle
+                afspeellijsten' voor meer.
+              </li>
+              <li>
+                Gelikete items: Dit zijn jouw gelikete items. Klik op 'Alle gelikete' voor meer.
+              </li>
+              <li>Beheer je data: Download, upload of verwijder al jouw opgeslagen data.</li>
+            </ol>
+            <img
+              alt="smartphone_you_2"
+              class="w-25"
+              src="@/assets/img/qa/qa_you_smartphone_2.png"
+            />
           </div>
         </div>
       </div>

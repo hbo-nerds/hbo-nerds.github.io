@@ -106,9 +106,24 @@ export const useGeneralStore = defineStore("general", {
       const found = this.playlists.some((pl) => pl.title === title);
       if (!found) this.playlists.push({ title: title, items: [] });
       localStorage.setItem("playlists", JSON.stringify(this.playlists));
+      toast(`Afspeellijst ${title} aangemaakt`, {
+        position: toast.POSITION.BOTTOM_LEFT,
+      });
       // send event to GA4
       event("create_playlist", {
         playlist_name: title,
+      });
+    },
+    /**
+     * Copy the shared playlist.
+     * @param playlist
+     */
+    copyPlaylist(playlist) {
+      const found = this.playlists.some((pl) => pl.title === playlist.title);
+      if (!found) this.playlists.push(playlist);
+      localStorage.setItem("playlists", JSON.stringify(this.playlists));
+      toast(`Afspeellijst ${playlist.title} aangemaakt`, {
+        position: toast.POSITION.BOTTOM_LEFT,
       });
     },
     /**
@@ -159,6 +174,7 @@ export const useGeneralStore = defineStore("general", {
      * @returns {*}
      */
     getPlaylistItems(items) {
+      if (!Array.isArray(items)) items = [items];
       const store = useContentStore();
       let res = [];
       items.forEach((id) => {

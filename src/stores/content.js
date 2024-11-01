@@ -36,6 +36,7 @@ export const useContentStore = defineStore("content", {
     selectedCardId: null,
     playlistCardId: null,
     shareCardId: null,
+    sharePlaylistTitle: null,
   }),
   getters: {
     /**
@@ -467,7 +468,9 @@ export const useContentStore = defineStore("content", {
      * Main filter function.
      */
     filter() {
-      this.updateUrl();
+      //TODO only add url query on home page.
+      // this.updateUrl();
+
       this.filteredData = [];
 
       // start with all items
@@ -769,6 +772,7 @@ export const useContentStore = defineStore("content", {
      * Reset all filters
      */
     resetFilters() {
+      this.search = "";
       this.filters = {
         type: ["all"],
         platform: ["all"],

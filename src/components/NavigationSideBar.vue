@@ -45,9 +45,9 @@
       </div>
     </RouterLink>
     <a
+      class="item btn btn-dark bg-none border-0 rounded-3 py-3"
       href="https://www.buymeacoffee.com/superruudje"
       target="_blank"
-      class="item btn btn-dark bg-none border-0 rounded-3 py-3"
     >
       <div class="d-flex flex-column align-items-center text-body">
         <IconBmc class="mb-2" />
@@ -130,12 +130,17 @@
       </div>
     </RouterLink>
     <hr />
-    <a href="https://www.buymeacoffee.com/superruudje" target="_blank">
+    <a class="mb-3" href="https://www.buymeacoffee.com/superruudje" target="_blank">
       <img
-        src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
+        width="100%"
         alt="bmc-btn"
+        src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
       />
     </a>
+    <span class="small text-body-secondary" style="word-spacing: 1px; max-width: 240px"
+      >© {{ new Date().getFullYear() }} Lekker Speuren. Alle rechten voorbehouden. Niet
+      geaffilieerd met Lekker Spelen.</span
+    >
   </div>
 </template>
 

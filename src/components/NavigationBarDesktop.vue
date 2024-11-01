@@ -106,7 +106,7 @@
               />
             </div>
             <!-- filter -->
-            <FilterModal :mob="true" />
+            <FilterModal :prefix="'mob-'" />
             <PredictiveSearch ref="predSearchMob" :focus="focus" @search="searchFromPrediction" />
           </div>
         </div>
@@ -468,7 +468,7 @@ function checkIfMobile() {
 
 function handleScroll(event) {
   // Only run on mobile devices
-    checkIfMobile()
+  checkIfMobile();
   if (!isMobile.value) {
     isNavbarVisible.value = true;
     return;

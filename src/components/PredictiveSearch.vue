@@ -1,5 +1,6 @@
 <template>
   <ul
+    v-if="hasContent || !search"
     :class="{ show: focus }"
     class="dropdown-menu ls-menu border-0 py-3 top-100 rounded-4 mt-1 w-100"
     @mouseover="mouseOver = true"
@@ -51,6 +52,10 @@ const contentStore = useContentStore();
 const { search, groupedActivities } = storeToRefs(contentStore);
 const { searchHistory } = storeToRefs(generalStore);
 
+/**
+ * Whether list has items
+ * @type {ComputedRef<unknown>}
+ */
 const hasContent = computed(() => {
   return (
     filteredHistory.value.length ||

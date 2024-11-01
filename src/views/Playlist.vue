@@ -2,15 +2,26 @@
   <main class="pt-3 pb-5">
     <div class="row">
       <div class="col-12">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><RouterLink :to="{ name: 'you' }">Jij</RouterLink></li>
-            <li class="breadcrumb-item">
-              <RouterLink :to="{ name: 'playlists' }">Afspeellijsten</RouterLink>
-            </li>
-            <li class="breadcrumb-item active" aria-current="page">{{ playlist.title }}</li>
-          </ol>
-        </nav>
+        <div class="d-flex align-items-center gap-3 mb-2">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><RouterLink :to="{ name: 'you' }">Jij</RouterLink></li>
+              <li class="breadcrumb-item">
+                <RouterLink :to="{ name: 'playlists' }">Afspeellijsten</RouterLink>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">{{ playlist.title }}</li>
+            </ol>
+          </nav>
+          <button
+            class="btn btn-sm btn-dark border-0 rounded-pill text-nowrap"
+            data-bs-target="#share-playlist-modal"
+            data-bs-toggle="modal"
+            type="button"
+            @click="sharePlaylistTitle = playlist.title"
+          >
+            <i class="bi bi-share me-2"></i>Delen
+          </button>
+        </div>
 
         <h1 class="fw-bold mb-2">{{ playlist.title }}</h1>
         <SortSelect
@@ -23,10 +34,11 @@
             }
           "
         />
+
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
         >
-          <div v-for="(item, idx) in sortedItems" :key="idx" class="col-6">
+          <div v-for="(item, idx) in sortedItems" :key="idx" class="col">
             <Card :card="item" />
           </div>
         </div>
@@ -38,11 +50,15 @@
 <script setup>
 import Card from "@/components/Card.vue";
 import SortSelect from "@/components/SortSelect.vue";
+import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
+import { storeToRefs } from "pinia";
 import { computed, onBeforeMount, ref } from "vue";
 import { onBeforeRouteUpdate, useRoute } from "vue-router";
 
 const generalStore = useGeneralStore();
+const contentStore = useContentStore();
+const { sharePlaylistTitle } = storeToRefs(contentStore);
 
 const route = useRoute();
 const items = ref([]);

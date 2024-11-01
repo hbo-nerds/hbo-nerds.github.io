@@ -9,7 +9,7 @@
         data-bs-toggle="collapse"
         type="button"
       >
-        Geavanceerd zoeken (filters)
+        Geavanceerd zoeken
       </button>
     </h2>
     <div id="QA_search" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
