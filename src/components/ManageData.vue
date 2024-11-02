@@ -2,16 +2,6 @@
   <div class="col-md">
     <div class="card bg-body">
       <div class="card-body p-3">
-        <h5>Download jouw opgeslagen data.</h5>
-        <button class="btn btn-dark border-0 rounded-pill" @click="downloadUserData">
-          Download
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="col-md">
-    <div class="card bg-body">
-      <div class="card-body p-3">
         <h5>Upload vanaf backup.</h5>
         <span v-if="success" class="d-flex gap-2 mb-3">
           <span class="badge rounded-pill text-bg-success">Yeah!</span>

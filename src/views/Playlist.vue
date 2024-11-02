@@ -13,7 +13,7 @@
             </ol>
           </nav>
           <button
-            class="btn btn-sm btn-dark border-0 rounded-pill text-nowrap"
+            class="btn btn-sm btn-dark border-0 rounded-pill"
             data-bs-target="#share-playlist-modal"
             data-bs-toggle="modal"
             type="button"

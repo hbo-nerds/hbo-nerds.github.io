@@ -39,6 +39,7 @@
       </div>
       <div v-else class="modal-content bg-body border-0">
         <form class="modal-body p-4" @submit.prevent="createList">
+          <button ref="close" class="d-none" data-bs-dismiss="modal"></button>
           <h1 class="mb-3 fs-5">Nieuwe afspeellijst</h1>
           <div class="form-floating mb-3">
             <input

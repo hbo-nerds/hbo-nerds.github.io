@@ -183,6 +183,21 @@
                 </li>
               </ul>
             </div>
+            <!-- profile -->
+            <RouterLink v-if="profile" :to="{ name: 'you' }" title="Naar profiel">
+              <button
+                class="btn btn-dark btn-circle rounded-circle border-0 p-2"
+                title="Bezoek project op GitHub"
+                type="button"
+              >
+                <img
+                  width="100%"
+                  class="rounded-circle"
+                  :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
+                  alt="profile"
+                />
+              </button>
+            </RouterLink>
           </div>
         </div>
         <!-- right mobile -->
@@ -365,6 +380,7 @@ const route = useRoute();
 const generalStore = useGeneralStore();
 const contentStore = useContentStore();
 const layoutStore = useLayoutStore();
+const { profile } = storeToRefs(generalStore);
 const { search } = storeToRefs(contentStore);
 const { homeView } = storeToRefs(layoutStore);
 

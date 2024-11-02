@@ -5,6 +5,7 @@ import { toast } from "vue3-toastify";
 
 export const useGeneralStore = defineStore("general", {
   state: () => ({
+    profile: null,
     theme: "dark",
     view: "thumbnail",
     sideOpen: false,
@@ -44,6 +45,7 @@ export const useGeneralStore = defineStore("general", {
       this.history = JSON.parse(localStorage.getItem("history")) || [];
       this.playlists = JSON.parse(localStorage.getItem("playlists")) || [];
       this.searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+      this.profile = JSON.parse(localStorage.getItem("profile")) || null;
     },
     /**
      * Toggle 'like' attribute for given item.
@@ -184,6 +186,17 @@ export const useGeneralStore = defineStore("general", {
       return res;
     },
     /**
+     * Store profile in locale storage.
+     * @param profile object containing profile
+     */
+    storeProfile(profile) {
+      this.profile = profile;
+      toast(`Profiel opgeslagen`, {
+        position: toast.POSITION.BOTTOM_LEFT,
+      });
+      localStorage.setItem("profile", JSON.stringify(profile));
+    },
+    /**
      * Set localStorage from uploaded file.
      * @param userData object containing data to store.
      */
@@ -193,6 +206,7 @@ export const useGeneralStore = defineStore("general", {
       localStorage.setItem("history", JSON.stringify(userData.history));
       localStorage.setItem("searchHistory", JSON.stringify(userData.searchHistory));
       localStorage.setItem("playlists", JSON.stringify(userData.playlists));
+      localStorage.setItem("profile", JSON.stringify(userData.profile));
       this.getLocaleStorage();
     },
   },

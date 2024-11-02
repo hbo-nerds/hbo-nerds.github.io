@@ -33,11 +33,22 @@
           <span class="small">Over</span>
         </RouterLink>
       </li>
-      <li class="nav-item">
+      <li v-if="!profile" class="nav-item">
         <RouterLink :to="{ name: 'you' }" class="nav-link text-body">
           <i class="fs-5 lh-1 bi bi-person"></i>
           <i class="fs-5 lh-1 bi bi-person-fill active"></i>
           <span class="small">Jij</span>
+        </RouterLink>
+      </li>
+      <li v-else class="nav-item">
+        <RouterLink :to="{ name: 'you' }" class="nav-link text-body">
+          <img
+            width="20px"
+            class="rounded-circle mb-1"
+            :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
+            alt="profile"
+          />
+          <span class="d-block small">Jij</span>
         </RouterLink>
       </li>
     </ul>
@@ -45,6 +56,12 @@
 </template>
 
 <script setup>
+import { useGeneralStore } from "@/stores/general.js";
+import { storeToRefs } from "pinia";
+
+const generalStore = useGeneralStore();
+const { profile } = storeToRefs(generalStore);
+
 /**
  * On mobile, activate the search input and focus on it.
  */

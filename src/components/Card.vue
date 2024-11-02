@@ -3,10 +3,7 @@
     <div v-if="serie" class="stack-2 border border-3 border-dark bg-dark z-0"></div>
     <div v-if="serie" class="stack border border-3 border-dark-subtle bg-dark-subtle z-0"></div>
     <div
-      :class="[
-        card.type === 'podcast' ? 'bg-success' : card.type === 'video' ? 'bg-yt' : 'bg-tw',
-        { active: card.id === selectedCardId },
-      ]"
+      :class="[card.id === selectedCardId ? `active ${typeClass}` : '']"
       class="img-wrapper position-relative"
       type="button"
       @click="goToCard"
@@ -252,6 +249,16 @@ const { seenItems, likedItems } = storeToRefs(generalStore);
 
 const canvasBtn = ref(null);
 
+const typeClass = computed(() => {
+  return props.card
+    ? props.card.type === "podcast"
+      ? "bg-success"
+      : props.card.type === "video"
+        ? "bg-yt"
+        : "bg-tw"
+    : "";
+});
+
 /**
  * Look for VOD thumbnail.
  * @type {ComputedRef<unknown>}
@@ -426,6 +433,7 @@ const yearAgo = computed(() => {
     margin-top: -1px
 
 .img-wrapper
+    aspect-ratio: 16 / 9
     *
         transition-property: transform
         transition-timing-function: ease
