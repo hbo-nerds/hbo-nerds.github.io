@@ -78,6 +78,10 @@ const playlist = computed(() => {
   return generalStore.getPlaylist(props.title);
 });
 
+/**
+ * The url to share
+ * @type {ComputedRef<string|string>}
+ */
 const shareUrl = computed(() => {
   if (!playlist.value) return "";
 
@@ -96,6 +100,7 @@ function copyLink() {
   toast("Link gekopieerd!", {
     position: toast.POSITION.BOTTOM_LEFT,
   });
+  close.value?.click();
 }
 
 /**

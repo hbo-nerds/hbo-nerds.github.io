@@ -1,6 +1,7 @@
 import router from "@/router/index.js";
 import { filename } from "pathe/utils";
 import { defineStore } from "pinia";
+import { toast } from "vue3-toastify";
 import og_data from "../assets/data/data.json";
 import { useGeneralStore } from "./general.js";
 
@@ -468,9 +469,6 @@ export const useContentStore = defineStore("content", {
      * Main filter function.
      */
     filter() {
-      //TODO only add url query on home page.
-      // this.updateUrl();
-
       this.filteredData = [];
 
       // start with all items
@@ -810,6 +808,10 @@ export const useContentStore = defineStore("content", {
 
       if (urlParams.get("duration")) this.filters.duration = urlParams.get("duration");
       this.search = urlParams.get("search") || "";
+      router.replace({ query: null }).then((r) => {});
+      setTimeout(() => {
+        toast("Filters overgenomen!");
+      }, 300);
     },
     /**
      * Update url query after filter change.
@@ -836,12 +838,7 @@ export const useContentStore = defineStore("content", {
         if (this.filters.date.before) search_params.append("date_before", this.filters.date.before);
       }
 
-      let url_search = search_params.toString();
-      if (url_search) {
-        router.replace({ query: { filter: url_search } }).then((r) => {});
-      } else {
-        router.replace({ query: null }).then((r) => {});
-      }
+      return search_params.toString();
     },
   },
 });

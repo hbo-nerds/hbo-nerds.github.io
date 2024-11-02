@@ -155,12 +155,23 @@
       <i class="bi bi-arrow-repeat"></i>
     </button>
   </div>
+  <div class="col-auto d-none d-md-block">
+    <button
+      class="btn btn-sm btn-dark border-0 rounded-3"
+      type="button"
+      title="Deel resultaten"
+      @click="shareCurrentFilters"
+    >
+      <i class="bi bi-share"></i>
+    </button>
+  </div>
 </template>
 
 <script setup>
 import { useContentStore } from "@/stores/content.js";
 import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
+import { toast } from "vue3-toastify";
 
 const contentStore = useContentStore();
 const { filters, groupedDates, groupedTypes, groupedPlatforms, groupedDuration } =
@@ -238,6 +249,15 @@ function checkPlatform(value) {
     filters.value.platform.splice(filters.value.platform.indexOf("all"), 1);
 
   contentStore.filter();
+}
+
+function shareCurrentFilters() {
+  let params = encodeURIComponent(contentStore.updateUrl());
+  let url = window.location.host + `?filter=${params}`;
+  navigator.clipboard.writeText(url);
+  toast("Filters gekopieerd!", {
+    position: toast.POSITION.BOTTOM_LEFT,
+  });
 }
 </script>
 

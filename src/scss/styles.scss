@@ -108,14 +108,13 @@ input[type="checkbox"] + label {
 }
 
 //------------ SMALL MODAL ----------------//
-@media (max-width: 575px) {
-  .modal-xs {
+.modal-dialog {
+  max-width: var(--bs-modal-width);
+  margin-right: auto;
+  margin-left: auto;
+
+  &.modal-xs {
     --bs-modal-width: 300px;
-  }
-  .modal-dialog {
-    max-width: var(--bs-modal-width);
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 

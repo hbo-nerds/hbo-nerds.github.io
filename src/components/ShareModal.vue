@@ -85,8 +85,7 @@ const cardTitle = computed(() => {
 
 const shareUrl = computed(() => {
   if (!card.value) return "";
-  const host = "https://" + window.location.host;
-  return `${host}/item/${card.value["id"]}`;
+  return window.location.host + `/item/${card.value["id"]}`;
 });
 
 /**
@@ -97,6 +96,7 @@ function copyLink() {
   toast("Link gekopieerd!", {
     position: toast.POSITION.BOTTOM_LEFT,
   });
+  close.value?.click();
 }
 
 /**

@@ -25,7 +25,7 @@
             ></button>
           </div>
           <div class="modal-body px-4">
-            <Filter v-if="visible" :prefix="mob ? 'mob-' : ''" />
+            <Filter v-if="visible" :prefix="prefix" />
           </div>
           <div class="modal-footer px-4">
             <div class="d-flex gap-2 w-100">

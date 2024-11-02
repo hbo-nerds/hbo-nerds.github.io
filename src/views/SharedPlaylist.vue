@@ -2,22 +2,29 @@
   <main class="pt-3 pb-5">
     <div class="row">
       <div class="col-12">
-        <div class="bg-body-secondary rounded-3 py-3 px-4 mb-3">
-          <strong>Opmerking:</strong> Dit is een gedeelde lijst en is gemaakt door een andere
-          gebruiker. Wil je deze lijst bewaren? Klik dan
-          <a
-            type="button"
+        <div class="d-flex align-items-center gap-3 mb-2">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item active">Gedeelde afspeellijst</li>
+              <li aria-current="page" class="breadcrumb-item active">{{ playlist.title }}</li>
+            </ol>
+          </nav>
+          <button
+            class="btn btn-sm btn-dark border-0 rounded-pill text-nowrap"
             data-bs-target="#playlist-copy"
             data-bs-toggle="modal"
-            class="link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-            >hier </a
-          >.
+            type="button"
+            @click=""
+          >
+            <i class="bi bi-bookmark me-2"></i>Bewaren
+          </button>
         </div>
-        <h1 class="fw-bold mb-2">Gedeeld: {{ playlist.title }}</h1>
+
+        <h1 class="fw-bold mb-2">{{ playlist.title }}</h1>
         <SortSelect
-          class="mb-4"
-          :sort-options="sortOptions"
           :active="sort"
+          :sort-options="sortOptions"
+          class="mb-4"
           @select="
             (val) => {
               sort = val;
@@ -35,43 +42,37 @@
     </div>
 
     <Teleport to="body">
-      <div class="modal fade" id="playlist-copy" tabindex="-1" aria-hidden="true">
+      <div id="playlist-copy" aria-hidden="true" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xs">
           <div class="modal-content bg-body border-0">
-            <div class="modal-header border-0">
-              <h1 class="modal-title fs-5">Kopieer afspeellijst</h1>
-              <button
-                ref="close"
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <p>Geef je afspeellijst een eigen naam.</p>
-              <form @submit.prevent="createList">
-                <div class="mb-3">
-                  <label for="newListName" class="form-label small">Naam</label>
-                  <input
-                    v-model="listName"
-                    type="text"
-                    class="form-control"
-                    id="newListName"
-                    placeholder="Titel van de afspeellijst..."
-                    required
-                  />
-                  <div v-if="alreadyExists" class="d-block invalid-feedback">Naam bestaat al.</div>
-                </div>
+            <form class="modal-body p-4" @submit.prevent="createList">
+              <h1 class="mb-3 fs-5">Nieuwe afspeellijst</h1>
+              <div class="form-floating mb-3">
+                <input
+                  v-model="listName"
+                  type="text"
+                  :class="{ 'is-invalid': isInvalid }"
+                  class="form-control bg-transparent"
+                  id="playlistTitle"
+                  placeholder=""
+                  required
+                />
+                <label class="bg-transparent" for="playlistTitle">Kies een titel</label>
+                <div v-if="isInvalid" class="d-block invalid-feedback">Deze titel bestaat al.</div>
+              </div>
+              <div class="d-flex gap-2 w-100">
                 <button
-                  :disabled="alreadyExists"
-                  type="submit"
-                  class="btn btn-sm btn-outline-primary rounded-pill float-end"
+                  class="btn btn-dark rounded-pill w-100"
+                  data-bs-dismiss="modal"
+                  type="button"
                 >
-                  Creëren
+                  Annuleer
                 </button>
-              </form>
-            </div>
+                <button class="btn btn-dark rounded-pill w-100" :disabled="isInvalid" type="submit">
+                  Maken
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -86,6 +87,7 @@ import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { computed, onBeforeMount, ref } from "vue";
 import { useRoute } from "vue-router";
+import router from "@/router/index.js";
 
 const generalStore = useGeneralStore();
 const { playlists } = storeToRefs(generalStore);
@@ -129,7 +131,7 @@ const sortedItems = computed(() => {
  * Check if name already exists.
  * @type {ComputedRef<*>}
  */
-const alreadyExists = computed(() => {
+const isInvalid = computed(() => {
   return playlists.value.some((pl) => pl.title.toLowerCase() === listName.value.toLowerCase());
 });
 
@@ -148,4 +150,8 @@ onBeforeMount(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped lang="sass">
+.form-floating > .form-control:focus ~ label::after,
+.form-floating > .form-control:not(:placeholder-shown) ~ label::after
+    background-color: transparent
+</style>
