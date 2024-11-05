@@ -78,6 +78,7 @@
             <button
               class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
               type="button"
+              title="Annuleer zoekopdracht"
               @click="mobileSearch = false"
             >
               <i class="bi bi-chevron-left"></i>
@@ -151,6 +152,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="light"
                     type="button"
+                    title="Light mode"
                     @click="switchTheme('light')"
                   >
                     <i class="bi bi-sun-fill me-2"></i>
@@ -163,6 +165,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="dark"
                     type="button"
+                    title="Dark mode"
                     @click="switchTheme('dark')"
                   >
                     <i class="bi bi-moon-stars-fill me-2"></i>
@@ -175,6 +178,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="auto"
                     type="button"
+                    title="Systeem mode"
                     @click="switchTheme('auto')"
                   >
                     <i class="bi bi-circle-half me-2"></i>
@@ -222,7 +226,7 @@
             <a
               href="https://github.com/hbo-nerds/hbo-nerds.github.io"
               target="_blank"
-              title="View project on GitHub"
+              title="Bezoek project op GitHub"
             >
               <button
                 class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
@@ -254,6 +258,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="light"
                     type="button"
+                    title="Light mode"
                     @click="switchTheme('light')"
                   >
                     <i class="bi bi-sun-fill me-2"></i>
@@ -266,6 +271,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="dark"
                     type="button"
+                    title="Dark mode"
                     @click="switchTheme('dark')"
                   >
                     <i class="bi bi-moon-stars-fill me-2"></i>
@@ -278,6 +284,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="auto"
                     type="button"
+                    title="Systeem mode"
                     @click="switchTheme('auto')"
                   >
                     <i class="bi bi-circle-half me-2"></i>
@@ -316,6 +323,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="light"
                     type="button"
+                    title="Thumbnail view"
                     @click="layoutStore.setHomeView('thumbnail')"
                   >
                     <i class="bi bi-images me-2 opacity-50"></i>
@@ -328,6 +336,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="dark"
                     type="button"
+                    title="Heatmap view"
                     @click="layoutStore.setHomeView('heatmap')"
                   >
                     <i class="bi bi-calendar3 me-2 opacity-50"></i>
@@ -340,6 +349,7 @@
                     class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                     data-bs-theme-value="auto"
                     type="button"
+                    title="Random view"
                     @click="layoutStore.setHomeView('random')"
                   >
                     <i class="bi bi-dice-5 me-2 opacity-50"></i>
@@ -354,6 +364,7 @@
               id="mobile-search-btn"
               class="d-sm-none btn btn-dark bg-trans btn-circle rounded-circle border-0"
               type="button"
+              title="Start zoekopdracht"
               @click="startTyping"
             >
               <i class="bi bi-search"></i>

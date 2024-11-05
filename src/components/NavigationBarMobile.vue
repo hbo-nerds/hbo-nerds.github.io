@@ -20,6 +20,7 @@
           <button
             class="btn btn-dark bg-trans btn-circle rounded-circle border-secondary"
             type="button"
+            title="Start zoekopdracht"
             @click="startSearch"
           >
             <i class="bi bi-search"></i>

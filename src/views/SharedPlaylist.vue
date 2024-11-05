@@ -32,7 +32,7 @@
         <div
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
         >
-          <div v-for="(item, idx) in sortedItems" :key="idx" class="col-6">
+          <div v-for="(item, idx) in sortedItems" :key="idx" class="col">
             <Card :card="item" />
           </div>
         </div>
