@@ -8,6 +8,7 @@
             <button
               class="btn btn-dark bg-none btn-circle rounded-circle border-0"
               type="button"
+              title="Toggle menu"
               @click="generalStore.sideOpen = !generalStore.sideOpen"
             >
               <i class="text-body bi bi-list fs-5"></i>

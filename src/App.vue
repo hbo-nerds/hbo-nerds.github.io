@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="position-fixed bottom-0 end-0 m-3 rounded-circle bg-body" @click="toTop">
-        <button class="btn btn-dark bg-trans btn-circle rounded-circle border-0">
+        <button class="btn btn-dark bg-trans btn-circle rounded-circle border-0" type="button" title="Terug naar boven">
           <i class="bi bi-arrow-up"></i>
         </button>
       </div>

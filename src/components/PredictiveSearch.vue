@@ -21,12 +21,13 @@
           class="flex-grow-1 text-start text-truncate"
           v-html="result.label || result.value"
         ></span>
-        <a
+        <div
           v-if="result.type === 'history'"
-          class="ms-auto small link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
+          class="ms-auto btn btn-link btn-sm link-underline link-underline-opacity-0 link-underline-opacity-100-hover"
           type="button"
+          aria-label="Verwijder"
           @click.prevent.stop="generalStore.removeSearchHistory(result.value)"
-          >Verwijder</a
+          >Verwijder</div
         >
       </div>
     </li>

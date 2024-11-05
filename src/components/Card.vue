@@ -26,7 +26,7 @@
         <!-- free -->
         <span
           v-if="card.type === 'stream' && card.free"
-          class="badge bg-warning position-absolute top-0 end-0 m-2 text-uppercase"
+          class="badge bg-warning position-absolute top-0 end-0 m-2 text-uppercase text-black"
         >
           Gratis
         </span>
