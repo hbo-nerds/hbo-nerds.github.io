@@ -187,14 +187,14 @@
             <RouterLink v-if="profile" :to="{ name: 'you' }" title="Naar profiel">
               <button
                 class="btn btn-dark btn-circle rounded-circle border-0 p-2"
-                title="Bezoek project op GitHub"
+                title="Naar profiel"
                 type="button"
               >
                 <img
-                  width="100%"
-                  class="rounded-circle"
-                  :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
+                  :src="'/images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
                   alt="profile"
+                  class="rounded-circle"
+                  width="100%"
                 />
               </button>
             </RouterLink>
@@ -364,7 +364,7 @@
 </template>
 
 <script setup>
-import FilterModal from "@/components/FilterModal.vue";
+import FilterModal from "@/components/Modals/FilterModal.vue";
 import PredictiveSearch from "@/components/PredictiveSearch.vue";
 import router from "@/router/index.js";
 import { useContentStore } from "@/stores/content.js";

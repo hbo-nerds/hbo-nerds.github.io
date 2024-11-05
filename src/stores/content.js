@@ -38,6 +38,7 @@ export const useContentStore = defineStore("content", {
     playlistCardId: null,
     shareCardId: null,
     sharePlaylistTitle: null,
+    editPlaylistTitle: null,
   }),
   getters: {
     /**
@@ -810,7 +811,7 @@ export const useContentStore = defineStore("content", {
       this.search = urlParams.get("search") || "";
       router.replace({ query: null }).then((r) => {});
       setTimeout(() => {
-        toast("Filters overgenomen!");
+        toast("Filters overgenomen");
       }, 300);
     },
     /**

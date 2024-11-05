@@ -2,25 +2,23 @@
   <main class="pt-3 pb-5">
     <div class="row">
       <div class="col-12">
-        <div class="d-flex align-items-center gap-3 mb-2">
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb mb-0">
-              <li class="breadcrumb-item active">Gedeelde afspeellijst</li>
-              <li aria-current="page" class="breadcrumb-item active">{{ playlist.title }}</li>
-            </ol>
-          </nav>
-          <button
-            class="btn btn-sm btn-dark border-0 rounded-pill text-nowrap"
-            data-bs-target="#playlist-copy"
-            data-bs-toggle="modal"
-            type="button"
-            @click=""
-          >
-            <i class="bi bi-bookmark me-2"></i>Bewaren
-          </button>
-        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Gedeelde afspeellijst</li>
+            <li aria-current="page" class="breadcrumb-item active">{{ route.query.title }}</li>
+          </ol>
+        </nav>
 
-        <h1 class="fw-bold mb-2">{{ playlist.title }}</h1>
+        <h1 class="fw-bold mb-2">{{ route.query.title }}</h1>
+        <p v-if="route.query.description">{{ route.query.description }}</p>
+        <button
+          class="btn btn-sm btn-dark border-0 rounded-pill mb-3"
+          data-bs-target="#playlist-copy"
+          data-bs-toggle="modal"
+          type="button"
+        >
+          <i class="bi bi-bookmark me-2"></i>Bewaren
+        </button>
         <SortSelect
           :active="sort"
           :sort-options="sortOptions"
@@ -45,33 +43,40 @@
       <div id="playlist-copy" aria-hidden="true" class="modal fade" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-xs">
           <div class="modal-content bg-body border-0">
-            <form class="modal-body p-4" @submit.prevent="createList">
-              <h1 class="mb-3 fs-5">Nieuwe afspeellijst</h1>
+            <div class="modal-header border-0">
+              <h1 class="modal-title fs-5">Bewaar afspeellijst</h1>
+              <button
+                ref="close"
+                aria-label="Close"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                type="button"
+              ></button>
+            </div>
+            <form class="modal-body" @submit.prevent="createList">
+              <button ref="close" class="d-none" data-bs-dismiss="modal"></button>
               <div class="form-floating mb-3">
                 <input
+                  id="sharedPlaylistTitle"
                   v-model="listName"
-                  type="text"
                   :class="{ 'is-invalid': isInvalid }"
                   class="form-control bg-transparent"
-                  id="playlistTitle"
+                  maxlength="100"
                   placeholder=""
                   required
+                  type="text"
                 />
-                <label class="bg-transparent" for="playlistTitle">Kies een titel</label>
-                <div v-if="isInvalid" class="d-block invalid-feedback">Deze titel bestaat al.</div>
+                <label class="bg-transparent" for="sharedPlaylistTitle">Kies een titel</label>
+                <div class="d-flex justify-content-between mt-1">
+                  <div v-if="isInvalid" class="d-block invalid-feedback m-0">
+                    Deze titel bestaat al.
+                  </div>
+                  <small class="ms-auto">{{ listName.length }}/100</small>
+                </div>
               </div>
-              <div class="d-flex gap-2 w-100">
-                <button
-                  class="btn btn-dark rounded-pill w-100"
-                  data-bs-dismiss="modal"
-                  type="button"
-                >
-                  Annuleer
-                </button>
-                <button class="btn btn-dark rounded-pill w-100" :disabled="isInvalid" type="submit">
-                  Maken
-                </button>
-              </div>
+              <button :disabled="isInvalid" class="btn btn-dark rounded-pill w-100" type="submit">
+                Maken
+              </button>
             </form>
           </div>
         </div>
@@ -87,14 +92,12 @@ import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { computed, onBeforeMount, ref } from "vue";
 import { useRoute } from "vue-router";
-import router from "@/router/index.js";
 
 const generalStore = useGeneralStore();
 const { playlists } = storeToRefs(generalStore);
 
 const route = useRoute();
 const items = ref([]);
-const playlist = ref(null);
 const sort = ref("newOld");
 const sortOptions = [
   { value: "newOld", label: "Upload datum (nieuwste eerst)" },
@@ -145,13 +148,12 @@ function createList() {
 }
 
 onBeforeMount(() => {
-  playlist.value = generalStore.getPlaylist(route.query.title);
   items.value = generalStore.getPlaylistItems(route.query.items);
 });
 </script>
 
-<style scoped lang="sass">
+<style lang="sass" scoped>
 .form-floating > .form-control:focus ~ label::after,
 .form-floating > .form-control:not(:placeholder-shown) ~ label::after
-    background-color: transparent
+  background-color: transparent
 </style>

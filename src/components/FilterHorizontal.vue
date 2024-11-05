@@ -1,7 +1,11 @@
 <template>
   <div class="col-auto d-none d-md-block">
-    <div class="button-container gap-2" @mouseenter="hover = true" @mouseleave="hover = false">
-      <button class="btn btn-sm btn-dark border-0 rounded-3">
+    <div class="button-container gap-2">
+      <button
+        @click="hover = !hover"
+        class="btn btn-sm btn-dark border-0 rounded-3"
+        title="Toggle snelle filters"
+      >
         <i class="bi bi-sliders2"></i>
       </button>
       <transition-group name="face">
@@ -253,9 +257,9 @@ function checkPlatform(value) {
 
 function shareCurrentFilters() {
   let params = encodeURIComponent(contentStore.updateUrl());
-  let url = window.location.host + `?filter=${params}`;
+  let url = window.location.origin + `?filter=${params}`;
   navigator.clipboard.writeText(url);
-  toast("Filters gekopieerd!", {
+  toast("Filters gekopieerd", {
     position: toast.POSITION.BOTTOM_LEFT,
   });
 }

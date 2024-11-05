@@ -9,14 +9,14 @@
         data-bs-toggle="collapse"
         type="button"
       >
-        Playlists maken en beheren
+        Afspeellijst maken, beheren en delen.
       </button>
     </h2>
     <div id="QA_playlist" class="accordion-collapse collapse" data-bs-parent="#accordionQA">
       <div class="accordion-body">
         <p>
-          Een playlist is een verzameling video's en/of streams. Iedereen kan playlists maken. Jouw
-          gemaakt playlists zijn te vinden op de 'Jij' pagina.
+          Een afspeellijst is een verzameling video's en/of streams. Iedereen kan afspeellijsten
+          maken. Jouw gemaakt afspeellijsten zijn te vinden op de 'Jij' pagina.
         </p>
         <!-- devices -->
         <ul class="nav nav-underline mb-3">
@@ -92,12 +92,36 @@
             <h4 class="fs-6 fw-bolder">Een afspeellijst bewerken</h4>
             <ol>
               <li>
-                Ga naar de weergavepagina van een video of stream die je in de afspeellijst wilt
-                opnemen.
+                Navigeer naar de 'Jij' pagina en klik op <strong>Alle afspeellijsten</strong>.
               </li>
               <li>
-                Klik op <strong>Bewerken</strong>&nbsp;<i class="bi bi-pencil"></i>&nbsp;om een
-                afspeellijst aan te passen.
+                Ga naar een van je afspeellijsten en klik op <strong>Meer</strong>&nbsp;<i
+                  class="bi bi-three-dots-vertical"
+                ></i
+                >&nbsp;<i class="bi bi-chevron-right"></i>&nbsp;<strong>Bewerken</strong>&nbsp;<i
+                  class="bi bi-pencil"
+                ></i
+                >.
+              </li>
+              <li></li>
+            </ol>
+            <h3 class="fs-5">Een afspeellijst delen</h3>
+            <ol>
+              <li>
+                Navigeer naar de 'Jij' pagina en klik op <strong>Alle afspeellijsten</strong>.
+              </li>
+              <li>
+                Ga naar een van je afspeellijsten en klik op <strong>Meer</strong>&nbsp;<i
+                  class="bi bi-three-dots-vertical"
+                ></i
+                >&nbsp;<i class="bi bi-chevron-right"></i>&nbsp;<strong>Delen</strong>&nbsp;<i
+                  class="bi bi-share"
+                ></i
+                >.
+              </li>
+              <li>
+                Een popup met deelopties verschijnt. Kies het platform waarop je wilt delen of kies
+                voor <strong>Kopieer</strong> om de URL te kopiëren naar je klembord.
               </li>
             </ol>
             <h3 class="fs-5">Een afspeellijst verwijderen</h3>

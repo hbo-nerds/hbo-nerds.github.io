@@ -70,6 +70,17 @@
             <li>
               <button
                 class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+                data-bs-target="#edit-playlist-modal"
+                data-bs-toggle="modal"
+                type="button"
+                @click="editPlaylistTitle = playlist['title']"
+              >
+                <i class="bi bi-pencil me-2"></i><span class="small">Bewerken</span>
+              </button>
+            </li>
+            <li>
+              <button
+                class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
                 type="button"
                 @click="generalStore.deletePlaylist(playlist['title'])"
               >
@@ -108,7 +119,7 @@ const props = defineProps({
   playlist: { type: Object, required: true },
 });
 const contentStore = useContentStore();
-const { images, selectedCardId, sharePlaylistTitle } = storeToRefs(contentStore);
+const { images, selectedCardId, sharePlaylistTitle, editPlaylistTitle } = storeToRefs(contentStore);
 
 const card = ref(null);
 
@@ -147,10 +158,10 @@ function createPlaylistUrl() {
   let search_params = new URLSearchParams(props.playlist["items"].map((s) => ["items", s]));
   search_params.append("title", props.playlist["title"]);
 
-  let url = window.location.host + `/shared-playlist?${search_params.toString()}`;
+  let url = window.location.origin + `/shared-playlist?${search_params.toString()}`;
 
   navigator.clipboard.writeText(url);
-  toast("Link gekopieerd!", {
+  toast("Link gekopieerd", {
     position: toast.POSITION.BOTTOM_LEFT,
   });
 }

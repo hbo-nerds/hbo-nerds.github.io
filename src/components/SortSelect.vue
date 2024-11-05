@@ -1,12 +1,12 @@
 <template>
   <div class="dropdown">
     <button
-      class="btn btn-dark dropdown-toggle border-0 rounded-3"
-      type="button"
-      data-bs-toggle="dropdown"
       aria-expanded="false"
+      class="btn btn-dark border-0 rounded-3"
+      data-bs-toggle="dropdown"
+      type="button"
     >
-      {{ a_sortlabel }}
+      <i class="bi bi-filter-left me-2"></i>Sorteer
     </button>
     <ul class="dropdown-menu border-0 rounded-3 py-0 overflow-hidden">
       <li v-for="option in sortOptions">
@@ -16,6 +16,7 @@
           @click="$emit('select', option.value)"
         >
           {{ option.label }}
+          <i v-if="option.value === active" class="bi bi-check2"></i>
         </button>
       </li>
     </ul>

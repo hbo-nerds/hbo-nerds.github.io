@@ -87,8 +87,9 @@ const shareUrl = computed(() => {
 
   let search_params = new URLSearchParams(playlist.value["items"].map((s) => ["items", s]));
   search_params.append("title", playlist.value["title"]);
+  search_params.append("description", playlist.value["description"]);
 
-  const host = window.location.host;
+  const host = window.location.origin;
   return `${host}/shared-playlist?${search_params.toString()}`;
 });
 
@@ -97,7 +98,7 @@ const shareUrl = computed(() => {
  */
 function copyLink() {
   navigator.clipboard.writeText(shareUrl.value);
-  toast("Link gekopieerd!", {
+  toast("Link gekopieerd", {
     position: toast.POSITION.BOTTOM_LEFT,
   });
   close.value?.click();

@@ -85,7 +85,7 @@ const cardTitle = computed(() => {
 
 const shareUrl = computed(() => {
   if (!card.value) return "";
-  return window.location.host + `/item/${card.value["id"]}`;
+  return window.location.origin + `/item/${card.value["id"]}`;
 });
 
 /**
@@ -93,7 +93,7 @@ const shareUrl = computed(() => {
  */
 function copyLink() {
   navigator.clipboard.writeText(shareUrl.value);
-  toast("Link gekopieerd!", {
+  toast("Link gekopieerd", {
     position: toast.POSITION.BOTTOM_LEFT,
   });
   close.value?.click();

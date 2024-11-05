@@ -1,15 +1,3 @@
-import About from "@/views/About.vue";
-import CalendarHeatmap from "@/views/CalendarHeatmap.vue";
-import Card from "@/views/Card.vue";
-import History from "@/views/History.vue";
-import Home from "@/views/Home.vue";
-import Liked from "@/views/Liked.vue";
-import Playlist from "@/views/Playlist.vue";
-import Playlists from "@/views/Playlists.vue";
-import Serie from "@/views/Serie.vue";
-import Series from "@/views/Series.vue";
-import SharedPlaylist from "@/views/SharedPlaylist.vue";
-import You from "@/views/You.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 const router = createRouter({
@@ -18,44 +6,48 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Home,
+      component: () => import("@/views/Home.vue"),
     },
     {
       path: "/over",
       name: "about",
-      component: About,
+      component: () => import("@/views/About.vue"),
     },
     {
       path: "/series",
       children: [
-        { path: "", name: "series", component: Series },
-        { path: ":id", name: "serie", component: Serie },
+        { path: "", name: "series", component: () => import("@/views/Series.vue") },
+        { path: ":id", name: "serie", component: () => import("@/views/Serie.vue") },
       ],
     },
     {
       path: "/you",
       children: [
-        { path: "", name: "you", component: You },
-        { path: "history", name: "history", component: History },
-        { path: "playlists", name: "playlists", component: Playlists },
-        { path: "playlists/:title", name: "playlist", component: Playlist },
-        { path: "liked-items", name: "liked-items", component: Liked },
+        { path: "", name: "you", component: () => import("@/views/You.vue") },
+        { path: "history", name: "history", component: () => import("@/views/History.vue") },
+        { path: "playlists", name: "playlists", component: () => import("@/views/Playlists.vue") },
+        {
+          path: "playlists/:title",
+          name: "playlist",
+          component: () => import("@/views/Playlist.vue"),
+        },
+        { path: "liked-items", name: "liked-items", component: () => import("@/views/Liked.vue") },
       ],
     },
     {
       path: "/item/:id",
       name: "card",
-      component: Card,
+      component: () => import("@/views/Card.vue"),
     },
     {
       path: "/heatmap",
       name: "heatmap",
-      component: CalendarHeatmap,
+      component: () => import("@/views/CalendarHeatmap.vue"),
     },
     {
       path: "/shared-playlist",
       name: "sharedPlaylist",
-      component: SharedPlaylist,
+      component: () => import("@/views/SharedPlaylist.vue"),
     },
     { path: "/:pathMatch(.*)*", redirect: "/" },
   ],

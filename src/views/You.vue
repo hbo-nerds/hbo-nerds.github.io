@@ -45,8 +45,8 @@
         >
           <div
             v-for="(playlist, index) in playlists.slice(0, itemsToShow)"
-            class="col"
             :key="playlist.title"
+            class="col"
           >
             <Playlist :playlist="playlist" />
           </div>
@@ -81,21 +81,10 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="d-flex gap-3 align-items-center mb-3">
-          <h2 class="fs-5 fw-bold m-0">Beheer jouw data</h2>
-        </div>
-        <div class="row gy-3">
-          <ManageData />
-        </div>
-      </div>
-    </div>
   </main>
 </template>
 
 <script setup>
-import ManageData from "@/components/ManageData.vue";
 import Playlist from "@/components/Playlist.vue";
 import Profile from "@/components/Profile.vue";
 import { useContentStore } from "@/stores/content.js";

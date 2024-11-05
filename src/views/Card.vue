@@ -21,7 +21,7 @@ const contentStore = useContentStore();
 
 function updateMeta() {
   const title = contentStore.getCardTitle(card.value);
-  const url = `https://${window.location.host}/item/${card.value["id"]}`;
+  const url = `${window.location.origin}/item/${card.value["id"]}`;
   const img = contentStore.getCardThumbnail(card.value);
   const desc = card.value.description || "Dit item heeft nog geen beschrijving.";
   document.title = "Lekker Speuren | " + title;

@@ -49,6 +49,9 @@
         <ShareModal :id="shareCardId" />
       </Teleport>
       <Teleport to="body">
+        <EditPlaylistModal :title="editPlaylistTitle" />
+      </Teleport>
+      <Teleport to="body">
         <SharePlaylistModal :title="sharePlaylistTitle" />
       </Teleport>
     </main>
@@ -60,12 +63,13 @@
 
 <script setup>
 import Cookies from "@/components/Cookies.vue";
+import EditPlaylistModal from "@/components/Modals/EditPlaylistModal.vue";
+import PlaylistModal from "@/components/Modals/PlaylistModal.vue";
+import ShareModal from "@/components/Modals/ShareModal.vue";
+import SharePlaylistModal from "@/components/Modals/SharePlaylistModal.vue";
 import NavigationBarDesktop from "@/components/NavigationBarDesktop.vue";
 import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
 import NavigationSideBar from "@/components/NavigationSideBar.vue";
-import PlaylistModal from "@/components/PlaylistModal.vue";
-import ShareModal from "@/components/ShareModal.vue";
-import SharePlaylistModal from "@/components/SharePlaylistModal.vue";
 import SingleCard from "@/components/SingleCard.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
@@ -79,7 +83,8 @@ const route = useRoute();
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
 
-const { selectedCard, playlistCardId, shareCardId, sharePlaylistTitle } = storeToRefs(contentStore);
+const { selectedCard, playlistCardId, shareCardId, sharePlaylistTitle, editPlaylistTitle } =
+  storeToRefs(contentStore);
 contentStore.fetchData();
 contentStore.setImages();
 generalStore.getLocaleStorage();
@@ -133,8 +138,10 @@ async function getUrlQueryParams() {
 <style lang="sass" scoped>
 #main-content
   padding-top: 60px
+
 .modal.fade .modal-dialog
   transition: transform 0.1s ease-out
+
 .fade
   transition: opacity 0.05s linear
 </style>

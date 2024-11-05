@@ -5,15 +5,15 @@ import { toast } from "vue3-toastify";
 
 export const useGeneralStore = defineStore("general", {
   state: () => ({
-    profile: null,
     theme: "dark",
     view: "thumbnail",
     sideOpen: false,
     likedItems: [],
     seenItems: [],
     history: [],
-    playlists: [],
     searchHistory: [],
+    playlists: [],
+    profile: null,
   }),
   getters: {},
   actions: {
@@ -117,6 +117,19 @@ export const useGeneralStore = defineStore("general", {
       });
     },
     /**
+     *
+     * @param oldPlaylist
+     * @param newPlaylist
+     */
+    editPlaylist(oldPlaylist, newPlaylist) {
+      let idx = this.playlists.findIndex((pl) => pl.title === oldPlaylist);
+      if (idx > -1) this.playlists[idx] = newPlaylist;
+      localStorage.setItem("playlists", JSON.stringify(this.playlists));
+      toast(`Afspeellijst ${newPlaylist.title} opgeslagen`, {
+        position: toast.POSITION.BOTTOM_LEFT,
+      });
+    },
+    /**
      * Copy the shared playlist.
      * @param playlist
      */
@@ -133,6 +146,7 @@ export const useGeneralStore = defineStore("general", {
      * @param title title of the playlist.
      */
     deletePlaylist(title) {
+      if (!window.confirm("Weet je het zeker?")) return;
       const index = this.playlists.findIndex((p) => p.title === title);
       if (index > -1) {
         this.playlists.splice(index, 1);
@@ -197,17 +211,42 @@ export const useGeneralStore = defineStore("general", {
       localStorage.setItem("profile", JSON.stringify(profile));
     },
     /**
+     * Create JSON file with profile data.
+     */
+    exportProfile() {
+      const userData = {
+        likedItems: this.likedItems,
+        seenItems: this.seenItems,
+        history: this.history,
+        searchHistory: this.searchHistory,
+        playlists: this.playlists,
+        profile: this.profile,
+      };
+
+      const a = document.createElement("a");
+      const file = new Blob([JSON.stringify(userData, null, 2)], { type: "application/json" });
+      a.href = URL.createObjectURL(file);
+      a.download = "mijn-lekker-speuren-data.json";
+      a.click();
+    },
+    /**
      * Set localStorage from uploaded file.
      * @param userData object containing data to store.
      */
     setLocaleStorageFromFile(userData) {
-      localStorage.setItem("likedItems", JSON.stringify(userData.likedItems));
-      localStorage.setItem("seenItems", JSON.stringify(userData.seenItems));
-      localStorage.setItem("history", JSON.stringify(userData.history));
-      localStorage.setItem("searchHistory", JSON.stringify(userData.searchHistory));
-      localStorage.setItem("playlists", JSON.stringify(userData.playlists));
-      localStorage.setItem("profile", JSON.stringify(userData.profile));
-      this.getLocaleStorage();
+      try {
+        localStorage.setItem("likedItems", JSON.stringify(userData.likedItems || []));
+        localStorage.setItem("seenItems", JSON.stringify(userData.seenItems || []));
+        localStorage.setItem("history", JSON.stringify(userData.history || []));
+        localStorage.setItem("searchHistory", JSON.stringify(userData.searchHistory || []));
+        localStorage.setItem("playlists", JSON.stringify(userData.playlists || []));
+        localStorage.setItem("profile", JSON.stringify(userData.profile || null));
+        toast("Profiel succesvol geïmporteerd");
+
+        this.getLocaleStorage();
+      } catch (e) {
+        console.error(e);
+      }
     },
   },
 });
