@@ -14,7 +14,7 @@
               <i class="text-body bi bi-list fs-5"></i>
             </button>
             <RouterLink class="text-decoration-none d-flex align-items-center gap-2" to="/">
-              <img alt="Logo" src="../assets/img/detective_sicko.png" width="40px" />
+              <img alt="Logo" src="../assets/img/detective_sicko.webp" width="40" height="40" />
               <span class="d-none text-body d-md-block text-truncate">Lekker Speuren</span>
             </RouterLink>
           </div>
@@ -22,7 +22,7 @@
         <div v-if="!mobileSearch" class="col-3 d-sm-none">
           <div class="d-flex gap-3 align-items-center h-100">
             <RouterLink class="text-decoration-none d-flex align-items-center" to="/">
-              <img alt="Logo" src="../assets/img/detective_sicko.png" width="40px" />
+              <img alt="Logo" src="../assets/img/detective_sicko.webp" width="40" height="40" />
             </RouterLink>
           </div>
         </div>
@@ -192,10 +192,11 @@
                 type="button"
               >
                 <img
-                  :src="'/images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
+                  :src="'/images/profile_pics/profile-' + (profile?.picture || 0) + '.avif'"
                   alt="profile"
                   class="rounded-circle"
-                  width="100%"
+                  width="24"
+                  height="24"
                 />
               </button>
             </RouterLink>

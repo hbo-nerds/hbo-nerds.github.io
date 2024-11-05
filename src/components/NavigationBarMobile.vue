@@ -43,9 +43,9 @@
       <li v-else class="nav-item">
         <RouterLink :to="{ name: 'you' }" class="nav-link text-body">
           <img
-            width="20px"
-            class="rounded-circle mb-1"
-            :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
+            width="20"
+            class="rounded-circle mb-1 bg-body-tertiary"
+            :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.avif'"
             alt="profile"
           />
           <span class="d-block small">Jij</span>

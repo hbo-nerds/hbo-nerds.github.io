@@ -25,7 +25,7 @@
               >
                 <img
                   :alt="'profile_pic_' + i"
-                  :src="'images/profile_pics/profile-' + i + '.png'"
+                  :src="'images/profile_pics/profile-' + i + '.avif'"
                   class="w-100"
                 />
               </button>
@@ -38,7 +38,7 @@
               >
                 <img
                   :alt="'profile_pic_0'"
-                  :src="'images/profile_pics/profile-0.png'"
+                  :src="'images/profile_pics/profile-0.avif'"
                   class="w-100"
                 />
               </button>

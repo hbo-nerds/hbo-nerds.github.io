@@ -6,7 +6,7 @@
         style="aspect-ratio: 1/1"
       >
         <img
-          :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.png'"
+          :src="'images/profile_pics/profile-' + (profile?.picture || 0) + '.avif'"
           alt="profile_picture"
           class="w-75 rounded-circle"
         />
