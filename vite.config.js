@@ -9,14 +9,14 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
+      registerType: 'prompt', // Automatically check for updates
       devOptions: {
         enabled: true,
       },
-      injectRegister: "auto",
       workbox: {
-        maximumFileSizeToCacheInBytes: 3000000,
-        cleanupOutdatedCaches: true,
-        globPatterns: ["**/*.{js,css,html,ico,png,jpg,gif,svg,woff,woff2}"],
+        skipWaiting: false,  // Do not force skipWaiting automatically
+        clientsClaim: true,  // Take control of all open pages
+        maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
       },
       manifest: {
         name: "Lekker Speuren",
@@ -93,5 +93,11 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  build: {},
+  build: {
+    rollupOptions: {
+      output: {
+        inlineDynamicImports: true
+      }
+    }
+  },
 });
