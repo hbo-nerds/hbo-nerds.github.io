@@ -16,7 +16,7 @@
     <div
       class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
     >
-      <div v-for="(card, index) in randomData" :key="index" class="col">
+      <div v-for="card in randomData" :key="card.id" class="col">
         <Card :card="card" />
       </div>
     </div>

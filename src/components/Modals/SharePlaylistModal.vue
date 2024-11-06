@@ -52,7 +52,13 @@
             </div>
           </div>
           <div class="bg-black border rounded-4 p-2 d-flex gap-2">
-            <input class="form-control border-0" type="text" readonly :value="shareUrl" />
+            <input
+              id="playlist-link"
+              class="form-control border-0"
+              type="text"
+              readonly
+              :value="shareUrl"
+            />
             <button class="btn btn-primary rounded-pill" @click="copyLink">Kopieer</button>
           </div>
         </div>
@@ -87,7 +93,8 @@ const shareUrl = computed(() => {
 
   let search_params = new URLSearchParams(playlist.value["items"].map((s) => ["items", s]));
   search_params.append("title", playlist.value["title"]);
-  if (playlist.value["description"]) search_params.append("description", playlist.value["description"]);
+  if (playlist.value["description"])
+    search_params.append("description", playlist.value["description"]);
 
   const host = window.location.origin;
   return `${host}/shared-playlist?${search_params.toString()}`;
@@ -149,7 +156,7 @@ function x() {
 function whatsApp() {
   let a = document.createElement("a");
   a.target = "_blank";
-  a.href = "https://wa.me/?text=" + shareUrl.value
+  a.href = "https://wa.me/?text=" + shareUrl.value;
   a.click();
 }
 </script>

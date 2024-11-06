@@ -1,24 +1,23 @@
 <template>
   <div class="card border-0 bg-transparent position-relative">
-    <div class="row g-2">
-      <div class="col-4">
+    <div class="d-flex gap-2">
+      <div class="flex-shrink-0" style="width: 40%">
         <div
-          :class="card.type === 'stream' && card.free ? 'p-1 bg-warning' : ''"
-          class="thumbnail-wrapper position-relative rounded-3 z-1"
+          class="thumbnail-wrapper position-relative"
           @click="goToCard"
           @click.middle="goToCard('middle')"
         >
-          <img :src="imgScr" alt="thumbnail" class="w-100" />
+          <img :src="imageSrc" alt="thumbnail" class="w-100" />
           <span
-            class="badge bg-black position-absolute bottom-0 end-0 m-2"
-            style="--bs-bg-opacity: 0.75"
-            >{{ duration }}</span
+            class="badge bg-black position-absolute bottom-0 end-0"
+            style="--bs-bg-opacity: 0.75; margin: 4px; padding: 1px 4px; font-size: 10px"
+            ><small>{{ duration }}</small></span
           >
         </div>
       </div>
-      <div class="col">
+      <div class="flex-shrink-1">
         <h3
-          class="fs-6 fw-bold mb-1"
+          class="fs-8 fw-bold mb-1"
           type="button"
           @click="goToCard"
           @click.middle="goToCard('middle')"
@@ -27,36 +26,36 @@
         </h3>
 
         <div class="inline-meta text-body-secondary">
-          <span v-if="daysAgo < 14" class="small"
+          <span v-if="daysAgo < 14" class="fs-8"
             >{{ daysAgo }} {{ daysAgo > 1 ? "dagen" : "dag" }} geleden</span
           >
-          <span v-else-if="weeksAgo < 4" class="small"
+          <span v-else-if="weeksAgo < 4" class="fs-8"
             >{{ weeksAgo }} {{ weeksAgo > 1 ? "weken" : "week" }} geleden</span
           >
-          <span v-else-if="monthsAgo < 12" class="small"
+          <span v-else-if="monthsAgo < 12" class="fs-8"
             >{{ monthsAgo }} {{ monthsAgo > 1 ? "maanden" : "maand" }} geleden</span
           >
-          <span v-else class="small">{{ yearAgo }} jaar geleden</span>
-          <span v-if="card['collection']" class="small"><i class="bi bi-collection-play"></i></span>
+          <span v-else class="fs-8">{{ yearAgo }} jaar geleden</span>
+          <span v-if="card['collection']" class="fs-8"><i class="bi bi-collection-play"></i></span>
         </div>
         <div class="inline-meta text-body-secondary">
-          <span v-for="act in card['activities']?.slice(0, 1)" class="small"
+          <span v-for="act in card['activities']?.slice(0, 1)" class="fs-8"
             >{{ act.title }} {{ card["activities"]?.length > 1 ? "en meer" : "" }}</span
           >
         </div>
         <div v-if="Array.isArray(card['activity'])" class="inline-meta text-body-secondary">
-          <span v-for="act in card['activity']?.slice(0, 1)" class="small"
+          <span v-for="act in card['activity']?.slice(0, 1)" class="fs-8"
             >{{ act }} {{ card["activity"]?.length > 1 ? "en meer" : "" }}</span
           >
         </div>
         <div v-else-if="card['activity']" class="inline-meta text-body-secondary">
-          <span class="small">{{ card["activity"] }}</span>
+          <span class="fs-8">{{ card["activity"] }}</span>
         </div>
       </div>
-      <div class="col-auto">
+      <div class="flex-shrink-0">
         <button
           aria-expanded="false"
-          class="btn btn-sm rounded-circle lh-1 p-2"
+          class="btn btn-sm rounded-circle lh-1 p-1"
           data-bs-offset="0,10"
           data-bs-toggle="dropdown"
         >
@@ -105,29 +104,22 @@
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const props = defineProps({
   card: { type: Object, required: true },
 });
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, selectedCardId, playlistCardId } = storeToRefs(contentStore);
+const { selectedCardId, playlistCardId } = storeToRefs(contentStore);
 const { seenItems, likedItems } = storeToRefs(generalStore);
 
-/**
- * Look for VOD thumbnail.
- * @type {ComputedRef<unknown>}
- */
-const imgScr = computed(() => {
-  return (
-    images.value["320"][`${props.card["twitch_id"]}`] ||
-    images.value["320"][`${props.card["youtube_id"]}`] ||
-    (!props.card["twitch_id"] && !props.card["youtube_id"]
-      ? images.value["320"][`no_video`]
-      : images.value["320"][`default`])
-  );
-});
+const imageSrc = ref(null);
+const loadImage = async () => {
+  imageSrc.value = await contentStore.getCardImage(props.card);
+};
+
+onMounted(loadImage);
 
 /**
  * Convert seconds to h:m:s.
@@ -235,7 +227,7 @@ const yearAgo = computed(() => {
     visibility: hidden
 
 .inline-meta
-  line-height: 16px
+  line-height: 0.8rem
 
   span:not(:first-of-type):before
     margin: 0 4px

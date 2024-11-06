@@ -10,7 +10,9 @@
       @click.middle="goToCard('middle')"
     >
       <div class="transform-wrapper position-relative">
-        <img :src="imgScr" alt="thumbnail" class="w-100" />
+        <transition name="fade">
+          <img v-if="imageSrc" :src="imageSrc" alt="thumbnail" class="w-100" loading="lazy" />
+        </transition>
         <!-- date -->
         <span
           class="badge bg-black position-absolute top-0 start-0 m-2"
@@ -236,7 +238,7 @@ import router from "@/router/index.js";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { computed, ref } from "vue";
+import { computed, onMounted, ref, watch } from "vue";
 
 const props = defineProps({
   card: { type: Object, required: true },
@@ -244,7 +246,7 @@ const props = defineProps({
 });
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, selectedCardId, playlistCardId, shareCardId } = storeToRefs(contentStore);
+const { selectedCardId, playlistCardId, shareCardId } = storeToRefs(contentStore);
 const { seenItems, likedItems } = storeToRefs(generalStore);
 
 const canvasBtn = ref(null);
@@ -259,19 +261,13 @@ const typeClass = computed(() => {
     : "";
 });
 
-/**
- * Look for VOD thumbnail.
- * @type {ComputedRef<unknown>}
- */
-const imgScr = computed(() => {
-  return (
-    images.value["320"][`${props.card["twitch_id"]}`] ||
-    images.value["320"][`${props.card["youtube_id"]}`] ||
-    (!props.card["twitch_id"] && !props.card["youtube_id"]
-      ? images.value["320"][`no_video`]
-      : images.value["320"][`default`])
-  );
-});
+const imageSrc = ref(null);
+const loadImage = async () => {
+  imageSrc.value = await contentStore.getCardImage(props.card);
+};
+
+onMounted(loadImage);
+watch(() => props.card.id, loadImage);
 
 /**
  * Convert seconds to h:m:s.
@@ -402,6 +398,11 @@ const yearAgo = computed(() => {
 </script>
 
 <style lang="sass" scoped>
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.3s ease
+.fade-enter-from, .fade-leave-to
+  opacity: 0
+
 .meta h3
     overflow: hidden
     text-overflow: ellipsis
@@ -410,7 +411,7 @@ const yearAgo = computed(() => {
     -webkit-box-orient: vertical
 
 .inline-meta
-    line-height: 18px
+    line-height: 1.2rem
 
     span:not(:first-of-type):before
         margin: 0 4px
@@ -433,8 +434,8 @@ const yearAgo = computed(() => {
     margin-top: -1px
 
 .img-wrapper
-    aspect-ratio: 16 / 9
-    *
+    .transform-wrapper
+        aspect-ratio: 16 / 9
         transition-property: transform
         transition-timing-function: ease
         transition-duration: 100ms

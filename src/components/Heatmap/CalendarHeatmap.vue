@@ -135,6 +135,8 @@ const props = defineProps({
 const contentStore = useContentStore();
 const { selectedCardId } = storeToRefs(contentStore);
 
+const activeTooltip = ref(null);
+
 const loading = ref(false);
 const SQUARE_BORDER_SIZE = 10 / 5;
 const SQUARE_SIZE = 10 + SQUARE_BORDER_SIZE;
@@ -169,11 +171,14 @@ function getMonthLabelPosition(month) {
  * @param event
  * @param item
  */
-function showTooltip(event, item) {
+async function showTooltip(event, item) {
   if (!item.id) return;
+  activeTooltip.value = item.id;
   let el = event.target;
+  const title = await createHtml(item);
+  if (activeTooltip.value !== item.id) return;
   const tooltip = new Tooltip(el, {
-    title: createHtml(item),
+    title: title,
     html: true,
     customClass: "customTooltip",
   });
@@ -187,6 +192,7 @@ function showTooltip(event, item) {
  */
 function hideTooltip(event, item) {
   if (!item.id) return;
+  activeTooltip.value = null;
   let el = event.target;
   const tooltip = Tooltip.getInstance(el);
   if (tooltip) tooltip.dispose();
@@ -196,7 +202,7 @@ function hideTooltip(event, item) {
  * Create the HTML for inside the tooltip.
  * @param item
  */
-function createHtml(item) {
+async function createHtml(item) {
   let html = "";
   let date = item.date.toLocaleString("nl-NL", { dateStyle: "medium" });
 
@@ -208,33 +214,9 @@ function createHtml(item) {
     "<hr class='m-0'>" +
     "<div class='d-flex flex-column gap-2'>";
 
-  item.id.forEach((id) => {
-    let card = contentStore.getSingleCard(id);
-    let title = contentStore.getCardTitle(card);
-    let thumbnail = contentStore.getCardThumbnail(card);
-    let duration = contentStore.getCardDuration(card);
-
-    let temp = "<div class='d-flex flex-column gap-2'>";
-
-    temp +=
-      "<div class='position-relative'>" +
-      " <img class='w-100' alt='thumbnail' src=" +
-      thumbnail +
-      " />" +
-      " <span class='badge bg-black position-absolute bottom-0 end-0 m-1' style='--bs-bg-opacity: 0.75'>" +
-      duration +
-      "</span>" +
-      " <span class='badge bg-black position-absolute bottom-0 start-0 m-1' style='--bs-bg-opacity: 0.75'>" +
-      card.type +
-      "</span>" +
-      "</div>" +
-      "<span>" +
-      title +
-      "</span>" +
-      "</div>";
-
-    html += temp;
-  });
+  for (const id of item.id) {
+    html += await genHTMl(id);
+  }
 
   html +=
     "</div>" +
@@ -243,6 +225,34 @@ function createHtml(item) {
     "</div>";
 
   return html;
+}
+
+async function genHTMl(id) {
+  let card = contentStore.getSingleCard(id);
+  let title = contentStore.getCardTitle(card);
+  let thumbnail_new = await contentStore.getCardImage(card);
+  let duration = contentStore.getCardDuration(card);
+
+  let temp = "<div class='d-flex flex-column gap-2'>";
+
+  temp +=
+    "<div class='position-relative'>" +
+    " <img class='w-100' alt='thumbnail' src=" +
+    thumbnail_new +
+    " />" +
+    " <span class='badge bg-black position-absolute bottom-0 end-0 m-1' style='--bs-bg-opacity: 0.75'>" +
+    duration +
+    "</span>" +
+    " <span class='badge bg-black position-absolute bottom-0 start-0 m-1' style='--bs-bg-opacity: 0.75'>" +
+    card.type +
+    "</span>" +
+    "</div>" +
+    "<span>" +
+    title +
+    "</span>" +
+    "</div>";
+
+  return temp;
 }
 
 /**

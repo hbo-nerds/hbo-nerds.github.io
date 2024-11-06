@@ -1,5 +1,5 @@
 <template>
-  <div ref="scrollComponent" class="scrolling-component">
+  <div class="scrolling-component">
     <div
       class="row g-4"
       :class="
@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useContentStore } from "@/stores/content.js";
 import { useLayoutStore } from "@/stores/layout.js";
 import { useInfiniteScroll } from "@vueuse/core";
@@ -28,29 +28,35 @@ const contentStore = useContentStore();
 const layoutStore = useLayoutStore();
 const { sortedData, selectedCard } = storeToRefs(contentStore);
 
-const active = ref(false);
-const cards = ref([]);
-const start = ref(0);
-const scrollComponent = ref(null);
+const active = ref<boolean>(false);
+const cards = ref<any[]>([]);
+const start = ref<number>(0);
+const amountToAdd = 20;
 
 useInfiniteScroll(
   document.getElementById("main-content"),
   () => {
     if (active.value) loadMoreCards();
   },
-  { distance: 10 },
+  { distance: 40 },
 );
 
+/**
+ * Add new cards to infinite scroll.
+ */
 const loadMoreCards = () => {
-  let newCards = sortedData.value.slice(start.value, start.value + 20);
-  start.value += 20;
+  let newCards = sortedData.value.slice(start.value, start.value + amountToAdd);
+  start.value += amountToAdd;
   cards.value.push(...newCards);
 };
 
+/**
+ * Set first set of cards.
+ */
 function initialize() {
   start.value = 0;
-  cards.value = sortedData.value.slice(start.value, 20);
-  start.value += 20;
+  cards.value = sortedData.value.slice(start.value, amountToAdd);
+  start.value += amountToAdd;
 }
 
 onDeactivated(() => {

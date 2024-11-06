@@ -8,7 +8,8 @@ import router from "./router";
 
 import "bootstrap";
 import "vue3-toastify/dist/index.css";
-import "./scss/styles.scss";
+import "./assets/styles/bootstrap-icons.css";
+import "./assets/styles/main.scss";
 
 const app = createApp(App);
 

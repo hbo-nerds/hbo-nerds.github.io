@@ -52,7 +52,13 @@
             </div>
           </div>
           <div class="bg-black border rounded-4 p-2 d-flex gap-2">
-            <input class="form-control border-0" type="text" readonly :value="shareUrl" />
+            <input
+              id="modal-link"
+              class="form-control border-0"
+              type="text"
+              readonly
+              :value="shareUrl"
+            />
             <button class="btn btn-primary rounded-pill" @click="copyLink">Kopieer</button>
           </div>
         </div>

@@ -3,21 +3,20 @@ import { fileURLToPath, URL } from "node:url";
 import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite";
 import { VitePWA } from "vite-plugin-pwa";
-import { version } from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
-      registerType: "autoUpdate",
-      injectRegister: "auto",
-      includeAssets: ["**/*"],
       devOptions: {
         enabled: true,
       },
+      injectRegister: "auto",
       workbox: {
         maximumFileSizeToCacheInBytes: 3000000,
+        cleanupOutdatedCaches: true,
+        globPatterns: ["**/*.{js,css,html,ico,png,jpg,gif,svg,woff,woff2}"],
       },
       manifest: {
         name: "Lekker Speuren",
@@ -94,14 +93,5 @@ export default defineConfig({
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
-  build: {
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        entryFileNames: `[name].${version}.js`,
-        chunkFileNames: `[name].${version}.js`,
-        assetFileNames: `[name].${version}.[ext]`,
-      },
-    },
-  },
+  build: {},
 });

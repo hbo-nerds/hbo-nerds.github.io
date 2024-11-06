@@ -11,14 +11,18 @@
     </div>
     <div :key="card.id" class="row g-3">
       <div class="col-12 col-lg-12">
-        <img
-          :src="lowResImg"
-          :srcset="`${lowResImg} 320w, ${highResImg} 640w`"
-          alt="Thumbnail"
-          class="w-100 mb-3"
-          sizes="(max-width: 600px) 320px, 640px"
-          style="aspect-ratio: 16 / 9"
-        />
+        <transition name="fade">
+          <img
+            v-if="imageSrc"
+            :src="imageSrc"
+            :srcset="`${imageSrc} 320w, ${imageSrc.replace('320px', '640px')} 640w`"
+            alt="thumbnail"
+            class="w-100 mb-3"
+            loading="lazy"
+            sizes="(max-width: 600px) 320px, 640px"
+            style="aspect-ratio: 16 / 9"
+          />
+        </transition>
         <h5 class="fw-bold">{{ title }}</h5>
       </div>
       <!-- description -->
@@ -259,7 +263,7 @@
               class="accordion-collapse collapse"
               data-bs-parent="#accordionCollections"
             >
-              <div class="accordion-body">
+              <div class="accordion-body p-2">
                 <div v-for="card in col.items">
                   <MiniCard :card="card" class="mb-3"></MiniCard>
                 </div>
@@ -290,7 +294,7 @@ import { computed, onMounted, ref, watch } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { images, filters, selectedCardId, playlistCardId, shareCardId, getCompleteCollections } =
+const { filters, selectedCardId, playlistCardId, shareCardId, getCompleteCollections } =
   storeToRefs(contentStore);
 const { likedItems, seenItems } = storeToRefs(generalStore);
 
@@ -305,33 +309,10 @@ const card = computed(() => {
   return props.card;
 });
 
-/**
- * path to high-res thumbnail
- * @type {ComputedRef<unknown>}
- */
-const highResImg = computed(() => {
-  return (
-    images.value["640"][`${props.card["twitch_id"]}`] ||
-    images.value["640"][`${props.card["youtube_id"]}`] ||
-    (!props.card["twitch_id"] && !props.card["youtube_id"]
-      ? images.value["640"][`no_video`]
-      : images.value["640"][`default`])
-  );
-});
-
-/**
- * path to low-res thumbnail
- * @type {ComputedRef<unknown>}
- */
-const lowResImg = computed(() => {
-  return (
-    images.value["320"][`${props.card["twitch_id"]}`] ||
-    images.value["320"][`${props.card["youtube_id"]}`] ||
-    (!props.card["twitch_id"] && !props.card["youtube_id"]
-      ? images.value["320"][`no_video`]
-      : images.value["320"][`default`])
-  );
-});
+const imageSrc = ref(null);
+const loadImage = async () => {
+  imageSrc.value = await contentStore.getCardImage(props.card);
+};
 
 /**
  * Convert seconds to h:m:s.
@@ -412,12 +393,14 @@ const activities = computed(() => {
 });
 
 onMounted(() => {
+  loadImage();
   generalStore.updateHistory(card.value.id);
 });
 
 watch(
   () => card.value,
   () => {
+    loadImage();
     generalStore.updateHistory(card.value.id);
   },
 );
@@ -456,4 +439,10 @@ function searchTag(tag) {
 }
 </script>
 
-<style lang="sass" scoped></style>
+<style lang="sass" scoped>
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.3s ease
+
+.fade-enter-from, .fade-leave-to
+  opacity: 0
+</style>

@@ -1,5 +1,4 @@
 import router from "@/router/index.js";
-import { filename } from "pathe/utils";
 import { defineStore } from "pinia";
 import { toast } from "vue3-toastify";
 import og_data from "../assets/data/data.json";
@@ -9,10 +8,6 @@ export const useContentStore = defineStore("content", {
   state: () => ({
     collections: [],
     content: [],
-    images: {
-      320: [],
-      640: [],
-    },
 
     filteredData: [],
     randomData: [],
@@ -410,18 +405,48 @@ export const useContentStore = defineStore("content", {
       }
     },
     /**
-     * Return the thumbnail for a single card.
-     * @param card complete card object.
-     * @returns {*}
+     * Get card thumbnail.
+     * @param card
+     * @returns {Promise<*|null>}
      */
-    getCardThumbnail(card) {
-      return (
-        this.images["640"][`${card["twitch_id"]}`] ||
-        this.images["640"][`${card["youtube_id"]}`] ||
-        (!card["twitch_id"] && !card["youtube_id"]
-          ? this.images["640"][`no_video`]
-          : this.images["640"][`default`])
-      );
+    async getCardImage(card) {
+      const subfolders = ["stream_youtube_320px", "stream_twitch_320px", "video_youtube_320px"];
+      let imageUrl = null;
+      let imageSrc = null;
+
+      for (const folder of subfolders) {
+        let imageName = null;
+
+        // Choose the ID based on folder type
+        if (folder.includes("youtube")) {
+          imageName = card["youtube_id"];
+        } else if (folder.includes("twitch")) {
+          imageName = card["twitch_id"];
+        }
+
+        if (!imageName) continue; // Skip if the required ID is missing
+
+        try {
+          imageUrl = await import(`@/assets/img/thumbnails/${folder}/${imageName}.webp`);
+          imageSrc = imageUrl.default;
+          break;
+        } catch (error) {
+          // Continue to next folder if image is not found
+        }
+      }
+
+      // Apply fallback logic if no image was found
+      if (!imageSrc) {
+        try {
+          const fallbackImage = card["youtube_id"] || card["twitch_id"] ? "default" : "no_video";
+          const fallbackSrc = await import(
+            `@/assets/img/thumbnails/default_320px/${fallbackImage}.webp`
+          );
+          return fallbackSrc.default;
+        } catch (error) {
+          return null;
+        }
+      } else return imageSrc;
     },
     /**
      * Return the duration for a single card.
@@ -449,22 +474,6 @@ export const useContentStore = defineStore("content", {
     fetchData() {
       this.collections = og_data.collections;
       this.content = og_data.content;
-    },
-    /**
-     * Set images file names.
-     */
-    setImages() {
-      let lowResImages = import.meta.glob("@/assets/img/thumbnails/*320px/*.webp", { eager: true });
-      let highResImages = import.meta.glob("@/assets/img/thumbnails/*640px/*.webp", {
-        eager: true,
-      });
-
-      this.images["320"] = Object.fromEntries(
-        Object.entries(lowResImages).map(([key, value]) => [filename(key), value.default]),
-      );
-      this.images["640"] = Object.fromEntries(
-        Object.entries(highResImages).map(([key, value]) => [filename(key), value.default]),
-      );
     },
     /**
      * Main filter function.

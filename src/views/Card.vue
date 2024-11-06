@@ -1,7 +1,7 @@
 <template>
   <div class="container-fluid py-4">
     <div class="row gy-3 justify-content-center">
-      <div class="col-12 col-md-8 col-xl-6 mb-md-0">
+      <div class="col-12 col-md-8 col-xl-4 mb-md-0">
         <SingleCard :card="card" :show-close-btn="false"></SingleCard>
       </div>
     </div>
@@ -19,31 +19,8 @@ const card = ref(null);
 
 const contentStore = useContentStore();
 
-function updateMeta() {
-  const title = contentStore.getCardTitle(card.value);
-  const url = `${window.location.origin}/item/${card.value["id"]}`;
-  const img = contentStore.getCardThumbnail(card.value);
-  const desc = card.value.description || "Dit item heeft nog geen beschrijving.";
-  document.title = "Lekker Speuren | " + title;
-  document.querySelector('meta[name="title"]').setAttribute("content", "Lekker Speuren | " + title);
-  document
-    .querySelector('meta[property="og:title"]')
-    .setAttribute("content", "Lekker Speuren | " + title);
-  document
-    .querySelector('meta[property="twitter:title"]')
-    .setAttribute("content", "Lekker Speuren | " + title);
-  document.querySelector('meta[property="og:url"]').setAttribute("content", url);
-  document.querySelector('meta[property="twitter:url"]').setAttribute("content", url);
-  document.querySelector('meta[property="og:image"]').setAttribute("content", img);
-  document.querySelector('meta[property="twitter:image"]').setAttribute("content", img);
-  document.querySelector('meta[name="description"]').setAttribute("content", desc);
-  document.querySelector('meta[property="og:description"]').setAttribute("content", desc);
-  document.querySelector('meta[property="twitter:description"]').setAttribute("content", desc);
-}
-
 onBeforeMount(() => {
   card.value = contentStore.getSingleCard(route.params.id);
-  updateMeta();
 });
 
 onBeforeRouteUpdate((to, from) => {

@@ -14,7 +14,10 @@
       @click.middle="goToCard('middle')"
     >
       <div class="transform-wrapper position-relative">
-        <img :src="imgScr" alt="thumbnail" class="w-100" />
+        <transition name="fade">
+          <img v-if="imageSrc" :src="imageSrc" alt="thumbnail" class="w-100" loading="lazy" />
+        </transition>
+
         <span
           class="badge bg-black position-absolute bottom-0 end-0 m-2"
           style="--bs-bg-opacity: 0.75"
@@ -110,8 +113,7 @@ import router from "@/router/index.js";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { computed, onBeforeMount, ref } from "vue";
-import { toast } from "vue3-toastify";
+import { onBeforeMount, onMounted, ref } from "vue";
 
 const generalStore = useGeneralStore();
 
@@ -119,20 +121,16 @@ const props = defineProps({
   playlist: { type: Object, required: true },
 });
 const contentStore = useContentStore();
-const { images, selectedCardId, sharePlaylistTitle, editPlaylistTitle } = storeToRefs(contentStore);
+const { selectedCardId, sharePlaylistTitle, editPlaylistTitle } = storeToRefs(contentStore);
 
 const card = ref(null);
 
-const imgScr = computed(() => {
-  return card.value
-    ? images.value["320"][`${card.value["twitch_id"]}`] ||
-        images.value["320"][`${card.value["youtube_id"]}`] ||
-        (!card.value["twitch_id"] && !card.value["youtube_id"]
-          ? images.value["320"][`no_video`]
-          : images.value["320"][`default`])
-    : images.value["320"][`default`];
-});
+const imageSrc = ref(null);
+const loadImage = async () => {
+  imageSrc.value = await contentStore.getCardImage(card.value);
+};
 
+onMounted(loadImage);
 onBeforeMount(() => {
   if (props.playlist.items.length) card.value = contentStore.getSingleCard(props.playlist.items[0]);
 });
@@ -150,24 +148,14 @@ function goToCard(type = "left") {
     router.push({ name: "playlist", params: { title: props.playlist["title"] } });
   }
 }
-
-/**
- * Create playlist URL to share.
- */
-function createPlaylistUrl() {
-  let search_params = new URLSearchParams(props.playlist["items"].map((s) => ["items", s]));
-  search_params.append("title", props.playlist["title"]);
-
-  let url = window.location.origin + `/shared-playlist?${search_params.toString()}`;
-
-  navigator.clipboard.writeText(url);
-  toast("Link gekopieerd", {
-    position: toast.POSITION.BOTTOM_LEFT,
-  });
-}
 </script>
 
 <style lang="sass" scoped>
+.fade-enter-active, .fade-leave-active
+  transition: opacity 0.3s ease
+.fade-enter-from, .fade-leave-to
+  opacity: 0
+
 .meta h3
   overflow: hidden
   text-overflow: ellipsis
@@ -176,7 +164,7 @@ function createPlaylistUrl() {
   -webkit-box-orient: vertical
 
 .inline-meta
-  line-height: 16px
+  line-height: 1.2rem
 
   span:not(:first-of-type):before
     margin: 0 4px
@@ -199,101 +187,14 @@ function createPlaylistUrl() {
   margin-top: -1px
 
 .img-wrapper
-  *
+  .transform-wrapper
+    aspect-ratio: 16 / 9
     transition-property: transform
     transition-timing-function: ease
     transition-duration: 100ms
 
-  &.border-success
-    .corner-top
-      border-right-color: rgb(25, 135, 84)
-
-    .corner-bottom
-      border-top-color: rgb(25, 135, 84)
-
-    .edge-left, .edge-bottom
-      background: rgb(25, 135, 84)
-
-  &.border-yt
-    .corner-top
-      border-right-color: #FF0000
-
-    .corner-bottom
-      border-top-color: #FF0000
-
-    .edge-left, .edge-bottom
-      background: #FF0000
-
-  &.border-tw
-    .corner-top
-      border-right-color: #6441A5
-
-    .corner-bottom
-      border-top-color: #6441A5
-
-    .edge-left, .edge-bottom
-      background: #6441A5
-
   &.active
-    .corner-top, .corner-bottom,
-    .edge-left, .edge-bottom
-      transition-delay: 75ms
-
-    .corner-top
-      transform: translateY(-0.4rem) scale(1)
-
-    .corner-bottom
-      transform: translateX(0.4rem) scale(1)
-
-    .edge-left
-      transform: scaleX(1)
-
-    .edge-bottom
-      transform: scaleY(1)
-
     .transform-wrapper
-      transform: translate3d(0.4rem, -0.4rem, 0px)
       transition-delay: 75ms
-
-.corner-top
-  position: absolute
-  top: 0
-  left: 0
-  width: 0
-  height: 0
-  border-top: 0.4rem solid transparent
-  border-bottom: 0.4rem solid transparent
-  border-right: 0.4rem solid
-  transform-origin: left center
-  transform: translateY(-0.4rem) scale(0)
-
-.corner-bottom
-  position: absolute
-  bottom: 0
-  right: 0
-  width: 0
-  height: 0
-  border-left: 0.4rem solid transparent
-  border-right: 0.4rem solid transparent
-  border-top: 0.4rem solid
-  transform-origin: center bottom
-  transform: translateX(0.4rem) scale(0)
-
-.edge-left
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  transform-origin: 0 100%
-  width: 0.4rem
-  transform: scaleX(0)
-
-.edge-bottom
-  position: absolute
-  bottom: 0
-  left: 0
-  right: 0
-  transform-origin: 0 100%
-  height: 0.4rem
-  transform: scaleY(0)
+      transform: translate3d(0.4rem, -0.4rem, 0px)
 </style>

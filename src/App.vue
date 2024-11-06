@@ -1,5 +1,6 @@
 <template>
   <div class="h-100 d-flex flex-column" style="min-height: 100vh">
+    <RefreshServiceWorker />
     <NavigationBarDesktop />
     <main
       id="main-content"
@@ -36,7 +37,11 @@
         </div>
       </div>
       <div class="position-fixed bottom-0 end-0 m-3 rounded-circle bg-body" @click="toTop">
-        <button class="btn btn-dark bg-trans btn-circle rounded-circle border-0" type="button" title="Terug naar boven">
+        <button
+          class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
+          type="button"
+          title="Terug naar boven"
+        >
           <i class="bi bi-arrow-up"></i>
         </button>
       </div>
@@ -70,6 +75,7 @@ import SharePlaylistModal from "@/components/Modals/SharePlaylistModal.vue";
 import NavigationBarDesktop from "@/components/NavigationBarDesktop.vue";
 import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
 import NavigationSideBar from "@/components/NavigationSideBar.vue";
+import RefreshServiceWorker from "@/components/RefreshServiceWorker.vue";
 import SingleCard from "@/components/SingleCard.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
@@ -86,19 +92,21 @@ const generalStore = useGeneralStore();
 const { selectedCard, playlistCardId, shareCardId, sharePlaylistTitle, editPlaylistTitle } =
   storeToRefs(contentStore);
 contentStore.fetchData();
-contentStore.setImages();
 generalStore.getLocaleStorage();
 
 const showCookie = ref(false);
 
 /**
- * Set locale storage and hide cookie banner.
+ * Set locale storage and hide cookie banners.
  */
 function hideCookieBanner() {
   localStorage.setItem("isCookieAccepted", "yes");
   showCookie.value = false;
 }
 
+/**
+ * Scroll back to top.
+ */
 function toTop() {
   const el = document.getElementById("main-content");
   if (el) el.scrollTo({ top: 0, behavior: "smooth" });

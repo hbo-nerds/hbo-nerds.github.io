@@ -27,8 +27,9 @@
           type="button"
           aria-label="Verwijder"
           @click.prevent.stop="generalStore.removeSearchHistory(result.value)"
-          >Verwijder</div
         >
+          Verwijder
+        </div>
       </div>
     </li>
   </ul>
