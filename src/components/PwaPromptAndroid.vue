@@ -1,7 +1,7 @@
 <template>
   <Transition>
     <div
-      v-if="show"
+      v-if="show && !manuallyClosed"
       class="position-fixed rounded-3 bg-body bottom-0 end-0 p-3 m-3"
       style="z-index: 4; max-width: 420px"
     >
