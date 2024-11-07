@@ -40528,7 +40528,6 @@
                 }
             ],
             "twitchtracker_id": "43015916268",
-            "twitch_id": "1125590244",
             "tags": [
                 "casual"
             ],
@@ -51594,53 +51593,92 @@
             "id": "f8b0",
             "type": "stream"
         },
-      {
-        "date": "2024-10-28",
-        "time_start": "20:35:35",
-        "collection": 90,
-        "time_end": "22:56:40",
-        "titles": [
-          "Is dit 'm?! (HORROR MAAND)"
-        ],
-        "activities": [
-          {
-            "title": "Finding Frankie",
-            "duration": 1
-          },
-          {
-            "title": "Greyhill Incident",
-            "duration": 1
-          },
-          {
-            "title": "Mouth Washing",
-            "duration": 1
-          }
-        ],
-        "duration": 8465,
-        "twitch_id": "2287888511",
-        "youtube_id": "XdIkcZOD1qk",
-        "id": "019a",
-        "type": "stream"
-      },
-      {
-        "date": "2024-10-30",
-        "time_start": "20:39:47",
-        "collection": 58,
-        "time_end": "22:59:03",
-        "titles": [
-          "WE GAAN HET DOEN (HORROR MAAND)"
-        ],
-        "activities": [
-          {
-            "title": "Mortuary Assistant",
-            "duration": 1
-          }
-        ],
-        "duration": 8356,
-        "twitch_id": "2289526945",
-        "youtube_id": "copkuMxavGI",
-        "id": "a164",
-        "type": "stream"
-      }
+        {
+            "date": "2024-10-28",
+            "time_start": "20:35:35",
+            "collection": 90,
+            "time_end": "22:56:40",
+            "titles": [
+                "Is dit 'm?! (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "Finding Frankie",
+                    "duration": 1
+                },
+                {
+                    "title": "Greyhill Incident",
+                    "duration": 1
+                },
+                {
+                    "title": "Mouth Washing",
+                    "duration": 1
+                }
+            ],
+            "duration": 8465,
+            "twitch_id": "2287888511",
+            "youtube_id": "XdIkcZOD1qk",
+            "id": "019a",
+            "type": "stream"
+        },
+        {
+            "date": "2024-10-30",
+            "time_start": "20:39:47",
+            "collection": 58,
+            "time_end": "22:59:03",
+            "titles": [
+                "WE GAAN HET DOEN (HORROR MAAND)"
+            ],
+            "activities": [
+                {
+                    "title": "Mortuary Assistant",
+                    "duration": 1
+                }
+            ],
+            "duration": 8356,
+            "twitch_id": "2289526945",
+            "youtube_id": "copkuMxavGI",
+            "id": "a164",
+            "type": "stream"
+        },
+        {
+            "date": "2024-11-04",
+            "time_start": "20:36:59",
+            "time_end": "22:42:20",
+            "titles": [
+                "potje met peetje",
+                "Dino Crisis"
+            ],
+            "activities": [
+                {
+                    "title": "Dino Crisis",
+                    "duration": 1
+                }
+            ],
+            "duration": 7521,
+            "twitch_id": "2293786466",
+            "youtube_id": "copkuMxavGI",
+            "id": "e17b",
+            "type": "stream"
+        },
+        {
+            "date": "2024-11-06",
+            "time_start": "20:56:33",
+            "time_end": "23:41:55",
+            "titles": [
+                "11 JAAR LEKKER SPELEN PARTY!"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Party Jamboree",
+                    "duration": 1
+                }
+            ],
+            "duration": 9922,
+            "twitch_id": "2295407155",
+            "youtube_id": "Eo7qW-837qM",
+            "id": "7470",
+            "type": "stream"
+        }
     ]
 }
