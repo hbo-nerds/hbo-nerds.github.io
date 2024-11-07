@@ -24,7 +24,12 @@
           "
         />
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+          class="row g-4"
+          :class="
+            selectedCard
+              ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+              : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+          "
         >
           <div v-for="(item, idx) in sortedHistory" :key="idx" class="col">
             <Card :card="item" />
@@ -43,7 +48,7 @@ import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
 
 const contentStore = useContentStore();
-const { historyContent } = storeToRefs(contentStore);
+const { historyContent, selectedCard } = storeToRefs(contentStore);
 
 const sort = ref("newOld");
 const sortOptions = [

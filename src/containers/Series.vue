@@ -11,7 +11,12 @@
   />
   <div ref="scrollComponent" class="scrolling-component pb-5">
     <div
-      class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+      :class="
+        selectedCard
+          ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+          : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+      "
+      class="row g-4"
     >
       <div v-for="(serie, idx) in series" :key="idx" class="col">
         <Card :card="serie.card" :serie="serie" />
@@ -33,7 +38,7 @@ const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
 const contentStore = useContentStore();
 const layoutStore = useLayoutStore();
-const { getCompleteCollections } = storeToRefs(contentStore);
+const { getCompleteCollections, selectedCard } = storeToRefs(contentStore);
 
 const series = ref([]);
 const start = ref(0);

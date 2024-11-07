@@ -4,7 +4,7 @@
     <div v-if="showCloseBtn" class="d-flex gap-2 mb-3">
       <button
         class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter w-100"
-        @click="selectedCardId = null"
+        @click="closeCard"
         title="Sluiten"
       >
         sluiten
@@ -284,7 +284,7 @@
     <div v-if="showCloseBtn" class="d-flex gap-2 mb-3 mt-3">
       <button
         class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter w-100"
-        @click="selectedCardId = null"
+        @click="closeCard"
         title="Sluiten"
       >
         sluiten
@@ -398,6 +398,21 @@ const activities = computed(() => {
   else if (card.value.activities) return [].concat(card.value.activities);
   else return [];
 });
+
+function closeCard() {
+  selectedCardId.value = null;
+  scrollIntoView();
+}
+
+/**
+ * Scroll card into view.
+ */
+function scrollIntoView() {
+  setTimeout(() => {
+    const el = document.getElementById("card_" + props.card.id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+  }, 200);
+}
 
 onMounted(() => {
   loadImage();
