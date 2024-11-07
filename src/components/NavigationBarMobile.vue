@@ -90,23 +90,22 @@ function startSearch() {
   justify-content: center;
 }
 
+.nav-link:not(.router-link-active) > i.active {
+  display: none !important;
+}
+
+.nav-link:not(.router-link-active) > i:not(.active) {
+  display: block !important;
+}
+
+.nav-link.router-link-active > i:not(.active) {
+  display: none !important;
+}
+.nav-link.router-link-active > i.active {
+  display: block !important;
+}
 .nav-link {
   text-align: center;
   font-size: 14px;
-  &.router-link-active {
-    i:not(.active) {
-      display: none;
-    }
-    i.active {
-      display: block;
-    }
-  }
-  i.active {
-    display: none;
-  }
-}
-
-.nav-link i {
-  display: block;
 }
 </style>

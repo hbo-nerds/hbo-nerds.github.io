@@ -1,6 +1,8 @@
 <template>
   <div class="h-100 d-flex flex-column" style="min-height: 100vh">
     <RefreshServiceWorker />
+    <PwaPromptApple />
+    <PwaPromptAndroid />
     <NavigationBarDesktop />
     <main
       id="main-content"
@@ -39,8 +41,8 @@
       <div class="position-fixed bottom-0 end-0 m-3 rounded-circle bg-body" @click="toTop">
         <button
           class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
-          type="button"
           title="Terug naar boven"
+          type="button"
         >
           <i class="bi bi-arrow-up"></i>
         </button>
@@ -75,6 +77,8 @@ import SharePlaylistModal from "@/components/Modals/SharePlaylistModal.vue";
 import NavigationBarDesktop from "@/components/NavigationBarDesktop.vue";
 import NavigationBarMobile from "@/components/NavigationBarMobile.vue";
 import NavigationSideBar from "@/components/NavigationSideBar.vue";
+import PwaPromptAndroid from "@/components/PwaPromptAndroid.vue";
+import PwaPromptApple from "@/components/PwaPromptApple.vue";
 import RefreshServiceWorker from "@/components/RefreshServiceWorker.vue";
 import SingleCard from "@/components/SingleCard.vue";
 import { useContentStore } from "@/stores/content.js";

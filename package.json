@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host --port 4242",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --host",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "prettier:check": "prettier --check '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'",
     "prettier:format": "prettier --write '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'"

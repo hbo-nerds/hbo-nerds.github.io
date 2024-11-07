@@ -9,13 +9,13 @@ export default defineConfig({
   plugins: [
     vue(),
     VitePWA({
-      registerType: 'prompt', // Automatically check for updates
+      registerType: "prompt",
       devOptions: {
         enabled: true,
       },
       workbox: {
-        skipWaiting: false,  // Do not force skipWaiting automatically
-        clientsClaim: true,  // Take control of all open pages
+        skipWaiting: false, // Do not force skipWaiting automatically
+        clientsClaim: true, // Take control of all open pages
         maximumFileSizeToCacheInBytes: 6 * 1024 * 1024,
       },
       manifest: {
@@ -81,7 +81,7 @@ export default defineConfig({
             ],
           },
         ],
-        start_url: "/",
+        start_url: "./",
         theme_color: "#0f0f0f",
         background_color: "#0f0f0f",
         display: "standalone",
@@ -96,8 +96,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        inlineDynamicImports: true
-      }
-    }
+        inlineDynamicImports: true,
+      },
+    },
   },
 });
