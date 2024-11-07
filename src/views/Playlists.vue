@@ -22,7 +22,12 @@
           "
         />
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+          class="row g-4"
+          :class="
+            selectedCard
+              ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+              : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+          "
         >
           <div v-for="(item, idx) in sortedPlaylists" :key="item.title" class="col">
             <Playlist :playlist="item" :key="item.title" />
@@ -36,12 +41,15 @@
 <script setup>
 import Playlist from "@/components/Playlist.vue";
 import SortSelect from "@/components/SortSelect.vue";
+import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
 import { computed, ref } from "vue";
 
+const contentStore = useContentStore();
 const generalStore = useGeneralStore();
 const { playlists } = storeToRefs(generalStore);
+const { selectedCard } = storeToRefs(contentStore);
 
 const sort = ref("alphaAsc");
 const sortOptions = [

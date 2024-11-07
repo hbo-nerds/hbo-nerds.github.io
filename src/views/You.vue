@@ -16,9 +16,14 @@
           </RouterLink>
         </div>
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+          class="row g-4"
+          :class="
+            selectedCard
+              ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+              : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+          "
         >
-          <div v-for="item in historyContent.slice(0, itemsToShow)" class="col">
+          <div v-for="item in historyContent.slice(0, amountToShow)" class="col">
             <CardComponent :card="item" />
           </div>
           <div v-if="!historyContent.length" class="col">
@@ -41,10 +46,15 @@
           </RouterLink>
         </div>
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+          class="row g-4"
+          :class="
+            selectedCard
+              ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+              : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+          "
         >
           <div
-            v-for="(playlist, index) in playlists.slice(0, itemsToShow)"
+            v-for="(playlist, index) in playlists.slice(0, amountToShow)"
             :key="playlist.title"
             class="col"
           >
@@ -70,9 +80,14 @@
           </RouterLink>
         </div>
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+          class="row g-4"
+          :class="
+            selectedCard
+              ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+              : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+          "
         >
-          <div v-for="item in likedContent.slice(0, itemsToShow)" class="col">
+          <div v-for="item in likedContent.slice(0, amountToShow)" class="col">
             <card-component :card="item" />
           </div>
           <div v-if="!likedContent.length" class="col">
@@ -90,16 +105,22 @@ import Profile from "@/components/Profile.vue";
 import { useContentStore } from "@/stores/content.js";
 import { useGeneralStore } from "@/stores/general.js";
 import { storeToRefs } from "pinia";
-import { defineAsyncComponent, onMounted, ref } from "vue";
+import { computed, defineAsyncComponent, onMounted, ref } from "vue";
 
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { likedContent, historyContent } = storeToRefs(contentStore);
+const { likedContent, historyContent, selectedCard } = storeToRefs(contentStore);
 const { playlists } = storeToRefs(generalStore);
 
 const itemsToShow = ref(6);
 
 const CardComponent = defineAsyncComponent(() => import("@/components/Card.vue"));
+
+const amountToShow = computed(() => {
+  if (itemsToShow.value > 2) {
+    return itemsToShow.value - (selectedCard.value ? 1 : 0);
+  } else return itemsToShow.value;
+});
 
 /**
  * Check how many items to display.

@@ -34645,7 +34645,6 @@
         }
       ],
       "twitchtracker_id": "43015916268",
-      "twitch_id": "1125590244",
       "tags": ["casual"],
       "time_start": "01:11:00",
       "time_end": "04:15:00"
@@ -44070,6 +44069,40 @@
       "twitch_id": "2289526945",
       "youtube_id": "copkuMxavGI",
       "id": "a164",
+      "type": "stream"
+    },
+    {
+      "date": "2024-11-04",
+      "time_start": "20:36:59",
+      "time_end": "22:42:20",
+      "titles": ["potje met peetje", "Dino Crisis"],
+      "activities": [
+        {
+          "title": "Dino Crisis",
+          "duration": 1
+        }
+      ],
+      "duration": 7521,
+      "twitch_id": "2293786466",
+      "youtube_id": "copkuMxavGI",
+      "id": "e17b",
+      "type": "stream"
+    },
+    {
+      "date": "2024-11-06",
+      "time_start": "20:56:33",
+      "time_end": "23:41:55",
+      "titles": ["11 JAAR LEKKER SPELEN PARTY!"],
+      "activities": [
+        {
+          "title": "Mario Party Jamboree",
+          "duration": 1
+        }
+      ],
+      "duration": 9922,
+      "twitch_id": "2295407155",
+      "youtube_id": "Eo7qW-837qM",
+      "id": "7470",
       "type": "stream"
     }
   ]

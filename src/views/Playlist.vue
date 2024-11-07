@@ -63,10 +63,15 @@
         />
 
         <div
-          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
+          class="row g-4"
+          :class="
+            selectedCard
+              ? 'row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-3xl-4 row-cols-4xl-6'
+              : 'row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6'
+          "
         >
-          <div v-for="(item, idx) in sortedItems" :key="idx" class="col">
-            <Card :card="item" />
+          <div v-for="card in sortedItems" :key="card.id" class="col">
+            <Card :card="card" />
           </div>
         </div>
       </div>
@@ -85,7 +90,7 @@ import { onBeforeRouteUpdate, useRoute } from "vue-router";
 
 const generalStore = useGeneralStore();
 const contentStore = useContentStore();
-const { sharePlaylistTitle, editPlaylistTitle } = storeToRefs(contentStore);
+const { sharePlaylistTitle, editPlaylistTitle, selectedCard } = storeToRefs(contentStore);
 
 const route = useRoute();
 const items = ref([]);
