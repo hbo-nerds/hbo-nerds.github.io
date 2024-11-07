@@ -51642,26 +51642,25 @@
             "type": "stream"
         },
         {
-            "date": "2024-11-04",
+        "date": "2024-11-04",
             "time_start": "20:36:59",
-            "time_end": "22:42:20",
-            "titles": [
-                "potje met peetje",
-                "Dino Crisis"
-            ],
-            "activities": [
-                {
-                    "title": "Dino Crisis",
-                    "duration": 1
-                }
-            ],
-            "duration": 7521,
-            "twitch_id": "2293786466",
-            "youtube_id": "copkuMxavGI",
-            "id": "e17b",
-            "type": "stream"
+         "time_end": "22:42:20",
+          "titles": [
+           "potje met peetje"
+         ],
+          "activities": [
+            {
+              "title": "Dino Crisis",
+             "duration": 1
+            }
+          ],
+          "duration": 7521,
+          "twitch_id": "2293786466",
+          "youtube_id": "uiIOeIMhTMw",
+          "id": "e17b",
+          "type": "stream"
         },
-        {
+         {
             "date": "2024-11-06",
             "time_start": "20:56:33",
             "time_end": "23:41:55",
