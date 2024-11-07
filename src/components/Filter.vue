@@ -2,7 +2,7 @@
   <div class="row g-3">
     <!-- date -->
     <div class="col-sm-3">
-      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Upload datum</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Upload datum</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(date, idx) in groupedDates" :key="idx" class="pe-3">
           <input
@@ -78,7 +78,7 @@
     </div>
     <!-- type -->
     <div class="col-sm-3">
-      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Type</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Type</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(type, idx) in groupedTypes" :key="idx" class="pe-3">
           <input
@@ -103,7 +103,7 @@
     </div>
     <!-- platform -->
     <div class="col-sm-3">
-      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Platform</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Platform</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(platform, idx) in groupedPlatforms" :key="idx" class="pe-3">
           <input
@@ -128,7 +128,7 @@
     </div>
     <!-- duration -->
     <div class="col-sm-3">
-      <h4 class="fs-8 py-2 fw-lighter border-bottom mb-3">Duur</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Duur</h4>
       <div class="d-flex flex-column gap-1">
         <div v-for="(duration, idx) in groupedDuration" :key="idx" class="pe-3">
           <input
@@ -159,7 +159,7 @@
     </div>
     <!-- activity -->
     <div class="col-sm-6">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">Activiteit</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Activiteit</h4>
       <input
         :id="prefix + 'f_activity'"
         v-model="f_term"
@@ -204,7 +204,7 @@
     </div>
     <!-- tag -->
     <div class="col-sm-6">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">Tag</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Tag</h4>
       <input
         :id="prefix + 'f_tag'"
         v-model="f_tag"
@@ -261,7 +261,7 @@
     </div>
     <!-- vod -->
     <div class="col-sm-4">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">VOD</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">VOD</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input
@@ -324,7 +324,7 @@
     </div>
     <!-- general -->
     <div class="col-sm-4">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">Algemeen</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Algemeen</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input
@@ -366,7 +366,7 @@
     </div>
     <!-- sort -->
     <div class="col-sm-4">
-      <h4 class="small py-2 fw-lighter border-bottom mb-3">Sorteer</h4>
+      <h4 class="fs-8 pb-3 fw-lighter border-bottom mb-3">Sorteer</h4>
       <div class="d-flex flex-column gap-1">
         <div class="pe-3">
           <input

@@ -20,23 +20,21 @@
           </div>
         </div>
         <div v-if="!mobileSearch" class="col-3 d-sm-none">
-          <div class="d-flex gap-3 align-items-center h-100">
-            <RouterLink class="text-decoration-none d-flex align-items-center" to="/">
-              <img alt="Logo" src="../assets/img/detective_sicko.webp" width="40" height="40" />
-            </RouterLink>
-          </div>
+          <RouterLink class="text-decoration-none d-flex align-items-center" to="/">
+            <img alt="Logo" src="../assets/img/detective_sicko.webp" width="40" height="40" />
+          </RouterLink>
         </div>
         <!-- center search bar -->
         <div class="col">
           <!-- search desktop -->
-          <div class="d-none d-sm-flex gap-2 align-items-center">
+          <div class="d-none d-sm-flex gap-2 align-items-center position-relative z-3">
             <div
               :class="{ 'focus-margin': !focus }"
               class="input-group flex-nowrap position-relative"
             >
               <span
                 v-if="focus"
-                class="input-group-text rounded-start-pill border-end-0 bg-transparent pe-0"
+                class="input-group-text rounded-start-pill border-end-0 bg-body pe-0"
                 style="border-color: #1c62b9"
                 ><i class="bi bi-search"></i
               ></span>
@@ -44,7 +42,7 @@
                 v-model="search"
                 :class="[focus ? 'border-start-0 focus-border' : 'rounded-start-pill']"
                 autocomplete="off"
-                class="form-control shadow-none bg-transparent"
+                class="form-control shadow-none bg-body"
                 inputmode="search"
                 name="search"
                 placeholder="Start zoekopdracht"
@@ -68,15 +66,15 @@
               <PredictiveSearch ref="predSearch" :focus="focus" @search="searchFromPrediction" />
             </div>
 
-            <FilterModal />
+            <FilterModal :prefix="'desk-'" />
           </div>
           <!-- search mobile -->
           <div
             v-if="mobileSearch"
-            class="d-flex d-sm-none gap-2 justify-content-end align-items-center position-relative"
+            class="d-flex d-sm-none gap-2 justify-content-end align-items-center position-relative z-3"
           >
             <button
-              class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
+              class="btn btn-dark bg-body btn-circle rounded-circle border-0"
               type="button"
               title="Annuleer zoekopdracht"
               @click="mobileSearch = false"
@@ -85,7 +83,7 @@
             </button>
             <div class="input-group flex-nowrap">
               <span
-                class="input-group-text rounded-start-pill border-2 border-end-0 bg-transparent pe-0"
+                class="input-group-text rounded-start-pill border-2 border-end-0 bg-body pe-0"
                 style="border-color: #1c62b9"
                 ><i class="bi bi-search"></i
               ></span>
@@ -93,7 +91,7 @@
                 ref="mobileSearchInput"
                 v-model="search"
                 autocomplete="off"
-                class="form-control shadow-none bg-transparent rounded-end-pill border-2 border-start-0 focus-border"
+                class="form-control shadow-none bg-body rounded-end-pill border-2 border-start-0 focus-border"
                 inputmode="search"
                 name="search"
                 placeholder="Start zoekopdracht"
@@ -108,7 +106,7 @@
               />
             </div>
             <!-- filter -->
-            <FilterModal :prefix="'mob-'" />
+            <FilterModal :bg="'bg-body'" :prefix="'mob-'" />
             <PredictiveSearch ref="predSearchMob" :focus="focus" @search="searchFromPrediction" />
           </div>
         </div>
@@ -372,6 +370,7 @@
           </div>
         </div>
       </div>
+      <div v-if="focus" class="modal-backdrop fade show z-1"></div>
     </div>
   </nav>
 </template>

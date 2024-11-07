@@ -15,7 +15,7 @@
           >
         </div>
       </div>
-      <div class="flex-shrink-1">
+      <div class="flex-shrink-1 flex-grow-1">
         <h3
           class="fs-8 fw-bold mb-1"
           type="button"
@@ -55,21 +55,34 @@
       <div class="flex-shrink-0">
         <button
           aria-expanded="false"
+          aria-label="Dropdown"
           class="btn btn-sm rounded-circle lh-1 p-1"
+          data-bs-auto-close="outside"
           data-bs-offset="0,10"
           data-bs-toggle="dropdown"
+          type="button"
         >
           <i class="bi bi-three-dots-vertical"></i>
         </button>
         <ul class="dropdown-menu dropdown-menu-end border-0 rounded-3 py-0 overflow-hidden">
           <li>
             <button
-              :class="{ active: isSeen }"
+              class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+              type="button"
+              @click="generalStore.toggleLikedItem(card['id'])"
+            >
+              <i class="bi bi-hand-thumbs-up me-2"></i
+              ><span class="small">Like <i v-if="isLiked" class="ms-2 bi bi-check-lg"></i></span>
+            </button>
+          </li>
+          <li>
+            <button
               class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
               type="button"
               @click="generalStore.toggleSeenItem(card['id'])"
             >
-              <i class="bi bi-eye me-3"></i><span class="small">Gezien</span>
+              <i class="bi bi-eye me-2"></i
+              ><span class="small">Gezien <i v-if="isSeen" class="ms-2 bi bi-check-lg"></i></span>
             </button>
           </li>
           <li>
@@ -80,18 +93,18 @@
               type="button"
               @click="playlistCardId = card.id"
             >
-              <i class="bi bi-collection-play me-3"></i
-              ><span class="small">Bewaar in afspeellijst</span>
+              <i class="bi bi-bookmark me-2"></i><span class="small">Bewaar in afspeellijst</span>
             </button>
           </li>
           <li>
             <button
-              :class="{ active: isLiked }"
               class="d-block w-100 btn btn-dark border-0 rounded-0 text-start py-2"
+              data-bs-target="#share-modal"
+              data-bs-toggle="modal"
               type="button"
-              @click="generalStore.toggleLikedItem(card['id'])"
+              @click="shareCardId = card.id"
             >
-              <i class="bi bi-hand-thumbs-up me-3"></i>{{ isLiked ? "Niet leuk" : "Leuk!" }}
+              <i class="bi bi-share me-2"></i><span class="small">Delen</span>
             </button>
           </li>
         </ul>
@@ -111,7 +124,7 @@ const props = defineProps({
 });
 const contentStore = useContentStore();
 const generalStore = useGeneralStore();
-const { selectedCardId, playlistCardId } = storeToRefs(contentStore);
+const { selectedCardId, playlistCardId, shareCardId } = storeToRefs(contentStore);
 const { seenItems, likedItems } = storeToRefs(generalStore);
 
 const imageSrc = ref(null);

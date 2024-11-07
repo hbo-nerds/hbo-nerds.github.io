@@ -19,7 +19,7 @@
           class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-3xl-5 row-cols-4xl-6 g-4"
         >
           <div v-for="item in historyContent.slice(0, itemsToShow)" class="col">
-            <card-component :card="item" />
+            <CardComponent :card="item" />
           </div>
           <div v-if="!historyContent.length" class="col">
             <div>Geen geschiedenis gevonden.</div>
@@ -101,6 +101,9 @@ const itemsToShow = ref(6);
 
 const CardComponent = defineAsyncComponent(() => import("@/components/Card.vue"));
 
+/**
+ * Check how many items to display.
+ */
 function setItems() {
   const w = window.innerWidth;
   if (w < 576) itemsToShow.value = 1;

@@ -5,6 +5,7 @@
       <button
         class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter w-100"
         @click="selectedCardId = null"
+        title="Sluiten"
       >
         sluiten
       </button>
@@ -49,6 +50,7 @@
                 v-if="card.description.length > 100"
                 class="btn btn-link btn-sm"
                 @click="readMore = !readMore"
+                title="toggle meer/minder"
               >
                 ...lees {{ readMore ? "minder" : "meer" }}
               </button>
@@ -98,6 +100,7 @@
             :class="{ active: isLiked }"
             class="btn btn-dark border-0 rounded-pill text-nowrap"
             type="button"
+            title="Like"
             @click="generalStore.toggleLikedItem(card.id)"
           >
             <i class="bi bi-hand-thumbs-up me-2"></i>Like
@@ -106,6 +109,7 @@
             :class="{ active: isSeen }"
             class="btn btn-dark border-0 rounded-pill text-nowrap"
             type="button"
+            title="Gezien"
             @click="generalStore.toggleSeenItem(card.id)"
           >
             <i class="bi bi-eye me-2"></i>Gezien
@@ -115,15 +119,17 @@
             data-bs-target="#playlist-modal"
             data-bs-toggle="modal"
             type="button"
+            title="Bewaar"
             @click="playlistCardId = card.id"
           >
-            <i class="bi bi-collection-play me-2"></i>Bewaar in afspeellijst
+            <i class="bi bi-bookmark me-2"></i>Bewaar in afspeellijst
           </button>
           <button
             class="btn btn-dark border-0 rounded-pill text-nowrap"
             data-bs-target="#share-modal"
             data-bs-toggle="modal"
             type="button"
+            title="Deel"
             @click="shareCardId = card.id"
           >
             <i class="bi bi-share me-2"></i>Delen
@@ -154,7 +160,7 @@
             <div class="d-flex flex-wrap gap-2">
               <button
                 v-for="act in activities"
-                :title="`Filter on '${act.title}'`"
+                :title="`Filter op '${act.title}'`"
                 class="btn border rounded-pill text-nowrap d-flex align-items-center text-truncate"
                 @click="searchActivity(act.title)"
               >
@@ -279,6 +285,7 @@
       <button
         class="btn btn-sm btn-dark rounded-3 border-0 fw-lighter w-100"
         @click="selectedCardId = null"
+        title="Sluiten"
       >
         sluiten
       </button>

@@ -1,6 +1,7 @@
 <template>
   <button
     class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
+    :class="bg"
     :data-bs-target="'#' + prefix + 'filterModal'"
     data-bs-toggle="modal"
     title="Geavanceerde filter"
@@ -59,6 +60,7 @@ import { ref } from "vue";
 
 const props = defineProps({
   prefix: { type: String },
+  bg: { type: String },
 });
 
 const content = useContentStore();
