@@ -208,11 +208,7 @@
         <div v-if="!mobileSearch" class="d-sm-none col-auto col-sm-3">
           <div class="d-flex gap-2 align-items-center justify-content-end">
             <!-- Bmc -->
-            <a
-              href="https://www.buymeacoffee.com/superruudje"
-              target="_blank"
-              title="Buy us a coffee"
-            >
+            <a href="https://ko-fi.com/O5O815U9ES" target="_blank" title="Buy us a coffee">
               <button
                 class="btn btn-dark bg-trans btn-circle rounded-circle border-0"
                 type="button"

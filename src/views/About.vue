@@ -71,22 +71,42 @@
               <div class="mb-3">
                 <div class="small"><i class="me-2 bi bi-lightning-charge"></i>Powered by:</div>
                 <div class="d-flex align-items-center gap-2">
-                  <a target="_blank" href="https://vuejs.org/">
-                    <img width="20" src="@/assets/img/vue-icon.svg" alt="Vue icon" />
+                  <a href="https://vuejs.org/" target="_blank">
+                    <img alt="Vue icon" src="@/assets/img/vue-icon.svg" width="20" />
                   </a>
                   <span>+</span>
-                  <a target="_blank" href="https://getbootstrap.com/">
-                    <img width="20" src="@/assets/img/bootstrap-icon.png" alt="Vue icon" />
+                  <a href="https://getbootstrap.com/" target="_blank">
+                    <img alt="Vue icon" src="@/assets/img/bootstrap-icon.png" width="20" />
                   </a>
                 </div>
               </div>
 
-              <a href="https://www.buymeacoffee.com/superruudje" target="_blank">
-                <img
-                  src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
-                  alt="bmc-btn"
-                />
-              </a>
+              <div class="d-flex align-items-center gap-2">
+                <div>
+                  <a class="d-block" href="https://ko-fi.com/O5O815U9ES" target="_blank">
+                    <img
+                      alt="Buy Me a Coffee at ko-fi.com"
+                      src="../assets/svg/kofi/kofi-red.png"
+                      height="50"
+                    />
+                  </a>
+                  <small>Paypal only</small>
+                </div>
+                <div>
+                  <a
+                    class="d-block"
+                    href="https://www.buymeacoffee.com/superruudje"
+                    target="_blank"
+                  >
+                    <img
+                      alt="bmc-btn"
+                      height="50"
+                      src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
+                    />
+                  </a>
+                  <small>Credit cards only</small>
+                </div>
+              </div>
             </div>
           </div>
           <!-- Community -->

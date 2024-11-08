@@ -46,7 +46,7 @@
     </RouterLink>
     <a
       class="item btn btn-dark bg-none border-0 rounded-3 py-3"
-      href="https://www.buymeacoffee.com/superruudje"
+      href="https://ko-fi.com/O5O815U9ES"
       target="_blank"
     >
       <div class="d-flex flex-column align-items-center text-body">
@@ -135,6 +135,13 @@
         width="100%"
         alt="bmc-btn"
         src="https://img.buymeacoffee.com/button-api/?text=Buy us a coffee&emoji=☕&slug=superruudje&button_colour=FFDD00&font_colour=000000&font_family=Poppins&outline_colour=000000&coffee_colour=ffffff"
+      />
+    </a>
+    <a class="mb-3" href="https://ko-fi.com/O5O815U9ES" target="_blank">
+      <img
+        style="max-width: 240px"
+        src="../assets/svg/kofi/kofi-red.png"
+        alt="Buy Me a Coffee at ko-fi.com"
       />
     </a>
     <span class="small text-body-secondary" style="word-spacing: 1px; max-width: 240px"
