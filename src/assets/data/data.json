@@ -26975,10 +26975,6 @@
             ],
             "activities": [
                 {
-                    "title": "Resident Evil 2",
-                    "duration": 7020
-                },
-                {
                     "title": "Just Chatting",
                     "duration": 2400
                 },
@@ -27040,33 +27036,34 @@
             "time_end": "23:55:00"
         },
         {
-            "id": "0030",
-            "type": "stream",
-            "date": "2019-02-18",
-            "duration": 10200,
-            "titles": [
-                "We zijn GENAAID."
-            ],
-            "activities": [
-                {
-                    "title": "Talk Shows & Podcasts",
-                    "duration": 3300
-                },
-                {
-                    "title": "Resident Evil 2",
-                    "duration": 4200
-                },
-                {
-                    "title": "Variety",
-                    "duration": 2700
-                }
-            ],
-            "twitchtracker_id": "32804171312",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:24:00",
-            "time_end": "23:15:00"
+          "id": "0030",
+          "type": "stream",
+          "youtube_id": "c38Thp9_ttA",
+          "date": "2019-02-18",
+          "duration": 10200,
+          "titles": [
+            "We zijn GENAAID."
+          ],
+          "activities": [
+            {
+              "title": "Talk Shows & Podcasts",
+              "duration": 3300
+            },
+            {
+              "title": "Resident Evil 2",
+              "duration": 4200
+            },
+            {
+              "title": "Variety",
+              "duration": 2700
+            }
+          ],
+          "twitchtracker_id": "32804171312",
+          "tags": [
+            "main"
+          ],
+          "time_start": "20:24:00",
+          "time_end": "23:15:00"
         },
         {
             "id": "af85",
@@ -41318,27 +41315,6 @@
             "time_start": "16:45:00",
             "free": true,
             "time_end": "19:05:00"
-        },
-        {
-            "id": "144d",
-            "type": "stream",
-            "date": "2021-10-22",
-            "duration": 360,
-            "titles": [
-                "spongebob toernooi (officieel)"
-            ],
-            "activities": [
-                {
-                    "title": "Nickelodeon All-Star Brawl",
-                    "duration": 360
-                }
-            ],
-            "twitchtracker_id": "43593732316",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "15:48:00",
-            "time_end": "15:55:00"
         },
         {
             "id": "5753",
