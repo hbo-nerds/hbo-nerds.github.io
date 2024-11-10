@@ -608,7 +608,7 @@
             "duration": 431,
             "youtube_id": "SAxu1peVktc",
             "collection": [32],
-            "activity": "Half Life 2"
+            "activity": "Half-Life 2"
         },
         {
             "id": "7c3d",
@@ -628,7 +628,7 @@
             "duration": 420,
             "youtube_id": "fI9ar-DN4tM",
             "collection": [32],
-            "activity": "Half Life 2"
+            "activity": "Half-Life 2"
         },
         {
             "id": "552c",
@@ -658,7 +658,7 @@
             "duration": 687,
             "youtube_id": "vLtTjggPseA",
             "collection": [32],
-            "activity": "Half Life 2"
+            "activity": "Half-Life 2"
         },
         {
             "id": "e0fe",
@@ -1996,7 +1996,7 @@
             "duration": 271,
             "youtube_id": "KSkMsh8M5gQ",
             "collection": [74],
-            "activity": "call of duty"
+            "activity": "Call of Duty"
         },
         {
             "id": "5984",
@@ -7190,6 +7190,7 @@
             "id": "6c76",
             "type": "stream",
             "date": "2015-07-27",
+            "time_start": "19:31:20",
             "duration": 2340,
             "titles": [
                 "FIVE NIGHTS AT FREDDY'S 4 - LEKKER SPELEN LIVE"
@@ -7209,6 +7210,7 @@
             "id": "eb52",
             "type": "stream",
             "date": "2015-07-28",
+            "time_start": "16:45:11",
             "duration": 4680,
             "titles": [
                 "God of War III Remastered - Live om half 5"
@@ -7257,6 +7259,7 @@
             "id": "3f97",
             "type": "stream",
             "date": "2015-08-03",
+            "time_start": "19:30:37",
             "duration": 3660,
             "titles": [
                 "Rayman 2: The Great Escape - LEKKER SPELEN LIVE"
@@ -7373,7 +7376,7 @@
             "id": "9be5",
             "description": "Peter en Timon zeggen dat ze Monopoly gaan spelen ondanks dat ze het heel saai vinden. Eerst praten ze driekwartier lang over snacks, flippo’s, looney tunes, pokemon, grijpmachines, voetbalplaatjes en knikkers. Op het eind beginnen ze met spelen maar stoppen na een minuut omdat de tijd erop zit.",
             "type": "stream",
-            "date": "2015-08-17",
+            "date": "2015-08-24",
             "duration": 3540,
             "titles": [
                 "Monopoly - LEKKER SPELEN LIVE"
@@ -7413,6 +7416,7 @@
             "id": "cf6e",
             "type": "stream",
             "date": "2015-08-21",
+            "time_start": "16:17:42",
             "duration": 3900,
             "titles": [
                 "Call of Duty: Black Ops III (Beta) - Eerste indruk"
@@ -8163,7 +8167,7 @@
         {
             "id": "0596",
             "type": "stream",
-            "date": "2015-11-16",
+            "date": "2015-10-05",
             "duration": 3240,
             "titles": [
                 "Swords and Sandals II - LEKKER SPELEN LIVE"
@@ -8345,7 +8349,7 @@
             "duration": 606,
             "youtube_id": "qX1l-KKbVqw",
             "collection": [22],
-            "activity": "Trollface Quest: Video Memes"
+            "activity": "Troll Face Quest: Video Memes"
         },
         {
             "id": "3a77",
@@ -8627,7 +8631,7 @@
         {
             "id": "beeb",
             "type": "stream",
-            "date": "2016-01-20",
+            "date": "2015-11-23",
             "duration": 3540,
             "titles": [
                 "GTA: San Andreas - LEKKER SPELEN LIVE"
@@ -8647,7 +8651,7 @@
             "id": "3c7b",
             "type": "stream",
             "description": "Tijdens de intro worden ze wild en schreeuwen een aantal keer stelletje stinksokkies. Het doel is om een penis te tekenen en een minion baan te maken. Ook zijn ze uitgenodigd om in Frankrijk Plants vs Zombies te spelen, maar ze konden niet. Ook is hier de lekkerChill emote ontstaan, al is dit later pas echt een ding geworden.",
-            "date": "2016-01-20",
+            "date": "2015-12-14",
             "duration": 5460,
             "titles": [
                 "Line Rider - LEKKER SPELEN LIVE"
@@ -8669,7 +8673,7 @@
         {
             "id": "3722",
             "type": "stream",
-            "date": "2016-01-20",
+            "date": "2015-12-07",
             "duration": 3780,
             "collection": [70],
             "titles": [
@@ -9174,7 +9178,7 @@
         {
             "id": "9aa7",
             "type": "stream",
-            "date": "2016-03-15",
+            "date": "2016-01-18",
             "duration": 4200,
             "titles": [
                 "Jurassic Park: Operation Genesis - LEKKER SPELEN LIVE"
@@ -9250,7 +9254,8 @@
         {
             "id": "da01",
             "type": "stream",
-            "date": "2016-03-15",
+            "date": "2016-02-08",
+            "time_start": "20:36:15",
             "duration": 4200,
             "collection": [70],
             "titles": [
@@ -9558,7 +9563,7 @@
         {
             "id": "19e7",
             "type": "stream",
-            "date": "2016-05-02",
+            "date": "2016-03-21",
             "duration": 4560,
             "titles": [
                 "HITMAN - LEKKER SPELEN LIVE"
@@ -9577,7 +9582,7 @@
         {
             "id": "24fc",
             "type": "stream",
-            "date": "2016-05-02",
+            "date": "2016-03-28",
             "duration": 5760,
             "titles": [
                 "Pokkén Tournament - LEKKER SPELEN LIVE"
@@ -9596,7 +9601,7 @@
         {
             "id": "24bf",
             "type": "stream",
-            "date": "2016-05-02",
+            "date": "2016-03-14",
             "duration": 4380,
             "titles": [
                 "Zelda: Twilight Princess HD - LEKKER SPELEN LIVE"
@@ -9636,7 +9641,7 @@
             "title": "Weekend Miljonairs  - Lekker spelen",
             "duration": 600,
             "youtube_id": "Eg9HgY8i8jg",
-            "activity": "Weekend Miljonairs"
+            "activity": "Who Wants to Be a Millionaire"
         },
         {
             "id": "3e22",
@@ -9703,7 +9708,7 @@
         {
             "id": "8bb3",
             "type": "stream",
-            "date": "2016-05-23",
+            "date": "2016-04-04",
             "duration": 3240,
             "titles": [
                 "Emily Wants to Play - LEKKER SPELEN LIVE"
@@ -9889,7 +9894,7 @@
         {
             "id": "f00e",
             "type": "stream",
-            "date": "2016-06-17",
+            "date": "2016-05-02",
             "duration": 3120,
             "titles": [
                 "Who's Your Daddy? - LEKKER SPELEN LIVE"
@@ -10106,7 +10111,7 @@
         {
             "id": "d0e5",
             "type": "stream",
-            "date": "2016-08-15",
+            "date": "2016-06-23",
             "duration": 7740,
             "titles": [
                 "FILMAVONDJE: Silent Hill (2006)"
@@ -10125,7 +10130,7 @@
         {
             "id": "4d33",
             "type": "stream",
-            "date": "2016-08-15",
+            "date": "2016-06-20",
             "duration": 3660,
             "titles": [
                 "Youtubers Life - LEKKER SPELEN LIVE"
@@ -10199,7 +10204,7 @@
         {
             "id": "c5a4",
             "type": "stream",
-            "date": "2016-09-08",
+            "date": "2016-07-12",
             "duration": 1920,
             "collection": [74],
             "titles": [
@@ -10556,7 +10561,8 @@
             "date": "2016-11-28",
             "duration": 6000,
             "titles": [
-                "die gore gozers, live"
+                "die gore gozers, live",
+                "live"
             ],
             "activities": [
                 {
@@ -10630,7 +10636,8 @@
             "date": "2016-12-12",
             "duration": 10200,
             "titles": [
-                "Lekker spreken met die gekko's"
+                "Lekker spreken met die gekko's",
+                "Mario 64 goooooo"
             ],
             "activities": [
                 {
@@ -12449,7 +12456,7 @@
             "twitch_id": "148515888",
             "extra_urls": [
                 {
-                    "label": "timon dungeon keeper perspectief 13 minuten",
+                    "label": "Timon dungeon keeper perspectief 13 minuten",
                     "url": "https://www.youtube.com/watch?v=ArmL8deA3_4"
                 }
             ],
@@ -16169,7 +16176,8 @@
             "date": "2017-08-30",
             "duration": 5400,
             "titles": [
-                "jouw jongens, online"
+                "jouw jongens, online",
+                "Casual streampie met Peter en Timon"
             ],
             "activities": [
                 {
@@ -33247,7 +33255,7 @@
             "duration": 7740,
             "youtube_id": "vJG08JlD4oM",
             "titles": [
-                "Who Wants to Be a Millionaire?"
+                "Who Wants to Be a Millionaire"
             ],
             "activities": [
                 {
@@ -46141,7 +46149,7 @@
                 "Strafstream"
             ],
             "time_start": "15:22:00",
-            "description": "In deze Stream vindt Timon uit waarom slapen een goed idee is; Heeft Peter een lekker nummertje (lekkerUSA) en gaat timon huilen",
+            "description": "In deze Stream vindt Timon uit waarom slapen een goed idee is; Heeft Peter een lekker nummertje (lekkerUSA) en gaat Timon huilen",
             "time_end": "07:35:00"
         },
         {
@@ -49681,7 +49689,7 @@
                 "main"
             ],
             "duration": 6100,
-            "description": "De mannen gaan de zouten zeeen op, timon wordt overprikkeld en knalt een zooitje schepen kapot, ze geven geld uit aan een kat met 3 poten",
+            "description": "De mannen gaan de zouten zeeen op, Timon wordt overprikkeld en knalt een zooitje schepen kapot, ze geven geld uit aan een kat met 3 poten",
             "twitch_id": "2062790789",
             "youtube_id": "vl5fiBmqB3A",
             "id": "1234",
@@ -49745,7 +49753,7 @@
                 "main"
             ],
             "duration": 6106,
-            "description": "Na de videos van de fortguy yeetman sluiten ze fortnite af door een stream wie is het te spelen en een potje battle royale op het einde waar wat rare W's worden gepakt.",
+            "description": "Na de videos van de Fortguy Yeetman sluiten ze Fortnite af door een stream wie is het te spelen en een potje Battle Royale op het einde waar wat rare W's worden gepakt.",
             "twitch_id": "2067811013",
             "youtube_id": "PvaDrGubEZA",
             "id": "0182",
@@ -49805,7 +49813,7 @@
                 "main"
             ],
             "duration": 6864,
-            "description": "Peter vs timon met een enorm spannend einde waarin de classic gartfield kartfield weer te pas moet komen. Er wordt weer mario gespeeld waar het op vechten aankomt.",
+            "description": "Peter vs Timon met een enorm spannend einde waarin de classic Gartfield Kartfield weer te pas moet komen. Er wordt weer Mario gespeeld waar het op vechten aankomt.",
             "twitch_id": "2069733432",
             "youtube_id": "3XPePB7REAI",
             "id": "46cc",
@@ -49829,7 +49837,7 @@
                 "Zoek de verschillen"
             ],
             "duration": 8346,
-            "description": "Een spel zoals im on observation duty, de mannen moeten 13 rondjes halen waarin ze verschillen zoeken in de gang. Timon flipt door wat is de kans. De chat is extreem scherp zoals gewoonlijk.",
+            "description": "Een spel zoals I'm on Observation Duty, de mannen moeten 13 rondjes halen waarin ze verschillen zoeken in de gang. Timon flipt door wat is de kans. De chat is extreem scherp zoals gewoonlijk.",
             "twitch_id": "2074636910",
             "youtube_id": "rCzybHbwUVY",
             "id": "a7de",
@@ -49861,7 +49869,7 @@
                 "main"
             ],
             "duration": 14660,
-            "description": "De mannen agan all night in een dino horror shooter waarbij het de hele tijd lijkt dat ze bij de laatste eindbaas zijn. Ze vechten met een robo t-rex en een megalodon. Peter en timon willen elkaar in het echt vermoorden navy seal style",
+            "description": "De mannen gaan all night in een dino horror shooter waarbij het de hele tijd lijkt dat ze bij de laatste eindbaas zijn. Ze vechten met een robo T-Rex en een Megalodon. Peter en Timon willen elkaar in het echt vermoorden navy seal style",
             "twitch_id": "2076579081",
             "youtube_id": "5G2Y7UkASAE",
             "id": "2f90",
@@ -49884,7 +49892,7 @@
                 "casual"
             ],
             "duration": 8462,
-            "description": "Timon is sephiroth fan, ze vergelijken cloud met zijn moeder, voicecracks zijn aanwezig en er is een discussie over hoe je een spin vermoord of vrij laat",
+            "description": "Timon is Sephiroth fan, ze vergelijken Cloud met zijn moeder, voicecracks zijn aanwezig en er is een discussie over hoe je een spin vermoord of vrijlaat",
             "youtube_id": "5Hqi7WyTDtc",
             "twitch_id": "2077423779",
             "id": "5026",
@@ -50056,7 +50064,7 @@
             "duration": 5852,
             "twitch_id": "2101400669",
             "youtube_id": "xn84JLmm50o",
-            "description": "de royal rumble van het jaar met buff amongus, big mac menu en meer",
+            "description": "de Royal Rumble van het jaar met buff Among Us, Big Mac menu en meer",
             "id": "bf31",
             "type": "stream",
             "collection": [67]
@@ -50111,7 +50119,7 @@
             ],
             "duration": 6213,
             "twitch_id": "2108051273",
-            "description": "Eerst een potje mario want peach is nog niet klaar met downloaden, daarna peach maar het is een kutspel volgens de mannen",
+            "description": "Eerst een potje Mario want Peach is nog niet klaar met downloaden, daarna Peach maar het is een kutspel volgens de mannen",
             "youtube_id": "TX3cMBOHztI",
             "id": "aa0a",
             "type": "stream"
@@ -50151,7 +50159,7 @@
             ],
             "duration": 5374,
             "twitch_id": "2114569314",
-            "description": "Peter en timon spelen om de beurt als hert of jager en jagen op elkaar.",
+            "description": "Peter en Timon spelen om de beurt als hert of jager en jagen op elkaar.",
             "youtube_id": "CDj5Z-REqLI",
             "id": "4048",
             "type": "stream"
@@ -50172,7 +50180,7 @@
             "duration": 6419,
             "twitch_id": "2116322468",
             "youtube_id": "JXKmsTyloAM",
-            "description": "De mannen spelen een ouderwets potje drawing from memory, timon is vrij zuur de hele stream want peter wint vaker, op het einde een potje tegen kijkers",
+            "description": "De mannen spelen een ouderwets potje Drawing From Memory, Timon is vrij zuur de hele stream want Peter wint vaker, op het einde een potje tegen kijkers",
             "id": "6066",
             "type": "stream"
         },
@@ -50325,7 +50333,7 @@
         },
         {
             "date": "2024-05-06",
-            "description": "Peter speelt Murder House in zijn eentje. hij kloot een uur met een piano die niet werkt en speelt het spel helemaal uit",
+            "description": "Peter speelt Murder House in zijn eentje. Hij kloot een uur met een piano die niet werkt en speelt het spel helemaal uit",
             "time_start": "20:38:09",
             "time_end": "00:14:42",
             "titles": [
@@ -51608,7 +51616,7 @@
           "id": "e17b",
           "type": "stream"
         },
-         {
+        {
             "date": "2024-11-06",
             "time_start": "20:56:33",
             "time_end": "23:41:55",
@@ -51626,6 +51634,6678 @@
             "youtube_id": "Eo7qW-837qM",
             "id": "7470",
             "type": "stream"
+        },
+        {
+            "id": "24bb",
+            "type": "stream",
+            "date": "2015-05-01",
+            "time_start": "16:40:31",
+            "duration": 0,
+            "titles": [
+                "Live om half 5:  H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b222",
+            "type": "stream",
+            "date": "2015-05-04",
+            "time_start": "19:37:21",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": null,
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9128",
+            "type": "stream",
+            "date": "2015-05-04",
+            "time_start": "20:34:04",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE: Garry's mod met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Garry's Mod",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a649",
+            "type": "stream",
+            "date": "2015-05-05",
+            "time_start": "17:07:30",
+            "duration": 0,
+            "titles": [
+                "Live om half 5: HALF LIFE 2 (CO-OP)!"
+            ],
+            "activities": [
+                {
+                    "title": "Half-Life 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "989e",
+            "type": "stream",
+            "date": "2015-05-06",
+            "time_start": "16:53:38",
+            "duration": 0,
+            "titles": [
+                "Live om half 5: H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bb73",
+            "type": "stream",
+            "date": "2015-05-11",
+            "time_start": "20:34:09",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE: Mortal Kombat (classic)"
+            ],
+            "activities": [
+                {
+                    "title": "Mortal Kombat",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1dd8",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "17:18:40",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5b40",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "22:45:12",
+            "duration": 0,
+            "titles": [
+                "Mario Kart 8 (soundcheck)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3431",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "22:54:34",
+            "duration": 0,
+            "titles": [
+                "Ik ben irritant aan het testen (sorry voor de automatische spam)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "92fa",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "22:58:17",
+            "duration": 0,
+            "titles": [
+                "Ik ben irritant aan het testen (sorry voor de automatische spam)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7764",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "23:00:31",
+            "duration": 0,
+            "titles": [
+                "Ik ben irritant aan het testen (sorry voor de automatische spam)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9948",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "23:05:13",
+            "duration": 0,
+            "titles": [
+                "Ik ben irritant aan het testen (sorry voor de automatische spam)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9da8",
+            "type": "stream",
+            "date": "2015-05-12",
+            "time_start": "23:38:35",
+            "duration": 0,
+            "titles": [
+                "Mario Kart tegen kijkers (soundcheck)"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "dfc1",
+            "type": "stream",
+            "date": "2015-05-13",
+            "time_start": "22:10:59",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: BLOODBORNE (sterf/mompelsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "be17",
+            "type": "stream",
+            "date": "2015-05-14",
+            "time_start": "16:53:06",
+            "duration": 0,
+            "titles": [
+                "Super Smash Bros. tegen kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4372",
+            "type": "stream",
+            "date": "2015-05-15",
+            "time_start": "17:01:32",
+            "duration": 0,
+            "titles": [
+                "FIFA 15 tegen kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "97a8",
+            "type": "stream",
+            "date": "2015-05-15",
+            "time_start": "21:59:52",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: BLOODBORNE (sterf&mompelsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "774b",
+            "type": "stream",
+            "date": "2015-05-18",
+            "time_start": "20:31:50",
+            "duration": 0,
+            "titles": [
+                "GTA V online met kijkers! - LEKKER SPELEN LIVE "
+            ],
+            "activities": [
+                {
+                    "title": "Grand Theft Auto V",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a0a5",
+            "type": "stream",
+            "date": "2015-05-19",
+            "time_start": "16:33:00",
+            "duration": 0,
+            "titles": [
+                "Final Fantasy X/X-2 HD Remaster - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Final Fantasy X/X-2 HD Remaster",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "91cb",
+            "type": "stream",
+            "date": "2015-05-20",
+            "time_start": "17:07:14",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers - Live om half 5 (relaxation streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "aae6",
+            "type": "stream",
+            "date": "2015-05-25",
+            "time_start": "19:57:25",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE - GELUIDTEST"
+            ],
+            "activities": [
+                {
+                    "title": "",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b8ab",
+            "type": "stream",
+            "date": "2015-05-25",
+            "time_start": "20:02:24",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE - GELUIDTEST"
+            ],
+            "activities": [
+                {
+                    "title": "",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "81e6",
+            "type": "stream",
+            "date": "2015-05-25",
+            "time_start": "20:15:03",
+            "duration": 0,
+            "titles": [
+                "ROLLERCOASTER TYCOON 3 - Lekker spelen live"
+            ],
+            "activities": [
+                {
+                    "title": "RollerCoaster Tycoon 3",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6e69",
+            "type": "stream",
+            "date": "2015-05-26",
+            "time_start": "16:45:41",
+            "duration": 0,
+            "titles": [
+                "Raar Streampie"
+            ],
+            "activities": [
+                {
+                    "title": "XBox wachtscherm",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cda9",
+            "type": "stream",
+            "date": "2015-05-26",
+            "time_start": "16:45:41",
+            "duration": 0,
+            "titles": [
+                "FIFA 15 tegen kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 15",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7a65",
+            "type": "stream",
+            "date": "2015-05-27",
+            "time_start": "16:46:27",
+            "duration": 0,
+            "titles": [
+                "H1Z1 Battle Royale (hardcore) met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e032",
+            "type": "stream",
+            "date": "2015-05-29",
+            "time_start": "16:46:27",
+            "duration": 0,
+            "titles": [
+                "H1Z1 Battle Royale (hardcore) met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0443",
+            "type": "stream",
+            "date": "2015-06-02",
+            "time_start": "20:34:34",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: The Witcher 3  (casual-sessie)"
+            ],
+            "activities": [
+                {
+                    "title": "The Witcher 3: Wild Hunt",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a983",
+            "type": "stream",
+            "date": "2015-06-15",
+            "time_start": "18:05:42",
+            "duration": 0,
+            "titles": [
+                "Microsoft XBOX persconferentie (LIVE COMMENTAAR)"
+            ],
+            "activities": [
+                {
+                    "title": "E3 2015",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "905f",
+            "type": "stream",
+            "date": "2015-06-15",
+            "time_start": "23:51:02",
+            "duration": 0,
+            "titles": [
+                "Ubisoft persconferentie (LIVE COMMENTAAR)"
+            ],
+            "activities": [
+                {
+                    "title": "E3 2015",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f47c",
+            "type": "stream",
+            "date": "2015-06-16",
+            "time_start": "17:50:53",
+            "duration": 0,
+            "titles": [
+                "Nintendo persconferentie (LIVE COMMENTAAR)"
+            ],
+            "activities": [
+                {
+                    "title": "E3 2015",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ec20",
+            "type": "stream",
+            "date": "2015-06-17",
+            "time_start": "16:44:54",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7825",
+            "type": "stream",
+            "date": "2015-06-18",
+            "time_start": "17:14:20",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "97af",
+            "type": "stream",
+            "date": "2015-06-19",
+            "time_start": "16:37:45",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "255c",
+            "type": "stream",
+            "date": "2015-06-22",
+            "time_start": "19:30:21",
+            "duration": 0,
+            "titles": [
+                "Castle Crashers - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d195",
+            "type": "stream",
+            "date": "2015-06-22",
+            "time_start": "21:02:35",
+            "duration": 0,
+            "titles": [
+                "Castle Crashers - LEKKER SPELEN LIVE (Gevolgd door de live Q&A sessie!)"
+            ],
+            "activities": [
+                {
+                    "title": "Castle Crashers",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3da1",
+            "type": "stream",
+            "date": "2015-06-22",
+            "time_start": "22:02:41",
+            "duration": 0,
+            "titles": [
+                "Q&A #uitdekleren #openenbloot #heerlijk"
+            ],
+            "activities": [
+                {
+                    "title": "Castle Crashers",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "23f0",
+            "type": "stream",
+            "date": "2015-06-23",
+            "time_start": "01:01:12",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: H1Z1"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "99af",
+            "type": "stream",
+            "date": "2015-06-23",
+            "time_start": "16:39:04",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1eea",
+            "type": "stream",
+            "date": "2015-06-24",
+            "time_start": "16:23:56",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5 (muggen hier, muggen daar special)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f2d0",
+            "type": "stream",
+            "date": "2015-06-24",
+            "time_start": "22:40:52",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: BATMAN ARKHAM KNIGHT"
+            ],
+            "activities": [
+                {
+                    "title": "Batman: Arkham Knight",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6895",
+            "type": "stream",
+            "date": "2015-06-25",
+            "time_start": "16:42:36",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5 (de ebbenhout ervaring)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "322e",
+            "type": "stream",
+            "date": "2015-06-25",
+            "time_start": "20:54:15",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: Batman Arkham Knight"
+            ],
+            "activities": [
+                {
+                    "title": "Batman: Arkham Knight",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cadc",
+            "type": "stream",
+            "date": "2015-06-26",
+            "time_start": "16:33:04",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Batman: Arkham Knight",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b947",
+            "type": "stream",
+            "date": "2015-06-30",
+            "time_start": "20:07:19",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers - Rijp om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bb98",
+            "type": "stream",
+            "date": "2015-07-01",
+            "time_start": "20:07:19",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers - Rijp om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "23c8",
+            "type": "stream",
+            "date": "2015-07-01",
+            "time_start": "22:42:41",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE MARATHON: H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0bda",
+            "type": "stream",
+            "date": "2015-07-01",
+            "time_start": "23:49:38",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE MARATHON: Agar.io"
+            ],
+            "activities": [
+                {
+                    "title": "Agar.io",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e8d2",
+            "type": "stream",
+            "date": "2015-07-02",
+            "time_start": "16:33:29",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2a22",
+            "type": "stream",
+            "date": "2015-07-02",
+            "time_start": "16:46:16",
+            "duration": 0,
+            "titles": [
+                "Super Mario 3 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d5d6",
+            "type": "stream",
+            "date": "2015-07-03",
+            "time_start": "16:31:28",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers!  -  Lauw om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8dbf",
+            "type": "stream",
+            "date": "2015-07-08",
+            "time_start": "22:20:34",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: H1Z1 (mompelsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bdcd",
+            "type": "stream",
+            "date": "2015-07-09",
+            "time_start": "16:36:55",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5c05",
+            "type": "stream",
+            "date": "2015-07-10",
+            "time_start": "16:33:36",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8680",
+            "type": "stream",
+            "date": "2015-07-10",
+            "time_start": "20:29:51",
+            "duration": 0,
+            "titles": [
+                "Lethal League! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Lethal League",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1f6c",
+            "type": "stream",
+            "date": "2015-07-10",
+            "time_start": "22:31:34",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: Super Meat Boy"
+            ],
+            "activities": [
+                {
+                    "title": "Super Meat Boy",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "efbb",
+            "type": "stream",
+            "date": "2015-07-10",
+            "time_start": "23:56:35",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: Super Meat Boy (casual streampie)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Meat Boy",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a1b1",
+            "type": "stream",
+            "date": "2015-07-12",
+            "time_start": "00:21:33",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: H1Z1!"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bb12",
+            "type": "stream",
+            "date": "2015-07-12",
+            "time_start": "15:00:49",
+            "duration": 0,
+            "titles": [
+                "Team Battle Royale - Serious Game Guys"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ca0d",
+            "type": "stream",
+            "date": "2015-07-15",
+            "time_start": "16:51:28",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8d2f",
+            "type": "stream",
+            "date": "2015-07-16",
+            "time_start": "16:32:00",
+            "duration": 0,
+            "titles": [
+                "Yoshi's Woolly World - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Yoshi's Woolly World",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e784",
+            "type": "stream",
+            "date": "2015-07-16",
+            "time_start": "19:46:56",
+            "duration": 0,
+            "titles": [
+                "The Stanley Parable - SUBSCRIBER STREAM vanavond om 20:00!"
+            ],
+            "activities": [
+                {
+                    "title": "The Stanley Parable",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b956",
+            "type": "stream",
+            "date": "2015-07-17",
+            "time_start": "16:49:19",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4772",
+            "type": "stream",
+            "date": "2015-07-17",
+            "time_start": "19:39:54",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers! - streamen met timen"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1586",
+            "type": "stream",
+            "date": "2015-07-21",
+            "time_start": "16:43:36",
+            "duration": 0,
+            "titles": [
+                "Pokémon (Red) - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Pokémon Red/Blue",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bfa7",
+            "type": "stream",
+            "date": "2015-07-21",
+            "time_start": "17:13:35",
+            "duration": 0,
+            "titles": [
+                "H1Z1 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9282",
+            "type": "stream",
+            "date": "2015-07-21",
+            "time_start": "21:36:41",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: H1Z1"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2ba8",
+            "type": "stream",
+            "date": "2015-07-22",
+            "time_start": "18:42:31",
+            "duration": 0,
+            "titles": [
+                "H1Z1 -  Late but great #avondstreampie"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d164",
+            "type": "stream",
+            "date": "2015-07-23",
+            "time_start": "16:31:10",
+            "duration": 0,
+            "titles": [
+                "Yoshi's Woolly World -  Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Yoshi's Woolly World",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e7b7",
+            "type": "stream",
+            "date": "2015-07-24",
+            "time_start": "16:35:07",
+            "duration": 0,
+            "titles": [
+                "H1Z1 - Kut stream"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b43e",
+            "type": "stream",
+            "date": "2015-07-27",
+            "time_start": "21:22:57",
+            "duration": 0,
+            "titles": [
+                "H1Z1 - Afterparty"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3b40",
+            "type": "stream",
+            "date": "2015-07-29",
+            "time_start": "16:42:14",
+            "duration": 0,
+            "titles": [
+                "Heartstone - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "abb5",
+            "type": "stream",
+            "date": "2015-07-29",
+            "time_start": "16:52:07",
+            "duration": 0,
+            "titles": [
+                "Hearthstone - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3630",
+            "type": "stream",
+            "date": "2015-07-29",
+            "time_start": "17:39:23",
+            "duration": 0,
+            "titles": [
+                "H1Z1- Stijf om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Hearthstone: Heroes of Warcraft",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4dc4",
+            "type": "stream",
+            "date": "2015-07-30",
+            "time_start": "17:22:45",
+            "duration": 0,
+            "titles": [
+                "The Forest - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "The Forest",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bef3",
+            "type": "stream",
+            "date": "2015-07-31",
+            "time_start": "16:48:04",
+            "duration": 0,
+            "titles": [
+                "H1Z1 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "The Forest",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f7bb",
+            "type": "stream",
+            "date": "2015-08-01",
+            "time_start": "00:25:24",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: H1Z1  (casual mompelsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3451",
+            "type": "stream",
+            "date": "2015-08-04",
+            "time_start": "17:03:35",
+            "duration": 0,
+            "titles": [
+                "#xboxgamescom - live commentaar"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e0a5",
+            "type": "stream",
+            "date": "2015-08-04",
+            "time_start": "17:50:03",
+            "duration": 0,
+            "titles": [
+                "Super Smash Bros. Toernooi!"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6796",
+            "type": "stream",
+            "date": "2015-08-05",
+            "time_start": "16:39:58",
+            "duration": 0,
+            "titles": [
+                "Super Smash Bros. Toernooi!"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "add0",
+            "type": "stream",
+            "date": "2015-08-05",
+            "time_start": "21:36:41",
+            "duration": 0,
+            "titles": [
+                "Peter speelt: H1Z1"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "740f",
+            "type": "stream",
+            "date": "2015-08-06",
+            "time_start": "16:32:37",
+            "duration": 0,
+            "titles": [
+                "H1Z1 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "83ba",
+            "type": "stream",
+            "date": "2015-08-07",
+            "time_start": "16:31:28",
+            "duration": 4135,
+            "titles": [
+                "Super Smash Toernooi!"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 4135
+                }
+            ]
+        },
+        {
+            "id": "f451",
+            "type": "stream",
+            "date": "2015-08-10",
+            "time_start": "21:36:53",
+            "duration": 216,
+            "titles": [
+                "Peter speelt: H1Z1 (mompelsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 216
+                }
+            ]
+        },
+        {
+            "id": "df06",
+            "type": "stream",
+            "date": "2015-08-10",
+            "time_start": "22:59:51",
+            "duration": 1774,
+            "titles": [
+                "Peter speelt: H1Z1"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 1774
+                }
+            ]
+        },
+        {
+            "id": "9e25",
+            "type": "stream",
+            "date": "2015-08-11",
+            "time_start": "21:36:53",
+            "duration": 2626,
+            "titles": [
+                "Peter speelt: H1Z1 (mompelsessie)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 2626
+                }
+            ]
+        },
+        {
+            "id": "e1f7",
+            "type": "stream",
+            "date": "2015-08-12",
+            "time_start": "16:38:54",
+            "duration": 3311,
+            "titles": [
+                "Speedrunners- Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "SpeedRunners",
+                    "duration": 3311
+                }
+            ]
+        },
+        {
+            "id": "1e1a",
+            "type": "stream",
+            "date": "2015-08-13",
+            "time_start": "16:47:17",
+            "duration": 3653,
+            "titles": [
+                "H1Z1 -  Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3653
+                }
+            ]
+        },
+        {
+            "id": "d6c0",
+            "type": "stream",
+            "date": "2015-08-14",
+            "time_start": "17:03:02",
+            "duration": 3643,
+            "titles": [
+                "H1Z1 -  Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3643
+                }
+            ]
+        },
+        {
+            "id": "efbd",
+            "type": "stream",
+            "date": "2015-08-17",
+            "time_start": "19:34:06",
+            "duration": 3452,
+            "titles": [
+                "Monopoly... - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Monopoly",
+                    "duration": 3452
+                }
+            ]
+        },
+        {
+            "id": "4ff0",
+            "type": "stream",
+            "date": "2015-08-18",
+            "time_start": "16:49:28",
+            "duration": 3365,
+            "titles": [
+                "Pac-Man Championship Edition DX - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Pac-Man Championship Edition DX",
+                    "duration": 3365
+                }
+            ]
+        },
+        {
+            "id": "15e8",
+            "type": "stream",
+            "date": "2015-08-19",
+            "time_start": "16:37:48",
+            "duration": 225,
+            "titles": [
+                "H1Z1 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 225
+                }
+            ]
+        },
+        {
+            "id": "5717",
+            "type": "stream",
+            "date": "2015-08-20",
+            "time_start": "16:16:54",
+            "duration": 1252,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1252
+                }
+            ]
+        },
+        {
+            "id": "2c08",
+            "type": "stream",
+            "date": "2015-08-20",
+            "time_start": "16:51:11",
+            "duration": 2987,
+            "titles": [
+                "SUPER SMASH TOERNOOI - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 2987
+                }
+            ]
+        },
+        {
+            "id": "7e10",
+            "type": "stream",
+            "date": "2015-08-25",
+            "time_start": "16:37:48",
+            "duration": 6489,
+            "titles": [
+                "H1Z1 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 6489
+                }
+            ]
+        },
+        {
+            "id": "e2ac",
+            "type": "stream",
+            "date": "2015-08-26",
+            "time_start": "16:20:37",
+            "duration": 4075,
+            "titles": [
+                "H1Z1 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4075
+                }
+            ]
+        },
+        {
+            "id": "928b",
+            "type": "stream",
+            "date": "2015-08-27",
+            "time_start": "16:35:37",
+            "duration": 1592,
+            "titles": [
+                "LEKKER SPREKEN LIVE (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1592
+                }
+            ]
+        },
+        {
+            "id": "a490",
+            "type": "stream",
+            "date": "2015-08-27",
+            "time_start": "17:08:33",
+            "duration": 3292,
+            "titles": [
+                "H1Z1 met kijkers - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3292
+                }
+            ]
+        },
+        {
+            "id": "5a4f",
+            "type": "stream",
+            "date": "2015-08-28",
+            "time_start": "17:08:33",
+            "duration": 3292,
+            "titles": [
+                "H1Z1 met kijkers - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3292
+                }
+            ]
+        },
+        {
+            "id": "4b98",
+            "type": "stream",
+            "date": "2015-09-01",
+            "time_start": "16:50:40",
+            "duration": 3086,
+            "titles": [
+                "Pokémon (live opname) - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Pokémon Red/Blue",
+                    "duration": 3086
+                }
+            ]
+        },
+        {
+            "id": "9588",
+            "type": "stream",
+            "date": "2015-09-02",
+            "time_start": "16:32:56",
+            "duration": 2568,
+            "titles": [
+                "TROLLFACE QUEST LIVE - Memestream"
+            ],
+            "activities": [
+                {
+                    "title": "Trollface Quest: Unlucky",
+                    "duration": 2568
+                }
+            ]
+        },
+        {
+            "id": "5bae",
+            "type": "stream",
+            "date": "2015-09-03",
+            "time_start": "16:17:18",
+            "duration": 1104,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1104
+                }
+            ]
+        },
+        {
+            "id": "f436",
+            "type": "stream",
+            "date": "2015-09-04",
+            "time_start": "16:16:43",
+            "duration": 4409,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4409
+                }
+            ]
+        },
+        {
+            "id": "2ce8",
+            "type": "stream",
+            "date": "2015-09-08",
+            "time_start": "16:14:25",
+            "duration": 5886,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 5886
+                }
+            ]
+        },
+        {
+            "id": "5f1f",
+            "type": "stream",
+            "date": "2015-09-09",
+            "time_start": "16:24:46",
+            "duration": 4241,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4241
+                }
+            ]
+        },
+        {
+            "id": "fcec",
+            "type": "stream",
+            "date": "2015-09-10",
+            "time_start": "16:34:13",
+            "duration": 1668,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1668
+                }
+            ]
+        },
+        {
+            "id": "cc2e",
+            "type": "stream",
+            "date": "2015-09-10",
+            "time_start": "17:05:17",
+            "duration": 2029,
+            "titles": [
+                "H1Z1 met kijkers! - Lijp om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 2029
+                }
+            ]
+        },
+        {
+            "id": "beaa",
+            "type": "stream",
+            "date": "2015-09-11",
+            "time_start": "17:14:43",
+            "duration": 7414,
+            "titles": [
+                "Fifa 16 (demo) - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 7414
+                }
+            ]
+        },
+        {
+            "id": "0721",
+            "type": "stream",
+            "date": "2015-09-14",
+            "time_start": "19:30:57",
+            "duration": 3734,
+            "titles": [
+                "Super Mario Maker - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 3734
+                }
+            ]
+        },
+        {
+            "id": "2b4b",
+            "type": "stream",
+            "date": "2015-09-15",
+            "time_start": "16:26:47",
+            "duration": 4235,
+            "titles": [
+                "Super Mario Maker - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 4235
+                }
+            ]
+        },
+        {
+            "id": "4b05",
+            "type": "stream",
+            "date": "2015-09-16",
+            "time_start": "16:25:30",
+            "duration": 1108,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1108
+                }
+            ]
+        },
+        {
+            "id": "21e6",
+            "type": "stream",
+            "date": "2015-09-16",
+            "time_start": "16:47:35",
+            "duration": 2853,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 2853
+                }
+            ]
+        },
+        {
+            "id": "91e5",
+            "type": "stream",
+            "date": "2015-09-18",
+            "time_start": "16:20:33",
+            "duration": 3969,
+            "titles": [
+                "DOTA 2 met kijkers! - Streamen met Tiemen"
+            ],
+            "activities": [
+                {
+                    "title": "Dota 2",
+                    "duration": 3969
+                }
+            ]
+        },
+        {
+            "id": "6e57",
+            "type": "stream",
+            "date": "2015-09-22",
+            "time_start": "16:22:39",
+            "duration": 4396,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4396
+                }
+            ]
+        },
+        {
+            "id": "813f",
+            "type": "stream",
+            "date": "2015-09-22",
+            "time_start": "22:41:07",
+            "duration": 975,
+            "titles": [
+                "Saaie commentaarloze stream (vermaak jezelf sessie)"
+            ],
+            "activities": [
+                {
+                    "title": "Metal Gear Solid V: The Phantom Pain",
+                    "duration": 975
+                }
+            ]
+        },
+        {
+            "id": "42b4",
+            "type": "stream",
+            "date": "2015-09-23",
+            "time_start": "16:20:57",
+            "duration": 3481,
+            "titles": [
+                "Saaie commentaarloze stream"
+            ],
+            "activities": [
+                {
+                    "title": "Metal Gear Solid V: The Phantom Pain",
+                    "duration": 3481
+                }
+            ]
+        },
+        {
+            "id": "58da",
+            "type": "stream",
+            "date": "2015-09-23",
+            "time_start": "17:19:12",
+            "duration": 692,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5 (baal sessie)"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 692
+                }
+            ]
+        },
+        {
+            "id": "ff60",
+            "type": "stream",
+            "date": "2015-09-24",
+            "time_start": "16:33:43",
+            "duration": 5108,
+            "titles": [
+                "H1Z1 met kijkers! - SUPERGEINIG"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 5108
+                }
+            ]
+        },
+        {
+            "id": "0704",
+            "type": "stream",
+            "date": "2015-09-25",
+            "time_start": "15:57:55",
+            "duration": 1048,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1048
+                }
+            ]
+        },
+        {
+            "id": "bed6",
+            "type": "stream",
+            "date": "2015-09-25",
+            "time_start": "16:35:32",
+            "duration": 4358,
+            "titles": [
+                "H1Z1 met kijkers! - Lachend het weekend in"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4358
+                }
+            ]
+        },
+        {
+            "id": "0f5e",
+            "type": "stream",
+            "date": "2015-09-29",
+            "time_start": "17:13:25",
+            "duration": 1743,
+            "titles": [
+                "SUPER MARIO MAKER - Levels van kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 1743
+                }
+            ]
+        },
+        {
+            "id": "74dc",
+            "type": "stream",
+            "date": "2015-09-29",
+            "time_start": "23:18:33",
+            "duration": 4946,
+            "titles": [
+                "Unreal Tournament - Saai streampie"
+            ],
+            "activities": [
+                {
+                    "title": "Unreal Tournament",
+                    "duration": 4946
+                }
+            ]
+        },
+        {
+            "id": "7e68",
+            "type": "stream",
+            "date": "2015-09-30",
+            "time_start": "16:36:11",
+            "duration": 4045,
+            "titles": [
+                "Unreal Tournament met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Unreal Tournament",
+                    "duration": 4045
+                }
+            ]
+        },
+        {
+            "id": "7d48",
+            "type": "stream",
+            "date": "2015-10-01",
+            "time_start": "16:18:27",
+            "duration": 1244,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1244
+                }
+            ]
+        },
+        {
+            "id": "a4e9",
+            "type": "stream",
+            "date": "2015-10-01",
+            "time_start": "16:42:17",
+            "duration": 4443,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4443
+                }
+            ]
+        },
+        {
+            "id": "61a3",
+            "type": "stream",
+            "date": "2015-10-02",
+            "time_start": "16:33:39",
+            "duration": 3331,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3331
+                }
+            ]
+        },
+        {
+            "id": "8657",
+            "type": "stream",
+            "date": "2015-10-06",
+            "time_start": "16:36:11",
+            "duration": 4045,
+            "titles": [
+                "Unreal Tournament met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Unreal Tournament",
+                    "duration": 4045
+                }
+            ]
+        },
+        {
+            "id": "267f",
+            "type": "stream",
+            "date": "2015-10-07",
+            "time_start": "14:58:31",
+            "duration": 40212,
+            "titles": [
+                "FIFA 16 MARATHON - Lekker spelen no-live "
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 40212
+                }
+            ]
+        },
+        {
+            "id": "fbda",
+            "type": "stream",
+            "date": "2015-10-08",
+            "time_start": "16:15:32",
+            "duration": 1620,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1620
+                }
+            ]
+        },
+        {
+            "id": "51fb",
+            "type": "stream",
+            "date": "2015-10-08",
+            "time_start": "16:47:18",
+            "duration": 3585,
+            "titles": [
+                "FIFA 16 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 3585
+                }
+            ]
+        },
+        {
+            "id": "1d1e",
+            "type": "stream",
+            "date": "2015-10-09",
+            "time_start": "16:29:28",
+            "duration": 4510,
+            "titles": [
+                "H1Z1 met kijkers - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4510
+                }
+            ]
+        },
+        {
+            "id": "fd22",
+            "type": "stream",
+            "date": "2015-10-12",
+            "time_start": "20:39:49",
+            "duration": 4224,
+            "titles": [
+                "Bully: Scholarship Edition - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Bully: Scholarship Edition",
+                    "duration": 4224
+                }
+            ]
+        },
+        {
+            "id": "d014",
+            "type": "stream",
+            "date": "2015-10-13",
+            "time_start": "16:28:02",
+            "duration": 2122,
+            "titles": [
+                "Streamen met Tiemen - Choice Chamber"
+            ],
+            "activities": [
+                {
+                    "title": "Choice Chamber",
+                    "duration": 2122
+                }
+            ]
+        },
+        {
+            "id": "f2a3",
+            "type": "stream",
+            "date": "2015-10-13",
+            "time_start": "17:03:55",
+            "duration": 3197,
+            "titles": [
+                "Potje Fifaaaaa"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 3197
+                }
+            ]
+        },
+        {
+            "id": "b3bd",
+            "type": "stream",
+            "date": "2015-10-14",
+            "time_start": "16:08:54",
+            "duration": 5752,
+            "titles": [
+                "Potje FIFA met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 5752
+                }
+            ]
+        },
+        {
+            "id": "d610",
+            "type": "stream",
+            "date": "2015-10-15",
+            "time_start": "16:09:35",
+            "duration": 1644,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1644
+                }
+            ]
+        },
+        {
+            "id": "5d01",
+            "type": "stream",
+            "date": "2015-10-15",
+            "time_start": "16:43:13",
+            "duration": 4614,
+            "titles": [
+                "H1Z1 met kijkers! - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4614
+                }
+            ]
+        },
+        {
+            "id": "01df",
+            "type": "stream",
+            "date": "2015-10-16",
+            "time_start": "16:20:53",
+            "duration": 5422,
+            "titles": [
+                "Lekker spelen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "LittleBigPlanet 3",
+                    "duration": 5422
+                }
+            ]
+        },
+        {
+            "id": "bb26",
+            "type": "stream",
+            "date": "2015-10-16",
+            "time_start": "20:57:07",
+            "duration": 6055,
+            "titles": [
+                "Peter speelt: Shovel Knight"
+            ],
+            "activities": [
+                {
+                    "title": "Shovel Knight",
+                    "duration": 6055
+                }
+            ]
+        },
+        {
+            "id": "8ffe",
+            "type": "stream",
+            "date": "2015-10-19",
+            "time_start": "19:30:01",
+            "duration": 3773,
+            "titles": [
+                "Zoo Tycoon 2 - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Zoo Tycoon 2",
+                    "duration": 3773
+                }
+            ]
+        },
+        {
+            "id": "4233",
+            "type": "stream",
+            "date": "2015-10-20",
+            "time_start": "16:55:07",
+            "duration": 2808,
+            "titles": [
+                "voetballn"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 2808
+                }
+            ]
+        },
+        {
+            "id": "581e",
+            "type": "stream",
+            "date": "2015-10-21",
+            "time_start": "16:53:15",
+            "duration": 3986,
+            "titles": [
+                "Guitar Hero Live (om half 5)"
+            ],
+            "activities": [
+                {
+                    "title": "Guitar Hero Live",
+                    "duration": 3986
+                }
+            ]
+        },
+        {
+            "id": "b32f",
+            "type": "stream",
+            "date": "2015-10-22",
+            "time_start": "16:09:32",
+            "duration": 1488,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1488
+                }
+            ]
+        },
+        {
+            "id": "12a7",
+            "type": "stream",
+            "date": "2015-10-22",
+            "time_start": "16:43:43",
+            "duration": 3485,
+            "titles": [
+                "Unreal Tournament met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Unreal Tournament",
+                    "duration": 3485
+                }
+            ]
+        },
+        {
+            "id": "3e19",
+            "type": "stream",
+            "date": "2015-10-23",
+            "time_start": "16:07:55",
+            "duration": 4945,
+            "titles": [
+                "Lekker potje met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 4945
+                }
+            ]
+        },
+        {
+            "id": "311b",
+            "type": "stream",
+            "date": "2015-10-26",
+            "time_start": "19:31:01",
+            "duration": 7535,
+            "titles": [
+                "Bubble Trouble - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Bubble Trouble",
+                    "duration": 7535
+                }
+            ]
+        },
+        {
+            "id": "b291",
+            "type": "stream",
+            "date": "2015-10-26",
+            "time_start": "21:47:02",
+            "duration": 7873,
+            "titles": [
+                "Afterparty"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 7873
+                }
+            ]
+        },
+        {
+            "id": "4faf",
+            "type": "stream",
+            "date": "2015-10-27",
+            "time_start": "16:47:59",
+            "duration": 3439,
+            "titles": [
+                "Overleven met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3439
+                }
+            ]
+        },
+        {
+            "id": "50e1",
+            "type": "stream",
+            "date": "2015-10-27",
+            "time_start": "17:59:36",
+            "duration": 6316,
+            "titles": [
+                "Playstation Paris Games Week Conferentie (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 6316
+                }
+            ]
+        },
+        {
+            "id": "a955",
+            "type": "stream",
+            "date": "2015-10-28",
+            "time_start": "16:22:12",
+            "duration": 4380,
+            "titles": [
+                "Even dollen met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Penarium",
+                    "duration": 4380
+                }
+            ]
+        },
+        {
+            "id": "21e7",
+            "type": "stream",
+            "date": "2015-10-28",
+            "time_start": "22:13:21",
+            "duration": 2494,
+            "titles": [
+                "Spelen met die Peter"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 2494
+                }
+            ]
+        },
+        {
+            "id": "02a3",
+            "type": "stream",
+            "date": "2015-10-28",
+            "time_start": "23:03:10",
+            "duration": 3668,
+            "titles": [
+                "Een level maken voor Timen"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 3668
+                }
+            ]
+        },
+        {
+            "id": "16fa",
+            "type": "stream",
+            "date": "2015-10-29",
+            "time_start": "16:17:13",
+            "duration": 1696,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1696
+                }
+            ]
+        },
+        {
+            "id": "5de2",
+            "type": "stream",
+            "date": "2015-10-29",
+            "time_start": "16:47:59",
+            "duration": 3439,
+            "titles": [
+                "Overleven met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3439
+                }
+            ]
+        },
+        {
+            "id": "756c",
+            "type": "stream",
+            "date": "2015-10-30",
+            "time_start": "16:19:22",
+            "duration": 5005,
+            "titles": [
+                "Spelen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 5005
+                }
+            ]
+        },
+        {
+            "id": "7dc2",
+            "type": "stream",
+            "date": "2015-10-30",
+            "time_start": "21:13:57",
+            "duration": 7880,
+            "titles": [
+                "verantwoordelijkheden ontlopen met peter"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 7880
+                }
+            ]
+        },
+        {
+            "id": "3bf5",
+            "type": "stream",
+            "date": "2015-10-30",
+            "time_start": "23:31:05",
+            "duration": 5052,
+            "titles": [
+                "Een level voor timon maken"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 5052
+                }
+            ]
+        },
+        {
+            "id": "2f7e",
+            "type": "stream",
+            "date": "2015-11-02",
+            "time_start": "19:36:30",
+            "duration": 3644,
+            "titles": [
+                "The SpongeBob SquarePants: The Movie - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "SpongeBob SquarePants: The Movie",
+                    "duration": 3644
+                }
+            ]
+        },
+        {
+            "id": "72c9",
+            "type": "stream",
+            "date": "2015-11-02",
+            "time_start": "20:39:51",
+            "duration": 4234,
+            "titles": [
+                "SpongeBob SquarePants: The Movie - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "SpongeBob SquarePants: The Movie",
+                    "duration": 4234
+                }
+            ]
+        },
+        {
+            "id": "cc31",
+            "type": "stream",
+            "date": "2015-11-02",
+            "time_start": "22:00:09",
+            "duration": 6365,
+            "titles": [
+                "Afterparty potje"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 6365
+                }
+            ]
+        },
+        {
+            "id": "af04",
+            "type": "stream",
+            "date": "2015-11-03",
+            "time_start": "16:36:14",
+            "duration": 3856,
+            "titles": [
+                "Worstelen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K18",
+                    "duration": 3856
+                }
+            ]
+        },
+        {
+            "id": "c2aa",
+            "type": "stream",
+            "date": "2015-11-04",
+            "time_start": "16:30:59",
+            "duration": 4101,
+            "titles": [
+                "super mario, super leuk."
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 4101
+                }
+            ]
+        },
+        {
+            "id": "1b90",
+            "type": "stream",
+            "date": "2015-11-04",
+            "time_start": "22:47:07",
+            "duration": 4159,
+            "titles": [
+                "potje met peter"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4159
+                }
+            ]
+        },
+        {
+            "id": "328b",
+            "type": "stream",
+            "date": "2015-11-05",
+            "time_start": "16:21:18",
+            "duration": 1628,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1628
+                }
+            ]
+        },
+        {
+            "id": "0c0e",
+            "type": "stream",
+            "date": "2015-11-05",
+            "time_start": "16:52:23",
+            "duration": 2795,
+            "titles": [
+                "survivalen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 2795
+                }
+            ]
+        },
+        {
+            "id": "684f",
+            "type": "stream",
+            "date": "2015-11-05",
+            "time_start": "23:20:13",
+            "duration": 3898,
+            "titles": [
+                "potje met peter"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3898
+                }
+            ]
+        },
+        {
+            "id": "4053",
+            "type": "stream",
+            "date": "2015-11-06",
+            "time_start": "16:40:40",
+            "duration": 3165,
+            "titles": [
+                "Een leveltje voor Thijmen - Super Mario Maker"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 3165
+                }
+            ]
+        },
+        {
+            "id": "65ad",
+            "type": "stream",
+            "date": "2015-11-06",
+            "time_start": "17:35:58",
+            "duration": 1751,
+            "titles": [
+                "potje met peter"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 1751
+                }
+            ]
+        },
+        {
+            "id": "fe8d",
+            "type": "stream",
+            "date": "2015-11-09",
+            "time_start": "19:34:19",
+            "duration": 3556,
+            "titles": [
+                "Garry's Mod: Prophunt - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Garry's Mod",
+                    "duration": 3556
+                }
+            ]
+        },
+        {
+            "id": "d4da",
+            "type": "stream",
+            "date": "2015-11-09",
+            "time_start": "22:47:07",
+            "duration": 4159,
+            "titles": [
+                "potje met peter"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 4159
+                }
+            ]
+        },
+        {
+            "id": "d0e2",
+            "type": "stream",
+            "date": "2015-11-10",
+            "time_start": "16:37:27",
+            "duration": 24,
+            "titles": [
+                "Mario spelen #falloutisvoornerds"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 24
+                }
+            ]
+        },
+        {
+            "id": "76f0",
+            "type": "stream",
+            "date": "2015-11-12",
+            "time_start": "16:20:25",
+            "duration": 1576,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1576
+                }
+            ]
+        },
+        {
+            "id": "5454",
+            "type": "stream",
+            "date": "2015-11-12",
+            "time_start": "16:51:39",
+            "duration": 3066,
+            "titles": [
+                "gewoon even spelen met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 3066
+                }
+            ]
+        },
+        {
+            "id": "6f62",
+            "type": "stream",
+            "date": "2015-11-16",
+            "time_start": "19:31:37",
+            "duration": 7401,
+            "titles": [
+                "Street Cleaning Simulator : LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Street Cleaning Simulator",
+                    "duration": 7401
+                }
+            ]
+        },
+        {
+            "id": "9255",
+            "type": "stream",
+            "date": "2015-11-17",
+            "time_start": "16:23:41",
+            "duration": 4696,
+            "titles": [
+                "we spelen mario, jongens (geen meisjes dit keer)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 4696
+                }
+            ]
+        },
+        {
+            "id": "c116",
+            "type": "stream",
+            "date": "2015-11-18",
+            "time_start": "18:18:19",
+            "duration": 29062,
+            "titles": [
+                "Fallout 4 marathon!"
+            ],
+            "activities": [
+                {
+                    "title": "Fallout 4",
+                    "duration": 29062
+                }
+            ]
+        },
+        {
+            "id": "2aa7",
+            "type": "stream",
+            "date": "2015-11-19",
+            "time_start": "16:29:52",
+            "duration": 1976,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 1976
+                }
+            ]
+        },
+        {
+            "id": "2d39",
+            "type": "stream",
+            "date": "2015-11-19",
+            "time_start": "17:04:56",
+            "duration": 2218,
+            "titles": [
+                "Zo'n lekker potje"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 2218
+                }
+            ]
+        },
+        {
+            "id": "58ee",
+            "type": "stream",
+            "date": "2015-11-20",
+            "time_start": "16:32:58",
+            "duration": 3336,
+            "titles": [
+                "Fallout 4 struinsessie"
+            ],
+            "activities": [
+                {
+                    "title": "Fallout 4",
+                    "duration": 3336
+                }
+            ]
+        },
+        {
+            "id": "25ba",
+            "type": "stream",
+            "date": "2015-11-21",
+            "time_start": "21:42:05",
+            "duration": 5091,
+            "titles": [
+                "zaterdag en saai"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 5091
+                }
+            ]
+        },
+        {
+            "id": "a14c",
+            "type": "stream",
+            "date": "2015-11-21",
+            "time_start": "23:07:45",
+            "duration": 2364,
+            "titles": [
+                "Peter speelt: Fallout 4"
+            ],
+            "activities": [
+                {
+                    "title": "Fallout 4",
+                    "duration": 2364
+                }
+            ]
+        },
+        {
+            "id": "9eee",
+            "type": "stream",
+            "date": "2015-11-24",
+            "time_start": "16:22:48",
+            "duration": 4700,
+            "titles": [
+                "Struinen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Fallout 4",
+                    "duration": 4700
+                }
+            ]
+        },
+        {
+            "id": "998d",
+            "type": "stream",
+            "date": "2015-11-25",
+            "time_start": "16:35:22",
+            "duration": 3904,
+            "titles": [
+                "Mario Makkers"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 3904
+                }
+            ]
+        },
+        {
+            "id": "14f9",
+            "type": "stream",
+            "date": "2015-11-25",
+            "time_start": "20:30:48",
+            "duration": 6707,
+            "titles": [
+                "Filmavondje - GAMER (2009) om 20:30"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 6707
+                }
+            ]
+        },
+        {
+            "id": "db78",
+            "type": "stream",
+            "date": "2015-11-26",
+            "time_start": "16:12:43",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "fa5d",
+            "type": "stream",
+            "date": "2015-11-26",
+            "time_start": "16:48:07",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "98de",
+            "type": "stream",
+            "date": "2015-11-27",
+            "time_start": "16:44:34",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6dd5",
+            "type": "stream",
+            "date": "2015-11-30",
+            "time_start": "19:33:03",
+            "duration": 0,
+            "titles": [
+                "Toilet Tycoon - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Toilet Tycoon",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e3e9",
+            "type": "stream",
+            "date": "2015-11-30",
+            "time_start": "20:47:19",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Fallout 4",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "dfc7",
+            "type": "stream",
+            "date": "2015-12-01",
+            "time_start": "16:42:10",
+            "duration": 0,
+            "titles": [
+                "super duper mario"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ed72",
+            "type": "stream",
+            "date": "2015-12-02",
+            "time_start": "17:00:41",
+            "duration": 0,
+            "titles": [
+                "Destiny Marathon! "
+            ],
+            "activities": [
+                {
+                    "title": "Destiny",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "36f6",
+            "type": "stream",
+            "date": "2015-12-03",
+            "time_start": "16:40:52",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4703",
+            "type": "stream",
+            "date": "2015-12-04",
+            "time_start": "16:29:48",
+            "duration": 0,
+            "titles": [
+                "Star Wars Battlekont lol XD"
+            ],
+            "activities": [
+                {
+                    "title": "Star Wars Battlefront",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4cb3",
+            "type": "stream",
+            "date": "2015-12-05",
+            "time_start": "18:46:24",
+            "duration": 0,
+            "titles": [
+                "Playstation Experience (live commentaar)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7195",
+            "type": "stream",
+            "date": "2015-12-08",
+            "time_start": "15:42:59",
+            "duration": 0,
+            "titles": [
+                "Nog een level voor Timon maken"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "70ce",
+            "type": "stream",
+            "date": "2015-12-09",
+            "time_start": "16:46:52",
+            "duration": 0,
+            "titles": [
+                "Worstelen met met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K16",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1ee2",
+            "type": "stream",
+            "date": "2015-12-09",
+            "time_start": "23:40:59",
+            "duration": 0,
+            "titles": [
+                "casual met petertje"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0d09",
+            "type": "stream",
+            "date": "2015-12-10",
+            "time_start": "16:34:02",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "483a",
+            "type": "stream",
+            "date": "2015-12-10",
+            "time_start": "17:16:07",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkertjes"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2932",
+            "type": "stream",
+            "date": "2015-12-11",
+            "time_start": "16:17:30",
+            "duration": 0,
+            "titles": [
+                "Knallen met die knakkers"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K16",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0287",
+            "type": "stream",
+            "date": "2015-12-15",
+            "time_start": "16:17:15",
+            "duration": 0,
+            "titles": [
+                "\"Dungeon Keeper spe- uhh, gewoon Dungeon Keeper. Leuk.\""
+            ],
+            "activities": [
+                {
+                    "title": "Dungeon Keeper 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f475",
+            "type": "stream",
+            "date": "2015-12-16",
+            "time_start": "16:30:57",
+            "duration": 0,
+            "titles": [
+                "Pokémon (live opname) | \"Gaaf om erbij te zijn!\"- Timon"
+            ],
+            "activities": [
+                {
+                    "title": "Pokémon Red/Blue",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6a0f",
+            "type": "stream",
+            "date": "2015-12-17",
+            "time_start": "15:52:10",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7298",
+            "type": "stream",
+            "date": "2015-12-17",
+            "time_start": "17:18:40",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c65a",
+            "type": "stream",
+            "date": "2015-12-18",
+            "time_start": "16:32:55",
+            "duration": 0,
+            "titles": [
+                "Nog een leveltje voor Timo"
+            ],
+            "activities": [
+                {
+                    "title": "Call of Duty",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d55e",
+            "type": "stream",
+            "date": "2015-12-18",
+            "time_start": "16:41:13",
+            "duration": 0,
+            "titles": [
+                "Nog een leveltje voor timo - Super Mario Makelaar"
+            ],
+            "activities": [
+                {
+                    "title": "Call of Duty",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4e09",
+            "type": "stream",
+            "date": "2015-12-24",
+            "time_start": "20:08:06",
+            "duration": 0,
+            "titles": [
+                "Lekker spreken (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9aee",
+            "type": "stream",
+            "date": "2015-12-30",
+            "time_start": "21:54:29",
+            "duration": 0,
+            "titles": [
+                "Casual Bloodborne sterfsessie met Peter"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c1d0",
+            "type": "stream",
+            "date": "2015-12-30",
+            "time_start": "23:09:27",
+            "duration": 0,
+            "titles": [
+                "Mario enz"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario All-Stars",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0803",
+            "type": "stream",
+            "date": "2016-01-04",
+            "time_start": "19:33:25",
+            "duration": 0,
+            "titles": [
+                "Super Smash Bros. - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Super Smash Bros. for Wii U",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2aca",
+            "type": "stream",
+            "date": "2016-01-06",
+            "time_start": "16:40:25",
+            "duration": 0,
+            "titles": [
+                "Op naar de sterren! En niet verder."
+            ],
+            "activities": [
+                {
+                    "title": null,
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8236",
+            "type": "stream",
+            "date": "2016-01-07",
+            "time_start": "22:44:25",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e76e",
+            "type": "stream",
+            "date": "2016-01-08",
+            "time_start": "16:31:39",
+            "duration": 0,
+            "titles": [
+                "Lekker knallen met Just Cause 3 XD"
+            ],
+            "activities": [
+                {
+                    "title": "Just Cause 3",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a48f",
+            "type": "stream",
+            "date": "2016-01-10",
+            "time_start": "22:09:31",
+            "duration": 0,
+            "titles": [
+                "Levenloos joch speelt Bloodborne"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d690",
+            "type": "stream",
+            "date": "2016-01-10",
+            "time_start": "23:04:17",
+            "duration": 0,
+            "titles": [
+                "Levenloos joch speelt Bloodborne uit."
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "68e2",
+            "type": "stream",
+            "date": "2016-01-11",
+            "time_start": "19:31:25",
+            "duration": 0,
+            "titles": [
+                "SOMA - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "SOMA",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c45d",
+            "type": "stream",
+            "date": "2016-01-11",
+            "time_start": "20:34:56",
+            "duration": 0,
+            "titles": [
+                "Griezelen met SOMA - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "SOMA",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "35c2",
+            "type": "stream",
+            "date": "2016-01-12",
+            "time_start": "16:46:52",
+            "duration": 0,
+            "titles": [
+                "Worstelen met met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K16",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "30a2",
+            "type": "stream",
+            "date": "2016-01-13",
+            "time_start": "16:34:55",
+            "duration": 0,
+            "titles": [
+                "Super Mario. Super leuk."
+            ],
+            "activities": [
+                {
+                    "title": "Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "fd5a",
+            "type": "stream",
+            "date": "2016-01-13",
+            "time_start": "20:38:56",
+            "duration": 0,
+            "titles": [
+                "MEME STREAM 2016"
+            ],
+            "activities": [
+                {
+                    "title": "Trollface Quest: Video Memes",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "da84",
+            "type": "stream",
+            "date": "2016-01-14",
+            "time_start": "16:34:05",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "637c",
+            "type": "stream",
+            "date": "2016-01-15",
+            "time_start": "16:41:28",
+            "duration": 0,
+            "titles": [
+                "Mensen redden met Lekker spelen"
+            ],
+            "activities": [
+                {
+                    "title": "live",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0b3f",
+            "type": "stream",
+            "date": "2016-01-19",
+            "time_start": "15:41:49",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls - (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond: Two Souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "75e6",
+            "type": "stream",
+            "date": "2016-01-19",
+            "time_start": "17:26:21",
+            "duration": 0,
+            "titles": [
+                "Bloordborne met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4f95",
+            "type": "stream",
+            "date": "2016-01-20",
+            "time_start": "16:46:52",
+            "duration": 0,
+            "titles": [
+                "Op naar die stripclub! - GTA V"
+            ],
+            "activities": [
+                {
+                    "title": "GTA V Roleplay",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e6e6",
+            "type": "stream",
+            "date": "2016-01-21",
+            "time_start": "16:21:56",
+            "duration": 0,
+            "titles": [
+                "Live met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "opname 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f699",
+            "type": "stream",
+            "date": "2016-01-22",
+            "time_start": "17:17:18",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "931b",
+            "type": "stream",
+            "date": "2016-01-25",
+            "time_start": "20:34:58",
+            "duration": 0,
+            "titles": [
+                "Unfair Mario - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Unfair Mario",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ce3b",
+            "type": "stream",
+            "date": "2016-01-26",
+            "time_start": "16:10:44",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond two souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4281",
+            "type": "stream",
+            "date": "2016-01-27",
+            "time_start": "16:40:51",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ca75",
+            "type": "stream",
+            "date": "2016-01-28",
+            "time_start": "16:07:47",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d3ee",
+            "type": "stream",
+            "date": "2016-01-28",
+            "time_start": "16:55:52",
+            "duration": 0,
+            "titles": [
+                "H1z1 met de boys"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0a56",
+            "type": "stream",
+            "date": "2016-01-29",
+            "time_start": "00:37:11",
+            "duration": 0,
+            "titles": [
+                "Nooit meer slapen, altijd Bloodborne"
+            ],
+            "activities": [
+                {
+                    "title": "opname 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7656",
+            "type": "stream",
+            "date": "2016-01-29",
+            "time_start": "16:53:58",
+            "duration": 0,
+            "titles": [
+                "PETER vs TIMON - Dungeon Keeper 2"
+            ],
+            "activities": [
+                {
+                    "title": "Dungeon Keeper 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "65f4",
+            "type": "stream",
+            "date": "2016-01-31",
+            "time_start": "00:34:45",
+            "duration": 0,
+            "titles": [
+                "joch speelt bloodborne. vindt 'ie leuk."
+            ],
+            "activities": [
+                {
+                    "title": "opname 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8c3e",
+            "type": "stream",
+            "date": "2016-02-01",
+            "time_start": "19:33:46",
+            "duration": 0,
+            "titles": [
+                "Silent Hill 3 - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Silent Hill 3",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b029",
+            "type": "stream",
+            "date": "2016-02-02",
+            "time_start": "16:30:13",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "opname 3",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9c86",
+            "type": "stream",
+            "date": "2016-02-02",
+            "time_start": "22:54:15",
+            "duration": 0,
+            "titles": [
+                "Bloodborne trophy jacht"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bf9b",
+            "type": "stream",
+            "date": "2016-02-03",
+            "time_start": "16:30:19",
+            "duration": 0,
+            "titles": [
+                "Timon show (met Peter)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3c6b",
+            "type": "stream",
+            "date": "2016-02-04",
+            "time_start": "16:12:25",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e311",
+            "type": "stream",
+            "date": "2016-02-04",
+            "time_start": "17:01:36",
+            "duration": 0,
+            "titles": [
+                "Always Bloodborne: Trophy jacht"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "44a5",
+            "type": "stream",
+            "date": "2016-02-04",
+            "time_start": "20:32:32",
+            "duration": 0,
+            "titles": [
+                "Papflap dream-stream  - Mario Party 10"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Party 10",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "dbac",
+            "type": "stream",
+            "date": "2016-02-04",
+            "time_start": "23:35:37",
+            "duration": 0,
+            "titles": [
+                "Bloodborne: trophy jacht"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "388f",
+            "type": "stream",
+            "date": "2016-02-05",
+            "time_start": "16:29:51",
+            "duration": 0,
+            "titles": [
+                "Mario Maker (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "077a",
+            "type": "stream",
+            "date": "2016-02-08",
+            "time_start": "17:00:45",
+            "duration": 0,
+            "titles": [
+                "Tomb Raider (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Rise of the Tomb Raider",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a6bc",
+            "type": "stream",
+            "date": "2016-02-09",
+            "time_start": "16:13:39",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond: Two Souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b54f",
+            "type": "stream",
+            "date": "2016-02-09",
+            "time_start": "22:09:37",
+            "duration": 0,
+            "titles": [
+                "Peters trophy jacht: Bloodborne"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bc40",
+            "type": "stream",
+            "date": "2016-02-11",
+            "time_start": "16:13:39",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ac80",
+            "type": "stream",
+            "date": "2016-02-11",
+            "time_start": "17:10:02",
+            "duration": 0,
+            "titles": [
+                "Trophy jacht: Bloodborne"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e79c",
+            "type": "stream",
+            "date": "2016-02-12",
+            "time_start": "19:16:35",
+            "duration": 0,
+            "titles": [
+                "Trophy jacht: Bloodborne DLC (Laatste Trophy)"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7bd0",
+            "type": "stream",
+            "date": "2016-02-15",
+            "time_start": "20:33:48",
+            "duration": 0,
+            "titles": [
+                "Harry Potter - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Harry Potter and the Deathly Hallows: Part 1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "298a",
+            "type": "stream",
+            "date": "2016-02-16",
+            "time_start": "16:14:08",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond : Two Souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "dcf3",
+            "type": "stream",
+            "date": "2016-02-16",
+            "time_start": "23:56:11",
+            "duration": 0,
+            "titles": [
+                "Is het leuk? Mwa."
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "86c9",
+            "type": "stream",
+            "date": "2016-02-17",
+            "time_start": "16:35:49",
+            "duration": 0,
+            "titles": [
+                "Unravel met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Unravel",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9586",
+            "type": "stream",
+            "date": "2016-02-18",
+            "time_start": "16:35:49",
+            "duration": 0,
+            "titles": [
+                "Unravel met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Unravel",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f74a",
+            "type": "stream",
+            "date": "2016-02-18",
+            "time_start": "16:41:17",
+            "duration": 0,
+            "titles": [
+                "H1Z1 alsof het leuk is"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8429",
+            "type": "stream",
+            "date": "2016-02-19",
+            "time_start": "16:13:40",
+            "duration": 0,
+            "titles": [
+                "Gierend het weekend in met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f536",
+            "type": "stream",
+            "date": "2016-02-22",
+            "time_start": "20:06:53",
+            "duration": 0,
+            "titles": [
+                "Dead Realm - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Dead Realm",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3521",
+            "type": "stream",
+            "date": "2016-02-23",
+            "time_start": "16:49:12",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond two souls ",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7c64",
+            "type": "stream",
+            "date": "2016-02-24",
+            "time_start": "16:37:58",
+            "duration": 0,
+            "titles": [
+                "Far Cry Primal (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Far Cry: Primal",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4ab2",
+            "type": "stream",
+            "date": "2016-02-25",
+            "time_start": "16:23:07",
+            "duration": 0,
+            "titles": [
+                "Lekker spreken (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "41b8",
+            "type": "stream",
+            "date": "2016-02-25",
+            "time_start": "17:04:30",
+            "duration": 0,
+            "titles": [
+                "Gamen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "video games",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ea3d",
+            "type": "stream",
+            "date": "2016-02-26",
+            "time_start": "16:00:17",
+            "duration": 0,
+            "titles": [
+                "#PokemonDirect live commentaar"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1fdc",
+            "type": "stream",
+            "date": "2016-02-26",
+            "time_start": "16:17:48",
+            "duration": 0,
+            "titles": [
+                "Gamen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "video games",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "15ef",
+            "type": "stream",
+            "date": "2016-02-29",
+            "time_start": "20:37:47",
+            "duration": 0,
+            "titles": [
+                "Far Cry: Primal - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Far Cry: Primal",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ace8",
+            "type": "stream",
+            "date": "2016-03-01",
+            "time_start": "16:25:10",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond: Two Souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2882",
+            "type": "stream",
+            "date": "2016-03-01",
+            "time_start": "21:32:34",
+            "duration": 0,
+            "titles": [
+                "peter speelt lekker"
+            ],
+            "activities": [
+                {
+                    "title": "Plants vs. Zombies: Garden Warfare 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ebe7",
+            "type": "stream",
+            "date": "2016-03-02",
+            "time_start": "16:31:42",
+            "duration": 0,
+            "titles": [
+                "Just Cause 3 - Live om half 5"
+            ],
+            "activities": [
+                {
+                    "title": "Just Cause 3",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "81fb",
+            "type": "stream",
+            "date": "2016-03-03",
+            "time_start": "16:50:55",
+            "duration": 1720,
+            "titles": [
+                "lekker spreken (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Talk Shows & Podcasts",
+                    "duration": 1720
+                }
+            ]
+        },
+        {
+            "id": "e7bb",
+            "type": "stream",
+            "date": "2016-03-04",
+            "time_start": "16:08:43",
+            "duration": 0,
+            "titles": [
+                "Nintendo Direct nabespreking 3.3.2016"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b163",
+            "type": "stream",
+            "date": "2016-03-04",
+            "time_start": "16:38:46",
+            "duration": 0,
+            "titles": [
+                "Streamen met Tiemen"
+            ],
+            "activities": [
+                {
+                    "title": "Rainbow Six: Siege",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7996",
+            "type": "stream",
+            "date": "2016-03-07",
+            "time_start": "20:38:59",
+            "duration": 0,
+            "titles": [
+                "SimCity - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "SimCity 4",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7c04",
+            "type": "stream",
+            "date": "2016-03-08",
+            "time_start": "17:06:14",
+            "duration": 0,
+            "titles": [
+                "live om half 5 "
+            ],
+            "activities": [
+                {
+                    "title": "Unravel",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6ef3",
+            "type": "stream",
+            "date": "2016-03-09",
+            "time_start": "16:10:44",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond: Two Souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "252c",
+            "type": "stream",
+            "date": "2016-03-09",
+            "time_start": "20:09:13",
+            "duration": 0,
+            "titles": [
+                "The Division live streampie"
+            ],
+            "activities": [
+                {
+                    "title": "The Division",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9b6d",
+            "type": "stream",
+            "date": "2016-03-10",
+            "time_start": "16:59:59",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (Live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9e18",
+            "type": "stream",
+            "date": "2016-03-11",
+            "time_start": "16:19:12",
+            "duration": 0,
+            "titles": [
+                "Unravel uitspelen"
+            ],
+            "activities": [
+                {
+                    "title": "Unravel",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "49a6",
+            "type": "stream",
+            "date": "2016-03-14",
+            "time_start": "19:33:06",
+            "duration": 0,
+            "titles": [
+                "The Legend of Zelda - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "The Legend of Zelda: Twilight Princess",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9e13",
+            "type": "stream",
+            "date": "2016-03-15",
+            "time_start": "16:44:23",
+            "duration": 0,
+            "titles": [
+                "Beyond: Two Souls (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Beyond: Two Souls",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cef1",
+            "type": "stream",
+            "date": "2016-03-16",
+            "time_start": "16:55:19",
+            "duration": 0,
+            "titles": [
+                "Super Mario Maker"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7289",
+            "type": "stream",
+            "date": "2016-03-17",
+            "time_start": "16:02:23",
+            "duration": 0,
+            "titles": [
+                "Far Cry Primal trophy jacht! ( Nog 3 te gaan)"
+            ],
+            "activities": [
+                {
+                    "title": "Far Cry: Primal",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3cd1",
+            "type": "stream",
+            "date": "2016-03-17",
+            "time_start": "16:29:47",
+            "duration": 0,
+            "titles": [
+                "Far Cry Primal trophy jacht!"
+            ],
+            "activities": [
+                {
+                    "title": "Far Cry: Primal",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5ff9",
+            "type": "stream",
+            "date": "2016-03-18",
+            "time_start": "16:06:51",
+            "duration": 0,
+            "titles": [
+                "The Walking Dead: Michonne (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "The Walking Dead: Michonne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f6d4",
+            "type": "stream",
+            "date": "2016-03-23",
+            "time_start": "15:59:34",
+            "duration": 0,
+            "titles": [
+                "Lekker TrackMania Turbo spelen"
+            ],
+            "activities": [
+                {
+                    "title": "TrackMania Turbo",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "daa3",
+            "type": "stream",
+            "date": "2016-03-24",
+            "time_start": "16:00:04",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e377",
+            "type": "stream",
+            "date": "2016-03-29",
+            "time_start": "16:30:22",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2c46",
+            "type": "stream",
+            "date": "2016-03-30",
+            "time_start": "16:09:04",
+            "duration": 0,
+            "titles": [
+                "Siege met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Rainbow Six: Siege",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e9cb",
+            "type": "stream",
+            "date": "2016-03-31",
+            "time_start": "15:52:10",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ca52",
+            "type": "stream",
+            "date": "2016-04-01",
+            "time_start": "15:52:47",
+            "duration": 0,
+            "titles": [
+                "DOOM (closed beta) - Lekker spelen"
+            ],
+            "activities": [
+                {
+                    "title": "DOOM (closed beta)",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8f48",
+            "type": "stream",
+            "date": "2016-04-03",
+            "time_start": "23:58:03",
+            "duration": 0,
+            "titles": [
+                "Spelletjes spelen"
+            ],
+            "activities": [
+                {
+                    "title": null,
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "023f",
+            "type": "stream",
+            "date": "2016-04-05",
+            "time_start": "16:41:28",
+            "duration": 0,
+            "titles": [
+                "Dark goals "
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls III",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a060",
+            "type": "stream",
+            "date": "2016-04-06",
+            "time_start": "16:42:40",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "35b1",
+            "type": "stream",
+            "date": "2016-04-07",
+            "time_start": "16:59:59",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (Live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8628",
+            "type": "stream",
+            "date": "2016-04-11",
+            "time_start": "20:33:04",
+            "duration": 0,
+            "titles": [
+                "Façade - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Façade",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1f2d",
+            "type": "stream",
+            "date": "2016-04-12",
+            "time_start": "15:38:34",
+            "duration": 0,
+            "titles": [
+                "The Walking Dead: Michonne (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "The Walking Dead: Michonne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0282",
+            "type": "stream",
+            "date": "2016-04-12",
+            "time_start": "23:03:20",
+            "duration": 0,
+            "titles": [
+                "Peter faalt: Dark Souls III"
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls III",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5e66",
+            "type": "stream",
+            "date": "2016-04-13",
+            "time_start": "17:27:56",
+            "duration": 0,
+            "titles": [
+                "Ratchet & Clank"
+            ],
+            "activities": [
+                {
+                    "title": "Ratchet & Clank",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4c20",
+            "type": "stream",
+            "date": "2016-04-14",
+            "time_start": "16:26:54",
+            "duration": 0,
+            "titles": [
+                "Lekker spreken (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a51f",
+            "type": "stream",
+            "date": "2016-04-14",
+            "time_start": "23:03:20",
+            "duration": 0,
+            "titles": [
+                "Peter faalt: Dark Souls III"
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls III",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b2ae",
+            "type": "stream",
+            "date": "2016-04-17",
+            "time_start": "21:32:15",
+            "duration": 0,
+            "titles": [
+                "Ik versla Kwebbelkop's Slither.io record"
+            ],
+            "activities": [
+                {
+                    "title": "Slither.io",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "38ad",
+            "type": "stream",
+            "date": "2016-04-18",
+            "time_start": "19:31:12",
+            "duration": 0,
+            "titles": [
+                "Rollercoaster Tycoon World - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "RollerCoaster Tycoon World",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "98e5",
+            "type": "stream",
+            "date": "2016-04-19",
+            "time_start": "16:26:55",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ee3e",
+            "type": "stream",
+            "date": "2016-04-19",
+            "time_start": "18:15:56",
+            "duration": 0,
+            "titles": [
+                "Slither, schatje"
+            ],
+            "activities": [
+                {
+                    "title": "Slither.io",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c3cc",
+            "type": "stream",
+            "date": "2016-04-20",
+            "time_start": "16:32:40",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "313c",
+            "type": "stream",
+            "date": "2016-04-21",
+            "time_start": "15:57:53",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "96b1",
+            "type": "stream",
+            "date": "2016-04-25",
+            "time_start": "20:42:44",
+            "duration": 0,
+            "titles": [
+                "Spy Fox - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Spy Fox in \"Dry Cereal\"",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7773",
+            "type": "stream",
+            "date": "2016-04-26",
+            "time_start": "14:34:38",
+            "duration": 0,
+            "titles": [
+                "Discord Setup Subscriber test"
+            ],
+            "activities": [
+                {
+                    "title": "Creative",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "29ae",
+            "type": "stream",
+            "date": "2016-04-26",
+            "time_start": "15:34:56",
+            "duration": 0,
+            "titles": [
+                "Lekker Spoilen: Game of Thrones S06E01 (SPOILERS!)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "74f3",
+            "type": "stream",
+            "date": "2016-04-29",
+            "time_start": "21:04:28",
+            "duration": 0,
+            "titles": [
+                "Peters oh zo duistere ziel"
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls III",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f319",
+            "type": "stream",
+            "date": "2016-05-03",
+            "time_start": "15:27:51",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN: Game of Thrones S06E02"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "86ea",
+            "type": "stream",
+            "date": "2016-05-03",
+            "time_start": "16:39:44",
+            "duration": 0,
+            "titles": [
+                "Starfox is chill b"
+            ],
+            "activities": [
+                {
+                    "title": "Star Fox",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "340d",
+            "type": "stream",
+            "date": "2016-05-04",
+            "time_start": "16:06:51",
+            "duration": 0,
+            "titles": [
+                "The Walking Dead: Michonne (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "The Walking Dead: Michonne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "55ef",
+            "type": "stream",
+            "date": "2016-05-05",
+            "time_start": "13:49:23",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bd0b",
+            "type": "stream",
+            "date": "2016-05-05",
+            "time_start": "16:25:13",
+            "duration": 0,
+            "titles": [
+                "Party with the boys"
+            ],
+            "activities": [
+                {
+                    "title": "The Walking Dead: Michonne",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5131",
+            "type": "stream",
+            "date": "2016-05-09",
+            "time_start": "15:46:43",
+            "duration": 0,
+            "titles": [
+                "Stranded Deep - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Stranded Deep",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c703",
+            "type": "stream",
+            "date": "2016-05-10",
+            "time_start": "15:46:43",
+            "duration": 0,
+            "titles": [
+                "Stranded Deep - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Stranded Deep",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b4e9",
+            "type": "stream",
+            "date": "2016-05-10",
+            "time_start": "16:17:48",
+            "duration": 0,
+            "titles": [
+                "Gamen met de jongens"
+            ],
+            "activities": [
+                {
+                    "title": "video games",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "87c1",
+            "type": "stream",
+            "date": "2016-05-11",
+            "time_start": "16:39:44",
+            "duration": 0,
+            "titles": [
+                "Steamen met Tiemen: Mario 64 Speedrun"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario 64",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d469",
+            "type": "stream",
+            "date": "2016-05-12",
+            "time_start": "16:39:44",
+            "duration": 0,
+            "titles": [
+                "Steamen met Tiemen: Mario 64 Speedrun"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario 64",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bda9",
+            "type": "stream",
+            "date": "2016-05-13",
+            "time_start": "16:17:30",
+            "duration": 0,
+            "titles": [
+                "Knallen met die knakkers"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K16",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3018",
+            "type": "stream",
+            "date": "2016-05-16",
+            "time_start": "20:35:49",
+            "duration": 0,
+            "titles": [
+                "The Sims 4 - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "The Sims 4",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8136",
+            "type": "stream",
+            "date": "2016-05-17",
+            "time_start": "16:33:50",
+            "duration": 0,
+            "titles": [
+                "The Sims 4 - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "The Sims 4",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "226f",
+            "type": "stream",
+            "date": "2016-05-17",
+            "time_start": "17:07:59",
+            "duration": 0,
+            "titles": [
+                "H1Z1 met die gore gozers"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d739",
+            "type": "stream",
+            "date": "2016-05-17",
+            "time_start": "22:18:53",
+            "duration": 0,
+            "titles": [
+                "Peters oh zo duistere ziel"
+            ],
+            "activities": [
+                {
+                    "title": "Dark Souls III",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ca23",
+            "type": "stream",
+            "date": "2016-05-18",
+            "time_start": "16:28:04",
+            "duration": 0,
+            "titles": [
+                "Verjaardagsstreampie met Tiempie DOTA 2"
+            ],
+            "activities": [
+                {
+                    "title": "Dota 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4307",
+            "type": "stream",
+            "date": "2016-05-18",
+            "time_start": "21:45:10",
+            "duration": 0,
+            "titles": [
+                "Peter speelt DOOM (saaie stream)"
+            ],
+            "activities": [
+                {
+                    "title": "DOOM",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cd71",
+            "type": "stream",
+            "date": "2016-05-19",
+            "time_start": "16:41:33",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5554",
+            "type": "stream",
+            "date": "2016-05-20",
+            "time_start": "00:20:38",
+            "duration": 0,
+            "titles": [
+                "3DS capture card test"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Bros. 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cfe0",
+            "type": "stream",
+            "date": "2016-05-23",
+            "time_start": "19:40:06",
+            "duration": 0,
+            "titles": [
+                "Super Mario Galaxy - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Galaxy",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1110",
+            "type": "stream",
+            "date": "2016-05-24",
+            "time_start": "15:56:33",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN: Game of Thrones S06E05"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4eea",
+            "type": "stream",
+            "date": "2016-05-24",
+            "time_start": "17:03:29",
+            "duration": 0,
+            "titles": [
+                "Super Mario met die Supertoffe gasten"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario 64",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "1ecd",
+            "type": "stream",
+            "date": "2016-05-25",
+            "time_start": "19:41:32",
+            "duration": 0,
+            "titles": [
+                "Live Overwatch avondje!"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "fb99",
+            "type": "stream",
+            "date": "2016-05-26",
+            "time_start": "17:18:03",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3bae",
+            "type": "stream",
+            "date": "2016-05-30",
+            "time_start": "20:34:33",
+            "duration": 0,
+            "titles": [
+                "SUPERHOT - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "SUPERHOT",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d54e",
+            "type": "stream",
+            "date": "2016-05-31",
+            "time_start": "16:14:43",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN: Game of Thrones S06E06"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cbd4",
+            "type": "stream",
+            "date": "2016-05-31",
+            "time_start": "21:35:06",
+            "duration": 0,
+            "titles": [
+                "Potje DOOMpie "
+            ],
+            "activities": [
+                {
+                    "title": "DOOM",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8e53",
+            "type": "stream",
+            "date": "2016-06-01",
+            "time_start": "16:29:58",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9372",
+            "type": "stream",
+            "date": "2016-06-02",
+            "time_start": "15:44:14",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bd18",
+            "type": "stream",
+            "date": "2016-06-07",
+            "time_start": "16:30:19",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN: Game of Thrones S06E07"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b1b4",
+            "type": "stream",
+            "date": "2016-06-07",
+            "time_start": "20:28:58",
+            "duration": 0,
+            "titles": [
+                "FIFA 16 - Lekker Spelen Live"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 16",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d528",
+            "type": "stream",
+            "date": "2016-06-08",
+            "time_start": "16:49:49",
+            "duration": 0,
+            "titles": [
+                "Mirror's Edge Catalyst"
+            ],
+            "activities": [
+                {
+                    "title": "Mirror's Edge Catalyst",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "cbce",
+            "type": "stream",
+            "date": "2016-06-09",
+            "time_start": "17:10:59",
+            "duration": 2029,
+            "titles": [
+                "Lekker spreken (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "IRL",
+                    "duration": 2029
+                }
+            ]
+        },
+        {
+            "id": "47c0",
+            "type": "stream",
+            "date": "2016-06-10",
+            "time_start": "16:18:29",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "e11c",
+            "type": "stream",
+            "date": "2016-06-12",
+            "time_start": "22:08:40",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "5471",
+            "type": "stream",
+            "date": "2016-06-13",
+            "time_start": "20:30:31",
+            "duration": 0,
+            "titles": [
+                "E3 live MARATHON!"
+            ],
+            "activities": [
+                {
+                    "title": "E3 2016",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "02ad",
+            "type": "stream",
+            "date": "2016-06-14",
+            "time_start": "17:05:48",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN - Game of Thrones S06E08"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7624",
+            "type": "stream",
+            "date": "2016-06-15",
+            "time_start": "03:16:53",
+            "duration": 0,
+            "titles": [
+                "E3 live MARATHON!"
+            ],
+            "activities": [
+                {
+                    "title": "E3 2016",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d4a4",
+            "type": "stream",
+            "date": "2016-06-15",
+            "time_start": "17:18:03",
+            "duration": 0,
+            "titles": [
+                "Heavy Rain (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Heavy Rain",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "485c",
+            "type": "stream",
+            "date": "2016-06-16",
+            "time_start": "15:16:49",
+            "duration": 0,
+            "titles": [
+                "Lekker spreken met die honden"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "9799",
+            "type": "stream",
+            "date": "2016-06-16",
+            "time_start": "16:32:42",
+            "duration": 0,
+            "titles": [
+                "Weekend Millionairs met kijkers"
+            ],
+            "activities": [
+                {
+                    "title": "Who Wants to Be a Millionaire",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2e96",
+            "type": "stream",
+            "date": "2016-06-21",
+            "time_start": "15:57:16",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN: Game of Thrones S06E09"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f78b",
+            "type": "stream",
+            "date": "2016-06-21",
+            "time_start": "16:39:56",
+            "duration": 0,
+            "titles": [
+                "STREAMPIE MET TIEMPIE DOTA 2 ZOEK HET UIT"
+            ],
+            "activities": [
+                {
+                    "title": "Dota 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bb82",
+            "type": "stream",
+            "date": "2016-06-22",
+            "time_start": "16:39:31",
+            "duration": 0,
+            "titles": [
+                "Overwatch met Petertje"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d1da",
+            "type": "stream",
+            "date": "2016-06-23",
+            "time_start": "14:19:07",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN over videogames, schatje"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "aae2",
+            "type": "stream",
+            "date": "2016-06-23",
+            "time_start": "16:51:09",
+            "duration": 0,
+            "titles": [
+                "Potje Overwatch (met kijkers)"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ba7f",
+            "type": "stream",
+            "date": "2016-06-28",
+            "time_start": "16:20:05",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPOILEN: Game of Thrones S06E10"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d82a",
+            "type": "stream",
+            "date": "2016-06-28",
+            "time_start": "17:06:11",
+            "duration": 0,
+            "titles": [
+                "Exclusieve Q&A sessie (nice)"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c787",
+            "type": "stream",
+            "date": "2016-06-28",
+            "time_start": "20:21:39",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Mario & Sonic at the Rio 2016 Olympic Games",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "0add",
+            "type": "stream",
+            "date": "2016-06-29",
+            "time_start": "17:05:48",
+            "duration": 0,
+            "titles": [
+                "Donkey Konkey Country met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "Donkey Kong Country",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4e7c",
+            "type": "stream",
+            "date": "2016-06-30",
+            "time_start": "16:38:18",
+            "duration": 0,
+            "titles": [
+                "lekker ewooe"
+            ],
+            "activities": [
+                {
+                    "title": null,
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a79f",
+            "type": "stream",
+            "date": "2016-06-30",
+            "time_start": "17:18:30",
+            "duration": 0,
+            "titles": [
+                "Timon speelt: INSIDE"
+            ],
+            "activities": [
+                {
+                    "title": "Inside",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "bd69",
+            "type": "stream",
+            "date": "2016-07-04",
+            "time_start": "19:32:22",
+            "duration": 0,
+            "titles": [
+                "Uncharted 4 Multiplayer - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Uncharted 4: A Thief's End",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "fe72",
+            "type": "stream",
+            "date": "2016-07-04",
+            "time_start": "20:15:03",
+            "duration": 0,
+            "titles": [
+                "Uncharted 4: Multiplayer - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Uncharted 4: A Thief's End",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7706",
+            "type": "stream",
+            "date": "2016-07-05",
+            "time_start": "16:29:31",
+            "duration": 0,
+            "titles": [
+                "Super Marco Maker met gozers"
+            ],
+            "activities": [
+                {
+                    "title": "Super Mario Maker",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "437e",
+            "type": "stream",
+            "date": "2016-07-05",
+            "time_start": "23:24:05",
+            "duration": 0,
+            "titles": [
+                "Helemaal klaar met Overwatch"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c7e9",
+            "type": "stream",
+            "date": "2016-07-06",
+            "time_start": "16:35:35",
+            "duration": 0,
+            "titles": [
+                "Timon speelt: INSIDE "
+            ],
+            "activities": [
+                {
+                    "title": "Inside",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6c3d",
+            "type": "stream",
+            "date": "2016-07-07",
+            "time_start": "16:32:50",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7f46",
+            "type": "stream",
+            "date": "2016-07-07",
+            "time_start": "17:03:05",
+            "duration": 0,
+            "titles": [
+                "Timon speelt: INSIDE "
+            ],
+            "activities": [
+                {
+                    "title": "Inside",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3179",
+            "type": "stream",
+            "date": "2016-07-07",
+            "time_start": "19:59:51",
+            "duration": null,
+            "titles": [
+                "Peter & Timon spelen: War for the Overworld"
+            ],
+            "activities": [
+                {
+                    "title": "War for the Overworld",
+                    "duration": null
+                }
+            ]
+        },
+        {
+            "id": "6bad",
+            "type": "stream",
+            "date": "2016-07-11",
+            "time_start": "20:34:04",
+            "duration": 0,
+            "titles": [
+                "Weekend Miljonairs met kijkers! - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Who Wants to Be a Millionaire",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "c9ac",
+            "type": "stream",
+            "date": "2016-07-12",
+            "time_start": "17:04:01",
+            "duration": 0,
+            "titles": [
+                "Peter vs Timon: Tetris"
+            ],
+            "activities": [
+                {
+                    "title": "Tetris",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8fff",
+            "type": "stream",
+            "date": "2016-07-13",
+            "time_start": "20:00:59",
+            "duration": 0,
+            "titles": [
+                "DONKEY KONKEY SPEEDRUN 2016 (om 20:00)"
+            ],
+            "activities": [
+                {
+                    "title": "Donkey Kong Country",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a0fa",
+            "type": "stream",
+            "date": "2016-07-14",
+            "time_start": "16:13:14",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "734a",
+            "type": "stream",
+            "date": "2016-07-14",
+            "time_start": "17:18:30",
+            "duration": 0,
+            "titles": [
+                "Timon speelt: INSIDE"
+            ],
+            "activities": [
+                {
+                    "title": "Inside",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "975b",
+            "type": "stream",
+            "date": "2016-07-15",
+            "time_start": "15:29:03",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPREKEN PODCAST (live opname)"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8db3",
+            "type": "stream",
+            "date": "2016-07-17",
+            "time_start": "00:37:07",
+            "duration": 0,
+            "titles": [
+                "potje met peter: Saints Row (Trophy hunt)"
+            ],
+            "activities": [
+                {
+                    "title": "Saints Row: Gat Out of Hell",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d105",
+            "type": "stream",
+            "date": "2016-07-18",
+            "time_start": "21:34:46",
+            "duration": 0,
+            "titles": [
+                "Potje met Peter: Croc Legends of The Gobbos"
+            ],
+            "activities": [
+                {
+                    "title": "Legend of the Gobbos ",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "a21d",
+            "type": "stream",
+            "date": "2016-07-18",
+            "time_start": "21:48:46",
+            "duration": 0,
+            "titles": [
+                "Potje met Peter: Fiasco stream"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8add",
+            "type": "stream",
+            "date": "2016-07-28",
+            "time_start": "17:22:30",
+            "duration": 0,
+            "titles": [
+                "Potje met Peter: Slither"
+            ],
+            "activities": [
+                {
+                    "title": "Slither.io",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8cf2",
+            "type": "stream",
+            "date": "2016-08-01",
+            "time_start": "20:05:16",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "655e",
+            "type": "stream",
+            "date": "2016-08-02",
+            "time_start": "17:10:17",
+            "duration": 0,
+            "titles": [
+                "live jongens"
+            ],
+            "activities": [
+                {
+                    "title": null,
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "03a6",
+            "type": "stream",
+            "date": "2016-08-04",
+            "time_start": "23:40:40",
+            "duration": 0,
+            "titles": [
+                "Potje met Peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Overwatch",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4b24",
+            "type": "stream",
+            "date": "2016-08-05",
+            "time_start": "19:31:02",
+            "duration": 0,
+            "titles": [
+                "potje met peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Just Chatting",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f8c6",
+            "type": "stream",
+            "date": "2016-08-08",
+            "time_start": "19:36:17",
+            "duration": 0,
+            "titles": [
+                "LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Pokémon Omega Ruby/Alpha Sapphire",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "d57e",
+            "type": "stream",
+            "date": "2016-08-08",
+            "time_start": "20:19:03",
+            "duration": 0,
+            "titles": [
+                "Hitman - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "HITMAN",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "35ce",
+            "type": "stream",
+            "date": "2016-08-08",
+            "time_start": "21:11:26",
+            "duration": 0,
+            "titles": [
+                "Hitman - LEKKER SPELEN LIVE (21:00)"
+            ],
+            "activities": [
+                {
+                    "title": "HITMAN",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "521f",
+            "type": "stream",
+            "date": "2016-08-09",
+            "time_start": "20:06:02",
+            "duration": 0,
+            "titles": [
+                "Lekker 'No Mans Sky' spelen"
+            ],
+            "activities": [
+                {
+                    "title": "No Man's Sky",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8809",
+            "type": "stream",
+            "date": "2016-08-10",
+            "time_start": "16:20:38",
+            "duration": 0,
+            "titles": [
+                "DOTA 2 SPELEN MET SIMON"
+            ],
+            "activities": [
+                {
+                    "title": "Dota 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ec6e",
+            "type": "stream",
+            "date": "2016-08-15",
+            "time_start": "20:01:47",
+            "duration": 0,
+            "titles": [
+                "Dead Island - LEKKER SPELEN LIVE (20:00)"
+            ],
+            "activities": [
+                {
+                    "title": "Dead Island: Definitive Collection",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "593f",
+            "type": "stream",
+            "date": "2016-08-17",
+            "time_start": "15:47:16",
+            "duration": 0,
+            "titles": [
+                "Professionele gamer speelt DOTA 2"
+            ],
+            "activities": [
+                {
+                    "title": "Dota 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f737",
+            "type": "stream",
+            "date": "2016-08-18",
+            "time_start": "15:50:20",
+            "duration": 0,
+            "titles": [
+                "Streampie met Tiempie, ga lekker zitten en kijk mee"
+            ],
+            "activities": [
+                {
+                    "title": "Dota 2",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "f66c",
+            "type": "stream",
+            "date": "2016-08-29",
+            "time_start": "20:42:03",
+            "duration": 0,
+            "titles": [
+                "Mario Kart 8 :( - LEKKER SPELEN LIVE"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "4224",
+            "type": "stream",
+            "date": "2016-09-03",
+            "time_start": "01:50:51",
+            "duration": 0,
+            "titles": [
+                "Een half uurtje Battlefield"
+            ],
+            "activities": [
+                {
+                    "title": null,
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "2856",
+            "type": "stream",
+            "date": "2016-09-06",
+            "time_start": "20:04:26",
+            "duration": 0,
+            "titles": [
+                "Lekker 'Mario Party' spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Party 10",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "14a7",
+            "type": "stream",
+            "date": "2016-09-12",
+            "time_start": "20:59:43",
+            "duration": 0,
+            "titles": [
+                "Lekker spelen VS Team DylanHaegens (Rink & Dylan): 'Verliezer verwijdert Youtube kanaal' match"
+            ],
+            "activities": [
+                {
+                    "title": "Rocket League",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "ec61",
+            "type": "stream",
+            "date": "2016-09-20",
+            "time_start": "16:44:16",
+            "duration": 0,
+            "titles": [
+                "Pokémon GO Plus - Lekker spreken"
+            ],
+            "activities": [
+                {
+                    "title": "Gaming Talk Shows",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "b801",
+            "type": "stream",
+            "date": "2016-09-26",
+            "time_start": "20:41:27",
+            "duration": 0,
+            "titles": [
+                "Lekker 'Weekend Miljonairs' Spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Who Wants to Be a Millionaire",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7867",
+            "type": "stream",
+            "date": "2016-09-29",
+            "time_start": "20:41:27",
+            "duration": 0,
+            "titles": [
+                "Lekker 'Weekend Miljonairs' Spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Who Wants to Be a Millionaire",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "6b08",
+            "type": "stream",
+            "date": "2016-09-30",
+            "time_start": "00:03:26",
+            "duration": 0,
+            "titles": [
+                "potje met peetje: Fifa 17"
+            ],
+            "activities": [
+                {
+                    "title": "FIFA 17",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "81e1",
+            "type": "stream",
+            "date": "2016-10-10",
+            "time_start": "20:05:53",
+            "duration": 0,
+            "titles": [
+                "Lekker 'Paper Mario: Color Splash' spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Paper Mario: Color Splash",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8b81",
+            "type": "stream",
+            "date": "2016-10-11",
+            "time_start": "21:38:00",
+            "duration": 0,
+            "titles": [
+                "Potje met Peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Shovel Knight",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "766b",
+            "type": "stream",
+            "date": "2016-10-12",
+            "time_start": "20:19:28",
+            "duration": 0,
+            "titles": [
+                "Worstelen met die jongens"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K20",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "3596",
+            "type": "stream",
+            "date": "2016-10-17",
+            "time_start": "20:04:37",
+            "duration": 0,
+            "titles": [
+                "Lekker 'Resident Evil' spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil HD Remaster",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "18fb",
+            "type": "stream",
+            "date": "2016-10-20",
+            "time_start": "14:46:48",
+            "duration": 0,
+            "titles": [
+                "Streamen met Timen:  Poppetje maken voor Peter"
+            ],
+            "activities": [
+                {
+                    "title": "WWE 2K17",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "59a6",
+            "type": "stream",
+            "date": "2016-10-21",
+            "time_start": "01:47:39",
+            "duration": 0,
+            "titles": [
+                "1 potje voor het slapen gaan, met peetje."
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "7d4d",
+            "type": "stream",
+            "date": "2016-10-23",
+            "time_start": "19:41:09",
+            "duration": 0,
+            "titles": [
+                "positieve peter: positieve scores, positieve sfeer (pro gamer)"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "27ed",
+            "type": "stream",
+            "date": "2016-10-24",
+            "time_start": "20:19:15",
+            "duration": 0,
+            "titles": [
+                "Lekker 'Battlefield 1' spelen (20:30)"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "8304",
+            "type": "stream",
+            "date": "2016-10-31",
+            "time_start": "21:25:03",
+            "duration": 0,
+            "titles": [
+                "Super enge halloween stream"
+            ],
+            "activities": [
+                {
+                    "title": "Resident Evil HD Remaster",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "32eb",
+            "type": "stream",
+            "date": "2016-11-04",
+            "time_start": "17:33:26",
+            "duration": 0,
+            "titles": [
+                "Potje met Peetje"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "de94",
+            "type": "stream",
+            "date": "2016-11-04",
+            "time_start": "21:22:23",
+            "duration": 0,
+            "titles": [
+                "Potje met Peetje: Battlefield 1"
+            ],
+            "activities": [
+                {
+                    "title": "Battlefield 1",
+                    "duration": 0
+                }
+            ]
+        },
+        {
+            "id": "29ce",
+            "type": "stream",
+            "date": "2016-11-07",
+            "time_start": "17:11:20",
+            "duration": 2427,
+            "titles": [
+                "Lekker 'The Lion King' spelen "
+            ],
+            "activities": [
+                {
+                    "title": "The Lion King",
+                    "duration": 2427
+                }
+            ]
+        },
+        {
+            "id": "5787",
+            "type": "stream",
+            "date": "2016-11-09",
+            "time_start": "17:11:20",
+            "duration": 2427,
+            "titles": [
+                "Lekker 'The Lion King' spelen "
+            ],
+            "activities": [
+                {
+                    "title": "The Lion King",
+                    "duration": 2427
+                }
+            ]
+        },
+        {
+            "id": "6637",
+            "type": "stream",
+            "date": "2016-11-14",
+            "time_start": "20:05:05",
+            "duration": 4621,
+            "titles": [
+                "Lekker \"Watch Dogs 2\" spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Watch Dogs 2",
+                    "duration": 4621
+                }
+            ]
+        },
+        {
+            "id": "e892",
+            "type": "stream",
+            "date": "2016-11-21",
+            "time_start": "20:05:05",
+            "duration": 4621,
+            "titles": [
+                "Lekker \"Watch Dogs 2\" spelen"
+            ],
+            "activities": [
+                {
+                    "title": "Watch Dogs 2",
+                    "duration": 4621
+                }
+            ]
+        },
+        {
+            "id": "ebaf",
+            "type": "stream",
+            "date": "2016-11-24",
+            "time_start": "01:56:19",
+            "duration": 1112,
+            "titles": [
+                "deze stream valt misschien uit want mijn videokaart is kapont"
+            ],
+            "activities": [
+                {
+                    "title": "H1Z1: King of the Kill",
+                    "duration": 1112
+                }
+            ]
+        },
+        {
+            "id": "8110",
+            "type": "stream",
+            "date": "2016-12-17",
+            "time_start": "00:00:57",
+            "duration": 7270,
+            "titles": [
+                "Voorbereiden voor mijn battle tegen Timen"
+            ],
+            "activities": [
+                {
+                    "title": "Pokémon Sun/Moon",
+                    "duration": 7270
+                }
+            ]
+        },
+        {
+            "id": "2ed7",
+            "type": "stream",
+            "date": "2017-07-25",
+            "time_start": "00:14:37",
+            "duration": 2892,
+            "titles": [
+                "Game of Thrones - Lekker Spoilen (LIVE OPNAME)"
+            ],
+            "activities": [
+                {
+                    "title": "Talk Shows",
+                    "duration": 2892
+                }
+            ]
         }
     ]
 }
