@@ -81,7 +81,7 @@
                 </div>
               </div>
 
-              <div class="d-flex align-items-center gap-2">
+              <div class="d-flex flex-wrap align-items-center gap-2">
                 <div>
                   <a class="d-block" href="https://ko-fi.com/O5O815U9ES" target="_blank">
                     <img
