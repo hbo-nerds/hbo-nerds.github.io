@@ -14760,7 +14760,8 @@
       ],
       "twitch_id": "68185025",
       "tags": [
-        "main"
+        "main",
+        "horror"
       ]
     },
     {
@@ -26941,6 +26942,7 @@
       "id": "2beb",
       "type": "stream",
       "date": "2018-01-15",
+      "description": "De mannen gaan lekker krabbelen voor wat nieuwe Twitch emotes, waaronder de geboorte van de LekkerDjensen",
       "duration": 11040,
       "youtube_id": "7lX8Cp2fPRc",
       "titles": [
@@ -36958,6 +36960,7 @@
       ],
       "date": "2019-06-19",
       "duration": 7560,
+      "description": "Na talloze onderbrekingen van die klote chat gaan de boys eindelijk aan de slag met een teken battle, waarbij Peter erg ambiteus voor de Croky Multi-Pack gaat. Uiteindelijk liggen ze allebij een tijd in een deuk met de slappe lach om het bestaan van Wizzy en Woppy.",
       "youtube_id": "dgmIz5sOgz0",
       "titles": [
         "PETER vs TIMON: Tekenen"
@@ -59981,7 +59984,7 @@
           "duration": 1
         }
       ],
-      "duration": 7596,
+      "duration": 1140,
       "id": "d927",
       "youtube_id": "pGLrAjR--AU",
       "type": "stream"
