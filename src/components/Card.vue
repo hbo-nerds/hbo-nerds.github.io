@@ -46,10 +46,13 @@
     </div>
     <div class="card-body pt-3 pb-0 px-2 px-sm-0">
       <div class="d-flex justify-content-between gap-2 position-relative">
-        <div
+        <a
           v-if="card['twitch_id'] && card['youtube_id']"
           class="flex-shrink-0 position-relative"
           style="width: 32px; height: 32px"
+          :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+          target="_blank"
+          title="Bekijk op Twitch"
         >
           <div class="position-absolute end-0 bottom-0 lh-1">
             <img
@@ -69,12 +72,13 @@
               width="24"
             />
           </div>
-        </div>
+        </a>
         <template v-else>
           <a
             v-if="card['twitch_id']"
             :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
             target="_blank"
+            title="Bekijk op Twitch"
           >
             <img
               alt="logo"
@@ -88,6 +92,7 @@
             v-else-if="card['type'] === 'podcast'"
             :href="'https://youtube.com/watch?v=' + card['youtube_id']"
             target="_blank"
+            title="Bekijk op YouTube"
           >
             <img
               alt="logo"
