@@ -148,7 +148,9 @@ function createList() {
 }
 
 onBeforeMount(() => {
-  items.value = generalStore.getPlaylistItems(route.query.items);
+  const itemsParam = route.query.items || "";
+  // Split the concatenated IDs back into an array of 4-character strings
+  items.value = generalStore.getPlaylistItems(itemsParam.match(/.{1,4}/g) || []);
 });
 </script>
 

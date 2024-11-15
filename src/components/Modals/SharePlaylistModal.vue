@@ -91,7 +91,9 @@ const playlist = computed(() => {
 const shareUrl = computed(() => {
   if (!playlist.value) return "";
 
-  let search_params = new URLSearchParams(playlist.value["items"].map((s) => ["items", s]));
+  let search_params = new URLSearchParams();
+  const combinedIds = playlist.value["items"].join("");
+  search_params.append("items", combinedIds)
   search_params.append("title", playlist.value["title"]);
   if (playlist.value["description"])
     search_params.append("description", playlist.value["description"]);
@@ -146,7 +148,7 @@ function reddit() {
 function x() {
   let a = document.createElement("a");
   a.target = "_blank";
-  a.href = "https://x.com/intent/post?" + "url=" + shareUrl.value + "&" + "text=" + cardTitle.value;
+  a.href = "https://x.com/intent/post?" + "url=" + shareUrl.value;
   a.click();
 }
 
