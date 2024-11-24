@@ -24786,7 +24786,10 @@
             ],
             "twitchtracker_id": "26476242768",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=cOGQMym86T4"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=cOGQMym86T4"
+                }
             ],
             "tags": [
                 "casual"
@@ -30626,7 +30629,10 @@
             ],
             "twitchtracker_id": "29283792080",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=0eqxw9021HM"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=0eqxw9021HM"
+                }
             ],
             "tags": [
                 "casual"
@@ -31047,7 +31053,10 @@
             "twitchtracker_id": "29606760368",
             "twitch_id": "307099449",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=XBtAKhL3-GI"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=XBtAKhL3-GI"
+                }
             ],
             "tags": [
                 "main",
@@ -31224,8 +31233,14 @@
             ],
             "twitchtracker_id": "29685054880",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=YaXnSNrdmgw",
-                "https://www.youtube.com/watch?v=XvndNb_aWAc"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=YaXnSNrdmgw"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=XvndNb_aWAc"
+                }
             ],
             "tags": [
                 "casual"
@@ -31469,7 +31484,10 @@
             ],
             "twitchtracker_id": "29803314816",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=1pj4m2zJNaU"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=1pj4m2zJNaU"
+                }
             ],
             "tags": [
                 "main"
@@ -31512,7 +31530,10 @@
             "twitchtracker_id": "29829576512",
             "twitch_id": "307103311",
             "extra_urls": [
-                "https://www.twitch.tv/videos/294652645"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/294652645"
+                }
             ],
             "tags": [
                 "main"
@@ -34360,7 +34381,10 @@
             "twitchtracker_id": "32431709968",
             "twitch_id": "399301900",
             "extra_urls": [
-                "https://www.twitch.tv/videos/409882395"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/409882395"
+                }
             ],
             "tags": [
                 "main"
@@ -34644,8 +34668,14 @@
             "twitchtracker_id": "32717631136",
             "twitch_id": "409879863",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=sgeufrI5ltw",
-                "https://www.twitch.tv/videos/409879710"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=sgeufrI5ltw"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/409879710"
+                }
             ],
             "tags": [
                 "main"
@@ -34837,7 +34867,10 @@
             ],
             "twitchtracker_id": "32947796464",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=9x9YQPCd24c"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=9x9YQPCd24c"
+                }
             ],
             "tags": [
                 "main"
@@ -34863,8 +34896,14 @@
             "twitchtracker_id": "32951682016",
             "twitch_id": "417618494",
             "extra_urls": [
-                "https://www.twitch.tv/videos/417618598",
-                "https://www.twitch.tv/videos/417618783"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/417618598"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/417618783"
+                }
             ],
             "tags": [
                 "main"
@@ -35257,7 +35296,10 @@
             ],
             "twitchtracker_id": "33338704672",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=q5aie2_gGoI"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=q5aie2_gGoI"
+                }
             ],
             "tags": [
                 "casual"
@@ -35723,9 +35765,18 @@
             "twitchtracker_id": "33736209168",
             "twitch_id": "422908457",
             "extra_urls": [
-                "https://www.twitch.tv/videos/422908553",
-                "https://www.twitch.tv/videos/422908746",
-                "https://www.twitch.tv/videos/422908865"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/422908553"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/422908746"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/422908865"
+                }
             ],
             "tags": [
                 "main"
@@ -35969,8 +36020,14 @@
             "twitchtracker_id": "33943208512",
             "twitch_id": "419004438",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=kTpTIeUUJWg",
-                "https://www.twitch.tv/videos/419048617"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=kTpTIeUUJWg"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/419048617"
+                }
             ],
             "tags": [
                 "main"
@@ -36333,7 +36390,10 @@
             "twitchtracker_id": "34223079920",
             "twitch_id": "428414447",
             "extra_urls": [
-                "https://www.twitch.tv/videos/428438935"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/428438935"
+                }
             ],
             "tags": [
                 "main",
@@ -36737,7 +36797,10 @@
             "twitchtracker_id": "34468514128",
             "twitch_id": "436935707",
             "extra_urls": [
-                "https://www.twitch.tv/videos/436937811"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/436937811"
+                }
             ],
             "tags": [
                 "casual"
@@ -36784,7 +36847,10 @@
             "twitchtracker_id": "34480644336",
             "twitch_id": "437385830",
             "extra_urls": [
-                "https://www.twitch.tv/videos/437387078"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/437387078"
+                }
             ],
             "tags": [
                 "main"
@@ -37530,9 +37596,18 @@
             "twitchtracker_id": "35139413104",
             "twitch_id": "480808984",
             "extra_urls": [
-                "https://www.twitch.tv/videos/480809279",
-                "https://www.twitch.tv/videos/480809377",
-                "https://www.twitch.tv/videos/480809465"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/480809279"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/480809377"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/480809465"
+                }
             ],
             "tags": [
                 "casual"
@@ -37562,9 +37637,18 @@
             "twitchtracker_id": "35173530032",
             "twitch_id": "480809523",
             "extra_urls": [
-                "https://www.twitch.tv/videos/463119405",
-                "https://www.twitch.tv/videos/480809597",
-                "https://www.twitch.tv/videos/463108189"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/463119405"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/480809597"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/463108189"
+                }
             ],
             "tags": [
                 "main"
@@ -39042,8 +39126,14 @@
             "twitchtracker_id": "36144426464",
             "twitch_id": "510236051",
             "extra_urls": [
-                "https://www.twitch.tv/videos/510236156",
-                "https://www.twitch.tv/videos/510236278"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/510236156"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/510236278"
+                }
             ],
             "tags": [
                 "main"
@@ -39220,7 +39310,10 @@
             ],
             "twitchtracker_id": "198478193",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=CRIBoApBsXk"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=CRIBoApBsXk"
+                }
             ],
             "tags": [
                 "main"
@@ -39259,7 +39352,10 @@
             "twitchtracker_id": "207273105",
             "twitch_id": "535149634",
             "extra_urls": [
-                "https://www.twitch.tv/videos/535149488"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/535149488"
+                }
             ],
             "tags": [
                 "casual"
@@ -39353,7 +39449,10 @@
             "twitchtracker_id": "253617969",
             "twitch_id": "535153534",
             "extra_urls": [
-                "https://www.twitch.tv/videos/535153813"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/535153813"
+                }
             ],
             "tags": [
                 "main"
@@ -39708,7 +39807,10 @@
             ],
             "twitchtracker_id": "349306049",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=RNjwfwjSMRU"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=RNjwfwjSMRU"
+                }
             ],
             "tags": [
                 "main"
@@ -40160,7 +40262,10 @@
             "twitchtracker_id": "566638785",
             "twitch_id": "544678042",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=hNmdzpI5hAw"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=hNmdzpI5hAw"
+                }
             ],
             "tags": [
                 "casual"
@@ -41204,7 +41309,10 @@
             "twitchtracker_id": "969257713",
             "twitch_id": "584535989",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=k-hhSakVxgIm/watch?v=8fkQ0ZAQaBk"
+                }
             ],
             "tags": [
                 "casual"
@@ -41665,7 +41773,10 @@
             "twitchtracker_id": "37658222384",
             "twitch_id": "598513495",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=AbJ6aCSfrKE"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=AbJ6aCSfrKE"
+                }
             ],
             "tags": [
                 "casual"
@@ -42688,7 +42799,10 @@
             ],
             "twitchtracker_id": "39144282800",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=HKbly8Z7lWw"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=HKbly8Z7lWw"
+                }
             ],
             "tags": [
                 "main"
@@ -42714,7 +42828,10 @@
             "twitchtracker_id": "39189793488",
             "twitch_id": "692571544",
             "extra_urls": [
-                "https://www.twitch.tv/videos/692572310"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/692572310"
+                }
             ],
             "tags": [
                 "main",
@@ -43177,7 +43294,10 @@
             "twitchtracker_id": "298296450",
             "twitch_id": "707182389",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=0R7Q1UTN6V0"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=0R7Q1UTN6V0"
+                }
             ],
             "tags": [
                 "casual"
@@ -43318,8 +43438,14 @@
             "twitchtracker_id": "376243378",
             "twitch_id": "715315376",
             "extra_urls": [
-                "https://www.twitch.tv/videos/715316148",
-                "https://www.youtube.com/watch?v=cEbDf2hu_lA"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/715316148"
+                },
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=cEbDf2hu_lA"
+                }
             ],
             "tags": [
                 "main"
@@ -43602,7 +43728,10 @@
             "twitchtracker_id": "556752642",
             "twitch_id": "736289954",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=R1nbMV2Do9U"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=R1nbMV2Do9U"
+                }
             ],
             "tags": [
                 "casual"
@@ -43896,7 +44025,10 @@
             ],
             "twitchtracker_id": "39598703676",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=FSsB7ZU1dtM"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=FSsB7ZU1dtM"
+                }
             ],
             "tags": [
                 "casual",
@@ -44251,7 +44383,10 @@
             "twitchtracker_id": "39792053372",
             "twitch_id": "791113075",
             "extra_urls": [
-                "https://www.twitch.tv/videos/791114035"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/791114035"
+                }
             ],
             "tags": [
                 "casual",
@@ -44281,7 +44416,10 @@
             "twitchtracker_id": "39805666460",
             "twitch_id": "784877677",
             "extra_urls": [
-                "https://www.twitch.tv/videos/784878802"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/784878802"
+                }
             ],
             "tags": [
                 "main"
@@ -44452,7 +44590,10 @@
             "twitchtracker_id": "39917647788",
             "twitch_id": "797447769",
             "extra_urls": [
-                "https://www.twitch.tv/videos/797448161"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/797448161"
+                }
             ],
             "tags": [
                 "casual"
@@ -44605,7 +44746,10 @@
             "twitchtracker_id": "40012702524",
             "twitch_id": "805455187",
             "extra_urls": [
-                "https://www.twitch.tv/videos/805455821"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/805455821"
+                }
             ],
             "tags": [
                 "main"
@@ -44701,7 +44845,10 @@
             "twitchtracker_id": "40046470492",
             "twitch_id": "813513639",
             "extra_urls": [
-                "https://www.twitch.tv/videos/813514833"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/813514833"
+                }
             ],
             "tags": [
                 "casual",
@@ -44969,7 +45116,10 @@
             ],
             "twitchtracker_id": "40277512796",
             "extra_urls": [
-                "https://www.youtube.com/watch?v=oQKgjDxy4Zs"
+                {
+                    "label": "",
+                    "url": "https://www.youtube.com/watch?v=oQKgjDxy4Zs"
+                }
             ],
             "tags": [
                 "casual"
@@ -45225,7 +45375,10 @@
             "twitchtracker_id": "40435381548",
             "twitch_id": "847969572",
             "extra_urls": [
-                "https://www.twitch.tv/videos/847971418"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/847971418"
+                }
             ],
             "tags": [
                 "main"
@@ -45419,7 +45572,10 @@
             "twitchtracker_id": "40708520284",
             "twitch_id": "870074911",
             "extra_urls": [
-                "https://www.twitch.tv/videos/870067476"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/870067476"
+                }
             ],
             "tags": [
                 "main"
@@ -49892,7 +50048,10 @@
             "twitchtracker_id": "43997907660",
             "twitch_id": "1226260282",
             "extra_urls": [
-                "https://www.twitch.tv/videos/1226261854"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/1226261854"
+                }
             ],
             "tags": [
                 "main"
@@ -53855,7 +54014,10 @@
             "twitchtracker_id": "40047363960",
             "twitch_id": "1646591451",
             "extra_urls": [
-                "https://www.twitch.tv/videos/1646591451"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/1646591451"
+                }
             ],
             "tags": [
                 "main"
@@ -54168,7 +54330,10 @@
             "twitchtracker_id": "40172755928",
             "twitch_id": "1677958615",
             "extra_urls": [
-                "https://www.twitch.tv/videos/1677959346"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/1677959346"
+                }
             ],
             "tags": [
                 "main"
@@ -54463,7 +54628,10 @@
             "twitchtracker_id": "40344257128",
             "twitch_id": "1709492944",
             "extra_urls": [
-                "https://www.twitch.tv/videos/1709495880"
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/1709495880"
+                }
             ],
             "tags": [
                 "main"
