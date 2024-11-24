@@ -202,10 +202,10 @@
             <div class="small fw-lighter mb-2">Extra:</div>
 
             <div class="d-flex flex-wrap gap-2">
-              <template v-for="(url, i) in card['extra_urls']" :key="i">
+              <template v-for="(obj, i) in card['extra_urls']" :key="i">
                 <a
-                  v-if="url.includes('twitch')"
-                  :href="url"
+                  v-if="obj.url?.includes('twitch')"
+                  :href="obj.url"
                   class="btn border rounded-pill text-nowrap d-flex align-items-center"
                   target="_blank"
                 >
@@ -218,8 +218,8 @@
                   <span>Twitch</span>
                 </a>
                 <a
-                  v-else-if="url.includes('youtube')"
-                  :href="url"
+                  v-else-if="obj.url?.includes('youtube')"
+                  :href="obj.url"
                   class="btn border rounded-pill text-nowrap d-flex align-items-center"
                   target="_blank"
                 >
@@ -233,7 +233,7 @@
                 </a>
                 <a
                   v-else
-                  :href="url"
+                  :href="obj.url"
                   class="btn border rounded-pill text-nowrap d-flex align-items-center"
                   target="_blank"
                 >
