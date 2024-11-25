@@ -20,7 +20,8 @@
           de app te installeren.
         </p>
       </div>
-      <button class="btn btn-dark" @click="installApp">Installeer App</button>
+      <button class="btn btn-dark me-2" @click="installApp">Installeer App</button>
+      <button class="btn btn-dark" @click="dontShowAnymore">Niet meer tonen</button>
     </div>
   </Transition>
 </template>
@@ -30,16 +31,21 @@ import { ref } from "vue";
 
 const show = ref<boolean>(false);
 const manuallyClosed = ref<boolean>(false);
-
 const deferredPrompt = ref<any>(null);
 
-window.addEventListener("beforeinstallprompt", (e) => {
-  show.value = true;
-  // Prevents the default mini-infobar or install dialog from appearing on mobile
-  e.preventDefault();
-  // Save the event because you’ll need to trigger it later.
-  deferredPrompt.value = e;
-});
+// Check if the user opted out
+if (!localStorage.getItem("pwaDismissed")) {
+  window.addEventListener("beforeinstallprompt", (e) => {
+    // Prevents the default mini-infobar or install dialog from appearing on mobile
+    e.preventDefault();
+    deferredPrompt.value = e;
+
+    // Only show the prompt if not manually dismissed
+    if (!localStorage.getItem("pwaDismissed")) {
+      show.value = true;
+    }
+  });
+}
 
 /**
  * Open installation prompt.
@@ -47,13 +53,15 @@ window.addEventListener("beforeinstallprompt", (e) => {
 async function installApp() {
   if (deferredPrompt.value) {
     deferredPrompt.value.prompt();
-    // Find out whether the user confirmed the installation or not
     const { outcome } = await deferredPrompt.value.userChoice;
-    // The deferredPrompt can only be used once.
     deferredPrompt.value = null;
-    // Act on the user's choice
     console.log(outcome);
   }
+}
+
+function dontShowAnymore() {
+  localStorage.setItem("pwaDismissed", "true");
+  manuallyClosed.value = true;
 }
 </script>
 

@@ -14,7 +14,7 @@
           type="button"
         ></button>
       </div>
-      <div class="d-flex gap-2">
+      <div class="d-flex gap-2 mb-2">
         <img
           alt="app_icon"
           class="rounded-4 border"
@@ -30,6 +30,7 @@
           <strong>Zet op beginscherm</strong>&nbsp;<i class="bi bi-plus-square"></i>
         </p>
       </div>
+      <button class="btn btn-dark" @click="dontShowAnymore">Niet meer tonen</button>
     </div>
   </Transition>
 </template>
@@ -44,18 +45,27 @@ const manuallyClosed = ref<boolean>(false);
  * Check for PWA prompt on iOS devices.
  */
 function showIosInstallModal() {
-  // detect if the device is on iOS
   const isIos = () => {
     const userAgent = window.navigator.userAgent.toLowerCase();
     return /iphone|ipad|ipod/.test(userAgent);
   };
 
-  // check if the device is in standalone mode
   const isInStandaloneMode = () => {
     return "standalone" in (window as any).navigator && (window as any).navigator.standalone;
   };
 
-  show.value = isIos() && !isInStandaloneMode();
+  // Only show the prompt if the user has not dismissed it
+  if (!localStorage.getItem("iosPwaDismissed")) {
+    show.value = isIos() && !isInStandaloneMode();
+  }
+}
+
+/**
+ * Mark the iOS PWA prompt as dismissed.
+ */
+function dontShowAnymore() {
+  localStorage.setItem("iosPwaDismissed", "true");
+  manuallyClosed.value = true;
 }
 
 onMounted(showIosInstallModal);

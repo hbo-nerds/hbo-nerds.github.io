@@ -93,7 +93,7 @@ const shareUrl = computed(() => {
 
   let search_params = new URLSearchParams();
   const combinedIds = playlist.value["items"].join("");
-  search_params.append("items", combinedIds)
+  search_params.append("items", combinedIds);
   search_params.append("title", playlist.value["title"]);
   if (playlist.value["description"])
     search_params.append("description", playlist.value["description"]);
