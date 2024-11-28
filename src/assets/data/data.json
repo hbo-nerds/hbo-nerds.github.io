@@ -60218,6 +60218,52 @@
             "youtube_id": "MP2wR96huk8",
             "id": "11b7",
             "type": "stream"
+        },
+        {
+            "date": "2024-11-25",
+            "time_start": "20:32:47",
+            "time_end": "22:46:19",
+            "titles": [
+                "Is dit 'm?!"
+            ],
+            "activities": [
+                {
+                    "title": "DRAGON BALL: Sparking! ZERO",
+                    "duration": 1
+                },
+                {
+                    "title": "Empire of the Ants",
+                    "duration": 1
+                },
+                {
+                    "title": "Call of Duty: Warzone",
+                    "duration": 1
+                }
+            ],
+            "duration": 8012,
+            "twitch_id": "2311052138",
+            "youtube_id": "6xsJQMRsFBM",
+            "id": "1999",
+            "type": "stream"
+        },
+        {
+            "date": "2024-11-27",
+            "time_start": "20:58:40",
+            "time_end": "22:49:16",
+            "titles": [
+                "YEPPP!"
+            ],
+            "activities": [
+                {
+                    "title": "Storage Hunter Simulator",
+                    "duration": 1
+                }
+            ],
+            "duration": 6636,
+            "twitch_id": "2312654300",
+            "youtube_id": "bvX4h_k7zf0",
+            "id": "1460",
+            "type": "stream"
         }
     ]
 }
