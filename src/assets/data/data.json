@@ -22035,7 +22035,7 @@
             "title": "Ik ben Dierenarts -  Lekker spelen",
             "duration": 489,
             "youtube_id": "Watag66kVeY",
-            "activity": "star stable"
+            "activity": "ik ben dierenarts"
         },
         {
             "id": "c84a",
@@ -60263,6 +60263,45 @@
             "twitch_id": "2312654300",
             "youtube_id": "bvX4h_k7zf0",
             "id": "1460",
+            "type": "stream"
+        },
+        {
+            "date": "2024-12-02",
+            "time_start": "20:37:54",
+            "time_end": "22:21:02",
+            "titles": [
+                "Sceptisten ijlen door dit spel",
+                "Welcome to Kowloon"
+            ],
+            "activities": [
+                {
+                    "title": "Welcome to Kowloon",
+                    "duration": 1
+                }
+            ],
+            "duration": 6188,
+            "twitch_id": "2316759271",
+            "youtube_id": "LWD0o_qzIg4",
+            "id": "510e",
+            "type": "stream"
+        },
+        {
+            "date": "2024-12-04",
+            "time_start": "20:30:36",
+            "time_end": "22:25:46",
+            "titles": [
+                "❤️ MOTION CONTROLS"
+            ],
+            "activities": [
+                {
+                    "title": "Wii Play: Motion",
+                    "duration": 1
+                }
+            ],
+            "duration": 6910,
+            "twitch_id": "2318352500",
+            "youtube_id": "vHDnAqO4w8w",
+            "id": "f2c6",
             "type": "stream"
         }
     ]
