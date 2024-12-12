@@ -60303,6 +60303,43 @@
             "youtube_id": "vHDnAqO4w8w",
             "id": "f2c6",
             "type": "stream"
+        },
+        {
+            "date": "2024-12-09",
+            "time_start": "20:57:03",
+            "time_end": "23:32:09",
+            "titles": [
+                "Nog maar 3 streams..."
+            ],
+            "activities": [
+                {
+                    "title": "Granny: Escape Together",
+                    "duration": 1
+                }
+            ],
+            "duration": 9306,
+            "twitch_id": "2322718249",
+            "youtube_id": "-M9IxKCWqNk",
+            "id": "250e",
+            "type": "stream"
+        },
+        {
+            "date": "2024-12-11",
+            "time_start": "20:34:08",
+            "time_end": "22:56:18",
+          "titles": [
+            "Rollen & Dollen: Vermist op zee"
+          ],
+            "activities": [
+                {
+                    "title": "Dungeons & Dragons",
+                    "duration": 1
+                }
+            ],
+            "duration": 8530,
+            "youtube_id": "WmOrWg2ycJQ",
+            "id": "f6e3",
+            "type": "stream"
         }
     ]
 }
