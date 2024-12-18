@@ -60222,6 +60222,7 @@
         {
             "date": "2024-11-25",
             "time_start": "20:32:47",
+            "collection": 90,
             "time_end": "22:46:19",
             "titles": [
                 "Is dit 'm?!"
@@ -60326,10 +60327,11 @@
         {
             "date": "2024-12-11",
             "time_start": "20:34:08",
+            "collection": 87,
             "time_end": "22:56:18",
-          "titles": [
-            "Rollen & Dollen: Vermist op zee"
-          ],
+            "titles": [
+                "Rollen & Dollen: Vermist op zee"
+            ],
             "activities": [
                 {
                     "title": "Dungeons & Dragons",
@@ -60339,6 +60341,25 @@
             "duration": 8530,
             "youtube_id": "WmOrWg2ycJQ",
             "id": "f6e3",
+            "type": "stream"
+        },
+        {
+            "date": "2024-12-16",
+            "time_start": "20:42:49",
+            "time_end": "23:54:09",
+            "titles": [
+                "PETER vs TIMON: VOOR EENS EN VOOR ALTIJD!"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 11480,
+            "twitch_id": "2328589668",
+            "youtube_id": "mNrINESzsS0",
+            "id": "734d",
             "type": "stream"
         }
     ]
