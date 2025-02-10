@@ -54715,7 +54715,8 @@
             ],
             "twitchtracker_id": "40383845912",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "20:34:00",
             "free": true,
@@ -55040,7 +55041,8 @@
             ],
             "twitchtracker_id": "40505647480",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "15:33:00",
             "time_end": "17:55:00",
@@ -55362,7 +55364,8 @@
             "twitchtracker_id": "40596008840",
             "twitch_id": "1775406667",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "16:27:00",
             "time_end": "18:35:00"
@@ -55420,7 +55423,7 @@
             "time_start": "20:40:00",
             "time_end": "22:45:00"
         },
-        {
+        {`
             "id": "e88a",
             "type": "stream",
             "date": "2023-03-30",
@@ -55441,7 +55444,8 @@
             "twitchtracker_id": "40610661864",
             "twitch_id": "1780135464",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "19:40:00",
             "time_end": "22:15:00"
@@ -55723,7 +55727,8 @@
             ],
             "twitchtracker_id": "40701329240",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "15:15:00",
             "time_end": "17:25:00",
@@ -55878,7 +55883,8 @@
             ],
             "twitchtracker_id": "46874182700",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "15:07:00",
             "time_end": "16:15:00",
@@ -55998,7 +56004,8 @@
             ],
             "twitchtracker_id": "40764804520",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "16:11:00",
             "time_end": "17:35:00"
@@ -56092,7 +56099,8 @@
             ],
             "twitchtracker_id": "40792493608",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "22:01:00",
             "time_end": "23:45:00",
@@ -56188,7 +56196,8 @@
             ],
             "twitchtracker_id": "46930920540",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "20:31:00",
             "time_end": "22:45:00",
@@ -56309,7 +56318,8 @@
             ],
             "twitchtracker_id": "40833010728",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "14:02:00",
             "time_end": "16:25:00",
@@ -56888,7 +56898,8 @@
             "twitchtracker_id": "41016643192",
             "twitch_id": "1907367562",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "16:51:00",
             "time_end": "18:35:00"
@@ -57235,7 +57246,8 @@
             ],
             "twitchtracker_id": "41139119064",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "20:29:00",
             "time_end": "22:35:00",
@@ -57647,7 +57659,8 @@
             "twitchtracker_id": "49619783517",
             "twitch_id": "1966951415",
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "time_start": "20:30:00",
             "time_end": "22:35:00",
@@ -57764,7 +57777,8 @@
             "twitch_id": "1980063894",
             "tags": [
                 "casual",
-                "speedrun"
+              "speedrun",
+              "bonus stream"
             ],
             "time_start": "17:50:00",
             "time_end": "21:05:00",
@@ -58106,7 +58120,8 @@
                 }
             ],
             "tags": [
-                "main"
+              "main",
+              "bonus stream"
             ],
             "duration": 6100,
             "description": "De mannen gaan de zouten zeeen op, Timon wordt overprikkeld en knalt een zooitje schepen kapot, ze geven geld uit aan een kat met 3 poten",
@@ -58349,7 +58364,8 @@
                 }
             ],
             "tags": [
-                "casual"
+              "casual",
+              "bonus stream"
             ],
             "duration": 8462,
             "description": "Timon is Sephiroth fan, ze vergelijken Cloud met zijn moeder, voicecracks zijn aanwezig en er is een discussie over hoe je een spin vermoord of vrijlaat",
@@ -58731,7 +58747,7 @@
             "type": "stream"
         },
         {
-            "date": "2024-04-21",
+            "date": "2024-04-22",
             "time_start": "20:38:57",
             "time_end": "22:30:19",
             "titles": [
@@ -60034,23 +60050,26 @@
             "type": "stream"
         },
         {
-            "date": "2024-10-10",
-            "time_start": "20:37:30",
-            "free": true,
-            "time_end": "22:53:01",
-            "titles": [
-                "We gaan door tot we VERLIEZEN! 🥊"
-            ],
-            "activities": [
-                {
-                    "title": "Undisputed",
-                    "duration": 1
-                }
-            ],
-            "duration": 8131,
-            "youtube_id": "7VBBmHqEZIw",
-            "id": "236d",
-            "type": "stream"
+          "date": "2024-10-10",
+          "time_start": "20:37:30",
+          "free": true,
+          "time_end": "22:53:01",
+          "titles": [
+            "We gaan door tot we VERLIEZEN! 🥊"
+          ],
+          "activities": [
+            {
+              "title": "Undisputed",
+              "duration": 1
+            }
+          ],
+          "duration": 8131,
+          "tag": [
+            "bonus stream"
+          ],
+          "youtube_id": "7VBBmHqEZIw",
+          "id": "236d",
+          "type": "stream"
         },
         {
             "date": "2024-10-14",
@@ -60527,6 +60546,9 @@
             }
           ],
           "duration": 7561,
+          "tag": [
+            "bonus stream"
+          ],
           "youtube_id": "KHnA15H83vY",
           "id": "0b84",
           "type": "stream"
