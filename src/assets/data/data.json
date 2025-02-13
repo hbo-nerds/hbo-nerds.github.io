@@ -60064,7 +60064,7 @@
                 }
             ],
             "duration": 8131,
-            "tag": [
+            "tags": [
                 "bonus stream"
             ],
             "youtube_id": "7VBBmHqEZIw",
@@ -60546,7 +60546,7 @@
                 }
             ],
             "duration": 7561,
-            "tag": [
+            "tags": [
                 "bonus stream"
             ],
             "youtube_id": "KHnA15H83vY",
@@ -60554,26 +60554,45 @@
             "type": "stream"
         },
         {
-          "date": "2025-02-10",
-          "free": true,
-          "time_start": "20:43:14",
-          "time_end": "23:58:58",
-          "titles": [
-            "HET MAKEN VAN EEN NIEUWE START! - Civilization VII"
-          ],
-          "activities": [
-            {
-              "title": "Civilization VII",
-              "duration": 11000
-            }
-          ],
-          "tags": [
-            "bonus stream"
-          ],
-          "duration": 11744,
-          "youtube_id": "f96LnBps4sA",
-          "id": "5124",
-          "type": "stream"
+            "date": "2025-02-10",
+            "free": true,
+            "time_start": "20:43:14",
+            "time_end": "23:58:58",
+            "titles": [
+                "HET MAKEN VAN EEN NIEUWE START! - Civilization VII"
+            ],
+            "activities": [
+                {
+                    "title": "Civilization VII",
+                    "duration": 11000
+                }
+            ],
+            "tags": [
+                "bonus stream"
+            ],
+            "duration": 11744,
+            "youtube_id": "f96LnBps4sA",
+            "id": "5124",
+            "type": "stream"
+        },
+        {
+            "date": "2025-02-12",
+            "time_start": "22:41:06",
+            "time_end": "23:50:29",
+            "titles": [
+                "Playstation: State of Play (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 3600
+                }
+            ],
+            "duration": 4163,
+            "twitch_id": "2379598694",
+            "youtube_id": "DNq8V73QPwo",
+            "id": "a0a8",
+            "type": "stream"
         }
     ]
 }
