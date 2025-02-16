@@ -13,30 +13,30 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "@vueuse/core": "^12.0.0",
+    "@vueuse/core": "^12.7.0",
     "bootstrap": "^5.3.3",
     "lodash.debounce": "^4.0.8",
-    "npm-check-updates": "^17.1.11",
-    "pathe": "^1.1.2",
-    "pinia": "^2.3.0",
+    "npm-check-updates": "^17.1.14",
+    "pathe": "^2.0.3",
+    "pinia": "^3.0.1",
     "vue": "^3.5.13",
-    "vue-gtag": "^2.0.1",
+    "vue-gtag": "^2.1.0",
     "vue-router": "^4.5.0",
-    "vue3-toastify": "^0.2.5"
+    "vue3-toastify": "^0.2.8"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.10.4",
+    "@rushstack/eslint-patch": "^1.10.5",
     "@vitejs/plugin-vue": "^5.2.1",
-    "@vue/eslint-config-prettier": "^10.1.0",
+    "@vue/eslint-config-prettier": "^10.2.0",
     "@vue/tsconfig": "^0.7.0",
-    "eslint": "^9.17.0",
+    "eslint": "^9.20.1",
     "eslint-plugin-vue": "^9.32.0",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.1",
     "prettier-plugin-organize-imports": "^4.1.0",
-    "sass": "^1.83.0",
-    "typescript": "^5.7.2",
-    "vite": "^6.0.3",
+    "sass": "^1.85.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0",
     "vite-plugin-pwa": "^0.21.1",
-    "vue-tsc": "^2.1.10"
+    "vue-tsc": "^2.2.2"
   }
 }
