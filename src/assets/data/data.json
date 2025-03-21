@@ -4062,26 +4062,26 @@
             "activity": "Ignition"
         },
         {
-          "id": "06a3",
-          "type": "stream",
-          "date": "2014-09-29",
-          "description": "Zeer iconische stream uit de oude doos, de vos is los en het konijn (een hond volgens Timon) valt de mannen vaak lastig. Timon ontmoet jochem aan het einde van de stream.",
-          "duration": 3660,
-          "titles": [
-            "FIVE NIGHTS AT FREDDY'S: De vos is los!"
-          ],
-          "activities": [
-            {
-              "title": "Five Nights at Freddy's",
-              "duration": 3660
-            }
-          ],
-          "twitch_id": "47635484",
-          "tags": [
-            "main",
-            "fnaf",
-            "horror"
-          ]
+            "id": "06a3",
+            "type": "stream",
+            "date": "2014-09-29",
+            "description": "Zeer iconische stream uit de oude doos, de vos is los en het konijn (een hond volgens Timon) valt de mannen vaak lastig. Timon ontmoet jochem aan het einde van de stream.",
+            "duration": 3660,
+            "titles": [
+                "FIVE NIGHTS AT FREDDY'S: De vos is los!"
+            ],
+            "activities": [
+                {
+                    "title": "Five Nights at Freddy's",
+                    "duration": 3660
+                }
+            ],
+            "twitch_id": "47635484",
+            "tags": [
+                "main",
+                "fnaf",
+                "horror"
+            ]
         },
         {
             "id": "ra573326122",
@@ -36865,21 +36865,21 @@
             ]
         },
         {
-          "id": "a3c1",
-          "type": "podcast",
-          "date": "2019-06-11",
-          "title": "E3 2019 -  Square Enix (live reacties)",
-          "duration": 1071,
-          "youtube_id": "8bLyRDftIhs",
-          "extra_urls": [
-            {
-              "label": "",
-              "url": "https://www.twitch.tv/videos/437387078"
-            }
-          ],
-          "collection": [
-            72
-          ]
+            "id": "a3c1",
+            "type": "podcast",
+            "date": "2019-06-11",
+            "title": "E3 2019 -  Square Enix (live reacties)",
+            "duration": 1071,
+            "youtube_id": "8bLyRDftIhs",
+            "extra_urls": [
+                {
+                    "label": "",
+                    "url": "https://www.twitch.tv/videos/437387078"
+                }
+            ],
+            "collection": [
+                72
+            ]
         },
         {
             "id": "6fb6",
@@ -38536,74 +38536,74 @@
             "activity": "FIFA 20"
         },
         {
-          "id": "394f",
-          "type": "stream",
-          "date": "2019-09-28",
-          "free": true,
-          "duration": 44100,
-          "youtube_id": "5ikVNw6FZ2Y",
-          "description": "Een lange stream waarin de mannen allemaal verschillende, met name oude, games spelen. Van Mirror's edge tot Croc, deze stream heeft het allemaal.",
-          "titles": [
-            "12 UUR MARATHON!"
-          ],
-          "activities": [
-            {
-              "title": "Bloodborne",
-              "duration": 44100
-            },
-            {
-              "title": "Swat 4",
-              "duration": 44100
-            },
-            {
-              "title": "Heart of Darkness",
-              "duration": 44100
-            },
-            {
-              "title": "Dungeon Keeper 2",
-              "duration": 44100
-            },
-            {
-              "title": "Mirror's Edge'",
-              "duration": 44100
-            },
-            {
-              "title": "Mario 64",
-              "duration": 44100
-            },
-            {
-              "title": "Mario Kart 64",
-              "duration": 44100
-            },
-            {
-              "title": "Croc",
-              "duration": 44100
-            },
-            {
-              "title": "COD: World at War",
-              "duration": 44100
-            },
-            {
-              "title": "Silent Hill",
-              "duration": 44100
-            },
-            {
-              "title": "Timesplitters 3",
-              "duration": 44100
-            },
-            {
-              "title": "Rayman M",
-              "duration": 44100
-            }
-          ],
-          "twitchtracker_id": "35804678832",
-          "twitch_id": "488758718",
-          "tags": [
-            "casual",
-            "Marathon"
-          ],
-          "time_start": "12:49:00",
-          "time_end": "01:05:00"
+            "id": "394f",
+            "type": "stream",
+            "date": "2019-09-28",
+            "free": true,
+            "duration": 44100,
+            "youtube_id": "5ikVNw6FZ2Y",
+            "description": "Een lange stream waarin de mannen allemaal verschillende, met name oude, games spelen. Van Mirror's edge tot Croc, deze stream heeft het allemaal.",
+            "titles": [
+                "12 UUR MARATHON!"
+            ],
+            "activities": [
+                {
+                    "title": "Bloodborne",
+                    "duration": 44100
+                },
+                {
+                    "title": "Swat 4",
+                    "duration": 44100
+                },
+                {
+                    "title": "Heart of Darkness",
+                    "duration": 44100
+                },
+                {
+                    "title": "Dungeon Keeper 2",
+                    "duration": 44100
+                },
+                {
+                    "title": "Mirror's Edge'",
+                    "duration": 44100
+                },
+                {
+                    "title": "Mario 64",
+                    "duration": 44100
+                },
+                {
+                    "title": "Mario Kart 64",
+                    "duration": 44100
+                },
+                {
+                    "title": "Croc",
+                    "duration": 44100
+                },
+                {
+                    "title": "COD: World at War",
+                    "duration": 44100
+                },
+                {
+                    "title": "Silent Hill",
+                    "duration": 44100
+                },
+                {
+                    "title": "Timesplitters 3",
+                    "duration": 44100
+                },
+                {
+                    "title": "Rayman M",
+                    "duration": 44100
+                }
+            ],
+            "twitchtracker_id": "35804678832",
+            "twitch_id": "488758718",
+            "tags": [
+                "casual",
+                "Marathon"
+            ],
+            "time_start": "12:49:00",
+            "time_end": "01:05:00"
         },
         {
             "id": "e37f",
@@ -42765,8 +42765,8 @@
             "twitchtracker_id": "38989734240",
             "twitch_id": "692559243",
             "tags": [
-              "main",
-              "solo"
+                "main",
+                "solo"
             ],
             "time_start": "20:19:00",
             "time_end": "22:05:00"
@@ -56023,35 +56023,34 @@
             "time_end": "17:35:00"
         },
         {
-          "id": "b340",
-          "type": "stream",
-          "date": "2023-06-05",
-          "duration": 6300,
-          "youtube_id": "XPMWyaQSoNo",
-          "description": "Peter en Timpie zetten die Egbert en de Vogel in voor zo'n lekker tekenstriempie. Die Vogeljongen kan bijzonder slecht tekenen voor het aantal subs dat hij heeft.",
-          "collection": [
-            56
-          ],
-          "titles": [
-            "Tekenen met de boys @egbertlive & @vogeljongen (Drawing from Memory is NU UIT OP MacOS!)"
-          ],
-          "activities": [
-            {
-              "title": "Drawing From Memory",
-              "duration": 6300
-            }
-          ],
-          "twitchtracker_id": "40776407720",
-          "twitch_id": "1840362382",
-          "tags": [
-            "main",
-            "vogeljongen",
-            "egbert"
-
-          ],
-          "time_start": "20:29:00",
-          "time_end": "22:15:00",
-          "free": true
+            "id": "b340",
+            "type": "stream",
+            "date": "2023-06-05",
+            "duration": 6300,
+            "youtube_id": "XPMWyaQSoNo",
+            "description": "Peter en Timpie zetten die Egbert en de Vogel in voor zo'n lekker tekenstriempie. Die Vogeljongen kan bijzonder slecht tekenen voor het aantal subs dat hij heeft.",
+            "collection": [
+                56
+            ],
+            "titles": [
+                "Tekenen met de boys @egbertlive & @vogeljongen (Drawing from Memory is NU UIT OP MacOS!)"
+            ],
+            "activities": [
+                {
+                    "title": "Drawing From Memory",
+                    "duration": 6300
+                }
+            ],
+            "twitchtracker_id": "40776407720",
+            "twitch_id": "1840362382",
+            "tags": [
+                "main",
+                "vogeljongen",
+                "egbert"
+            ],
+            "time_start": "20:29:00",
+            "time_end": "22:15:00",
+            "free": true
         },
         {
             "id": "a293",
@@ -60611,69 +60610,69 @@
             "type": "stream"
         },
         {
-          "date": "2025-02-26",
-          "time_start": "19:24:48",
-          "time_end": "08:11:33",
-          "titles": [
-            "DDINOSAUR RELEASE MARATHON!! (100 SALES = 1 UUR BONUS)"
-          ],
-          "activities": [
-            {
-              "title": "Special Events",
-              "duration": 1
-            },
-            {
-              "title": "The Isle",
-              "duration": 1
-            },
-            {
-              "title": "Super Mario Party Jamboree",
-              "duration": 1
-            },
-            {
-              "title": "Fall Guys",
-              "duration": 1
-            },
-            {
-              "title": "Five Nights at Freddy's",
-              "duration": 1
-            },
-            {
-              "title": "Donkey Kong Country Returns",
-              "duration": 1
-            },
-            {
-              "title": "Garfield: Lasagna Party",
-              "duration": 1
-            },
-            {
-              "title": "Garfield Kart: Furious Racing",
-              "duration": 1
-            },
-            {
-              "title": "The Smurfs Dance Party",
-              "duration": 1
-            },
-            {
-              "title": "Puzzle Boys",
-              "duration": 1
-            },
-            {
-              "title": "Trombone Champ",
-              "duration": 1
-            }
-          ],
-          "duration": 46005,
-          "youtube_id": "ZU73CTRPE0o",
-          "id": "ddeb",
-          "type": "stream"
+            "date": "2025-02-26",
+            "time_start": "19:24:48",
+            "time_end": "08:11:33",
+            "titles": [
+                "DDINOSAUR RELEASE MARATHON!! (100 SALES = 1 UUR BONUS)"
+            ],
+            "activities": [
+                {
+                    "title": "Special Events",
+                    "duration": 1
+                },
+                {
+                    "title": "The Isle",
+                    "duration": 1
+                },
+                {
+                    "title": "Super Mario Party Jamboree",
+                    "duration": 1
+                },
+                {
+                    "title": "Fall Guys",
+                    "duration": 1
+                },
+                {
+                    "title": "Five Nights at Freddy's",
+                    "duration": 1
+                },
+                {
+                    "title": "Donkey Kong Country Returns",
+                    "duration": 1
+                },
+                {
+                    "title": "Garfield: Lasagna Party",
+                    "duration": 1
+                },
+                {
+                    "title": "Garfield Kart: Furious Racing",
+                    "duration": 1
+                },
+                {
+                    "title": "The Smurfs Dance Party",
+                    "duration": 1
+                },
+                {
+                    "title": "Puzzle Boys",
+                    "duration": 1
+                },
+                {
+                    "title": "Trombone Champ",
+                    "duration": 1
+                }
+            ],
+            "duration": 46005,
+            "youtube_id": "ZU73CTRPE0o",
+            "id": "ddeb",
+            "type": "stream"
         },
         {
             "date": "2025-03-12",
             "time_start": "20:41:07",
             "time_end": "23:13:34",
             "titles": [
-                "LEKKER SPELEN LIVE",
+                
                 "SPLIT FICTION (Volgende week Smurfs Dance Party...)"
             ],
             "activities": [
@@ -60685,6 +60684,25 @@
             "duration": 9147,
             "youtube_id": "CzRlUesUUq8",
             "id": "a468",
+            "type": "stream"
+        },
+        {
+            "date": "2025-03-20",
+            "time_start": "18:45:20",
+            "time_end": "23:53:49",
+            "titles": [
+               
+                "100 KEER 'WHO LET THE SMURFS OUT' DANSEN"
+            ],
+            "activities": [
+                {
+                    "title": "The Smurfs Dance Party",
+                    "duration": 1
+                }
+            ],
+            "duration": 18509,
+            "youtube_id": "IT5FEEwZefY",
+            "id": "86b4",
             "type": "stream"
         }
     ]
