@@ -60672,7 +60672,6 @@
             "time_start": "20:41:07",
             "time_end": "23:13:34",
             "titles": [
-                
                 "SPLIT FICTION (Volgende week Smurfs Dance Party...)"
             ],
             "activities": [
@@ -60691,7 +60690,6 @@
             "time_start": "18:45:20",
             "time_end": "23:53:49",
             "titles": [
-               
                 "100 KEER 'WHO LET THE SMURFS OUT' DANSEN"
             ],
             "activities": [
@@ -60703,6 +60701,24 @@
             "duration": 18509,
             "youtube_id": "IT5FEEwZefY",
             "id": "86b4",
+            "type": "stream"
+        },
+        {
+            "date": "2025-03-27",
+            "time_start": "14:46:01",
+            "time_end": "15:39:46",
+            "titles": [
+              "Nintendo Direct (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 3225,
+            "youtube_id": "IT5FEEwZefY",
+            "id": "84d2",
             "type": "stream"
         }
     ]
