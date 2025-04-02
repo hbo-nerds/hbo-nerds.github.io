@@ -60704,11 +60704,29 @@
             "type": "stream"
         },
         {
-            "date": "2025-03-27",
-            "time_start": "14:46:01",
-            "time_end": "15:39:46",
+          "date": "2025-03-27",
+          "time_start": "14:46:01",
+          "time_end": "15:39:46",
+          "titles": [
+            "Nintendo Direct (live reacties)"
+          ],
+          "activities": [
+            {
+              "title": "Speciale Evenementen",
+              "duration": 1
+            }
+          ],
+          "duration": 3225,
+          "youtube_id": "Ds4RvLCETHE",
+          "id": "84d2",
+          "type": "stream"
+        },
+        {
+            "date": "2025-04-02",
+            "time_start": "14:41:53",
+            "time_end": "16:07:51",
             "titles": [
-              "Nintendo Direct (live reacties)"
+              "Nintendo Direct: SWITCH 2 (live reacties)"
             ],
             "activities": [
                 {
@@ -60716,9 +60734,15 @@
                     "duration": 1
                 }
             ],
+<<<<<<< HEAD
+            "duration": 5158,
+            "youtube_id": "tACOs8VZl0Q",
+            "id": "7f11",
+=======
             "duration": 3225,
             "youtube_id": "Ds4RvLCETHE",
             "id": "84d2",
+>>>>>>> 67e4dfbe17372def5ade805c13c1bf555404da90
             "type": "stream"
         }
     ]
