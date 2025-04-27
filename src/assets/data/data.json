@@ -20336,7 +20336,6 @@
             "date": "2017-05-17",
             "description": "Marathon Stream 450 subs",
             "duration": 18960,
-            "youtube_id": "P9GgFvOx_Ec",
             "titles": [
                 "Afterparty with the boyz 4 life"
             ],
@@ -21058,7 +21057,7 @@
             "duration": 4200,
             "youtube_id": "wTGOnTFEtfI",
             "titles": [
-                "Potje met Peetje"
+              "E3 2017 - Nintendo persconferentie (Durf te dromen)"
             ],
             "activities": [
                 {
@@ -28545,30 +28544,33 @@
             "time_end": "01:25:00"
         },
         {
-            "id": "4fd0",
-            "type": "stream",
-            "date": "2018-03-21",
-            "collection": [
-                74
-            ],
-            "duration": 8820,
-            "titles": [
-                "PETER vs TIMON TEKENSTREAM (+ Hamster spreekbeurt)"
-            ],
-            "activities": [
-                {
-                    "title": "Creative",
-                    "duration": 8820
-                }
-            ],
-            "twitchtracker_id": "28018129840",
-            "twitch_id": "246355729",
-            "tags": [
-                "main",
-                "peter vs timon"
-            ],
-            "time_start": "20:17:00",
-            "time_end": "22:45:00"
+          "id": "4fd0",
+          "type": "stream",
+          "date": "2018-03-21",
+          "description": "Peter en Timon spelen weer eens een tekenwedstrijd in Paint en maken ruzie over wiens tekening meer lijkt.",
+          "collection": [
+            74
+          ],
+          "duration": 8820,
+          "titles": [
+            "PETER vs TIMON TEKENSTREAM (+ Hamster spreekbeurt)"
+          ],
+          "activities": [
+            {
+              "title": "Creative",
+              "duration": 8820
+            }
+          ],
+          "twitchtracker_id": "28018129840",
+          "twitch_id": "246355729",
+          "tags": [
+            "main",
+            "peter vs timon",
+            "tekenen",
+            "tekenwedstrijd"
+          ],
+          "time_start": "20:17:00",
+          "time_end": "22:45:00"
         },
         {
             "id": "f866",
@@ -30908,31 +30910,34 @@
             "time_end": "17:15:00"
         },
         {
-            "id": "0cc5",
-            "type": "stream",
-            "date": "2018-07-16",
-            "collection": [
-                74
-            ],
-            "duration": 8820,
-            "youtube_id": "GD0mf7glhBI",
-            "titles": [
-                "PETER vs TIMON: Tekenwedstrijd"
-            ],
-            "activities": [
-                {
-                    "title": "IRL",
-                    "duration": 8820
-                }
-            ],
-            "twitchtracker_id": "29504165056",
-            "twitch_id": "285489311",
-            "tags": [
-                "main",
-                "peter vs timon"
-            ],
-            "time_start": "20:27:00",
-            "time_end": "22:55:00"
+          "id": "0cc5",
+          "type": "stream",
+          "date": "2018-07-16",
+          "description": "Één van de eerste streams waarin Peter en Timon een tekenwedstrijd doen. Ze maken veel ruzie over wiens tekening beter is en wie er wel of niet gecheat heeft. Uiteindelijk bepaalt de chat wie wint en wie de straf stream van 4 afleveringen Minecraft Story Mode moet spelen.",
+          "collection": [
+            74
+          ],
+          "duration": 8820,
+          "youtube_id": "GD0mf7glhBI",
+          "titles": [
+            "PETER vs TIMON: Tekenwedstrijd"
+          ],
+          "activities": [
+            {
+              "title": "IRL",
+              "duration": 8820
+            }
+          ],
+          "twitchtracker_id": "29504165056",
+          "twitch_id": "285489311",
+          "tags": [
+            "main",
+            "peter vs timon",
+            "tekenen",
+            "tekenwedstrijd"
+          ],
+          "time_start": "20:27:00",
+          "time_end": "22:55:00"
         },
         {
             "id": "94e9",
@@ -31108,27 +31113,30 @@
             "time_end": "23:05:00"
         },
         {
-            "id": "0b6d",
-            "type": "stream",
-            "date": "2018-07-26",
-            "duration": 5100,
-            "youtube_id": "SNjInQ8e6Jc",
-            "titles": [
-                "Hoofdstuk 1 van Harry Potter voorlezen (strafstream)"
-            ],
-            "activities": [
-                {
-                    "title": "IRL",
-                    "duration": 5100
-                }
-            ],
-            "twitchtracker_id": "29649319360",
-            "twitch_id": "307100135",
-            "tags": [
-                "casual"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "21:45:00"
+          "id": "0b6d",
+          "type": "stream",
+          "date": "2018-07-26",
+          "duration": 5100,
+          "youtube_id": "SNjInQ8e6Jc",
+          "description": "eerste hoofdstuk harry potter voorlezen stream - besten strea m ooit. timon doet er pijnlijk lang over om 1 (engels) hoofdstuk voor te lezen",
+          "titles": [
+            "Hoofdstuk 1 van Harry Potter voorlezen (strafstream)"
+          ],
+          "activities": [
+            {
+              "title": "IRL",
+              "duration": 5100
+            }
+          ],
+          "twitchtracker_id": "29649319360",
+          "twitch_id": "307100135",
+          "tags": [
+            "casual",
+            "harry potter",
+            "slapen"
+          ],
+          "time_start": "20:19:00",
+          "time_end": "21:45:00"
         },
         {
             "id": "642a",
@@ -42185,31 +42193,34 @@
             "time_end": "18:15:00"
         },
         {
-            "id": "db96",
-            "type": "stream",
-            "date": "2020-05-18",
-            "collection": [
-                74
-            ],
-            "duration": 8400,
-            "youtube_id": "0tdblu3Hh7E",
-            "titles": [
-                "PETER vs TIMON: Tekenen"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 8400
-                }
-            ],
-            "twitchtracker_id": "38138608000",
-            "twitch_id": "625030341",
-            "tags": [
-                "main",
-                "peter vs timon"
-            ],
-            "time_start": "20:14:00",
-            "time_end": "22:35:00"
+          "id": "db96",
+          "type": "stream",
+          "date": "2020-05-18",
+          "description": "Peter en Timon spelen een “Peter vs Timon” tekenwedstrijd waarbij ze fictieve karakters uit hun hoofd natekenen en de kijkers stemmen wiens het mooiste is. Ze klagen verassend weinig ruzie en doen aan het eind een giveaway.",
+          "collection": [
+            74
+          ],
+          "duration": 8400,
+          "youtube_id": "0tdblu3Hh7E",
+          "titles": [
+            "PETER vs TIMON: Tekenen"
+          ],
+          "activities": [
+            {
+              "title": "Art",
+              "duration": 8400
+            }
+          ],
+          "twitchtracker_id": "38138608000",
+          "twitch_id": "625030341",
+          "tags": [
+            "main",
+            "peter vs timon",
+            "tekenen",
+            "giveaway"
+          ],
+          "time_start": "20:14:00",
+          "time_end": "22:35:00"
         },
         {
             "id": "1c48",
@@ -42748,28 +42759,31 @@
             "time_end": "18:25:00"
         },
         {
-            "id": "19d8",
-            "type": "stream",
-            "date": "2020-06-29",
-            "duration": 6300,
-            "youtube_id": "NP31878Q2Fg",
-            "titles": [
-                "Pokémon tekenen (uit geheugen)"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 6300
-                }
-            ],
-            "twitchtracker_id": "38989734240",
-            "twitch_id": "692559243",
-            "tags": [
-                "main",
-                "solo"
-            ],
-            "time_start": "20:19:00",
-            "time_end": "22:05:00"
+          "id": "19d8",
+          "type": "stream",
+          "date": "2020-06-29",
+          "description": "Timon is er niet en Peter tekent Pokémon uit zijn geheugen, op zijn nieuwe tekentablet. Hij kliert stiekem wel een beetje maar eigenlijk is het wel lief (LekkerCute)",
+          "duration": 6300,
+          "youtube_id": "NP31878Q2Fg",
+          "titles": [
+            "Pokémon tekenen (uit geheugen)"
+          ],
+          "activities": [
+            {
+              "title": "Art",
+              "duration": 6300
+            }
+          ],
+          "twitchtracker_id": "38989734240",
+          "twitch_id": "692559243",
+          "tags": [
+            "main",
+            "solo",
+            "tekenen",
+            "pokemon"
+          ],
+          "time_start": "20:19:00",
+          "time_end": "22:05:00"
         },
         {
             "id": "2788",
@@ -42899,27 +42913,32 @@
             "time_end": "21:55:00"
         },
         {
-            "id": "06a0",
-            "type": "stream",
-            "date": "2020-07-13",
-            "duration": 7980,
-            "youtube_id": "M-gMvQWPVA8",
-            "titles": [
-                "Shirt design tekenen (exclusive)"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 7980
-                }
-            ],
-            "twitchtracker_id": "2180501473",
-            "twitch_id": "692576772",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:31:00",
-            "time_end": "22:45:00"
+          "id": "06a0",
+          "type": "stream",
+          "date": "2020-07-13",
+          "duration": 7980,
+          "description": "Peter en Timon tekenen uit de losse pols een Charizard-geïnspireerd design voor een nieuwe merch T-shirt. Dit groeit uit tot het befaamde “Charichard” shirt, wat ze tijdens de stream live op hun merch store zetten.",
+          "youtube_id": "M-gMvQWPVA8",
+          "titles": [
+            "Shirt design tekenen (exclusive)"
+          ],
+          "activities": [
+            {
+              "title": "Art",
+              "duration": 7980
+            }
+          ],
+          "twitchtracker_id": "2180501473",
+          "twitch_id": "692576772",
+          "tags": [
+            "main",
+            "tekenen",
+            "merch",
+            "pokemon",
+            "t-shirt"
+          ],
+          "time_start": "20:31:00",
+          "time_end": "22:45:00"
         },
         {
             "id": "123c",
@@ -48073,27 +48092,30 @@
             ]
         },
         {
-            "id": "8668",
-            "type": "stream",
-            "date": "2021-07-21",
-            "duration": 7800,
-            "youtube_id": "5o06iSkoMPE",
-            "titles": [
-                "Wie kan het beste BLIND TEKENEN?"
-            ],
-            "activities": [
-                {
-                    "title": "Art",
-                    "duration": 7800
-                }
-            ],
-            "twitchtracker_id": "42709391420",
-            "twitch_id": "1093928375",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:24:00",
-            "time_end": "22:35:00"
+          "id": "8668",
+          "type": "stream",
+          "date": "2021-07-21",
+          "duration": 7800,
+          "description": "Peter en Timon doen een tekenspel waarbij ze steeds een deel van een pagina afdekken en zo “blind” samen een tekening maken. Ze maken behoorlijk wat misbaksels maar de sfeer is erg chill en kunstzinnig. Weinig geruzie.",
+          "youtube_id": "5o06iSkoMPE",
+          "titles": [
+            "Wie kan het beste BLIND TEKENEN?"
+          ],
+          "activities": [
+            {
+              "title": "Art",
+              "duration": 7800
+            }
+          ],
+          "twitchtracker_id": "42709391420",
+          "twitch_id": "1093928375",
+          "tags": [
+            "main",
+            "tekenen",
+            "coop"
+          ],
+          "time_start": "20:24:00",
+          "time_end": "22:35:00"
         },
         {
             "id": "6d89",
@@ -54889,30 +54911,35 @@
             "activity": "Drawing From Memory"
         },
         {
-            "id": "8e8f",
-            "type": "stream",
-            "date": "2023-02-13",
-            "duration": 6540,
-            "youtube_id": "ZtL78iN_coE",
-            "collection": [
-                56
-            ],
-            "titles": [
-                "Tekenen met de boys ✏️🧠💭"
-            ],
-            "activities": [
-                {
-                    "title": "Drawing From Memory",
-                    "duration": 6540
-                }
-            ],
-            "twitchtracker_id": "40472921400",
-            "twitch_id": "1737375690",
-            "tags": [
-                "main"
-            ],
-            "time_start": "20:35:00",
-            "time_end": "22:25:00"
+          "id": "8e8f",
+          "type": "stream",
+          "date": "2023-02-13",
+          "description": "Peter en Timon spelen Drawing From Memory met EgbertLive en Cas van de Pol. De sfeer is chill en vrolijk, en er wordt een gemiddelde hoeveelheid boezems getekend.",
+          "duration": 6540,
+          "youtube_id": "ZtL78iN_coE",
+          "collection": [
+            56
+          ],
+          "titles": [
+            "Tekenen met de boys ✏️🧠💭"
+          ],
+          "activities": [
+            {
+              "title": "Drawing From Memory",
+              "duration": 6540
+            }
+          ],
+          "twitchtracker_id": "40472921400",
+          "twitch_id": "1737375690",
+          "tags": [
+            "main",
+            "tekenen",
+            "tekenwedstrijd",
+            "egbertlive",
+            "cas van der pol"
+          ],
+          "time_start": "20:35:00",
+          "time_end": "22:25:00"
         },
         {
             "id": "11ee",
