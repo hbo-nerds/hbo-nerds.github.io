@@ -1,7 +1,7 @@
 <template>
   <!-- main -->
   <main class="pb-5">
-    <div class="d-none d-sm-flex sticky-top z-1 bg-body row align-items-center gx-2 py-3">
+    <div class="d-none d-sm-flex sticky-top z-1 bg-body row align-items-center g-2 py-3">
       <div class="col-auto">
         <div class="btn-group btn-group-sm overflow-hidden">
           <button
@@ -39,10 +39,20 @@
           >{{ sortedData.length }} {{ sortedData.length === 1 ? "resultaat" : "resultaten" }}</span
         >
       </div>
+      <div class="col-auto">
+        <span class="d-flex align-items-baseline gap-2">
+          <span class="badge rounded-pill text-bg-warning">Let op!</span>
+          <span class="small">Vanaf 19 mei 2025 zullen veel Twitch links helaas niet meer werken. <img height="20" src="@/assets/img/lekkerAppie_V2.png" alt="lekker_appie"/> Lees <a href="https://help.twitch.tv/s/article/video-on-demand?language=nl_NL" target="_blank">hier</a> meer.</span>
+        </span>
+      </div>
     </div>
 
     <div class="row">
       <div class="col-12 col-sm">
+        <span class="d-block d-sm-none mb-2 small">
+          <span class="badge rounded-pill text-bg-warning">Let op!</span>
+          Vanaf 19 mei 2025 zullen veel Twitch links helaas niet meer werken. <img height="20" src="@/assets/img/lekkerAppie_V2.png" alt="lekker_appie"/> Lees <a href="https://help.twitch.tv/s/article/video-on-demand?language=nl_NL" target="_blank">hier</a> meer.
+        </span>
         <keep-alive>
           <List v-if="homeView === 'thumbnail'" />
           <CalendarHeatmap v-else-if="homeView === 'heatmap'" />
