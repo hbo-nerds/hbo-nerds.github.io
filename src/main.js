@@ -1,6 +1,6 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
-import VueGtag from "vue-gtag";
+import { createGtag } from "vue-gtag";
 import Vue3Toastify from "vue3-toastify";
 
 import App from "./App.vue";
@@ -13,9 +13,12 @@ import "./assets/styles/main.scss";
 
 const app = createApp(App);
 
-app.use(VueGtag, {
-  config: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
-});
+app.use(
+  createGtag({
+    property: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
+  }),
+);
+
 app.use(Vue3Toastify, {
   theme: "light",
   transition: "slide",
