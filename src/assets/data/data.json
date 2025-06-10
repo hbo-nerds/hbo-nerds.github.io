@@ -60809,7 +60809,7 @@
             "type": "stream"
         },
         {
-            "date": "2025-06-05",
+            "date": "2025-06-04",
             "time_start": "16:48:56",
             "time_end": "18:16:21",
             "titles": [
@@ -60828,7 +60828,7 @@
             "type": "stream"
         },
         {
-            "date": "2025-06-06",
+            "date": "2025-06-05",
             "time_start": "16:48:56",
             "time_end": "18:16:21",
             "titles": [
@@ -60844,6 +60844,44 @@
             "duration": 5245,
             "youtube_id": "mCn_Tm7dDRo",
             "id": "8ee6",
+            "type": "stream"
+            ,
+        {
+            "date": "2025-06-06",
+            "time_start": "16:48:56",
+            "time_end": "18:16:21",
+            "titles": [
+               
+                "SUMMER GAME FEST 2025 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 9000,
+            "youtube_id": "ys3_546eo7c",
+            "id": "8ee7",
+            "type": "stream"
+            ,
+        {
+            "date": "2025-06-08",
+            "time_start": "16:48:56",
+            "time_end": "18:16:21",
+            "titles": [
+               
+                "XBOX SHOWCASE 2025 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale Evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 5700,
+            "youtube_id": "FJuQQDj_uz4",
+            "id": "8ee8",
             "type": "stream"
         }
     ]
