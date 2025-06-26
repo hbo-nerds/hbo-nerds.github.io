@@ -1,5 +1,5 @@
 <template>
-  <div class="col-auto d-none d-md-block">
+  <div class="d-none d-md-block">
     <div class="button-container gap-2">
       <button
         @click="hover = !hover"
@@ -149,7 +149,7 @@
       </transition-group>
     </div>
   </div>
-  <div class="col-auto d-none d-md-block">
+  <div class="d-none d-md-block">
     <button
       class="btn btn-sm btn-dark border-0 rounded-3"
       type="button"
@@ -159,7 +159,7 @@
       <i class="bi bi-arrow-repeat"></i>
     </button>
   </div>
-  <div class="col-auto d-none d-md-block">
+  <div class="d-none d-md-block">
     <button
       class="btn btn-sm btn-dark border-0 rounded-3"
       type="button"
