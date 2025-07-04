@@ -38608,6 +38608,7 @@
             ],
             "twitchtracker_id": "35804678832",
             "twitch_id": "488758718",
+            "twitch_available": true,
             "tags": [
                 "casual",
                 "Marathon"
@@ -45507,6 +45508,7 @@
             ],
             "twitchtracker_id": "40460191020",
             "twitch_id": "847973779",
+            "twitch_available": true,
             "tags": [
                 "main"
             ],
@@ -46004,6 +46006,7 @@
             ],
             "twitchtracker_id": "41118059180",
             "twitch_id": "915547984",
+            "twitch_available": true,
             "tags": [
                 "main"
             ],
@@ -50252,6 +50255,7 @@
             ],
             "twitchtracker_id": "44080970860",
             "twitch_id": "1234538654",
+            "twitch_available": true,
             "tags": [
                 "main",
                 "peter vs timon"
@@ -54447,6 +54451,7 @@
             ],
             "twitchtracker_id": "40180413800",
             "twitch_id": "1681133900",
+            "twitch_available": true,
             "tags": [
                 "casual",
                 "Strafstream"
@@ -57339,6 +57344,7 @@
             ],
             "twitchtracker_id": "41164920712",
             "twitch_id": "1936913607",
+            "twitch_available": true,
             "tags": [
                 "main"
             ],
@@ -57752,6 +57758,7 @@
             ],
             "twitchtracker_id": "41359196488",
             "twitch_id": "1972165918",
+            "twitch_available": true,
             "tags": [
                 "main"
             ],
@@ -57775,6 +57782,7 @@
             ],
             "twitchtracker_id": "49701837949",
             "twitch_id": "1976836450",
+            "twitch_available": true,
             "tags": [
                 "main"
             ],
@@ -57876,6 +57884,7 @@
             ],
             "twitchtracker_id": "49766808285",
             "twitch_id": "1984646147",
+            "twitch_available": true,
             "tags": [
                 "main",
                 "peter vs timon"
@@ -58022,6 +58031,7 @@
             ],
             "twitchtracker_id": "42114447897",
             "twitch_id": "2003395155",
+            "twitch_available": true,
             "tags": [
                 "main",
                 "peter vs timon"
@@ -58392,6 +58402,7 @@
             "duration": 14660,
             "description": "De mannen gaan all night in een dino horror shooter waarbij het de hele tijd lijkt dat ze bij de laatste eindbaas zijn. Ze vechten met een robo T-Rex en een Megalodon. Peter en Timon willen elkaar in het echt vermoorden navy seal style",
             "twitch_id": "2076579081",
+            "twitch_available": true,
             "youtube_id": "5G2Y7UkASAE",
             "id": "2f90",
             "type": "stream"
@@ -58679,6 +58690,7 @@
             ],
             "duration": 6988,
             "twitch_id": "2109910517",
+            "twitch_available": true,
             "youtube_id": "BoUCVH-hIu4",
             "description": "De mannen spelen een spel waar je beelden opneemt in een horror wereld maar alles wat je opneemt wordt een video erna, een van de beste streams in tijden",
             "id": "d167",
@@ -59225,6 +59237,7 @@
             ],
             "duration": 12079,
             "twitch_id": "2170491752",
+            "twitch_available": true,
             "youtube_id": "kD2SL1R_Da0",
             "id": "e084",
             "collection": [
@@ -59354,6 +59367,7 @@
             ],
             "duration": 9000,
             "twitch_id": "2186767406",
+            "twitch_available": true,
             "collection": [
                 84
             ],
@@ -60542,6 +60556,7 @@
             ],
             "duration": 11480,
             "twitch_id": "2328589668",
+            "twitch_available": true,
             "youtube_id": "mNrINESzsS0",
             "id": "734d",
             "type": "stream"
