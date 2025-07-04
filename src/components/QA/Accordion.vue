@@ -1,9 +1,9 @@
 <template>
-  <div class="accordion" id="accordionQA">
-    <AdvancedSearch />
-    <CreatePlaylist />
-    <YouPage />
-  </div>
+    <div class="accordion" id="accordionQA">
+        <AdvancedSearch />
+        <CreatePlaylist />
+        <YouPage />
+    </div>
 </template>
 
 <script setup>

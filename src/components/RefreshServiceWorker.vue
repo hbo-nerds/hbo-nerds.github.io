@@ -1,26 +1,31 @@
 <template>
-  <Transition>
-    <div
-      v-if="(needRefresh || forceRefresh) && !closed"
-      style="z-index: 4"
-      class="position-fixed rounded-3 bg-body bottom-0 end-0 p-3 m-3"
-    >
-      <p>Nieuwe content beschikbaar, klik 'reload' om te updaten!</p>
-      <div class="d-flex gap-2">
-        <button
-          class="btn btn-sm btn-dark"
-          title="Reload"
-          type="button"
-          @click="updateServiceWorker()"
+    <Transition>
+        <div
+            v-if="(needRefresh || forceRefresh) && !closed"
+            style="z-index: 4"
+            class="position-fixed border rounded-3 bg-body bottom-0 end-0 p-3 m-3"
         >
-          Reload
-        </button>
-        <button class="btn btn-sm btn-dark" title="Sluit" type="button" @click="closed = true">
-          Sluit
-        </button>
-      </div>
-    </div>
-  </Transition>
+            <p>Nieuwe content beschikbaar, klik 'reload' om te updaten!</p>
+            <div class="d-flex gap-2">
+                <button
+                    class="btn btn-sm btn-dark"
+                    title="Reload"
+                    type="button"
+                    @click="updateServiceWorker()"
+                >
+                    Reload
+                </button>
+                <button
+                    class="btn btn-sm btn-dark"
+                    title="Sluit"
+                    type="button"
+                    @click="closed = true"
+                >
+                    Sluit
+                </button>
+            </div>
+        </div>
+    </Transition>
 </template>
 
 <script setup>
@@ -36,9 +41,9 @@ const { needRefresh, updateServiceWorker } = useRegisterSW();
  * Check is app is visible.
  */
 document.addEventListener("visibilitychange", async () => {
-  if (document.visibilityState === "visible") {
-    await checkForServiceWorkerUpdate();
-  }
+    if (document.visibilityState === "visible") {
+        await checkForServiceWorkerUpdate();
+    }
 });
 
 /**
@@ -46,25 +51,25 @@ document.addEventListener("visibilitychange", async () => {
  * @returns {Promise<void>}
  */
 async function checkForServiceWorkerUpdate() {
-  closed.value = false;
-  if (navigator.serviceWorker && navigator.serviceWorker.controller) {
-    const registration = await navigator.serviceWorker.getRegistration();
+    closed.value = false;
+    if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+        const registration = await navigator.serviceWorker.getRegistration();
 
-    if (registration) {
-      // Trigger an update check on the service worker
-      registration
-        .update()
-        .then(() => {
-          if (registration.waiting) {
-            // A new service worker is waiting to activate
-            forceRefresh.value = true;
-          }
-        })
-        .catch((error) => {
-          console.error("Service Worker update check failed:", error);
-        });
+        if (registration) {
+            // Trigger an update check on the service worker
+            registration
+                .update()
+                .then(() => {
+                    if (registration.waiting) {
+                        // A new service worker is waiting to activate
+                        forceRefresh.value = true;
+                    }
+                })
+                .catch((error) => {
+                    console.error("Service Worker update check failed:", error);
+                });
+        }
     }
-  }
 }
 </script>
 

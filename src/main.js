@@ -13,21 +13,26 @@ import "./assets/styles/main.scss";
 
 const app = createApp(App);
 
-app.use(
-  createGtag({
-    property: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
-  }),
-);
+if (import.meta.env.PROD) {
+    console.log("Google Analytics is enabled.");
+    app.use(
+        createGtag({
+            property: { id: import.meta.env.VITE_GA_MEASUREMENT_ID },
+        }),
+    );
+} else {
+    console.log("Google Analytics is disabled in development.");
+}
 
 app.use(Vue3Toastify, {
-  theme: "light",
-  transition: "slide",
-  position: "bottom-left",
-  type: "default",
-  autoClose: 3000,
-  closeButton: false,
-  hideProgressBar: true,
-  limit: 1,
+    theme: "light",
+    transition: "slide",
+    position: "bottom-left",
+    type: "default",
+    autoClose: 3000,
+    closeButton: false,
+    hideProgressBar: true,
+    limit: 1,
 });
 app.use(createPinia());
 app.use(router);

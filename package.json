@@ -1,42 +1,44 @@
 {
-  "name": "lekkersicko",
-  "version": "2.3.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host --port 4242",
-    "build": "vite build",
-    "preview": "vite preview --host",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "prettier:check": "prettier --check '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'",
-    "prettier:format": "prettier --write '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'"
-  },
-  "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "@vueuse/core": "^13.4.0",
-    "bootstrap": "^5.3.7",
-    "lodash.debounce": "^4.0.8",
-    "npm-check-updates": "^18.0.1",
-    "pathe": "^2.0.3",
-    "pinia": "^3.0.3",
-    "vue": "^3.5.17",
-    "vue-gtag": "^3.5.1",
-    "vue-router": "^4.5.1",
-    "vue3-toastify": "^0.2.8"
-  },
-  "devDependencies": {
-    "@rushstack/eslint-patch": "^1.11.0",
-    "@vitejs/plugin-vue": "^6.0.0",
-    "@vue/eslint-config-prettier": "^10.2.0",
-    "@vue/tsconfig": "^0.7.0",
-    "eslint": "^9.29.0",
-    "eslint-plugin-vue": "^10.2.0",
-    "prettier": "^3.6.1",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "sass": "^1.89.2",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5",
-    "vite-plugin-pwa": "^1.0.0",
-    "vue-tsc": "^2.2.10"
-  }
+    "name": "lekkersicko",
+    "version": "2.3.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host --port 4242",
+        "build": "vite build",
+        "preview": "vite preview --host",
+        "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
+        "prettier:check": "prettier --check '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'",
+        "prettier:format": "prettier --write '**/*.{vue,ts,tsx,js,md,mdx,css,scss,yaml,json}'",
+        "typecheck": "vue-tsc --noEmit"
+    },
+    "dependencies": {
+        "@popperjs/core": "^2.11.8",
+        "@vueuse/core": "^13.4.0",
+        "bootstrap": "^5.3.7",
+        "lodash.debounce": "^4.0.8",
+        "npm-check-updates": "^18.0.1",
+        "pathe": "^2.0.3",
+        "pinia": "^3.0.3",
+        "vue": "^3.5.17",
+        "vue-gtag": "^3.5.1",
+        "vue-router": "^4.5.1",
+        "vue3-toastify": "^0.2.8"
+    },
+    "devDependencies": {
+        "@rushstack/eslint-patch": "^1.11.0",
+        "@vitejs/plugin-vue": "^6.0.0",
+        "@vue/eslint-config-prettier": "^10.2.0",
+        "@vue/tsconfig": "^0.7.0",
+        "eslint": "^9.29.0",
+        "eslint-plugin-prettier": "^5.5.1",
+        "eslint-plugin-vue": "^10.2.0",
+        "prettier": "^3.6.1",
+        "prettier-plugin-organize-imports": "^4.1.0",
+        "sass": "^1.89.2",
+        "typescript": "^5.8.3",
+        "vite": "^6.3.5",
+        "vite-plugin-pwa": "^1.0.0",
+        "vue-tsc": "^2.2.10"
+    }
 }
