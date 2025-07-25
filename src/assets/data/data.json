@@ -60416,9 +60416,7 @@
         {
             "date": "2024-11-25",
             "time_start": "20:32:47",
-            "collection": [
-                90
-            ],
+            "collection": 90,
             "time_end": "22:46:19",
             "titles": [
                 "Is dit 'm?!"
@@ -60527,9 +60525,7 @@
         {
             "date": "2024-12-11",
             "time_start": "20:34:08",
-            "collection": [
-                87
-            ],
+            "collection": 87,
             "time_end": "22:56:18",
             "titles": [
                 "Rollen & Dollen: Vermist op zee"
@@ -60920,6 +60916,25 @@
             "duration": 3200,
             "youtube_id": "HEK7mghP9Qs",
             "id": "8ee9",
+            "type": "stream"
+        },
+           {
+            "date": "2025-07-25",
+            "time_start": "16:30:56",
+            "time_end": "18:00:21",
+            "titles": [
+               
+                "donkey kong bananza"
+            ],
+            "activities": [
+                {
+                    "title": "donkey kong bananza",
+                    "duration": 1
+                }
+            ],
+            "duration": 3200,
+            "youtube_id": "6zDsOK5eCC8",
+            "id": "8e10",
             "type": "stream"
         }
     ]
