@@ -41761,6 +41761,7 @@
             "id": "cd61",
             "type": "stream",
             "date": "2020-04-20",
+            "description": "De mannen beginnen nieuwe emotes te maken (gast, nouuu, gestuurd), hier komen ze echter niet uit. Ze overwegen die squirrel Jones te tweeten voor een emote.",
             "duration": 11340,
             "youtube_id": "YVoj6fydbBM",
             "titles": [
@@ -50758,6 +50759,33 @@
             "duration": 7860,
             "youtube_id": "OSyGJSweSgs",
             "titles": [
+                "PETER vs TIMON: Bordspellen (Timons perspectief)"
+            ],
+            "activities": [
+                {
+                    "title": "Board Game Classics",
+                    "duration": 7860
+                }
+            ],
+            "twitchtracker_id": "44723134684",
+            "twitch_id": "1300249362",
+            "tags": [
+                "main",
+                "peter vs timon"
+            ],
+            "time_start": "20:23:00",
+            "time_end": "22:35:00"
+        },
+                {
+            "id": "eh38",
+            "type": "stream",
+            "date": "2022-02-16",
+            "collection": [
+                74
+            ],
+            "duration": 7860,
+            "youtube_id": "Ri-QNhJnRZ0",
+            "titles": [
                 "PETER vs TIMON: Bordspellen (Peters perspectief)"
             ],
             "activities": [
@@ -59566,6 +59594,10 @@
                 {
                     "title": "Stretcher Men",
                     "duration": 1
+                },
+                 {
+                    "title": "Wild Animal Hunt",
+                    "duration": 1
                 }
             ],
             "duration": 5200,
@@ -60715,6 +60747,7 @@
             "duration": 46005,
             "youtube_id": "ZU73CTRPE0o",
             "id": "ddeb",
+            "description": "Laatste uur: https://www.youtube.com/watch?v=lEZLPlDk9mA&list=PL9fsn9rCTiMXzxIboObafVY5hue0Pw_jO&index=3&ab_channel=braxshinoa",
             "type": "stream"
         },
         {
