@@ -61019,6 +61019,25 @@
             "youtube_id": "vnVp2_CRjlE",
             "id": "d93n",
             "type": "stream"
+        },
+           {
+            "date": "2025-12-12",
+            "time_start": "16:30:56",
+            "time_end": "18:00:21",
+            "titles": [
+               
+                "THE GAME AWARDS 2025 (live reacties)"
+            ],
+            "activities": [
+                {
+                    "title": "Speciale evenementen",
+                    "duration": 1
+                }
+            ],
+            "duration": 14400,
+            "youtube_id": "H9IU0MGIhv4",
+            "id": "f923",
+            "type": "stream"
         }
     ]
 }
