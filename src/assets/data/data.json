@@ -60778,6 +60778,20 @@
             "type": "stream"
         },
         {
+            "id": "d2gb",
+            "type": "video",
+            "date": "2025-02-28",
+            "title": "Lekker spelen - DDinosaur",
+            "duration": 379,
+            "youtube_id": "9pW3xlDvRqc",
+            "activities": [
+                {
+                    "title": "Ddinosaur with Double D's",
+                    "duration": 1
+                }
+            ]
+        },
+        {
             "date": "2025-03-12",
             "time_start": "20:41:07",
             "time_end": "23:13:34",
@@ -61001,6 +61015,20 @@
             "id": "8e10",
             "type": "stream"
         },
+        {
+            "id": "d02h",
+            "type": "video",
+            "date": "2025-09-04",
+            "title": " Fast food Simulator - Lekker spelen ",
+            "duration": 379,
+            "youtube_id": "9cfHcQrNcJc",
+            "activities": [
+                {
+                    "title": " Fast food Simulator",
+                    "duration": 1
+                }
+            ]
+        },
            {
             "date": "2025-09-12",
             "time_start": "16:30:56",
@@ -61020,6 +61048,28 @@
             "id": "d93n",
             "type": "stream"
         },
+          {
+            "id": "d02h",
+            "type": "video",
+            "date": "2025-10-31",
+            "title": " Een HAAI in het zwembad! (Horror special) ",
+            "duration": 379,
+            "youtube_id": "lOhXOZHHeEI",
+            "activities": [
+                {
+                    "title": "Sharks and Minnows",
+                    "duration": 1
+                },
+                  {
+                    "title": "Reanimal",
+                    "duration": 1
+                },
+                  {
+                    "title": "The Cabin Factory",
+                    "duration": 1
+                }
+            ]
+        },
            {
             "date": "2025-12-12",
             "time_start": "16:30:56",
@@ -61038,6 +61088,28 @@
             "youtube_id": "H9IU0MGIhv4",
             "id": "f923",
             "type": "stream"
+        },
+          {
+            "id": "e2rt",
+            "type": "video",
+            "date": "2026-01-13",
+            "title": "zijn deze spellen het waard?",
+            "duration": 1800,
+            "youtube_id": "PB5CYRNNIlw",
+            "activities": [
+                {
+                    "title": "LEGO voyagers",
+                    "duration": 1
+                },
+                  {
+                    "title": "Unknown Tapes",
+                    "duration": 1
+                },
+                  {
+                    "title": "Kirby Air Riders",
+                    "duration": 1
+                }
+            ]
         }
     ]
 }
