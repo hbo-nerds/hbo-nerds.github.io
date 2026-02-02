@@ -2361,7 +2361,7 @@
                     "duration": 1200
                 }
             ],
-            "twitch_id": "48713242",
+            "youtube_id": "Bf_BmttkBhY",
             "tags": [
                 "main"
             ]
@@ -3116,7 +3116,7 @@
                     "duration": 420
                 }
             ],
-            "twitch_id": "47898416",
+            "youtube_id": "5boe9gYrRbg",
             "tags": [
                 "casual"
             ]
@@ -3135,7 +3135,7 @@
                     "duration": 960
                 }
             ],
-            "twitch_id": "47899402",
+            "youtube_id": "7wSGaSCwL7Y",
             "tags": [
                 "casual"
             ]
@@ -4231,7 +4231,7 @@
                     "duration": 3540
                 }
             ],
-            "twitch_id": "47532000",
+            "youtube_id": "0e-fHj_MY9I",
             "tags": [
                 "casual"
             ]
@@ -6253,7 +6253,7 @@
                     "duration": 1320
                 }
             ],
-            "twitch_id": "44505418",
+            "youtube_id": "6UA4srcOrDE",
             "tags": [
                 "casual"
             ]
@@ -6410,7 +6410,7 @@
                     "duration": 2880
                 }
             ],
-            "twitch_id": "40739492",
+            "youtube_id": "70ppoxuDXGE",
             "tags": [
                 "main"
             ]
@@ -8534,7 +8534,7 @@
                     "duration": 3300
                 }
             ],
-            "twitch_id": "13798304",
+            "youtube_id": "2jc-mSu2v_Y",
             "tags": [
                 "casual"
             ]
@@ -9019,7 +9019,7 @@
                     "duration": 3660
                 }
             ],
-            "twitch_id": "14966705",
+            "youtube_id": "6aGrMKcm-q4",
             "tags": [
                 "main"
             ]
@@ -17553,7 +17553,7 @@
                     "duration": 3240
                 }
             ],
-            "twitch_id": "95807099",
+            "youtube_id": "BfKBxydTdQY",
             "tags": [
                 "main"
             ]
@@ -18368,7 +18368,7 @@
                 }
             ],
             "twitchtracker_id": "24209934464",
-            "twitch_id": "116858169",
+            "youtube_id": "4gzEVEHiPvs",
             "tags": [
                 "main"
             ],
@@ -18484,7 +18484,7 @@
                 }
             ],
             "twitchtracker_id": "24282220912",
-            "twitch_id": "116860013",
+            "youtube_id": "C9IMB7QNb34",
             "tags": [
                 "casual"
             ],
@@ -50296,7 +50296,7 @@
             "type": "stream",
             "date": "2021-12-16",
             "duration": 76380,
-            "youtube_id": "MYehelV9qNA",
+            "youtube_id": "RSkBbcycYsU",
             "titles": [
                 "⚠️ 22 UUR MONOPOLY STRAFSTREAM ⚠️ (elke keer lachen is extra half uur)"
             ],
@@ -50312,6 +50312,12 @@
                 "casual"
             ],
             "time_start": "12:41:00",
+            "extra_urls": [
+                {
+                    "label": "deel 2",
+                    "url": "https://youtu.be/RSkBbcycYsU"
+                }
+            ],
             "time_end": "09:55:00"
         },
         {
