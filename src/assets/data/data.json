@@ -3750,7 +3750,7 @@
             "date": "2014-09-11",
             "duration": 3660,
             "titles": [
-                "SUPER MARIO WORLD (deel 1)"
+                "PETER vs TIMON Super Mario World speedrun"
             ],
             "activities": [
                 {
@@ -3758,7 +3758,7 @@
                     "duration": 3660
                 }
             ],
-            "twitch_id": "43309938",
+            "youtube_id": "cSSbbbqtS1M",
             "tags": [
                 "casual"
             ]
@@ -4072,7 +4072,7 @@
                     "duration": 3660
                 }
             ],
-            "twitch_id": "47635484",
+            "youtube_id": "Zwk0bof6V78",
             "tags": [
                 "main",
                 "fnaf",
@@ -4560,7 +4560,7 @@
                     "duration": 4500
                 }
             ],
-            "twitch_id": "45030311",
+            "youtube_id": "LbHyZxTbM3g",
             "tags": [
                 "main"
             ]
@@ -5016,7 +5016,7 @@
                     "duration": 5580
                 }
             ],
-            "twitch_id": "44771656",
+            "youtube_id": "Nj8ieO7gxDU",
             "tags": [
                 "main"
             ]
@@ -5556,7 +5556,7 @@
                     "duration": 4800
                 }
             ],
-            "twitch_id": "41967176",
+            "youtube_id": "yK-i7Nuq6ks",
             "tags": [
                 "main"
             ]
@@ -5653,7 +5653,7 @@
                     "duration": 3180
                 }
             ],
-            "twitch_id": "41818867",
+            "youtube_id": "VUzGXurgqs4",
             "tags": [
                 "main"
             ]
@@ -6787,6 +6787,25 @@
             "duration": 3343,
             "titles": [
                 "Nieuwe MARIO KART 8 DLC - Lekker spelen tegen kijkers!"
+            ],
+            "activities": [
+                {
+                    "title": "Mario Kart 8",
+                    "duration": 3343
+                }
+            ],
+            "tags": [
+                "casual"
+            ]
+        },
+        {
+            "id": "181f",
+            "type": "stream",
+            "date": "2016-04-23",
+            "youtube_id": "aiKOyuC_xUo",
+            "duration": 3343,
+            "titles": [
+                " LEKKER SPELEN vs LinkTijger en De Heer & Joost "
             ],
             "activities": [
                 {
@@ -8078,7 +8097,7 @@
                     "duration": 4800
                 }
             ],
-            "twitch_id": "12292823",
+            "youtube_id": "QnXnhvT-onE",
             "tags": [
                 "main"
             ]
@@ -8134,7 +8153,7 @@
                     "duration": 2520
                 }
             ],
-            "twitch_id": "12295737",
+            "youtube_id": "NPK9f5aIiRo",
             "tags": [
                 "main",
                 "speedrun"
@@ -8154,7 +8173,7 @@
                     "duration": 8700
                 }
             ],
-            "twitch_id": "12294039",
+            "youtube_id": "vqGKe6kK3_k",
             "tags": [
                 "main"
             ]
@@ -8287,7 +8306,7 @@
                     "duration": 4380
                 }
             ],
-            "twitch_id": "12296778",
+            "youtube_id": "88yS6M8AsDE",
             "tags": [
                 "main"
             ]
@@ -8327,7 +8346,7 @@
                     "duration": 5820
                 }
             ],
-            "twitch_id": "13801135",
+            "youtube_id": "2bj7b3c5ga0",
             "tags": [
                 "main"
             ]
@@ -8830,7 +8849,7 @@
                     "duration": 2340
                 }
             ],
-            "twitch_id": "13802244",
+            "youtube_id": "-FgvCq4bCD4",
             "tags": [
                 "main"
             ]
@@ -8866,7 +8885,7 @@
                     "duration": 4680
                 }
             ],
-            "twitch_id": "14966576",
+            "youtube_id": "bHW4LTBupww",
             "tags": [
                 "casual"
             ]
@@ -18521,6 +18540,31 @@
             "time_start": "20:42:00",
             "time_end": "22:05:00"
         },
+          {
+            "id": "fw31",
+            "type": "stream",
+            "date": "2017-01-23",
+            "duration": 4300,
+            "titles": [
+                "Geen Nioh, wel Call of Duty en Rocket League tegen Linktijger"
+            ],
+            "activities": [
+                {
+                    "title": "Call of Duty",
+                    "duration": 4920
+                },
+                {
+                    "title": "Rocket League",
+                    "duration": 4920
+                }
+            ],
+            "youtube_id": "2tKXexb28LI",
+            "tags": [
+                "main"
+            ],
+            "time_start": "20:42:00",
+            "time_end": "22:05:00"
+        },
         {
             "id": "185f",
             "type": "stream",
@@ -19633,7 +19677,7 @@
                 }
             ],
             "twitchtracker_id": "25073702352",
-            "twitch_id": "148514227",
+            "youtube_id": "YEXz98SUVwA",
             "tags": [
                 "main"
             ],
@@ -20638,7 +20682,7 @@
                 }
             ],
             "twitchtracker_id": "25403932624",
-            "twitch_id": "160990093",
+            "youtube_id": "5VlJxpX3R2o",
             "tags": [
                 "main"
             ],
@@ -23187,7 +23231,7 @@
                 }
             ],
             "twitchtracker_id": "26008706176",
-            "twitch_id": "167011594",
+            "youtube_id": "H3ISLV6OpwM",
             "tags": [
                 "main"
             ],
@@ -23677,7 +23721,7 @@
                 }
             ],
             "twitchtracker_id": "26141784336",
-            "twitch_id": "177545175",
+            "youtube_id": "MEdWdiOHf40",
             "tags": [
                 "main"
             ],
@@ -24285,7 +24329,7 @@
                 }
             ],
             "twitchtracker_id": "26346534896",
-            "twitch_id": "177724913",
+            "youtube_id": "6lsVR5oaICc",
             "tags": [
                 "casual"
             ],
@@ -26986,7 +27030,7 @@
                 }
             ],
             "twitchtracker_id": "27292357648",
-            "twitch_id": "219198137",
+            "youtube_id": "AxOTqOb3vuA",
             "tags": [
                 "casual"
             ],
@@ -27262,7 +27306,7 @@
                 }
             ],
             "twitchtracker_id": "27435177248",
-            "twitch_id": "223753406",
+            "youtube_id": "mMft9CCgBRc",
             "tags": [
                 "main",
                 "#GESLIJPT"
@@ -27998,7 +28042,7 @@
                 }
             ],
             "twitchtracker_id": "27763106368",
-            "twitch_id": "233844221",
+            "youtube_id": "HijQa-Kjia8",
             "tags": [
                 "main"
             ],
@@ -28115,7 +28159,7 @@
                 }
             ],
             "twitchtracker_id": "27824981040",
-            "twitch_id": "235658237",
+            "youtube_id": "AFEHgx5SkWU",
             "tags": [
                 "main"
             ],
@@ -28561,7 +28605,7 @@
             }
           ],
           "twitchtracker_id": "28018129840",
-          "twitch_id": "246355729",
+          "youtube_id": "PC2LsnIiZhs",
           "tags": [
             "main",
             "peter vs timon",
@@ -28691,7 +28735,7 @@
                 }
             ],
             "twitchtracker_id": "28083702768",
-            "twitch_id": "246357683",
+            "youtube_id": "ZGeBIibLE4g",
             "tags": [
                 "main"
             ],
@@ -28734,7 +28778,7 @@
                 }
             ],
             "twitchtracker_id": "28109366992",
-            "twitch_id": "246358091",
+            "youtube_id": "1sjbxkUJtII",
             "tags": [
                 "main"
             ],
@@ -28836,7 +28880,7 @@
                 }
             ],
             "twitchtracker_id": "28177598960",
-            "twitch_id": "246361181",
+            "youtube_id": "BBTkaU7cE80",
             "tags": [
                 "main"
             ],
@@ -28908,7 +28952,7 @@
                 }
             ],
             "twitchtracker_id": "28203526656",
-            "twitch_id": "266895136",
+            "youtube_id": "sBYeGSVEIu0",
             "tags": [
                 "main"
             ],
@@ -29059,7 +29103,7 @@
                 }
             ],
             "twitchtracker_id": "28293692064",
-            "twitch_id": "266896697",
+            "youtube_id": "izo661qHx1c",
             "tags": [
                 "main",
                 "peter vs timon"
@@ -29184,7 +29228,7 @@
                 }
             ],
             "twitchtracker_id": "28381094832",
-            "twitch_id": "251855392",
+            "youtube_id": "wtQ3LW5jzMk",
             "tags": [
                 "main"
             ],
@@ -30790,7 +30834,7 @@
                 }
             ],
             "twitchtracker_id": "29358425504",
-            "twitch_id": "281257006",
+            "youtube_id": "6Wu9RV9Foo0",
             "tags": [
                 "casual"
             ],
@@ -31689,7 +31733,7 @@
                 }
             ],
             "twitchtracker_id": "29937279184",
-            "twitch_id": "307104177",
+            "youtube_id": "ZgP3DgfQELc",
             "tags": [
                 "main"
             ],
@@ -33628,7 +33672,7 @@
                 }
             ],
             "twitchtracker_id": "31546329600",
-            "twitch_id": "373394506",
+            "youtube_id": "zLeyVSfkd2c",
             "tags": [
                 "main"
             ],
@@ -34534,7 +34578,7 @@
                 }
             ],
             "twitchtracker_id": "32575462672",
-            "twitch_id": "406663119",
+            "youtube_id": "GmwyWNBUhlY",
             "tags": [
                 "casual"
             ],
@@ -34952,7 +34996,7 @@
                 }
             ],
             "twitchtracker_id": "32981730224",
-            "twitch_id": "417620532",
+            "youtube_id": "LjSt7VeSb30",
             "tags": [
                 "casual"
             ],
@@ -36961,7 +37005,7 @@
                 }
             ],
             "twitchtracker_id": "34504630416",
-            "twitch_id": "441457726",
+            "youtube_id": "T2kM4uumjw0",
             "tags": [
                 "main"
             ],
@@ -38849,7 +38893,7 @@
                 }
             ],
             "twitchtracker_id": "35936872192",
-            "twitch_id": "497769425",
+            "youtube_id": "xidlaQawEtw",
             "tags": [
                 "casual"
             ],
@@ -39370,7 +39414,7 @@
                 }
             ],
             "twitchtracker_id": "207273105",
-            "twitch_id": "535149634",
+            "youtube_id": "CwQJifsi-8k",
             "extra_urls": [
                 {
                     "label": "",
@@ -39495,7 +39539,7 @@
                 }
             ],
             "twitchtracker_id": "257989377",
-            "twitch_id": "535154099",
+            "youtube_id": "LLhRZxk_AxM",
             "tags": [
                 "casual"
             ],
@@ -39509,7 +39553,7 @@
             "description": "Peter en Timon doen een zelfbedachte challenge waarbij de ene een Pokémon visueel beschrijft en de andere deze moet natekenen puur op basis van die instructies. Sommige mensen in de chat doen mee met het tekenen en dus checken de mannen die creaties op Twitter.",
             "duration": 10680,
             "titles": [
-                "Wie tekent de mooiste Pokémon?"
+                "Wie tekent blind de mooiste Pokémon"
             ],
             "activities": [
                 {
@@ -39518,7 +39562,7 @@
                 }
             ],
             "twitchtracker_id": "261750577",
-            "twitch_id": "535156932",
+            "youtube_id": "hoVr36nJcd4",
             "tags": [
                 "main"
             ],
@@ -39549,7 +39593,7 @@
                 }
             ],
             "twitchtracker_id": "268547649",
-            "twitch_id": "535155265",
+            "youtube_id": "1gmTYxfPSCg",
             "tags": [
                 "casual"
             ],
@@ -39625,12 +39669,11 @@
                 }
             ],
             "twitchtracker_id": "293305457",
-            "twitch_id": "535156627",
+            "youtube_id": "EWedhJEnpdk",
             "tags": [
                 "main"
             ],
             "time_start": "20:37:00",
-            "free": true,
             "time_end": "22:35:00"
         },
         {
@@ -40404,7 +40447,7 @@
                 }
             ],
             "twitchtracker_id": "606052257",
-            "twitch_id": "548292163",
+            "youtube_id": "rjv0Vs-l5GY",
             "tags": [
                 "casual"
             ],
@@ -42277,7 +42320,7 @@
                 }
             ],
             "twitchtracker_id": "38245111136",
-            "twitch_id": "648262926",
+            "youtube_id": "bGpp3jq2OO4",
             "tags": [
                 "casual"
             ],
@@ -53222,12 +53265,11 @@
                 }
             ],
             "twitchtracker_id": "46047710972",
-            "twitch_id": "1595712905",
+            "youtube_id": "ixAxiulTSW8",
             "tags": [
                 "casual"
             ],
             "time_start": "20:32:00",
-            "free": true,
             "time_end": "22:25:00"
         },
         {
