@@ -42079,29 +42079,6 @@
             "time_end": "17:45:00"
         },
         {
-            "id": "020c",
-            "type": "stream",
-            "date": "2020-05-10",
-            "duration": 12600,
-            "youtube_id": "Wh0oKyQfloU",
-            "titles": [
-                "potje met peetje"
-            ],
-            "activities": [
-                {
-                    "title": "The Last Guardian",
-                    "duration": 12600
-                }
-            ],
-            "twitchtracker_id": "37978986480",
-            "tags": [
-                "casual",
-                "solo"
-            ],
-            "time_start": "22:14:00",
-            "time_end": "01:45:00"
-        },
-        {
             "id": "8a09",
             "type": "stream",
             "date": "2020-05-11",
@@ -42174,7 +42151,7 @@
             "id": "fq34",
             "type": "stream",
             "date": "2020-05-13",
-            "duration": 9720,
+            "duration": 2700,
             "youtube_id": "Wh0oKyQfloU",
             "titles": [
                 "pietermannetje live :)"
@@ -42182,7 +42159,7 @@
             "activities": [
                 {
                     "title": "The Last Guardian",
-                    "duration": 2100
+                    "duration": 2700
                 }
             ],
             "twitchtracker_id": "38034864224",
