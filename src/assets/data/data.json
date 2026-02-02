@@ -19367,10 +19367,6 @@
             ],
             "activities": [
                 {
-                    "title": "The Legend of Zelda: Breath of the Wild",
-                    "duration": 3600
-                },
-                {
                     "title": "Snipperclips: Cut It Out, Together!",
                     "duration": 5640
                 }
@@ -19426,6 +19422,7 @@
             "id": "9362",
             "type": "stream",
             "date": "2017-04-03",
+            "description": "De mannen spelen Rocket League tot ze één potje verliezen.(Potjes die niet tellen: inkompotje, potjes met lag, wanneer de anderen cheaten, wanneer ze voor de grap spelen)Na verloop van tijd verhogen ze de stakes. Iedere keer dat ze verliezen, moeten ze geld uitgeven aan een lootbox key. Dat leidt hen zodanig af dat ze zich daar een uur lang mee bezig houden en geen enkel potje meer spelen.",
             "duration": 8940,
             "youtube_id": "CKplbf7GWaA",
             "titles": [
@@ -19549,6 +19546,7 @@
         {
             "id": "84ae",
             "type": "stream",
+            "description": "De mannen doen hun best om niet door die Palink gestuurd te worden, maar helaas zijn ze simpel. Omdat ze Link niet kunnen rapporteren in het spel, bannen ze hem uit hun chat en gaan ze Donkey Kong spelen. Zo ziet die hijger hoe een goed spelletje in elkaar steekt, en kan Peter oefenen voor de opkomende DK Speedrun.",
             "date": "2017-04-13",
             "duration": 4080,
             "youtube_id": "zP6DjczTqKc",
@@ -19878,6 +19876,7 @@
             "id": "5394",
             "type": "stream",
             "date": "2017-04-27",
+            "description": "DE GEBOORTE VAN DE SICKO De chat mag bepalen welke nieuwe emoticons ze willen. Per idee tekenen Peter en Timon in drie minuten naar hun beste vermogen een emoticon en de publieksfavoriet wordt vereeuwigd in die klote chat! Uiteindelijk herwerken ze reeds bestaande emoticons. Zéér gezellige krabbelstream. (Emoticon-onderwerpen: Dora The Explora (inkompotje), een kikker, een chille/cutie/verwarde kip, vreugde/verwarde pier, een pilsie en ten slotte weer een kinker.)",
             "duration": 8940,
             "youtube_id": "qB9DcAxyJLw",
             "titles": [
@@ -19896,7 +19895,10 @@
             "twitchtracker_id": "25148673168",
             "twitch_id": "148517209",
             "tags": [
-                "casual"
+                "casual",
+                "krabbelen",
+                "tekenen",
+                "emoticons"               
             ],
             "time_start": "15:05:00",
             "time_end": "17:35:00"
@@ -42126,7 +42128,7 @@
             "time_end": "23:15:00"
         },
         {
-            "id": "ee1f",
+            "id": "fq34",
             "type": "stream",
             "date": "2020-05-13",
             "duration": 9720,
