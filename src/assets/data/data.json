@@ -61133,6 +61133,30 @@
                     "duration": 1
                 }
             ]
+        },
+        {
+            "id": "398d",
+            "type": "podcast",
+            "date": "2025-03-27",
+            "title": " We zaten er naast in 2024... - Lekker spreken ",
+            "duration": 3600,
+            "youtube_id": "lNNgMt-ktNo"
+        },
+        {
+            "id": "c02h",
+            "type": "podcast",
+            "date": "2025-08-14",
+            "title": " Top 5 Switch Games discussie - Lekker spreken ",
+            "duration": 3600,
+            "youtube_id": "hHBdUQreXv8"
+        },
+        {
+            "id": "ci20",
+            "type": "podcast",
+            "date": "2026-01-27",
+            "title": " Waar we het meest naar uitkijken in 2026 - Lekker spreken ",
+            "duration": 1900,
+            "youtube_id": "oaRa9d8ULHA"
         }
     ]
 }
