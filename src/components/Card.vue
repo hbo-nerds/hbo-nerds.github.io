@@ -56,7 +56,7 @@
             <div class="d-flex justify-content-between gap-2 position-relative">
                 <a
                     v-if="card['twitch_id'] && card['youtube_id']"
-                    :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+                    :href="'https://youtube.com/watch?v=' + card['youtube_id']"
                     class="flex-shrink-0 position-relative"
                     style="width: 32px; height: 32px"
                     target="_blank"
