@@ -324,7 +324,7 @@ const title = computed(() => {
     } else if (props.card.custom_title) {
         return props.card.custom_title;
     } else {
-        return props.card.titles?.[0];
+        return props.card.titles?.[0] || props.card.title;
     }
 });
 
