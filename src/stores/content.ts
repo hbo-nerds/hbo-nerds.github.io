@@ -361,7 +361,7 @@ export const useContentStore = defineStore("content", {
             if (["podcast", "video"].includes(card.type)) return card.title || "untitled";
             else {
                 if (card.custom_title) return card.custom_title;
-                else return card.titles?.[0] || "untitled";
+                else return card.titles?.[0] || card.title || "untitled";
             }
         },
         /**
