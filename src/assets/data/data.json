@@ -61249,6 +61249,25 @@
                     "duration": 1
                 }
             ]
+        },
+           {
+            "date": "2026-03-10",
+            "time_start": "16:30:56",
+            "time_end": "18:00:21",
+            "titles": [
+               
+                "griezelen met die mannen"
+            ],
+            "activities": [
+                {
+                    "title": "SHE WAS 98",
+                    "duration": 1
+                }
+            ],
+            "duration": 7200,
+            "youtube_id": "AN0DJm2P5Lc",
+            "id": "fv3t",
+            "type": "stream"
         }
     ]
 }
