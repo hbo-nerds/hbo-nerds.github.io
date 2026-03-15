@@ -62,6 +62,14 @@
                     target="_blank"
                     title="Bekijk op Twitch"
                 >
+                    <div class="position-absolute lh-1" style="top: 18px">
+                        <img
+                            alt="youtube_logo"
+                            class="rounded-circle"
+                            style="width: 20px"
+                            src="../assets/img/malmaarmals/malmaarmals-icon-60x60.png"
+                        />
+                    </div>
                     <div class="position-absolute end-0 bottom-0 lh-1">
                         <img
                             v-if="!card.twitch_available"

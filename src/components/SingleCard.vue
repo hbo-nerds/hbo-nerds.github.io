@@ -109,6 +109,20 @@
                                     src="../assets/img/twitch/twitch-icon-60x60.png"
                                 />
                             </a>
+                            <a
+                                v-if="card['twitch_id']" 
+                                :href="'https://www.malmaarmals.nl/videos/' + card['twitch_id']"
+                                title="malmaarmals vod"
+                                class="flex-grow-0 position-relative"
+                                style="max-width: 60px"
+                                target="_blank"
+                            >
+                                <img
+                                    alt="malmaarmals vod"
+                                    class="w-100 rounded-4"
+                                    src="../assets/img/malmaarmals/malmaarmals-icon-60x60.png"
+                                />
+                            </a>
                         </div>
                     </div>
                 </div>
