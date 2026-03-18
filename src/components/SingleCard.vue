@@ -110,8 +110,8 @@
                                 />
                             </a>
                             <a
-                                v-if="card['twitch_id']" 
-                                :href="'https://www.malmaarmals.nl/videos/' + card['twitch_id']"
+                                v-if="card['twitch_id']"
+                                :href="'https://www.malmaarmals.nl/streams/' + card['twitch_id']"
                                 title="malmaarmals vod"
                                 class="flex-grow-0 position-relative"
                                 style="max-width: 60px"
