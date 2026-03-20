@@ -62,6 +62,14 @@
                     target="_blank"
                     title="Bekijk op Twitch"
                 >
+                    <div class="position-absolute lh-1" style="top: 18px">
+                        <img
+                            alt="malmaarmals_logo"
+                            class="rounded-circle"
+                            style="width: 20px"
+                            src="../assets/img/malmaarmals/malmaarmals-icon-60x60.png"
+                        />
+                    </div>
                     <div class="position-absolute end-0 bottom-0 lh-1">
                         <img
                             v-if="!card.twitch_available"
@@ -85,27 +93,36 @@
                     </div>
                 </a>
                 <template v-else>
-                    <a
-                        v-if="card['twitch_id']"
-                        :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
-                        target="_blank"
-                        title="Bekijk op Twitch"
-                    >
-                        <img
+                    <template v-if="card['twitch_id']">
+                        <a
                             v-if="!card.twitch_available"
-                            alt="twitch_logo"
-                            class="rounded-circle"
-                            src="../assets/img/twitch/twitch-unavailable-32x32.png"
-                        />
-                        <img
+                            :href="'https://www.malmaarmals.nl/streams/' + card['twitch_id']"
+                            target="_blank"
+                            title="Bekijk op malmaarmals"
+                        >
+                            <img
+                                alt="malmaarmals_logo"
+                                class="rounded-circle"
+                                style="width: 32px"
+                                src="../assets/img/malmaarmals/malmaarmals-icon-60x60.png"
+                            />
+                        </a>
+
+                        <a
                             v-else
-                            alt="twitch_logo"
-                            class="rounded-circle"
-                            height="32"
-                            src="../assets/img/twitch/twitch-icon-32x32.png"
-                            width="32"
-                        />
-                    </a>
+                            :href="'https://www.twitch.tv/videos/' + card['twitch_id']"
+                            target="_blank"
+                            title="Bekijk op Twitch"
+                        >
+                            <img
+                                alt="twitch_logo"
+                                class="rounded-circle"
+                                height="32"
+                                src="../assets/img/twitch/twitch-icon-32x32.png"
+                                width="32"
+                            />
+                        </a>
+                    </template>
                     <a
                         v-else-if="card['type'] === 'podcast'"
                         :href="'https://youtube.com/watch?v=' + card['youtube_id']"
