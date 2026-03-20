@@ -12,10 +12,20 @@
                 <Card :card="card" />
             </div>
         </div>
+
+        <Empty
+            v-if="!sortedData.length && search"
+            title="Geen resultaten gevonden"
+            description="Probeer iets anders"
+            icon="search"
+            class="mt-4"
+        >
+        </Empty>
     </div>
 </template>
 
 <script lang="ts" setup>
+import Empty from "@/components/Empty.vue";
 import { useContentStore } from "@/stores/content.ts";
 import { useLayoutStore } from "@/stores/layout.ts";
 import { type Card as CardType } from "@/types/Card";
@@ -27,7 +37,7 @@ const Card = defineAsyncComponent(() => import("@/components/Card.vue"));
 
 const contentStore = useContentStore();
 const layoutStore = useLayoutStore();
-const { sortedData, selectedCard } = storeToRefs(contentStore);
+const { sortedData, selectedCard, search } = storeToRefs(contentStore);
 
 const active = ref<boolean>(false);
 const cards = ref<CardType[]>([]);
