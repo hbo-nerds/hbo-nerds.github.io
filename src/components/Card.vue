@@ -64,7 +64,7 @@
                 >
                     <div class="position-absolute lh-1" style="top: 18px">
                         <img
-                            alt="youtube_logo"
+                            alt="malmaarmals_logo"
                             class="rounded-circle"
                             style="width: 20px"
                             src="../assets/img/malmaarmals/malmaarmals-icon-60x60.png"
@@ -98,10 +98,10 @@
                             v-if="!card.twitch_available"
                             :href="'https://www.malmaarmals.nl/streams/' + card['twitch_id']"
                             target="_blank"
-                            title="Bekijk op Twitch"
+                            title="Bekijk op malmaarmals"
                         >
                             <img
-                                alt="twitch_logo"
+                                alt="malmaarmals_logo"
                                 class="rounded-circle"
                                 style="width: 32px"
                                 src="../assets/img/malmaarmals/malmaarmals-icon-60x60.png"
